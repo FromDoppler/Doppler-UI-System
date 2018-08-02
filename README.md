@@ -1,2 +1,10 @@
 # Doppler-UI-System
-UI guide system 
+UI guide system
+
+
+---
+
+## Contributors
+* [**List of Contributors**](Contributos.md): A page showing the GitHub usernames of all who have contributed to this project Doppler-UI-System! Make sure to add yourself and submit a pull request if you've contributed.
+
+---
