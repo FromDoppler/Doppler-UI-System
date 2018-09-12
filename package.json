@@ -1,0 +1,16 @@
+{
+  "name": "Doppler-UI",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Doppler UI Lib",
+  "repository": "https://github.com/FromDoppler/Doppler-UI-System",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-sass": "^2.3.2"
+  },
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build"
+  }
+}
