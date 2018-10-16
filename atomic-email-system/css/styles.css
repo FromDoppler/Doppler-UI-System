@@ -36,7 +36,7 @@ h1 {
 
 .section-cards {
 	max-width: 1100px;
-	margin: 0 auto;
+	margin: 50px auto;
 }
 
 .cards {
@@ -44,14 +44,20 @@ h1 {
 }
 
 .card {
-  padding: 50px 10px;
-  text-decoration: none;
-  text-align: center;
+  padding: 30px 10px;
 }
 
+.card-box {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  border-radius: 5px;
+}
+
+.card a {
+  text-decoration: none;
+}
 
 .card-title {
-  padding: 20px 0;
+  padding: 20px 0 10px;
   text-align: center;
   color: #666666;
   font-weight: bold;
@@ -62,5 +68,7 @@ h1 {
 }
 
 .card-summary {
+  padding: 0px 10px 20px;
+  text-align: center;
   color: #666666;
 }
