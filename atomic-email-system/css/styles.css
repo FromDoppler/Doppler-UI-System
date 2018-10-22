@@ -3,7 +3,6 @@ html,
 body {
   padding: 0;
   margin: 0;
-
   font-family: 'Nunito', sans-serif;
   font-size: 18px;
 }
@@ -11,9 +10,9 @@ body {
 h1 {
   font-size: 40px;
   font-weight: 400;
-  color: #ffffff;
 }
 
+/* Home */
 .hero-section {
   background: url("../img/background.jpg") 50% no-repeat;
   background-size: cover;
@@ -22,12 +21,8 @@ h1 {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-section .hero-section-text {
@@ -41,19 +36,31 @@ h1 {
 
 .cards {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .card {
+	flex: 0 1 27%;
   padding: 30px 10px;
 }
 
 .card-box {
-  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  min-height: 130px;
+  max-width: 300px;
+  box-shadow: 1px 1px 40px rgba(0,0,0,0.30), 0 5px 10px rgba(0,0,0,0.23);
   border-radius: 5px;
 }
 
 .card a {
   text-decoration: none;
+}
+
+.card-icon {
+  padding: 20px 0 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .card-title {
@@ -63,12 +70,63 @@ h1 {
   font-weight: bold;
 }
 
-.card-title:hover {
-  color: #353535;
+.card-box:hover {
+  box-shadow: 1px 1px 40px rgba(0,0,0,0.30), 0 6px 6px rgba(0,0,0,0.28);
 }
 
 .card-summary {
   padding: 0px 10px 20px;
   text-align: center;
   color: #666666;
+}
+
+/* Patterns */
+.container {
+  display: flex;
+	margin: 0 auto;
+  height: 100%;
+}
+
+aside {
+  flex: 1;
+  background: #ececec;
+  height: 100vh;
+}
+
+.section-aside {
+  padding: 10px 20px;
+}
+
+.logo {
+  height: 30px;
+  padding-bottom: 40px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  padding: 10px 0;
+}
+
+li a {
+  color: #000000;
+  text-decoration: none;
+}
+
+li a:hover {
+  color: #989696;
+}
+
+main {
+  flex: 3;
+  background: #ffffff;
+  height: 100vh;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.section-main {
+  padding: 20px 20px 0;
 }
