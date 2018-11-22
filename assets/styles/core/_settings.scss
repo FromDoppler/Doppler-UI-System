@@ -5,11 +5,13 @@
 ////
 $ds-font-size: 14px !default;
 $ds-font-weight: 400 !default;
+$ds-font-color: #cccccc !default;
 $ds-font-family: "proxima-nova", Arial, Helvetica, sans-serif !default;
 $ds-font: $ds-font-weight $ds-font-size $ds-font-family !default;
 $ds-font-weight-regular: $ds-font-weight !default;
 $ds-font-weight-bold: 800 !default;
 $ds-wrapper-min-width: 1200px !default;
+$ds-color-white: #FFFFFF;
 $ds-color-blue: rgba(10, 35, 66, 1);
 $ds-color-red: rgba(238, 66, 102, 1);
 $ds-color-yellow: rgba(255, 210, 63, 1);

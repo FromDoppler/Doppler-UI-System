@@ -37,14 +37,14 @@ small {
   line-height: 18px;
   margin-bottom: 3px;
 }
-
 /* SPACES */
+
 .margin--0 {
   margin: 0;
   /* when p is a title of a paragraph */
 }
-
 /* BACKGROUNDS COLORS */
+
 .grey-bg {
   background-color: #666666;
   /* disabled inputs */
@@ -63,22 +63,22 @@ small {
   background-color: #F2F2F2;
   /* backgrounds grid, cebra */
 }
-
 /* TEXT COLORS */
+
 .dark-grey-txt {
   color: #333333;
   /* variant of <p> */
   font-weight: bold;
 }
-
 /* BORDER COLORS */
+
 .sylver {
   border-color: #CCCCCC;
   /* strokes */
 }
-
 /* DISABLED ICON STATES */
+
 .disabled-icon {
-  opacity: .6;
+  opacity: 0.6;
   /* strokes */
 }

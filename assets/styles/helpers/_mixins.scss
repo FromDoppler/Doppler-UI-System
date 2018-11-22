@@ -1,0 +1,98 @@
+////
+/// Functions
+/// @group Mixins
+/// @author Damian Muti
+////
+/// Debug layout by drawing borders around every element
+/// Uncomment the following line to debug layout's box model.
+/// include edit();
+@mixin debug-layout() {
+  * {
+    outline: 2px dotted red;
+  }
+
+  * * {
+    outline: 2px dotted green;
+  }
+
+  * * * {
+    outline: 2px dotted orange;
+  }
+
+  * * * * {
+    outline: 2px dotted blue;
+  }
+
+  * * * * * {
+    outline: 1px solid red;
+  }
+
+  * * * * * * {
+    outline: 1px solid green;
+  }
+
+  * * * * * * * {
+    outline: 1px solid orange;
+  }
+
+  * * * * * * * * {
+    outline: 1px solid blue;
+  }
+}
+/// Control element's aspect ratio
+/// @param {number} width - The width
+/// @param {number} height - The height
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+
+  > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+/// Create a single media condition out of a map of queries
+/// @param {String} queries - The queries
+@mixin media($queries) {
+  @if length($queries) == 0 {
+    @content;
+  } @else {
+    $first-key: nth(map-keys($queries), 1);
+    @media ($first-key: map-get($queries, $first-key)) {
+      $queries: map-remove($queries, $first-key);
+      @include media($queries) {
+        @content;
+      }
+    }
+  }
+}
+/// Gets the media query from the Media Queries List Configured in `$ds-breakpoints`
+/// @param {String} breakpoint - The breakpoint to search on `$ds-breakpoints` List
+@mixin respond-to($breakpoint) {
+  // Get the query map for $ds-breakpoints map
+  $queries: map-get($ds-breakpoints, $breakpoint);
+  // If there is no query called $breakpoint in map, throw an error
+  @if not $queries {
+    @error "No value could be retrieved from `#{$breakpoint}`. Please make sure it is defined in `$ds-breakpoints` map.";
+  }
+  // Include the media mixin with $queries
+  @include media($queries) {
+    @content;
+  }
+}
+/// Triangle helper mixin
+/// @param {Direction} $direction - Triangle direction, either `top`, `right`, `bottom` or `left`
+/// @param {Color} $color [currentcolor] - Triangle color
+/// @param {Length} $size [1em] - Triangle size
+@mixin triangle($direction, $color: currentcolor, $size: 5px) {
+  @if not index(top right bottom left, $direction) {
+    @error "Direction must be either 'top', 'right', 'bottom' or 'left'."; } $perpendicular-borders: $size solid transparent; content: ''; z-index: 2; width: 0; height: 0; border-#{$direction}: $size solid $color; @if $direction == top or $direction == bottom { border-left: $perpendicular-borders; border-right: $perpendicular-borders; } @else if $direction == right or $direction == left { border-bottom: $perpendicular-borders; border-top: $perpendicular-borders; } }
