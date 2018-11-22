@@ -43,10 +43,10 @@ var gulp = require('gulp'),
 var config = {
   // Folders for assets, development environment
   folderBase: {
-    base: 'http://localhost/doppler_website_new/',
-    css: 'http://localhost/doppler_website_new/styles.css',
-    js: 'http://localhost/doppler_website_new/*.js',
-    php: 'http://localhost/doppler_website_new/*.php'
+    base: './',
+    css: './styles.css',
+    js: './*.js',
+    html: './*.html'
   },
   folderDev: {
     base: '',
@@ -115,7 +115,7 @@ gulp.task('sass:build', ['webfont'], function() {
     .pipe(cleanCSS({
       advanced: true
     }))
-    .pipe(csso())
+    //.pipe(csso())
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(config.folderDist.css));
 });
@@ -134,7 +134,7 @@ gulp.task('sass', function() {
     .pipe(cleanCSS({
       advanced: true
     }))
-    .pipe(csso())
+    //.pipe(csso())
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(config.folderDev.css))
     .pipe(browserSync.reload({
@@ -267,8 +267,8 @@ gulp.task('copy:images', function() {
 // Browser Sync task definition
 gulp.task('serve', ['build'], function() {
   browserSync.init({
-    proxy: 'http://localhost/doppler_website_new/',
-    port: 3000
+    proxy: 'http://local.fromdoppler.com/automation_site/',
+    port: 4000
   });
 });
 
