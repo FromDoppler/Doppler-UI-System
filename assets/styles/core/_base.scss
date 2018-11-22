@@ -18,7 +18,7 @@ html {
 }
 
 body {
-  background-color: #FFF;
+  background-color: $ds-color-white;
   margin: 0;
 }
 
@@ -63,13 +63,10 @@ button {
 }
 
 a {
-  color: $color-green;
   text-decoration: none;
   transition: all $ds-transition-duration $ds-transition-timing;
 
-  &:hover {
-    color: $color-green-hover;
-  }
+  &:hover {}
 }
 
 main {
