@@ -1,0 +1,30 @@
+/// IMPORTS
+///
+/// -> Libs
+/// - A collection of dependencies
+///
+/// -> Helpers
+/// - Collection of custom SASS Functions, Mixins, Animations and helper classes.
+/// 	These files are included before the core since core makes use of some functions and mixins.
+///
+/// -> Core
+/// - Main styles. Core content.
+///
+/// -> Modules
+/// - Every modular/reusable element has its styles defined here.
+///
+/// -> Templates
+/// - Every single file that hold styles for pages and sections.
+///
+/// -> Shame CSS
+/// - Yeah, we should be ashamed of this. MUST fix these in the near future.
+////
+@import "libs/**/*";
+@import "core/_settings.scss";
+@import "helpers/_mixins.scss";
+@import "helpers/*";
+@import "core/_base.scss";
+@import "core/_typography.scss";
+@import "modules/**/*";
+@import "templates/**/*";
+@import "shame";
