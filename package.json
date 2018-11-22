@@ -5,12 +5,9 @@
   "description": "Doppler UI System",
   "repository": "https://github.com/FromDoppler/Doppler-UI-System",
   "homepage": "http://fromdoppler.com",
-  "keywords": [
-    "ui",
-    "ui system",
-  ],
+  "keywords": {},
   "author": "Doppler UI Team",
-  "contributors": [],
+  "contributors": {},
   "devDependencies": {
     "autoprefixer": "^7.1.4",
     "browser-sync": "~2.18.13",
