@@ -1,0 +1,27 @@
+////
+/// Settings File
+/// Init fonts, backgrounds, wrappers, breakpoints and Transition variables
+/// @group Settings
+////
+$ds-font-size: 14px !default;
+$ds-font-weight: 400 !default;
+$ds-font-family: "proxima-nova", Arial, Helvetica, sans-serif !default;
+$ds-font: $ds-font-weight $ds-font-size $ds-font-family !default;
+$ds-font-weight-regular: $ds-font-weight !default;
+$ds-font-weight-bold: 800 !default;
+$ds-wrapper-min-width: 1200px !default;
+$ds-color-blue: rgba(10, 35, 66, 1);
+$ds-color-red: rgba(238, 66, 102, 1);
+$ds-color-yellow: rgba(255, 210, 63, 1);
+$ds-color-green-water: rgba(44, 165, 141, 1);
+$ds-breakpoints: (
+  'desktop-hd': (min-width: 1181px),
+  'desktop': (max-width: 1180px),
+  'tablet': (max-width: 1020px),
+  'mobile': (max-width: 480px),
+  'only-desktop': (max-width: 1180px, min-width: 1021px),
+  'only-tablet': (max-width: 1020px, min-width: 481px)
+)
+!default;
+$ds-transition-duration: 0.25s !default;
+$ds-transition-timing: ease !default;

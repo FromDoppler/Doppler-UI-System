@@ -1,0 +1,174 @@
+////
+/// Typography
+/// Init typography basic settings
+/// @group Typography
+////
+@import "./settings";
+$ds-headers-h1-font-size: 50px;
+$ds-headers-h2-font-size: 40px;
+$ds-headers-h3-font-size: 30px;
+$ds-headers-h4-font-size: 22px;
+$ds-headers-h5-font-size: 18px;
+$ds-headers-h6-font-size: 13px;
+
+button,
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h6 {
+  font-weight: $ds-font-weight-bold;
+}
+
+h1 {
+  font-size: $ds-headers-h1-font-size;
+  line-height: 52px;
+  letter-spacing: -1px;
+  color: #302100;
+  margin: 0;
+}
+
+h2 {
+  font-size: $ds-headers-h2-font-size;
+  line-height: 42px;
+  letter-spacing: -1px;
+  color: #302100;
+  margin: 0;
+}
+
+h3 {
+  font-size: $ds-headers-h3-font-size;
+  line-height: 32px;
+  letter-spacing: -0.5px;
+  color: #302100;
+}
+
+h4 {
+  font-size: $ds-headers-h4-font-size;
+  line-height: 24px;
+  color: #302100;
+  margin-bottom: 0;
+}
+
+h5 {
+  font-size: $ds-headers-h5-font-size;
+  line-height: 22px;
+  color: #FFEC97;
+}
+
+h6 {
+  font-size: $ds-headers-h6-font-size;
+  line-height: 15px;
+  color: #302100;
+  text-transform: uppercase;
+}
+
+strong {
+  font-weight: $ds-font-weight-bold;
+  display: block;
+}
+
+p,
+span {
+  font-size: 16px;
+  line-height: 24px;
+  color: $ds-font-color;
+}
+
+small {
+  font-size: 14px;
+}
+
+p.small {
+  font-size: 14px;
+  line-height: 24px;
+  margin: 12px 0;
+
+  strong {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.uppercase-small {
+  font-size: 11px;
+  line-height: 12px;
+  font-weight: $ds-font-weight-bold;
+  color: $ds-font-color;
+  text-transform: uppercase;
+}
+
+.cursive {
+  font-family: 'hand-of-sean';
+}
+
+.quote {
+  font-family: 'Merriweather', serif;
+  font-size: 18px;
+  font-style: italic;
+  line-height: 30px;
+  text-align: center;
+}
+@include respond-to ('mobile') {
+  h1 {
+    font-size: 36px;
+    line-height: 38px;
+    letter-spacing: -1px;
+    font-weight: bold;
+  }
+
+  h2 {
+    font-size: 30px;
+    line-height: 32px;
+    letter-spacing: -0.5px;
+    font-weight: bold;
+  }
+
+  h3 {
+    font-size: 26px;
+    line-height: 28px;
+    letter-spacing: 0;
+    font-weight: bold;
+    color: #525845;
+  }
+}
+@font-face {
+  font-family: 'proxima-nova';
+  src: url("./fonts/proxima-nova.eot");
+  src: url("./fonts/proxima-nova.eot?#iefix") format('embedded-opentype'), url("./fonts/proxima-nova.woff2") format('woff2'), url("./fonts/proxima-nova.woff") format('woff'), url("./fonts/proxima-nova.ttf") format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'proxima-nova';
+  src: url("./fonts/proxima-nova-italic.eot");
+  src: url("./fonts/proxima-nova-italic.eot?#iefix") format('embedded-opentype'), url("./fonts/proxima-nova-italic.woff2") format('woff2'), url("./fonts/proxima-nova-italic.woff") format('woff'), url("./fonts/proxima-nova-italic.ttf") format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'proxima-nova';
+  src: url("./fonts/proxima-nova-bold.eot");
+  src: url("./fonts/proxima-nova-bold.eot?#iefix") format('embedded-opentype'), url("./fonts/proxima-nova-bold.woff2") format('woff2'), url("./fonts/proxima-nova-bold.woff") format('woff'), url("./fonts/proxima-nova-bold.ttf") format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'proxima-nova';
+  src: url("./fonts/proxima-nova-bold-italic.eot");
+  src: url("./fonts/proxima-nova-bold-italic.eot?#iefix") format('embedded-opentype'), url("./fonts/proxima-nova-bold-italic.woff2") format('woff2'), url("./fonts/proxima-nova-bold-italic.woff") format('woff'), url("./fonts/proxima-nova-bold-italic.ttf") format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'hand-of-sean';
+  src: url("./fonts/HandOfSeanPro-webfont.eot");
+  src: url("./fonts/HandOfSeanPro-webfont.eot?#iefix") format('embedded-opentype'), url("./fonts/HandOfSeanPro-webfont.woff2") format('woff2'), url("./fonts/HandOfSeanPro-webfont.woff") format('woff'), url("./fonts/HandOfSeanPro-webfont.ttf") format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
