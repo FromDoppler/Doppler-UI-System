@@ -52,8 +52,9 @@ var config = {
   folderAssets: {
     base: 'assets',
     fonts: 'assets/fonts',
-    styles: 'assets/styles',
+    styles: 'assets/scss',
     images: 'assets/img',
+    html: 'assets/templates',
     js: 'assets/js'
   },
   folderDist: {
@@ -276,6 +277,7 @@ gulp.task('clean:dev', function() {
 gulp.task('run', ['clean', 'serve'], function() {
   gulp.watch(config.folderAssets.base + '/**/*.scss', ['sass']);
   gulp.watch(config.folderAssets.base + '/icons/*.svg', ['webfont']);
+  gulp.watch(config.folderAssets.fonts + '/*.*', ['copy:fonts', reload]);
   gulp.watch(config.folderAssets.images + '/**/*.*', ['copy:images']);
   gulp.watch(config.folderAssets.js + '/*', ['copy:js']);
   gulp.watch(config.folderAssets.base + '/templates/*.html', ['processHtml']);
@@ -287,8 +289,8 @@ gulp.task('watch', ['build'], function() {
   gulp.watch(config.folderAssets.base + '/**/*.scss', ['sass']);
 });
 
-// Define Dist generation task (Deploy)
-gulp.task('dist', ['copy:css', 'copy:fonts', 'js:dist', 'processHtml:dist', 'images:dist']);
-
 // Define build task
-gulp.task('build', ['sass:build', 'copy:js', 'processHtml', 'copy:images']);
+gulp.task('build', ['sass', 'webfont', 'copy:fonts', 'copy:js', 'processHtml', 'copy:images']);
+
+// Define Dist generation task (Deploy)
+gulp.task('dist', ['sass:build', 'copy:fonts', 'js:dist', 'processHtml:dist', 'images:dist']);
