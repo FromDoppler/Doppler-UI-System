@@ -1,0 +1,21 @@
+/// IMPORTS
+///
+/// -> Core
+/// - Main styles. Core content.
+///
+/// -> Libs
+/// - A collection of dependencies
+///
+/// -> Modules
+/// - Every modular/reusable element has its styles defined here.
+///
+/// -> Templates
+/// - Every single file that hold styles for pages and sections.
+///
+/// -> Utilities
+/// -
+@import "libs/**/*";
+@import "core/*";
+@import "modules/**/*";
+@import "templates/**/*";
+@import "utilities/*";

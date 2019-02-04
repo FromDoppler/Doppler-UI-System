@@ -1,13 +1,28 @@
 {
   "name": "Doppler-UI",
   "private": true,
-  "version": "0.1.0",
-  "description": "Doppler UI System",
-  "repository": "https://github.com/FromDoppler/Doppler-UI-System",
-  "homepage": "http://fromdoppler.com",
-  "keywords": {},
+  "version": "0.1.1",
+  "description": "UI library for easy inclusion css, components, images and fonts in projects",
+  "homepage": "https://fromdoppler.com",
+  "keywords": [
+    "ui",
+    "ui library"
+  ],
   "author": "Doppler UI Team",
-  "contributors": {},
+  "contributors": [
+    {
+      "name": "Ignacio Rodrigues",
+      "email": "irodrigues@fromdoppler.com"
+    },
+    {
+      "name": "Mariana Massimino",
+      "email": "mmassimino@fromdoppler.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FromDoppler/Doppler-UI-System"
+  },
   "devDependencies": {
     "autoprefixer": "^7.1.4",
     "browser-sync": "~2.18.13",

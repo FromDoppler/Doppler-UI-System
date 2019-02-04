@@ -1,0 +1,21 @@
+////
+/// Settings File
+/// Init fonts, backgrounds, wrappers, breakpoints and Transition variables
+/// @group Settings
+////
+/// Settings ///
+///
+$ds-background: $ds-color-ghostwhite !default;
+$ds-background-bright: $ds-background !default;
+$ds-wrapper-min-width: torem(1200px) !default;
+$ds-breakpoints: (
+  'desktop-fhd': (max-width: 1920px),
+  'desktop': (max-width: 1366px),
+  'ipad': (min-width: 1023px, max-width: 1024px),
+  'isdesktop': (min-width: 1024px),
+  'ismobile': (max-width: 1024px),
+  'iphone': (max-width: 980px)
+)
+!default;
+$ds-transition-duration: 0.25s !default;
+$ds-transition-timing: ease !default;
