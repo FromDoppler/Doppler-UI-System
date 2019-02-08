@@ -1,0 +1,82 @@
+////
+/// Settings File
+/// Init colors variables
+/// @group Colors
+////
+/// Colors ///
+///
+$ds-color-ghostwhite: #F2F2F2;
+$ds-color-lightgrey: #999999;
+$ds-color-grey: #666666;
+$ds-color-darkgrey: #333333;
+$ds-color-lightgreen: #65C192;
+$ds-color-green: #33AD73;
+$ds-color-darkgreen: #008046;
+$ds-color-sylver: #CCCCCC;
+$ds-color-snow: #EAEAEA;
+$ds-color-lightyellow: #FDE577;
+$ds-color-yellow: #FBB224;
+$ds-color-darkyellow: #E58900;
+$ds-color-lightred: #EC8A83;
+$ds-color-red: #E34F45;
+$ds-color-darkred: #A63A33;
+
+.ghostwhite {
+  background-color: $ds-color-ghostwhite;
+}
+
+.light-grey {
+  background-color: $ds-color-lightgrey;
+}
+
+.grey {
+  background-color: $ds-color-grey;
+}
+
+.dark-grey {
+  background-color: $ds-color-darkgrey;
+}
+
+.sylver {
+  background-color: $ds-color-sylver;
+}
+
+.snow {
+  background-color: $ds-color-snow;
+}
+
+.light-green {
+  background-color: $ds-color-lightgreen;
+}
+
+.green {
+  background-color: $ds-color-green;
+}
+
+.dark-green {
+  background-color: $ds-color-darkgreen;
+}
+
+.light-yellow {
+  background-color: $ds-color-lightyellow;
+}
+
+.yellow {
+  background-color: $ds-color-yellow;
+}
+
+.dark-yellow {
+  background-color: $ds-color-darkyellow;
+}
+
+.light-red {
+  background-color: $ds-color-lightred;
+}
+
+.red {
+  background-color: $ds-color-red;
+}
+
+.dark-red {
+  background-color: $ds-color-darkred;
+}
