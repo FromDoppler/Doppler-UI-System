@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="21px" height="12px" viewBox="0 0 21 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>arrange-by-AZ-icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="arrange-by-AZ-icon">
+            <path d="M19.2321787,7.19957983 L18.0367109,8.41176471 L18.0367109,1.05042017 C18.0367109,0.470588235 17.5726125,0 17.000777,0 C16.4268695,0 15.964843,0.470588235 15.964843,1.05042017 L15.964843,8.41386555 L14.7693752,7.19957983 C14.3632891,6.78991597 13.7085788,6.78991597 13.3045646,7.19957983 C12.8984785,7.6092437 12.8984785,8.27521008 13.3045646,8.68487395 L16.2652638,11.6932773 C16.4600194,11.8886555 16.7231466,12 16.9987051,12 C17.2742635,12 17.5373907,11.8886555 17.7300745,11.6932773 L20.6969893,8.68487395 C21.1010036,8.27521008 21.1010036,7.6092437 20.6969893,7.19957983 C20.2929751,6.78991597 19.6361929,6.78991597 19.2321787,7.19957983 Z" id="Fill-8" fill="#666666"></path>
+            <path d="M10.7123047,2 L4.84563802,2" id="Line" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M10.6021475,6 L2.9729664,6" id="Line-Copy" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M10.6021475,10 L0.812304687,10" id="Line-Copy-2" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+        </g>
+    </g>
+</svg>
