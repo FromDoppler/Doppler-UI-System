@@ -7,8 +7,8 @@
 $ds-font-size: 16px !default;
 $ds-font-lineheight: 22px !default;
 $ds-font-weight: 400 !default;
-$ds-font-family: "Helvetica", Arial, sans-serif !default;
-$ds-font: $ds-font-weight toem($ds-font-size) $ds-font-family !default;
+$ds-font-family: "proxima-nova", Arial, sans-serif !default;
+$ds-font: $ds-font-weight $ds-font-size $ds-font-family !default;
 $ds-font-weight-light: 300 !default;
 $ds-font-weight-regular: $ds-font-weight !default;
 $ds-font-weight-semibold: 600 !default;
@@ -23,6 +23,7 @@ $ds-headers-h3-font-size: 30px;
 $ds-headers-h4-font-size: 22px;
 $ds-headers-h5-font-size: 18px;
 $ds-headers-h6-font-size: 13px;
+$ds-font-size-small: 13px;
 
 body {
   color: $ds-color-grey;
@@ -79,12 +80,14 @@ strong {
 }
 
 p {
+  font: $ds-font;
   font-size: $ds-font-size;
   line-height: $ds-font-lineheight;
 }
 
 small {
-  font-size: 13px;
+  font: $ds-font;
+  font-size: $ds-font-size-small;
   line-height: 18px;
 }
 
@@ -126,4 +129,3 @@ small {
   font-weight: 400;
   font-style: normal;
 }
-@import url('https://fonts.googleapis.com/css?family=Merriweather');

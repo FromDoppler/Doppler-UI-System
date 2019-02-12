@@ -3,13 +3,9 @@
 .project
 *.map
 *.scssc
-jeet/
-normalize/
 node_modules/
 bower_components/
 static/styles/libs/*
 dev/css/*
 dist
 dev/fonts/*
-dev/img/
-themes/easter2017/fonts/
