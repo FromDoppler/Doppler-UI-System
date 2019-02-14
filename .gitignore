@@ -9,3 +9,5 @@ static/styles/libs/*
 dev/css/*
 dist
 dev/fonts/*
+/assets/scss/libs/iconfont/_icon-font.scss
+/dev/index.html
