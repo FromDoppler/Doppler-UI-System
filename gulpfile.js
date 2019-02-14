@@ -31,13 +31,7 @@ var gulp = require('gulp'),
   mqpacker = require('css-mqpacker'),
   mqsorter = require('sort-css-media-queries'),
   // Image optimization plugin
-  imagemin = require('gulp-imagemin'),
-  // Concat plugin
-  concat = require('gulp-concat'),
-  // uglify plugin
-  uglify = require('gulp-uglify'),
-  // Console utility
-  util = require("gulp-util");
+  imagemin = require('gulp-imagemin');
 
 // Project settings
 var config = {
@@ -59,7 +53,7 @@ var config = {
   },
   folderDist: {
     base: 'dist',
-    css: 'dist',
+    css: 'dist/css',
     fonts: 'dist/fonts',
     images: 'dist/img',
     //js: 'dist'
@@ -68,19 +62,6 @@ var config = {
     processors: [
       autoprefixer({
         browsers: [
-          // 'Android >= 2.3',
-          // 'BlackBerry >= 7',
-          // 'Chrome >= 9',
-          // 'Firefox >= 4',
-          // 'Explorer >= 9',
-          // 'iOS >= 5',
-          // 'Opera >= 11',
-          // 'Safari >= 5',
-          // 'OperaMobile >= 11',
-          // 'OperaMini >= 6',
-          // 'ChromeAndroid >= 9',
-          // 'FirefoxAndroid >= 4',
-          // 'ExplorerMobile >= 9',
           'last 2 versions',
           '> 1%',
           'last 3 iOS versions',
@@ -113,6 +94,22 @@ gulp.task('sass:build', ['webfont'], function() {
     .pipe(csso())
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(config.folderDev.css));
+});
+
+gulp.task('sass:dist', ['webfont'], function() {
+  return gulp.src(config.folderAssets.styles + '/styles.scss')
+    .pipe(globbing({
+      // Configure it to use SCSS files
+      extensions: ['.scss']
+    }))
+    .pipe(sass().on('error', sass.logError))
+    .pipe(postcss(config.postCSS.processors))
+    .pipe(postcss([flexibility]))
+    .pipe(cleanCSS({
+      advanced: true
+    }))
+    .pipe(csso())
+    .pipe(gulp.dest(config.folderDist.css));
 });
 
 // Sass Watch task definition
@@ -181,46 +178,12 @@ gulp.task('copy:fonts', ['sass:build'], function() {
     .pipe(gulp.dest(config.folderDev.fonts));
 });
 
+
 // Copy webfont to Dist folder
 gulp.task('fonts:dist', function() {
   return gulp.src(config.folderDev.fonts + '/*.*')
     .pipe(gulp.dest(config.folderDist.fonts));
 });
-
-// Optimize JS
-// gulp.task('js:dist', function() {
-  // return gulp.src([config.folderAssets.js + '/**/*.js'])
-    // .pipe(sourcemaps.init())
-    // .pipe(concat('app.js', {
-      // newLine: "\r\n;"
-    // }))
-    // .pipe(uglify())
-    // .pipe(sourcemaps.write('./'))
-    // .pipe(gulp.dest(config.folderDist.js));
-// });
-
-
-//Copy JS
-/*
-gulp.task('copy:js', ['copy:vendors'], function() {
-  return gulp.src([config.folderAssets.js + '/*.js'])
-    .pipe(concat('main.js', {
-      newLine: "\r\n;"
-    }))
-    .pipe(gulp.dest(config.folderDev.js));
-});
-*/
-
-// Copy Vendors
-/*
-gulp.task('copy:vendors', function() {
-  return gulp.src([config.folderAssets.js + '/vendors/*.js'])
-    .pipe(concat('vendors.js', {
-      newLine: "\r\n;"
-    }))
-    .pipe(gulp.dest(config.folderDev.js));
-});
-*/
 
 // Optimize Images
 gulp.task('images:dist', function() {
@@ -291,7 +254,7 @@ gulp.task('watch', ['build'], function() {
 });
 
 // Define build task
-gulp.task('build', ['sass', 'webfont', 'copy:fonts', /*'copy:js',*/ 'processHtml', 'copy:images']);
+gulp.task('build', ['sass', 'webfont', 'copy:fonts', 'processHtml', 'copy:images']);
 
 // Define Dist generation task (Deploy)
-gulp.task('dist', ['sass:build', 'fonts:dist', /*'js:dist',*/ 'processHtml:dist', 'images:dist']);
+gulp.task('dist', ['sass:dist', 'fonts:dist', 'processHtml:dist', 'images:dist']);
