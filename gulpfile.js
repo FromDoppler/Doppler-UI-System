@@ -93,22 +93,6 @@ gulp.task('sass:build', ['webfont'], function() {
     }))
     .pipe(csso())
     .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest(config.folderDev.css));
-});
-
-gulp.task('sass:dist', ['webfont'], function() {
-  return gulp.src(config.folderAssets.styles + '/styles.scss')
-    .pipe(globbing({
-      // Configure it to use SCSS files
-      extensions: ['.scss']
-    }))
-    .pipe(sass().on('error', sass.logError))
-    .pipe(postcss(config.postCSS.processors))
-    .pipe(postcss([flexibility]))
-    .pipe(cleanCSS({
-      advanced: true
-    }))
-    .pipe(csso())
     .pipe(gulp.dest(config.folderDist.css));
 });
 
@@ -172,17 +156,16 @@ gulp.task('webfont:generate', function() {
     .pipe(gulp.dest(config.folderDev.fonts));
 });
 
-// Copy webfonts to Dev folder
-gulp.task('copy:fonts', ['sass:build'], function() {
-  return gulp.src(config.folderAssets.fonts + '/*.*')
-    .pipe(gulp.dest(config.folderDev.fonts));
-});
-
-
 // Copy webfont to Dist folder
-gulp.task('fonts:dist', function() {
+gulp.task('fonts:dist',['copy:fonts'], function() {
   return gulp.src(config.folderDev.fonts + '/*.*')
     .pipe(gulp.dest(config.folderDist.fonts));
+});
+
+// Copy webfonts to Dev folder
+gulp.task('copy:fonts', function() {
+  return gulp.src(config.folderAssets.fonts + '/*.*')
+    .pipe(gulp.dest(config.folderDev.fonts));
 });
 
 // Optimize Images
@@ -243,9 +226,9 @@ gulp.task('run', ['clean', 'serve'], function() {
   gulp.watch(config.folderAssets.base + '/icons/*.svg', ['webfont', reload]);
   gulp.watch(config.folderAssets.fonts + '/*.*', ['copy:fonts', reload]);
   gulp.watch(config.folderAssets.images + '/**/*.*', ['copy:images']);
-  //gulp.watch(config.folderAssets.js + '/*', ['copy:js']);
   gulp.watch(config.folderAssets.base + '/templates/*.html', ['processHtml']);
-  //gulp.watch(config.folderDev.js + '/*.js').on('change', browserSync.reload);
+
+  util.log('Done!');
 });
 
 // Watch for changes
@@ -257,4 +240,4 @@ gulp.task('watch', ['build'], function() {
 gulp.task('build', ['sass', 'webfont', 'copy:fonts', 'processHtml', 'copy:images']);
 
 // Define Dist generation task (Deploy)
-gulp.task('dist', ['sass:dist', 'fonts:dist', 'processHtml:dist', 'images:dist']);
+gulp.task('dist', ['sass:build', 'fonts:dist', 'processHtml:dist', 'images:dist']);
