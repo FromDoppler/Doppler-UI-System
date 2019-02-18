@@ -27,209 +27,222 @@
   <link rel="apple-touch-icon" href="https://www.fromdoppler.com/apple-touch-icon.png" />
   <link rel="icon" type="image/x-icon" href="https://www.fromdoppler.com/favicon.ico" />
   <link rel="shortcut icon" type="image/x-icon" href="https://www.fromdoppler.com/favicon.ico" />
-
 </head>
-
-<body class="">
-  <!-- Header -->
-  <header class="header-main">
-    <span class="ms-icon icon-doppler-logo"></span>
-  </header>
-  <!-- /End of Header -->
-  <!-- Content -->
-  <main role="main">
-
-    <section class="section-module">
-      <h2>Doppler Styles Guides</h2>
-      <div class="grid">
-        <div class="col-2">
-          <h2>Colors</h2>
-        </div><!-- col-2 -->
-        <div class="col-8 grid">
-          <div class="col-2 space-24">
-            <div class="color ghostwhite space-8"></div>
+<body>
+<header class="header-main">
+  <div class="header-wrapper">
+      <div class="logo"><span class="ms-icon icon-doppler-logo"></span></div>
+      <nav class="nav-left-main">
+      <div class="menu-main--container">
+        <ul class="menu-main">
+          <li class="submenu-item"><a href="#">Campañas</a>
+          <ul class="sub-menu sub-campaings">
+            <li><a href="#">Borradores</a></li>
+            <li><a href="#">Programadas</a></li>
+            <li><a href="#">Enviadas</a></li>
+            <li><a href="#">Test A/B</a></li>
+          </ul><!-- sub-menu -->
+        </li>
+        <li class="submenu-item"><a href="#">Listas</a>
+          <ul class="sub-menu sub-list">
+            <li><a href="#">Listas principales</a></li>
+            <li><a href="#">Segmentos</a></li>
+            <li><a href="#">Subscriptores</a></li>
+            <li><a href="#">Campos personalizados</a></li>
+            <li><a href="#">Formularios</a></li>
+          </ul><!-- sub-menu -->
+        </li>
+          <li><a href="#">Automation</a></li>
+          <li><a href="#">Reportes</a></li>
+          <li><a href="#">Plantillas</a></li>
+        </ul>
+      </div><!-- menu-main--container only-mobile -->
+      </nav><!-- nav-left-main -->
+      <nav class="nav-right-main">
+        <ul>
+          <li><a href="#" class="active" data-count="1"><span class="ms-icon icon-notification"></span></a></li>
+          <li><a href="#"><span class="ms-icon icon-header-help"></span></a></li>
+          <li><a id="user-menu--open" href="#"><span class="user-avatar">GB</span></a>
+            <div class="user-menu"> <!--open-->
+              <header>
+                <span class="user-avatar--menu">GB</span>
+                <p><span class="name ng-binding">Gus Baamonde</span><span class="email ng-binding">gbaamonde@makingsense.com</span></p>
+              </header>
+              <div class="user-plan--container">
+                <div class="user-plan--type">
+                  <p class="user-plan--monthly-text">Cuenta Gratis | <strong>500 Suscriptores</strong></p>
+                  <p class=""><strong>500</strong> Suscriptores disponibles</p>
+                </div>
+                  <a href="#" class="buy-plan">comprar</a>
+              </div>
+                <ul class="options-user">
+                  <li><a href="">Panel de Control</a></li>
+                  <li><a href="">Centro de descargas</a></li>
+                  <li><a href="">Primeros pasos en Doppler</a></li>
+                  <li><a href="">Salir</a></li>
+                </ul>
+            </div><!-- user-menu -->
+          </li>
+        </ul>
+        <a id="open-menu" class="ms-icon icon-menu desktop-hd-hidden"></a>
+        <a id="close-menu" class="ms-icon icon-close desktop-hd-hidden"></a>
+      </nav><!-- nav-right-main -->
+  </div><!-- header-wrapper -->
+</header><!-- header-main -->
+<main role="main">
+<section class="section-module">
+      <h1>Doppler Styles Guides</h1>
+      <h2>Colores</h2>
+    <main class="main-colors">
+          <div class="color-card">
+            <div class="sample-color white"></div>
+            <div class="description-color">
               <ul class="color-list">
-                <li><strong>.ghostwhite</strong></li>
-                <li>#F2F2F2</li>
+                <li>class: .white</li>
+                <li><code>color: #FFFFFF</code></li>
               </ul>
-          </div><!-- col-2 -->
-          <div class="col-2 space-24">
-            <div class="color light-grey space-8"></div>
-              <ul class="color-list">
-                <li><strong>.lightgrey</strong></li>
-                <li>#999999</li>
-              </ul>
-          </div><!-- col-2 -->
-          <div class="col-2 space-24">
-            <div class="color grey space-8"></div>
-              <ul class="color-list">
-                <li><strong>.grey</strong></li>
-                <li>#666666</li>
-              </ul>
-          </div><!-- col-2 -->
-          <div class="col-2 space-24">
-            <div class="color dark-grey space-8"></div>
-              <ul class="color-list">
-                <li><strong>.darkgrey</strong></li>
-                <li>#333333</li>
-              </ul>
-          </div><!-- col-2 -->
-          <div class="col-2 space-24">
-            <div class="color light-green space-8"></div>
-              <ul class="color-list">
-                <li><strong>.lightgreen</strong></li>
-                <li>#65C192</li>
-              </ul>
-          </div><!-- col-2 -->
-          <div class="col-2 space-24">
-            <div class="color green space-8"></div>
-              <ul class="color-list">
-                <li><strong>.green</strong></li>
-                <li>#33AD73</li>
-              </ul>
-          </div><!-- col-2 -->
-          <div class="col-2 space-24">
-            <div class="color dark-green space-8"></div>
-              <ul class="color-list">
-                <li><strong>.darkgreen</strong></li>
-                <li>#008046</li>
-              </ul>
-          </div><!-- col-2 -->
-          <div class="col-2 space-24">
-            <div class="color sylver space-8"></div>
-              <ul class="color-list">
-                <li><strong>.sylver</strong></li>
-                <li>#CCCCCC</li>
-              </ul>
-          </div><!-- col-2 -->
-          <div class="col-2 space-24">
-            <div class="color snow space-8"></div>
-              <ul class="color-list">
-                <li><strong>.snow</strong></li>
-                <li>#EAEAEA</li>
-              </ul>
-          </div><!-- col-2 -->
-          <div class="col-2 space-24">
-            <div class="color yellow space-8"></div>
-              <ul class="color-list">
-                <li><strong>.lightyellow</strong></li>
-                <li>#FDE577</li>
-              </ul>
-          </div><!-- col-2 -->
-          <div class="col-2 space-24">
-            <div class="color yellow space-8"></div>
-              <ul class="color-list">
-                <li><strong>.yellow</strong></li>
-                <li>#FBB224</li>
-              </ul>
-          </div><!-- col-2 -->
-          <div class="col-2 space-24">
-            <div class="color dark-yellow space-8"></div>
-              <ul class="color-list">
-                <li><strong>.darkyellow</strong></li>
-                <li>#E58900</li>
-              </ul>
-          </div><!-- col-2 -->
-          <div class="col-2 space-24">
-            <div class="color light-red space-8"></div>
-              <ul class="color-list">
-                <li><strong>.lightred</strong></li>
-                <li>#EC8A83</li>
-              </ul>
-          </div><!-- col-2 -->
-          <div class="col-2 space-24">
-            <div class="color red space-8"></div>
-              <ul class="color-list">
-                <li><strong>.red</strong></li>
-                <li>#E34F45</li>
-              </ul>
-          </div><!-- col-2 -->
-          <div class="col-2 space-24">
-            <div class="color dark-red space-8"></div>
-              <ul class="color-list">
-                <li><strong>.darkred</strong></li>
-                <li>#A63A33</li>
-              </ul>
-          </div><!-- col-2 -->
-        </div><!-- col-8 grid -->
-      </div><!-- grid -->
-    </section><!-- section -->
-
-    <section id="headings">
-      <div class="grid">
-
-        <div class="col-2">
-          <h2>Headings</h2>
-        </div>
-
-        <div class="col-8">
-          <div>
-            <h1>H1</h1>
-            <p><b>font-family:</b> 'Helvetica', arial, sans-serif; <b>font-weight:</b> bold; <b>color:</b> darkgrey; <b>font-size:</b> 32px; <b>line-height:</b> 36px;</p>
+            </div>
+          </div><!-- color-card -->
+          <div class="color-card">
+          <div class="sample-color ghostwhite"></div>
+          <div class="description-color">
+            <ul class="color-list">
+              <li>class: .ghostwhite</li>
+              <li><code>color: #F2F2F2</code></li>
+            </ul>
           </div>
-          <div>
-            <h2>H2</h2>
-            <p><b>font-family:</b> 'Helvetica', arial, sans-serif; <b>font-weight:</b> bold; <b>color:</b> darkgrey; <b>font-size:</b> 24px; <b>line-height:</b> 28px;</p>
+        </div><!-- color-card -->
+        <div class="color-card">
+          <div class="sample-color light-grey"></div>
+          <div class="description-color">
+            <ul class="color-list">
+              <li>class: .light-grey</li>
+              <li><code>color: #999999</code></li>
+            </ul>
           </div>
-          <div>
-            <h3>H3</h3>
-            <p><b>font-family:</b> 'Helvetica', arial, sans-serif; <b>font-weight:</b> bold; <b>color:</b> darkgrey; <b>font-size:</b> 18px; <b>line-height:</b> 22px;</p>
+        </div><!-- color-card -->
+        <div class="color-card">
+          <div class="sample-color grey"></div>
+          <div class="description-color">
+            <ul class="color-list">
+              <li>class: .grey</li>
+              <li><code>color: #666666</code></li>
+            </ul>
           </div>
-          <div>
-            <p>p</p>
-            <p><b>font-family:</b> 'Helvetica', arial, sans-serif; <b>font-weight:</b> normal; <b>color:</b> grey; <b>font-size:</b> 15px; <b>line-height:</b> 22px;</p>
+        </div><!-- color-card -->
+        <div class="color-card">
+          <div class="sample-color dark-grey"></div>
+          <div class="description-color">
+            <ul class="color-list">
+              <li>class: .dark-grey</li>
+              <li><code>color: #333333</code></li>
+            </ul>
           </div>
-          <div>
-            <small>small</small>
-            <p><b>font-family:</b> 'Helvetica', arial, sans-serif; <b>font-weight:</b> normal; <b>color:</b> grey; <b>font-size:</b> 13px; <b>line-height:</b> 18px;</p>
+        </div><!-- color-card -->
+        <div class="color-card">
+          <div class="sample-color light-green"></div>
+          <div class="description-color">
+            <ul class="color-list">
+              <li>class: .light-green</li>
+              <li><code>color: #65C192</code></li>
+            </ul>
           </div>
-          <div>
-            <p class="cursive">.tip-help</p>
-            <p><b>font-family:</b> 'HandOfSeanPro', serif; <b>color:</b> grey; <b>font-size:</b> 18px; <b>line-height:</b> 23px; <b>letter-spacing:</b> .5px;</p>
+        </div><!-- color-card -->
+        <div class="color-card">
+          <div class="sample-color green"></div>
+          <div class="description-color">
+            <ul class="color-list">
+              <li>class: .green</li>
+              <li><code>color: #33AD73</code></li>
+            </ul>
           </div>
-        </div>
-
-      </div>
-    </section>
-
-    <section id="spaces">
-      <div class="grid">
-
-        <div class="col-2">
-          <h2>Spaces</h2>
-        </div>
-
-        <div class="col-8 grid">
-          <div class="col-2">
-            <div class="square-8 space-8"></div>
-            <small><b>8px</b></small>
+        </div><!-- color-card -->
+        <div class="color-card">
+          <div class="sample-color dark-green"></div>
+          <div class="description-color">
+            <ul class="color-list">
+              <li>class: .dark-green</li>
+              <li><code>color: #008046</code></li>
+            </ul>
           </div>
-          <div class="col-2">
-            <div class="square-24 space-8"></div>
-            <small><b>24px</b></small>
+        </div><!-- color-card -->
+        <div class="color-card">
+          <div class="sample-color sylver"></div>
+          <div class="description-color">
+            <ul class="color-list">
+              <li>class: .sylver</li>
+              <li><code>color: #CCCCCC</code></li>
+            </ul>
           </div>
-          <div class="col-2">
-            <div class="square-48 space-8"></div>
-            <small><b>48px</b></small>
+        </div><!-- color-card -->
+        <div class="color-card">
+          <div class="sample-color snow"></div>
+          <div class="description-color">
+            <ul class="color-list">
+              <li>class: .snow</li>
+              <li><code>color: #EAEAEA</code></li>
+            </ul>
           </div>
-          <div class="col-2">
-            <div class="square-64 space-8"></div>
-            <small><b>64px</b></small>
+        </div><!-- color-card -->
+        <div class="color-card">
+          <div class="sample-color light-yellow"></div>
+          <div class="description-color">
+            <ul class="color-list">
+              <li>class: .light-yellow</li>
+              <li><code>color: #FDE577</code></li>
+            </ul>
           </div>
-
-        </div>
-    </section>
-  </main>
-  <!-- /End of Content -->
-  <!-- Footer -->
-  <footer>
-  </footer>
-  <!-- /End of Footer -->
-
-  <!-- Javascript files -->
-  <!-- build:js:dist js/app.js -->
-  <script src="./js/main.js"></script>
-  <!-- /build -->
+        </div><!-- color-card -->
+        <div class="color-card">
+          <div class="sample-color yellow"></div>
+          <div class="description-color">
+            <ul class="color-list">
+              <li>class: .yellow</li>
+              <li><code>color: #FBB224</code></li>
+            </ul>
+          </div>
+        </div><!-- color-card -->
+        <div class="color-card">
+          <div class="sample-color dark-yellow"></div>
+          <div class="description-color">
+            <ul class="color-list">
+              <li>class: .dark-yellow</li>
+              <li><code>color: #E58900</code></li>
+            </ul>
+          </div>
+        </div><!-- color-card -->
+        <div class="color-card">
+          <div class="sample-color light-red"></div>
+          <div class="description-color">
+            <ul class="color-list">
+              <li>class: .light-red</li>
+              <li><code>color: #EC8A83</code></li>
+            </ul>
+          </div>
+        </div><!-- color-card -->
+        <div class="color-card">
+          <div class="sample-color red"></div>
+          <div class="description-color">
+            <ul class="color-list">
+              <li>class: .red</li>
+              <li><code>color: #E34F45</code></li>
+            </ul>
+          </div>
+        </div><!-- color-card -->
+        <div class="color-card">
+          <div class="sample-color dark-red"></div>
+          <div class="description-color">
+            <ul class="color-list">
+              <li>class: .dark-red</li>
+              <li><code>color: #A63A33</code></li>
+            </ul>
+          </div>
+        </div><!-- color-card -->
+    </main><!-- main-colors -->
+</section><!-- section-module -->
+</main>
+<!-- build:js:dist js/app.js -->
+<script src="./js/main.js"></script>
+<!-- /build -->
 </body>
-
 </html>

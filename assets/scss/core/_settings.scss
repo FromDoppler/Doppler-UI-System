@@ -5,17 +5,14 @@
 ////
 /// Settings ///
 ///
-$ds-background: $ds-color-ghostwhite !default;
-$ds-background-bright: $ds-background !default;
-$ds-wrapper-min-width: torem(1200px) !default;
-$ds-breakpoints: (
-  'desktop-fhd': (max-width: 1920px),
-  'desktop': (max-width: 1366px),
-  'ipad': (min-width: 1023px, max-width: 1024px),
-  'isdesktop': (min-width: 1024px),
-  'ismobile': (max-width: 1024px),
-  'iphone': (max-width: 980px)
+$dp-background: $dp-color-ghostwhite !default;
+$dp-wrapper-min-width: 1200px !default;
+$dp-transition-duration: 0.25s !default;
+$dp-transition-timing: ease !default;
+$dp-breakpoints: (
+  mobile: 'max-width: 480px',
+  ipad: 'max-width: 768px',
+  desktop: 'max-width: 1024px',
+  hddesktop: 'max-width: 1440px'
 )
 !default;
-$ds-transition-duration: 0.25s !default;
-$ds-transition-timing: ease !default;

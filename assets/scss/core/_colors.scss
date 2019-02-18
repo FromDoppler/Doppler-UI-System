@@ -5,78 +5,83 @@
 ////
 /// Colors ///
 ///
-$ds-color-ghostwhite: #F2F2F2;
-$ds-color-lightgrey: #999999;
-$ds-color-grey: #666666;
-$ds-color-darkgrey: #333333;
-$ds-color-lightgreen: #65C192;
-$ds-color-green: #33AD73;
-$ds-color-darkgreen: #008046;
-$ds-color-sylver: #CCCCCC;
-$ds-color-snow: #EAEAEA;
-$ds-color-lightyellow: #FDE577;
-$ds-color-yellow: #FBB224;
-$ds-color-darkyellow: #E58900;
-$ds-color-lightred: #EC8A83;
-$ds-color-red: #E34F45;
-$ds-color-darkred: #A63A33;
+$dp-color-ghostwhite: #F2F2F2;
+$dp-color-lightgrey: #999999;
+$dp-color-grey: #666666;
+$dp-color-darkgrey: #333333;
+$dp-color-lightgreen: #65C192;
+$dp-color-green: #33AD73;
+$dp-color-darkgreen: #008046;
+$dp-color-sylver: #CCCCCC;
+$dp-color-snow: #EAEAEA;
+$dp-color-lightyellow: #FDE577;
+$dp-color-yellow: #FBB224;
+$dp-color-darkyellow: #E58900;
+$dp-color-lightred: #EC8A83;
+$dp-color-red: #E34F45;
+$dp-color-darkred: #A63A33;
+$dp-white: #FFFFFF;
 
 .ghostwhite {
-  background-color: $ds-color-ghostwhite;
+  background-color: $dp-color-ghostwhite;
 }
 
 .light-grey {
-  background-color: $ds-color-lightgrey;
+  background-color: $dp-color-lightgrey;
 }
 
 .grey {
-  background-color: $ds-color-grey;
+  background-color: $dp-color-grey;
 }
 
 .dark-grey {
-  background-color: $ds-color-darkgrey;
+  background-color: $dp-color-darkgrey;
 }
 
 .sylver {
-  background-color: $ds-color-sylver;
+  background-color: $dp-color-sylver;
 }
 
 .snow {
-  background-color: $ds-color-snow;
+  background-color: $dp-color-snow;
 }
 
 .light-green {
-  background-color: $ds-color-lightgreen;
+  background-color: $dp-color-lightgreen;
 }
 
 .green {
-  background-color: $ds-color-green;
+  background-color: $dp-color-green;
 }
 
 .dark-green {
-  background-color: $ds-color-darkgreen;
+  background-color: $dp-color-darkgreen;
 }
 
 .light-yellow {
-  background-color: $ds-color-lightyellow;
+  background-color: $dp-color-lightyellow;
 }
 
 .yellow {
-  background-color: $ds-color-yellow;
+  background-color: $dp-color-yellow;
 }
 
 .dark-yellow {
-  background-color: $ds-color-darkyellow;
+  background-color: $dp-color-darkyellow;
 }
 
 .light-red {
-  background-color: $ds-color-lightred;
+  background-color: $dp-color-lightred;
 }
 
 .red {
-  background-color: $ds-color-red;
+  background-color: $dp-color-red;
 }
 
 .dark-red {
-  background-color: $ds-color-darkred;
+  background-color: $dp-color-darkred;
+}
+
+.white {
+  background-color: $dp-white;
 }

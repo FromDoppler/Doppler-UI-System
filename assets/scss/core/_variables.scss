@@ -1,22 +1,22 @@
 .micro {
   font-size: 11px;
   line-height: 13px;
-  color: #666666;
+  color: $dp-color-grey;
   text-transform: uppercase;
 }
 /* TEXT COLORS - grey */
 .c-dark-grey {
-  color: #333333;
+  color: $dp-color-darkgrey;
   /* text */
 }
 
 .c-grey {
-  color: #666666;
+  color: $dp-color-grey;
   /* icons fonts */
 }
 
 .c-light-grey {
-  color: #999999;
+  color: $dp-color-lightgrey;
   /* placeholders, hovers*/
 }
 /* VERTICAL SPACES */
@@ -51,34 +51,34 @@
 /* BACKGROUNDS COLORS */
 
 .grey-bg {
-  background-color: #666666;
+  background-color: $dp-color-grey;
   /* disabled inputs */
 }
 
 .light-grey-bg {
-  background-color: #999999;
+  background-color: $dp-color-lightgrey;
 }
 
 .snow {
-  background-color: #EAEAEA;
+  background-color: $dp-color-snow;
   /* disabled inputs */
 }
 
 .ghost-white-bg {
-  background-color: #F2F2F2;
+  background-color: $dp-color-ghostwhite;
   /* backgrounds grid, cebra */
 }
 /* TEXT COLORS */
 
 .dark-grey-txt {
-  color: #333333;
+  color: $dp-color-darkgrey;
   /* variant of <p> */
-  font-weight: bold;
+  font-weight: $dp-font-weight-bold;
 }
 /* BORDER COLORS */
 
 .sylver {
-  border-color: #CCCCCC;
+  border-color: $dp-color-sylver;
   /* strokes */
 }
 /* DISABLED ICON STATES */

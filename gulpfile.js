@@ -30,6 +30,12 @@ var gulp = require('gulp'),
   // Require Css-MQpacker// Clean CSS
   mqpacker = require('css-mqpacker'),
   mqsorter = require('sort-css-media-queries'),
+  // uglify plugin
+  uglify = require('gulp-uglify'),
+  // Concat plugin
+  concat = require('gulp-concat'),
+  // Console utility
+  util = require("gulp-util");
   // Image optimization plugin
   imagemin = require('gulp-imagemin');
 
@@ -41,7 +47,7 @@ var config = {
     css: 'dev/css',
     fonts: 'dev/fonts',
     images: 'dev/img',
-    //js: 'dev/js'
+    js: 'dev/js'
   }, // If this path gets changed, remember to update .gitignore with the proper path to ignore images and css
   folderAssets: {
     base: 'assets',
@@ -49,14 +55,14 @@ var config = {
     styles: 'assets/scss',
     images: 'assets/img',
     html: 'assets/templates',
-    //js: 'assets/js'
+    js: 'assets/js'
   },
   folderDist: {
     base: 'dist',
     css: 'dist/css',
     fonts: 'dist/fonts',
     images: 'dist/img',
-    //js: 'dist'
+    js: 'dist/js'
   },
   postCSS: {
     processors: [
@@ -184,6 +190,29 @@ gulp.task('copy:fonts', function() {
     .pipe(gulp.dest(config.folderDev.fonts));
 });
 
+
+// Optimize JS
+gulp.task('js:dist', function() {
+  return gulp.src([config.folderAssets.js + '/*.js'])
+    .pipe(sourcemaps.init())
+    .pipe(concat('app.js', {
+      newLine: "\r\n;"
+    }))
+    .pipe(uglify())
+    .pipe(sourcemaps.write('./'))
+    .pipe(gulp.dest(config.folderDist.js));
+});
+
+//Copy JS
+gulp.task('copy:js', function() {
+  return gulp.src([config.folderAssets.js + '/*.js'])
+    .pipe(concat('main.js', {
+      newLine: "\r\n;"
+    }))
+    .pipe(uglify())
+    .pipe(gulp.dest(config.folderDev.js));
+});
+
 // Optimize Images
 gulp.task('images:dist', function() {
   return gulp.src([config.folderAssets.images + '/**/*'])
@@ -242,6 +271,7 @@ gulp.task('run', ['clean', 'serve'], function() {
   gulp.watch(config.folderAssets.base + '/icons/*.svg', ['webfont', reload]);
   gulp.watch(config.folderAssets.fonts + '/*.*', ['copy:fonts', reload]);
   gulp.watch(config.folderAssets.images + '/**/*.*', ['copy:images']);
+  gulp.watch(config.folderAssets.js + '/**/*.js', ['copy:js', reload]);
   gulp.watch(config.folderAssets.base + '/templates/*.html', ['processHtml']);
 
   util.log('Done!');
@@ -253,7 +283,7 @@ gulp.task('watch', ['build'], function() {
 });
 
 // Define build task
-gulp.task('build', ['sass', 'webfont', 'copy:fonts', 'processHtml', 'copy:images']);
+gulp.task('build', ['sass', 'webfont', 'copy:fonts', 'processHtml', 'copy:js', 'copy:images']);
 
 // Define Dist generation task (Deploy)
-gulp.task('dist', ['sass:dist', 'fonts:dist', 'processHtml:dist', 'images:dist']);
+gulp.task('dist', ['sass:dist', 'fonts:dist', 'processHtml:dist', 'js:dist', 'images:dist']);
