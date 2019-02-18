@@ -1,12 +1,11 @@
 /* header */
 $dp-header-height: 4em;
-$dp-border-color: #CCCCCC;
 $dp-border-radius: 5px;
-$dp-text-aling: center; /* header */
-
+$dp-text-aling: center;
+/* header */
 .header-main {
   height: $dp-header-height;
-  border-bottom: 1px solid $dp-border-color;
+  border-bottom: 1px solid $dp-color-sylver;
   box-shadow: 0 0 0 4px $dp-color-snow;
   background: #FFF;
   position: fixed;
@@ -87,7 +86,7 @@ $dp-text-aling: center; /* header */
   top: 35px;
   padding-top: 15px;
   transition: all 0.3s 1s;
-  background: $dp-white;
+  background: $dp-color-white;
 
   &.open {
     display: flex;
@@ -123,7 +122,6 @@ $dp-text-aling: center; /* header */
   width: 100%;
 }
 /* nav right */
-
 .nav-right-main {
   display: flex;
 }
@@ -159,7 +157,7 @@ $dp-text-aling: center; /* header */
 
   a.active:after {
     content: attr(data-count);
-    color: $dp-white;
+    color: $dp-color-white;
     background-color: $dp-color-yellow;
     height: 14px;
     width: 14px;
@@ -174,7 +172,7 @@ $dp-text-aling: center; /* header */
 
   .user-avatar {
     border-radius: 100%;
-    color: $dp-white;
+    color: $dp-color-white;
     cursor: pointer;
     font-size: 18px;
     display: block;
@@ -211,10 +209,10 @@ $dp-text-aling: center; /* header */
 }
 
 .user-menu {
-  background: #fff;
-  border-bottom: 3px solid #E8E8E8;
-  border-left: 1px solid #E8E8E8;
-  border-right: 1px solid #E8E8E8;
+  background: $dp-color-white;
+  border-bottom: 3px solid $dp-border-grey;
+  border-left: 1px solid $dp-border-grey;
+  border-right: 1px solid $dp-border-grey;
   border-top: 3px solid #C9C7BD;
   border-radius: 3px;
   padding: 15px 15px 0;
@@ -262,27 +260,27 @@ $dp-text-aling: center; /* header */
   }
 
   header .email {
-    color: #666;
-    font-size: 13px;
+    color: $dp-color-grey;
+    font-size: $dp-font-size-small;
   }
 
   .name {
-    color: #333;
+    color: $dp-color-darkgrey;
     font-size: 20px;
   }
 }
 
 .user-menu .options-user {
   li {
-    border-top: 1px solid #E8E8E8;
+    border-top: 1px solid $dp-border-grey;
     padding: 12px 0;
     display: flex;
     font-size: 11px;
   }
 
   a {
-    font-size: 13px;
-    color: #666;
+    font-size: $dp-font-size-small;
+    color: $dp-color-grey;
   }
 }
 
@@ -290,7 +288,7 @@ $dp-text-aling: center; /* header */
   margin-top: 15px;
   display: flex;
   align-items: center;
-  border-top: 1px solid #E8E8E8;
+  border-top: 1px solid $dp-border-grey;
   padding: 10px 0;
 
   .buy-plan {
@@ -346,7 +344,7 @@ $dp-text-aling: center; /* header */
     right: -300px;
     top: 65px;
     height: calc(100vh - 65px);
-    background: $dp-white;
+    background: $dp-color-white;
     border-left: 1px solid $dp-color-ghostwhite;
     transition: right 0.6s ease;
   }

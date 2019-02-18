@@ -20,7 +20,8 @@ $dp-color-darkyellow: #E58900;
 $dp-color-lightred: #EC8A83;
 $dp-color-red: #E34F45;
 $dp-color-darkred: #A63A33;
-$dp-white: #FFFFFF;
+$dp-color-white: #FFFFFF;
+$dp-border-grey: #E8E8E8;
 
 .ghostwhite {
   background-color: $dp-color-ghostwhite;
@@ -83,5 +84,5 @@ $dp-white: #FFFFFF;
 }
 
 .white {
-  background-color: $dp-white;
+  background-color: $dp-color-white;
 }
