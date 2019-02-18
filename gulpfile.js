@@ -96,6 +96,22 @@ gulp.task('sass:build', ['webfont'], function() {
     .pipe(gulp.dest(config.folderDist.css));
 });
 
+gulp.task('sass:dist', ['webfont'], function() {
+  return gulp.src(config.folderAssets.styles + '/styles.scss')
+    .pipe(globbing({
+      // Configure it to use SCSS files
+      extensions: ['.scss']
+    }))
+    .pipe(sass().on('error', sass.logError))
+    .pipe(postcss(config.postCSS.processors))
+    .pipe(postcss([flexibility]))
+    .pipe(cleanCSS({
+      advanced: true
+    }))
+    .pipe(csso())
+    .pipe(gulp.dest(config.folderDist.css));
+});
+
 // Sass Watch task definition
 gulp.task('sass', function() {
   return gulp.src(config.folderAssets.styles + '/styles.scss')
@@ -240,4 +256,4 @@ gulp.task('watch', ['build'], function() {
 gulp.task('build', ['sass', 'webfont', 'copy:fonts', 'processHtml', 'copy:images']);
 
 // Define Dist generation task (Deploy)
-gulp.task('dist', ['sass:build', 'fonts:dist', 'processHtml:dist', 'images:dist']);
+gulp.task('dist', ['sass:dist', 'fonts:dist', 'processHtml:dist', 'images:dist']);
