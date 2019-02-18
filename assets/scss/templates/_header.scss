@@ -1,13 +1,13 @@
 /* header */
 $dp-header-height: 4em;
 $dp-border-radius: 5px;
-$dp-text-aling: center;
-/* header */
+$dp-text-aling: center; /* header */
+
 .header-main {
   height: $dp-header-height;
   border-bottom: 1px solid $dp-color-sylver;
   box-shadow: 0 0 0 4px $dp-color-snow;
-  background: #FFF;
+  background: $dp-color-white;
   position: fixed;
   width: 100%;
   left: 0;
@@ -122,6 +122,7 @@ $dp-text-aling: center;
   width: 100%;
 }
 /* nav right */
+
 .nav-right-main {
   display: flex;
 }
