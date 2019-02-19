@@ -11,3 +11,4 @@ dist
 dev/fonts/*
 /assets/scss/libs/iconfont/_icon-font.scss
 /dev/index.html
+/dev/**
