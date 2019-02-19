@@ -1,66 +1,68 @@
+.main-colors {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 50px;
+}
+
 .section-module {
   width: 100%;
-  max-width: 1366px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 80px 5%;
-  border-bottom: 1px solid #CCCCCC;
+  padding: 120px 0 0;
+  border-bottom: 1px solid $dp-color-sylver;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.width-320 {
-  max-width: 520px;
-}
-
-.align-right {
-  text-align: right;
-}
-
-.color {
-  padding-bottom: 100px;
-  border-radius: 3px;
-}
-
-.square-8 {
-  border: 1px dashed #999999;
-  width: 8px;
-  height: 8px;
-}
-
-.square-24 {
-  border: 1px dashed #999999;
-  width: 24px;
-  height: 24px;
-}
-
-.square-48 {
-  border: 1px dashed #999999;
-  width: 48px;
-  height: 48px;
-}
-
-.square-64 {
-  border: 1px dashed #999999;
-  width: 64px;
-  height: 64px;
+.color-card {
+  border: 1px solid $dp-color-ghostwhite;
+  height: 200px;
+  border-radius: 5px;
+  box-shadow: 0 0.5em 1em -0.5em $dp-color-sylver;
+  overflow: hidden;
+  margin-bottom: 30px;
+  width: 210px;
 }
 
 .color-list {
   padding: 0;
   margin: 20px 0;
   list-style: none;
-  font-size: $ds-font-size;
-  font-family: $ds-font-family;
+  font-size: $dp-font-size;
+  font-family: $dp-font-family;
 
   li {
     margin-bottom: 10px;
   }
 }
-/* header */
-.header-main .icon-doppler-logo {
-  color: #fbb224;
-  font-size: 40px;
-  width: 40px;
-  border: 0;
+
+.sample-color {
+  width: 100%;
+  height: 0;
+  padding-bottom: 50%;
   position: relative;
-  margin-right: 20px;
-  top: 13px;
+}
+
+.description-color {
+  width: 100%;
+  height: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: $dp-color-white;
+  font-size: $dp-font-size;
+  border-top: 1px solid $dp-color-snow;
+
+  code {
+    padding: 3px 5px;
+    border-radius: 3px;
+  }
+
+  p {
+    color: $dp-color-darkgrey;
+  }
 }

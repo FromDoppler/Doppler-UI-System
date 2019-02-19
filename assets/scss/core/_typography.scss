@@ -4,29 +4,29 @@
 /// @group Typography
 ////
 @import "./settings";
-$ds-font-size: 16px !default;
-$ds-font-lineheight: 22px !default;
-$ds-font-weight: 400 !default;
-$ds-font-family: "proxima-nova", Arial, sans-serif !default;
-$ds-font: $ds-font-weight $ds-font-size $ds-font-family !default;
-$ds-font-weight-light: 300 !default;
-$ds-font-weight-regular: $ds-font-weight !default;
-$ds-font-weight-semibold: 600 !default;
-$ds-font-weight-bold: 700 !default;
-$ds-font-color: #101010 !default;
-$ds-font-color-bright: #edede6 !default;
-$ds-font-color-dark: $ds-font-color !default;
-$ds-font-color-white: #fff !default;
-$ds-headers-h1-font-size: 50px;
-$ds-headers-h2-font-size: 40px;
-$ds-headers-h3-font-size: 30px;
-$ds-headers-h4-font-size: 22px;
-$ds-headers-h5-font-size: 18px;
-$ds-headers-h6-font-size: 13px;
-$ds-font-size-small: 13px;
+$dp-font-lineheight: 22px !default;
+$dp-font-weight: 400 !default;
+$dp-font-family: Arial, sans-serif !default;
+$dp-font-size: 16px !default;
+$dp-font: $dp-font-weight $dp-font-size $dp-font-family !default;
+$dp-font-weight-light: 300 !default;
+$dp-font-weight-regular: $dp-font-weight !default;
+$dp-font-weight-semibold: 600 !default;
+$dp-font-weight-bold: 700 !default;
+$dp-font-color: #101010 !default;
+$dp-font-color-bright: #edede6 !default;
+$dp-font-color-dark: $dp-font-color !default;
+$dp-font-color-white: #fff !default;
+$dp-headers-h1-font-size: 50px;
+$dp-headers-h2-font-size: 40px;
+$dp-headers-h3-font-size: 30px;
+$dp-headers-h4-font-size: 22px;
+$dp-headers-h5-font-size: 18px;
+$dp-headers-h6-font-size: 13px;
+$dp-font-size-small: 13px;
 
 body {
-  color: $ds-color-grey;
+  color: $dp-color-grey;
 }
 
 button,
@@ -40,54 +40,56 @@ h3,
 h4,
 h5,
 h6 {
-  font: $ds-font;
+  font: $dp-font;
   font-weight: 400;
-  color: $ds-font-color;
+  color: $dp-color-darkgrey;
 }
 
 h1 {
   margin: 0;
-  font-size: $ds-headers-h1-font-size;
-  font-weight: $ds-font-weight-bold;
+  font-size: $dp-headers-h1-font-size;
+  font-weight: $dp-font-weight-bold;
   line-height: 1.2;
   text-transform: uppercase;
+  font-family: $dp-font-family;
 }
 
 h2 {
   margin: 0;
-  font-size: $ds-headers-h2-font-size;
+  font-size: $dp-headers-h2-font-size;
   line-height: 1.4;
+  font-family: $dp-font-family;
 }
 
 h3 {
-  font-size: $ds-headers-h3-font-size;
+  font-size: $dp-headers-h3-font-size;
 }
 
 h4 {
-  font-size: $ds-headers-h4-font-size;
+  font-size: $dp-headers-h4-font-size;
 }
 
 h5 {
-  font-size: $ds-headers-h5-font-size;
+  font-size: $dp-headers-h5-font-size;
 }
 
 h6 {
-  font-size: $ds-headers-h6-font-size;
+  font-size: $dp-headers-h6-font-size;
 }
 
 strong {
-  font-weight: $ds-font-weight-bold;
+  font-weight: $dp-font-weight-bold;
 }
 
 p {
-  font: $ds-font;
-  font-size: $ds-font-size;
-  line-height: $ds-font-lineheight;
+  font: $dp-font;
+  font-size: $dp-font-size;
+  line-height: $dp-font-lineheight;
 }
 
 small {
-  font: $ds-font;
-  font-size: $ds-font-size-small;
+  font: $dp-font;
+  font-size: $dp-font-size-small;
   line-height: 18px;
 }
 
@@ -95,28 +97,28 @@ small {
   font-family: 'hand-of-sean';
 }
 @font-face {
-  font-family: 'proxima-nova';
+  font-family: "proxima-nova";
   src: url("../fonts/proxima-nova.eot");
   src: url("../fonts/proxima-nova.eot?#iefix") format('embedded-opentype'), url("../fonts/proxima-nova.woff2") format('woff2'), url("../fonts/proxima-nova.woff") format('woff'), url(".../fonts/proxima-nova.ttf") format('truetype');
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: 'proxima-nova';
+  font-family: "proxima-nova";
   src: url("../fonts/proxima-nova-italic.eot");
   src: url("../fonts/proxima-nova-italic.eot?#iefix") format('embedded-opentype'), url("../fonts/proxima-nova-italic.woff2") format('woff2'), url("../fonts/proxima-nova-italic.woff") format('woff'), url(".../fonts/proxima-nova-italic.ttf") format('truetype');
   font-weight: 400;
   font-style: italic;
 }
 @font-face {
-  font-family: 'proxima-nova';
+  font-family: "proxima-nova";
   src: url("../fonts/proxima-nova-bold.eot");
   src: url("../fonts/proxima-nova-bold.eot?#iefix") format('embedded-opentype'), url("../fonts/proxima-nova-bold.woff2") format('woff2'), url("../fonts/proxima-nova-bold.woff") format('woff'), url("../fonts/proxima-nova-bold.ttf") format('truetype');
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
-  font-family: 'proxima-nova';
+  font-family: "proxima-nova";
   src: url("../fonts/proxima-nova-bold-italic.eot");
   src: url("../fonts/proxima-nova-bold-italic.eot?#iefix") format('embedded-opentype'), url("../fonts/proxima-nova-bold-italic.woff2") format('woff2'), url("../fonts/proxima-nova-bold-italic.woff") format('woff'), url("../fonts/proxima-nova-bold-italic.ttf") format('truetype');
   font-weight: bold;
