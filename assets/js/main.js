@@ -48,11 +48,10 @@ $(document).ready(function() {
 
   $('#open-menu').click(function() {
     $headerMain.addClass('open');
-
   });
+
   $('#close-menu').click(function() {
     $headerMain.removeClass('open');
-
   });
 
 });
