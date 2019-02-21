@@ -82,7 +82,23 @@ var config = {
   }
 };
 
-//Sass tasks are divided for performance issues regarding dependencies
+// Sass tasks are divided for performance issues regarding dependencies
+gulp.task('sass:dist', ['webfont'], function() {
+  return gulp.src(config.folderAssets.styles + '/styles.scss')
+    .pipe(globbing({
+      // Configure it to use SCSS files
+      extensions: ['.scss']
+    }))
+    .pipe(sass().on('error', sass.logError))
+    .pipe(postcss(config.postCSS.processors))
+    .pipe(postcss([flexibility]))
+    .pipe(cleanCSS({
+      advanced: true
+    }))
+    .pipe(csso())
+    .pipe(gulp.dest(config.folderDist.css));
+});
+
 // Sass Watch task definition
 gulp.task('sass', function() {
   return gulp.src(config.folderAssets.styles + '/styles.scss')
@@ -104,25 +120,6 @@ gulp.task('sass', function() {
       stream: true
     }));
 });
-
-// Sass Dist task difinition to copy in dist folder
-gulp.task('sass:dist', ['webfont'], function() {
-  return gulp.src(config.folderAssets.styles + '/styles.scss')
-    .pipe(globbing({
-      // Configure it to use SCSS files
-      extensions: ['.scss']
-    }))
-    .pipe(sass().on('error', sass.logError))
-    .pipe(postcss(config.postCSS.processors))
-    .pipe(postcss([flexibility]))
-    .pipe(cleanCSS({
-      advanced: true
-    }))
-    .pipe(csso())
-    .pipe(gulp.dest(config.folderDist.css));
-});
-
-
 
 // Process HTML task definition for distribution purposes
 gulp.task('processHtml:dist', function() {
