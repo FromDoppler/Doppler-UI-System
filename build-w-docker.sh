@@ -13,6 +13,7 @@ cd $(dirname $0)
 export MSYS_NO_PATHCONV=1
 export MSYS2_ARG_CONV_EXCL="*"
 
+rm -rf dev
 rm -rf dist
 
 docker build --pull -t doppler-ui-system-source .
