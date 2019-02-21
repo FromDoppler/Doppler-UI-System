@@ -82,26 +82,7 @@ var config = {
   }
 };
 
-// Sass tasks are divided for performance issues regarding dependencies
-// Sass Build task definition, only ran once
-// gulp.task('sass:build', ['webfont'], function() {
-//   return gulp.src(config.folderAssets.styles + '/styles.scss')
-//     .pipe(globbing({
-//       // Configure it to use SCSS files
-//       extensions: ['.scss']
-//     }))
-//     .pipe(sourcemaps.init())
-//     .pipe(sass().on('error', sass.logError))
-//     .pipe(postcss(config.postCSS.processors))
-//     .pipe(postcss([flexibility]))
-//     .pipe(cleanCSS({
-//       advanced: true
-//     }))
-//     .pipe(csso())
-//     .pipe(sourcemaps.write('./'))
-//     .pipe(gulp.dest(config.folderDist.css));
-// });
-
+//Sass tasks are divided for performance issues regarding dependencies
 // Sass Watch task definition
 gulp.task('sass', function() {
   return gulp.src(config.folderAssets.styles + '/styles.scss')
@@ -124,6 +105,7 @@ gulp.task('sass', function() {
     }));
 });
 
+// Sass Dist task difinition to copy in dist folder
 gulp.task('sass:dist', ['webfont'], function() {
   return gulp.src(config.folderAssets.styles + '/styles.scss')
     .pipe(globbing({
