@@ -1,13 +1,12 @@
 $("body").on({
   mouseenter: function() {
-    if ($('.menu-main .sub-menu').is(':visible')) {
+    var submenu = $(this).find(".sub-menu");
+    if (submenu && submenu[0].children.length) {
       $('.header-main').addClass('header-open');
     }  
   },
   mouseleave: function() {
-    if (!$('.menu-main .sub-menu').is(':visible')) {
-      $('.header-main').removeClass('header-open');
-    }
+    $('.header-main').removeClass('header-open');
   }
 }, ".menu-main .submenu-item");
 
