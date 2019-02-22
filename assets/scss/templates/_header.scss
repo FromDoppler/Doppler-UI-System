@@ -1,14 +1,14 @@
 /* header */
 $dp-header-height: 4em;
 $dp-border-radius: 5px;
-$dp-text-aling: center;
-/* header */
+$dp-text-aling: center; /* header */
+
 .header-main {
   height: $dp-header-height;
   border-bottom: 1px solid $dp-color-sylver;
   box-shadow: 0 0 0 4px $dp-color-snow;
   background: $dp-color-white;
-  position: fixed;
+  position: relative;
   width: 100%;
   left: 0;
   top: 0;
@@ -122,6 +122,7 @@ $dp-text-aling: center;
   width: 100%;
 }
 /* nav right */
+
 .nav-right-main {
   display: flex;
 }
@@ -291,10 +292,15 @@ $dp-text-aling: center;
   border-top: 1px solid $dp-border-grey;
   padding: 10px 0;
 
-  .buy-plan {
+  .user-plan {
     color: $dp-color-green;
     font-size: 11px;
     text-transform: uppercase;
+  }
+
+  .disabled {
+    cursor: text;
+    opacity: 0.4;
   }
 
   .buy-plan:hover {
@@ -321,7 +327,8 @@ $dp-text-aling: center;
 
   .header-main.open {
     .nav-left-main {
-      right: 0;
+      // right: 0;
+      width: 303px;
     }
 
     .nav-right-main .icon-close {
@@ -341,12 +348,13 @@ $dp-text-aling: center;
 
   .nav-left-main {
     position: absolute;
-    right: -300px;
+    right: 0;
+    width: 0;
     top: 65px;
     height: calc(100vh - 65px);
     background: $dp-color-white;
     border-left: 1px solid $dp-color-ghostwhite;
-    transition: right 0.6s ease;
+    transition: all 0.6s ease;
   }
 
   .nav-right-main {

@@ -85,6 +85,7 @@ pre {
  */
 a {
   background-color: transparent;
+  text-decoration: none;
 }
 /**
  * 1. Remove the bottom border in Chrome 57-
@@ -159,6 +160,14 @@ img {
 }
 /* Forms
    ========================================================================== */
+
+button {
+  font-family: inherit;
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+  background: none;
+}
 /**
  * 1. Change the font styles in all browsers.
  * 2. Remove the margin in Firefox and Safari.
