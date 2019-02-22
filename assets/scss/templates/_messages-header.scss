@@ -1,8 +1,6 @@
 /* messages headers*/
-
 .messages-container {
   display: flex;
-  // height: 50px;
   padding: 0 2%;
   margin-bottom: 4px;
   font-family: $dp-font-family;
@@ -16,16 +14,16 @@
 }
 
 .messages-container p {
-  color: #fff;
+  color: $dp-color-white;
   font-size: $dp-font-size-small;
 }
 
 .messages-container.error .button {
-  color: #e34f45;
+  color: $dp-color-red;
 }
 
 .messages-container.message .button {
-  color: #65c192;
+  color: $dp-color-lightgreen;
 }
 
 .messages-container .button {
@@ -44,10 +42,11 @@
   background: $dp-color-red;
 }
 /* buttons */
+
 .button {
   border: 0;
   border-radius: 3px;
-  color: #fff;
+  color: $dp-color-white;
   cursor: pointer;
   font-size: $dp-font-size-small;
   line-height: 45px;
@@ -59,9 +58,9 @@
 }
 
 .button--light {
-  background: #fff;
-  border: 1px solid #fff;
-  color: #666;
+  background: $dp-color-white;
+  border: 1px solid $dp-color-white;
+  color: $dp-color-grey;
 }
 
 .button--tiny {
