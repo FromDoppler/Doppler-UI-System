@@ -1,0 +1,330 @@
+form {
+  text-align: center;
+  font-family: 'proxima-nova', sans-serif;
+
+  .rgpd {
+    margin: 30px 0 10px;
+
+    p {
+      text-align: left;
+      font-size: 14px;
+      margin: 5px 0;
+    }
+  }
+
+
+  .intl-tel-input.separate-dial-code .selected-dial-code {
+    font-size: 14px;
+  }
+
+  .intl-tel-input .country-list {
+    max-width: 306px;
+    overflow-x: hidden;
+
+    .country {
+      display: flex;
+      align-items: center;
+
+      &:after {
+        content: '';
+        position: absolute;
+        height: 35px;
+        width: 1px;
+        left: 33%;
+        border-left: 1px solid #B4B1A5;
+      }
+
+      .flag-box {
+        order: 1;
+      }
+
+      .dial-code {
+        order: 2;
+        align-items: center;
+        min-width: 80px;
+        font-size: 14px;
+        font-style: italic;
+      }
+
+      .country-name {
+        order: 3;
+        font-size: 14px;
+        color: #838370;
+        font-style: italic;
+      }
+    }
+  }
+
+  .holder {
+    position: relative;
+    display: inline-block;
+    text-align: left;
+
+    &.big {
+      width: 100%;
+      padding-right: 0;
+      margin-bottom: 25px;
+
+      input,
+      textarea {
+        width: 100%;
+      }
+    }
+
+    label {
+      color: #525845;
+      font-size: 14px;
+      font-weight: bold;
+      line-height: 15px;
+      padding-bottom: 0;
+      display: inline-block;
+
+      & span {
+        font-weight: normal;
+        font-style: italic;
+        color:$dp-color-lightgrey;
+        font-size: 13px;
+      }
+    }
+
+    &.checkbox {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+
+      label {
+        margin-left: -40px;
+        padding-bottom: 0;
+      }
+
+      input[type='checkbox'] {
+        height: 40px;
+        opacity: 0;
+        z-index: 0;
+        cursor: pointer;
+        margin-left: -20px;
+        flex: 0 1 80px;
+
+        &:checked {
+          & ~ .checkmark {
+            border-color: #33AD73;
+            background-color: #33AD73;
+
+            &:after {
+              display: block;
+            }
+          }
+        }
+      }
+
+      .checkmark {
+        position: absolute;
+        left: 0;
+        height: 16px;
+        width: 16px;
+        border: 1px solid #B4B1A5;
+        border-radius: 3px;
+        background-color: #FFFFFF;
+        pointer-events: none;
+
+        &:after {
+          content: '';
+          position: absolute;
+          left: 5px;
+          top: 1px;
+          width: 5px;
+          height: 10px;
+          border: solid white;
+          border-width: 0 3px 3px 0;
+          transform: rotate(45deg);
+        }
+      }
+
+      label {
+        font-weight: normal;
+      }
+
+      &.error {
+        .checkmark {
+          border-color: #E34F45;
+        }
+      }
+    }
+  }
+
+  input:not(.button):not([type='checkbox']),
+  textarea {
+    height: 40px;
+    min-width: 370px;
+    border: 1px solid #B4B1A5;
+    border-radius: 3px;
+    background-color: #FFFFFF;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 10px 12px;
+
+    &::placeholder {
+      color: #838370;
+      font-style: italic;
+    }
+
+    &:required {
+      box-shadow: none;
+    }
+
+    &:focus {
+      color: #525845;
+      border: 1px solid #FBB224;
+      border-radius: 3px;
+      -webkit-box-shadow: 0 0 0 2px rgba(0,0,0,0.1);
+      box-shadow: 0 0 0 2px rgba(0,0,0,0.1);
+      outline: none;
+
+      &::placeholder {
+        font-style: normal;
+      }
+    }
+  }
+
+  textarea {
+    height: 120px;
+    resize: none;
+  }
+
+  input[type="tel"].phone {
+    -moz-appearance: textfield;
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+
+  input.phone-number {
+    padding-right: 52px;
+  }
+
+  .loader {
+    position: relative;
+
+    img {
+      display: none;
+      height: 20px;
+      width: 20px;
+      position: absolute;
+      top: calc(50% - 10px);
+      left: calc(50% - 10px);
+      animation: spin 2s linear infinite;
+    }
+  }
+
+  .success-message {
+    text-align: right;
+    display: none;
+
+    p {
+      color: $dp-color-green;
+    }
+
+    .icon-success {
+      height: 35px;
+      width: 35px;
+      background: $dp-color-green;
+      color: #FFF;
+      border-radius: 100%;
+      margin-left: 10px;
+      position: relative;
+      font-size: 10px;
+
+      &:before {
+        position: absolute;
+        top: 50%;
+        left: 11px;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  .error {
+    input:not(.button):not([type='checkbox']),
+    textarea {
+      border: 1px solid $dp-color-red;
+
+      &:focus {
+        border: 1px solid $dp-color-red;
+        -webkit-box-shadow: 0 0 0 2px rgba(0,0,0,0.1);
+        box-shadow: 0 0 0 2px rgba(0,0,0,0.1);
+      }
+    }
+
+    &:after {
+      left: 0;
+      top: 100%;
+      color: $dp-color-red;
+      content: attr(data-error);
+      font-size: 14px;
+      line-height: 20px;
+      padding: 0;
+      position: absolute;
+      text-transform: initial;
+      white-space: nowrap;
+      z-index: 1;
+    }
+  }
+
+  &.disabled {
+    input:not(.button),
+    textarea {
+      background: #E7E5DC;
+      color: #838370;
+      pointer-events: none;
+    }
+
+    .loader {
+      .button {
+        opacity: 0.6;
+        pointer-events: none;
+        color: $dp-color-green;
+
+        &:hover {
+          background: $dp-color-green;
+        }
+      }
+
+      img {
+        display: inline-block;
+      }
+    }
+  }
+
+  &.success {
+    .loader {
+      display: none;
+    }
+
+    .success-message {
+      display: block;
+    }
+  }
+
+  .easy-autocomplete-container .eac-item img {
+    width: 18px;
+    margin-right: 5px;
+  }
+}
+
+.clock--container {
+  color: $dp-color-grey;
+  font-size: 14px;
+  font-style: italic;
+  text-align: center;
+  width: 100%;
+
+  span {
+    color: $dp-color-grey;
+    font-size: 20px;
+  }
+}
+/* Section Form */
+

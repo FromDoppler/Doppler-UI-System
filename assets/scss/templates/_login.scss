@@ -1,0 +1,130 @@
+.form-container {
+  width: 38.5%;
+  padding:6.3% 3.6%;
+  font-family: 'proxima-nova',sans-serif;
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-content: center;
+      margin-bottom: 60px;
+
+      .logo {
+        width:84px;
+      }
+
+      .register-account {
+        font-weight: normal;
+        font-style: italic;
+        color:$dp-color-lightgrey;
+        font-size: 13px;
+
+        a {
+          text-decoration: none;
+          color:$dp-color-lightgreen;
+          font-weight: bold;
+          font-style: normal;
+        }
+      }
+    }
+
+
+.form--login-title {
+  color:$dp-color-darkgrey;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 24px;
+}
+
+.form--login-subtitle {
+  color:$dp-color-lightgrey;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 24px;
+}
+
+}
+
+
+.form-login {
+  padding-bottom: 170px;
+
+  .wrapper {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+    article {
+      margin-bottom: 45px;
+    }
+
+    form {
+      max-width: 680px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      margin-top: 34px;
+
+      .holder {
+        width: 50%;
+        padding-right: 30px;
+        margin-bottom: 30px;
+
+        &:nth-child(even) {
+          padding-right: 0;
+        }
+
+        &.checkbox {
+          margin-bottom: 0;
+          display: flex;
+        }
+
+        &.big {
+          width: 100%;
+          padding-right: 0;
+        }
+
+        &.time {
+          padding-right: 0;
+        }
+
+        .intl-tel-input {
+          width: 90%;
+        }
+
+        .message {
+          display: inline-block;
+          font-size: 14px;
+          color: #E34F45;
+          line-height: 20px;
+
+          &.hide {
+            display: none;
+          }
+        }
+
+        input:not([type='checkbox']),
+        textarea {
+          width: 100%;
+          min-width: auto;
+        }
+
+        .button {
+          width: auto;
+          float: right;
+        }
+      }
+    }
+  }
+
+  .bg-c {
+    transform: rotate(-5deg) translate(500px, -480px);
+  }
+
+  .bg-e {
+    bottom: 0;
+    top: auto;
+    transform: translate(-50%);
+  }
+}
