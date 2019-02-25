@@ -83,25 +83,6 @@ var config = {
 };
 
 // Sass tasks are divided for performance issues regarding dependencies
-// Sass Build task definition, only ran once
-gulp.task('sass:build', ['webfont'], function() {
-  return gulp.src(config.folderAssets.styles + '/styles.scss')
-    .pipe(globbing({
-      // Configure it to use SCSS files
-      extensions: ['.scss']
-    }))
-    .pipe(sourcemaps.init())
-    .pipe(sass().on('error', sass.logError))
-    .pipe(postcss(config.postCSS.processors))
-    .pipe(postcss([flexibility]))
-    .pipe(cleanCSS({
-      advanced: true
-    }))
-    .pipe(csso())
-    .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest(config.folderDist.css));
-});
-
 gulp.task('sass:dist', ['webfont'], function() {
   return gulp.src(config.folderAssets.styles + '/styles.scss')
     .pipe(globbing({
@@ -179,7 +160,7 @@ gulp.task('webfont:generate', function() {
 });
 
 // Copy webfont to Dist folder
-gulp.task('fonts:dist',['copy:fonts'], function() {
+gulp.task('fonts:dist', ['copy:fonts'], function() {
   return gulp.src(config.folderDev.fonts + '/*.*')
     .pipe(gulp.dest(config.folderDist.fonts));
 });
@@ -189,7 +170,6 @@ gulp.task('copy:fonts', function() {
   return gulp.src(config.folderAssets.fonts + '/*.*')
     .pipe(gulp.dest(config.folderDev.fonts));
 });
-
 
 // Optimize JS
 gulp.task('js:dist', function() {

@@ -67,3 +67,32 @@
     color: $dp-color-darkgrey;
   }
 }
+
+.main-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+
+.buttons-card {
+  height: 235px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  width: 300px;
+  text-align: left;
+}
+
+.button-list {
+  padding: 0;
+  margin: 20px 0;
+  list-style: none;
+  font-size: $dp-font-size-small;
+  font-family: $dp-font-family;
+
+  li {
+    margin-bottom: 10px;
+    text-align: left;
+  }
+}

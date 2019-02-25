@@ -8,27 +8,25 @@ $dp-text-aling: center;
   border-bottom: 1px solid $dp-color-sylver;
   box-shadow: 0 0 0 4px $dp-color-snow;
   background: $dp-color-white;
-  position: fixed;
+  position: relative;
   width: 100%;
   left: 0;
   top: 0;
   z-index: 100;
   display: flex;
   font-family: $dp-font-family;
-  padding-top: 10px;
-  padding-bottom: 10px;
   height: auto;
   flex-direction: column;
-  transition: all 0.5s 1s;
 
   &.header-open {
-    height: 100px;
+    height: 105px;
   }
 }
 
 .header-wrapper {
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-left: 2%;
+  padding-right: 2%;
+  height: 70px;
   justify-content: space-between;
   align-items: center;
   display: flex;
@@ -135,7 +133,7 @@ $dp-text-aling: center;
 
   li {
     display: inline-block;
-    margin: 0 0.5em;
+    margin: 0 10px;
     position: relative;
   }
 
@@ -291,10 +289,15 @@ $dp-text-aling: center;
   border-top: 1px solid $dp-border-grey;
   padding: 10px 0;
 
-  .buy-plan {
+  .user-plan {
     color: $dp-color-green;
     font-size: 11px;
     text-transform: uppercase;
+  }
+
+  .disabled {
+    cursor: text;
+    opacity: 0.4;
   }
 
   .buy-plan:hover {
@@ -316,12 +319,12 @@ $dp-text-aling: center;
 }
 @include media-breakpoint('desktop') {
   .header-main.header-open {
-    height: 61px;
+    height: 71px;
   }
 
   .header-main.open {
     .nav-left-main {
-      right: 0;
+      width: 303px;
     }
 
     .nav-right-main .icon-close {
@@ -341,12 +344,13 @@ $dp-text-aling: center;
 
   .nav-left-main {
     position: absolute;
-    right: -300px;
-    top: 65px;
+    right: 0;
+    width: 0;
+    top: 75px;
     height: calc(100vh - 65px);
     background: $dp-color-white;
     border-left: 1px solid $dp-color-ghostwhite;
-    transition: right 0.6s ease;
+    transition: all 0.6s ease;
   }
 
   .nav-right-main {
