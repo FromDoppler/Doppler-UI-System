@@ -1,5 +1,5 @@
 @mixin dp-button() {
-  .button {
+  .dp-button {
     display: inline-block;
     text-align: center;
     text-decoration: none;
@@ -8,12 +8,12 @@
     outline: none;
     transition: all 0.25s ease;
     appearance: none;
-    font-family: "proxima-nova", Helvetica;
+    font-family: $dp-font-family-proximanova;
 
     &.button-big {
       font-size: 15px;
       line-height: 15px;
-      font-weight: 600;
+      font-weight: $dp-font-weight-semibold;
       border-radius: 99px;
       padding: 20px 42px;
     }
@@ -21,7 +21,7 @@
     &.button-medium {
       font-size: 13px;
       line-height: 13px;
-      font-weight: 800;
+      font-weight: $dp-font-weight-bold;
       border-radius: 99px;
       padding: 15px 27px;
     }
@@ -29,7 +29,7 @@
     &.button-small {
       font-size: 11px;
       line-height: 11px;
-      font-weight: 800;
+      font-weight: $dp-font-weight-bold;
       border-radius: 99px;
       padding: 11px 23px;
     }
@@ -76,7 +76,7 @@
         color: $dp-color-green;
 
         &:hover {
-          background-color: rgba(51,173,115,.2);
+          background-color: $dp-color-green-brightness;
         }
       }
 
@@ -86,7 +86,7 @@
         color: $dp-color-lightyellow;
 
         &:hover {
-          background-color: rgba(252,229,121,.2);
+          background-color: $dp-color-yellow-brightness;
         }
       }
 
@@ -96,7 +96,7 @@
         color: $dp-color-brown;
 
         &:hover {
-          background-color: rgba(48,33,0,.2);
+          background-color: $dp-color-brown-brightness;
         }
       }
     }
