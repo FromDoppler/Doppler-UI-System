@@ -1,0 +1,72 @@
+/* messages headers*/
+.messages-container {
+  display: flex;
+  padding: 0 2%;
+  margin-bottom: 4px;
+  font-family: $dp-font-family;
+}
+
+.messages-container .wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.messages-container p {
+  color: $dp-color-white;
+  font-size: $dp-font-size-small;
+}
+
+.messages-container.error .button {
+  color: $dp-color-red;
+}
+
+.messages-container.message .button {
+  color: $dp-color-lightgreen;
+}
+
+.messages-container .button {
+  margin-left: 20px;
+}
+
+.messages-container.message {
+  background: $dp-color-lightgreen;
+}
+
+.messages-container.warning {
+  background: $dp-color-yellow;
+}
+
+.messages-container.error {
+  background: $dp-color-red;
+}
+/* buttons */
+
+.button {
+  border: 0;
+  border-radius: 3px;
+  color: $dp-color-white;
+  cursor: pointer;
+  font-size: $dp-font-size-small;
+  line-height: 45px;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 45px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.button--light {
+  background: $dp-color-white;
+  border: 1px solid $dp-color-white;
+  color: $dp-color-grey;
+}
+
+.button--tiny {
+  font-size: 13px;
+  height: 30px;
+  line-height: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
