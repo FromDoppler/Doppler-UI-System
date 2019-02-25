@@ -67,3 +67,36 @@
     color: $dp-color-darkgrey;
   }
 }
+
+.main-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 30px;
+}
+
+.buttons-card {
+  height: 235px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  width: 300px;
+  text-align: left;
+}
+
+.description-color {
+  width: 100%;
+  height: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: $dp-color-white;
+  font-size: $dp-font-size;
+  border-top: 1px solid $dp-color-snow;
+
+  code {
+    padding: 20px 5px 5px;
+    border-radius: 3px;
+  }
+}
