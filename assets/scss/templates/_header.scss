@@ -15,20 +15,18 @@ $dp-text-aling: center;
   z-index: 100;
   display: flex;
   font-family: $dp-font-family;
-  padding-top: 10px;
-  padding-bottom: 10px;
   height: auto;
   flex-direction: column;
-  transition: all 0.5s 1s;
 
   &.header-open {
-    height: 100px;
+    height: 105px;
   }
 }
 
 .header-wrapper {
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-left: 2%;
+  padding-right: 2%;
+  height: 70px;
   justify-content: space-between;
   align-items: center;
   display: flex;
@@ -135,7 +133,7 @@ $dp-text-aling: center;
 
   li {
     display: inline-block;
-    margin: 0 0.5em;
+    margin: 0 10px;
     position: relative;
   }
 
@@ -321,7 +319,7 @@ $dp-text-aling: center;
 }
 @include media-breakpoint('desktop') {
   .header-main.header-open {
-    height: 61px;
+    height: 71px;
   }
 
   .header-main.open {
@@ -348,7 +346,7 @@ $dp-text-aling: center;
     position: absolute;
     right: 0;
     width: 0;
-    top: 65px;
+    top: 75px;
     height: calc(100vh - 65px);
     background: $dp-color-white;
     border-left: 1px solid $dp-color-ghostwhite;
