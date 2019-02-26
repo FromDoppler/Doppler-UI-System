@@ -1,0 +1,115 @@
+.panel-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+
+  .main-panel {
+    flex: 1.5;
+    height: 100vh;
+    background-color: $dp-color-white;
+    overflow-y: scroll;
+    padding: 40px 50px;
+
+    .logo-doppler {
+      height: 30px;
+    }
+
+    .head-signin {
+      display: inline-block;
+      float: right;
+      margin-top: 6px;
+      font-style: italic;
+
+      a {
+        font-style: normal;
+        font-weight: bold;
+      }
+    }
+
+    &__content {
+      padding: 60px 0 34px;
+
+      h5 {
+        margin: 10px 0;
+        color: $dp-color-brown;
+      }
+
+      p {
+        margin: 10px 0;
+      }
+    }
+
+    &__rgpd {
+      padding-bottom: 10px;
+
+      p {
+        font-family: $dp-font-family-proximanova;
+        font-size: $dp-font-size-small;
+      }
+    }
+
+    &__promotion {
+      p {
+        font-size: 15px;
+      }
+    }
+
+    &__footer {
+      padding-top: 40px;
+    }
+  }
+
+  .line-dashed {
+    border-style: dashed;
+  }
+
+  .feature-panel {
+    flex: 4;
+    height: 100vh;
+    padding: 60px 70px;
+    background-image: url("../img/signup-img.png");
+    background-size: cover;
+  }
+
+  .feature-content {
+    max-width: 500px;
+    color: #FFFFFF;
+
+    h3 {
+      font-family: $dp-font-family-proximanova;
+      font-weight: bold;
+      color: $dp-color-white;
+      margin: 10px 0;
+    }
+
+    p {
+      font-family: $dp-font-family-proximanova;
+    }
+  }
+  /* width */
+  ::-webkit-scrollbar {
+    width: 8px;
+    border-radius: 5px;
+  }
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background-color: #D8D8D8;
+    height: 600px;
+  }
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #999999;
+    border-radius: 5px;
+  }
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #999999;
+  }
+}
+@include media-breakpoint('desktop') {
+  .feature-panel {
+    display: none;
+  }
+}
