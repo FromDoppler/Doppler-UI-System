@@ -132,11 +132,12 @@
   }
 }
 
-.main-buttons {
+.main-buttons, .main-inputs {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .buttons-card {
@@ -159,4 +160,114 @@
     margin-bottom: 10px;
     text-align: left;
   }
+}
+
+.inputs-card {
+  width: 370px;  
+  h5 {
+    margin: 15px 0;
+    font-size: $dp-font-size-p;
+    font-family: $dp-font-family;
+    font-weight: bold;
+  }
+
+  p {
+    font-size: $dp-font-size-small;
+    line-height: 18px;
+    color:$dp-color-grey;
+  }
+}
+
+.guideline-focus{
+      color: $dp-color-grey;
+      border: 1px solid $dp-color-yellow !important;
+      border-radius: 3px;
+      -webkit-box-shadow: 0 0 0 2px rgba($dp-color-darkgrey,0.1);
+      box-shadow: 0 0 0 2px rgba($dp-color-darkgrey,0.1);
+      outline: none;
+}
+
+.guideline-error {
+  border: 1px solid $dp-color-red !important;
+}
+
+.guideline-error-txt {
+  font-family: $dp-font-family-proximanova;
+  color:$dp-color-red;
+  font-size: $dp-font-size-p;
+  line-height: 20px;
+}
+
+.guideline-check-label {
+  color:$dp-color-grey;
+  a {
+    color:$dp-color-lightgreen !important;
+  }
+}
+
+.guideline-checked {
+  border-color: $dp-color-green !important;
+            background-color: $dp-color-green !important;
+}
+
+.guideline-checked-error {
+  border-color: $dp-color-red !important;
+}
+
+.main-inputs form .checkbox {
+  margin-bottom: 0;
+}
+
+.inputs-sub-card {
+  width: 50vw;
+  margin-top: 30px;
+  h5 {
+    margin: 15px 0;
+    font-size: $dp-font-size-p;
+    font-family: $dp-font-family;
+    font-weight: bold;
+  }
+
+  p {
+    font-size: $dp-font-size-small;
+    line-height: 18px;
+    color:$dp-color-grey;
+  }
+  form span.holder {
+    width: 49% !important;
+  }
+
+  form {
+    text-align: right;
+  }
+}
+
+.guideline-input-submit {
+  background-color: $dp-color-grey-brightness !important;
+  border: 1px solid $dp-color-sylver !important;
+  color: $dp-color-grey !important;
+  font-style: normal !important;
+}
+
+.guideline-lightgreen {
+  background-color: $dp-color-lightgreen !important;
+  color:$dp-color-white;
+  padding:8px 70px !important;
+  font-size: $dp-headers-h5-font-size !important;
+}
+
+.guideline-success-msg {
+  color:$dp-color-green;
+  vertical-align: middle;
+  font-family: $dp-font-family;
+  font-size: $dp-font-size-p;
+  text-align: right;
+}
+
+.guideline-error-msg {
+  color:$dp-color-red;
+  vertical-align: middle;
+  font-family: $dp-font-family;
+  font-size: $dp-font-size-p;
+  text-align: right;
 }

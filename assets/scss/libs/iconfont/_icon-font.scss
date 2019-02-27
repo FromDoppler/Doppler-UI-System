@@ -192,31 +192,35 @@
     content: "\E02A";
   }
 
-  .icon-tip:before {
+  .icon-spinner:before {
     content: "\E02B";
   }
 
-  .icon-undo:before {
+  .icon-tip:before {
     content: "\E02C";
   }
 
-  .icon-view:before {
+  .icon-undo:before {
     content: "\E02D";
   }
 
-  .icon-warning:before {
+  .icon-view:before {
     content: "\E02E";
   }
 
-  .icon-zoom-fit-to-scale:before {
+  .icon-warning:before {
     content: "\E02F";
   }
 
-  .icon-zoom-in:before {
+  .icon-zoom-fit-to-scale:before {
     content: "\E030";
   }
 
-  .icon-zoom-out:before {
+  .icon-zoom-in:before {
     content: "\E031";
+  }
+
+  .icon-zoom-out:before {
+    content: "\E032";
   }
 

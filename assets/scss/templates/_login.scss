@@ -1,0 +1,98 @@
+.form-container {
+  width: 38.5%;
+  padding:6.3% 3.6%;
+  font-family: 'proxima-nova',sans-serif;
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-content: center;
+      margin-bottom: 60px;
+
+      .logo {
+        width:84px;
+      }
+
+      .register-account {
+        font-weight: normal;
+        font-style: italic;
+        color:$dp-color-lightgrey;
+        font-size: 13px;
+
+        a {
+          text-decoration: none;
+          color:$dp-color-lightgreen;
+          font-weight: bold;
+          font-style: normal;
+        }
+      }
+    }
+
+
+.form--login-title {
+  color:$dp-color-darkgrey;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 24px;
+}
+
+.form--login-subtitle {
+  color:$dp-color-lightgrey;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 24px;
+  font-style: italic;
+}
+
+.form--login-password {
+  padding-top: 20px;
+
+  a {
+    color:$dp-color-lightgreen;
+    font-style: italic;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+.form--login-footer {
+  padding-top: 40px;
+  color:$dp-color-grey;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+}
+
+
+.form-login {
+  //padding-bottom: 170px;
+
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+
+
+    form {
+      max-width: 680px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      margin-top: 34px;
+    }
+  }
+
+
+}
+
+.login-image-container {
+  width: 61.5%;
+  height: 100vh;
+  background-image: url(../img/signup-img.png);
+  background-size: cover;
+  background-position: center center;
+
+}

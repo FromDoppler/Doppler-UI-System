@@ -365,6 +365,141 @@
           </div><!-- button-card -->
         </main>
         <!-- main-buttons -->
+
+      <h2>Inputs</h2>
+      <p>Estados y validación</p>
+      <main class="main-inputs">
+        <div class="inputs-card">
+          <h5>INPUT</h5>
+          <form>
+            <span class="holder big">
+            <label for="email-input-guide">Email</label>
+            <input type="text" name="email-input-guide" id="email-input-guide" class="" placeholder="nombre@empresa.com">
+          </span>
+          </form>
+        </div>
+        <div class="inputs-card">
+          <h5>INPUT FOCUS</h5>
+          <form>
+            <span class="holder big">
+            <label for="email-input-guide">Email</label>
+            <input type="text" name="email-input-guide" id="email-input-guide" class="guideline-focus">
+          </span>
+          </form>
+        </div>
+        <div class="inputs-card">
+          <h5>INPUT COMPLETED</h5>
+          <form>
+            <span class="holder big">
+            <label for="email-input-guide">Email</label>
+            <input type="text" name="email-input-guide" id="email-input-guide" class="" value="nombre@empresa.com">
+          </span>
+          </form>
+        </div>
+
+        <div class="inputs-card">
+          <h5>INPUT ERROR</h5>
+          <form>
+            <span class="holder big">
+              <label for="email-input-guide">Email</label>
+              <input type="text" name="email-input-guide" id="email-input-guide" class="guideline-error" value="nombre@empresa.com">
+              <span class="guideline-error-txt">¡Ouch! Ingresa un Email válido.</span>
+            </span>
+          </form>
+        </div>
+
+        <div class="inputs-card">
+          <h5>INPUT ERROR FOCUS</h5>
+          <form>
+            <span class="holder big">
+              <label for="email-input-guide">Email</label>
+              <input type="text" name="email-input-guide" id="email-input-guide" class="guideline-error guideline-focus" value="nombre@empresa.com">
+              <span class="guideline-error-txt">¡Ouch! Ingresa un Email válido.</span>
+            </span>
+          </form>
+        </div>
+        <div class="inputs-card">
+          <p style="margin-top: 40px;">Valida on submit o valida on-input los campos que tienen error. Por ejemplo: si el error es que el campo esta vacio una vez que escribe algo el error se borra.</p>
+        </div>
+
+        <div class="inputs-card">
+          <h5>CHECKBOX</h5>
+          <form>
+            <span class="holder big checkbox">
+              <input type="checkbox" name="check-input-guide" id="check-input-guide" class="required check">
+              <span class="checkmark"></span>
+              <label for="check-input-guide" class="guideline-check-label">Acepto la <a href="#">Política de privacidad</a> de Doppler</label>
+            </span>
+          </form>
+        </div>
+
+        <div class="inputs-card">
+          <h5>CHECKBOX CHECKED</h5>
+          <form>
+            <span class="holder big checkbox">
+              <input type="checkbox" name="check-input-guide" id="check-input-guide" class="required check">
+              <span class="checkmark guideline-checked"></span>
+              <label for="check-input-guide" class="guideline-check-label">Acepto la <a href="#">Política de privacidad</a> de Doppler</label>
+            </span>
+          </form>
+        </div>
+
+        <div class="inputs-card">
+          <h5>CHECKBOX VALIDATION</h5>
+          <form>
+            <span class="holder big checkbox">
+              <input type="checkbox" name="check-input-guide" id="check-input-guide" class="required check">
+              <span class="checkmark guideline-checked-error"></span>
+              <label for="check-input-guide" class="guideline-check-label">Acepto la <a href="#">Política de privacidad</a> de Doppler</label>
+            </span>
+          </form>
+          <span class="guideline-error-txt">¡Ouch! Este es un campo requerido.</span>
+        </div>
+
+        <div class="inputs-sub-card">
+          <h5>SUSCRIBE FORM. BOTÓN DEBAJO DEBAJO DE INPUTS</h5>
+          <form>
+            <span class="holder">
+            <label for="nombre-input-guide">Nombre</label>
+            <input type="text" name="nombre-input-guide" id="nombre-input-guide" class="guideline-input-submit" value="Nombre completo">
+          </span>
+          <span class="holder">
+            <label for="email-input-guide">Email</label>
+            <input type="text" name="email-input-guide" id="email-input-guide" class="guideline-input-submit" value="nombre@empresa.com">
+          </span>
+          <span class="loader">
+            <button type="submit" class="dp-button button-medium guideline-lightgreen" value="Enviar"><span class="ms-icon icon-spinner"></span></button>
+          </span>
+          </form>
+        </div>
+        <div class="inputs-sub-card">
+          <form>
+            <span class="holder">
+            <label for="nombre-input-guide">Nombre</label>
+            <input type="text" name="nombre-input-guide" id="nombre-input-guide" class="">
+          </span>
+          <span class="holder">
+            <label for="email-input-guide">Email</label>
+            <input type="text" name="email-input-guide" id="email-input-guide" class="">
+          </span>
+          </form>
+          <div class="holder guideline-success-msg">¡Felicitaciones! Tu solicitud será respondida en un plazo de 24hs. <img src="img/ok-message.svg" alt="" valign="middle"></div>
+        </div>
+        <div class="inputs-sub-card">
+          <form>
+            <span class="holder">
+            <label for="nombre-input-guide">Nombre</label>
+            <input type="text" name="nombre-input-guide" id="nombre-input-guide" class="">
+          </span>
+          <span class="holder">
+            <label for="email-input-guide">Email</label>
+            <input type="text" name="email-input-guide" id="email-input-guide" class="">
+          </span>
+          </form>
+          <div class="holder guideline-error-msg">¡Ouch! Algo salió mal. Vuelve a intentarlo <img src="img/error-message.svg" alt="" valign="middle"></div>
+        </div>
+      </main>
+      <!-- main-inputs -->
       </section><!-- section-module -->
     </main>
     <!-- build:js:dist js/app.js -->
