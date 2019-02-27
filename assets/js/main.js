@@ -1,7 +1,7 @@
 $("body").on({
   mouseenter: function() {
-    var submenu = $(this).find(".sub-menu"),
-    $delayFade = 500;
+    var submenu = $(this).find(".sub-menu");
+
     if (submenu && submenu[0].children.length) {
       $('.header-main').addClass('header-open');
     }
@@ -24,7 +24,7 @@ $("body").on('click', '#close-menu', function() {
 });
 
 // modals
-
+var $delayFade = 500;
 $("#btn-modal-large").click(function() {
   $("#modal-large").fadeIn($delayFade);
 });
