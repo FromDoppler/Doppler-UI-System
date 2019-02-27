@@ -1,6 +1,7 @@
 $("body").on({
   mouseenter: function() {
-    var submenu = $(this).find(".sub-menu");
+    var submenu = $(this).find(".sub-menu"),
+    $delayFade = 500;
     if (submenu && submenu[0].children.length) {
       $('.header-main').addClass('header-open');
     }
@@ -25,13 +26,13 @@ $("body").on('click', '#close-menu', function() {
 // modals
 
 $("#btn-modal-large").click(function() {
-  $("#modal-large").fadeIn(500);
+  $("#modal-large").fadeIn($delayFade);
 });
 $("#btn-modal-medium").click(function() {
-  $("#modal-medium").fadeIn(500);
+  $("#modal-medium").fadeIn($delayFade);
 });
 $("#btn-modal-small").click(function() {
-  $("#modal-small").fadeIn(500);
+  $("#modal-small").fadeIn($delayFade);
 });
 $(".modal .close").click(function() {
   $(".modal").fadeOut();
