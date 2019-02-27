@@ -160,3 +160,32 @@
     text-align: left;
   }
 }
+/* content align buttons in modals-layout */
+
+.content {
+  display: flex;
+  justify-content: space-around;
+  min-height: 200px;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  .button-small {
+    font-size: $dp-font-size-small;
+    font-family: $dp-font-family;
+    color: #FFF;
+    height: 40px;
+    padding-left: 25px;
+    text-transform: none;
+    padding-right: 25px;
+  }
+
+  .button--primary {
+    background: $dp-color-green;
+  }
+
+  .button--primary:active,
+  .button--primary:hover {
+    background: $dp-color-darkgreen;
+  }
+}
