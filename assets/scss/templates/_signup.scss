@@ -80,7 +80,13 @@
 
   .feature-content {
     max-width: 500px;
-    color: #FFFFFF;
+
+    h6 {
+      font-family: $dp-font-family-proximanova;
+      font-weight: bold;
+      color: $dp-color-white;
+      margin-bottom: 10px;
+    }
 
     h3 {
       font-family: $dp-font-family-proximanova;
@@ -91,6 +97,7 @@
 
     p {
       font-family: $dp-font-family-proximanova;
+      color: $dp-color-white;
     }
   }
   /* width */
