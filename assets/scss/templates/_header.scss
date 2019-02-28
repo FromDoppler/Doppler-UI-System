@@ -1,8 +1,8 @@
 /* header */
 $dp-header-height: 4em;
 $dp-border-radius: 5px;
-$dp-text-aling: center;
-/* header */
+$dp-text-aling: center; /* header */
+
 .header-main {
   height: $dp-header-height;
   border-bottom: 1px solid $dp-color-sylver;
@@ -120,11 +120,12 @@ $dp-text-aling: center;
   width: 100%;
 }
 /* nav right */
+
 .nav-right-main {
   display: flex;
 }
 
-.nav-right-main ul {
+.nav-right-main > ul {
   list-style: none;
   margin-top: 0;
   margin-bottom: 0;

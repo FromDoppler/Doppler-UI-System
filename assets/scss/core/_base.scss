@@ -1,0 +1,67 @@
+/*Elements form*/
+
+legend {
+  display: none;
+}
+
+label {
+  width: 100%;
+  display: inline-block;
+  margin-bottom: 5px;
+  padding: 0;
+  color: $dp-color-grey;
+  font-weight: bold;
+  font-size: 13px;
+}
+/* span whith class .dropdown-arrow to draw arrow dropdown */
+.dropdown-arrow {
+  border-style: solid;
+  height: 0;
+  width: 0;
+  border-width: 7px 5.5px 0 5.5px;
+  border-color: $dp-color-lightgrey transparent transparent transparent;
+  position: absolute;
+  right: 15px;
+  top: 67%;
+  z-index: 10;
+  transform: translateY(-50%);
+}
+
+select {
+  height: 40px;
+  color: $dp-color-grey;
+  width: 100%;
+  background-color: $dp-color-white;
+  border: 1px solid $dp-color-sylver;
+  border-radius: 3px;
+  font-size: 13px;
+  padding: 0 40px 0 10px;
+  text-align: left;
+  height: 40px;
+  line-height: 40px;
+  cursor: pointer;
+  -webkit-appearance: button;
+  box-shadow: 0 0 2px rgba(0, 0, 0, .1);
+  outline: none;
+}
+
+select:disabled {
+  background-color: $dp-color-snow;
+  border: 1px solid $dp-color-sylver;
+  color: $dp-color-sylver;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  resize: none;
+  padding: 10px;
+  color: $dp-color-grey;
+  border-radius: 3px;
+  font-size: $dp-font-size-form;
+  border: 1px solid $dp-color-sylver;
+}
+
+textarea:focus {
+  border: 1px solid $dp-color-yellow;
+}
