@@ -23,8 +23,15 @@ $("body").on('click', '#close-menu', function() {
   $('.header-main').removeClass('open');
 });
 
+$("body").on('click', '.close-user--menu', function() {
+  $('.user-menu').removeClass('open');
+});
+
 // modals
 var $delayFade = 500;
+//Initialize all modals hidden
+$("#modal-large, #modal-medium, #modal-small").hide();
+
 $("#btn-modal-large").click(function() {
   $("#modal-large").fadeIn($delayFade);
 });
