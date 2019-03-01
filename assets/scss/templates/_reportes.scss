@@ -1,0 +1,44 @@
+.report-filters {
+  background: $dp-color-ghostwhite;
+  border-bottom: 1px solid $dp-color-sylver;
+  box-shadow: 0 -4px 0 0 $dp-color-snow inset;
+  padding: 0 6.5%;
+
+  h3 {
+    color: $dp-color-darkgrey;
+    font-weight: $dp-font-weight-bold;
+    font-size: $dp-font-size-24;
+    flex: 100%;
+  }
+
+  p {
+    color: $dp-color-grey;
+    font-size: $dp-font-size-15;
+    padding-bottom: 32px;
+    max-width: 70%;
+  }
+
+  .arrow {
+    position: absolute;
+    bottom: -36px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-top: 20px solid $dp-color-ghostwhite;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid transparent;
+    box-shadow: inset 10px 10px rgba(0,0,0, .8);
+  }
+}
+
+.report-wrapper {
+  max-width: $dp-wrapper-min-width;
+  margin: 0 auto;
+  padding-top: 55px;
+  padding-bottom: 55px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
