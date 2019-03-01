@@ -16,10 +16,11 @@
       height: 30px;
     }
 
-    .head-signin {
+    .content-signin {
       display: inline-block;
       float: right;
       margin-top: 6px;
+      font-family: $dp-font-family-proximanova;
       font-style: italic;
 
       a {
@@ -28,45 +29,42 @@
       }
     }
 
-    &__content {
-      padding: 60px 0 34px;
+    h5 {
+      margin: 60px 0 0;
+      color: $dp-color-brown;
+      font-family: $dp-font-family-proximanova;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
 
-      h5 {
-        margin: 10px 0;
-        color: $dp-color-brown;
+    p {
+      font-family: $dp-font-family-proximanova;
+
+      &.content-subtitle {
+        margin: 10px 0 30px;
       }
 
-      p {
-        margin: 10px 0;
+      &.content-promotion {
+        font-size: 15px;
+        border-top: 1px $dp-color-grey dashed;
+        padding-top: 16px;
       }
     }
 
-    &__rgpd {
-      padding-bottom: 10px;
+    .content-legal {
+      p {
+        font-size: 12px;
+      }
+    }
+
+    footer {
+      padding-top: 15px;
 
       p {
         font-family: $dp-font-family-proximanova;
-        font-size: $dp-font-size-small;
-      }
-    }
-
-    &__promotion {
-      p {
-        font-size: 15px;
-      }
-    }
-
-    &__footer {
-      padding-top: 40px;
-
-      p {
         font-size: 14px;
       }
     }
-  }
-
-  .line-dashed {
-    border-style: dashed;
   }
 
   .feature-panel {
@@ -79,7 +77,14 @@
 
   .feature-content {
     max-width: 500px;
-    color: #FFFFFF;
+
+    h6 {
+      font-family: $dp-font-family-proximanova;
+      font-weight: bold;
+      color: $dp-color-white;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
 
     h3 {
       font-family: $dp-font-family-proximanova;
@@ -90,6 +95,7 @@
 
     p {
       font-family: $dp-font-family-proximanova;
+      color: $dp-color-white;
     }
   }
   /* width */
@@ -99,17 +105,17 @@
   }
   /* Track */
   ::-webkit-scrollbar-track {
-    background-color: #D8D8D8;
+    background-color: $dp-border-grey;
     height: 600px;
   }
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: #999999;
+    background: $dp-color-lightgrey;
     border-radius: 5px;
   }
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: #999999;
+    background: $dp-color-lightgrey;
   }
 }
 @include media-breakpoint('desktop') {

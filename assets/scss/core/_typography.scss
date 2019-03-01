@@ -98,6 +98,10 @@ small {
 
 .link-green {
   color: $dp-color-green;
+
+  &:hover {
+    color: $dp-color-darkgreen;
+  }
 }
 
 .cursive {
