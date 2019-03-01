@@ -14,7 +14,12 @@
 ///
 /// -> Utilities
 /// -
-@import "core/*";
+@import "core/colors";
+@import "core/reset";
+@import "core/settings";
+@import "core/typography";
+@import "core/variables";
+@import "core/base";
 @import "libs/**/*";
 @import "modules/**/*";
 @import "utilities/*";
