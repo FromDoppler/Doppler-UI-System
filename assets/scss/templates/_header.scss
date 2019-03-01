@@ -1,7 +1,4 @@
 /* header */
-$dp-header-height: 4em;
-$dp-border-radius: 5px;
-$dp-text-aling: center; /* header */
 
 .header-main {
   height: $dp-header-height;
@@ -120,7 +117,6 @@ $dp-text-aling: center; /* header */
   width: 100%;
 }
 /* nav right */
-
 .nav-right-main {
   display: flex;
 }

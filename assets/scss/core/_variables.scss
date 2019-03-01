@@ -1,3 +1,8 @@
+/* variables*/
+$dp-border-radius: 3px;
+$dp-header-height: 4em;
+$dp-text-aling: center;
+
 .micro {
   font-size: 11px;
   line-height: 13px;
@@ -5,6 +10,7 @@
   text-transform: uppercase;
 }
 /* TEXT COLORS - grey */
+
 .c-dark-grey {
   color: $dp-color-darkgrey;
   /* text */
@@ -20,6 +26,7 @@
   /* placeholders, hovers*/
 }
 /* VERTICAL SPACES */
+
 .space-0 {
   margin-bottom: 0;
 }
@@ -43,13 +50,11 @@
   margin-bottom: 64px;
 }
 /* SPACES */
-
 .margin--0 {
   margin: 0;
   /* when p is a title of a paragraph */
 }
 /* BACKGROUNDS COLORS */
-
 .grey-bg {
   background-color: $dp-color-grey;
   /* disabled inputs */
@@ -69,20 +74,17 @@
   /* backgrounds grid, cebra */
 }
 /* TEXT COLORS */
-
 .dark-grey-txt {
   color: $dp-color-darkgrey;
   /* variant of <p> */
   font-weight: $dp-font-weight-bold;
 }
 /* BORDER COLORS */
-
 .sylver {
   border-color: $dp-color-sylver;
   /* strokes */
 }
 /* DISABLED ICON STATES */
-
 .disabled-icon {
   opacity: 0.6;
   /* strokes */

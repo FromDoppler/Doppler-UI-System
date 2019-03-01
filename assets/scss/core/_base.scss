@@ -10,10 +10,10 @@ label {
   margin-bottom: 5px;
   padding: 0;
   color: $dp-color-grey;
-  font-weight: bold;
-  font-size: 13px;
+  font-weight: $dp-font-weight-bold;
+  font-size: $dp-font-size-small;
 }
-/* span whith class .dropdown-arrow to draw arrow dropdown */
+/* span with class .dropdown-arrow to draw arrow dropdown */
 .dropdown-arrow {
   border-style: solid;
   height: 0;
@@ -33,8 +33,8 @@ select {
   width: 100%;
   background-color: $dp-color-white;
   border: 1px solid $dp-color-sylver;
-  border-radius: 3px;
-  font-size: 13px;
+  border-radius: $dp-border-radius;
+  font-size: $dp-font-size-small;
   padding: 0 40px 0 10px;
   text-align: left;
   height: 40px;
@@ -57,7 +57,7 @@ textarea {
   resize: none;
   padding: 10px;
   color: $dp-color-grey;
-  border-radius: 3px;
+  border-radius: $dp-border-radius;
   font-size: $dp-font-size-form;
   border: 1px solid $dp-color-sylver;
 }
