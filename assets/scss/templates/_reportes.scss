@@ -42,3 +42,38 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
+.form-filters {
+  width: 100%;
+  font-family: Arial;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.form-filters .filter {
+  width: 30%;
+  position: relative;
+
+  .verified--domain {
+    font-size: 11px;
+    margin-top: 10px;
+    display: inline-block;
+  }
+
+  .check--again {
+    color: $dp-color-green;
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-left: 10px;
+  }
+
+  .check--again:hover {
+    color: $dp-color-darkgreen;
+  }
+
+  .dropdown-arrow {
+    top: 43px;
+  }
+}
