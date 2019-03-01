@@ -45,7 +45,7 @@
 
 .form-filters {
   width: 100%;
-  font-family: Arial;
+  font-family: $dp-font-family;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -56,16 +56,16 @@
   position: relative;
 
   .verified--domain {
-    font-size: 11px;
+    font-size: $dp-font-size-xsmall;
     margin-top: 10px;
     display: inline-block;
   }
 
   .check--again {
     color: $dp-color-green;
-    font-size: 11px;
+    font-size: $dp-font-size-xsmall;
     text-transform: uppercase;
-    font-weight: bold;
+    font-weight: $dp-font-weight-bold;
     padding-left: 10px;
   }
 
