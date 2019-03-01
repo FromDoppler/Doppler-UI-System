@@ -6,14 +6,14 @@
 
   h3 {
     color: $dp-color-darkgrey;
-    font-weight: bold;
-    font-size: 24px;
+    font-weight: $dp-font-weight-bold;
+    font-size: $dp-font-size-24;
     flex: 100%;
   }
 
   p {
     color: $dp-color-grey;
-    font-size: 15px;
+    font-size: $dp-font-size-15;
     padding-bottom: 32px;
     max-width: 70%;
   }
@@ -33,7 +33,7 @@
 }
 
 .hero-wrapper {
-  max-width: 1200px;
+  max-width: $dp-wrapper-min-width;
   margin: 0 auto;
   padding-top: 55px;
   padding-bottom: 55px;
