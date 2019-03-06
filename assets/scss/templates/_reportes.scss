@@ -42,3 +42,38 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
+.form-filters {
+  width: 100%;
+  font-family: $dp-font-family;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.form-filters .filter {
+  width: 30%;
+  position: relative;
+
+  .verified--domain {
+    font-size: $dp-font-size-xsmall;
+    margin-top: 10px;
+    display: inline-block;
+  }
+
+  .check--again {
+    color: $dp-color-green;
+    font-size: $dp-font-size-xsmall;
+    text-transform: uppercase;
+    font-weight: $dp-font-weight-bold;
+    padding-left: 10px;
+  }
+
+  .check--again:hover {
+    color: $dp-color-darkgreen;
+  }
+
+  .dropdown-arrow {
+    top: 43px;
+  }
+}
