@@ -121,14 +121,11 @@
   display: flex;
 }
 
-.nav-right-main > ul {
+.nav-right-main--list {
   list-style: none;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
-  margin-left: 0;
+  margin: 0;
 
-  li {
+  & > li {
     display: inline-block;
     margin: 0 10px;
     position: relative;
