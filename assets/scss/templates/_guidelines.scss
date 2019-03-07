@@ -25,10 +25,10 @@
   font-family: $dp-font-family-proximanova;
   display: block;
   overflow: hidden;
-  transition: all 0.5s;
   padding: 15px 0;
   margin-right: 25px;
   text-transform: uppercase;
+  @include transition;
 
   &:before {
     content: '';
@@ -37,7 +37,7 @@
     border-bottom: 3px solid $dp-color-darkyellow;
     bottom: 0;
     right: 350px;
-    transition: all 0.5s;
+    @include transition;
   }
 
   &:hover:before {
@@ -61,7 +61,7 @@
   border-bottom: 3px solid $dp-color-darkyellow;
   bottom: 0;
   right: 0;
-  transition: all 0.5s;
+  @include transition;
 }
 
 .main-colors {
@@ -85,7 +85,7 @@
 .color-card {
   border: 1px solid $dp-color-ghostwhite;
   height: 200px;
-  border-radius: 5px;
+  border-radius: $dp-border-radius;
   box-shadow: 0 0.5em 1em -0.5em $dp-color-sylver;
   overflow: hidden;
   margin-bottom: 30px;
@@ -125,14 +125,14 @@
 
   code {
     padding: 3px 5px;
-    border-radius: 3px;
+    border-radius: $dp-border-radius;
   }
 
   p {
     color: $dp-color-darkgrey;
   }
 }
-
+/* buttons */
 .main-buttons {
   display: flex;
   flex-wrap: wrap;
@@ -141,51 +141,75 @@
 }
 
 .buttons-card {
-  height: 235px;
   border-radius: 5px;
-  overflow: hidden;
   margin-bottom: 30px;
-  width: 300px;
+  width: 25%;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
   text-align: left;
+
+  &:before {
+    opacity: 0;
+    border-radius: $dp-border-radius;
+    box-shadow: 0 4px 20px rgba(black, 0.1);
+    transform: scale(1.3, 1.3);
+  }
+
+  &:hover:before {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+
+  &:after {
+    @include transition;
+    border: 1px solid rgba(153, 153, 153, 0.9);
+  }
+
+  &:hover:after {
+    transform: scale(0, 0);
+    opacity: 0;
+  }
+}
+
+.box-button {
+  position: relative;
+  min-height: 260px;
+  @include transition;
+}
+
+.box-button::before,
+.btn::after {
+  content: '';
+  position: absolute;
+  @include transition;
+  top: -15px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.button-description {
+  position: relative;
+  display: flex;
+  padding-top: 20px;
+  flex-direction: column;
+
+  p {
+    margin: 0;
+  }
 }
 
 .button-list {
   padding: 0;
-  margin: 20px 0;
+  margin: 0;
   list-style: none;
   font-size: $dp-font-size-small;
   font-family: $dp-font-family;
 
   li {
-    margin-bottom: 10px;
     text-align: left;
-  }
-}
-/* content align buttons in modals-layout */
-.content {
-  display: flex;
-  justify-content: space-around;
-  min-height: 200px;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-
-  .button-small {
-    font-size: $dp-font-size-small;
-    font-family: $dp-font-family;
-    color: #FFF;
-    height: 40px;
-    padding-left: 25px;
-    text-transform: none;
-    padding-right: 25px;
-  }
-
-  .button--primary {
-    background: $dp-color-green;
-  }
-
-  .button--primary:active,
-  .button--primary:hover {
-    background: $dp-color-darkgreen;
+    padding: 5px 0;
   }
 }

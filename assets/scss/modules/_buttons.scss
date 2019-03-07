@@ -6,32 +6,31 @@
     text-transform: uppercase;
     border: none;
     outline: none;
-    transition: all 0.25s ease;
+    margin: 0 5px;
     appearance: none;
     font-family: $dp-font-family-proximanova;
+    border-radius: $dp-border-radius;
+    @include transition;
 
     &.button-big {
-      font-size: 15px;
+      font-size: $dp-font-button-big;
       line-height: 15px;
-      font-weight: $dp-font-weight-semibold;
-      border-radius: 99px;
-      padding: 20px 42px;
+      font-weight: $dp-font-weight-light;
+      padding: 16px 35px;
     }
 
     &.button-medium {
-      font-size: 13px;
+      font-size: $dp-font-button-medium;
       line-height: 13px;
-      font-weight: $dp-font-weight-bold;
-      border-radius: 99px;
-      padding: 15px 27px;
+      font-weight: $dp-font-weight-light;
+      padding: 13px 25px;
     }
 
     &.button-small {
-      font-size: 11px;
+      font-size: $dp-font-button-small;
       line-height: 11px;
-      font-weight: $dp-font-weight-bold;
-      border-radius: 99px;
-      padding: 11px 23px;
+      font-weight: $dp-font-weight-light;
+      padding: 10px 15px;
     }
 
     &.primary- {
@@ -43,60 +42,6 @@
         &:hover {
           background-color: $dp-color-darkgreen;
           border: 1px solid $dp-color-darkgreen;
-        }
-      }
-
-      &yellow {
-        background-color: $dp-color-lightyellow;
-        border: 1px solid $dp-color-lightyellow;
-        color: $dp-color-brown;
-
-        &:hover {
-          background-color: $dp-color-lemonyellow;
-          border: 1px solid $dp-color-lemonyellow;
-        }
-      }
-
-      &brown {
-        background-color: $dp-color-brown;
-        border: 1px solid $dp-color-brown;
-        color: $dp-color-white;
-
-        &:hover {
-          background: $dp-color-brown--hover;
-          border: 1px solid $dp-color-brown--hover;
-        }
-      }
-    }
-
-    &.secondary- {
-      &green {
-        background-color: transparent;
-        border: 1px solid $dp-color-green;
-        color: $dp-color-green;
-
-        &:hover {
-          background-color: $dp-color-green-brightness;
-        }
-      }
-
-      &yellow {
-        background-color: transparent;
-        border: 1px solid $dp-color-lightyellow;
-        color: $dp-color-lightyellow;
-
-        &:hover {
-          background-color: $dp-color-yellow-brightness;
-        }
-      }
-
-      &brown {
-        background-color: transparent;
-        border: 1px solid $dp-color-brown;
-        color: $dp-color-brown;
-
-        &:hover {
-          background-color: $dp-color-brown-brightness;
         }
       }
     }
