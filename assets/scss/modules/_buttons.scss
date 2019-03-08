@@ -10,7 +10,7 @@
     appearance: none;
     font-family: $dp-font-family-proximanova;
     border-radius: $dp-border-radius;
-    @include transition;
+    @include transition-all;
 
     &.button-big {
       font-size: $dp-font-button-big;

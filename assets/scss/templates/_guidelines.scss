@@ -28,7 +28,7 @@
   padding: 15px 0;
   margin-right: 25px;
   text-transform: uppercase;
-  @include transition;
+  @include transition-all;
 
   &:before {
     content: '';
@@ -37,7 +37,7 @@
     border-bottom: 3px solid $dp-color-darkyellow;
     bottom: 0;
     right: 350px;
-    @include transition;
+    @include transition-all;
   }
 
   &:hover:before {
@@ -61,7 +61,7 @@
   border-bottom: 3px solid $dp-color-darkyellow;
   bottom: 0;
   right: 0;
-  @include transition;
+  @include transition-all;
 }
 
 .main-colors {
@@ -133,17 +133,27 @@
   }
 }
 /* buttons */
-
 .main-buttons {
   display: flex;
-  flex-wrap: wrap;
   padding-top: 20px;
+  justify-content: space-between;
+
+  .buttons-column {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+    &:nth-child(2) {
+      height: 70%;
+    }
+  }
 }
 
 .buttons-card {
   border-radius: 5px;
   margin-bottom: 30px;
-  width: 25%;
+  width: 290px;
   flex-direction: column;
   display: flex;
   align-items: flex-start;
@@ -173,4 +183,8 @@
     text-align: left;
     padding: 5px 0;
   }
+}
+
+.subtitle-states {
+  width: 100%;
 }

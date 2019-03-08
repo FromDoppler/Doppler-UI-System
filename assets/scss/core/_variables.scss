@@ -1,5 +1,5 @@
 /* @include transition(all,2s,ease); */
-@mixin transition($what: all, $time: 0.25s, $how: ease) {
+@mixin transition-all($what: all, $time: 0.25s, $how: ease) {
   transition: $what $time $how;
 }
 /* variables*/
@@ -14,6 +14,7 @@ $dp-text-aling: center;
   text-transform: uppercase;
 }
 /* TEXT COLORS - grey */
+
 .c-dark-grey {
   color: $dp-color-darkgrey;
   /* text */
@@ -29,6 +30,7 @@ $dp-text-aling: center;
   /* placeholders, hovers*/
 }
 /* VERTICAL SPACES */
+
 .space-0 {
   margin-bottom: 0;
 }
@@ -52,13 +54,11 @@ $dp-text-aling: center;
   margin-bottom: 64px;
 }
 /* SPACES */
-
 .margin--0 {
   margin: 0;
   /* when p is a title of a paragraph */
 }
 /* BACKGROUNDS COLORS */
-
 .grey-bg {
   background-color: $dp-color-grey;
   /* disabled inputs */
@@ -78,20 +78,17 @@ $dp-text-aling: center;
   /* backgrounds grid, cebra */
 }
 /* TEXT COLORS */
-
 .dark-grey-txt {
   color: $dp-color-darkgrey;
   /* variant of <p> */
   font-weight: $dp-font-weight-bold;
 }
 /* BORDER COLORS */
-
 .sylver {
   border-color: $dp-color-sylver;
   /* strokes */
 }
 /* DISABLED ICON STATES */
-
 .disabled-icon {
   opacity: 0.6;
   /* strokes */
