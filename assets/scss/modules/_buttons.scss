@@ -3,22 +3,20 @@
     display: inline-block;
     text-align: center;
     text-decoration: none;
-    text-transform: uppercase;
     border: none;
     outline: none;
-    margin: 0 5px;
     appearance: none;
     font-family: $dp-font-family-proximanova;
     border-radius: $dp-border-radius;
     @include transition-all;
 
-	 .ms-icon {
+    .ms-icon {
       font-size: 20px;
       line-height: 7px;
       position: relative;
       left: -5px;
     }
-	
+
     &.button-big {
       font-size: $dp-font-button-big;
       line-height: 15px;
@@ -85,7 +83,8 @@
         }
       }
     }
-	&.secondary- {
+
+    &.secondary- {
       &green {
         background-color: transparent;
         border: 1px solid $dp-color-green;
@@ -93,6 +92,10 @@
 
         &:hover {
           background-color: $dp-color-green-brightness;
+        }
+
+        .loader {
+          color: $dp-color-green;
         }
       }
     }
@@ -106,8 +109,80 @@
         &:hover {
           background-color: $dp-color-snow;
         }
+
+        .loader {
+          color: $dp-color-grey;
+        }
       }
     }
+  }
+}
+/* spinner */
+
+.button-text {
+  display: block;
+}
+
+.loader,
+.loader:after,
+.loader:before {
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  display: none;
+  animation-fill-mode: both;
+  animation: spinner 1.5s infinite ease-in-out;
+}
+
+.loader {
+  color: $dp-color-white;
+  font-size: 5px;
+  margin: 0 auto;
+  position: relative;
+  top: -15px;
+  text-indent: -9999em;
+  transform: translateZ(0);
+  animation-delay: -0.14s;
+}
+
+.loader:after,
+.loader:before {
+  content: '';
+  position: absolute;
+  top: 0;
+}
+
+.loader:before {
+  left: -15px;
+  animation-delay: -0.28s;
+}
+
+.loader:after {
+  left: 15px;
+}
+@keyframes spinner {
+  0%,
+  100%,
+  80% {
+    box-shadow: 0 15px 0 -15px;
+  }
+
+  40% {
+    box-shadow: 0 15px 0 0;
+  }
+}
+
+.button-loading {
+  min-width: 140px;
+
+  .button-text {
+    display: none;
+  }
+
+  .loader,
+  .loader:after,
+  .loader:before {
+    display: block;
   }
 }
 @include dp-button();
