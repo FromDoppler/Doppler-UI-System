@@ -38,7 +38,34 @@
       </header>
       <h5>Regístrate</h5>
       <p class="content-subtitle">Crea una cuenta GRATIS hasta 500 Suscriptores.</p>
-
+      <form>
+        <legend>Personal information</legend>
+        <fieldset class="fieldset-small">
+          <label for="name">Nombre:</label>
+          <input type="name" name="lastname" placeholder="Nombre">
+        </fieldset>
+        <fieldset class="fieldset-small">
+          <label for="lastname">Apellido:</label>
+          <input type="lastname" name="name" placeholder="Apellido">
+        </fieldset>
+        <fieldset>
+          <label for="phone">Teléfono:</label>
+          <input type="tel" name="phone" placeholder="9 11 2345-6789">
+        </fieldset>
+        <fieldset>
+          <label for="email">Email:</label>
+          <input type="email" name="email" placeholder="Tu Email será tu nombre de usuario">
+        </fieldset>
+        <fieldset>
+          <label for="password">Contraseña:</label>
+          <input type="password" name="password" placeholder="Escribe tu clave secreta">
+        </fieldset>
+        <fieldset class="fieldset-policy">
+          <input type="checkbox" name="policy" id="policy"><label for="policy">Acepto la <a href="#" class="link-green" target="_blank">Politica de Privacidad</a> de Doppler.</label>
+          <input type="checkbox" name="promotion" id="promotion"><label for="promotion">Acepto recibir promociones de Doppler y sus aliados.</label>
+        </fieldset>
+        <button type="button" class="dp-button button-medium primary-green">CREAR CUENTA</button>
+      </form>
       <div class="content-legal">
         <p>Doppler te informa que los datos de carácter personal que nos proporciones al rellenar el presente formulario serán tratados por Making Sense LLC (Doppler) como responsable de esta web.</p>
         <p><strong>Finalidad:</strong> Darte de alta en nuestra plataforma y brindarte los servicios que nos requieras.</p>
