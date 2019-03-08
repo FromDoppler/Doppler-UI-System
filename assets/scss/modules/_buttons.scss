@@ -44,6 +44,39 @@
           border: 1px solid $dp-color-darkgreen;
         }
       }
+
+      &grey {
+        background-color: $dp-color-grey;
+        border: 1px solid $dp-color-grey;
+        color: $dp-color-white;
+
+        &:hover {
+          background-color: $dp-color-lightgrey;
+          border: 1px solid $dp-color-lightgrey;
+        }
+      }
+
+      &red {
+        background-color: $dp-color-red;
+        border: 1px solid $dp-color-red;
+        color: $dp-color-white;
+
+        &:hover {
+          background-color: $dp-color-darkred;
+          border: 1px solid $dp-color-darkred;
+        }
+      }
+
+      &yellow {
+        background-color: $dp-color-yellow;
+        border: 1px solid $dp-color-yellow;
+        color: $dp-color-white;
+
+        &:hover {
+          background-color: $dp-color-darkyellow;
+          border: 1px solid $dp-color-darkyellow;
+        }
+      }
     }
   }
 }

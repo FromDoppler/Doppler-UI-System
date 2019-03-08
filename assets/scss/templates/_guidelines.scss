@@ -133,6 +133,7 @@
   }
 }
 /* buttons */
+
 .main-buttons {
   display: flex;
   padding-top: 20px;
@@ -187,4 +188,25 @@
 
 .subtitle-states {
   width: 100%;
+}
+/* force classes to show button states */
+/* primary buttons */
+.dp-button.primary-force-green-hover {
+  background-color: $dp-color-darkgreen;
+  border: 1px solid $dp-color-darkgreen;
+}
+
+.dp-button.primary-force-grey-hover {
+  background-color: $dp-color-lightgrey;
+  border: 1px solid $dp-color-lightgrey;
+}
+
+.dp-button.primary-force-red-hover {
+  background-color: $dp-color-darkred;
+  border: 1px solid $dp-color-darkred;
+}
+
+.dp-button.primary-force-yellow-hover {
+  background-color: $dp-color-darkyellow;
+  border: 1px solid $dp-color-darkyellow;
 }
