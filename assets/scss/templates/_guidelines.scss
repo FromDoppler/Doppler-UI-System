@@ -210,3 +210,15 @@
   background-color: $dp-color-darkyellow;
   border: 1px solid $dp-color-darkyellow;
 }
+/* secondary buttons */
+.dp-button.secondary-force-green-hover {
+  background: rgba(51,173,115, .2);
+  border: 1px solid $dp-color-green;
+  color: $dp-color-green;
+}
+
+.dp-button.secondary-force-grey-hover {
+  background-color: $dp-color-snow;
+  border: 1px solid $dp-color-sylver;
+  color: $dp-color-grey;
+}

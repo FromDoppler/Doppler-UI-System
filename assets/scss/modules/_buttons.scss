@@ -12,6 +12,13 @@
     border-radius: $dp-border-radius;
     @include transition-all;
 
+	 .ms-icon {
+      font-size: 20px;
+      line-height: 7px;
+      position: relative;
+      left: -5px;
+    }
+	
     &.button-big {
       font-size: $dp-font-button-big;
       line-height: 15px;
@@ -75,6 +82,29 @@
         &:hover {
           background-color: $dp-color-darkyellow;
           border: 1px solid $dp-color-darkyellow;
+        }
+      }
+    }
+	&.secondary- {
+      &green {
+        background-color: transparent;
+        border: 1px solid $dp-color-green;
+        color: $dp-color-green;
+
+        &:hover {
+          background-color: $dp-color-green-brightness;
+        }
+      }
+    }
+
+    &.secondary- {
+      &grey {
+        background-color: transparent;
+        border: 1px solid $dp-color-sylver;
+        color: $dp-color-grey;
+
+        &:hover {
+          background-color: $dp-color-snow;
         }
       }
     }
