@@ -33,6 +33,7 @@ $dp-font-button-medium: 13px;
 $dp-font-button-small: 11px;
 $dp-font-size-15: 15px;
 $dp-font-size-24: 24px;
+$dp-font-small-lineheight: 18px;
 
 body {
   color: $dp-color-grey;
@@ -99,7 +100,7 @@ p {
 small {
   font: $dp-font;
   font-size: $dp-font-size-small;
-  line-height: 18px;
+  line-height: $dp-font-small-lineheight;
 }
 
 .link-green {
