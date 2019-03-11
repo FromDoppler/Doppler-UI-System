@@ -1,5 +1,4 @@
 /*Elements form*/
-
 legend {
   display: none;
 }
@@ -15,6 +14,7 @@ label {
   font-family: $dp-font-family-proximanova;
 }
 /* span with class .dropdown-arrow to draw arrow dropdown */
+
 .dropdown-arrow {
   border-style: solid;
   height: 0;
@@ -66,26 +66,6 @@ textarea:focus {
   border: 1px solid $dp-color-yellow;
 }
 
-.content-checkbox {
-  width: 100%;
-  position: relative;
-  display: inline-block;
-  text-align: left;
-  margin: 20px 0;
-}
-
-.checkbox {
-  display: flex;
-  cursor: pointer;
-  align-items: center;
-
-  label {
-    margin-left: -34px;
-    margin-bottom: 0;
-    font-weight: normal;
-  }
-}
-
 input[type='checkbox'] {
   flex: 0 1 80px;
   margin-left: -20px;
@@ -103,29 +83,6 @@ input[type='checkbox'] {
         display: block;
       }
     }
-  }
-}
-
-.checkmark {
-  margin-right: 10px;
-  height: 16px;
-  width: 16px;
-  position: absolute;
-  border: 1px solid $dp-color-lightgrey;
-  border-radius: 3px;
-  background-color: $dp-color-white;
-  pointer-events: none;
-
-  &:after {
-    content: '';
-    top: 1px;
-    left: 5px;
-    width: 5px;
-    height: 10px;
-    position: absolute;
-    border: solid $dp-color-white;
-    border-width: 0 3px 3px 0;
-    transform: rotate(45deg);
   }
 }
 
