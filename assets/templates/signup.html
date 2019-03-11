@@ -34,35 +34,74 @@
     <article class="main-panel">
       <header>
         <img src="img/logo-doppler.svg" class="logo-doppler" alt="Doppler">
-        <p class="content-signin">¿Ya tienes una cuenta? <a href="#" class="link-green" target="_blank">INGRESA</a></p>
-      </header>
+        <small class="content-signin">¿Ya tienes una cuenta? <a href="#" class="link-green" target="_blank">INGRESA</a></small>
+      </header><!-- header -->
       <h5>Regístrate</h5>
-      <p class="content-subtitle">Crea una cuenta GRATIS hasta 500 Suscriptores.</p>
-
+      <p class="content-subtitle">Crea una cuenta GRATIS hasta 500 Suscriptores.</p><!-- Title -->
+      <form class="signup-form">
+        <fieldset>
+          <legend>Creación de cuenta</legend>
+          <ul>
+            <li class="holder-small">
+              <label for="name">Nombre:</label>
+              <input type="name" name="lastname" placeholder="Nombre">
+            </li>
+            <li class="holder-small">
+              <label for="lastname">Apellido:</label>
+              <input type="lastname" name="name" placeholder="Apellido">
+            </li>
+            <li>
+              <label for="phone">Teléfono:</label>
+              <input type="tel" name="phone" placeholder="9 11 2345-6789">
+            </li>
+            <li>
+              <label for="email">Email:</label>
+              <input type="email" name="email" placeholder="Tu Email será tu nombre de usuario">
+            </li>
+            <li>
+              <label for="password">Contraseña:</label>
+              <input type="password" name="password" placeholder="Escribe tu clave secreta">
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="holder-policy">
+          <legend>Politica de privacidad y promociones</legend>
+          <ul class="content-checkbox">
+            <li class="checkbox">
+              <input type="checkbox" name="acepto_politicas">
+              <span class="checkmark"></span>
+              <label for="acepto_politicas">Acepto la <a class="link-green" href="#">Política de Privacidad</a> de Doppler.</label>
+            </li>
+            <li class="checkbox">
+              <input type="checkbox" name="acepto_promociones">
+              <span class="checkmark"></span>
+              <label for="acepto_promociones">Acepto las promociones de Doppler y sus aliados.</label>
+            </li>
+          </ul>
+          <button type="button" class="dp-button button-medium primary-green">Crear cuenta</button>
+        </fieldset><!-- privacy policy and promotion -->
+      </form><!-- form -->
       <div class="content-legal">
-        <p>Doppler te informa que los datos de carácter personal que nos proporciones al rellenar el presente formulario serán tratados por Making Sense LLC (Doppler) como responsable de esta web.</p>
-        <p><strong>Finalidad:</strong> Darte de alta en nuestra plataforma y brindarte los servicios que nos requieras.</p>
-        <p><strong>Legitimación:</strong> Consentimiento del interesado.</p>
-        <p><strong>Destinatarios:</strong> Tus datos serán guardados por Doppler, Zoho como CRM, Digital Ocean, Cogeco Peer1 y Rackspace como empresas de hosting.</p>
-        <p><strong>Información adicional:</strong> En la <a href="#" class="link-green" target="_blank">Política de Privacidad</a> de Doppler encontrarás información adicional sobre la recopilación y el uso de su información personal por
-          parte de Doppler, incluida información sobre acceso, conservación, rectificación, eliminación, seguridad, transferencias transfronterizas y otros temas.</p>
-      </div>
+        <p><small>Doppler te informa que los datos de carácter personal que nos proporciones al rellenar el presente formulario serán tratados por Making Sense LLC (Doppler) como responsable de esta web.</small></p>
+        <p><small><strong>Finalidad:</strong> Darte de alta en nuestra plataforma y brindarte los servicios que nos requieras.</small></p>
+        <p><small><strong>Legitimación:</strong> Consentimiento del interesado.</small></p>
+        <p><small><strong>Destinatarios:</strong> Tus datos serán guardados por Doppler, Zoho como CRM, Digital Ocean, Cogeco Peer1 y Rackspace como empresas de hosting.</small></p>
+        <p><small><strong>Información adicional:</strong> En la <a href="#" class="link-green" target="_blank">Política de Privacidad</a> de Doppler encontrarás información adicional sobre la recopilación y el uso de su información personal por
+            parte de Doppler, incluida información sobre acceso, conservación, rectificación, eliminación, seguridad, transferencias transfronterizas y otros temas.</small></p>
+      </div><!-- legal content-->
       <p class="content-promotion">Pst! si tienes un código promocional podrás ingresarlo al confirmar tu cuenta. <a href="#" class="link-green" target="_blank">HELP</a></p>
       <footer>
-        <p>© 2019 Doppler LLC. Todos los derechos reservados.</p>
-      </footer>
+        <small>© 2019 Doppler LLC. Todos los derechos reservados.</small>
+      </footer><!-- footer -->
     </article>
     <section class="feature-panel">
       <article class="feature-content">
         <h6>Editor de emails</h6>
         <h3>Crea Emails en minutos y accede a nuestra Galería de Plantillas</h3>
         <p>Nuestras Plantillas para Email son totalmente Responsive y fácilmente editables desde nuestro Editor HTML.</p>
-      </article>
-    </section>
+      </article><!-- article -->
+    </section><!-- feature panel-->
   </main>
-  <!-- build:js:dist js/app.js -->
-  <script src="./js/main.js"></script>
-  <!-- /build -->
 </body>
 
 </html>
