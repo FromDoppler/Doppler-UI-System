@@ -17,21 +17,21 @@
       left: -5px;
     }
 
-    &.button-big {
+    &.button--big {
       font-size: $dp-font-button-big;
       line-height: 15px;
       font-weight: $dp-font-weight-light;
       padding: 16px 35px;
     }
 
-    &.button-medium {
+    &.button--medium {
       font-size: $dp-font-button-medium;
       line-height: 13px;
       font-weight: $dp-font-weight-light;
       padding: 13px 25px;
     }
 
-    &.button-small {
+    &.button--small {
       font-size: $dp-font-button-small;
       line-height: 11px;
       font-weight: $dp-font-weight-light;
