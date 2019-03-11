@@ -133,7 +133,6 @@
   }
 }
 /* buttons */
-
 .main-buttons {
   display: flex;
   padding-top: 20px;
@@ -191,6 +190,7 @@
 }
 /* force classes to show button states */
 /* primary buttons */
+
 .dp-button.primary-force-green-hover {
   background-color: $dp-color-darkgreen;
   border: 1px solid $dp-color-darkgreen;
@@ -200,17 +200,8 @@
   background-color: $dp-color-lightgrey;
   border: 1px solid $dp-color-lightgrey;
 }
-
-.dp-button.primary-force-red-hover {
-  background-color: $dp-color-darkred;
-  border: 1px solid $dp-color-darkred;
-}
-
-.dp-button.primary-force-yellow-hover {
-  background-color: $dp-color-darkyellow;
-  border: 1px solid $dp-color-darkyellow;
-}
 /* secondary buttons */
+
 .dp-button.secondary-force-green-hover {
   background: rgba(51,173,115, .2);
   border: 1px solid $dp-color-green;
