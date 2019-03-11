@@ -1,5 +1,4 @@
 /*Elements form*/
-
 legend {
   display: none;
 }
@@ -12,8 +11,10 @@ label {
   color: $dp-color-grey;
   font-weight: $dp-font-weight-bold;
   font-size: $dp-font-size-small;
+  font-family: $dp-font-family-proximanova;
 }
 /* span with class .dropdown-arrow to draw arrow dropdown */
+
 .dropdown-arrow {
   border-style: solid;
   height: 0;
@@ -37,7 +38,6 @@ select {
   font-size: $dp-font-size-small;
   padding: 0 40px 0 10px;
   text-align: left;
-  height: 40px;
   line-height: 40px;
   cursor: pointer;
   -webkit-appearance: button;
@@ -64,4 +64,68 @@ textarea {
 
 textarea:focus {
   border: 1px solid $dp-color-yellow;
+}
+
+input[type='checkbox'] {
+  flex: 0 1 80px;
+  margin-left: -20px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 0;
+  opacity: 0;
+
+  &:checked {
+    & ~ .checkmark {
+      border-color: $dp-color-green;
+      background-color: $dp-color-green;
+
+      &:after {
+        display: block;
+      }
+    }
+  }
+}
+
+input:not(.button):not([type='checkbox']) {
+  padding: 10px 12px;
+  height: 40px;
+  width: 100%;
+  border: 1px solid $dp-color-lightgrey;
+  border-radius: $dp-border-radius;
+  background-color: $dp-color-white;
+  font-size: $dp-font-size-form;
+  font-family: $dp-font-family-proximanova;
+  line-height: 20px;
+
+  &::placeholder {
+    color: $dp-color-default;
+    font-style: italic;
+  }
+
+  &:required {
+    box-shadow: none;
+  }
+
+  &:focus {
+    color: $dp-color-default;
+    border: 1px solid $dp-color-yellow;
+    border-radius: $dp-border-radius;
+    -webkit-box-shadow: 0 0 0 2px $dp-color-brown-brightness;
+    box-shadow: 0 0 0 2px $dp-color-brown-brightness;
+    outline: none;
+
+    &::placeholder {
+      font-style: normal;
+    }
+  }
+}
+
+input[type="tel"] {
+  -moz-appearance: textfield;
+
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
 }
