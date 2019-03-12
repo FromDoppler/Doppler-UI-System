@@ -28,7 +28,7 @@
   padding: 15px 0;
   margin-right: 25px;
   text-transform: uppercase;
-  @include transition;
+  @include transition-all;
 
   &:before {
     content: '';
@@ -37,7 +37,7 @@
     border-bottom: 3px solid $dp-color-darkyellow;
     bottom: 0;
     right: 350px;
-    @include transition;
+    @include transition-all;
   }
 
   &:hover:before {
@@ -61,7 +61,7 @@
   border-bottom: 3px solid $dp-color-darkyellow;
   bottom: 0;
   right: 0;
-  @include transition;
+  @include transition-all;
 }
 
 .main-colors {
