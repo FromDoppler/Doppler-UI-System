@@ -1,4 +1,5 @@
 /* messages headers*/
+
 .messages-container {
   display: flex;
   padding: 0 2%;
@@ -18,11 +19,11 @@
   font-size: $dp-font-size-small;
 }
 
-.messages-container.error .button {
+.messages-container.blocker .button {
   color: $dp-color-red;
 }
 
-.messages-container.message .button {
+.messages-container.info .button {
   color: $dp-color-lightgreen;
 }
 
@@ -30,7 +31,7 @@
   margin-left: 20px;
 }
 
-.messages-container.message {
+.messages-container.info {
   background: $dp-color-lightgreen;
 }
 
@@ -38,11 +39,10 @@
   background: $dp-color-yellow;
 }
 
-.messages-container.error {
+.messages-container.blocker {
   background: $dp-color-red;
 }
 /* buttons */
-
 .button {
   border: 0;
   border-radius: 3px;
@@ -64,7 +64,7 @@
 }
 
 .button--tiny {
-  font-size: 13px;
+  font-size: $dp-font-button-medium;
   height: 30px;
   line-height: 30px;
   padding-left: 20px;
