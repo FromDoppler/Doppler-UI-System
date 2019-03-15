@@ -3,7 +3,6 @@
     display: inline-block;
     text-align: center;
     text-decoration: none;
-    text-transform: uppercase;
     border: none;
     outline: none;
     appearance: none;
@@ -30,6 +29,14 @@
       line-height: 11px;
       font-weight: $dp-font-weight-light;
       padding: 10px 15px;
+    }
+
+    &.button--loading {
+      background-size: 1.5em;
+      background-position: 12px center;
+      background-repeat: no-repeat;
+      padding-left: 3em;
+      background-image: url("../img/loader-white.svg");
     }
 
     &.primary- {
