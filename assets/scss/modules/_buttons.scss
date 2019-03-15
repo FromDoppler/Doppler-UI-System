@@ -50,6 +50,17 @@
           border: 1px solid $dp-color-darkgreen;
         }
       }
+
+      &grey {
+        background-color: $dp-color-grey;
+        border: 1px solid $dp-color-grey;
+        color: $dp-color-white;
+
+        &:hover {
+          background-color: $dp-color-darkgrey;
+          border: 1px solid $dp-color-darkgrey;
+        }
+      }
     }
   }
 
