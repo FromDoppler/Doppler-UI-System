@@ -52,5 +52,13 @@
       }
     }
   }
+
+  .dp-button:disabled {
+    pointer-events: none;
+    border: 1px solid $dp-color-sylver;
+    color: $dp-color-grey;
+    background-color: $dp-color-snow;
+    opacity: 0.8;
+  }
 }
 @include dp-button();
