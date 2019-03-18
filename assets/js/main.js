@@ -27,6 +27,14 @@ $("body").on('click', '.close-user--menu', function() {
   $('.user-menu').removeClass('open');
 });
 
+$(document).on('mouseup', function(e){
+	var menu = $(".user-menu");
+
+	if (!menu.is(e.target) && menu.has(e.target).length === 0){
+		menu.removeClass('open');
+	}
+}); 
+
 // modals
 var $delayFade = 500;
 //Initialize all modals hidden
