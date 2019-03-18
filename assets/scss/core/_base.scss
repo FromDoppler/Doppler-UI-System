@@ -1,4 +1,12 @@
 /*Elements form*/
+/* separate button inside the form - review it later*/
+
+form {
+  .dp-button {
+    margin-left: 10px;
+  }
+}
+
 legend {
   display: none;
 }
