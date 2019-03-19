@@ -7,7 +7,6 @@
 
   .main-panel {
     width: 500px;
-    min-width: 500px;
     height: 100vh;
     padding: 40px 50px;
     background-color: $dp-color-white;
@@ -26,7 +25,7 @@
 
       a {
         font-style: normal;
-        font-weight: bold;
+        font-weight: $dp-font-weight-bold;
       }
     }
 
@@ -54,10 +53,12 @@
       font-family: $dp-font-family-proximanova;
     }
 
+    .content-legal {
+      margin-top: 30px;
 
       p {
-        font-size: 12px;
-        line-height: 16px;
+        font-size: $dp-font-size-rpgd;
+        line-height: $dp-line-height-rpgd;
       }
     }
 
@@ -117,7 +118,7 @@
     background: $dp-color-lightgrey;
   }
 }
-@include media-breakpoint('ipad') {
+@include media-breakpoint('desktop') {
   .panel-wrapper {
     .main-panel {
       width: 100%;
