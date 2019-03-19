@@ -1,6 +1,5 @@
 /*Elements form*/
 /* separate button inside the form - review it later*/
-
 form {
   .dp-button {
     margin-left: 10px;
@@ -19,10 +18,9 @@ label {
   color: $dp-color-grey;
   font-weight: $dp-font-weight-bold;
   font-size: $dp-font-size-small;
-  font-family: $dp-font-family-proximanova;
+  font-family: $dp-font-family;
 }
 /* span with class .dropdown-arrow to draw arrow dropdown */
-
 .dropdown-arrow {
   border-style: solid;
   height: 0;
@@ -68,10 +66,46 @@ textarea {
   border-radius: $dp-border-radius;
   font-size: $dp-font-size-form;
   border: 1px solid $dp-color-sylver;
+
+  &::placeholder {
+    color: $dp-color-default;
+    font-style: italic;
+  }
+
+  :focus {
+    border: 1px solid $dp-color-yellow;
+  }
+}
+/* validate */
+.required {
+  position: relative;
+  display: inline-block;
+  text-align: left;
+  width: 100%;
+  margin-bottom: 30px;
 }
 
-textarea:focus {
-  border: 1px solid $dp-color-yellow;
+.error {
+  &:after {
+    left: 0;
+    top: 100%;
+    color: $dp-color-red;
+    content: attr(data-error);
+    font-size: $dp-font-size-small;
+    line-height: 20px;
+    padding: 0;
+    position: absolute;
+    text-transform: initial;
+    white-space: nowrap;
+    z-index: 1;
+  }
+
+  input,
+  select,
+  textarea {
+    border: 1px solid $dp-color-red;
+    @include transition-all;
+  }
 }
 
 input[type='checkbox'] {
