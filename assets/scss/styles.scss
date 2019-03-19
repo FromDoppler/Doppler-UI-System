@@ -21,6 +21,7 @@
 @import "core/typography";
 @import "core/base";
 @import "libs/**/*";
-@import "modules/**/*";
+@import "modules/mixins/*";
+@import "modules/*";
 @import "utilities/*";
 @import "templates/**/*";

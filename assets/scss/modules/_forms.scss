@@ -16,45 +16,111 @@
   }
 }
 
-.content-checkbox {
-  width: 100%;
+.holder-item {
+  display: block;
   position: relative;
-  display: inline-block;
+  float: left;
+  box-sizing: border-box;
   text-align: left;
-  margin: 20px 0;
 
-  .checkbox {
-    display: flex;
-    cursor: pointer;
-    align-items: center;
-
-    label {
-      margin-left: -34px;
-      margin-bottom: 0;
-      font-weight: normal;
+  &--small {
+    width: 50%;
+    margin-bottom: 30px;
+    // Left Column
+    &:nth-of-type(2n+1) {
+      padding-right: 20px;
     }
   }
 
-  .checkmark {
-    margin-right: 10px;
-    height: 16px;
-    width: 16px;
-    position: absolute;
-    border: 1px solid $dp-color-lightgrey;
-    border-radius: 3px;
-    background-color: $dp-color-white;
-    pointer-events: none;
+  &--big {
+    width: 100%;
+    margin-bottom: 30px;
 
-    &:after {
-      content: '';
-      top: 1px;
-      left: 5px;
-      width: 5px;
-      height: 10px;
+    input,
+    textarea {
+      width: 100%;
+    }
+  }
+
+  label {
+    color: $dp-color-grey;
+    margin-bottom: 0;
+    vertical-align: baseline;
+  }
+
+  &.checkbox {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+
+    &:nth-last-child(-n+1) {
+      margin-bottom: 20px;
+    }
+
+    label {
+      height: 16px;
+      margin-left: -35px;
+      padding-bottom: 0;
+    }
+
+    input[type='checkbox'] {
+      height: 40px;
+      opacity: 0;
+      z-index: 0;
+      cursor: pointer;
+      margin-left: -20px;
+      flex: 0 1 85px;
+
+      &:checked {
+        & ~ .checkmark {
+          border-color: $dp-color-green;
+          background-color: $dp-color-green;
+
+          &:after {
+            display: block;
+          }
+        }
+      }
+    }
+
+    .checkmark {
       position: absolute;
-      border: solid $dp-color-white;
-      border-width: 0 3px 3px 0;
-      transform: rotate(45deg);
+      left: 0;
+      height: 16px;
+      width: 16px;
+      border: 1px solid $dp-color-grey;
+      border-radius: $dp-border-radius;
+      background-color: $dp-color-white;
+      pointer-events: none;
+      bottom: 30%;
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: 5px;
+        top: 1px;
+        width: 5px;
+        height: 10px;
+        border: solid $dp-color-white;
+        border-width: 0 3px 3px 0;
+        transform: rotate(45deg);
+      }
+    }
+
+    label {
+      font-weight: normal;
+    }
+  }
+}
+@include media-breakpoint('mobile') {
+  .holder-item {
+    &--small {
+      width: 100%;
+      // Left Column
+      &:nth-of-type(2n+1) {
+        padding-right: 0;
+      }
     }
   }
 }
