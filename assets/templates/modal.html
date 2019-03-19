@@ -64,32 +64,41 @@
         <form action="#" class="form-request">
           <fieldset>
             <legend>Solicita una actualización de tu plan</legend>
-            <div class="required error" data-error="¡Ouch! El campo está vacío.">
-              <label for="plan">Selecciona el Plan</label>
-              <span class="dropdown-arrow"></span>
-              <select id="plan" name="plan">
-                <option value=""></option>
-                <option value="">501-1500</option>
-                <option value="">1501-2500</option>
-                <option value="">2501-5000</option>
-                <option value="">5001-10000</option>
-                <option value="">10001-15000</option>
-                <option value="">15001-25000</option>
-                <option value="">25001-50000</option>
-                <option value="">50001-75000</option>
-                <option value="">75001-100000</option>
-              </select>
-            </div>
-            <div class="required error" data-error="¡Ouch! El campo está vacío.">
-              <label for="message">Mensaje </label>
-              <textarea id="message" name="message" placeholder="Tu mensage"></textarea>
-            </div>
+            <ul>
+              <li class="field-group error">
+                <label for="plan">Selecciona el Plan</label>
+                <span class="dropdown-arrow"></span>
+                <select id="plan" name="plan">
+                  <option value=""></option>
+                  <option value="">501-1500</option>
+                  <option value="">1501-2500</option>
+                  <option value="">2501-5000</option>
+                  <option value="">5001-10000</option>
+                  <option value="">10001-15000</option>
+                  <option value="">15001-25000</option>
+                  <option value="">25001-50000</option>
+                  <option value="">50001-75000</option>
+                  <option value="">75001-100000</option>
+                </select>
+                <div class="error-messages bounceIn">
+                  <p>¡Ouch! Este campo está vacío</p>
+                </div>
+                <!--error-messages-->
+              </li><!-- field-group -->
+              <li class="field-group error">
+                <label for="message">Mensaje </label>
+                <textarea id="message" name="message" placeholder="Tu mensage"></textarea>
+                <div class="error-messages bounceIn">
+                  <p>¡Ouch! Este campo está vacío</p>
+                </div><!-- error-messages -->
+              </li><!-- field-group -->
+            </ul>
           </fieldset>
           <fieldset class="fieldset-cta">
             <button type="button" name="cancel" class="dp-button button-medium primary-grey">Cancelar</button>
             <button type="button" name="submit" class="dp-button button-medium primary-green">Enviar</button>
-          </fieldset>
-        </form>
+          </fieldset><!-- fieldset-cta -->
+        </form><!-- form-request -->
       </div><!-- modal__content -->
     </div><!-- modal -->
     <div class="modal" id="modal-small">
