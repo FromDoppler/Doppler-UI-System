@@ -40,6 +40,7 @@
     .content-subtitle {
       margin: 10px 0 30px;
       font-family: $dp-font-family-proximanova;
+      font-style: italic;
     }
 
     .content-promotion {
@@ -48,18 +49,36 @@
       font-family: $dp-font-family-proximanova;
     }
 
-    .signup-form {
-      .holder-small {
-        display: inline-block;
-        width: 47.4%;
+    .content-legal {
+      margin-top: 30px;
+    }
+
+    .holder {
+      &-group {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+      }
+
+      &-size1of1 {
+        flex: 1;
+
+        &:nth-last-child(-n+3) {
+          margin-top: 30px;
+        }
+      }
+
+      &-col {
+        flex-wrap: nowrap;
+        flex-direction: row;
+      }
+
+      &-size1of2 {
+        flex: 1;
 
         &:nth-child(1) {
           margin-right: 4%;
         }
-      }
-
-      ul > li:nth-child(n+3) {
-        margin-top: 20px;
       }
     }
 
@@ -128,22 +147,23 @@
     display: none;
   }
 }
+@include media-breakpoint('ipad') {}
 @include media-breakpoint('mobile') {
   .panel-wrapper {
     .main-panel {
-      .signup-form {
-        .holder-small {
-          width: 100%;
-          margin-right: 0;
-          display: block;
+      .holder {
+        &-col {
+          flex-direction: column;
+        }
 
+        &-size1of2 {
           &:nth-child(1) {
             margin-right: 0;
           }
-        }
 
-        ul > li:nth-child(n+2) {
-          margin-top: 20px;
+          &:nth-child(2) {
+            margin-top: 30px;
+          }
         }
       }
     }
