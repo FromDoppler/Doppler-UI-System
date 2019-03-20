@@ -1,56 +1,54 @@
-/* variables margin */
+/* variables margin bottom */
 $dp-margin--lv0: 0;
-$dp-margin--lv1: 6px; /* variables margin bottom */
-$dp-m-bottom--lv0: 0;
-$dp-m-bottom--lv1: 6px;
-$dp-m-bottom--lv2: 12px;
-$dp-m-bottom--lv3: 18px;
-$dp-m-bottom--lv4: 24px;
-$dp-m-bottom--lv5: 30px;
-$dp-m-bottom--lv6: 36px;
-$dp-m-bottom--lv7: 42px;
-$dp-m-bottom--lv8: 48px;
-/* atomic class for margin */
+$dp-margin--lv1: 6px;
+$dp-margin--lv2: 12px;
+$dp-margin--lv3: 18px;
+$dp-margin--lv4: 24px;
+$dp-margin--lv5: 30px;
+$dp-margin--lv6: 36px;
+$dp-margin--lv7: 42px;
+$dp-margin--lv8: 48px;
+
 .margin--lv0 {
-  margin: 0;
+  margin: $dp-margin--lv0;
 }
 
 .margin--lv1 {
-  margin: 6px;
+  margin: $dp-margin--lv1;
 }
 /* atomic class for margin bottom */
 .m-bottom--lv0 {
-  margin-bottom: 0;
+  margin-bottom: $dp-margin--lv0;
 }
 
 .m-bottom--lv1 {
-  margin-bottom: 6px;
+  margin-bottom: $dp-margin--lv1;
 }
 
 .m-bottom--lv2 {
-  margin-bottom: 12px;
+  margin-bottom: $dp-margin--lv2;
 }
 
 .m-bottom--lv3 {
-  margin-bottom: 18px;
+  margin-bottom: $dp-margin--lv3;
 }
 
 .m-bottom--lv4 {
-  margin-bottom: 24px;
+  margin-bottom: $dp-margin--lv4;
 }
 
 .m-bottom--lv5 {
-  margin-bottom: 30px;
+  margin-bottom: $dp-margin--lv5;
 }
 
 .m-bottom--lv6 {
-  margin-bottom: 36px;
+  margin-bottom: $dp-margin--lv6;
 }
 
 .m-bottom--lv7 {
-  margin-bottom: 42px;
+  margin-bottom: $dp-margin--lv7;
 }
 
 .m-bottom--lv8 {
-  margin-bottom: 48px;
+  margin-bottom: $dp-margin--lv8;
 }
