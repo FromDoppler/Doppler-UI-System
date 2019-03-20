@@ -122,6 +122,14 @@
   .panel-wrapper {
     .main-panel {
       width: 100%;
+
+      .field-group--50 {
+        width: 100%;
+        // Left Column
+        &:nth-of-type(2n+1) {
+          padding-right: 0;
+        }
+      }
     }
 
     .feature-panel {

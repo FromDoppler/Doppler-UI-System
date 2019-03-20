@@ -218,3 +218,11 @@ input[type="tel"] {
     margin: 0;
   }
 }
+
+.field-item--50 {
+  width: 50%;
+  /* Left Column */
+  &:nth-of-type(2n+1) {
+    padding-right: 20px;
+  }
+}/* Field to 50% percent */
