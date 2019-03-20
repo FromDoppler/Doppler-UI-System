@@ -133,16 +133,16 @@
   }
 }
 /* modals */
+
 .list-modal {
   display: flex;
   justify-content: space-around;
   min-height: 200px;
   align-items: center;
-  max-width: 1200px;
+  max-width: $dp-wrapper-min-width;
   margin: 0 auto;
 }
 /* buttons */
-
 .main-buttons {
   display: flex;
   flex-wrap: wrap;
