@@ -20,4 +20,7 @@ docker run --rm \
     -v `pwd`/dist:/work/dist \
     -p 3500:3500 \
     doppler-ui-system-source \
-    gulp dist
+    /bin/sh -c "\
+      ./node_modules/.bin/eclint check \"**/*\" \
+      && gulp dist \
+    "

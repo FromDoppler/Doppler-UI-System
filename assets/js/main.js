@@ -28,12 +28,12 @@ $("body").on('click', '.close-user--menu', function() {
 });
 
 $(document).on('mouseup', function(e){
-	var menu = $(".user-menu");
+  var menu = $(".user-menu");
 
-	if (!menu.is(e.target) && menu.has(e.target).length === 0){
-		menu.removeClass('open');
-	}
-}); 
+  if (!menu.is(e.target) && menu.has(e.target).length === 0){
+    menu.removeClass('open');
+  }
+});
 
 // modals
 var $delayFade = 500;

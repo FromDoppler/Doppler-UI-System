@@ -7,3 +7,4 @@ RUN npm install
 
 COPY assets/ ./assets/
 COPY gulpfile.js ./
+COPY .editorconfig ./

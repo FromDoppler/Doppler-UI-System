@@ -81,12 +81,12 @@
     @media (min-width: $min) and (max-width: $max) {
       @content;
     }
-  } @else 
+  } @else
   if $max == null {
     @include media-breakpoint-up($lower, $breakpoints) {
       @content;
     }
-  } @else 
+  } @else
   if $min == null {
     @include media-breakpoint-down($upper, $breakpoints) {
       @content;
@@ -103,12 +103,12 @@
     @media (min-width: $min) and (max-width: $max) {
       @content;
     }
-  } @else 
+  } @else
   if $max == null {
     @include media-breakpoint-up($name, $breakpoints) {
       @content;
     }
-  } @else 
+  } @else
   if $min == null {
     @include media-breakpoint-down($name, $breakpoints) {
       @content;
