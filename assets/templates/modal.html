@@ -64,8 +64,8 @@
         <form action="#" class="form-request">
           <fieldset>
             <legend>Solicita una actualización de tu plan</legend>
-            <ul>
-              <li class="field-group error">
+            <ul class="field-group">
+              <li class="field-item error">
                 <label for="plan">Selecciona el Plan</label>
                 <span class="dropdown-arrow"></span>
                 <select id="plan" name="plan">
@@ -80,19 +80,20 @@
                   <option value="">50001-75000</option>
                   <option value="">75001-100000</option>
                 </select>
-                <div class="error-messages bounceIn">
-                  <p>¡Ouch! Este campo está vacío</p>
+                <div class="wrapper-errors bounceIn">
+                  <p class="error-message">¡Ouch! Este campo está vacío</p>
                 </div>
                 <!--error-messages-->
-              </li><!-- field-group -->
-              <li class="field-group error">
+              </li><!-- field-item -->
+              <li class="field-item error">
                 <label for="message">Mensaje </label>
                 <textarea id="message" name="message" placeholder="Tu mensage"></textarea>
-                <div class="error-messages bounceIn">
-                  <p>¡Ouch! Este campo está vacío</p>
+                <div class="wrapper-errors bounceIn">
+                  <p class="error-message">¡Ouch! Este campo está vacío</p>
+                  <span class="error-message">¡Ouch! Este campo está vacío</span>
                 </div><!-- error-messages -->
-              </li><!-- field-group -->
-            </ul>
+              </li><!-- field-item -->
+            </ul><!-- field-group -->
           </fieldset>
           <fieldset class="fieldset-cta">
             <button type="button" name="cancel" class="dp-button button-medium primary-grey">Cancelar</button>
