@@ -1,39 +1,4 @@
-////
-/// Typography
-/// Init typography basic settings
-/// @group Typography
-////
 @import "./settings";
-$dp-font-lineheight: 22px !default;
-$dp-font-weight: 400 !default;
-$dp-font-family: Arial, sans-serif !default;
-$dp-font-family-proximanova: "proxima-nova", Helvetica;
-$dp-font-size: 16px !default;
-$dp-font: $dp-font-weight $dp-font-size $dp-font-family !default;
-$dp-font-weight-light: 300 !default;
-$dp-font-weight-regular: $dp-font-weight !default;
-$dp-font-weight-semibold: 600 !default;
-$dp-font-weight-bold: 700 !default;
-$dp-font-color: #101010 !default;
-$dp-font-color-bright: #edede6 !default;
-$dp-font-color-dark: $dp-font-color !default;
-$dp-font-color-white: #fff !default;
-$dp-headers-h1-font-size: 50px;
-$dp-headers-h2-font-size: 40px;
-$dp-headers-h3-font-size: 30px;
-$dp-headers-h4-font-size: 22px;
-$dp-form-font-size: 20px;
-$dp-headers-h5-font-size: 18px;
-$dp-headers-h6-font-size: 13px;
-$dp-font-size-small: 13px;
-$dp-font-size-xsmall: 11px;
-$dp-font-size-form: 14px;
-$dp-font-button-big: 15px;
-$dp-font-button-medium: 13px;
-$dp-font-button-small: 11px;
-$dp-font-size-15: 15px;
-$dp-font-size-24: 24px;
-$dp-font-small-lineheight: 18px;
 
 body {
   color: $dp-color-grey;
