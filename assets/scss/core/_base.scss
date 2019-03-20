@@ -1,5 +1,6 @@
 /*Elements form*/
 /* separate button inside the form - review it later*/
+
 form {
   .dp-button {
     margin-left: 10px;
@@ -21,6 +22,7 @@ label {
   font-family: $dp-font-family;
 }
 /* span with class .dropdown-arrow to draw arrow dropdown */
+
 .dropdown-arrow {
   border-style: solid;
   height: 0;
@@ -77,15 +79,18 @@ textarea {
   }
 }
 /* validate form*/
+
 .field-group {
-  position: relative;
-  display: inline-block;
-  text-align: left;
-  width: 100%;
-  margin-bottom: 30px;
+  .field-item {
+    position: relative;
+    display: inline-block;
+    text-align: left;
+    width: 100%;
+    margin-bottom: $dp-m-bottom--lv5;
+  }
 }
 
-.error-messages {
+.wrapper-errors {
   display: none;
 }
 
@@ -96,10 +101,10 @@ textarea {
     border: 1px solid $dp-color-red;
   }
 
-  .error-messages {
+  .wrapper-errors {
     display: inline-block;
 
-    p {
+    .error-message {
       margin: 0;
       color: $dp-color-red;
       font-size: $dp-font-size-small;
