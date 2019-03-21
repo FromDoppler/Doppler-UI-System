@@ -108,7 +108,8 @@ textarea {
     text-align: left;
     float: left;
     width: 100%;
-    /* Field to 50% percent */
+    margin-bottom: $dp-spaces--lv5;
+
     &__checkbox {
       cursor: pointer;
 
@@ -117,7 +118,7 @@ textarea {
         vertical-align: middle;
         margin-left: 25px;
       }
-    }
+    }/* Field checkbox */
 
     &--50 {
       width: 50%;
@@ -125,7 +126,7 @@ textarea {
       &:nth-of-type(2n+1) {
         padding-right: 20px;
       }
-    }
+    }/* Field to 50% percent */
   }
 }
 
