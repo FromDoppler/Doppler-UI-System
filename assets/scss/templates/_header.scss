@@ -195,10 +195,7 @@
   }
 }
 
-.user-menu.open {
-  visibility: visible;
-  opacity: 1;
-}
+
 
 .user-menu {
   background: $dp-color-white;
@@ -234,45 +231,46 @@
     top: -7px;
   }
 
+  &.open {
+    visibility: visible;
+    opacity: 1;
+  }
+
   header {
     display: flex;
     align-items: center;
+
+    p {
+      margin-left: 10px;
+
+      span {
+        @include do-ellipsis(248px, block);
+      }
+    }
+
+    .email {
+      color: $dp-color-grey;
+      font-size: $dp-font-size-small;
+    }
+
+    .name {
+      color: $dp-color-darkgrey;
+      font-size: 20px;
+    }
   }
 
-  span {
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    max-width: 248px;
-    display: block;
-    overflow: hidden;
-  }
+  .options-user {
+    li {
+      border-top: 1px solid $dp-border-grey;
+      padding: 12px 0;
+      display: flex;
+      font-size: 11px;
+    }
 
-  header p {
-    margin-left: 10px;
-  }
-
-  header .email {
-    color: $dp-color-grey;
-    font-size: $dp-font-size-small;
-  }
-
-  .name {
-    color: $dp-color-darkgrey;
-    font-size: 20px;
-  }
-}
-
-.user-menu .options-user {
-  li {
-    border-top: 1px solid $dp-border-grey;
-    padding: 12px 0;
-    display: flex;
-    font-size: 11px;
-  }
-
-  a {
-    font-size: $dp-font-size-small;
-    color: $dp-color-grey;
+    a {
+      font-size: $dp-font-size-small;
+      color: $dp-color-grey;
+    }
   }
 }
 

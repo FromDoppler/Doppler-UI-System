@@ -1,0 +1,29 @@
+////
+/// Ellipsis
+/// @group utilities
+/// @access private
+/// @author Damián Muti
+////
+
+/// Create ellipsis on an element.
+/// @param {number} $max-width - Max width of the element that needs to be truncated.
+/// @param {string} $display - Display value of the element.  Accepted values: `block` or `inline-block`.
+/// @example scss - Usage
+///  span {
+///    @include do-ellipsis(200px, inline-block);
+///  }
+
+@mixin do-ellipsis($max-width, $display) {
+  @if type-of($max-width) != number {
+    @error "Max-width must be a length value. E.g: `1em`.";
+  }
+  @if not index(block inline-block, $display) {
+    @error "Display must be either `block` or `inline-block`.";
+  }
+
+  max-width: if(unitless($max-width), $max-width * 1px, $max-width);
+  display: $display;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
