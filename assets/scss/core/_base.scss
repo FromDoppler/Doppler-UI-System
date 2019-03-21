@@ -76,6 +76,30 @@ textarea {
     border: 1px solid $dp-color-yellow;
   }
 }
+
+.checkmark {
+  position: absolute;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  border: 1px solid $dp-color-grey;
+  border-radius: $dp-border-radius;
+  background-color: $dp-color-white;
+  pointer-events: none;
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 1px;
+    width: 5px;
+    height: 10px;
+    border: solid $dp-color-white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+  }
+}
+
 /* validate form*/
 .field-group {
   .field-item {
@@ -87,57 +111,11 @@ textarea {
     /* Field to 50% percent */
     &__checkbox {
       cursor: pointer;
-      display: flex;
-      position: relative;
 
       label {
-        margin-top: 12px;
-        margin-left: -30px;
         font-weight: normal;
-      }
-
-      input[type='checkbox'] {
-        height: 40px;
-        opacity: 0;
-        z-index: 0;
-        cursor: pointer;
-        margin-left: -20px;
-        flex: 0 1 80px;
-
-        &:checked {
-          & ~ .checkmark {
-            border-color: $dp-color-green;
-            background-color: $dp-color-green;
-
-            &:after {
-              display: block;
-            }
-          }
-        }
-      }
-
-      .checkmark {
-        position: absolute;
-        left: 0;
-        height: 16px;
-        width: 16px;
-        border: 1px solid $dp-color-grey;
-        border-radius: $dp-border-radius;
-        background-color: $dp-color-white;
-        pointer-events: none;
-        bottom: 32%;
-
-        &:after {
-          content: '';
-          position: absolute;
-          left: 5px;
-          top: 1px;
-          width: 5px;
-          height: 10px;
-          border: solid $dp-color-white;
-          border-width: 0 3px 3px 0;
-          transform: rotate(45deg);
-        }
+        vertical-align: middle;
+        margin-left: 25px;
       }
     }
 
@@ -146,6 +124,25 @@ textarea {
       /* Left Column */
       &:nth-of-type(2n+1) {
         padding-right: 20px;
+      }
+    }
+  }
+}
+
+input[type='checkbox'] {
+  opacity: 0;
+  z-index: 0;
+  cursor: pointer;
+  zoom: 2.5;
+  position: absolute;
+
+  &:checked {
+    & ~ .checkmark {
+      border-color: $dp-color-green;
+      background-color: $dp-color-green;
+
+      &:after {
+        display: block;
       }
     }
   }
@@ -202,7 +199,8 @@ input[type="tel"] {
 .error {
   input,
   select,
-  textarea {
+  textarea,
+  .checkmark {
     border: 1px solid $dp-color-red;
   }
 
