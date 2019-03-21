@@ -42,10 +42,10 @@
           <li class="nav-item"><a href="reports-filters.html" class="nav-link">Reports filters</a></li>
         </ul><!-- nav -->
       </section><!-- section-module -->
-      <ul class="content">
-        <li><button id="btn-modal-large" type="button" class="dp-button button-small button--primary">Large modal</button></li>
-        <li><button id="btn-modal-medium" type="button" class="dp-button button-small button--primary">Medium modal</button></li>
-        <li><button id="btn-modal-small" type="button" class="dp-button button-small button--primary">Small modal</button></li>
+      <ul class="list-modal">
+        <li><button id="btn-modal-large" type="button" class="dp-button button-medium primary-green">Large modal</button></li>
+        <li><button id="btn-modal-medium" type="button" class="dp-button button-medium primary-green">Medium modal</button></li>
+        <li><button id="btn-modal-small" type="button" class="dp-button button-medium primary-green">Small modal</button></li>
       </ul>
     </main>
     <div class="modal" id="modal-large">
@@ -64,8 +64,8 @@
         <form action="#" class="form-request">
           <fieldset>
             <legend>Solicita una actualización de tu plan</legend>
-            <ul>
-              <li>
+            <ul class="field-group">
+              <li class="field-item error">
                 <label for="plan">Selecciona el Plan</label>
                 <span class="dropdown-arrow"></span>
                 <select id="plan" name="plan">
@@ -80,18 +80,26 @@
                   <option value="">50001-75000</option>
                   <option value="">75001-100000</option>
                 </select>
-              </li>
-              <li>
-                <label for="message">Mensaje</label>
+                <div class="wrapper-errors bounceIn">
+                  <p class="error-message">¡Ouch! Este campo está vacío</p>
+                </div>
+                <!--error-messages-->
+              </li><!-- field-item -->
+              <li class="field-item error">
+                <label for="message">Mensaje </label>
                 <textarea id="message" name="message" placeholder="Tu mensage"></textarea>
-              </li>
-            </ul>
+                <div class="wrapper-errors bounceIn">
+                  <p class="error-message">¡Ouch! Este campo está vacío</p>
+                  <span class="error-message">¡Ouch! Este campo está vacío</span>
+                </div><!-- error-messages -->
+              </li><!-- field-item -->
+            </ul><!-- field-group -->
           </fieldset>
           <fieldset class="fieldset-cta">
-            <button type="button" name="cancel" class="dp-button primary-brown button-small">Cancelar</button>
-            <button type="button" name="submit" class="dp-button primary-green button-small">Enviar</button>
-          </fieldset>
-        </form>
+            <button type="button" name="cancel" class="dp-button button-medium primary-grey">Cancelar</button>
+            <button type="button" name="submit" class="dp-button button-medium primary-green">Enviar</button>
+          </fieldset><!-- fieldset-cta -->
+        </form><!-- form-request -->
       </div><!-- modal__content -->
     </div><!-- modal -->
     <div class="modal" id="modal-small">

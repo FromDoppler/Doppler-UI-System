@@ -2,7 +2,86 @@
 @mixin transition-all($what: all, $time: 0.25s, $how: ease) {
   transition: $what $time $how;
 }
-/* variables*/
+////
+/// Typography
+/// Init typography basic settings
+/// @group Typography
+////
+$dp-font-lineheight: 22px !default;
+$dp-font-weight: 400 !default;
+$dp-font-family: Arial, sans-serif !default;
+$dp-font-family-proximanova: "proxima-nova", Helvetica;
+$dp-font-size: 16px !default;
+$dp-font: $dp-font-weight $dp-font-size $dp-font-family !default;
+$dp-font-weight-light: 300 !default;
+$dp-font-weight-regular: $dp-font-weight !default;
+$dp-font-weight-semibold: 600 !default;
+$dp-font-weight-bold: 700 !default;
+$dp-font-color: #101010 !default;
+$dp-font-color-bright: #edede6 !default;
+$dp-font-color-dark: $dp-font-color !default;
+$dp-font-color-white: #fff !default;
+$dp-headers-h1-font-size: 50px;
+$dp-headers-h2-font-size: 40px;
+$dp-headers-h3-font-size: 30px;
+$dp-headers-h4-font-size: 22px;
+$dp-form-font-size: 20px;
+$dp-headers-h5-font-size: 18px;
+$dp-headers-h6-font-size: 13px;
+$dp-font-size-small: 13px;
+$dp-font-size-xsmall: 11px;
+$dp-font-size-form: 14px;
+$dp-font-button-big: 15px;
+$dp-font-button-medium: 13px;
+$dp-font-button-small: 11px;
+$dp-font-size-15: 15px;
+$dp-font-size-24: 24px;
+$dp-font-small-lineheight: 18px; //
+// variables margin bottom
+//
+$dp-spaces--lv0: 0;
+$dp-spaces--lv1: 6px;
+$dp-spaces--lv2: 12px;
+$dp-spaces--lv3: 18px;
+$dp-spaces--lv4: 24px;
+$dp-spaces--lv5: 30px;
+$dp-spaces--lv6: 36px;
+$dp-spaces--lv7: 42px;
+$dp-spaces--lv8: 48px; ////
+/// Settings File
+/// Init colors variables
+/// @group Colors
+////
+/// Colors ///
+///
+$dp-color-ghostwhite: #F2F2F2;
+$dp-color-lightgrey: #999999;
+$dp-color-grey: #666666;
+$dp-color-darkgrey: #333333;
+$dp-color-lightgreen: #65C192;
+$dp-color-green: #33AD73;
+$dp-color-darkgreen: #008046;
+$dp-color-green-brightness: rgba(51,173,115,.2);
+$dp-color-sylver: #CCCCCC;
+$dp-color-snow: #EAEAEA;
+$dp-color-lightyellow: #FDE577;
+$dp-color-lemonyellow: #C6B159;
+$dp-color-yellow: #FBB224;
+$dp-color-darkyellow: #E58900;
+$dp-color-yellow-brightness: rgba(252,229,121,.2);
+$dp-color-lightred: #EC8A83;
+$dp-color-red: #E34F45;
+$dp-color-darkred: #A63A33;
+$dp-color-white: #FFFFFF;
+$dp-border-grey: #E8E8E8;
+$dp-color-default: #C9C7BD;
+$dp-color-brown: #302100;
+$dp-color-brown--hover: #594103;
+$dp-bg-modal: #F7F7F7;
+$dp-bg-overlay: rgba(34, 34, 34, 0.95);
+$dp-color-brown-brightness: rgba(48,33,0,.2); //
+// variables generic
+//
 $dp-border-radius: 3px;
 $dp-header-height: 4em;
 $dp-text-aling: center;
