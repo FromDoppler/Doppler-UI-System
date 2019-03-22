@@ -116,7 +116,7 @@ textarea {
       label {
         font-weight: normal;
         vertical-align: middle;
-        margin-left: 25px;
+        margin-left: $dp-spaces--lv4;
       }
     }/* Field checkbox */
 
@@ -200,8 +200,7 @@ input[type="tel"] {
 .error {
   input,
   select,
-  textarea,
-  .checkmark {
+  textarea {
     border: 1px solid $dp-color-red;
   }
 
@@ -209,23 +208,9 @@ input[type="tel"] {
     display: inline-block;
 
     .error-message {
-      margin: 0;
+      margin: $dp-spaces--lv0;
       color: $dp-color-red;
       font-size: $dp-font-size-small;
-    }
-
-    .error-characters {
-      margin-right: $dp-spaces--lv4;
-
-      &::before {
-        content: '';
-        display: inline-block;
-        width: 8px;
-        height: 8px;
-        border-radius: 8px;
-        background-color: $dp-color-red;
-        margin-right: $dp-border-radius;
-      }
     }
   }
   /* animation to show the errors (optional) */
@@ -277,7 +262,7 @@ input[type="tel"] {
   display: block;
 
   .password-message {
-    margin: 0;
+    margin: $dp-spaces--lv0;
     font-size: $dp-font-size-small;
   }
 
