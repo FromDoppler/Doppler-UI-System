@@ -15,3 +15,42 @@
     text-align: right;
   }
 }
+
+/* Mixin for the circle in the validation of messages in the password */
+/* Mixin circle simple */
+@mixin circle($background-color) {
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: $dp-border-radius--lv1;
+    margin-right: $dp-spaces--lv1;
+    background-color: $background-color;
+  }
+}
+
+/* Mixin circle with a check */
+@mixin circleCheck($background-color, $check-color) {
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: $dp-border-radius--lv1;
+    background-color: $background-color;
+    margin-right: $dp-spaces--lv1;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 4px;
+    bottom: 10px;
+    width: 4px;
+    height: 7px;
+    border: solid $check-color;
+    border-width: 0 1.5px 1.5px 0;
+    transform: rotate(45deg);
+  }
+}

@@ -213,6 +213,20 @@ input[type="tel"] {
       color: $dp-color-red;
       font-size: $dp-font-size-small;
     }
+
+    .error-characters {
+      margin-right: $dp-spaces--lv4;
+
+      &::before {
+        content: '';
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border-radius: 8px;
+        background-color: $dp-color-red;
+        margin-right: $dp-border-radius;
+      }
+    }
   }
   /* animation to show the errors (optional) */
   @keyframes bounceIn {
@@ -257,4 +271,43 @@ input[type="tel"] {
     animation-duration: 0.75s;
     animation-name: bounceIn;
   }
-}
+}/* Classes of error messages */
+
+.wrapper-password {
+  display: block;
+
+  .password-message {
+    margin: 0;
+    font-size: $dp-font-size-small;
+  }
+
+  .complete-message {
+    margin-right: $dp-spaces--lv4;
+    color: $dp-color-lightgrey;
+
+    @include circle($dp-color-lightgrey);
+  }/* Class to indicate that this validation is complete */
+
+  .waiting-message {
+    margin-right: $dp-spaces--lv4;
+    color: $dp-color-grey;
+
+    @include circle($dp-color-yellow);
+  }/* Class for waiting complete the password */
+
+
+  .lack-message {
+    margin-right: $dp-spaces--lv4;
+    color: $dp-color-red;
+
+    @include circle($dp-color-red);
+  }/* Class for lack digit in the password */
+
+  .secure-message {
+    margin-right: $dp-spaces--lv4;
+    color: $dp-color-green;
+
+    @include circleCheck($dp-color-green, $dp-color-white);
+  }/* Class to indicate that password is secure */
+
+}/* Classes of messages to verify the password */

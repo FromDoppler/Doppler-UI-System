@@ -33,7 +33,7 @@
   <main class="panel-wrapper">
     <article class="main-panel">
       <header>
-        <img src="img/logo-doppler.svg" class="logo-doppler" alt="Doppler">
+        <img src="img/doppler-logo.svg" class="logo-doppler" alt="Doppler">
         <small class="content-signin">¿Ya tienes una cuenta? <a href="#" class="link-green" target="_blank">INGRESA</a></small>
       </header><!-- header -->
       <h5>Regístrate</h5>
@@ -79,12 +79,15 @@
                 <p class="error-message">¡Ouch! Este campo está vacío</p>
               </div>
             </li>
-            <li class="field-item error">
+            <li class="field-item">
               <label for="password">Contraseña:</label>
               <input type="password" name="password" id="password" placeholder="Escribe tu clave secreta">
-              <div class="wrapper-errors bounceIn">
-                <p class="error-message">¡Ouch! Este campo está vacío</p>
-              </div>
+              <div class="wrapper-password">
+                <p class="password-message"><span class="waiting-message">8 caracteres como mínimo</span><span class="waiting-message">Un dígito</span></p>
+                <p class="password-message"><span class="lack-message">8 caracteres como mínimo</span><span class="waiting-message">Un dígito</span></p>
+                <p class="password-message"><span class="complete-message">8 caracteres como mínimo</span><span class="lack-message">Un dígito</span></p>
+                <p class="password-message"><span class="secure-message">¡Tu contraseña es segura!</span></p>
+              </div><!-- the final container of message validations -->
             </li>
           </ul>
         </fieldset><!-- user and password -->
@@ -104,7 +107,7 @@
               <label for="acepto_promociones"> Acepto recibir las promociones de Doppler y sus aliados.</label>
             </li>
           </ul>
-          <button type="button" class="dp-button button-medium primary-green">Crear cuenta</button>
+          <button type="button" class="dp-button button--round button-medium primary-green">Crear cuenta</button>
         </fieldset><!-- privacy policy and promotion -->
       </form><!-- form -->
       <div class="content-legal">
