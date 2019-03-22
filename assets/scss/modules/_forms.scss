@@ -16,45 +16,41 @@
   }
 }
 
-.content-checkbox {
-  width: 100%;
-  position: relative;
-  display: inline-block;
-  text-align: left;
-  margin: 20px 0;
+/* Mixin for the circle in the validation of messages in the password */
+/* Mixin circle simple */
+@mixin circle($background-color) {
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: $dp-border-radius--lv1;
+    margin-right: $dp-spaces--lv1;
+    background-color: $background-color;
+  }
+}
 
-  .checkbox {
-    display: flex;
-    cursor: pointer;
-    align-items: center;
-
-    label {
-      margin-left: -34px;
-      margin-bottom: 0;
-      font-weight: normal;
-    }
+/* Mixin circle with a check */
+@mixin circleCheck($background-color, $check-color) {
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: $dp-border-radius--lv1;
+    background-color: $background-color;
+    margin-right: $dp-spaces--lv1;
   }
 
-  .checkmark {
-    margin-right: 10px;
-    height: 16px;
-    width: 16px;
+  &::after {
+    content: '';
     position: absolute;
-    border: 1px solid $dp-color-lightgrey;
-    border-radius: 3px;
-    background-color: $dp-color-white;
-    pointer-events: none;
-
-    &:after {
-      content: '';
-      top: 1px;
-      left: 5px;
-      width: 5px;
-      height: 10px;
-      position: absolute;
-      border: solid $dp-color-white;
-      border-width: 0 3px 3px 0;
-      transform: rotate(45deg);
-    }
+    left: 4px;
+    bottom: 9px;
+    width: 4px;
+    height: 7px;
+    border: solid $check-color;
+    border-width: 0 1.5px 1.5px 0;
+    transform: rotate(45deg);
   }
 }

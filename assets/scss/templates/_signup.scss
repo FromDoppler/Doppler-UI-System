@@ -6,7 +6,7 @@
   align-items: stretch;
 
   .main-panel {
-    flex: 1.5;
+    width: 500px;
     height: 100vh;
     padding: 40px 50px;
     background-color: $dp-color-white;
@@ -19,13 +19,13 @@
     .content-signin {
       float: right;
       display: inline-block;
-      margin-top: 6px;
+      margin-top: $dp-spaces--lv1;
       font-family: $dp-font-family-proximanova;
       font-style: italic;
 
       a {
         font-style: normal;
-        font-weight: bold;
+        font-weight: $dp-font-weight-bold;
       }
     }
 
@@ -33,13 +33,14 @@
       margin: 60px 0 0;
       font-family: $dp-font-family-proximanova;
       color: $dp-color-brown;
-      font-weight: bold;
+      font-weight: $dp-font-weight-bold;
       text-transform: uppercase;
     }
 
     .content-subtitle {
       margin: 10px 0 30px;
       font-family: $dp-font-family-proximanova;
+      font-style: italic;
     }
 
     .content-promotion {
@@ -48,27 +49,21 @@
       font-family: $dp-font-family-proximanova;
     }
 
-    .signup-form {
-      .holder-small {
-        display: inline-block;
-        width: 47.4%;
-
-        &:nth-child(1) {
-          margin-right: 4%;
-        }
-      }
-
-      ul > li:nth-child(n+3) {
-        margin-top: 20px;
-      }
-    }
-
     small {
       font-family: $dp-font-family-proximanova;
     }
 
+    .content-legal {
+      margin-top: $dp-spaces--lv5;
+
+      p {
+        font-size: $dp-font-size-rpgd;
+        line-height: $dp-line-height-rpgd;
+      }
+    }
+
     footer {
-      padding-top: 15px;
+      padding-top: $dp-spaces--lv3;
     }
   }
 
@@ -86,7 +81,7 @@
     h6 {
       margin-bottom: 10px;
       font-family: $dp-font-family-proximanova;
-      font-weight: bold;
+      font-weight: $dp-font-weight-bold;
       color: $dp-color-white;
       text-transform: uppercase;
     }
@@ -94,7 +89,7 @@
     h3 {
       margin: 10px 0;
       font-family: $dp-font-family-proximanova;
-      font-weight: bold;
+      font-weight: $dp-font-weight-bold;
       color: $dp-color-white;
     }
 
@@ -106,7 +101,7 @@
   /* width */
   ::-webkit-scrollbar {
     width: 8px;
-    border-radius: 5px;
+    border-radius: $dp-border-radius;
   }
   /* Track */
   ::-webkit-scrollbar-track {
@@ -116,7 +111,7 @@
   /* Handle */
   ::-webkit-scrollbar-thumb {
     background: $dp-color-lightgrey;
-    border-radius: 5px;
+    border-radius: $dp-border-radius;
   }
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
@@ -124,28 +119,21 @@
   }
 }
 @include media-breakpoint('desktop') {
-  .feature-panel {
-    display: none;
-  }
-}
-@include media-breakpoint('mobile') {
   .panel-wrapper {
     .main-panel {
-      .signup-form {
-        .holder-small {
-          width: 100%;
-          margin-right: 0;
-          display: block;
+      width: 100%;
 
-          &:nth-child(1) {
-            margin-right: 0;
-          }
-        }
-
-        ul > li:nth-child(n+2) {
-          margin-top: 20px;
+      .field-item--50 {
+        width: 100%;
+        // Left Column
+        &:nth-of-type(odd) {
+          padding-right: 0;
         }
       }
+    }
+
+    .feature-panel {
+      display: none;
     }
   }
 }

@@ -19,8 +19,9 @@
 @import "core/reset";
 @import "core/settings";
 @import "core/typography";
+@import "modules/mixins/*";
+@import "modules/*";
 @import "core/base";
 @import "libs/**/*";
-@import "modules/**/*";
 @import "utilities/*";
 @import "templates/**/*";

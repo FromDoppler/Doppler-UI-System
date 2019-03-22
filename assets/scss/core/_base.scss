@@ -1,6 +1,5 @@
 /*Elements form*/
 /* separate button inside the form - review it later*/
-
 form {
   .dp-button {
     margin-left: 10px;
@@ -22,7 +21,6 @@ label {
   font-family: $dp-font-family;
 }
 /* span with class .dropdown-arrow to draw arrow dropdown */
-
 .dropdown-arrow {
   border-style: solid;
   height: 0;
@@ -78,15 +76,120 @@ textarea {
     border: 1px solid $dp-color-yellow;
   }
 }
-/* validate form*/
 
+.checkmark {
+  position: absolute;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  border: 1px solid $dp-color-grey;
+  border-radius: $dp-border-radius;
+  background-color: $dp-color-white;
+  pointer-events: none;
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 1px;
+    width: 5px;
+    height: 10px;
+    border: solid $dp-color-white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+  }
+}
+
+/* validate form*/
 .field-group {
   .field-item {
     position: relative;
     display: inline-block;
     text-align: left;
+    float: left;
     width: 100%;
     margin-bottom: $dp-spaces--lv5;
+
+    &__checkbox {
+      cursor: pointer;
+
+      label {
+        font-weight: normal;
+        vertical-align: middle;
+        margin-left: $dp-spaces--lv4;
+      }
+    }/* Field checkbox */
+
+    &--50 {
+      width: 50%;
+      /* Left Column */
+      &:nth-of-type(odd) {
+        padding-right: $dp-spaces--lv3;
+      }
+    }/* Field to 50% percent */
+  }
+}
+
+input[type='checkbox'] {
+  opacity: 0;
+  z-index: 0;
+  cursor: pointer;
+  zoom: 2.5;
+  position: absolute;
+
+  &:checked {
+    & ~ .checkmark {
+      border-color: $dp-color-green;
+      background-color: $dp-color-green;
+
+      &:after {
+        display: block;
+      }
+    }
+  }
+}
+
+input:not([type='checkbox']) {
+  padding: 10px 12px;
+  height: 40px;
+  width: 100%;
+  border: 1px solid $dp-color-lightgrey;
+  border-radius: $dp-border-radius;
+  background-color: $dp-color-white;
+  font-size: $dp-font-size-form;
+  font-family: $dp-font-family-proximanova;
+  line-height: 20px;
+
+  &::placeholder {
+    color: $dp-color-default;
+    font-style: italic;
+  }
+
+  &:required {
+    box-shadow: none;
+  }
+
+  &:focus {
+    color: $dp-color-default;
+    border: 1px solid $dp-color-yellow;
+    border-radius: $dp-border-radius;
+    -webkit-box-shadow: 0 0 0 2px $dp-color-brown-brightness;
+    box-shadow: 0 0 0 2px $dp-color-brown-brightness;
+    outline: none;
+
+    &::placeholder {
+      font-style: normal;
+    }
+  }
+}
+
+input[type="tel"] {
+  -moz-appearance: textfield;
+
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
   }
 }
 
@@ -105,7 +208,7 @@ textarea {
     display: inline-block;
 
     .error-message {
-      margin: 0;
+      margin: $dp-spaces--lv0;
       color: $dp-color-red;
       font-size: $dp-font-size-small;
     }
@@ -153,68 +256,43 @@ textarea {
     animation-duration: 0.75s;
     animation-name: bounceIn;
   }
-}
+}/* Classes of error messages */
 
-input[type='checkbox'] {
-  flex: 0 1 80px;
-  margin-left: -20px;
-  height: 40px;
-  cursor: pointer;
-  z-index: 0;
-  opacity: 0;
+.wrapper-password {
+  display: block;
 
-  &:checked {
-    & ~ .checkmark {
-      border-color: $dp-color-green;
-      background-color: $dp-color-green;
-
-      &:after {
-        display: block;
-      }
-    }
-  }
-}
-
-input:not(.button):not([type='checkbox']) {
-  padding: 10px 12px;
-  height: 40px;
-  width: 100%;
-  border: 1px solid $dp-color-lightgrey;
-  border-radius: $dp-border-radius;
-  background-color: $dp-color-white;
-  font-size: $dp-font-size-form;
-  font-family: $dp-font-family-proximanova;
-  line-height: 20px;
-
-  &::placeholder {
-    color: $dp-color-default;
-    font-style: italic;
+  .password-message {
+    margin: $dp-spaces--lv0;
+    font-size: $dp-font-size-small;
   }
 
-  &:required {
-    box-shadow: none;
-  }
+  .complete-message {
+    margin-right: $dp-spaces--lv4;
+    color: $dp-color-lightgrey;
 
-  &:focus {
-    color: $dp-color-default;
-    border: 1px solid $dp-color-yellow;
-    border-radius: $dp-border-radius;
-    -webkit-box-shadow: 0 0 0 2px $dp-color-brown-brightness;
-    box-shadow: 0 0 0 2px $dp-color-brown-brightness;
-    outline: none;
+    @include circle($dp-color-lightgrey);
+  }/* Class to indicate that this validation is complete */
 
-    &::placeholder {
-      font-style: normal;
-    }
-  }
-}
+  .waiting-message {
+    margin-right: $dp-spaces--lv4;
+    color: $dp-color-grey;
 
-input[type="tel"] {
-  -moz-appearance: textfield;
+    @include circle($dp-color-yellow);
+  }/* Class for waiting complete the password */
 
-  &::-webkit-inner-spin-button,
-  &::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
-}
+
+  .lack-message {
+    margin-right: $dp-spaces--lv4;
+    color: $dp-color-red;
+
+    @include circle($dp-color-red);
+  }/* Class for lack digit in the password */
+
+  .secure-message {
+    margin-right: $dp-spaces--lv4;
+    color: $dp-color-green;
+
+    @include circleCheck($dp-color-green, $dp-color-white);
+  }/* Class to indicate that password is secure */
+
+}/* Classes of messages to verify the password */
