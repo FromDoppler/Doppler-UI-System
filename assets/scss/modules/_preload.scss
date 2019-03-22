@@ -1,0 +1,16 @@
+@mixin dp-preloader($color, $size) {
+  content: '';
+  width: $size;
+  height: $size;
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid;
+  border-color: rgba($color, .3);
+  border-top-color: $color;
+  animation: dp-preloader-spin 0.5s infinite linear;
+}
+@keyframes dp-preloader-spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
