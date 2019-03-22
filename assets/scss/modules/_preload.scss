@@ -14,3 +14,40 @@
     transform: rotate(360deg);
   }
 }
+
+.wrapper-loading{
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 8em;
+  height: 8em;
+
+  .loading-page {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:$dp-color-darkyellow;
+
+    &:before {
+      @include dp-preloader($dp-color-darkyellow, 6em);
+    }
+  }
+  @keyframes flash {
+    from,
+    50%,
+    to {
+      opacity: 1;
+    }
+
+    25%,
+    75% {
+      opacity: 0;
+    }
+  }
+
+  .flash {
+    animation: flash 2s infinite linear;
+  }
+}
