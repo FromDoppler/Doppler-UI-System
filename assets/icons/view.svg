@@ -1,9 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
-<path fill="#020202" d="M12,16.75c-2.764,0-5-2.121-5-4.75s2.236-4.75,5-4.75s5,2.121,5,4.75S14.764,16.75,12,16.75z M12,4.871
-	C6.873,4.871,2,10.396,2,12c0,1.604,4.873,7.129,10,7.129c5.128,0,10-5.525,10-7.129C22,10.396,17.128,4.871,12,4.871z M12,9.621
-	C12,10.94,10.882,12,9.5,12c0,1.311,1.118,2.379,2.5,2.379s2.5-1.068,2.5-2.379S13.382,9.621,12,9.621z"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="13px" viewBox="0 0 16 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.1 (72631) - https://sketchapp.com -->
+    <title>guidelines: general</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Guidelines" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="guidelines:-general" transform="translate(-91.000000, -5448.000000)" fill="#838370">
+            <path d="M99,5452.66461 C99,5453.68221 98.1056,5454.5 97,5454.5 C97,5455.51143 97.8944,5456.33539 99,5456.33539 C100.1056,5456.33539 101,5455.51143 101,5454.5 C101,5453.48857 100.1056,5452.66461 99,5452.66461 M99,5449 C94.8984,5449 91,5453.26252 91,5454.5 C91,5455.73748 94.8984,5460 99,5460 C103.1024,5460 107,5455.73748 107,5454.5 C107,5453.26252 103.1024,5449 99,5449 M99,5458.16461 C96.7888,5458.16461 95,5456.52826 95,5454.5 C95,5452.47174 96.7888,5450.83539 99,5450.83539 C101.2112,5450.83539 103,5452.47174 103,5454.5 C103,5456.52826 101.2112,5458.16461 99,5458.16461" id="Page-1"></path>
+        </g>
+    </g>
 </svg>

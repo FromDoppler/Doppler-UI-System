@@ -42,3 +42,21 @@
 .m-bottom--lv8 {
   margin-bottom: $dp-spaces--lv8;
 }
+
+.logo-doppler-new {
+  display: inline-block;
+  background-image: url('../img/doppler-logo-new.svg');
+  background-repeat: no-repeat;
+  height: 40px;
+  width: 145px;
+  text-indent: -99em;
+}
+
+.logo-doppler-old {
+  display: inline-block;
+  background-image: url('../img/doppler-logo-old.svg');
+  background-repeat: no-repeat;
+  height: 30px;
+  width: 85px;
+  text-indent: -99em;
+}

@@ -33,7 +33,7 @@
   <main class="panel-wrapper">
     <article class="main-panel">
       <header>
-        <img src="img/doppler-logo.svg" class="logo-doppler" alt="Doppler">
+        <h1 class="logo-doppler-new">Doppler</h1>
         <small class="content-signin">¿Ya tienes una cuenta? <a href="#" class="link-green" target="_blank">INGRESA</a></small>
       </header><!-- header -->
       <h5>Regístrate</h5>
@@ -46,14 +46,14 @@
               <ul class="field-group">
                 <li class="field-item field-item--50 error">
                   <label for="name">Nombre:</label>
-                  <input type="name" name="name" id="name" placeholder="Nombre">
+                  <input type="text" name="name" id="name" placeholder="Nombre">
                   <div class="wrapper-errors bounceIn">
                     <p class="error-message">¡Ouch! Este campo está vacío</p>
                   </div>
                 </li>
                 <li class="field-item field-item--50 error">
                   <label for="lastname">Apellido:</label>
-                  <input type="lastname" name="name" id="lastname" placeholder="Apellido">
+                  <input type="text" name="lastname" id="lastname" placeholder="Apellido">
                   <div class="wrapper-errors bounceIn">
                     <p class="error-message">¡Ouch! Este campo está vacío</p>
                   </div>
@@ -80,12 +80,12 @@
               </div>
             </li>
             <li class="field-item">
-              <label for="password">Contraseña:</label>
-              <input type="password" name="password" id="password" placeholder="Escribe tu clave secreta">
+              <label for="password">Contraseña: <a toggle="#password-field" class="ms-icon icon-view show-hide"> <span class="content-eye">Mostrar</a></label>
+              <input type="password" name="password" id="password-field" placeholder="Escribe tu clave secreta">
               <div class="wrapper-password">
                 <p class="password-message"><span class="waiting-message">8 caracteres como mínimo</span><span class="waiting-message">Un dígito</span></p>
-                <p class="password-message"><span class="lack-message">8 caracteres como mínimo</span><span class="waiting-message">Un dígito</span></p>
-                <p class="password-message"><span class="complete-message">8 caracteres como mínimo</span><span class="lack-message">Un dígito</span></p>
+                <p class="password-message"><span class="lack-message">8 caracteres como mínimo</span><span class="lack-message">Un dígito</span></p>
+                <p class="password-message"><span class="complete-message">8 caracteres como mínimo</span><span class="complete-message">Un dígito</span></p>
                 <p class="password-message"><span class="secure-message">¡Tu contraseña es segura!</span></p>
               </div><!-- the final container of message validations -->
             </li>
