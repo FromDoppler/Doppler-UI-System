@@ -90,7 +90,7 @@
     justify-content: space-between;
 
       .reports-box {
-        @include dp-box($dp-color-sylver, 30%);
+        @include dp-box($dp-color-sylver, 30%, 408px, 395px);
 
       }
     }
