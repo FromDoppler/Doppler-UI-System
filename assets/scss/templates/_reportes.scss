@@ -87,11 +87,15 @@
     display: flex;
     max-width: $dp-wrapper-max-width;
     margin: 0 auto;
-    justify-content: space-between;
 
       .reports-box {
-        @include dp-box($dp-color-sylver, 30%, 408px, 395px);
+        @include dp-box($dp-color-sylver, 30%, 408px, 250px);
         position: relative;
+        margin-right: 4em;
+
+          &:last-child{
+            margin-right: 0;
+          }
       }
     }
 }
@@ -118,7 +122,7 @@
 
 .text-kpi {
   font-size: $dp-font-size-small;
-  margin: 50px 0 90px;
+  margin: 5em 0 3em;
   position: relative;
   color:$dp-color-grey;
 
