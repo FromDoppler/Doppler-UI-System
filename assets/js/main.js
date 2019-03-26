@@ -54,7 +54,7 @@ $(".modal .close").click(function() {
 });
 
 
-// script to show and hide password
+// This script is ONLY to DEMONSTRATE how to show and hide password, not use in production
 $(".show-hide").click(function() {
   $(this).toggleClass("ms-icon icon-hide");
   var input = $($(this).attr("toggle"));
