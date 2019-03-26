@@ -1,0 +1,10 @@
+@mixin dp-box ($color){
+  border-radius: $dp-border-radius;
+  width: 30%;
+  max-width: 408px;
+  padding: 40px 30px;
+  overflow: hidden;
+  border:1px solid $color;
+  min-height: 393px;
+  box-shadow: 0 0 0 4px rgba($color,.3);
+}
