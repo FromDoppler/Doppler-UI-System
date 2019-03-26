@@ -52,3 +52,20 @@ $("#btn-modal-small").click(function() {
 $(".modal .close").click(function() {
   $(".modal").fadeOut();
 });
+
+
+// This script is ONLY to DEMONSTRATE how to show and hide password, not use in production
+$(".show-hide").click(function() {
+  $(this).toggleClass("ms-icon icon-hide");
+  var input = $($(this).attr("toggle"));
+
+  if (input.attr("type") == "password") {
+    input.attr("type", "text");
+    $('span.content-eye').text('Ocultar');
+    $(this).removeClass("ms-icon icon-view").addClass("ms-icon icon-hide");
+  } else {
+    input.attr("type", "password");
+    $('span.content-eye').text('Mostrar');
+    $(this).removeClass("ms-icon icon-hide").addClass("ms-icon icon-view");
+  }
+});

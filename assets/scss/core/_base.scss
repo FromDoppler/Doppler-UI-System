@@ -112,11 +112,16 @@ textarea {
 
     &__checkbox {
       cursor: pointer;
+      margin-bottom: $dp-spaces--lv3;
 
       label {
         font-weight: normal;
         vertical-align: middle;
         margin-left: $dp-spaces--lv4;
+      }
+
+      &:nth-last-child(1) {
+        margin-bottom: $dp-spaces--lv4;
       }
     }/* Field checkbox */
 
@@ -127,6 +132,26 @@ textarea {
         padding-right: $dp-spaces--lv3;
       }
     }/* Field to 50% percent */
+
+
+    .show-hide {
+      float: right;
+      font-size: $dp-font-size-small;
+      font-weight: normal;
+      font-style: italic;
+      color: $dp-color-grey;
+      line-height: $dp-font-small-lineheight;
+      vertical-align: bottom;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+
+    .content-eye {
+      font-family: $dp-font-family-proximanova;
+      font-size: $dp-font-size-small;
+    }
   }
 }
 
@@ -147,12 +172,24 @@ input[type='checkbox'] {
       }
     }
   }
+
+  &:focus {
+    & ~ .checkmark {
+      color: $dp-color-default;
+      border: 1px solid $dp-color-yellow;
+      border-radius: $dp-border-radius;
+      -webkit-box-shadow: 0 0 0 2px $dp-color-brown-brightness;
+      box-shadow: 0 0 0 2px $dp-color-brown-brightness;
+      outline: none;
+    }
+  }
 }
 
 input:not([type='checkbox']) {
   padding: 10px 12px;
   height: 40px;
   width: 100%;
+  color: $dp-color-grey;
   border: 1px solid $dp-color-lightgrey;
   border-radius: $dp-border-radius;
   background-color: $dp-color-white;
@@ -200,7 +237,8 @@ input[type="tel"] {
 .error {
   input,
   select,
-  textarea {
+  textarea,
+  .checkmark {
     border: 1px solid $dp-color-red;
   }
 
