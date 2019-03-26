@@ -33,13 +33,13 @@
     }
 
     &.button--loading {
+      @include dp-preloader($dp-color-white, 1.5em);
       padding-left: 3em;
       position: relative;
       display: flex;
       align-items: center;
 
-      &:before {
-        @include dp-preloader($dp-color-white, 1.5em);
+      &:after {
         left: 1em;
       }
     }
