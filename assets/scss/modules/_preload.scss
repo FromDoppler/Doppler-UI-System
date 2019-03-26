@@ -1,21 +1,46 @@
-@mixin dp-preloader($color, $size) {
-  content: '';
-  width: $size;
-  height: $size;
-  position: absolute;
-  border-radius: 50%;
-  border: 2px solid;
-  border-color: rgba($color, .3);
-  border-top-color: $color;
-  animation: dp-preloader-spin 0.5s infinite linear;
+@mixin dp-preloader($color, $size, $background:"") {
+@if $background !="" {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    opacity:.9;
+    background-color: $background;
+
+  &:before {
+    content: '';
+    left: 0;
+    opacity: 0.9;
+    position: absolute;
+
+  }
 }
+
+&:after {
+    content: '';
+    width: $size;
+    height: $size;
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid;
+    border-color: rgba($color, .3);
+    border-top-color: $color;
+    animation: dp-preloader-spin 0.5s infinite linear;
+  }
+}
+
 @keyframes dp-preloader-spin {
   100% {
     transform: rotate(360deg);
   }
 }
 
-.wrapper-loading{
+.wrapper-loading {
   margin: auto;
   display: flex;
   justify-content: center;
@@ -29,10 +54,8 @@
     align-items: center;
     justify-content: center;
     color:$dp-color-darkyellow;
+    @include dp-preloader($dp-color-darkyellow, 6em);
 
-    &:before {
-      @include dp-preloader($dp-color-darkyellow, 6em);
-    }
   }
   @keyframes flash {
     from,
@@ -54,42 +77,6 @@
 
 /* loading kpi */
 
-.wrapper-widget{
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 8em;
-  height: 8em;
-
-  .loading-box {
-    position: relative;
-    display: flex;
-    top: 50%;
-    align-items: center;
-    justify-content: center;
-    color:$dp-color-lightgrey;
-
-    &:before {
-      @include dp-preloader($dp-color-lightgrey, 5em);
-    }
-  }
-  @keyframes flash {
-    from,
-    50%,
-    to {
-      opacity: 1;
-    }
-
-    25%,
-    75% {
-      opacity: 0;
-    }
-  }
-
-  .flash {
-    font-size: 12px;
-    text-transform: uppercase;
-    animation: flash 2s infinite linear;
-  }
+.loading-box {
+  @include dp-preloader($dp-color-lightgrey, 5em, $dp-color-ghostwhite);
 }
