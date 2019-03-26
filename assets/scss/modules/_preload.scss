@@ -51,3 +51,45 @@
     animation: flash 2s infinite linear;
   }
 }
+
+/* loading kpi */
+
+.wrapper-widget{
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 8em;
+  height: 8em;
+
+  .loading-box {
+    position: relative;
+    display: flex;
+    top: 50%;
+    align-items: center;
+    justify-content: center;
+    color:$dp-color-lightgrey;
+
+    &:before {
+      @include dp-preloader($dp-color-lightgrey, 5em);
+    }
+  }
+  @keyframes flash {
+    from,
+    50%,
+    to {
+      opacity: 1;
+    }
+
+    25%,
+    75% {
+      opacity: 0;
+    }
+  }
+
+  .flash {
+    font-size: 12px;
+text-transform: uppercase;
+    animation: flash 2s infinite linear;
+  }
+}
