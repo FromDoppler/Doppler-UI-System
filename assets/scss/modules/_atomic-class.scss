@@ -43,6 +43,10 @@
   margin-bottom: $dp-spaces--lv8;
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
+
 .logo-doppler-new {
   display: inline-block;
   background-image: url('../img/doppler-logo-new.svg');
@@ -60,3 +64,4 @@
   width: 85px;
   text-indent: -99em;
 }
+
