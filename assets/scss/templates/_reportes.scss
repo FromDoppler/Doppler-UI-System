@@ -79,7 +79,7 @@
 }
 
 /* Section KPI */
-.container-kpi {
+.container-reports {
   width: 100%;
   padding: 60px 0;
 
@@ -151,7 +151,7 @@
       @include transition-all;
     }
     a:hover {
-      color:#008046;
+      color:$dp-color-darkgreen;
     }
     .icon-kpi {
       font-size: 14px;
@@ -168,6 +168,49 @@
   .text-kpi {
     &:before {
       border-bottom: 3px solid $dp-color-red;
+    }
+  }
+}
+
+/* Top ranking */
+.wrapper-ranking {
+  max-width: $dp-wrapper-max-width;
+  margin: 25px auto;
+  font-family: $dp-font-family;
+
+  .reports-box {
+    @include dp-box($dp-color-sylver, 100%, 100%, 100%);
+    position: relative;
+    padding: 0;
+  }
+  .title-ranking {
+    padding: 40px 30px;
+    display: inline-block;
+    font-size: $dp-font-size-small;
+    color: $dp-color-darkgrey;
+    line-height: 18px;
+  }
+  .page-ranking--item {
+    border-top: 1px solid $dp-color-sylver;
+    border-bottom: 1px solid $dp-color-sylver;
+    padding: 42px 30px;
+    background: #f6f6f6;
+    margin-bottom: 5px;
+    min-height: 208px;
+
+    .text-ranking {
+      margin: 16px 0;
+      font-size: $dp-font-size-small;
+      color: $dp-color-darkgrey;
+      @include transition-all;
+    }
+    .link-ranking {
+      color: $dp-color-green;
+      font-size: $dp-font-size-small;
+
+      &:hover {
+        color:$dp-color-darkgreen;
+      }
     }
   }
 }
