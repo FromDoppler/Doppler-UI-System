@@ -175,7 +175,7 @@
 /* Top ranking */
 .wrapper-ranking {
   max-width: $dp-wrapper-max-width;
-  margin: 25px auto;
+  margin: $dp-spaces--lv4 auto;
   font-family: $dp-font-family;
 
   .reports-box {
@@ -184,22 +184,23 @@
     padding: 0;
   }
   .title-ranking {
-    padding: 40px 30px;
+    padding: $dp-spaces--lv7 $dp-spaces--lv5;
     display: inline-block;
     font-size: $dp-font-size-small;
     color: $dp-color-darkgrey;
-    line-height: 18px;
+    text-transform: uppercase;
+    line-height: $dp-spaces--lv3;
   }
   .page-ranking--item {
     border-top: 1px solid $dp-color-sylver;
     border-bottom: 1px solid $dp-color-sylver;
-    padding: 42px 30px;
-    background: #f6f6f6;
-    margin-bottom: 5px;
+    padding: $dp-spaces--lv7 $dp-spaces--lv5;
+    background: $dp-color-ghostwhite;
+    margin-bottom: $dp-spaces--lv1;
     min-height: 208px;
 
     .text-ranking {
-      margin: 16px 0;
+      margin: $dp-spaces--lv3 0;
       font-size: $dp-font-size-small;
       color: $dp-color-darkgrey;
       @include transition-all;
