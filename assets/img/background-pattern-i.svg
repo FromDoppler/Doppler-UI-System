@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="656px" height="163px" viewBox="0 0 656 163" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.3 (67297) - http://www.bohemiancoding.com/sketch -->
+    <title>bg-reports-2</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Funcionalidades" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="funcionalidades" transform="translate(-88.000000, -3827.000000)">
+            <g id="bg-reports-2" transform="translate(90.000000, 3829.000000)">
+                <g id="Group-2" transform="translate(251.500000, 61.000000) scale(1, -1) translate(-251.500000, -61.000000) ">
+                    <path d="M0,94.4836232 C123.347134,145.085677 149.961799,12.6366407 268.53271,11.0265101 C387.103621,9.41637946 400.519557,81.6398491 430.943439,94.4836232 C461.36732,107.327397 490.189945,93.6808873 503,66.3878674" id="Path-2" stroke="#B58FC1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4,4" transform="translate(251.500000, 58.500000) scale(-1, -1) translate(-251.500000, -58.500000) "></path>
+                    <path d="M0,112.19781 C123.347134,162.712041 149.961799,1.62760108 268.53271,0.0202649388 C387.103621,-1.5870712 399.735604,92.9018426 430.943439,112.19781 C462.151274,131.493777 490.189945,111.396467 503,84.1508154" id="Path-2" stroke="#B58FC1" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" transform="translate(251.500000, 61.000000) scale(-1, -1) translate(-251.500000, -61.000000) "></path>
+                    <circle id="Oval-2-Copy" stroke="#B58FC1" fill="#FFFFFF" transform="translate(384.000000, 33.000000) scale(-1, 1) translate(-384.000000, -33.000000) " cx="384" cy="33" r="9"></circle>
+                    <circle id="Oval-2-Copy" fill="#B58FC1" transform="translate(383.500000, 32.500000) scale(-1, 1) translate(-383.500000, -32.500000) " cx="383.5" cy="32.5" r="5.5"></circle>
+                </g>
+                <g id="Group-2-Copy" transform="translate(400.500000, 98.000000) scale(1, -1) translate(-400.500000, -98.000000) translate(149.000000, 37.000000)">
+                    <path d="M0,94.4836232 C123.347134,145.085677 149.961799,12.6366407 268.53271,11.0265101 C387.103621,9.41637946 400.519557,81.6398491 430.943439,94.4836232 C461.36732,107.327397 490.189945,93.6808873 503,66.3878674" id="Path-2" stroke="#B58FC1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4,4" transform="translate(251.500000, 58.500000) scale(-1, -1) translate(-251.500000, -58.500000) "></path>
+                    <path d="M0,112.19781 C123.347134,162.712041 149.961799,1.62760108 268.53271,0.0202649388 C387.103621,-1.5870712 399.735604,92.9018426 430.943439,112.19781 C462.151274,131.493777 490.189945,111.396467 503,84.1508154" id="Path-2" stroke="#B58FC1" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" transform="translate(251.500000, 61.000000) scale(-1, -1) translate(-251.500000, -61.000000) "></path>
+                    <circle id="Oval-2-Copy" stroke="#B58FC1" fill="#FFFFFF" transform="translate(384.000000, 33.000000) scale(-1, 1) translate(-384.000000, -33.000000) " cx="384" cy="33" r="9"></circle>
+                    <circle id="Oval-2-Copy" fill="#B58FC1" transform="translate(383.500000, 32.500000) scale(-1, 1) translate(-383.500000, -32.500000) " cx="383.5" cy="32.5" r="5.5"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
