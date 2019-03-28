@@ -79,7 +79,7 @@
 }
 
 /* Section KPI */
-.container-kpi {
+.container-reports {
   width: 100%;
   padding: 60px 0;
 
@@ -151,7 +151,7 @@
       @include transition-all;
     }
     a:hover {
-      color:#008046;
+      color:$dp-color-darkgreen;
     }
     .icon-kpi {
       font-size: 14px;
@@ -168,6 +168,50 @@
   .text-kpi {
     &:before {
       border-bottom: 3px solid $dp-color-red;
+    }
+  }
+}
+
+/* Top ranking */
+.wrapper-ranking {
+  max-width: $dp-wrapper-max-width;
+  margin: $dp-spaces--lv4 auto;
+  font-family: $dp-font-family;
+
+  .reports-box {
+    @include dp-box($dp-color-sylver, 100%, 100%, 100%);
+    position: relative;
+    padding: $dp-spaces--lv0;
+  }
+  .title-ranking {
+    padding: $dp-spaces--lv7 $dp-spaces--lv5;
+    display: inline-block;
+    font-size: $dp-font-size-small;
+    color: $dp-color-darkgrey;
+    text-transform: uppercase;
+    line-height: $dp-spaces--lv3;
+  }
+  .page-ranking--item {
+    border-top: 1px solid $dp-color-sylver;
+    border-bottom: 1px solid $dp-color-sylver;
+    padding: $dp-spaces--lv2 $dp-spaces--lv5;
+    background: $dp-color-ghostwhite;
+    margin-bottom: $dp-spaces--lv1;
+
+
+    .text-ranking {
+      margin: $dp-spaces--lv3 $dp-spaces--lv0;
+      font-size: $dp-font-size-small;
+      color: $dp-color-darkgrey;
+      @include transition-all;
+    }
+    .link-ranking {
+      color: $dp-color-green;
+      font-size: $dp-font-size-small;
+
+      &:hover {
+        color:$dp-color-darkgreen;
+      }
     }
   }
 }
