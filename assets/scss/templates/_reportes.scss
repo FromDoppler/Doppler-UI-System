@@ -181,7 +181,7 @@
   .reports-box {
     @include dp-box($dp-color-sylver, 100%, 100%, 100%);
     position: relative;
-    padding: 0;
+    padding: $dp-spaces--lv0;
   }
   .title-ranking {
     padding: $dp-spaces--lv7 $dp-spaces--lv5;
@@ -200,7 +200,7 @@
     min-height: 208px;
 
     .text-ranking {
-      margin: $dp-spaces--lv3 0;
+      margin: $dp-spaces--lv3 $dp-spaces--lv0;
       font-size: $dp-font-size-small;
       color: $dp-color-darkgrey;
       @include transition-all;
