@@ -70,13 +70,8 @@
   .forgot-link {
     display: block;
     margin: $dp-spaces--lv4 $dp-spaces--lv0;
-    color: $dp-color-green;
     font-size: $dp-font-size-form;
     font-style: italic;
     font-family: $dp-font-family;
-
-      &:hover {
-        color: $dp-color-darkgreen;
-      }
   }
 }

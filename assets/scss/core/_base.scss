@@ -1,3 +1,9 @@
+a {
+  color: $dp-color-green;
+}
+a:hover {
+  color: $dp-color-darkgreen;
+}
 /*Elements form*/
 /* separate button inside the form - review it later*/
 form {
