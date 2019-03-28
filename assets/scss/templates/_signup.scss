@@ -6,9 +6,9 @@
   align-items: stretch;
 
   .main-panel {
-    width: 500px;
+    width: 525px;
     height: 100vh;
-    padding: 40px 50px;
+    padding: 40px $dp-spaces--lv6;
     background-color: $dp-color-white;
     overflow-y: auto;
 
@@ -35,6 +35,7 @@
       color: $dp-color-brown;
       font-weight: $dp-font-weight-bold;
       text-transform: uppercase;
+      font-size: $dp-font-size-15;
     }
 
     .content-subtitle {
