@@ -194,13 +194,13 @@
   .page-ranking--item {
     border-top: 1px solid $dp-color-sylver;
     border-bottom: 1px solid $dp-color-sylver;
-    padding: $dp-spaces--lv2 $dp-spaces--lv5;
+    padding: $dp-spaces--lv3 $dp-spaces--lv5;
     background: $dp-color-ghostwhite;
     margin-bottom: $dp-spaces--lv1;
 
 
     .text-ranking {
-      margin: $dp-spaces--lv3 $dp-spaces--lv0;
+      margin:$dp-spaces--lv0;
       font-size: $dp-font-size-small;
       color: $dp-color-darkgrey;
       @include transition-all;
