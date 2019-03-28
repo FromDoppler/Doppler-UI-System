@@ -54,3 +54,29 @@
     transform: rotate(45deg);
   }
 }
+
+/* login form */
+
+.login-form {
+
+  .legend {
+    font-size: $dp-font-size-small;
+    float: right;
+    color: $dp-color-sylver;
+    font-style: italic;
+    font-weight: $dp-font-weight-light;
+  }
+
+  .forgot-link {
+    display: block;
+    margin: $dp-spaces--lv4 $dp-spaces--lv0;
+    color: $dp-color-green;
+    font-size: $dp-font-size-form;
+    font-style: italic;
+    font-family: $dp-font-family;
+
+      &:hover {
+        color: $dp-color-darkgreen;
+      }
+  }
+}
