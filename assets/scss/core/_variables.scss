@@ -39,7 +39,9 @@ $dp-font-button-medium: 13px;
 $dp-font-button-small: 11px;
 $dp-font-size-15: 15px;
 $dp-font-size-24: 24px;
-$dp-font-small-lineheight: 18px; //
+$dp-font-small-lineheight: 18px;
+
+//
 // variables margin bottom
 //
 
@@ -110,86 +112,6 @@ $dp-line-height-rpgd: 16px;
   color: $dp-color-grey;
   text-transform: uppercase;
 }
-/* TEXT COLORS - grey */
-.c-dark-grey {
-  color: $dp-color-darkgrey;
-  /* text */
-}
-
-.c-grey {
-  color: $dp-color-grey;
-  /* icons fonts */
-}
-
-.c-light-grey {
-  color: $dp-color-lightgrey;
-  /* placeholders, hovers*/
-}
-/* VERTICAL SPACES */
-.space-0 {
-  margin-bottom: 0;
-}
-
-.space-8 {
-  margin-bottom: 8px;
-  /* drag boxes distanse, inputs conditional boxes */
-}
-
-.space-24 {
-  margin-bottom: 24px;
-  /* inputs distance */
-}
-
-.space-48 {
-  margin-bottom: 48px;
-  /* forms distance */
-}
-
-.space-64 {
-  margin-bottom: 64px;
-}
-/* SPACES */
-/* TEXT COLORS - grey */
-
-.c-dark-grey {
-  color: $dp-color-darkgrey;
-  /* text */
-}
-
-.c-grey {
-  color: $dp-color-grey;
-  /* icons fonts */
-}
-
-.c-light-grey {
-  color: $dp-color-lightgrey;
-  /* placeholders, hovers*/
-}
-/* VERTICAL SPACES */
-
-.space-0 {
-  margin-bottom: 0;
-}
-
-.space-8 {
-  margin-bottom: 8px;
-  /* drag boxes distanse, inputs conditional boxes */
-}
-
-.space-24 {
-  margin-bottom: 24px;
-  /* inputs distance */
-}
-
-.space-48 {
-  margin-bottom: 48px;
-  /* forms distance */
-}
-
-.space-64 {
-  margin-bottom: 64px;
-}
-/* SPACES */
 
 .margin--0 {
   margin: 0;
