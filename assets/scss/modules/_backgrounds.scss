@@ -1,0 +1,68 @@
+.background {
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+
+  &.bg-a {
+    background-image: url("../img/background-pattern-a.svg");
+    height: 653px;
+    width: 1551px;
+  }
+
+  &.bg-b {
+    background-image: url("../img/background-pattern-b.svg");
+    height: 270px;
+    width: 230px;
+  }
+
+  &.bg-c {
+    background-image: url("../img/background-pattern-c.svg");
+    height: 227px;
+    width: 289px;
+  }
+
+  &.bg-d {
+    background-image: url("../img/background-pattern-d.svg");
+    height: 653px;
+    width: 1445px;
+  }
+
+  &.bg-e {
+    background-image: url("../img/background-pattern-e.svg");
+    height: 89px;
+    width: 2797px;
+  }
+
+  &.bg-f {
+    background-image: url("../img/background-pattern-f.svg");
+    height: 89px;
+    width: 2797px;
+  }
+
+  &.bg-g {
+    background-image: url("../img/background-pattern-g.svg");
+    height: 500px;
+    width: 500px;
+  }
+
+  &.bg-h {
+    background-image: url("../img/background-pattern-h.svg");
+    height: 500px;
+    width: 500px;
+  }
+
+  &.bg-i {
+    background-image: url("../img/background-pattern-i.svg");
+    height: 500px;
+    width: 500px;
+  }
+
+  &.bg-j {
+    background-image: url("../img/background-pattern-j.svg");
+    height: 500px;
+    width: 500px;
+  }
+}
