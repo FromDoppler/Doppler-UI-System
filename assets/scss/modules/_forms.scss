@@ -55,9 +55,16 @@
   }
 }
 
+/* signup form */
+
+.signup-form{
+  margin-top: $dp-spaces--lv6;
+}
+
 /* login form */
 
 .login-form {
+  margin-top: $dp-spaces--lv6;
 
   .legend {
     font-size: $dp-font-size-small;
@@ -66,12 +73,36 @@
     font-style: italic;
     font-weight: $dp-font-weight-light;
   }
+}
 
-  .forgot-link {
-    display: block;
-    margin: $dp-spaces--lv4 $dp-spaces--lv0;
-    font-size: $dp-font-size-form;
-    font-style: italic;
-    font-family: $dp-font-family;
+.forgot-link {
+  display: block;
+  margin: $dp-spaces--lv4 $dp-spaces--lv0;
+  font-size: $dp-font-size-form;
+  font-style: italic;
+  font-family: $dp-font-family;
+  position: relative;
+}
+
+/* forgot password form */
+
+.forgot-pass{
+  margin-top: $dp-spaces--lv6;
+}
+
+.triangle-right {
+    width: 0;
+    height: 0;
+    padding-left: 17px;
+
+  &:before{
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 7px;
+    border-top: 3px solid transparent;
+    border-right: 6px solid $dp-color-green;
+    border-bottom: 3px solid transparent;
   }
+
 }
