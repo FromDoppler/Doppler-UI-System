@@ -93,7 +93,7 @@
 .triangle-right {
     width: 0;
     height: 0;
-    padding-left: 17px;
+    padding-left: $dp-spaces--lv3;
 
   &:before {
     content: "";
