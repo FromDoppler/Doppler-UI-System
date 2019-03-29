@@ -58,9 +58,10 @@ $dp-spaces--lv9: 54px;
 $dp-spaces--lv10: 60px;
 $dp-spaces--lv11: 66px;
 $dp-spaces--lv12: 72px;
-
-////
-/// Settings File
+$dp-spaces--lv13: 78px;
+$dp-spaces--lv14: 84px;
+$dp-spaces--lv15: 90px;
+$dp-spaces--lv16: 96px; /// Settings File
 /// Init colors variables
 /// @group Colors
 ////
@@ -111,6 +112,86 @@ $dp-line-height-rpgd: 16px;
   color: $dp-color-grey;
   text-transform: uppercase;
 }
+/* TEXT COLORS - grey */
+.c-dark-grey {
+  color: $dp-color-darkgrey;
+  /* text */
+}
+
+.c-grey {
+  color: $dp-color-grey;
+  /* icons fonts */
+}
+
+.c-light-grey {
+  color: $dp-color-lightgrey;
+  /* placeholders, hovers*/
+}
+/* VERTICAL SPACES */
+.space-0 {
+  margin-bottom: 0;
+}
+
+.space-8 {
+  margin-bottom: 8px;
+  /* drag boxes distanse, inputs conditional boxes */
+}
+
+.space-24 {
+  margin-bottom: 24px;
+  /* inputs distance */
+}
+
+.space-48 {
+  margin-bottom: 48px;
+  /* forms distance */
+}
+
+.space-64 {
+  margin-bottom: 64px;
+}
+/* SPACES */
+/* TEXT COLORS - grey */
+
+.c-dark-grey {
+  color: $dp-color-darkgrey;
+  /* text */
+}
+
+.c-grey {
+  color: $dp-color-grey;
+  /* icons fonts */
+}
+
+.c-light-grey {
+  color: $dp-color-lightgrey;
+  /* placeholders, hovers*/
+}
+/* VERTICAL SPACES */
+
+.space-0 {
+  margin-bottom: 0;
+}
+
+.space-8 {
+  margin-bottom: 8px;
+  /* drag boxes distanse, inputs conditional boxes */
+}
+
+.space-24 {
+  margin-bottom: 24px;
+  /* inputs distance */
+}
+
+.space-48 {
+  margin-bottom: 48px;
+  /* forms distance */
+}
+
+.space-64 {
+  margin-bottom: 64px;
+}
+/* SPACES */
 
 .margin--0 {
   margin: 0;

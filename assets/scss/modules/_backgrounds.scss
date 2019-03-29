@@ -1,0 +1,20 @@
+.background {
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+
+  &.bg-b {
+    background-image: url("../img/background-pattern-b.svg");
+    height: 270px;
+    width: 230px;
+  }
+
+  &.bg-c {
+    background-image: url("../img/background-pattern-c.svg");
+    height: 227px;
+    width: 289px;
+  }
+}
