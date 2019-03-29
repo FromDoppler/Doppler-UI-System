@@ -8,7 +8,7 @@
   .main-panel {
     width: 525px;
     height: 100vh;
-    padding: 40px $dp-spaces--lv6;
+    padding: $dp-spaces--lv7 $dp-spaces--lv6;
     background-color: $dp-color-white;
     overflow-y: auto;
 
@@ -30,7 +30,7 @@
     }
 
     h5 {
-      margin: 60px 0 0;
+      margin: $dp-spaces--lv10 $dp-spaces--lv0 $dp-spaces--lv0;
       font-family: $dp-font-family-proximanova;
       color: $dp-color-brown;
       font-weight: $dp-font-weight-bold;
@@ -39,13 +39,13 @@
     }
 
     .content-subtitle {
-      margin: 10px 0 30px;
+      margin: $dp-spaces--lv2 $dp-spaces--lv0 $dp-spaces--lv5;
       font-family: $dp-font-family-proximanova;
       font-style: italic;
     }
 
     .content-promotion {
-      padding-top: 16px;
+      padding-top: $dp-spaces--lv3;
       border-top: 1px $dp-color-grey dashed;
       font-family: $dp-font-family-proximanova;
     }
@@ -71,7 +71,7 @@
   .feature-panel {
     flex: 4;
     height: 100vh;
-    padding: 60px 70px;
+    padding: $dp-spaces--lv5 $dp-spaces--lv8;
     background-image: url("../img/signup-img.png");
     background-size: cover;
   }
@@ -80,7 +80,7 @@
     max-width: 500px;
 
     h6 {
-      margin-bottom: 10px;
+      margin-bottom: $dp-spaces--lv2;
       font-family: $dp-font-family-proximanova;
       font-weight: $dp-font-weight-bold;
       color: $dp-color-white;
@@ -88,7 +88,7 @@
     }
 
     h3 {
-      margin: 10px 0;
+      margin: $dp-spaces--lv2 0;
       font-family: $dp-font-family-proximanova;
       font-weight: $dp-font-weight-bold;
       color: $dp-color-white;
@@ -99,25 +99,7 @@
       color: $dp-color-white;
     }
   }
-  /* width */
-  ::-webkit-scrollbar {
-    width: 8px;
-    border-radius: $dp-border-radius;
-  }
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background-color: $dp-border-grey;
-    height: 600px;
-  }
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: $dp-color-lightgrey;
-    border-radius: $dp-border-radius;
-  }
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: $dp-color-lightgrey;
-  }
+
 }
 @include media-breakpoint('desktop') {
   .panel-wrapper {
@@ -128,7 +110,7 @@
         width: 100%;
         // Left Column
         &:nth-of-type(odd) {
-          padding-right: 0;
+          padding-right: $dp-spaces--lv0;
         }
       }
     }

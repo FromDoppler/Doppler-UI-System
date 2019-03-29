@@ -2,11 +2,13 @@
 @mixin transition-all($what: all, $time: 0.25s, $how: ease) {
   transition: $what $time $how;
 }
+
 ////
 /// Typography
 /// Init typography basic settings
 /// @group Typography
 ////
+
 $dp-font-lineheight: 22px !default;
 $dp-font-weight: 400 !default;
 $dp-font-family: Arial, sans-serif !default;
@@ -37,10 +39,12 @@ $dp-font-button-medium: 13px;
 $dp-font-button-small: 11px;
 $dp-font-size-15: 15px;
 $dp-font-size-24: 24px;
-$dp-font-small-lineheight: 18px; //
+$dp-font-small-lineheight: 18px;
 
+//
 // variables margin bottom
 //
+
 $dp-spaces--lv0: 0;
 $dp-spaces--lv1: 6px;
 $dp-spaces--lv2: 12px;
@@ -49,13 +53,20 @@ $dp-spaces--lv4: 24px;
 $dp-spaces--lv5: 30px;
 $dp-spaces--lv6: 36px;
 $dp-spaces--lv7: 42px;
-$dp-spaces--lv8: 48px; ////
+$dp-spaces--lv8: 48px;
+$dp-spaces--lv9: 54px;
+$dp-spaces--lv10: 60px;
+$dp-spaces--lv11: 66px;
+$dp-spaces--lv12: 72px;
+
+////
 /// Settings File
 /// Init colors variables
 /// @group Colors
 ////
 /// Colors ///
 ///
+
 $dp-color-ghostwhite: #F2F2F2;
 $dp-color-lightgrey: #999999;
 $dp-color-grey: #666666;
@@ -81,9 +92,12 @@ $dp-color-brown: #302100;
 $dp-color-brown--hover: #594103;
 $dp-bg-modal: #F7F7F7;
 $dp-bg-overlay: rgba(34, 34, 34, 0.95);
-$dp-color-brown-brightness: rgba(48,33,0,.2); //
+$dp-color-brown-brightness: rgba(48,33,0,.2);
+
+//
 // variables generic
 //
+
 $dp-border-radius: 3px;
 $dp-border-radius--lv1: 30px;
 $dp-header-height: 4em;
@@ -97,45 +111,6 @@ $dp-line-height-rpgd: 16px;
   color: $dp-color-grey;
   text-transform: uppercase;
 }
-/* TEXT COLORS - grey */
-.c-dark-grey {
-  color: $dp-color-darkgrey;
-  /* text */
-}
-
-.c-grey {
-  color: $dp-color-grey;
-  /* icons fonts */
-}
-
-.c-light-grey {
-  color: $dp-color-lightgrey;
-  /* placeholders, hovers*/
-}
-/* VERTICAL SPACES */
-.space-0 {
-  margin-bottom: 0;
-}
-
-.space-8 {
-  margin-bottom: 8px;
-  /* drag boxes distanse, inputs conditional boxes */
-}
-
-.space-24 {
-  margin-bottom: 24px;
-  /* inputs distance */
-}
-
-.space-48 {
-  margin-bottom: 48px;
-  /* forms distance */
-}
-
-.space-64 {
-  margin-bottom: 64px;
-}
-/* SPACES */
 
 .margin--0 {
   margin: 0;
