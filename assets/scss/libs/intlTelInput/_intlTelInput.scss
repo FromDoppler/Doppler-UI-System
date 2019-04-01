@@ -76,11 +76,13 @@ font-family: $dp-font-family;
       margin-bottom: 5px;
       border-bottom: 1px solid #CCC; }
     .intl-tel-input .country-list .country {
-      padding: 5px 10px; }
+      padding: 5px 10px;font-size: $dp-font-size-form; }
       .intl-tel-input .country-list .country .dial-code {
         color: #999; }
     .intl-tel-input .country-list .country.highlight {
-      background-color: rgba(0, 0, 0, 0.05); }
+      background-color: rgba(0, 0, 0, 0.05);
+font-size: $dp-font-size-form;
+ }
     .intl-tel-input .country-list .flag-box, .intl-tel-input .country-list .country-name, .intl-tel-input .country-list .dial-code {
       vertical-align: middle; }
     .intl-tel-input .country-list .flag-box, .intl-tel-input .country-list .country-name {
