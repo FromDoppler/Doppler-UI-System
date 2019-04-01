@@ -63,24 +63,25 @@
                 <li class="field-item field-item--50 error">
                   <label for="name">Nombre:</label>
                   <input type="text" name="name" id="name" placeholder="Nombre">
-                  <div class="wrapper-errors bounceIn">
+                  <div class="wrapper-errors">
                     <p class="error-message">¡Ouch! Este campo está vacío</p>
                   </div>
                 </li>
                 <li class="field-item field-item--50 error">
                   <label for="lastname">Apellido:</label>
                   <input type="text" name="lastname" id="lastname" placeholder="Apellido">
-                  <div class="wrapper-errors bounceIn">
+                  <div class="wrapper-errors">
                     <p class="error-message">¡Ouch! Este campo está vacío</p>
                   </div>
                 </li>
               </ul>
             </li>
-            <li class="field-item error">
+            <li class="field-item">
               <label for="phone">Teléfono:</label>
-              <input type="tel" name="phone" id="phone" placeholder="9 11 2345-6789">
-              <div class="wrapper-errors bounceIn">
-                <p class="error-message">¡Ouch! Este campo está vacío</p>
+              <input type="tel" name="phone" id="phone-input" placeholder="9 11 2345-6789" class="phone-number">
+                <!-- <span id="error-msg" class="error-phone-number hide"></span> -->
+               <div class="wrapper-errors">
+                <p class="error-message error-phone-number">¡Ouch! Este campo está vacío</p>
               </div>
             </li>
           </ul>
@@ -91,7 +92,7 @@
             <li class="field-item error">
               <label for="email">Email:</label>
               <input type="email" name="email" id="email" placeholder="Tu Email será tu nombre de usuario">
-              <div class="wrapper-errors bounceIn">
+              <div class="wrapper-errors">
                 <p class="error-message">¡Ouch! Este campo está vacío</p>
               </div>
             </li>
@@ -113,7 +114,7 @@
             <li class="field-item field-item__checkbox error">
               <input type="checkbox" name="acepto_politicas">
               <span class="checkmark"></span><label for="acepto_politicas"> Acepto la <a class="link-green" href="#">Política de Privacidad</a> de Doppler.</label>
-              <div class="wrapper-errors bounceIn">
+              <div class="wrapper-errors">
                 <p class="error-message">¡Ouch! Este campo está vacío</p>
               </div>
             </li>
@@ -148,8 +149,7 @@
     </section><!-- feature panel-->
   </main>
   <!-- build:js:dist js/app.js -->
-  <script src="./js/main.js"></script>
+<script src="./js/main.js"></script>
   <!-- /build -->
 </body>
-
 </html>
