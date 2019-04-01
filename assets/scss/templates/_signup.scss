@@ -12,12 +12,16 @@
     background-color: $dp-color-white;
     overflow-y: auto;
 
+    header {
+      display: flex;
+      justify-content: space-between;
+    }
+
     .logo-doppler {
       height: 30px;
     }
 
     .content-signin {
-      float: right;
       display: inline-block;
       margin-top: $dp-spaces--lv3;
       font-family: $dp-font-family-proximanova;
@@ -30,7 +34,7 @@
     }
 
     h5 {
-      margin: $dp-spaces--lv10 $dp-spaces--lv0 $dp-spaces--lv0;
+      margin: $dp-spaces--lv10 $dp-spaces--lv0 $dp-spaces--lv2;
       font-family: $dp-font-family-proximanova;
       color: $dp-color-brown;
       font-weight: $dp-font-weight-bold;
@@ -39,7 +43,7 @@
     }
 
     .content-subtitle {
-      margin: $dp-spaces--lv2 $dp-spaces--lv0 $dp-spaces--lv5;
+      margin: $dp-spaces--lv0;
       font-family: $dp-font-family-proximanova;
       font-style: italic;
     }

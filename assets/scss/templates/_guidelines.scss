@@ -4,6 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  flex-wrap: wrap;
   padding-bottom: 30px;
   border-bottom: 1px solid $dp-color-sylver;
 }
@@ -26,7 +27,7 @@
   display: block;
   overflow: hidden;
   padding: 15px 0;
-  margin-right: 25px;
+  margin-right: $dp-spaces--lv3;
   text-transform: uppercase;
   @include transition-all;
 
@@ -73,7 +74,7 @@
 
 .section-module {
   width: 100%;
-  max-width: 1200px;
+  max-width: $dp-wrapper-max-width;
   margin: 0 auto;
   padding: 50px 0 0;
   position: relative;
@@ -89,7 +90,7 @@
   box-shadow: 0 0.5em 1em -0.5em $dp-color-sylver;
   overflow: hidden;
   margin-bottom: 30px;
-  width: 210px;
+  width: 212px;
 }
 
 .color-list {
