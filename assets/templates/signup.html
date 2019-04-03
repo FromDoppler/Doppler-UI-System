@@ -79,7 +79,6 @@
               <li class="field-item">
                 <label for="phone">Teléfono:</label>
                 <input type="tel" name="phone" id="phone-input" placeholder="9 11 2345-6789" class="phone-number">
-                <!-- <span id="error-msg" class="error-phone-number hide"></span> -->
                 <div class="wrapper-errors">
                   <p class="error-message error-phone-number">¡Ouch! Este campo está vacío</p>
                 </div>
@@ -150,17 +149,18 @@
     </main>
     <!-- build:js:dist js/app.js -->
     <link rel="stylesheet" type="text/css" href="https://intl-tel-input.com/node_modules/intl-tel-input/build/css/intlTelInput.css">
-    <style> .intl-tel-input.separate-dial-code .selected-dial-code {
-    margin-left: 6px;
-    font-size: 14px;
-    font-family: Arial;
-}
-.intl-tel-input {
-    position: relative;
-    display: inline-block;
-    width: 100%;
-}
-</style>
+    <style>
+      .intl-tel-input.separate-dial-code .selected-dial-code {
+        margin-left: 6px;
+        font-size: 14px;
+        font-family: Arial;
+    }
+    .intl-tel-input {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+    }
+    </style>
     <script src="./js/main.js"></script>
     <script src="https://intl-tel-input.com/node_modules/intl-tel-input/build/js/intlTelInput.js"></script>
     <script src="https://intl-tel-input.com/node_modules/intl-tel-input/build/js/utils.js"></script>
