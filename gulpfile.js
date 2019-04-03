@@ -132,7 +132,7 @@ gulp.task('processHtml:dist', function() {
 });
 
 // Generate webfonts
-gulp.task('webfont', ['webfont:copy'], function() {
+gulp.task('webfont', ['webfont:generate', 'webfont:copy'], function() {
   return del([config.folderDev.fonts + '/*.scss']);
 });
 
