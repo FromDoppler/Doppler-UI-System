@@ -80,6 +80,7 @@
               <label for="phone">Teléfono:</label>
               <input type="tel" name="phone" id="phone-input" placeholder="9 11 2345-6789" class="phone-number">
                 <!-- <span id="error-msg" class="error-phone-number hide"></span> -->
+
                <div class="wrapper-errors">
                 <p class="error-message error-phone-number">¡Ouch! Este campo está vacío</p>
               </div>
@@ -149,7 +150,79 @@
     </section><!-- feature panel-->
   </main>
   <!-- build:js:dist js/app.js -->
+
+<link rel="stylesheet" type="text/css" href="https://intl-tel-input.com/node_modules/intl-tel-input/build/css/intlTelInput.css">
+<style>
+.intl-tel-input.separate-dial-code .selected-dial-code {
+    margin-left: 6px;
+    font-size: 14px;
+    font-family: Arial;
+}
+.intl-tel-input {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+</style>
 <script src="./js/main.js"></script>
+<script src="https://intl-tel-input.com/node_modules/intl-tel-input/build/js/intlTelInput.js"></script>
+<script src="https://intl-tel-input.com/node_modules/intl-tel-input/build/js/utils.js"></script>
+<script type="text/javascript">
+  // Input phone number
+    var inputPhone = document.querySelector(".phone-number"),
+        errorMsg = document.querySelector(".error-phone-number");
+
+    var errorMap = [
+      "Número inválido",
+      "Código de area inválido",
+      "Muy corto",
+      "Muy largo",
+      "Número inválido"
+    ];
+
+  // initialise plugin
+
+    var iti = window.intlTelInput(inputPhone, {
+      separateDialCode: true,
+      initialCountry: "auto",
+      hiddenInput: "full_phone",
+      geoIpLookup: function(callback) {
+        $.get('https://ipinfo.io', function() {}, "jsonp").always(function(resp) {
+          var countryCode = (resp && resp.country) ? resp.country : "ar";
+          callback(countryCode);
+        });
+      },
+      utilsScript: "../js/main.js"
+    });
+
+    var reset = function() {
+      inputPhone.classList.remove("error");
+      errorMsg.innerHTML = "";
+      errorMsg.classList.add("hide");
+    };
+
+    inputPhone.addEventListener('blur', function() {
+      reset();
+
+      if (inputPhone.value.trim()) {
+        if (iti.isValidNumber()) {
+          $(inputPhone).closest('.field-item').removeClass('error');
+        } else {
+
+          inputPhone.classList.add("error");
+          var errorCode = iti.getValidationError();
+          $(inputPhone).closest('.field-item').attr('data-error', errorMap[errorCode]);
+          $(inputPhone).closest('.field-item').find('.error-phone-number').text(errorMap[errorCode]);
+          $(inputPhone).closest('.field-item').addClass('error');
+        }
+      } else {
+        $(inputPhone).closest('.field-item').removeClass('error');
+      }
+    });
+
+    inputPhone.addEventListener('change', reset);
+    inputPhone.addEventListener('keyup', reset);
+</script>
   <!-- /build -->
 </body>
 </html>
