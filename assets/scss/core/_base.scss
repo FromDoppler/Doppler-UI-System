@@ -88,7 +88,7 @@ textarea {
   left: 0;
   height: 16px;
   width: 16px;
-  border: 1px solid $dp-color-grey;
+  border: 1px solid $dp-color-lightbrown;
   border-radius: $dp-border-radius;
   background-color: $dp-color-white;
   pointer-events: none;
@@ -145,7 +145,7 @@ textarea {
       font-size: $dp-font-size-small;
       font-weight: normal;
       font-style: italic;
-      color: $dp-color-grey;
+      color: $dp-color-lightbrown;
       line-height: $dp-font-small-lineheight;
       vertical-align: bottom;
 
@@ -181,7 +181,7 @@ input[type='checkbox'] {
 
   &:focus {
     & ~ .checkmark {
-      color: $dp-color-default;
+      color: $dp-color-lightbrown;
       border: 1px solid $dp-color-yellow;
       border-radius: $dp-border-radius;
       -webkit-box-shadow: 0 0 0 2px $dp-color-brown-brightness;
@@ -195,8 +195,8 @@ input:not([type='checkbox']) {
   padding: 10px 12px;
   height: 40px;
   width: 100%;
-  color: $dp-color-grey;
-  border: 1px solid $dp-color-lightgrey;
+  color: $dp-color-lightbrown;
+  border: 1px solid $dp-color-lightbrown;
   border-radius: $dp-border-radius;
   background-color: $dp-color-white;
   font-size: $dp-font-size-form;
@@ -204,7 +204,7 @@ input:not([type='checkbox']) {
   line-height: 20px;
 
   &::placeholder {
-    color: $dp-color-default;
+    color: $dp-color-lightbrown;
     font-style: italic;
   }
 
@@ -213,7 +213,7 @@ input:not([type='checkbox']) {
   }
 
   &:focus {
-    color: $dp-color-default;
+    color: $dp-color-lightbrown;
     border: 1px solid $dp-color-yellow;
     border-radius: $dp-border-radius;
     -webkit-box-shadow: 0 0 0 2px $dp-color-brown-brightness;
