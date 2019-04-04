@@ -83,7 +83,7 @@ var config = {
 };
 
 // Sass tasks are divided for performance issues regarding dependencies
-gulp.task('sass:dist', ['webfont'], function() {
+gulp.task('sass:dist', ['webfont:generate'], function() {
   return gulp.src(config.folderAssets.styles + '/styles.scss')
     .pipe(globbing({
       // Configure it to use SCSS files
@@ -132,7 +132,7 @@ gulp.task('processHtml:dist', function() {
 });
 
 // Generate webfonts
-gulp.task('webfont', ['webfont:copy'], function() {
+gulp.task('webfont', ['webfont:generate', 'webfont:copy'], function() {
   return del([config.folderDev.fonts + '/*.scss']);
 });
 
@@ -160,7 +160,7 @@ gulp.task('webfont:generate', function() {
 });
 
 // Copy webfont to Dist folder
-gulp.task('fonts:dist', ['copy:fonts'], function() {
+gulp.task('fonts:dist', ['webfont:generate', 'copy:fonts'], function() {
   return gulp.src(config.folderDev.fonts + '/*.*')
     .pipe(gulp.dest(config.folderDist.fonts));
 });
