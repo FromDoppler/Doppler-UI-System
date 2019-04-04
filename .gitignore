@@ -9,6 +9,7 @@ static/styles/libs/*
 dev/css/*
 dist
 dev/fonts/*
-/assets/scss/libs/iconfont/_icon-font.scss
+/assets/scss/libs/iconfont/*.scss
+/assets/fonts/icon-font.*
 /dev/index.html
 /dev/**
