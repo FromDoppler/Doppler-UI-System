@@ -69,3 +69,14 @@ $(".show-hide").click(function() {
     $(this).removeClass("ms-icon icon-hide").addClass("ms-icon icon-view");
   }
 });
+
+  // languague
+  $('.language-selector .option').click(function(){
+    $(this).toggleClass('open');
+  });
+
+  $(window).click(function(e) {
+    if ($('.language-selector').has(e.target).length == 0 && !$('.language-selector').is(e.target)) {
+      $('.language-selector .option').removeClass('open');
+    }
+  });
