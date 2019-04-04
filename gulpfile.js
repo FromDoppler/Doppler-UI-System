@@ -83,7 +83,7 @@ var config = {
 };
 
 // Sass tasks are divided for performance issues regarding dependencies
-gulp.task('sass:dist', ['webfont:generate'], function() {
+gulp.task('sass:dist', ['webfont'], function() {
   return gulp.src(config.folderAssets.styles + '/styles.scss')
     .pipe(globbing({
       // Configure it to use SCSS files
@@ -132,41 +132,33 @@ gulp.task('processHtml:dist', function() {
 });
 
 // Generate webfonts
-gulp.task('webfont', ['webfont:generate', 'webfont:copy'], function() {
-  return del([config.folderDev.fonts + '/*.scss']);
-});
+gulp.task('webfont', function() {
+  var fontNameBase = 'icon-font';
 
-gulp.task('webfont:copy', ['webfont:generate'], function() {
-  return gulp.src([config.folderDev.fonts + '/_icon-font.scss'])
-    .pipe(gulp.dest(config.folderAssets.styles + '/libs/iconfont/'));
-});
-
-gulp.task('webfont:generate', function() {
-  var fontName = 'icon-font';
   return gulp.src([config.folderAssets.base + '/icons/*.svg'])
     .pipe(iconfontCss({
-      fontName: fontName,
-      fontPath: '../fonts/',
+      fontName: fontNameBase,
       path: config.folderAssets.styles + '/libs/iconfont/gulp-icontemplate.css',
-      targetPath: '_icon-font.scss'
+      targetPath: '../scss/libs/iconfont/_icon-font.scss',
+      fontPath: '../fonts/'
     }))
     .pipe(iconfont({
-      fontName: fontName,
+      fontName: fontNameBase,
       formats: ['ttf', 'eot', 'woff', 'woff2', 'svg'],
       normalize: true,
       fontHeight: 1001
     }))
-    .pipe(gulp.dest(config.folderDev.fonts));
+    .pipe(gulp.dest(config.folderAssets.fonts));
 });
 
 // Copy webfont to Dist folder
-gulp.task('fonts:dist', ['webfont:generate', 'copy:fonts'], function() {
-  return gulp.src(config.folderDev.fonts + '/*.*')
+gulp.task('fonts:dist', ['webfont'], function() {
+  return gulp.src(config.folderAssets.fonts + '/*.*')
     .pipe(gulp.dest(config.folderDist.fonts));
 });
 
 // Copy webfonts to Dev folder
-gulp.task('copy:fonts', function() {
+gulp.task('copy:fonts', ['webfont'], function() {
   return gulp.src(config.folderAssets.fonts + '/*.*')
     .pipe(gulp.dest(config.folderDev.fonts));
 });
