@@ -14,6 +14,7 @@
 
     header {
       display: flex;
+      align-items: center;
       justify-content: space-between;
     }
 
@@ -103,7 +104,6 @@
       color: $dp-color-white;
     }
   }
-
 }
 @include media-breakpoint('desktop') {
   .panel-wrapper {
@@ -123,4 +123,10 @@
       display: none;
     }
   }
+}
+// Language selector
+
+.link--title {
+  font-weight: $dp-font-weight-bold;
+  font-size: $dp-font-size-small;
 }
