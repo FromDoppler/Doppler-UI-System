@@ -1,17 +1,11 @@
 a {
   color: $dp-color-green;
 }
+
 a:hover {
   color: $dp-color-darkgreen;
 }
 /*Elements form*/
-/* separate button inside the form - review it later*/
-form {
-  .dp-button {
-    margin-left: 10px;
-  }
-}
-
 legend {
   display: none;
 }
@@ -27,6 +21,7 @@ label {
   font-family: $dp-font-family;
 }
 /* span with class .dropdown-arrow to draw arrow dropdown */
+
 .dropdown-arrow {
   border-style: solid;
   height: 0;
@@ -107,6 +102,7 @@ textarea {
 }
 
 /* validate form*/
+
 .field-group {
   .field-item {
     position: relative;
@@ -129,25 +125,24 @@ textarea {
       &:nth-last-child(1) {
         margin-bottom: $dp-spaces--lv3;
       }
-    }/* Field checkbox */
-
+    }
+    /* Field checkbox */
     &--50 {
       width: 50%;
       /* Left Column */
       &:nth-of-type(odd) {
         padding-right: $dp-spaces--lv3;
       }
-    }/* Field to 50% percent */
-
-
+    }
+    /* Field to 50% percent */
     .show-hide {
       float: right;
       font-size: $dp-font-size-small;
       font-weight: normal;
-      font-style: italic;
+      font-style: normal;
       color: $dp-color-lightbrown;
-      line-height: $dp-font-small-lineheight;
       vertical-align: bottom;
+      cursor: pointer;
 
       &:hover {
         opacity: 0.7;
@@ -157,6 +152,7 @@ textarea {
     .content-eye {
       font-family: $dp-font-family-proximanova;
       font-size: $dp-font-size-small;
+      font-style: italic;
     }
   }
 }
@@ -219,10 +215,6 @@ input:not([type='checkbox']) {
     -webkit-box-shadow: 0 0 0 2px $dp-color-brown-brightness;
     box-shadow: 0 0 0 2px $dp-color-brown-brightness;
     outline: none;
-
-    &::placeholder {
-      font-style: normal;
-    }
   }
 }
 
@@ -241,10 +233,10 @@ input[type="tel"] {
 }
 
 .error {
+  .checkmark,
   input,
   select,
-  textarea,
-  .checkmark {
+  textarea {
     border: 1px solid $dp-color-red;
   }
 
@@ -300,43 +292,40 @@ input[type="tel"] {
     animation-duration: 0.75s;
     animation-name: bounceIn;
   }
-}/* Classes of error messages */
-
+}
+/* Classes of error messages */
 .wrapper-password {
   display: block;
 
   .password-message {
     margin: $dp-spaces--lv0;
     font-size: $dp-font-size-small;
+    font-family: $dp-font-family-proximanova;
   }
 
   .complete-message {
     margin-right: $dp-spaces--lv4;
     color: $dp-color-lightgrey;
-
     @include circle($dp-color-lightgrey);
-  }/* Class to indicate that this validation is complete */
-
+  }
+  /* Class to indicate that this validation is complete */
   .waiting-message {
     margin-right: $dp-spaces--lv4;
     color: $dp-color-grey;
-
     @include circle($dp-color-yellow);
-  }/* Class for waiting complete the password */
-
-
+  }
+  /* Class for waiting complete the password */
   .lack-message {
     margin-right: $dp-spaces--lv4;
     color: $dp-color-red;
-
     @include circle($dp-color-red);
-  }/* Class for lack digit in the password */
-
+  }
+  /* Class for lack digit in the password */
   .secure-message {
     margin-right: $dp-spaces--lv4;
     color: $dp-color-green;
-
     @include circleCheck($dp-color-green, $dp-color-white);
-  }/* Class to indicate that password is secure */
-
-}/* Classes of messages to verify the password */
+  }
+  /* Class to indicate that password is secure */
+}
+/* Classes of messages to verify the password */

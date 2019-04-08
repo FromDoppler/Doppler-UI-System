@@ -59,8 +59,12 @@
 
 .signup-form {
   margin-top: $dp-spaces--lv3;
-}
 
+  input,
+  label {
+    font-family: $dp-font-family-proximanova;
+  }
+}
 /* login form */
 
 .login-form {
