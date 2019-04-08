@@ -8,7 +8,7 @@
   .main-panel {
     width: 525px;
     height: 100vh;
-    padding: $dp-spaces--lv7 $dp-spaces--lv6;
+    padding: $dp-spaces--lv6 $dp-spaces--lv8;
     background-color: $dp-color-white;
     overflow-y: auto;
 
@@ -35,7 +35,7 @@
     }
 
     h5 {
-      margin: $dp-spaces--lv10 $dp-spaces--lv0 $dp-spaces--lv2;
+      margin: $dp-spaces--lv5 $dp-spaces--lv0 $dp-spaces--lv1;
       font-family: $dp-font-family-proximanova;
       color: $dp-color-brown;
       font-weight: $dp-font-weight-bold;
@@ -61,6 +61,7 @@
 
     .content-legal {
       margin-top: $dp-spaces--lv4;
+      margin-bottom: $dp-spaces--lv7;
 
       p {
         font-size: $dp-font-size-rpgd;
@@ -68,9 +69,6 @@
       }
     }
 
-    footer {
-      padding-top: $dp-spaces--lv3;
-    }
   }
 
   .feature-panel {

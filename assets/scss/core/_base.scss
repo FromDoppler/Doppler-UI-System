@@ -114,11 +114,11 @@ textarea {
     text-align: left;
     float: left;
     width: 100%;
-    margin-bottom: $dp-spaces--lv5;
+    margin-bottom: $dp-spaces--lv3;
 
     &__checkbox {
       cursor: pointer;
-      margin-bottom: $dp-spaces--lv3;
+      margin-bottom: $dp-spaces--lv2;
 
       label {
         font-weight: normal;
@@ -127,7 +127,7 @@ textarea {
       }
 
       &:nth-last-child(1) {
-        margin-bottom: $dp-spaces--lv4;
+        margin-bottom: $dp-spaces--lv3;
       }
     }/* Field checkbox */
 
