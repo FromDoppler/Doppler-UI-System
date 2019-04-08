@@ -26,6 +26,13 @@ Language selector
     background-repeat: no-repeat;
     background-position: 12px center;
     outline: 0;
+
+    &.lang--es {
+      background-image: url(../img/flag--spanish.svg);
+    }
+    &.lang--en {
+      background-image: url(../img/flag--english.svg);
+    }
   }
 
   .lang-option {
@@ -62,12 +69,5 @@ Language selector
         }
       }
     }
-  }
-
-  [data-lang="ES"] {
-    background-image: url(../img/flag--spanish.svg);
-  }
-  [data-lang="EN"] {
-    background-image: url(../img/flag--english.svg);
   }
 }
