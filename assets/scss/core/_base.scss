@@ -110,7 +110,7 @@ textarea {
     text-align: left;
     float: left;
     width: 100%;
-    margin-bottom: $dp-spaces--lv3;
+    margin-bottom: $dp-spaces--lv5;
 
     &__checkbox {
       cursor: pointer;
@@ -147,6 +147,12 @@ textarea {
       &:hover {
         opacity: 0.7;
       }
+    }
+
+    .icon-view:before,
+    .icon-hide:before {
+      position: relative;
+      top: 2px;
     }
 
     .content-eye {
@@ -296,6 +302,7 @@ input[type="tel"] {
 /* Classes of error messages */
 .wrapper-password {
   display: block;
+  margin-top: $dp-spaces--lv1;
 
   .password-message {
     margin: $dp-spaces--lv0;
