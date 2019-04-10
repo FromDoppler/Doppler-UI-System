@@ -11,6 +11,7 @@ $dp-wrapper-max-width: 1260px !default;
 $dp-transition-duration: 0.25s !default;
 $dp-transition-timing: ease !default;
 $dp-breakpoints: (
+  mobilexs: 'max-width: 320px',
   mobile: 'max-width: 480px',
   ipad: 'max-width: 768px',
   desktop: 'max-width: 1024px',

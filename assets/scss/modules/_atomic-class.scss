@@ -73,3 +73,13 @@
   height: 100px;
   font-size: 0;
 }
+
+@include media-breakpoint('mobilexs') {
+  .icon-registration,
+  .logo-doppler-new,
+  .logo-doppler-old {
+      background-size: cover;
+      height: 27px;
+      width: 116px;
+   }
+}
