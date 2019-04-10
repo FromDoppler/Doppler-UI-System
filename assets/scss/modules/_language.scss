@@ -14,7 +14,8 @@ Language selector
     overflow: visible;
   }
 
-  button {
+  button,
+  a {
     appearance: none;
     position: relative;
     line-height: 20px;
@@ -26,6 +27,8 @@ Language selector
     background-repeat: no-repeat;
     background-position: 12px center;
     outline: 0;
+    text-decoration: none;
+    display: block;
 
     &.lang--es {
       background-image: url(../img/flag--spanish.svg);
@@ -40,7 +43,8 @@ Language selector
     height: 34px;
 
     &.option--selector {
-      button {
+      button,
+      a {
         &:after {
           content: '';
           width: 0;
@@ -57,7 +61,8 @@ Language selector
     }
 
     &:not(.option--selector) {
-      button {
+      button,
+      a {
         position: absolute;
         top: 36px;
         border-radius: $dp-border-radius;
