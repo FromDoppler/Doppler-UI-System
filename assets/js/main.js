@@ -41,7 +41,7 @@ $(document).on('mouseup', function(e){
   }
 
   if (!languageSelector.is(e.target) && languageSelector.has(e.target).length === 0){
-    $('.language-selector .option').removeClass('open');
+    $('.language-selector').removeClass('is-open');
   }
 });
 
