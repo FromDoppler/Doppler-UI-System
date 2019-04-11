@@ -27,7 +27,7 @@ $("body").on('click', '.close-user--menu', function() {
   $('.user-menu').removeClass('open');
 });
 
-$("body").on('click', '.language-selector .option--selector button', function() {
+$("body").on('click', '.language-selector .lang-option', function() {
   $(this).parents('.language-selector').toggleClass('is-open');
 });
 
