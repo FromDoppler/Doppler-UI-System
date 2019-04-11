@@ -22,7 +22,7 @@ h6 {
 
 h1 {
   margin: 0;
-  font-size: $dp-headers-h1-font-size;
+  font-size: $dp-font-size--lv18;
   font-weight: $dp-font-weight-bold;
   line-height: 1.2;
   text-transform: uppercase;
@@ -31,25 +31,25 @@ h1 {
 
 h2 {
   margin: 0;
-  font-size: $dp-headers-h2-font-size;
+  font-size: $dp-font-size--lv17;
   line-height: 1.4;
   font-family: $dp-font-family;
 }
 
 h3 {
-  font-size: $dp-headers-h3-font-size;
+  font-size: $dp-font-size--lv16;
 }
 
 h4 {
-  font-size: $dp-headers-h4-font-size;
+  font-size: $dp-font-size--lv13;
 }
 
 h5 {
-  font-size: $dp-headers-h5-font-size;
+  font-size: $dp-font-size--lv9;
 }
 
 h6 {
-  font-size: $dp-headers-h6-font-size;
+  font-size: $dp-font-size--lv4;
 }
 
 strong {
@@ -64,7 +64,7 @@ p {
 
 small {
   font: $dp-font;
-  font-size: $dp-font-size-small;
+  font-size: $dp-font-size--lv4;
   line-height: $dp-font-small-lineheight;
 }
 

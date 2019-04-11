@@ -71,7 +71,7 @@
   margin-top: $dp-spaces--lv6;
 
   .legend {
-    font-size: $dp-font-size-small;
+    font-size: $dp-font-size--lv4;
     float: right;
     color: $dp-color-sylver;
     font-style: italic;
@@ -82,7 +82,7 @@
 .forgot-link {
   display: block;
   margin: $dp-spaces--lv4 $dp-spaces--lv0;
-  font-size: $dp-font-size-form;
+  font-size: $dp-font-size--lv5;
   font-style: italic;
   font-family: $dp-font-family;
   position: relative;

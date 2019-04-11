@@ -40,7 +40,7 @@
       color: $dp-color-brown;
       font-weight: $dp-font-weight-bold;
       text-transform: uppercase;
-      font-size: $dp-font-size-15;
+      font-size: $dp-font-size--lv6;
     }
 
     .content-subtitle {
@@ -132,10 +132,10 @@
 
       h5 {
           margin: $dp-spaces--lv8 $dp-spaces--lv0 $dp-spaces--lv1;
-          font-size: $dp-font-size-small;
+          font-size: $dp-font-size--lv4;
       }
       .content-subtitle {
-          font-size: $dp-font-size-form;
+          font-size: $dp-font-size--lv5;
           line-height: $dp-spaces--lv3;
       }
     }
@@ -144,7 +144,7 @@
 
 .link--title {
   font-weight: $dp-font-weight-bold;
-  font-size: $dp-font-size-small;
+  font-size: $dp-font-size--lv4;
   text-transform: uppercase;
   font-style: normal;
 }
