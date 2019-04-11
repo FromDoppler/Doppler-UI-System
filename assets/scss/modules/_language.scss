@@ -76,3 +76,11 @@ Language selector
     }
   }
 }
+
+@include media-breakpoint('mobilexs') {
+
+  .language-selector {
+      top: $dp-spaces--lv1;
+  }
+
+}

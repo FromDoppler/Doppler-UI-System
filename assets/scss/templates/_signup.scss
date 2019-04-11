@@ -123,7 +123,24 @@
     }
   }
 }
-// Language selector
+
+@include media-breakpoint('mobilexs') {
+
+  .panel-wrapper{
+    .main-panel {
+        padding: $dp-spaces--lv5 $dp-spaces--lv4;
+
+      h5 {
+          margin: $dp-spaces--lv8 $dp-spaces--lv0 $dp-spaces--lv1;
+          font-size: $dp-font-size-small;
+      }
+      .content-subtitle {
+          font-size: $dp-font-size-form;
+          line-height: $dp-spaces--lv3;
+      }
+    }
+  }
+}
 
 .link--title {
   font-weight: $dp-font-weight-bold;

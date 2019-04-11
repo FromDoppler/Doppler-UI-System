@@ -49,7 +49,7 @@
 
 .logo-doppler-new {
   display: inline-block;
-  background-image: url('../img/doppler-logo-new.svg');
+  background-image: url("../img/doppler-logo-new.svg");
   background-repeat: no-repeat;
   height: 33px;
   width: 145px;
@@ -58,7 +58,7 @@
 
 .logo-doppler-old {
   display: inline-block;
-  background-image: url('../img/doppler-logo-old.svg');
+  background-image: url("../img/doppler-logo-old.svg");
   background-repeat: no-repeat;
   height: 30px;
   width: 85px;
@@ -67,9 +67,19 @@
 
 .icon-registration {
   display: inline-block;
-  background-image: url('../img/icon-registration.png');
+  background-image: url("../img/icon-registration.png");
   background-repeat: no-repeat;
   width: 140px;
   height: 100px;
   font-size: 0;
 }
+
+  @include media-breakpoint('mobilexs') {
+    .icon-registration,
+    .logo-doppler-new,
+    .logo-doppler-old {
+      background-size: cover;
+      height: 27px;
+      width: 116px;
+    }
+  }
