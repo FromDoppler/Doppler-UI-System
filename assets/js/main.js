@@ -27,8 +27,8 @@ $("body").on('click', '.close-user--menu', function() {
   $('.user-menu').removeClass('open');
 });
 
-$("body").on('click', '.language-selector .option', function() {
-  $('.language-selector .option').toggleClass('open');
+$("body").on('click', '.language-selector .lang-option', function() {
+  $(this).parents('.language-selector').toggleClass('is-open');
 });
 
 
@@ -41,7 +41,7 @@ $(document).on('mouseup', function(e){
   }
 
   if (!languageSelector.is(e.target) && languageSelector.has(e.target).length === 0){
-    $('.language-selector .option').removeClass('open');
+    $('.language-selector').removeClass('is-open');
   }
 });
 

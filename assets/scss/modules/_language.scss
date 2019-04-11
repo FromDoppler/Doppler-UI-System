@@ -3,70 +3,76 @@ Language selector
 */
 
 .language-selector {
-  display: flex;
-  align-items: center;
-  font-family: $dp-font-family;
   position: relative;
-  top: 10px;
+  height: 34px;
+  width: 63px;
+  overflow: hidden;
+  margin-bottom: -10px;
+  font-family: $dp-font-family;
 
-  .option--item {
-    display: none;
+  &.is-open {
+    overflow: visible;
   }
 
-  .option.open {
-    .option--item {
-      display: block;
-    }
-  }
-
-  .option span {
+  button,
+  a {
+    appearance: none;
     position: relative;
-    cursor: pointer;
-    display: block;
-    color: $dp-color-darkgrey;
-    font-size: $dp-font-size-xsmall;
-    padding: 6px 13px 6px 15px;
-  }
-
-  .option img {
-    height: 20px;
-    width: auto;
-    padding-right: 3px;
-  }
-
-  .option a strong,
-  .option span strong {
-    position: relative;
-    top: -5px;
-  }
-
-  .option span:after {
-    content: '';
-    width: 0;
-    height: 0;
-    position: absolute;
-    border-top: 5px solid $dp-color-darkgrey;
-    border-right: 5px solid transparent;
-    border-left: 5px solid transparent;
-    top: 15px;
-    right: 0;
-  }
-
-  .option a {
-    position: absolute;
-    right: 0;
-    background-color: $dp-color-white;
+    line-height: 20px;
+    padding: 7px 13px 7px 35px;
     color: $dp-color-darkgrey;
     font-size: $dp-font-size-xsmall;
     font-weight: $dp-font-weight-bold;
-    padding: 6px 11px 5px;
-    border: 1px solid $dp-color-yellow;
-    border-radius: $dp-border-radius;
-    box-shadow: 0 0 0 1px rgba(0,0,0,.1);
-    z-index: 5;
+    text-align: right;
+    background-repeat: no-repeat;
+    background-position: 12px center;
+    outline: 0;
+    text-decoration: none;
+    display: block;
+
+    &.lang--es {
+      background-image: url(../img/flag--spanish.svg);
+    }
+    &.lang--en {
+      background-image: url(../img/flag--english.svg);
+    }
   }
 
-  .option a:hover {
-    background-color: #f2f1e9;
+  .lang-option {
+    width: 63px;
+    height: 34px;
+
+    &.option--selector {
+      button,
+      a {
+        &:after {
+          content: '';
+          width: 0;
+          height: 0;
+          position: absolute;
+          border-top: 5px solid $dp-color-darkgrey;
+          border-right: 5px solid transparent;
+          border-left: 5px solid transparent;
+          top: 50%;
+          transform: translateY(-50%);
+          right: 0;
+        }
+      }
+    }
+
+    &:not(.option--selector) {
+      button,
+      a {
+        position: absolute;
+        top: 36px;
+        border-radius: $dp-border-radius;
+        box-shadow: 0 0 0 1px $dp-color-yellow, 0 0 0 2px rgba(0,0,0,.1);
+        z-index: 5;
+
+        &:hover {
+          background-color: #f2f1e9;
+        }
+      }
+    }
   }
 }
