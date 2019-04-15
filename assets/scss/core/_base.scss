@@ -17,7 +17,7 @@ label {
   padding: 0;
   color: $dp-color-grey;
   font-weight: $dp-font-weight-bold;
-  font-size: $dp-font-size-small;
+  font-size: $dp-sizing--lvl2;
   font-family: $dp-font-family;
 }
 /* span with class .dropdown-arrow to draw arrow dropdown */
@@ -42,7 +42,7 @@ select {
   background-color: $dp-color-white;
   border: 1px solid $dp-color-sylver;
   border-radius: $dp-border-radius;
-  font-size: $dp-font-size-small;
+  font-size: $dp-sizing--lvl2;
   padding: 0 40px 0 10px;
   text-align: left;
   line-height: 40px;
@@ -65,7 +65,7 @@ textarea {
   padding: 10px;
   color: $dp-color-grey;
   border-radius: $dp-border-radius;
-  font-size: $dp-font-size-form;
+  font-size: $dp-sizing--lvl2;
   border: 1px solid $dp-color-sylver;
 
   &::placeholder {
@@ -137,7 +137,7 @@ textarea {
     /* Field to 50% percent */
     .show-hide {
       float: right;
-      font-size: $dp-font-size-small;
+      font-size: $dp-sizing--lvl2;
       font-weight: normal;
       font-style: normal;
       color: $dp-color-lightbrown;
@@ -157,7 +157,7 @@ textarea {
 
     .content-eye {
       font-family: $dp-font-family-proximanova;
-      font-size: $dp-font-size-small;
+      font-size: $dp-sizing--lvl2;
       font-style: italic;
     }
   }
@@ -201,7 +201,7 @@ input:not([type='checkbox']) {
   border: 1px solid $dp-color-lightbrown;
   border-radius: $dp-border-radius;
   background-color: $dp-color-white;
-  font-size: $dp-font-size-form;
+  font-size: $dp-sizing--lvl2;
   font-family: $dp-font-family-proximanova;
   line-height: 20px;
 
@@ -252,7 +252,7 @@ input[type="tel"] {
     .error-message {
       margin: $dp-spaces--lv0;
       color: $dp-color-red;
-      font-size: $dp-font-size-small;
+      font-size: $dp-sizing--lvl2;
     }
   }
   /* animation to show the errors (optional) */
@@ -306,7 +306,7 @@ input[type="tel"] {
 
   .password-message {
     margin: $dp-spaces--lv0;
-    font-size: $dp-font-size-small;
+    font-size: $dp-sizing--lvl2;
     font-family: $dp-font-family-proximanova;
   }
 

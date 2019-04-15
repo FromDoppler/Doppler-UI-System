@@ -22,7 +22,7 @@ h6 {
 
 h1 {
   margin: 0;
-  font-size: $dp-headers-h1-font-size;
+  font-size: $dp-sizing--lvl9;
   font-weight: $dp-font-weight-bold;
   line-height: 1.2;
   text-transform: uppercase;
@@ -31,25 +31,25 @@ h1 {
 
 h2 {
   margin: 0;
-  font-size: $dp-headers-h2-font-size;
+  font-size: $dp-sizing--lvl8;
   line-height: 1.4;
   font-family: $dp-font-family;
 }
 
 h3 {
-  font-size: $dp-headers-h3-font-size;
+  font-size: $dp-sizing--lvl7;
 }
 
 h4 {
-  font-size: $dp-headers-h4-font-size;
+  font-size: $dp-sizing--lvl5;
 }
 
 h5 {
-  font-size: $dp-headers-h5-font-size;
+  font-size: $dp-sizing--lvl4;
 }
 
 h6 {
-  font-size: $dp-headers-h6-font-size;
+  font-size: $dp-sizing--lvl2;
 }
 
 strong {
@@ -58,13 +58,13 @@ strong {
 
 p {
   font: $dp-font;
-  font-size: $dp-font-size;
+  font-size: $dp-sizing--lvl3;
   line-height: $dp-font-lineheight;
 }
 
 small {
   font: $dp-font;
-  font-size: $dp-font-size-small;
+  font-size: $dp-sizing--lvl2;
   line-height: $dp-font-small-lineheight;
 }
 

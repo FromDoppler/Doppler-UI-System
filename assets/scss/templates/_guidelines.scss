@@ -21,7 +21,7 @@
   text-decoration: none;
   position: relative;
   color: $dp-color-darkgrey;
-  font-size: $dp-font-size-15;
+  font-size: $dp-sizing--lvl3;
   font-weight: $dp-font-weight-bold;
   font-family: $dp-font-family-proximanova;
   display: block;
@@ -97,7 +97,7 @@
   padding: 0;
   margin: 20px 0;
   list-style: none;
-  font-size: $dp-font-size-small;
+  font-size: $dp-sizing--lvl2;
   font-family: $dp-font-family;
 
   li {
@@ -176,7 +176,7 @@
   padding: 0;
   margin: 0;
   list-style: none;
-  font-size: $dp-font-size-small;
+  font-size: $dp-sizing--lvl2;
   font-family: $dp-font-family;
 
   li {
