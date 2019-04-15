@@ -60,7 +60,7 @@
     color: $dp-color-grey;
     text-transform: uppercase;
     font-family: $dp-font-family;
-    font-size: $dp-font-size--lv4;
+    font-size: $dp-sizing--lvl2;
   }
 
   a.active {
@@ -96,7 +96,7 @@
     text-decoration: none;
     color: $dp-color-grey;
     font-family: $dp-font-family;
-    font-size: $dp-font-size--lv4;
+    font-size: $dp-sizing--lvl2;
     padding-bottom: 12px;
     text-transform: none;
   }
@@ -135,7 +135,7 @@
     text-decoration: none;
     position: relative;
     color: $dp-color-lightgrey;
-    font-size: $dp-font-size--lv9;
+    font-size: $dp-sizing--lvl4;
     transition: all 0.3s ease;
   }
 
@@ -250,7 +250,7 @@
 
     .email {
       color: $dp-color-grey;
-      font-size: $dp-font-size--lv4;
+      font-size: $dp-sizing--lvl2;
     }
 
     .name {
@@ -268,7 +268,7 @@
     }
 
     a {
-      font-size: $dp-font-size--lv4;
+      font-size: $dp-sizing--lvl2;
       color: $dp-color-grey;
     }
   }
@@ -302,7 +302,7 @@
 
   p {
     margin: 0;
-    font-size: $dp-font-size--lv4;
+    font-size: $dp-sizing--lvl2;
   }
 }
 

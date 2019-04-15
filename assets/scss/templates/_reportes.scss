@@ -7,13 +7,13 @@
   h3 {
     color: $dp-color-darkgrey;
     font-weight: $dp-font-weight-bold;
-    font-size: $dp-font-size--lv15;
+    font-size: $dp-sizing--lvl6;
     flex: 100%;
   }
 
   p {
     color: $dp-color-grey;
-    font-size: $dp-font-size--lv6;
+    font-size: $dp-sizing--lvl3;
     padding-bottom: 32px;
     max-width: 70%;
   }
@@ -56,14 +56,14 @@
   position: relative;
 
   .verified--domain {
-    font-size: $dp-font-size--lv2;
+    font-size: $dp-sizing--lvl1;
     margin-top: 10px;
     display: inline-block;
   }
 
   .check--again {
     color: $dp-color-green;
-    font-size: $dp-font-size--lv2;
+    font-size: $dp-sizing--lvl1;
     text-transform: uppercase;
     font-weight: $dp-font-weight-bold;
     padding-left: 10px;
@@ -101,14 +101,14 @@
 }
 
 .number-kpi {
-  font-size: $dp-font-size--lv19;
+  font-size: $dp-sizing--lvl10;
   color: $dp-color-darkgrey;
   margin: 0;
   position: relative;
 }
 
 .subtitle-kpi {
-  font-size: $dp-font-size--lv4;
+  font-size: $dp-sizing--lvl2;
   text-transform: uppercase;
   color: #000;
   margin: 0;
@@ -116,12 +116,12 @@
 
 .date-range {
   text-transform: uppercase;
-  font-size: $dp-font-size--lv2;
+  font-size: $dp-sizing--lvl1;
   color: $dp-color-grey;
 }
 
 .text-kpi {
-  font-size: $dp-font-size--lv4;
+  font-size: $dp-sizing--lvl2;
   margin: 5em 0 3em;
   position: relative;
   color:$dp-color-grey;
@@ -146,7 +146,7 @@
       color:$dp-color-green;
       font-weight: bold;
       text-transform: uppercase;
-      font-size: $dp-font-size--lv2;
+      font-size: $dp-sizing--lvl1;
       font-family: Arial;
       @include transition-all;
     }
@@ -186,7 +186,7 @@
   .title-ranking {
     padding: $dp-spaces--lv7 $dp-spaces--lv5;
     display: inline-block;
-    font-size: $dp-font-size--lv4;
+    font-size: $dp-sizing--lvl2;
     color: $dp-color-darkgrey;
     text-transform: uppercase;
     line-height: $dp-spaces--lv3;
@@ -201,13 +201,13 @@
 
     .text-ranking {
       margin:$dp-spaces--lv0;
-      font-size: $dp-font-size--lv4;
+      font-size: $dp-sizing--lvl2;
       color: $dp-color-darkgrey;
       @include transition-all;
     }
     .link-ranking {
       color: $dp-color-green;
-      font-size: $dp-font-size--lv4;
+      font-size: $dp-sizing--lvl2;
 
       &:hover {
         color:$dp-color-darkgreen;
