@@ -314,18 +314,21 @@ input[type="tel"] {
     margin-right: $dp-spaces--lv4;
     color: $dp-color-lightgrey;
     @include circle($dp-color-lightgrey);
+    display: inline-block;
   }
   /* Class to indicate that this validation is complete */
   .waiting-message {
     margin-right: $dp-spaces--lv4;
     color: $dp-color-grey;
     @include circle($dp-color-yellow);
+    display: inline-block;
   }
   /* Class for waiting complete the password */
   .lack-message {
     margin-right: $dp-spaces--lv4;
     color: $dp-color-red;
     @include circle($dp-color-red);
+    display: inline-block;
   }
   /* Class for lack digit in the password */
   .secure-message {
