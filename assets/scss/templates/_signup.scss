@@ -75,32 +75,58 @@
   .feature-panel {
     flex: 4;
     height: 100vh;
-    padding: $dp-spaces--lv5 $dp-spaces--lv8;
-    background-image: url("../img/signup-img.png");
+    padding: $dp-spaces--lv5 $dp-spaces--lv10;
+
+  }
+
+  .bg--signup {
+    background-image: url("../img/bg-signup.png");
     background-size: cover;
+
+    h1, h6, p {
+      color: #302100;
+    }
+
+  }
+
+  .bg--login {
+    background-image: url("../img/bg-login.png");
+    background-size: cover;
+
+    h1, h6, p {
+      color: #FFF;
+    }
+
+  }
+
+  .bg--forgot {
+    background-image: url("../img/bg-login.png");
+    background-size: cover;
+
+    h1, h6, p {
+      color: #FFF;
+    }
+
   }
 
   .feature-content {
     max-width: 500px;
 
-    h6 {
-      margin-bottom: $dp-spaces--lv2;
-      font-family: $dp-font-family-proximanova;
-      font-weight: $dp-font-weight-bold;
-      color: $dp-color-white;
-      text-transform: uppercase;
-    }
-
     h3 {
       margin: $dp-spaces--lv2 0;
       font-family: $dp-font-family-proximanova;
       font-weight: $dp-font-weight-bold;
-      color: $dp-color-white;
+    }
+
+    h6 {
+      margin-bottom: $dp-spaces--lv2;
+      font-family: $dp-font-family-proximanova;
+      font-weight: $dp-font-weight-bold;
+      text-transform: uppercase;
     }
 
     p {
       font-family: $dp-font-family-proximanova;
-      color: $dp-color-white;
     }
   }
 }

@@ -22,34 +22,37 @@ h6 {
 
 h1 {
   margin: 0;
-  font-size: $dp-sizing--lvl9;
+  font-size: $dp-sizing--lvl7;
   font-weight: $dp-font-weight-bold;
-  line-height: 1.2;
-  text-transform: uppercase;
+  line-height: $dp-sizing--lvl6;
   font-family: $dp-font-family;
 }
 
 h2 {
   margin: 0;
-  font-size: $dp-sizing--lvl8;
-  line-height: 1.4;
+  font-size: $dp-sizing--lvl6;
+  line-height: 28px;
   font-family: $dp-font-family;
 }
 
 h3 {
-  font-size: $dp-sizing--lvl7;
+  font-size: $dp-sizing--lvl4;
+  line-height: 22px;
 }
 
 h4 {
-  font-size: $dp-sizing--lvl5;
+  font-size: $dp-sizing--lvl3;
+  line-height: $dp-font-lineheight;
 }
 
 h5 {
-  font-size: $dp-sizing--lvl4;
+  font-size: $dp-sizing--lvl3;
+  line-height: $dp-font-lineheight;
 }
 
 h6 {
   font-size: $dp-sizing--lvl2;
+  line-height: $dp-font-lineheight;
 }
 
 strong {
