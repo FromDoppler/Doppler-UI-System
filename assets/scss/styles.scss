@@ -1,23 +1,11 @@
 /// IMPORTS
 ///
-/// -> Core
-/// - Main styles. Core content.
-///
-/// -> Libs
-/// - A collection of dependencies
-///
-/// -> Modules
-/// - Every modular/reusable element has its styles defined here.
-///
-/// -> Templates
-/// - Every single file that hold styles for pages and sections.
-///
-/// -> Utilities
-/// -
-@import "core/variables";
-@import "core/colors";
-@import "core/reset";
+
+
 @import "core/settings";
+@import "core/variables";
+@import "helpers/**/*";
+@import "core/reset";
 @import "core/typography";
 @import "modules/mixins/*";
 @import "modules/*";
