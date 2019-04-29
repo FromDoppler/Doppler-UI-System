@@ -236,6 +236,10 @@ input[type="tel"] {
   display: none;
 }
 
+.form-message {
+  margin-bottom: $dp-spaces--lv2;
+}
+
 .error {
   .checkmark,
   input,
