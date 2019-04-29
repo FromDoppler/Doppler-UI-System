@@ -246,11 +246,19 @@ input[type="tel"] {
 
   .wrapper-errors {
     display: inline-block;
+    margin: $dp-spaces--lv0;
+    color: $dp-color-red;
+    font-size: $dp-sizing--lvl2;
 
-    .error-message {
-      margin: $dp-spaces--lv0;
+    a {
       color: $dp-color-red;
+      text-decoration: underline;
+    }
+
+    p {
+      margin: $dp-spaces--lv0;
       font-size: $dp-sizing--lvl2;
+      line-height: $dp-spaces--lv3;
     }
   }
   /* animation to show the errors (optional) */
@@ -337,12 +345,4 @@ input[type="tel"] {
   }
   /* Class to indicate that password is secure */
 }
-/* Classes of messages to verify the password */
-.unexpected-message {
-  font-family: $dp-font-family;
-  margin: $dp-spaces--lv0;
-  color: $dp-color-red;
-  font-size: $dp-sizing--lvl2;
-  padding: $dp-spaces--lv2 $dp-spaces--lv0;
-}
-/* Classes of Unexpected message */
+
