@@ -238,7 +238,6 @@ input[type="tel"] {
 
 .form-message {
   margin-bottom: $dp-spaces--lv2;
-  font-family: $dp-font-family;
 }
 
 .error {
@@ -254,6 +253,7 @@ input[type="tel"] {
     margin: $dp-spaces--lv0;
     color: $dp-color-red;
     font-size: $dp-sizing--lvl2;
+    font-family: $dp-font-family-proximanova;
 
     a {
       color: $dp-color-red;
@@ -264,6 +264,7 @@ input[type="tel"] {
       margin: $dp-spaces--lv0;
       font-size: $dp-sizing--lvl2;
       line-height: $dp-spaces--lv3;
+      font-family: $dp-font-family-proximanova;
     }
   }
   /* animation to show the errors (optional) */
