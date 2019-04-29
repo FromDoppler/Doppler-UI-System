@@ -11,8 +11,8 @@ $("body").on({
   }
 }, ".menu-main .submenu-item");
 
-$("body").on('click', '#user-menu--open', function() {
-  $('.user-menu').toggleClass('open');
+$("body").on('click', '.user-menu--open', function() {
+  $(this).parent().find('.user-menu').toggleClass('open');
 });
 
 $("body").on('click', '#open-menu', function() {
@@ -31,16 +31,15 @@ $("body").on('click', '.language-selector .lang-option', function() {
   $(this).parents('.language-selector').toggleClass('is-open');
 });
 
-
-$(document).on('mouseup', function(e){
+$(document).on('mouseup', function(e) {
   var menu = $(".user-menu");
   var languageSelector = $(".language-selector");
 
-  if (!menu.is(e.target) && menu.has(e.target).length === 0){
+  if (!menu.is(e.target) && menu.has(e.target).length === 0) {
     menu.removeClass('open');
   }
 
-  if (!languageSelector.is(e.target) && languageSelector.has(e.target).length === 0){
+  if (!languageSelector.is(e.target) && languageSelector.has(e.target).length === 0) {
     $('.language-selector').removeClass('is-open');
   }
 });
@@ -62,7 +61,6 @@ $("#btn-modal-small").click(function() {
 $(".modal .close").click(function() {
   $(".modal").fadeOut();
 });
-
 
 // This script is ONLY to DEMONSTRATE how to show and hide password, not use in production
 $(".show-hide").click(function() {

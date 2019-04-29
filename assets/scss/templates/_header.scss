@@ -124,11 +124,14 @@
 .nav-right-main--list {
   list-style: none;
   margin: 0;
+  display: flex;
+  align-items: stretch;
 
   & > li {
-    display: inline-block;
     margin: 0 10px;
     position: relative;
+    align-items: center;
+    display: flex;
   }
 
   a {
@@ -213,6 +216,29 @@
   visibility: hidden;
   opacity: 0;
   transition: all 0.3s ease;
+
+&.helper--right{
+  right: -12px;
+}
+
+h5 {
+  color: $dp-color-darkgrey;
+  margin: $dp-spaces--lv0;
+  font-weight: bold;
+}
+p {
+  margin: $dp-spaces--lv1 $dp-spaces--lv0 $dp-spaces--lv2;
+  font-size: $dp-sizing--lvl2;
+}
+a {
+  font-size: $dp-sizing--lvl2;
+  text-transform: uppercase;
+  color: $dp-color-green;
+
+  &:hover {
+    color: $dp-color-darkgreen;
+  }
+}
 
   &::before {
     content: '';
