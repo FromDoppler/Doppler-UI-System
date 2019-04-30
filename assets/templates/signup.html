@@ -66,6 +66,11 @@
         <h5>email, automation & data marketing</h5>
         <p class="content-subtitle">Atrae, Convierte y Fideliza. Envíos ilimitados y gratis hasta 500 Suscriptores. ¿Ya tienes una cuenta? <a href="#" class="link--title" target="_blank">INGRESA</a></p><!-- Title -->
         <form class="signup-form">
+          <div class="form-message error">
+              <div class="wrapper-errors">
+                <span>¡Ouch! Mensaje inesperado</span>
+              </div>
+            </div>
           <fieldset>
             <legend>Datos personales</legend>
             <ul class="field-group">
@@ -75,14 +80,14 @@
                     <label for="name">Nombre:</label>
                     <input type="text" name="name" id="name">
                     <div class="wrapper-errors">
-                      <p class="error-message">¡Ouch! Este campo está vacío</p>
+                      <p>¡Ouch! Este campo está vacío</p>
                     </div>
                   </li>
                   <li class="field-item field-item--50">
                     <label for="lastname">Apellido:</label>
                     <input type="text" name="lastname" id="lastname">
                     <div class="wrapper-errors">
-                      <p class="error-message">¡Ouch! Este campo está vacío</p>
+                      <p>¡Ouch! Este campo está vacío</p>
                     </div>
                   </li>
                 </ul>
@@ -91,7 +96,7 @@
                 <label for="phone">Teléfono:</label>
                 <input type="tel" name="phone" id="phone-input" placeholder="9 11 2345-6789" class="phone-number">
                 <div class="wrapper-errors">
-                  <p class="error-message error-phone-number">¡Ouch! Este campo está vacío</p>
+                  <p class="error-phone-number">¡Ouch! Este campo está vacío</p>
                 </div>
               </li>
             </ul>
@@ -103,7 +108,7 @@
                 <label for="email">Email:</label>
                 <input type="email" name="email" id="email" placeholder="Tu Email será tu nombre de usuario">
                 <div class="wrapper-errors">
-                  <p class="error-message">¡Ouch! Este campo está vacío</p>
+                  <p>¡Ouch! Este campo está vacío</p>
                 </div>
               </li>
               <li class="field-item">
@@ -125,7 +130,7 @@
                 <input type="checkbox" name="acepto_politicas">
                 <span class="checkmark"></span><label for="acepto_politicas"> Acepto la <a href="#">Política de Privacidad</a> de Doppler.</label>
                 <div class="wrapper-errors">
-                  <p class="error-message">¡Ouch! Este campo está vacío</p>
+                  <p>¡Ouch! Este campo está vacío</p>
                 </div>
               </li>
               <li class="field-item field-item__checkbox">
@@ -135,7 +140,6 @@
               </li>
             </ul>
           </fieldset><!-- privacy policy and promotion -->
-          <div class="unexpected-message"><span>¡Ouch! Mensaje inesperado</span></div>
           <button type="button" class="dp-button button--round button-medium primary-green">crea tu cuenta gratis</button>
         </form><!-- form -->
         <div class="content-legal">
