@@ -67,6 +67,7 @@
   > li {
     > a.active {
       font-weight: $dp-font-weight-bold;
+      color: black;
 
       + .sub-menu {
         display: flex;
