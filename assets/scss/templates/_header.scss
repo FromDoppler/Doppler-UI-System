@@ -17,7 +17,7 @@
 
   &.header-open,
   &.header-is-active {
-    height: 105px !important;
+    height: 105px;
   }
 }
 
@@ -64,22 +64,8 @@
     font-size: $dp-sizing--lvl2;
   }
 
-  > li {
-    > a.active {
-      font-weight: $dp-font-weight-bold;
-      color: black;
-
-      + .sub-menu {
-        display: flex;
-        visibility: visible;
-        opacity: 1;
-        transition: all 2s 1s ease;
-        z-index: 100;
-        width: 100%;
-      }
-    }
-
-
+  a.active {
+    font-weight: $dp-font-weight-bold;
   }
 
   a:hover {
@@ -112,18 +98,14 @@
     color: $dp-color-grey;
     font-family: $dp-font-family;
     font-size: $dp-sizing--lvl2;
-    padding-bottom: 11px;
+    padding-bottom: 12px;
     text-transform: none;
+  }
 
-    &:hover,
-    &.active {
-      border-bottom: 3px solid $dp-color-yellow;
-      padding-bottom: 8px;
-    }
-
-    &.active {
-      font-weight: $dp-font-weight-bold;
-    }
+  a.active {
+    border-bottom: 3px solid $dp-color-yellow;
+    font-weight: $dp-font-weight-bold;
+    padding-bottom: 8px;
   }
 }
 

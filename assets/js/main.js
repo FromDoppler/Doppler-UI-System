@@ -2,12 +2,17 @@ $("body").on({
   mouseenter: function() {
     var submenu = $(this).find(".sub-menu");
 
+
+
     if (submenu && submenu[0].children.length) {
       $('.header-main').addClass('header-open');
     }
   },
   mouseleave: function() {
+    var submenu = $(this).find(".sub-menu");
     $('.header-main').removeClass('header-open');
+    if(submenu.parent('.submenu-item').find("a.active").length < 0)
+      $(this).find(".sub-menu").removeClass('open');
   }
 }, ".menu-main .submenu-item");
 
