@@ -1,3 +1,27 @@
+
+.dp-datahub-messages {
+  max-width: $dp-wrapper-max-width;
+  margin: 0 auto;
+
+  h4 {
+    margin: $dp-spaces--lv0;
+    font-weight: $dp-font-weight-bold;
+    color: $dp-color-grey;
+  }
+
+  p {
+    margin: $dp-spaces--lv0 $dp-spaces--lv0 $dp-spaces--lv2;
+  }
+
+  .dp-datahub-action {
+    text-align: right;
+    margin-top: $dp-spaces--lv6;
+    padding-top: $dp-spaces--lv4;
+    border-top: 1px solid $dp-color-snow;
+  }
+
+}
+
 .report-filters {
   background: $dp-color-ghostwhite;
   border-bottom: 1px solid $dp-color-sylver;
@@ -81,7 +105,7 @@
 /* Section KPI */
 .container-reports {
   width: 100%;
-  padding: 60px 0;
+  padding: 60px 2%;
 
   .wrapper-kpi {
     display: flex;
