@@ -114,10 +114,14 @@
     padding-bottom: 11px;
     text-transform: none;
 
+    &:hover,
     &.active {
       border-bottom: 3px solid $dp-color-yellow;
-      font-weight: $dp-font-weight-bold;
       padding-bottom: 8px;
+    }
+
+    &.active {
+      font-weight: $dp-font-weight-bold;
     }
   }
 }
