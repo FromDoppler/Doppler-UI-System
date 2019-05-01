@@ -260,6 +260,11 @@ input[type="tel"] {
       text-decoration: underline;
     }
 
+    button {
+      color: $dp-color-red;
+      text-decoration: underline;
+    }
+
     p {
       margin: $dp-spaces--lv0;
       font-size: $dp-sizing--lvl2;
