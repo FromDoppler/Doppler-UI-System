@@ -15,7 +15,8 @@
   height: auto;
   flex-direction: column;
 
-  &.header-open {
+  &.header-open,
+  &.header-is-active {
     height: 105px;
   }
 }
