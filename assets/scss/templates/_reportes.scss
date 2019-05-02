@@ -2,6 +2,21 @@
 .dp-wrapper-messages {
   max-width: $dp-wrapper-max-width;
   margin: $dp-spaces--lv0 auto;
+  background-color: $dp-color-ghostwhite;
+  border: 1px solid $dp-border-grey;
+  border-radius: $dp-border-radius;
+  box-shadow: 0 0 0 4px $dp-color-white;
+  padding: $dp-spaces--lv4;
+  margin: $dp-spaces--lv0 auto;
+
+  h2 {
+    color: $dp-color-darkgrey;
+    font-weight: $dp-font-weight-bold;
+    letter-spacing: -1px;
+    line-height: 1;
+    text-shadow: 0 1px 0 $dp-color-white;
+    margin-bottom: $dp-spaces--lv3;
+  }
 
   h4 {
     margin: $dp-spaces--lv0;
@@ -10,7 +25,7 @@
   }
 
   p {
-    margin: $dp-spaces--lv0 $dp-spaces--lv0 $dp-spaces--lv2;
+    margin: $dp-spaces--lv0 $dp-spaces--lv0 $dp-spaces--lv5;
   }
 
   .dp-messages-actions {
@@ -18,7 +33,12 @@
     margin-top: $dp-spaces--lv6;
     padding-top: $dp-spaces--lv4;
     border-top: 1px solid $dp-color-snow;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
   }
+
+
 
 }
 
