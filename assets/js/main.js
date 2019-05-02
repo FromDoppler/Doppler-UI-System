@@ -7,7 +7,6 @@ $("body").on({
     }
   },
   mouseleave: function() {
-
     $('.header-main').removeClass('header-open');
   }
 }, ".menu-main .submenu-item");
