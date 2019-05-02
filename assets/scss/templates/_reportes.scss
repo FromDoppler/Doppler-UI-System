@@ -35,6 +35,11 @@
     border-top: 1px solid $dp-color-snow;
   }
 
+  .dp-button.button--loading,
+  .dp-button:disabled {
+    display: inline-block;
+  }
+
 }
 
 .report-filters {
