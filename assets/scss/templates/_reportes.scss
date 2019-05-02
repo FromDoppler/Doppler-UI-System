@@ -2,6 +2,20 @@
 .dp-wrapper-messages {
   max-width: $dp-wrapper-max-width;
   margin: $dp-spaces--lv0 auto;
+  background-color: $dp-color-ghostwhite;
+  border: 1px solid $dp-border-grey;
+  border-radius: $dp-border-radius;
+  box-shadow: 0 0 0 4px $dp-color-white;
+  padding: $dp-spaces--lv4;
+  margin: $dp-spaces--lv0 $dp-spaces--lv0 $dp-spaces--lv2;
+
+  h3 {
+    color: $dp-color-darkgrey;
+    font-weight: $dp-font-weight-bold;
+    letter-spacing: -1px;
+    line-height: 1;
+    text-shadow: 0 1px 0 $dp-color-white;
+  }
 
   h4 {
     margin: $dp-spaces--lv0;
@@ -10,7 +24,7 @@
   }
 
   p {
-    margin: $dp-spaces--lv0 $dp-spaces--lv0 $dp-spaces--lv2;
+    margin: $dp-spaces--lv0 $dp-spaces--lv0 $dp-spaces--lv5;
   }
 
   .dp-messages-actions {
