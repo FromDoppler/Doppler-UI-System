@@ -33,12 +33,12 @@
     margin-top: $dp-spaces--lv6;
     padding-top: $dp-spaces--lv4;
     border-top: 1px solid $dp-color-snow;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
   }
 
-  .dp-button.button--loading,
-  .dp-button:disabled {
-    display: inline-block;
-  }
+
 
 }
 
