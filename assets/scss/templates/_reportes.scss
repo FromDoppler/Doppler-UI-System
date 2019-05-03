@@ -26,6 +26,8 @@
 
   p {
     margin: $dp-spaces--lv0 $dp-spaces--lv0 $dp-spaces--lv5;
+    max-width: 75%;
+    line-height: $dp-spaces--lv4;
   }
 
   .dp-messages-actions {
