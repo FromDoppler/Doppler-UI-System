@@ -47,7 +47,7 @@
   background: $dp-color-ghostwhite;
   border-bottom: 1px solid $dp-color-sylver;
   box-shadow: 0 -4px 0 0 $dp-color-snow inset;
-  padding: 0 6.5%;
+  padding: $dp-spaces--lv0 $dp-spaces--lv5;
 
   h3 {
     color: $dp-color-darkgrey;
@@ -59,8 +59,8 @@
   p {
     color: $dp-color-grey;
     font-size: $dp-sizing--lvl3;
-    padding-bottom: 32px;
-    max-width: 70%;
+    padding-bottom: $dp-spaces--lv5;
+    line-height: $dp-spaces--lv4;
   }
 
   .arrow {
@@ -236,6 +236,12 @@
     color: $dp-color-darkgrey;
     text-transform: uppercase;
     line-height: $dp-spaces--lv3;
+
+      small {
+        display: block;
+        text-transform: none;
+      }
+
   }
   .page-ranking--item {
     border-top: 1px solid $dp-color-sylver;
