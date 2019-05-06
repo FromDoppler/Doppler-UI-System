@@ -199,8 +199,6 @@
   }
 }
 
-
-
 .user-menu {
   background: $dp-color-white;
   border-bottom: 3px solid $dp-border-grey;
@@ -227,13 +225,14 @@ h5 {
   margin: $dp-spaces--lv0;
   font-weight: bold;
 }
+
 p {
   margin: $dp-spaces--lv1 $dp-spaces--lv0 $dp-spaces--lv2;
   font-size: $dp-sizing--lvl2;
 }
+
 a {
   font-size: $dp-sizing--lvl2;
-  text-transform: uppercase;
   color: $dp-color-green;
 
   &:hover {
@@ -287,6 +286,7 @@ a {
   }
 
   .options-user {
+
     li {
       border-top: 1px solid $dp-border-grey;
       padding: 12px 0;
