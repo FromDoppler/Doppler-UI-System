@@ -53,7 +53,12 @@
   background-repeat: no-repeat;
   height: 33px;
   width: 145px;
-  font-size: $dp-sizing--lvl0;
+
+  a {
+    display: block;
+    text-indent: -9999em;
+  }
+
 }
 
 .logo-doppler-old {
