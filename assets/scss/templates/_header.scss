@@ -13,11 +13,14 @@
   display: flex;
   font-family: $dp-font-family;
   height: auto;
+  overflow: hidden;
+  min-height: 70px;
   flex-direction: column;
+  transition: all 0.15s ease;
 
-  &.header-open,
-  &.header-is-active {
-    height: 105px;
+  &.header-open {
+    min-height: 105px;
+    overflow: visible;
   }
 }
 
