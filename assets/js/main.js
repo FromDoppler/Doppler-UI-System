@@ -1,4 +1,4 @@
-$('.menu-main>li').on({
+$('body').on({
   mouseenter: function() {
     var submenu = $(this).find(".sub-menu");
 
@@ -13,7 +13,7 @@ $('.menu-main>li').on({
     if(!$(this).hasClass('submenu-item'))
       $('.header-main').addClass('header-open');
   }
-});
+}, '.menu-main>li');
 
 $("body").on('click', '.user-menu--open', function() {
   $(this).parent().find('.user-menu').toggleClass('open');
