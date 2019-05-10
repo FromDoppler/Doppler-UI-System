@@ -2,16 +2,18 @@ $('body').on({
   mouseenter: function() {
     var submenu = $(this).find(".sub-menu");
 
-    if(!$(this).hasClass('submenu-item'))
+    if(!$(this).hasClass('submenu-item')) {
       $('.header-main').removeClass('header-open');
+    }
 
     if (submenu && submenu[0].children.length) {
       $('.header-main').addClass('header-open');
     }
   },
   mouseleave: function() {
-    if(!$(this).hasClass('submenu-item'))
+    if(!$(this).hasClass('submenu-item')) {
       $('.header-main').addClass('header-open');
+    }
   }
 }, '.menu-main>li');
 
