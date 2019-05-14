@@ -62,7 +62,7 @@ strong {
 
 p {
   font-size: $dp-sizing--lvl3;
-  line-height: $dp-font-lineheight;
+  line-height: #{$dp-font-lineheight / $dp-sizing--lvl3}; // Unitless equivalent to ems
 }
 
 small {
