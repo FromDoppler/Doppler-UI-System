@@ -74,13 +74,20 @@
 
   .feature-panel {
     flex: 4;
-    height: 100vh;
     padding: $dp-spaces--lv5 $dp-spaces--lv10;
+
+    .content-img{
+      margin: $dp-spaces--lv0;
+
+        img{
+          width: 100%;
+        }
+    }
 
   }
 
   .bg--signup {
-    background-image: url("../img/bg-signup.png");
+    background-image: url("../img/yellow-violet.png");
     background-size: cover;
 
     h1, h6, p {
@@ -90,7 +97,7 @@
   }
 
   .bg--login {
-    background-image: url("../img/bg-login.png");
+    background-image: url("../img/violet-yellow.png");
     background-size: cover;
 
     h1, h6, p {
@@ -100,7 +107,7 @@
   }
 
   .bg--forgot {
-    background-image: url("../img/bg-login.png");
+    background-image: url("../img/violet-yellow.png");
     background-size: cover;
 
     h1, h6, p {
@@ -110,7 +117,8 @@
   }
 
   .feature-content {
-    max-width: 500px;
+    max-width: 660px;
+    padding-left: 12%;
 
     h3 {
       margin: $dp-spaces--lv2 0;
