@@ -1,6 +1,6 @@
 
 .dp-wrapper-messages {
-  max-width: $dp-wrapper-max-width;
+  max-width: 960px; /* check to modularize the messages */
   margin: $dp-spaces--lv0 auto;
   background-color: $dp-color-ghostwhite;
   border: 1px solid $dp-border-grey;
@@ -8,6 +8,7 @@
   box-shadow: 0 0 0 4px $dp-color-white;
   padding: $dp-spaces--lv4;
   margin: $dp-spaces--lv0 auto;
+  box-shadow: 0 0 0 4px #fff; /* check to modularize the messages */
 
   h2 {
     color: $dp-color-darkgrey;
@@ -38,6 +39,10 @@
     align-items: flex-end;
     justify-content: flex-end;
   }
+}
+/* Atomic class - check to modularize the messages */
+.bg-message--grey{
+  background: $dp-color-ghostwhite;
 }
 
 .report-filters {
