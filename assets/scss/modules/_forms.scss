@@ -37,6 +37,8 @@
 
 /* Mixin circle with a check */
 @mixin circleCheck($background-color, $check-color) {
+  position: relative;
+
   &::before {
     content: '';
     display: inline-block;
@@ -51,7 +53,7 @@
     content: '';
     position: absolute;
     left: 4px;
-    bottom: $dp-spaces--lv1;
+    top: 0;
     width: 4px;
     height: 7px;
     border: solid $check-color;
