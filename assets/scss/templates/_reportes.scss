@@ -1,6 +1,6 @@
 
 .dp-wrapper-messages {
-  max-width: 960px; /* check to modularize the messages */
+  max-width: 960px; /* TODO: check to modularize the messages */
   margin: $dp-spaces--lv0 auto;
   background-color: $dp-color-ghostwhite;
   border: 1px solid $dp-border-grey;
@@ -8,7 +8,7 @@
   box-shadow: 0 0 0 4px $dp-color-white;
   padding: $dp-spaces--lv4;
   margin: $dp-spaces--lv0 auto;
-  box-shadow: 0 0 0 4px #fff; /* check to modularize the messages */
+  box-shadow: 0 0 0 4px #fff; /* TODO: check to modularize the messages */
 
   h2 {
     color: $dp-color-darkgrey;
@@ -40,7 +40,7 @@
     justify-content: flex-end;
   }
 }
-/* Atomic class - check to modularize the messages */
+/* TODO: Atomic class - check to modularize the messages */
 .bg-message--grey{
   background: $dp-color-ghostwhite;
 }
