@@ -53,11 +53,12 @@
     content: '';
     position: absolute;
     left: 4px;
-    top: 0;
+    bottom: $dp-spaces--lv1;
+    display: block;
     width: 4px;
     height: 7px;
     border: solid $check-color;
-    border-width: 0 1.5px 1.5px 0;
+    border-width: 0 2px 2px 0;
     transform: rotate(45deg);
   }
 }
