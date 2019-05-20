@@ -13,9 +13,9 @@ cd $(dirname $0)
 export MSYS_NO_PATHCONV=1
 export MSYS2_ARG_CONV_EXCL="*"
 
- docker build --pull -t doppler-ui-system-source .
- docker run --rm \
-    -p 3500:3500 \
-    -e CHOKIDAR_USEPOLLING=true \
-    doppler-ui-system-source \
-    gulp run
+docker build --pull -t doppler-ui-system-source .
+docker run --rm \
+  -p 3500:3500 \
+  -e CHOKIDAR_USEPOLLING=true \
+  doppler-ui-system-source \
+  gulp run
