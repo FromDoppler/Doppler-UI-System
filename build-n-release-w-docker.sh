@@ -32,7 +32,6 @@ docker run --rm \
     /bin/sh -c "\
       npm install -g gulp \
       && npm install \
-      && gulp dist \
       && ./node_modules/.bin/semantic-release \
     "
 
