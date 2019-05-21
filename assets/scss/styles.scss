@@ -14,11 +14,15 @@
 ///
 /// -> Utilities
 /// -
+
 @import "core/variables";
-@import "core/colors";
-@import "core/reset";
 @import "core/settings";
+@import "core/reset";
 @import "core/typography";
+@import "helpers/mixins";
+@import "helpers/animations";
+@import "helpers/classes";
+@import "helpers/colors";
 @import "modules/mixins/*";
 @import "modules/*";
 @import "core/base";
