@@ -1,5 +1,41 @@
 @import "./settings";
 
+@font-face {
+  font-family: "proxima-nova";
+  src: url("../fonts/proxima-nova.eot");
+  src: url("../fonts/proxima-nova.eot?#iefix") format('embedded-opentype'), url("../fonts/proxima-nova.woff2") format('woff2'), url("../fonts/proxima-nova.woff") format('woff'), url(".../fonts/proxima-nova.ttf") format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "proxima-nova";
+  src: url("../fonts/proxima-nova-italic.eot");
+  src: url("../fonts/proxima-nova-italic.eot?#iefix") format('embedded-opentype'), url("../fonts/proxima-nova-italic.woff2") format('woff2'), url("../fonts/proxima-nova-italic.woff") format('woff'), url(".../fonts/proxima-nova-italic.ttf") format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "proxima-nova";
+  src: url("../fonts/proxima-nova-bold.eot");
+  src: url("../fonts/proxima-nova-bold.eot?#iefix") format('embedded-opentype'), url("../fonts/proxima-nova-bold.woff2") format('woff2'), url("../fonts/proxima-nova-bold.woff") format('woff'), url("../fonts/proxima-nova-bold.ttf") format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "proxima-nova";
+  src: url("../fonts/proxima-nova-bold-italic.eot");
+  src: url("../fonts/proxima-nova-bold-italic.eot?#iefix") format('embedded-opentype'), url("../fonts/proxima-nova-bold-italic.woff2") format('woff2'), url("../fonts/proxima-nova-bold-italic.woff") format('woff'), url("../fonts/proxima-nova-bold-italic.ttf") format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'hand-of-sean';
+  src: url("../fonts/HandOfSeanPro-webfont.eot");
+  src: url("../fonts/HandOfSeanPro-webfont.eot?#iefix") format('embedded-opentype'), url("../fonts/HandOfSeanPro-webfont.woff2") format('woff2'), url("../fonts/HandOfSeanPro-webfont.woff") format('woff'), url("../fonts/HandOfSeanPro-webfont.ttf") format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
 body {
   font-family: $dp-font-family;
   color: $dp-color-grey;
@@ -85,40 +121,4 @@ small {
 
 .text-italic {
   font-style: italic;
-}
-
-@font-face {
-  font-family: "proxima-nova";
-  src: url("../fonts/proxima-nova.eot");
-  src: url("../fonts/proxima-nova.eot?#iefix") format('embedded-opentype'), url("../fonts/proxima-nova.woff2") format('woff2'), url("../fonts/proxima-nova.woff") format('woff'), url(".../fonts/proxima-nova.ttf") format('truetype');
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "proxima-nova";
-  src: url("../fonts/proxima-nova-italic.eot");
-  src: url("../fonts/proxima-nova-italic.eot?#iefix") format('embedded-opentype'), url("../fonts/proxima-nova-italic.woff2") format('woff2'), url("../fonts/proxima-nova-italic.woff") format('woff'), url(".../fonts/proxima-nova-italic.ttf") format('truetype');
-  font-weight: 400;
-  font-style: italic;
-}
-@font-face {
-  font-family: "proxima-nova";
-  src: url("../fonts/proxima-nova-bold.eot");
-  src: url("../fonts/proxima-nova-bold.eot?#iefix") format('embedded-opentype'), url("../fonts/proxima-nova-bold.woff2") format('woff2'), url("../fonts/proxima-nova-bold.woff") format('woff'), url("../fonts/proxima-nova-bold.ttf") format('truetype');
-  font-weight: bold;
-  font-style: normal;
-}
-@font-face {
-  font-family: "proxima-nova";
-  src: url("../fonts/proxima-nova-bold-italic.eot");
-  src: url("../fonts/proxima-nova-bold-italic.eot?#iefix") format('embedded-opentype'), url("../fonts/proxima-nova-bold-italic.woff2") format('woff2'), url("../fonts/proxima-nova-bold-italic.woff") format('woff'), url("../fonts/proxima-nova-bold-italic.ttf") format('truetype');
-  font-weight: bold;
-  font-style: italic;
-}
-@font-face {
-  font-family: 'hand-of-sean';
-  src: url("../fonts/HandOfSeanPro-webfont.eot");
-  src: url("../fonts/HandOfSeanPro-webfont.eot?#iefix") format('embedded-opentype'), url("../fonts/HandOfSeanPro-webfont.woff2") format('woff2'), url("../fonts/HandOfSeanPro-webfont.woff") format('woff'), url("../fonts/HandOfSeanPro-webfont.ttf") format('truetype');
-  font-weight: 400;
-  font-style: normal;
 }

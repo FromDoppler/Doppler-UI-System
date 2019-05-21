@@ -1,8 +1,3 @@
-/* @include transition(all,2s,ease); */
-@mixin transition-all($what: all, $time: 0.25s, $how: ease) {
-  transition: $what $time $how;
-}
-
 ////
 /// Typography
 /// Init typography basic settings
@@ -25,10 +20,10 @@ $dp-font-color-bright: #edede6 !default;
 $dp-font-color-dark: $dp-font-color !default;
 $dp-font-color-white: #fff !default;
 
-//
-// variables margins/paddings
-//
 
+////
+/// variables margins/paddings
+////
 $dp-spaces--lv0: 0;
 $dp-spaces--lv1: 6px;
 $dp-spaces--lv2: 12px;
@@ -46,13 +41,25 @@ $dp-spaces--lv13: 78px;
 $dp-spaces--lv14: 84px;
 $dp-spaces--lv15: 90px;
 $dp-spaces--lv16: 96px;
-/// Settings File
-/// Init colors variables
-/// @group Colors
+
+////
+/// Font Size settings
+////
+$dp-sizing--lvl10: 60px;
+$dp-sizing--lvl9: 50px;
+$dp-sizing--lvl8: 40px;
+$dp-sizing--lvl7: 32px;
+$dp-sizing--lvl6: 24px;
+$dp-sizing--lvl5: 22px;
+$dp-sizing--lvl4: 18px;
+$dp-sizing--lvl3: 15px;
+$dp-sizing--lvl2: 13px;
+$dp-sizing--lvl1: 11px;
+$dp-sizing--lvl0: 0;
+
 ////
 /// Colors ///
-///
-
+////
 $dp-color-ghostwhite: #F2F2F2;
 $dp-color-lightgrey: #999999;
 $dp-color-grey: #666666;
@@ -81,10 +88,9 @@ $dp-bg-modal: #F7F7F7;
 $dp-bg-overlay: rgba(34, 34, 34, 0.95);
 $dp-color-brown-brightness: rgba(48,33,0,.2);
 
-//
-// variables generic
-//
-
+////
+/// variables generic
+////
 $dp-border-radius: 3px;
 $dp-border-radius--lv1: 30px;
 $dp-header-height: 4em;
@@ -92,133 +98,4 @@ $dp-text-aling: center;
 $dp-font-size-rpgd: 12px;
 $dp-line-height-rpgd: 16px;
 
-.micro {
-  font-size: 11px;
-  line-height: 13px;
-  color: $dp-color-grey;
-  text-transform: uppercase;
-}
-/* TEXT COLORS - grey */
-.c-dark-grey {
-  color: $dp-color-darkgrey;
-  /* text */
-}
 
-.c-grey {
-  color: $dp-color-grey;
-  /* icons fonts */
-}
-
-.c-light-grey {
-  color: $dp-color-lightgrey;
-  /* placeholders, hovers*/
-}
-/* VERTICAL SPACES */
-.space-0 {
-  margin-bottom: 0;
-}
-
-.space-8 {
-  margin-bottom: 8px;
-  /* drag boxes distanse, inputs conditional boxes */
-}
-
-.space-24 {
-  margin-bottom: 24px;
-  /* inputs distance */
-}
-
-.space-48 {
-  margin-bottom: 48px;
-  /* forms distance */
-}
-
-.space-64 {
-  margin-bottom: 64px;
-}
-/* SPACES */
-/* TEXT COLORS - grey */
-
-.c-dark-grey {
-  color: $dp-color-darkgrey;
-  /* text */
-}
-
-.c-grey {
-  color: $dp-color-grey;
-  /* icons fonts */
-}
-
-.c-light-grey {
-  color: $dp-color-lightgrey;
-  /* placeholders, hovers*/
-}
-/* VERTICAL SPACES */
-
-.space-0 {
-  margin-bottom: 0;
-}
-
-.space-8 {
-  margin-bottom: 8px;
-  /* drag boxes distanse, inputs conditional boxes */
-}
-
-.space-24 {
-  margin-bottom: 24px;
-  /* inputs distance */
-}
-
-.space-48 {
-  margin-bottom: 48px;
-  /* forms distance */
-}
-
-.space-64 {
-  margin-bottom: 64px;
-}
-/* SPACES */
-
-.margin--0 {
-  margin: 0;
-  /* when p is a title of a paragraph */
-}
-/* BACKGROUNDS COLORS */
-
-.grey-bg {
-  background-color: $dp-color-grey;
-  /* disabled inputs */
-}
-
-.light-grey-bg {
-  background-color: $dp-color-lightgrey;
-}
-
-.snow {
-  background-color: $dp-color-snow;
-  /* disabled inputs */
-}
-
-.ghost-white-bg {
-  background-color: $dp-color-ghostwhite;
-  /* backgrounds grid, cebra */
-}
-/* TEXT COLORS */
-
-.dark-grey-txt {
-  color: $dp-color-darkgrey;
-  /* variant of <p> */
-  font-weight: $dp-font-weight-bold;
-}
-/* BORDER COLORS */
-
-.sylver {
-  border-color: $dp-color-sylver;
-  /* strokes */
-}
-/* DISABLED ICON STATES */
-
-.disabled-icon {
-  opacity: 0.6;
-  /* strokes */
-}
