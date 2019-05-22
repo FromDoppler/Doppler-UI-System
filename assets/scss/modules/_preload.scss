@@ -27,10 +27,10 @@
     height: $size;
     position: absolute;
     border-radius: 50%;
-    border: 2px solid;
+    border: 5px solid;
     border-color: rgba($color, .3);
     border-top-color: $color;
-    animation: dp-preloader-spin 0.5s infinite linear;
+    animation: dp-preloader-spin 0.7s infinite linear;
   }
 }
 
@@ -53,8 +53,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color:$dp-color-darkyellow;
-    @include dp-preloader($dp-color-darkyellow, 6em);
+    @include dp-preloader($dp-color-lightgrey, 3.3em);
 
   }
   @keyframes flash {
@@ -78,5 +77,5 @@
 /* loading kpi */
 
 .loading-box {
-  @include dp-preloader($dp-color-lightgrey, 5em, $dp-color-ghostwhite);
+  @include dp-preloader($dp-color-lightgrey, 3.3em, $dp-color-ghostwhite);
 }
