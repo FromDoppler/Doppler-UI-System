@@ -139,10 +139,10 @@ gulp.task('sass', function() {
 });
 //
 gulp.task('doc', function() {
- var docstream = sassdoc(config.sassDocOptions);
- docstream.promise.then(browserSync.reload);
- return gulp.src(config.folderAssets.base + '/**/*.scss')
-   .pipe(docstream);
+   var docstream = sassdoc(config.sassDocOptions);
+   docstream.promise.then(browserSync.reload);
+   return gulp.src(config.folderAssets.base + '/**/*.scss')
+        .pipe(docstream);
 });
 
 // Process HTML task definition for distribution purposes
