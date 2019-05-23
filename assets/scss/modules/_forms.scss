@@ -266,15 +266,33 @@ input[type="tel"] {
   }
 }
 
-.wrapper-errors {
+/* Mixin for dp-message */
+/// @access private
+@mixin dp-message($dp-font-color, $dp-font-size) {
+    a, p, button, span{
+        font-size: $dp-font-size;
+        color:$dp-font-color;
+        text-align: left;
+        margin: 0;
+    }
+}
+
+/// Form messages and validations
+/// @content [Form messages and validations]
+/// @access public
+/// @deprecated .error and .wrapper-errors will be removed in a next version of the library
+/// @author gbaamonde@makingsense.com
+
+
+/* Message modules */
+
+.dp-message, .error {
   display: none;
 }
 
-.form-message {
-  margin-bottom: $dp-spaces--lv2;
-}
+/* Class for validation */
 
-.error {
+.dp-validate, .error {
   .checkmark,
   input,
   select,
@@ -282,39 +300,82 @@ input[type="tel"] {
     border: 1px solid $dp-color-red;
   }
 
-  .wrapper-errors {
+/* common properties */
+  .dp-message-box {
+    padding-left: $dp-sizing--lvl10;
+    min-height: 45px;
+    display: flex;
+    margin: $dp-spaces--lv2 $dp-spaces--lv0;
+    flex-direction: column;
+    justify-content: center;
+  }
+/* Messages and confirmations the forms */
+  .dp-message, .wrapper-errors {
     display: inline-block;
     margin: $dp-spaces--lv0;
-    color: $dp-color-red;
-    font-size: $dp-sizing--lvl2;
     font-family: $dp-font-family-proximanova;
+    color: #e34f45;
+    font-size: 13px;
 
-    a {
-      color: $dp-color-red;
-      text-decoration: underline;
+      a {
+        text-decoration: underline;
+      }
+      button {
+        text-decoration: underline;
+      }
+      p {
+        margin: $dp-spaces--lv0;
+      }
+    /* Validations error message */
+    &.dp-error-form {
+      @include dp-message($dp-color-red, $dp-sizing--lvl2);
     }
-
-    button {
-      color: $dp-color-red;
-      text-decoration: underline;
-    }
-
-    p {
-      margin: $dp-spaces--lv0;
-      font-size: $dp-sizing--lvl2;
-      line-height: $dp-spaces--lv3;
-      font-family: $dp-font-family-proximanova;
-    }
-  }
-
-
-  .bounceIn {
-    animation-duration: 0.75s;
-    animation-name: bounceIn;
   }
 }
-/* Classes of error messages */
 
+
+
+/* Unexpected message box */
+.form-message {
+  margin-bottom: $dp-spaces--lv2;
+  display: flex;
+  min-height: 45px;
+  flex-direction: column;
+  justify-content: center;
+
+/* Validations Unexpected message */
+&.dp-error {
+  @extend .dp-message-box;
+  background: url("../img/error-message.svg") no-repeat 0 0;
+  padding-left: $dp-sizing--lvl10;
+  @include dp-message($dp-color-red, $dp-sizing--lvl3);
+}
+/* Validations message OK forgot password */
+&.dp-ok-message {
+  @extend .dp-message-box;
+  padding-left: $dp-sizing--lvl10;
+  background: url("../img/ok-message.svg") no-repeat 0 0;
+  @include dp-message($dp-color-green, $dp-sizing--lvl3);
+}
+
+  .error {
+    padding-left: 0;
+
+    .wrapper-errors {
+     display: inline-block;
+     margin: 0;
+     color: #e34f45;
+     font-size: 13px;
+     font-family: proxima-nova,Helvetica;
+    }
+  }
+}
+
+
+
+
+
+/* Validations and password messages */
 .wrapper-password {
   display: block;
   margin-top: $dp-spaces--lv1;

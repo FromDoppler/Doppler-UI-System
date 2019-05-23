@@ -19,6 +19,8 @@ var gulp = require('gulp'),
   iconfontCss = require('gulp-iconfont-css'),
   // Require PostCSS
   postcss = require('gulp-postcss'),
+  // Require Sassdoc
+  sassdoc = require('sassdoc'),
   // Require PostCSS Flexibility
   flexibility = require('postcss-flexibility'),
   // Require PostCSS autoprefixer
@@ -64,6 +66,9 @@ var config = {
     images: 'dist/img',
     js: 'dist/js'
   },
+  folderDoc: {
+    base: 'documentation'
+  },
   postCSS: {
     processors: [
       autoprefixer({
@@ -79,6 +84,18 @@ var config = {
         sort: mqsorter
       })
     ]
+  },
+
+// Sassdoc task options
+  sassDocOptions: {
+    dest: './documentation',
+    display: {
+      watermark: false
+    },
+    groups: {
+      'undefined': 'General'
+    },
+    basePath: 'assets/styles/**/*.scss',
   }
 };
 
@@ -119,6 +136,13 @@ gulp.task('sass', function() {
     .pipe(browserSync.reload({
       stream: true
     }));
+});
+//
+gulp.task('doc', function() {
+ var docstream = sassdoc(config.sassDocOptions);
+ docstream.promise.then(browserSync.reload);
+ return gulp.src(config.folderAssets.base + '/**/*.scss')
+   .pipe(docstream);
 });
 
 // Process HTML task definition for distribution purposes
@@ -236,6 +260,25 @@ gulp.task('clean', ['clean:dev']);
 gulp.task('clean:dev', function() {
   return del.sync(config.folderDev.base);
 });
+// SassDoc
+gulp.task('serve:sassdoc', function() {
+  return browserSync.init({
+    port: 1339,
+    server: {
+      baseDir: config.folderDoc.base
+    },
+    ui: {
+      port: 1340
+    }
+  });
+});
+gulp.task('doc:serve', ['serve:sassdoc'], function() {
+  return gulp.src(config.folderAssets.base + '/**/*.scss')
+    .pipe(sassdoc(config.sassDocOptions));
+});
+gulp.task('doc:watch', ['doc:serve'], function() {
+  gulp.watch(config.folderAssets.base + '/**/*.scss', ['doc']);
+});
 
 // Watch for changes
 gulp.task('run', ['clean', 'serve'], function() {
@@ -245,7 +288,6 @@ gulp.task('run', ['clean', 'serve'], function() {
   gulp.watch(config.folderAssets.images + '/**/*.*', ['copy:images']);
   gulp.watch(config.folderAssets.js + '/**/*.js', ['copy:js', reload]);
   gulp.watch(config.folderAssets.base + '/templates/*.html', ['processHtml']);
-
   util.log('Done!');
 });
 
