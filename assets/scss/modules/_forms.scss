@@ -271,7 +271,7 @@ input[type="tel"] {
 @mixin dp-message($dp-font-color, $dp-font-size) {
     a, p, button, span{
         font-size: $dp-font-size;
-        color:$dp-font-color;
+        color: $dp-font-color;
         text-align: left;
         margin: 0;
     }
@@ -314,7 +314,6 @@ input[type="tel"] {
     display: inline-block;
     margin: $dp-spaces--lv0;
     font-family: $dp-font-family-proximanova;
-    color: $dp-color-red;
     font-size: 13px;
 
       a {
@@ -340,22 +339,21 @@ input[type="tel"] {
   margin-bottom: $dp-spaces--lv2;
   display: flex;
   min-height: 45px;
+  padding-left: $dp-sizing--lvl10;
   flex-direction: column;
   justify-content: center;
 
 /* Validations Unexpected message */
 &.dp-error {
   @extend .dp-message-box;
-  background: url("../img/error-message.svg") no-repeat 0 0;
-  padding-left: $dp-sizing--lvl10;
   @include dp-message($dp-color-red, $dp-sizing--lvl3);
+  background: url("../img/error-message.svg") no-repeat 0 0;
 }
 /* Validations message OK forgot password */
 &.dp-ok-message {
   @extend .dp-message-box;
-  padding-left: $dp-sizing--lvl10;
-  background: url("../img/ok-message.svg") no-repeat 0 0;
   @include dp-message($dp-color-green, $dp-sizing--lvl3);
+  background: url("../img/ok-message.svg") no-repeat 0 0;
 }
 
   .error {
@@ -370,9 +368,6 @@ input[type="tel"] {
     }
   }
 }
-
-
-
 
 
 /* Validations and password messages */
