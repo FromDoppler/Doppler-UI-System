@@ -342,18 +342,20 @@ input[type="tel"] {
   padding-left: $dp-sizing--lvl10;
   flex-direction: column;
   justify-content: center;
+  background-position: 0;
+  background-repeat: no-repeat;
 
 /* Validations Unexpected message */
 &.dp-error {
   @extend .dp-message-box;
   @include dp-message($dp-color-red, $dp-sizing--lvl3);
-  background: url("../img/error-message.svg") no-repeat 0 0;
+  background-image: url("../img/error-message.svg");
 }
 /* Validations message OK forgot password */
 &.dp-ok-message {
   @extend .dp-message-box;
   @include dp-message($dp-color-green, $dp-sizing--lvl3);
-  background: url("../img/ok-message.svg") no-repeat 0 0;
+  background-image: url("../img/ok-message.svg");
 }
 
   .error {
