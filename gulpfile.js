@@ -139,9 +139,9 @@ gulp.task('sass', function() {
 });
 //
 gulp.task('doc', function() {
-   var docstream = sassdoc(config.sassDocOptions);
-   docstream.promise.then(browserSync.reload);
-   return gulp.src(config.folderAssets.base + '/**/*.scss')
+  var docstream = sassdoc(config.sassDocOptions);
+  docstream.promise.then(browserSync.reload);
+  return gulp.src(config.folderAssets.base + '/**/*.scss')
         .pipe(docstream);
 });
 

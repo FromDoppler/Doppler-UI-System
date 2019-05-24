@@ -362,11 +362,11 @@ input[type="tel"] {
     padding-left: 0;
 
     .wrapper-errors {
-       display: inline-block;
-       margin: 0;
-       color: $dp-color-red;
-       font-size: $dp-sizing--lvl2;
-       font-family: proxima-nova,Helvetica;
+      display: inline-block;
+      margin: 0;
+      color: $dp-color-red;
+      font-size: $dp-sizing--lvl2;
+      font-family: proxima-nova,Helvetica;
     }
   }
 }
