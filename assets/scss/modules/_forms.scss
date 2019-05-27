@@ -273,7 +273,7 @@ input[type="tel"] {
         font-size: $dp-font-size;
         color: $dp-font-color;
         text-align: left;
-        margin: 0;
+        margin: $dp-spaces--lv0;
     }
 }
 
@@ -333,7 +333,6 @@ input[type="tel"] {
 }
 
 
-
 /* Unexpected message box */
 .form-message {
   margin-bottom: $dp-spaces--lv2;
@@ -342,7 +341,7 @@ input[type="tel"] {
   padding-left: $dp-sizing--lvl10;
   flex-direction: column;
   justify-content: center;
-  background-position: 0;
+  background-position: 0 0;
   background-repeat: no-repeat;
 
 /* Validations Unexpected message */
@@ -356,6 +355,12 @@ input[type="tel"] {
   @extend .dp-message-box;
   @include dp-message($dp-color-green, $dp-sizing--lvl3);
   background-image: url("../img/ok-message.svg");
+
+  .forgot-link {
+    margin: $dp-spaces--lv4 $dp-spaces--lv0;
+    font-size: $dp-sizing--lvl2;
+  }
+
 }
 
   .error {
@@ -368,11 +373,6 @@ input[type="tel"] {
       font-size: $dp-sizing--lvl2;
       font-family: proxima-nova,Helvetica;
     }
-  }
-
-  .forgot-link {
-    margin: $dp-spaces--lv4 $dp-spaces--lv0;
-    font-size: $dp-sizing--lvl2;
   }
 
 }
