@@ -316,15 +316,6 @@ input[type="tel"] {
     font-family: $dp-font-family-proximanova;
     font-size: 13px;
 
-      a {
-        text-decoration: underline;
-      }
-      button {
-        text-decoration: underline;
-      }
-      p {
-        margin: $dp-spaces--lv0;
-      }
     /* Validations error message */
     &.dp-error-form {
       @include dp-message($dp-color-red, $dp-sizing--lvl2);
@@ -349,6 +340,11 @@ input[type="tel"] {
   @extend .dp-message-box;
   @include dp-message($dp-color-red, $dp-sizing--lvl3);
   background-image: url("../img/error-message.svg");
+
+  a, button {
+    text-decoration: underline;
+  }
+
 }
 /* Validations message OK forgot password */
 &.dp-ok-message {
