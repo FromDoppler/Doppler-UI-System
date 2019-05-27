@@ -274,6 +274,7 @@ input[type="tel"] {
         color: $dp-font-color;
         text-align: left;
         margin: $dp-spaces--lv0;
+        font-family: $dp-font-family-proximanova;
     }
 }
 
@@ -334,6 +335,7 @@ input[type="tel"] {
   justify-content: center;
   background-position: 0 0;
   background-repeat: no-repeat;
+  font-family: $dp-font-family-proximanova;
 
 /* Validations Unexpected message */
 &.dp-error {
