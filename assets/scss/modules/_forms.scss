@@ -327,12 +327,12 @@ input[type="tel"] {
 
 /* Unexpected message box */
 .form-message {
-  margin-bottom: $dp-spaces--lv2;
+  margin-bottom: $dp-spaces--lv4;
   display: flex;
   min-height: 45px;
-  padding-left: $dp-sizing--lvl10;
+  padding-left: $dp-spaces--lv7;
   flex-direction: column;
-  justify-content: center;
+  background-size: 30px;
   background-position: 0 0;
   background-repeat: no-repeat;
   font-family: $dp-font-family-proximanova;
