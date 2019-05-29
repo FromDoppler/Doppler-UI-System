@@ -67,7 +67,7 @@ var config = {
     js: 'dist/js'
   },
   folderDoc: {
-    base: 'documentation'
+    base: 'dev/documentation'
   },
   postCSS: {
     processors: [
@@ -88,7 +88,7 @@ var config = {
 
 // Sassdoc task options
   sassDocOptions: {
-    dest: './documentation',
+    dest: './dev/documentation',
     display: {
       watermark: false
     },
