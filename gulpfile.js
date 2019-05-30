@@ -96,6 +96,17 @@ var config = {
       'undefined': 'General'
     }
     // basePath: 'assets/styles/**/*.scss', // Esto no va en la documentacion agrega todos los estilos dentro de assets
+  },
+  sassdocOptionsDist: {
+    dest: './dist/documentation', // aca el destino de donde se debe alojar la documentacion
+      display: {
+        watermark: false
+      },
+    // theme: './node_modules/sassdoc-theme-flippant', // para agregar un theme en particular
+    groups: {
+      'undefined': 'General'
+    }
+    // basePath: 'assets/styles/**/*.scss', // Esto no va en la documentacion agrega todos los estilos dentro de assets
   }
 };
 
@@ -153,11 +164,16 @@ gulp.task('doc', function() {
     .pipe(sassdoc(config.sassdocOptions)) // toma la configuraciones de destino, display etc
     .resume(); // es el que genera la documentacion en si misma
     //.pipe(gulp.dest(config.folderDev.docs));
+    // todo va a la carpeta de dev
 });
 
-gulp.task('doc:dist',['doc'], function() {
-  return gulp.src(config.folderDev.docs + '/**/*.*')
-    .pipe(gulp.dest(config.folderDist.docs));
+gulp.task('doc:dist', function() {
+  return gulp.src(config.folderAssets.base + '/**/*.scss') // origen de donde levanta todos los sass
+    .pipe(sassdoc(config.sassdocOptionsDist)) // toma la configuraciones de destino, display etc
+    .resume(); // es el que genera la documentacion en si misma
+    // return gulp.src(config.folderDev.docs + '/**/*.*')
+    //   .pipe(gulp.dest(config.folderDist.docs));
+    // todo va a la carpeta de dist
 });
 
 // Process HTML task definition for distribution purposes
