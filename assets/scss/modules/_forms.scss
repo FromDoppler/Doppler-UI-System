@@ -314,7 +314,7 @@ input[type="tel"] {
     display: inline-block;
     margin: $dp-spaces--lv0;
     font-family: $dp-font-family-proximanova;
-    font-size: 13px;
+    font-size: $dp-sizing--lvl2;
 
     /* Validations error message */
     &.dp-error-form {
