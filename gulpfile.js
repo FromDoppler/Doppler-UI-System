@@ -155,9 +155,8 @@ gulp.task('doc', function() {
     //.pipe(gulp.dest(config.folderDev.docs));
 });
 
-
-gulp.task('doc:dist', ['doc_temp'], function() {
-  return gulp.src('temp/documentation' + '/*.*')
+gulp.task('doc:dist', function() {
+  return gulp.src(config.folderDev.docs + '/**/*.*')
     .pipe(gulp.dest(config.folderDist.docs));
 });
 
