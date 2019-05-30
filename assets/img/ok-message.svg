@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="45px" height="45px" viewBox="0 0 45 45" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.1 (72631) - https://sketchapp.com -->
+    <title>icons/ok-message</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Guidelines" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="guidelines:-general" transform="translate(-716.000000, -5945.000000)">
+            <g id="icons/ok-message" transform="translate(716.000000, 5945.000000)">
+                <rect id="BG" stroke="#33AD73" stroke-width="1" fill="#33AD73" x="1" y="1" width="43" height="43" rx="21.5"></rect>
+                <g id="icons/ok" transform="translate(13.000000, 13.000000)" fill="#FFFFFF">
+                    <path d="M4.3072493,9.04678306 C3.6171045,8.34359176 2.48758241,8.33301549 1.78439111,9.02316029 C1.08119982,9.7133051 1.07062354,10.8428272 1.76076835,11.5460185 L5.85299818,15.7156078 C6.53557137,16.4110844 7.6499202,16.4301788 8.35591974,15.7584955 L17.7442321,6.82651719 C18.4580631,6.14738308 18.4861905,5.01816174 17.8070564,4.30433072 C17.1279223,3.59049971 15.9987009,3.56237231 15.2848699,4.24150641 L7.16913151,11.9627663 L4.3072493,9.04678306 Z" id="tick-success"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

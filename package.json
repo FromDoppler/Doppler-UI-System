@@ -53,6 +53,7 @@
     "node-sass": "^4.11.0",
     "postcss-clean": "~1.1.0",
     "postcss-flexibility": "^2.0.0",
+    "sassdoc": "^2.7.0",
     "semantic-release": "^15.13.12",
     "sort-css-media-queries": "^1.4.3",
     "ttf2woff2": "^2.0.3"

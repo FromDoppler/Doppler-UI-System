@@ -19,6 +19,8 @@ var gulp = require('gulp'),
   iconfontCss = require('gulp-iconfont-css'),
   // Require PostCSS
   postcss = require('gulp-postcss'),
+  // Require Sassdoc
+  sassdoc = require('sassdoc'),
   // Require PostCSS Flexibility
   flexibility = require('postcss-flexibility'),
   // Require PostCSS autoprefixer
@@ -47,7 +49,8 @@ var config = {
     css: 'dev/css',
     fonts: 'dev/fonts',
     images: 'dev/img',
-    js: 'dev/js'
+    js: 'dev/js',
+    docs: 'dev/documentation'
   }, // If this path gets changed, remember to update .gitignore with the proper path to ignore images and css
   folderAssets: {
     base: 'assets',
@@ -62,7 +65,8 @@ var config = {
     css: 'dist/css',
     fonts: 'dist/fonts',
     images: 'dist/img',
-    js: 'dist/js'
+    js: 'dist/js',
+    docs: 'dist/documentation'
   },
   postCSS: {
     processors: [
@@ -79,6 +83,27 @@ var config = {
         sort: mqsorter
       })
     ]
+  },
+
+// Sassdoc task options
+  sassdocOptionsDev: {
+    dest: './dev/documentation',
+      display: {
+        watermark: false
+      },
+    // theme: './node_modules/sassdoc-theme-flippant', // para agregar un theme en particular
+    groups: {
+      'undefined': 'General'
+    }
+  },
+  sassdocOptionsDist: {
+    dest: './dist/documentation',
+      display: {
+        watermark: false
+      },
+    groups: {
+      'undefined': 'General'
+    }
   }
 };
 
@@ -119,6 +144,20 @@ gulp.task('sass', function() {
     .pipe(browserSync.reload({
       stream: true
     }));
+});
+
+// Generated Sassdoc to Dev folder
+gulp.task('doc', function() {
+  return gulp.src(config.folderAssets.base + '/**/*.scss')
+    .pipe(sassdoc(config.sassdocOptionsDev))
+    .resume();
+});
+
+// Generated Sassdoc to Dist folder
+gulp.task('doc:dist', function() {
+  return gulp.src(config.folderAssets.base + '/**/*.scss')
+    .pipe(sassdoc(config.sassdocOptionsDist))
+    .resume();
 });
 
 // Process HTML task definition for distribution purposes
@@ -239,13 +278,12 @@ gulp.task('clean:dev', function() {
 
 // Watch for changes
 gulp.task('run', ['clean', 'serve'], function() {
-  gulp.watch(config.folderAssets.base + '/**/*.scss', ['sass']);
+  gulp.watch(config.folderAssets.base + '/**/*.scss', ['sass', 'doc']);
   gulp.watch(config.folderAssets.base + '/icons/*.svg', ['webfont', reload]);
   gulp.watch(config.folderAssets.fonts + '/*.*', ['copy:fonts', reload]);
   gulp.watch(config.folderAssets.images + '/**/*.*', ['copy:images']);
   gulp.watch(config.folderAssets.js + '/**/*.js', ['copy:js', reload]);
   gulp.watch(config.folderAssets.base + '/templates/*.html', ['processHtml']);
-
   util.log('Done!');
 });
 
@@ -255,7 +293,7 @@ gulp.task('watch', ['build'], function() {
 });
 
 // Define build task
-gulp.task('build', ['sass', 'webfont', 'copy:fonts', 'processHtml', 'copy:js', 'copy:images']);
+gulp.task('build', ['sass', 'webfont', 'copy:fonts', 'processHtml', 'copy:js', 'copy:images', 'doc']);
 
 // Define Dist generation task (Deploy)
-gulp.task('dist', ['sass:dist', 'fonts:dist', 'processHtml:dist', 'js:dist', 'images:dist']);
+gulp.task('dist', ['sass:dist', 'fonts:dist', 'processHtml:dist', 'js:dist', 'images:dist', 'doc:dist']);
