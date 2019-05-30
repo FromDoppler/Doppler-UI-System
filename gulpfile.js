@@ -270,13 +270,10 @@ gulp.task('processHtml', function() {
 });
 
 // Delete dev folder for cleaning
-gulp.task('clean', ['clean:dev', 'clean:temp']);
+gulp.task('clean', ['clean:dev']);
 
 gulp.task('clean:dev', function() {
   return del.sync(config.folderDev.base);
-});
-gulp.task('clean:temp', function() {
-  return del.sync('temp');
 });
 
 // Watch for changes
