@@ -86,7 +86,7 @@ var config = {
   },
 
 // Sassdoc task options
- sassdocOptions: {
+  sassdocOptions: {
     dest: './dev/documentation', // aca el destino de donde se debe alojar la documentacion
       display: {
         watermark: false
