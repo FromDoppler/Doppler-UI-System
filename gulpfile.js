@@ -49,7 +49,8 @@ var config = {
     css: 'dev/css',
     fonts: 'dev/fonts',
     images: 'dev/img',
-    js: 'dev/js'
+    js: 'dev/js',
+    docs: 'dev/documentation'
   }, // If this path gets changed, remember to update .gitignore with the proper path to ignore images and css
   folderAssets: {
     base: 'assets',
@@ -64,10 +65,8 @@ var config = {
     css: 'dist/css',
     fonts: 'dist/fonts',
     images: 'dist/img',
-    js: 'dist/js'
-  },
-  folderDoc: {
-    base: 'dev/documentation'
+    js: 'dist/js',
+    docs: 'dist/documentation'
   },
   postCSS: {
     processors: [
@@ -87,15 +86,17 @@ var config = {
   },
 
 // Sassdoc task options
-  sassDocOptions: {
-    dest: './dev/documentation',
+   sassdocOptions: {
+    dest: './dev/documentation', // aca el destino de donde se debe alojar la documentacion
     display: {
       watermark: false
     },
+    // theme: './node_modules/sassdoc-theme-flippant', // para agregar un theme en particular
     groups: {
       'undefined': 'General'
-    },
-    basePath: 'assets/styles/**/*.scss',
+    }
+    // basePath: 'assets/styles/**/*.scss', // Esto no va en la documentacion agrega todos los estilos dentro de assets
+    // basePath: '/styles/**/*.scss' Se podria utilizar esta variable para concatenarla con la variable de folder
   }
 };
 
@@ -138,11 +139,27 @@ gulp.task('sass', function() {
     }));
 });
 //
+// gulp.task('doc_temp', ['clean:temp'], function() {
+//   return gulp.src(config.folderAssets.base + '/**/*.scss')
+//         .pipe(sassdoc(config.sassDocOptions));
+// });
+//
+// gulp.task('doc', ['doc_temp'], function() {
+//   return gulp.src('temp/documentation' + '/*.*')
+//     .pipe(gulp.dest(config.folderDev.docs));
+// });
+
 gulp.task('doc', function() {
-  var docstream = sassdoc(config.sassDocOptions);
-  docstream.promise.then(browserSync.reload);
-  return gulp.src(config.folderAssets.base + '/**/*.scss')
-        .pipe(docstream);
+  return gulp.src(config.folderAssets.base + '/**/*.scss') // origen de donde levanta todos los sass
+    .pipe(sassdoc(config.sassdocOptions)) // toma la configuraciones de destino, display etc
+    .resume(); // es el que genera la documentacion en si misma
+    //.pipe(gulp.dest(config.folderDev.docs));
+});
+
+
+gulp.task('doc:dist', ['doc_temp'], function() {
+  return gulp.src('temp/documentation' + '/*.*')
+    .pipe(gulp.dest(config.folderDist.docs));
 });
 
 // Process HTML task definition for distribution purposes
@@ -255,34 +272,39 @@ gulp.task('processHtml', function() {
 });
 
 // Delete dev folder for cleaning
-gulp.task('clean', ['clean:dev']);
+gulp.task('clean', ['clean:dev', 'clean:temp']);
 
 gulp.task('clean:dev', function() {
   return del.sync(config.folderDev.base);
 });
+gulp.task('clean:temp', function() {
+  return del.sync('temp');
+});
+
 // SassDoc
-gulp.task('serve:sassdoc', function() {
-  return browserSync.init({
-    port: 1339,
-    server: {
-      baseDir: config.folderDoc.base
-    },
-    ui: {
-      port: 1340
-    }
-  });
-});
-gulp.task('doc:serve', ['serve:sassdoc'], function() {
-  return gulp.src(config.folderAssets.base + '/**/*.scss')
-    .pipe(sassdoc(config.sassDocOptions));
-});
-gulp.task('doc:watch', ['doc:serve'], function() {
-  gulp.watch(config.folderAssets.base + '/**/*.scss', ['doc']);
-});
+// TODO: generar la documentacion dentro de folder dev para aprovechar el server 3500
+// gulp.task('serve:sassdoc', function() {
+//   return browserSync.init({
+//     port: 1339,
+//     server: {
+//       baseDir: config.folderDist.docs
+//     },
+//     ui: {
+//       port: 1340
+//     }
+//   });
+// });
+// gulp.task('doc:serve', ['serve:sassdoc'], function() {
+//   return gulp.src(config.folderAssets.base + '/**/*.scss')
+//     .pipe(sassdoc(config.sassDocOptions));
+// });
+// gulp.task('doc:watch', ['doc:serve'], function() {
+//   gulp.watch(config.folderAssets.base + '/**/*.scss', ['doc']);
+// });
 
 // Watch for changes
 gulp.task('run', ['clean', 'serve'], function() {
-  gulp.watch(config.folderAssets.base + '/**/*.scss', ['sass']);
+  gulp.watch(config.folderAssets.base + '/**/*.scss', ['sass', 'doc']);
   gulp.watch(config.folderAssets.base + '/icons/*.svg', ['webfont', reload]);
   gulp.watch(config.folderAssets.fonts + '/*.*', ['copy:fonts', reload]);
   gulp.watch(config.folderAssets.images + '/**/*.*', ['copy:images']);
@@ -297,7 +319,7 @@ gulp.task('watch', ['build'], function() {
 });
 
 // Define build task
-gulp.task('build', ['sass', 'webfont', 'copy:fonts', 'processHtml', 'copy:js', 'copy:images']);
+gulp.task('build', ['sass', 'webfont', 'copy:fonts', 'processHtml', 'copy:js', 'copy:images', 'doc']);
 
 // Define Dist generation task (Deploy)
-gulp.task('dist', ['sass:dist', 'fonts:dist', 'processHtml:dist', 'js:dist', 'images:dist']);
+gulp.task('dist', ['sass:dist', 'fonts:dist', 'processHtml:dist', 'js:dist', 'images:dist', 'doc:dist']);
