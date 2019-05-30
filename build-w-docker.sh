@@ -23,5 +23,4 @@ docker run --rm \
     /bin/sh -c "\
       ./node_modules/.bin/eclint check \"**/*\" \
       && gulp dist \
-	    && gulp doc \
     "

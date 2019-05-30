@@ -87,7 +87,7 @@
       {
         "path": "@semantic-release/exec",
         "__comment": "Running compile-prod here allow us to inject release version if need.",
-        "cmd": "echo ${nextRelease.version} > dist/version.txt && export pkgVersion=v${nextRelease.version} && gulp dist && gulp doc"
+        "cmd": "echo ${nextRelease.version} > dist/version.txt && export pkgVersion=v${nextRelease.version} && gulp dist"
       }
     ],
     "publish": [
