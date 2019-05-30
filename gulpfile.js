@@ -86,17 +86,16 @@ var config = {
   },
 
 // Sassdoc task options
-   sassdocOptions: {
+ sassdocOptions: {
     dest: './dev/documentation', // aca el destino de donde se debe alojar la documentacion
-    display: {
-      watermark: false
-    },
+      display: {
+        watermark: false
+      },
     // theme: './node_modules/sassdoc-theme-flippant', // para agregar un theme en particular
     groups: {
       'undefined': 'General'
     }
     // basePath: 'assets/styles/**/*.scss', // Esto no va en la documentacion agrega todos los estilos dentro de assets
-    // basePath: '/styles/**/*.scss' Se podria utilizar esta variable para concatenarla con la variable de folder
   }
 };
 
