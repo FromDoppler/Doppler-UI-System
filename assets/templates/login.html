@@ -50,17 +50,17 @@
       <article class="main-panel">
         <header>
           <h1 class="logo-doppler-new"><a href="#">Doppler</a></h1>
-          <div class="language-selector">
-            <div class="lang-option option--selector">
-              <button class="lang--es">
-                ES
-              </button>
-            </div>
-            <div class="lang-option">
-              <a href="#" class="lang--en">
-                EN
-              </a>
-            </div>
+          <div class="dp-c-dropdown language-selector">
+            <button class="lang--es" id="menubutton" aria-haspopup="true" aria-controls="menu2">
+              ES
+            </button>
+            <ul id="menu2" role="menu" aria-labelledby="menubutton">
+              <li role="none">
+                <a role="menuitem" href="#" class="lang--en">
+                  EN
+                </a>
+              </li>
+            </ul>
           </div>
         </header><!-- header -->
         <h5>INGRESA A DOPPLER</h5>
@@ -115,6 +115,12 @@
     <!-- build:js:dist js/app.js -->
     <script src="./js/main.js"></script>
     <!-- /build -->
+    <script type="text/javascript">
+      window.onload=function() {
+      var menubutton = new Menubutton(document.getElementById('menubutton'));
+      menubutton.init();
+      }
+    </script>
   </body>
 
 </html>
