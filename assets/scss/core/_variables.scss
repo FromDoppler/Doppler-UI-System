@@ -8,7 +8,8 @@ $dp-font-lineheight: 22px !default;
 $dp-font-small-lineheight: 18px;
 $dp-font-weight: 400 !default;
 $dp-font-family: Arial, sans-serif !default;
-$dp-font-family-proximanova: "proxima-nova", Helvetica;
+$dp-font-family-proximanova: "proxima-nova", Helvetica, Arial, sans-serif !default;
+$dp-font-family-handofsean: "hand-of-sean", Helvetica, Arial, sans-serif;
 $dp-font-size: 15px !default;
 $dp-font: $dp-font-weight $dp-font-size $dp-font-family !default;
 $dp-font-weight-light: 300 !default;
@@ -20,10 +21,7 @@ $dp-font-color-bright: #edede6 !default;
 $dp-font-color-dark: $dp-font-color !default;
 $dp-font-color-white: #fff !default;
 
-
-
 // variables margins/paddings
-
 $dp-spaces--lv0: 0;
 $dp-spaces--lv1: 6px;
 $dp-spaces--lv2: 12px;
@@ -42,9 +40,7 @@ $dp-spaces--lv14: 84px;
 $dp-spaces--lv15: 90px;
 $dp-spaces--lv16: 96px;
 
-
 // Font Size settings
-
 $dp-sizing--lvl10: 60px;
 $dp-sizing--lvl9: 50px;
 $dp-sizing--lvl8: 40px;
@@ -57,9 +53,7 @@ $dp-sizing--lvl2: 13px;
 $dp-sizing--lvl1: 11px;
 $dp-sizing--lvl0: 0;
 
-
 // Colors
-
 $dp-color-ghostwhite: #F2F2F2;
 $dp-color-lightgrey: #999999;
 $dp-color-grey: #666666;
@@ -89,9 +83,7 @@ $dp-bg-modal: #F7F7F7;
 $dp-bg-overlay: rgba(34, 34, 34, 0.95);
 $dp-color-brown-brightness: rgba(48,33,0,.2);
 
-
 // variables generic
-
 $dp-border-radius: 3px;
 $dp-border-radius--lv1: 30px;
 $dp-header-height: 4em;

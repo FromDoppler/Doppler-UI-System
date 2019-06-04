@@ -107,7 +107,7 @@ small {
   line-height: $dp-font-small-lineheight;
 }
 
-.link-green {
+a {
   color: $dp-color-green;
 
   &:hover {
@@ -115,10 +115,12 @@ small {
   }
 }
 
-.cursive {
-  font-family: 'hand-of-sean';
-}
+.dp-text {
+  &--cursive {
+    font-family: $dp-font-family-handofsean;
+  }
 
-.text-italic {
-  font-style: italic;
+  &--italic {
+    font-style: italic;
+  }
 }
