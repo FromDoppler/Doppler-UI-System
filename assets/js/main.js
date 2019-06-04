@@ -33,20 +33,10 @@ $("body").on('click', '.close-user--menu', function() {
   $('.user-menu').removeClass('open');
 });
 
-$("body").on('click', '.language-selector .lang-option', function() {
-  $(this).parents('.language-selector').toggleClass('is-open');
-});
-
 $(document).on('mouseup', function(e) {
   var menu = $(".user-menu");
-  var languageSelector = $(".language-selector");
-
   if (!menu.is(e.target) && menu.has(e.target).length === 0) {
     menu.removeClass('open');
-  }
-
-  if (!languageSelector.is(e.target) && languageSelector.has(e.target).length === 0) {
-    $('.language-selector').removeClass('is-open');
   }
 });
 

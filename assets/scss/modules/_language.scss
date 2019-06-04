@@ -3,21 +3,14 @@ Language selector
 */
 
 .language-selector {
-  position: relative;
   height: 34px;
   width: 63px;
-  overflow: hidden;
   margin-bottom: -10px;
   font-family: $dp-font-family;
-
-  &.is-open {
-    overflow: visible;
-  }
 
   button,
   a {
     appearance: none;
-    position: relative;
     line-height: 20px;
     padding: 7px 13px 7px 35px;
     color: $dp-color-darkgrey;
@@ -26,9 +19,8 @@ Language selector
     text-align: right;
     background-repeat: no-repeat;
     background-position: 12px center;
-    outline: 0;
+    border-radius: 3px;
     text-decoration: none;
-    display: block;
 
     &.lang--es {
       background-image: url(../img/flag--spanish.svg);
@@ -38,41 +30,28 @@ Language selector
     }
   }
 
-  .lang-option {
-    width: 63px;
-    height: 34px;
+  a[role="menuitem"] {
+    outline: 0;
+    box-shadow: 0 0 0 1px $dp-color-darkyellow, 0 0 0 2px rgba(0,0,0,.1);
 
-    &.option--selector {
-      button,
-      a {
-        &:after {
-          content: '';
-          width: 0;
-          height: 0;
-          position: absolute;
-          border-top: 5px solid $dp-color-darkgrey;
-          border-right: 5px solid transparent;
-          border-left: 5px solid transparent;
-          top: 50%;
-          transform: translateY(-50%);
-          right: 0;
-        }
-      }
+    &:hover,
+    &:focus {
+      background-color: $dp-color-ghostwhite;
     }
+  }
 
-    &:not(.option--selector) {
-      button,
-      a {
-        position: absolute;
-        top: 36px;
-        border-radius: $dp-border-radius;
-        box-shadow: 0 0 0 1px $dp-color-yellow, 0 0 0 2px rgba(0,0,0,.1);
-        z-index: 5;
-
-        &:hover {
-          background-color: #f2f1e9;
-        }
-      }
+  button {
+    &:after {
+      content: '';
+      width: 0;
+      height: 0;
+      position: absolute;
+      border-top: 4px solid $dp-color-darkgrey;
+      border-right: 4px solid transparent;
+      border-left: 4px solid transparent;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 3px;
     }
   }
 }
