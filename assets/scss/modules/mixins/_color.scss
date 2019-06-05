@@ -11,7 +11,6 @@
 ///   }
 ///
 
-
 $colours: (
   white: $dp-color-white,
   ghostwhite: $dp-color-ghostwhite,
@@ -40,8 +39,7 @@ $colours: (
   .#{nth($i, 1)}-color {
     color: nth($i, 2);
   }
-
   .#{nth($i, 1)}-background {
-  	background: nth($i, 2);
+    background: nth($i, 2);
   }
 }
