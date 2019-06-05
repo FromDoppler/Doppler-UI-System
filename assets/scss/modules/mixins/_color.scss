@@ -1,6 +1,7 @@
-/// @content [This mixin help you generate classes the colors for text and backgrounds, without having to write one by one for each color.]
+/// This mixin generate classes the colors for text and backgrounds, without having to write one by one for each color. More down see examples the classes generated.
 /// @author Ignacio Rodrigues
-/// @example
+/// @example Finish classes
+///
 ///   .sylver-color {
 ///     color: #CCCCCC;
 ///   }
@@ -9,7 +10,10 @@
 ///     color: #CCCCCC;
 ///   }
 ///
+
+
 $colours: (
+  white: $dp-color-white,
   ghostwhite: $dp-color-ghostwhite,
   lightgrey: $dp-color-lightgrey,
   grey: $dp-color-grey,
@@ -17,23 +21,19 @@ $colours: (
   lightgreen: $dp-color-lightgreen,
   green: $dp-color-green,
   darkgreen: $dp-color-darkgreen,
-  brightness-green: $dp-color-green-brightness,
-  sylver: $dp-color-sylver,
+  brightnessgreen: $dp-color-green-brightness,
+  silver: $dp-color-silver,
   snow: $dp-color-snow,
   lightyellow: $dp-color-lightyellow,
   lemonyellow: $dp-color-lemonyellow,
   yellow: $dp-color-yellow,
   darkyellow: $dp-color-darkyellow,
-  brightness-yellow: $dp-color-yellow-brightness,
+  brightnessyellow: $dp-color-yellow-brightness,
   lightred: $dp-color-lightred,
   red: $dp-color-red,
   darkred: $dp-color-darkred,
-  white: $dp-color-white,
-  border-grey: $dp-border-grey,
-  default: $dp-color-default,
-  lightbrown: $dp-color-lightbrown,
   brown: $dp-color-brown,
-  brown-hover: $dp-color-brown--hover
+  brownbrightness: $dp-color-brown--hover
 );
 
 @each $i in $colours {

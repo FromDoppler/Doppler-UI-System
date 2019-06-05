@@ -47,7 +47,7 @@
 
 .report-filters {
   background: $dp-color-ghostwhite;
-  border-bottom: 1px solid $dp-color-sylver;
+  border-bottom: 1px solid $dp-color-silver;
   box-shadow: 0 -4px 0 0 $dp-color-snow inset;
   padding: $dp-spaces--lv0 $dp-spaces--lv5;
 
@@ -136,7 +136,7 @@
     margin: 0 auto;
 
       .reports-box {
-        @include dp-box($dp-color-sylver, 30%, 408px, 250px);
+        @include dp-box($dp-color-silver, 30%, 408px, 250px);
         position: relative;
         margin-right: 4em;
 
@@ -229,7 +229,7 @@
   min-height: 200px;
 
   .reports-box {
-    @include dp-box($dp-color-sylver, 100%, 100%, 100%);
+    @include dp-box($dp-color-silver, 100%, 100%, 100%);
     position: relative;
     padding: $dp-spaces--lv0;
   }
@@ -248,8 +248,8 @@
 
   }
   .page-ranking--item {
-    border-top: 1px solid $dp-color-sylver;
-    border-bottom: 1px solid $dp-color-sylver;
+    border-top: 1px solid $dp-color-silver;
+    border-bottom: 1px solid $dp-color-silver;
     padding: $dp-spaces--lv3 $dp-spaces--lv5;
     background: $dp-color-ghostwhite;
     margin-bottom: $dp-spaces--lv1;

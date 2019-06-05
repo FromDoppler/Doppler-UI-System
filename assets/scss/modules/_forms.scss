@@ -74,7 +74,7 @@ select {
   color: $dp-color-grey;
   width: 100%;
   background-color: $dp-color-white;
-  border: 1px solid $dp-color-sylver;
+  border: 1px solid $dp-color-silver;
   border-radius: $dp-border-radius;
   font-size: $dp-sizing--lvl2;
   padding: 0 40px 0 10px;
@@ -88,8 +88,8 @@ select {
 
 select:disabled {
   background-color: $dp-color-snow;
-  border: 1px solid $dp-color-sylver;
-  color: $dp-color-sylver;
+  border: 1px solid $dp-color-silver;
+  color: $dp-color-silver;
 }
 
 textarea {
@@ -100,7 +100,7 @@ textarea {
   color: $dp-color-grey;
   border-radius: $dp-border-radius;
   font-size: $dp-sizing--lvl2;
-  border: 1px solid $dp-color-sylver;
+  border: 1px solid $dp-color-silver;
 
   &::placeholder {
     color: $dp-color-default;
@@ -436,7 +436,7 @@ input[type="tel"] {
   .container-buttons {
     margin-top: $dp-spaces--lv3;
     padding-top: $dp-spaces--lv3;
-    border-top: 1px solid $dp-color-sylver;
+    border-top: 1px solid $dp-color-silver;
     display: flex;
     justify-content: flex-end;
 
@@ -464,7 +464,7 @@ input[type="tel"] {
   .legend {
     font-size: $dp-sizing--lvl2;
     float: right;
-    color: $dp-color-sylver;
+    color: $dp-color-silver;
     font-style: italic;
     font-weight: $dp-font-weight-light;
   }

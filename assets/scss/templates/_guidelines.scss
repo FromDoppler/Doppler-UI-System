@@ -31,7 +31,7 @@ body {
   justify-content: flex-start;
   flex-wrap: wrap;
   padding-bottom: 30px;
-  border-bottom: 1px solid $dp-color-sylver;
+  border-bottom: 1px solid $dp-color-silver;
 }
 
 .nav-item {
@@ -110,12 +110,12 @@ body {
 
 .color-card {
   border: 1px solid $dp-color-ghostwhite;
-  height: 200px;
+  height: 250px;
   border-radius: $dp-border-radius;
-  box-shadow: 0 0.5em 1em -0.5em $dp-color-sylver;
+  box-shadow: 0 0.5em 1em -0.5em $dp-color-silver;
   overflow: hidden;
   margin-bottom: 30px;
-  width: 212px;
+  width: 215px;
 }
 
 .color-list {
@@ -127,7 +127,7 @@ body {
 
   li {
     margin-bottom: 10px;
-    text-align: center;
+    text-align: left;
   }
 }
 
