@@ -21,7 +21,35 @@
   &.header-open {
     min-height: 105px;
     overflow: visible;
+
+    &.dp-header--cm{
+      min-height: 185px;
+      overflow: visible;
+    }
   }
+}
+
+.dp-header--cm {
+  .dp-logo--cm {
+    margin-bottom: 15px;
+    max-width: 180px;
+    max-height: 50px;
+    width: 180px;
+    height: 50px;
+    background: #CCC;
+    display: block;
+    margin-left: 3%;
+    margin-top: 15px;
+    
+    img {
+      display: block;
+      height: auto;
+    }
+  }
+}
+
+.dp-logo--cm{
+  display: none;
 }
 
 .header-wrapper {
@@ -32,6 +60,8 @@
   align-items: center;
   display: flex;
 }
+
+
 
 .logo {
   display: flex;
