@@ -23,7 +23,7 @@
     overflow: visible;
 
     &.dp-header--cm{
-      min-height: 185px;
+      min-height: 179px;
       overflow: visible;
     }
   }
@@ -43,12 +43,12 @@
       height: auto;
     }
   }
-  .logo{
+  .logo {
     display: none;
   }
 }
 
-.dp-logo--cm{
+.dp-logo--cm {
   display: none;
 }
 
@@ -371,10 +371,24 @@ a {
   display: none;
 }
 @include media-breakpoint('desktop') {
-  .header-main.header-open {
-    height: 71px;
+
+  .header-main.header-open.dp-header--cm {
+    min-height: 70px;
+
+    .header-wrapper {
+      justify-content: flex-end;
+    }
   }
 
+  .dp-header--cm .dp-logo--cm{
+    position: absolute;
+    margin: $dp-spaces--lv2 $dp-spaces--lv0 $dp-spaces--lv2 $dp-spaces--lv8;
+  }
+
+  .header-main.header-open {
+    min-height: 70px;
+  }
+  
   .header-main.open {
     .nav-left-main {
       width: 303px;
@@ -412,6 +426,7 @@ a {
       font-size: 14px;
       width: 30px;
       cursor: pointer;
+      color: $dp-color-grey;
     }
 
     .icon-close {
