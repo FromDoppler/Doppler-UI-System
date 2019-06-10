@@ -32,11 +32,12 @@
 .dp-header--cm {
   .dp-logo--cm {
     margin: $dp-spaces--lv2 $dp-spaces--lv0 $dp-spaces--lv2 $dp-spaces--lv8;
-    max-width: 180px;
-    max-height: 50px;
-    width: 180px;
+    width: 30%;
     height: 50px;
+    line-height: 50px;
     display: block;
+    color: $dp-color-lightgrey;
+    font-size: $dp-sizing--lvl6;
 
     img {
       display: block;
