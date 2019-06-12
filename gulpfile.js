@@ -283,7 +283,7 @@ gulp.task('run', ['clean', 'serve'], function() {
   gulp.watch(config.folderAssets.fonts + '/*.*', ['copy:fonts', reload]);
   gulp.watch(config.folderAssets.images + '/**/*.*', ['copy:images']);
   gulp.watch(config.folderAssets.js + '/**/*.js', ['copy:js', reload]);
-  gulp.watch(config.folderAssets.base + '/templates/*.html', ['processHtml']);
+  gulp.watch(config.folderAssets.base + '/templates/**/*.*', ['processHtml']);
   util.log('Done!');
 });
 
