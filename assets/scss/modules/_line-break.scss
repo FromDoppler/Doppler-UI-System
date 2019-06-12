@@ -1,0 +1,5 @@
+@mixin dp-hr($color, $margin: 0) {
+  margin: $margin;
+  border: 0;
+  border-bottom: 1px solid $color;
+}

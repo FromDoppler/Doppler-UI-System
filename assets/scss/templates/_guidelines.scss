@@ -1,3 +1,28 @@
+body {
+  @for $active from 2 to 20 {
+    &[data-active-menu="#{$active}"] {
+      .nav .nav-item {
+        &:nth-of-type(#{$active}) {
+          .nav-link {
+            color: $dp-color-darkyellow;
+
+            &:before {
+              content: '';
+              width: 60px;
+              position: absolute;
+              border-bottom: 3px solid $dp-color-darkyellow;
+              bottom: 0;
+              right: 0;
+              @include transition-all;
+            }
+          }
+        }
+      }
+
+    }
+  }
+}
+
 .nav {
   margin: 10px 0 30px;
   list-style: none;
