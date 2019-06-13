@@ -368,7 +368,6 @@ input[type="tel"] {
   @extend .dp-message-box;
   @include dp-message($dp-color-darkgrey, $dp-sizing--lvl3);
   background-image: url("../img/warning-icon.svg");
-
 }
 
   .error {
