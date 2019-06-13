@@ -337,6 +337,10 @@ input[type="tel"] {
   background-repeat: no-repeat;
   font-family: $dp-font-family-proximanova;
 
+  a {
+    text-decoration: underline
+  }
+
 /* Validations Unexpected message */
 &.dp-error {
   @extend .dp-message-box;
@@ -358,6 +362,12 @@ input[type="tel"] {
     margin: $dp-spaces--lv4 $dp-spaces--lv0;
     font-size: $dp-sizing--lvl2;
   }
+
+}
+&.dp-warning-message {
+  @extend .dp-message-box;
+  @include dp-message($dp-color-darkgrey, $dp-sizing--lvl3);
+  background-image: url("../img/warning-icon.svg");
 
 }
 
