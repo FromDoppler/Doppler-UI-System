@@ -84,7 +84,7 @@
       height: 36px;
       border: 1px solid $dp-border-grey;
       border-radius: 0;
-      font-size: 22px;
+      font-size: $dp-sizing--lvl5;
       background-color: transparent;
 
       &.is-spinning {
