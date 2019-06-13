@@ -63,5 +63,21 @@ body {
   &--info {
     margin-top: $dp-spaces--lv4;
     padding-bottom: $dp-spaces--lv4;
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .button--has-icon {
+        color: $dp-color-lightgrey;
+
+        &.is-spinning {
+          [class*="-icon"] {
+            animation-name: counterspin;
+          }
+        }
+      }
+    }
   }
 }

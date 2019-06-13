@@ -78,6 +78,27 @@
       pointer-events: none;
       opacity: 0.4;
     }
+
+    &.button--has-icon {
+      width: 36px;
+      height: 36px;
+      border: 1px solid $dp-border-grey;
+      border-radius: 0;
+      font-size: 22px;
+      background-color: transparent;
+
+      &.is-spinning {
+        [class*="-icon"] {
+          display: inherit;
+          animation: spin 1s linear infinite;
+        }
+      }
+
+      &:hover {
+        border-color: darken($dp-border-grey, 10%);
+        background-color: $dp-color-white;
+      }
+    }
   }
 }
 @include dp-button();

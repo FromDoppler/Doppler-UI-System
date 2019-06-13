@@ -36,3 +36,23 @@
     transform: scale3d(1, 1, 1);
   }
 }
+
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes counterspin {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(-359deg);
+  }
+}
