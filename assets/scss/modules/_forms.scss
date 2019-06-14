@@ -337,8 +337,8 @@ input[type="tel"] {
   background-repeat: no-repeat;
   font-family: $dp-font-family-proximanova;
 
-  a {
-    text-decoration: underline
+  button, a{
+    text-decoration: underline;
   }
 
 /* Validations Unexpected message */
