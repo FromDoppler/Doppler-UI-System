@@ -74,7 +74,6 @@
 
   .feature-panel {
     flex: 4;
-    padding: $dp-spaces--lv5 $dp-spaces--lv10;
 
     .content-img{
       margin: $dp-spaces--lv0;
@@ -83,37 +82,13 @@
           width: 100%;
         }
     }
-
-  }
-
-  .bg--signup {
-    background-image: url("../img/yellow-violet.png");
-    background-size: cover;
-
-    h1, h6, p {
-      color: $dp-color-brown;
+    .feature-panel--bg {
+      background-size: cover;
+      padding: $dp-spaces--lv5 $dp-spaces--lv10;
+      h1, h6, p {
+        color: $dp-color-white;
+      }
     }
-
-  }
-
-  .bg--login {
-    background-image: url("../img/violet-yellow.png");
-    background-size: cover;
-
-    h1, h6, p {
-      color: $dp-color-white;
-    }
-
-  }
-
-  .bg--forgot {
-    background-image: url("../img/violet-yellow.png");
-    background-size: cover;
-
-    h1, h6, p {
-      color: $dp-color-white;
-    }
-
   }
 
   .feature-content {
