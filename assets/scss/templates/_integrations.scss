@@ -1,0 +1,75 @@
+.dp-integration {
+  @at-root {
+    &__block {
+      @include dp-box($dp-color-sylver, 100%, initial, initial);
+
+      padding: 0;
+
+      hr {
+        @include dp-hr($dp-border-grey);
+      }
+
+      .block {
+        padding: $dp-spaces--lv4;
+      }
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+
+    &__status {
+      display: flex;
+      align-items: center;
+
+      .status__info {
+        flex: 1;
+
+        img {
+          margin-right: $dp-spaces--lv2
+        }
+
+        > div {
+          display: flex;
+          align-items: center;
+        }
+
+        p {
+          margin: 0;
+
+          time {
+            font-weight: $dp-font-weight-bold;
+          }
+        }
+      }
+    }
+
+    &__actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: $dp-spaces--lv4;
+    }
+  }
+
+  &--info {
+    margin-top: $dp-spaces--lv4;
+    padding-bottom: $dp-spaces--lv4;
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .button--has-icon {
+        color: $dp-color-lightgrey;
+
+        &.is-spinning {
+          [class*="-icon"] {
+            animation-name: counterspin;
+          }
+        }
+      }
+    }
+  }
+}
