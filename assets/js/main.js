@@ -6,7 +6,7 @@ $('body').on({
       $('.header-main').removeClass('header-open');
     }
 
-    if (submenu && submenu[0].children.length) {
+    if (submenu[0] && submenu[0].children.length) {
       $('.header-main').addClass('header-open');
     }
   },
