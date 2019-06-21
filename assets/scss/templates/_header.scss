@@ -251,8 +251,13 @@
   opacity: 0;
   transition: all 0.3s ease;
 
-&.helper--right{
+&.helper--right {
   right: -12px;
+}
+
+&.notifications {
+    padding: 25px;
+    font-size: 13px;
 }
 
 h5 {
