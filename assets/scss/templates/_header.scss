@@ -182,11 +182,12 @@
     color: $dp-color-silver;
   }
 
-  a.active {
+  .active {
     color: $dp-color-lightgrey;
+    cursor: pointer;
   }
 
-  a.active:after {
+  .active:after {
     content: attr(data-count);
     color: $dp-color-white;
     background-color: $dp-color-yellow;
@@ -197,8 +198,8 @@
     font-size: 11px;
     position: absolute;
     text-align: center;
-    top: -5px;
-    left: 10px;
+    top: 6px;
+    left: 9px;
   }
 
   .user-avatar {
