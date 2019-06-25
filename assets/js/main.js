@@ -40,6 +40,17 @@ $(document).on('mouseup', function(e) {
   }
 });
 
+$(document).ready(function(){
+  var $notificationsContainer = $('.dp-notifications').closest('li').find('.user-menu--open'),
+      $countMessages = $('.dp-notifications .dp-msj-notif').length;
+
+  if ($countMessages > 0) {
+    $($notificationsContainer).attr('data-count',$countMessages);
+  }else{
+    $($notificationsContainer).addClass('dp-hidden');
+  }
+});
+
 // modals
 var $delayFade = 500;
 //Initialize all modals hidden

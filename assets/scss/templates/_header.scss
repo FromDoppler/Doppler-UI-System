@@ -201,6 +201,9 @@
     top: 6px;
     left: 9px;
   }
+  .dp-hidden:after{
+    display: none;
+  }
 
   .user-avatar {
     border-radius: 100%;
@@ -256,10 +259,12 @@
   right: -12px;
 }
 
-&.notifications {
+&.dp-notifications {
     padding: $dp-spaces--lv4;
     font-size: $dp-sizing--lvl2;
 }
+
+
 
 h5 {
   color: $dp-color-darkgrey;
@@ -377,6 +382,7 @@ a {
 .desktop-hd-hidden {
   display: none;
 }
+
 @include media-breakpoint('desktop') {
 
   .header-main.header-open.dp-header--cm {
