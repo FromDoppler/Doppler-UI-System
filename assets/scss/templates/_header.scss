@@ -47,6 +47,10 @@
   .logo {
     display: none;
   }
+  .nav-left-main {
+    flex: 1;
+    margin-left: 0;
+  }
 }
 
 .dp-logo--cm {
@@ -79,6 +83,7 @@
 
 .nav-left-main {
   flex: 1;
+  margin-left: 20px;
 }
 
 .menu-main {
