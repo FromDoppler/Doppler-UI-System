@@ -84,9 +84,11 @@
     }
     .feature-panel--bg {
       background-size: cover;
+      background-position: top;
+      height: 100%;
       padding: $dp-spaces--lv5 $dp-spaces--lv10;
       h1, h6, p {
-        color: $dp-color-white;
+        color: inherit;
       }
     }
   }
