@@ -271,7 +271,7 @@
           </div><!-- color-card -->
         </main><!-- main-colors -->
         <h2>Botones</h2>
-        <p><strong>3 tamaños de botón:</strong></p>
+        <p><strong>3 tamaños de botones principales que son verdes, aunque el color varia de acuerdo a lo que se necesite, puede ser verde o gris:</strong></p>
         <main class="main-buttons">
           <div class="buttons-card">
             <button type="button" class="dp-button button-big primary-green">Iniciar campaña</button>
@@ -280,6 +280,7 @@
               <ul class="button-list">
                 <li><strong>class:</strong> .button-big</li>
                 <li><strong>font-size:</strong> 15px;</li>
+                <li><strong>font-weight:</strong> 300;</li>
                 <li><strong>text-align:</strong> center;</li>
                 <li><strong>border-radius:</strong> 30px;</li>
                 <li><strong>padding:</strong> 16px 35px;</li>
@@ -293,9 +294,9 @@
               <ul class="button-list">
                 <li><strong>class:</strong> .button-medium</li>
                 <li><strong>font-size:</strong> 13px;</li>
+                <li><strong>font-weight:</strong> 300;</li>
                 <li><strong>text-align:</strong> center;</li>
                 <li><strong>padding:</strong> 13px 25px;</li>
-                <li><strong>border:</strong> 1px solid green;</li>
               </ul>
             </div>
           </div><!-- button-card -->
@@ -306,21 +307,22 @@
               <ul class="button-list">
                 <li><strong>class:</strong> .button-small</li>
                 <li><strong>font-size:</strong> 11px;</li>
+                <li><strong>font-weight:</strong> 300;</li>
                 <li><strong>text-align:</strong> center;</li>
                 <li><strong>padding:</strong> 10px 15px;</li>
-                <li><strong>border:</strong> 1px solid green;</li>
               </ul>
             </div>
           </div><!-- button-card -->
         </main><!-- main-buttons -->
+        <p><strong>Existen tres estados:</strong></p>
         <main class="main-buttons">
           <div class="buttons-card">
             <button type="button" class="dp-button button-medium primary-green button--loading">Spinner</button>
             <div class="button-description">
               <p><strong>Spinner</strong></p>
               <ul class="button-list">
-                <li><strong>background-color:</strong> lightgreen;</li>
-                <li><strong>border:</strong> 1px solid lightgreen;</li>
+                <li><strong>class:</strong> button-loading</li>
+                <li><strong>@include</strong> dp-preloader(#FFFFFF, 1.5em);</li>
               </ul>
             </div>
           </div><!-- button-card -->
@@ -330,7 +332,7 @@
               <p><strong>Disabled</strong></p>
               <ul class="button-list">
                 <li><strong>pointer-events:</strong> none;</li>
-                <li><strong>opacity:</strong> .4;</li>
+                <li><strong>opacity:</strong> 0.4;</li>
               </ul>
             </div>
           </div><!-- button-card -->
@@ -346,6 +348,41 @@
             </div>
           </div><!-- button-card -->
         </main><!-- main-buttons -->
+        <p><strong>También se pueden poner con bordes redondeados:</strong></p>
+        <main class="main-buttons">
+          <div class="buttons-card">
+            <button type="button" class="dp-button button-medium primary-green button--loading button--round">Spinner</button>
+            <div class="button-description">
+              <ul class="button-list">
+                <p><strong>Rounded</strong></p>
+                <li><strong>class:</strong> .button--round</li>
+                <li><strong>text-transform:</strong> uppercase;</li>
+                <li><strong>border-radius:</strong> 30px;</li>
+                <li><strong>font-weight:</strong> 600;</li>
+              </ul>
+            </div>
+          </div><!-- button-card -->
+          <div class="buttons-card">
+            <button type="button" class="dp-button button-medium primary-green button--round" disabled>Button Disabled</button>
+          </div><!-- button-card -->
+          <div class="buttons-card">
+            <button type="button" class="dp-button button-medium primary-green button--round">Iniciar campaña</button>
+          </div><!-- button-card -->
+        </main><!-- main-buttons -->
+        <p><strong>También podemos indicar que un boton tenga el estilo de un link:</strong></p>
+        <main class="main-buttons">
+          <div class="buttons-card">
+            <button type="button" class="dp-button link-green">Ancla</button>
+            <div class="button-description">
+              <p><strong>Button Link</strong></p>
+              <ul class="button-list">
+                <li><strong>class:</strong> .link-green</li>
+                <li><strong>color:</strong> #33ad73;</li>
+                <li>:hover {<strong>color:</strong> #008046;}</li>
+              </ul>
+            </div>
+          </div><!-- button-card -->
+        </main>
       </section><!-- section-module -->
     </main>
     <!-- build:js:dist js/app.js -->
