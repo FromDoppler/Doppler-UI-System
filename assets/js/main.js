@@ -43,7 +43,7 @@ $(document).on('mouseup', function(e) {
 $(document).ready(function(){
   var $notificationsContainer = $('.dp-notifications').closest('li').find('.user-menu--open');
   if ($($notificationsContainer).attr('data-count') == undefined) {
-     $($notificationsContainer).addClass('dp-hidden');
+      $($notificationsContainer).addClass('dp-hidden');
   }
 });
 
