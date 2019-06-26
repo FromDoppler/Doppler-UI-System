@@ -1,0 +1,46 @@
+/// This mixin generate classes the colors for text and backgrounds, without having to write one by one for each color. More down see examples the classes generated.
+/// @author Ignacio Rodrigues
+/// @access private
+/// @example
+///
+///   .sylver-color {
+///     color: #CCCCCC;
+///   }
+///
+///   .sylver-background {
+///     color: #CCCCCC;
+///   }
+///
+
+$colours: (
+  white: $dp-color-white,
+  ghostwhite: $dp-color-ghostwhite,
+  lightgrey: $dp-color-lightgrey,
+  grey: $dp-color-grey,
+  darkgrey: $dp-color-darkgrey,
+  lightgreen: $dp-color-lightgreen,
+  green: $dp-color-green,
+  darkgreen: $dp-color-darkgreen,
+  brightnessgreen: $dp-color-green-brightness,
+  silver: $dp-color-silver,
+  snow: $dp-color-snow,
+  lightyellow: $dp-color-lightyellow,
+  lemonyellow: $dp-color-lemonyellow,
+  yellow: $dp-color-yellow,
+  darkyellow: $dp-color-darkyellow,
+  brightnessyellow: $dp-color-yellow-brightness,
+  lightred: $dp-color-lightred,
+  red: $dp-color-red,
+  darkred: $dp-color-darkred,
+  brown: $dp-color-brown,
+  brownbrightness: $dp-color-brown--hover
+);
+
+@each $i in $colours {
+  .#{nth($i, 1)}-color {
+    color: nth($i, 2);
+  }
+  .#{nth($i, 1)}-background {
+    background: nth($i, 2);
+  }
+}

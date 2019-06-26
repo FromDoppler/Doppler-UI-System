@@ -47,6 +47,12 @@
       margin: $dp-spaces--lv0;
       font-family: $dp-font-family-proximanova;
       font-style: italic;
+
+      a {
+        font-weight: $dp-font-weight-bold;
+        text-transform: uppercase;
+        font-style: normal;
+      }
     }
 
     .content-promotion {
@@ -151,10 +157,4 @@
       }
     }
   }
-}
-
-.link--title {
-  font-weight: $dp-font-weight-bold;
-  text-transform: uppercase;
-  font-style: normal;
 }

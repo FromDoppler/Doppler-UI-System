@@ -74,6 +74,16 @@
       }
     }
 
+    &.link- {
+      &green {
+        color: $dp-color-green;
+
+        &:hover {
+          color: $dp-color-darkgreen;
+        }
+      }
+    }
+
     &:disabled {
       pointer-events: none;
       opacity: 0.4;

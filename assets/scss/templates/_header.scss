@@ -2,7 +2,7 @@
 
 .header-main {
   height: $dp-header-height;
-  border-bottom: 1px solid $dp-color-sylver;
+  border-bottom: 1px solid $dp-color-silver;
   box-shadow: 0 0 0 4px $dp-color-snow;
   background: $dp-color-white;
   position: relative;
@@ -179,7 +179,7 @@
   }
 
   a:hover {
-    color: $dp-color-sylver;
+    color: $dp-color-silver;
   }
 
   a.active {

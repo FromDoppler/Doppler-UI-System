@@ -1,7 +1,7 @@
 .dp-integration {
   @at-root {
     &__block {
-      @include dp-box($dp-color-sylver, 100%, initial, initial);
+      @include dp-box($dp-color-silver, 100%, initial, initial);
 
       padding: 0;
 
