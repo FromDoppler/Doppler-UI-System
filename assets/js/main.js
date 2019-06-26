@@ -41,13 +41,9 @@ $(document).on('mouseup', function(e) {
 });
 
 $(document).ready(function(){
-  var $notificationsContainer = $('.dp-notifications').closest('li').find('.user-menu--open'),
-      $countMessages = $('.dp-notifications .dp-msj-notif').length;
-
-  if ($countMessages > 0) {
-    $($notificationsContainer).attr('data-count',$countMessages);
-  }else{
-    $($notificationsContainer).addClass('dp-hidden');
+  var $notificationsContainer = $('.dp-notifications').closest('li').find('.user-menu--open');
+  if ($($notificationsContainer).attr('data-count') == undefined) {
+     $($notificationsContainer).addClass('dp-hidden');
   }
 });
 
