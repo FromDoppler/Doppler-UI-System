@@ -200,7 +200,13 @@
     text-align: center;
     top: 6px;
     left: 9px;
+    display: none;
   }
+  
+  .active[data-count]:after {
+    display: block;
+  }
+
   .dp-hidden:after{
     display: none;
   }
