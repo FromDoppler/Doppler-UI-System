@@ -182,11 +182,12 @@
     color: $dp-color-silver;
   }
 
-  a.active {
+  .active {
     color: $dp-color-lightgrey;
+    cursor: pointer;
   }
 
-  a.active:after {
+  .active:after {
     content: attr(data-count);
     color: $dp-color-white;
     background-color: $dp-color-yellow;
@@ -197,8 +198,17 @@
     font-size: 11px;
     position: absolute;
     text-align: center;
-    top: -5px;
-    left: 10px;
+    top: 6px;
+    left: 9px;
+    display: none;
+  }
+
+  .active[data-count]:after {
+    display: block;
+  }
+
+  .dp-hidden:after{
+    display: none;
   }
 
   .user-avatar {
@@ -251,9 +261,21 @@
   opacity: 0;
   transition: all 0.3s ease;
 
-&.helper--right{
+&.helper--right {
   right: -12px;
 }
+
+&.dp-notifications {
+    padding: $dp-spaces--lv4;
+    font-size: $dp-sizing--lvl2;
+
+  .dp-msj-notif + .dp-msj-notif {
+    border-top: 1px solid $dp-border-grey;
+    padding-top: 20px;
+  }
+}
+
+
 
 h5 {
   color: $dp-color-darkgrey;
@@ -371,6 +393,7 @@ a {
 .desktop-hd-hidden {
   display: none;
 }
+
 @include media-breakpoint('desktop') {
 
   .header-main.header-open.dp-header--cm {
