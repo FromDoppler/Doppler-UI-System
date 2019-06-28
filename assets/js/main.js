@@ -8,11 +8,16 @@ $('body').on({
 
     if (submenu[0] && submenu[0].children.length) {
       $('.header-main').addClass('header-open');
+    } else {
+      $('.sub-menu.open').hide();
     }
   },
   mouseleave: function() {
-    if(!$(this).hasClass('submenu-item')) {
+    if ($('.header-main .submenu-item > a.active').length > 0){
       $('.header-main').addClass('header-open');
+      $('.sub-menu.open').show(150);
+    } else {
+      $('.header-main').removeClass('header-open');
     }
   }
 }, '.menu-main>li');
