@@ -9,13 +9,13 @@ $('body').on({
     if (submenu[0] && submenu[0].children.length) {
       $('.header-main').addClass('header-open');
     } else {
-      $('.sub-menu.open').hide();
+      $('.sub-menu.open').removeClass('open');
     }
   },
   mouseleave: function() {
     if ($('.header-main .submenu-item > a.active').length > 0){
       $('.header-main').addClass('header-open');
-      $('.sub-menu.open').show(150);
+      $('.header-main .submenu-item > a.active + .sub-menu').addClass('open');
     } else {
       $('.header-main').removeClass('header-open');
     }
