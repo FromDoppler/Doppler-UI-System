@@ -37,11 +37,14 @@
 ///     </tbody>
 ///   </table>
 
-@mixin dp-c-table {
+
+
+
+@mixin dp-c-table ($bg-color-zebra, $font-size-table, $bg-color-hover){
 
   .dp-c-table {
     width: 100%;
-    font-size: $dp-sizing--lvl2;
+    font-size: $font-size-table;
     border-collapse: collapse;
     border-spacing: $dp-spaces--lv0;
     background: $dp-color-white;
@@ -53,7 +56,7 @@
       font-size: $dp-sizing--lvl1;
       font-weight: normal;
       color: $dp-color-grey;
-      height: 40px;
+      height:$dp-spaces--lv7;
       line-height: 18px;
       text-transform: uppercase;
       text-align: left;
@@ -86,19 +89,19 @@
       tr {
 
         &:nth-of-type(odd) {
-            background: $dp-color-ghostwhite;
+            background: $bg-color-zebra;
         }
 
         &:hover {
-          background: rgba(251, 178, 36, 0.1);
+          background: $bg-color-hover;
         }
       }
 
       td {
         color: $dp-color-grey;
-        border: 0;
+        border: $dp-spaces--lv0;
         box-shadow: $dp-spaces--lv0 -1px $dp-spaces--lv0 $dp-spaces--lv0 $dp-color-silver inset;
-        height: 40px;
+        height: $dp-spaces--lv7;
         padding-left: $dp-spaces--lv2;
         padding-right: $dp-spaces--lv3;
         font-size: $dp-sizing--lvl2;
@@ -114,4 +117,5 @@
   }
 }
 
-@include dp-c-table();
+@include dp-c-table($dp-color-ghostwhite, $dp-sizing--lvl2,$dp-color-hover-table);
+
