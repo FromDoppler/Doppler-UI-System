@@ -1,1 +1,117 @@
+////
+///	Tables
+/// @group Tables
+/// @author gbaamonde@makingsense.com
+////
+/// Table Component -
+/// This is a simple easy-to-use table component.
+/// @example markup
+///   <table class="dp-c-table">
+///     <caption>asdasdasd</caption>
+///     <thead>
+///       <tr>
+///         <th>
+///           Column 1
+///         </th>
+///         <th>
+///           Column 2
+///         </th>
+///       </tr>
+///     </thead>
+///     <tfoot>
+///       <tr>
+///         <td colspan="2">
+///           Single column for <tfoot>
+///         </td>
+///       </tr>
+///     </tfoot>
+///     <tbody>
+///       <tr>
+///         <td>
+///           Content 1
+///         </td>
+///         <td>
+///           Content 2
+///         </td>
+///       </tr>
+///     </tbody>
+///   </table>
 
+@mixin dp-c-table {
+
+  .dp-c-table {
+    width: 100%;
+    font-size: $dp-sizing--lvl2;
+    border-collapse: collapse;
+    border-spacing: $dp-spaces--lv0;
+    background: $dp-color-white;
+
+    th {
+      background: $dp-color-white;
+      border-top: 1px solid $dp-color-silver;
+      border-bottom: 1px dashed $dp-color-lightgrey;
+      font-size: $dp-sizing--lvl1;
+      font-weight: normal;
+      color: $dp-color-grey;
+      height: 40px;
+      line-height: 18px;
+      text-transform: uppercase;
+      text-align: left;
+      padding: $dp-spaces--lv0 $dp-spaces--lv3 $dp-spaces--lv0;
+
+      &:last-child a {
+        border-right: none;
+      }
+
+      a {
+        border-right: 1px solid $dp-color-lightgrey;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        color: $dp-color-grey;
+        font-weight: normal;
+
+        &:hover {
+          color: $dp-color-lightgrey;
+
+          span {
+            opacity: .6;
+          }
+        }
+      }
+  }
+
+    tbody {
+      tr {
+
+        &:nth-of-type(odd) {
+            background: $dp-color-ghostwhite;
+        }
+
+        &:hover {
+          background: rgba(251, 178, 36, 0.1);
+        }
+      }
+
+      td {
+        color: $dp-color-grey;
+        border: 0;
+        box-shadow: $dp-spaces--lv0 -1px $dp-spaces--lv0 $dp-spaces--lv0 $dp-color-silver inset;
+        height: 40px;
+        padding-left: $dp-spaces--lv2;
+        padding-right: $dp-spaces--lv3;
+        font-size: $dp-sizing--lvl2;
+      }
+    }
+
+    caption,
+    th,
+    td {
+      padding: $dp-spaces--lv2;
+      text-align: left;
+    }
+  }
+}
+
+@include dp-c-table();
