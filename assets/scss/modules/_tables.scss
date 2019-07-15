@@ -56,8 +56,6 @@
       font-size: $dp-sizing--lvl1;
       font-weight: normal;
       color: $dp-color-grey;
-      height:$dp-spaces--lv7;
-      line-height: 18px;
       text-transform: uppercase;
       text-align: left;
       padding: $dp-spaces--lv0 $dp-spaces--lv3 $dp-spaces--lv0;
@@ -104,7 +102,7 @@
         height: $dp-spaces--lv7;
         padding-left: $dp-spaces--lv2;
         padding-right: $dp-spaces--lv3;
-        font-size: $dp-sizing--lvl2;
+        font-size: $font-size-table;
       }
     }
 
@@ -117,5 +115,4 @@
   }
 }
 
-@include dp-c-table($dp-color-ghostwhite, $dp-sizing--lvl2,$dp-color-hover-table);
-
+@include dp-c-table($dp-color-ghostwhite, $dp-sizing--lvl2, $dp-color-hover-table);
