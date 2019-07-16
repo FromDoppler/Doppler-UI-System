@@ -109,10 +109,10 @@
         font-size: $font-size-table;
       }
 
-      .sync{
+      .sync {
         color: $dp-color-green;
 
-        td{
+        td {
           color: $dp-color-green;
           background: $dp-color-white;
           border-top: 1px solid $dp-color-green;
@@ -122,7 +122,7 @@
         .text-sync {
           animation: flash 2s infinite;
 
-          .icon-clock{
+          .icon-clock {
             margin: 0 5px;
             top: -2px;
             position: relative;
