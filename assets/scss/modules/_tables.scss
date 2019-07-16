@@ -85,9 +85,14 @@
 
     tbody {
       tr {
+        border-bottom: 1px solid $dp-color-silver;
 
-        &:nth-of-type(odd) {
-            background: $bg-color-zebra;
+        &:nth-child(odd) {
+          background: $bg-color-zebra;
+        }
+
+        &:nth-child(even) {
+          background: $dp-color-white;
         }
 
         &:hover {
@@ -95,15 +100,50 @@
         }
       }
 
+
       td {
         color: $dp-color-grey;
         border: $dp-spaces--lv0;
-        box-shadow: $dp-spaces--lv0 -1px $dp-spaces--lv0 $dp-spaces--lv0 $dp-color-silver inset;
-        height: $dp-spaces--lv7;
         padding-left: $dp-spaces--lv2;
         padding-right: $dp-spaces--lv3;
         font-size: $font-size-table;
       }
+
+      .sync{
+        color: $dp-color-green;
+
+        td{
+          color: $dp-color-green;
+          background: $dp-color-white;
+          border-top: 1px solid $dp-color-green;
+          border-bottom: 1px solid $dp-color-green;
+        }
+
+        .text-sync {
+          animation: flash 2s infinite;
+
+          .icon-clock{
+            margin: 0 5px;
+            top: -2px;
+            position: relative;
+          }
+        }
+
+          /// Animation text
+          @keyframes flash {
+            from,
+            50%,
+            to {
+              opacity: 1;
+            }
+
+            25%,
+            75% {
+              opacity: 0;
+            }
+          }
+        }
+
     }
 
     caption,
