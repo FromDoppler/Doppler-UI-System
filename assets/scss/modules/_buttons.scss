@@ -74,6 +74,19 @@
           color: $dp-color-white;
         }
       }
+
+      &brown {
+        background-color: $dp-color-brown;
+        border: 1px solid $dp-color-brown;
+        color: $dp-color-white;
+
+        &:hover {
+          background-color: $dp-color-brown--hover;
+          border: 1px solid $dp-color-brown--hover;
+          color: $dp-color-white;
+        }
+      }
+
     }
 
     &.link- {
