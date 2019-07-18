@@ -59,6 +59,7 @@
         &:hover {
           background-color: $dp-color-darkgreen;
           border: 1px solid $dp-color-darkgreen;
+          color: $dp-color-white;
         }
       }
 
@@ -70,6 +71,7 @@
         &:hover {
           background-color: $dp-color-darkgrey;
           border: 1px solid $dp-color-darkgrey;
+          color: $dp-color-white;
         }
       }
     }
