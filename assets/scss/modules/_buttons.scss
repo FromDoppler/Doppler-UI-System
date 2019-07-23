@@ -89,6 +89,29 @@
 
     }
 
+    &.secondary- {
+      &green {
+        background: transparent;
+        border: 1px solid $dp-color-green;
+        color: $dp-color-green;
+
+        &:hover {
+          background: $dp-color-green-brightness;
+        }
+      }
+
+      &brown {
+        background: transparent;
+        border: 1px solid $dp-color-brown;
+        color: $dp-color-brown;
+
+        &:hover {
+          background: $dp-color-brown-brightness;
+        }
+      }
+
+    }
+
     &.link- {
       &green {
         color: $dp-color-green;
