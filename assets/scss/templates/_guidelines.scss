@@ -209,3 +209,23 @@ body {
     padding: 5px 0;
   }
 }
+
+
+/* tooltip */
+
+.wrapper-tooltip{
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  padding: 100px 10px;
+}
+
+.dp-box{
+  @include dp-box($dp-color-silver, 30%, 408px, 250px);
+  overflow: visible;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  height: 30%;
+}
