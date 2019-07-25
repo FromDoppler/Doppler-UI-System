@@ -221,8 +221,6 @@ body {
 }
 
 .dp-box {
-  /* We can use the following parameters to customize them */
-  /* Mixin parameters $color - $width - $max-width - $min-height */
   @include dp-box($color:$dp-color-silver, $width:20%, $max-width:408px, $min-height:150px);
   overflow: visible;
   display: flex;
