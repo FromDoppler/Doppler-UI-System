@@ -1,1 +1,45 @@
 
+.breadcrumb {
+  font-size: $dp-sizing--lvl2;
+
+  a {
+    align-items: center;
+    color: $dp-color-green;
+    display: flex;
+    justify-content: center;
+    padding: 0 0.5em;
+  }
+
+  a:hover {
+    color: $dp-color-darkgreen;
+  }
+
+  ul {
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  li {
+    align-items: center;
+    display: flex;
+  }
+
+  li:first-child a {
+    padding-left: 0;
+  }
+
+  li.active a {
+    color: $dp-color-grey;
+    cursor: default;
+    pointer-events: none;
+  }
+
+  li + li::before {
+    content: "";
+    height: 10px;
+    border-right: 1px solid $dp-color-default;
+  }
+}
+
