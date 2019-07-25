@@ -145,6 +145,30 @@
           }
       }
     }
+  .box-border--bottom {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      border-bottom: 3px solid #33ad73;
+      width: 125px;
+      padding-top: 30px;
+      left:0;
+      display: block;
+    }
+  }
+  .title-reports-box {
+    padding: $dp-spaces--lv5;
+    display: inline-block;
+    font-size: $dp-sizing--lvl2;
+    color: $dp-color-darkgrey;
+    text-transform: uppercase;
+    line-height: $dp-spaces--lv3;
+    small {
+      display: block;
+      text-transform: none;
+    }
+  }
 }
 
 .number-kpi {
@@ -173,14 +197,6 @@
   margin: 5em 0 3em;
   position: relative;
   color:$dp-color-grey;
-
-  &:before {
-      content:"";
-      position: absolute;
-      border-bottom: 3px solid $dp-color-green;
-      width: 127px;
-      top: -25px;
-  }
 }
 .group-options {
   display: flex;
@@ -213,15 +229,15 @@
   .number-kpi {
     color:$dp-color-red;
   }
-  .text-kpi {
-    &:before {
-      border-bottom: 3px solid $dp-color-red;
+  .box-border--bottom {
+    &::after {
+      border-color: $dp-color-red;
     }
   }
 }
 
 /* Top ranking */
-.wrapper-ranking {
+.wrapper-reports-box {
   max-width: $dp-wrapper-max-width;
   margin: $dp-spaces--lv4 auto;
   font-family: $dp-font-family;
@@ -232,20 +248,6 @@
     @include dp-box($dp-color-silver, 100%, 100%, 100%);
     position: relative;
     padding: $dp-spaces--lv0;
-  }
-  .title-ranking {
-    padding: $dp-spaces--lv7 $dp-spaces--lv5;
-    display: inline-block;
-    font-size: $dp-sizing--lvl2;
-    color: $dp-color-darkgrey;
-    text-transform: uppercase;
-    line-height: $dp-spaces--lv3;
-
-      small {
-        display: block;
-        text-transform: none;
-      }
-
   }
   .page-ranking--item {
     border-top: 1px solid $dp-color-silver;
