@@ -31,15 +31,17 @@
   }
 
   li.active a {
-    color: $dp-color-grey;
+    color: $dp-color-lightgrey;
     cursor: default;
     pointer-events: none;
   }
 
   li + li::before {
-    content: "";
+    content: ">";
     height: 10px;
-    border-right: 1px solid $dp-color-default;
+    color: $dp-color-lightgrey;
+    top: 5px;
+    position: relative;
   }
 }
 
