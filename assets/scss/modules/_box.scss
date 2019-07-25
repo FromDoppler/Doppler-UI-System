@@ -4,7 +4,7 @@
 /// @access private
 /// @author gbaamonde@makingsense.com
 
-@mixin dp-box ($color:"", $width:"", $max-width:"", $min-height:"") {
+@mixin dp-box ($color:"$dp-color-silver", $width:"25%", $max-width:"400px", $min-height:"250px") {
   border-radius: $dp-border-radius;
   width: $width;
   max-width: $max-width;
