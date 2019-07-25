@@ -1,1 +1,119 @@
+/// Tooltips Component
+/// @example markup - HTML structure
+/// <p class="dp-tooltip-right">dooplertip <span class="tooltiptext">Tooltip text</span></p>
+/// In order to specify the orientation of the tooltip you can use the: dp-tooltip-top | dp-tooltip-right | dp-tooltip-bottom | dp-tooltip-left classes if you need it.
+/// @author gbaamonde@makingsense.com
 
+@mixin dp-tooltip ($bg-tooltip, $font-size-tooltip, $font-color-tooltip){
+  position: relative;
+  display: inline-block;
+  padding: 3px $dp-spaces--lv1;
+  margin: 0;
+  background: $bg-tooltip;
+  border-radius: $border-radius;
+  font-size: $font-size-tooltip;
+  text-transform: uppercase;
+  color: $font-color-tooltip;
+
+  .tooltiptext {
+    visibility: hidden;
+    position: absolute;
+    width: auto;
+    min-width: 170px;
+    display: inline-block;
+    padding: 5px;
+    background-color: $dp-color-black;
+    color: $dp-color-white;
+    text-align: center;
+    border-radius: $border-radius;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity .6s;
+
+    &:after {
+      content: "";
+      position: absolute;
+      border-width: 5px;
+      border-style: solid;
+    }
+  }
+
+  &:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+/// tooltip top
+
+.dp-tooltip-top {
+  @include dp-tooltip($dp-color-green, $dp-sizing--lvl1, $dp-color-white);
+
+  .tooltiptext {
+    bottom: 140%;
+    left: -50%;
+    right: -50%;
+
+    &:after {
+      top: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-color: $dp-color-black transparent transparent transparent;
+    }
+  }
+}
+
+/// tooltip right
+
+.dp-tooltip-right {
+  @include dp-tooltip($dp-color-green, $dp-sizing--lvl1, $dp-color-white);
+
+  .tooltiptext {
+    top: -50%;
+    left: 110%;
+
+    &:after {
+      top: 50%;
+      right: 100%;
+      margin-top: -5px;
+      border-color: transparent $dp-color-black transparent transparent;
+    }
+  }
+}
+
+/// tooltip bottom
+
+.dp-tooltip-bottom {
+  @include dp-tooltip($dp-color-green, $dp-sizing--lvl1, $dp-color-white);
+
+  .tooltiptext {
+    top: 140%;
+    left: -50%;
+    right: -50%;
+
+    &:after {
+      bottom: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-color: transparent transparent $dp-color-black transparent;
+    }
+  }
+}
+
+/// tooltip left
+
+.dp-tooltip-left {
+  @include dp-tooltip($dp-color-green, $dp-sizing--lvl1, $dp-color-white);
+
+  .tooltiptext {
+    top: -50%;
+    right: 110%;
+
+    &:after {
+      top: 50%;
+      left: 100%;
+      margin-top: -5px;
+      border-color: transparent transparent transparent $dp-color-black;
+    }
+  }
+}
