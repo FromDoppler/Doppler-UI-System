@@ -59,13 +59,13 @@
       text-transform: uppercase;
       text-align: left;
       padding: $dp-spaces--lv0 $dp-spaces--lv3 $dp-spaces--lv0;
+      position: relative;
 
-      &:last-child a {
-        border-right: none;
+      &:first-child {
+        border-left: none;
       }
 
       a {
-        border-right: 1px solid $dp-color-lightgrey;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -81,7 +81,15 @@
           }
         }
       }
-  }
+    }
+
+    th + th:before {
+      content: "";
+      height: 10px;
+      border-right: 1px solid $dp-color-lightgrey;
+      position: absolute;
+      left: 0;
+    }
 
     tbody {
       tr {
