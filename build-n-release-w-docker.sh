@@ -21,7 +21,7 @@ export MSYS2_ARG_CONV_EXCL="*"
 # Consider running this when local environment differs from docker environment
 # rm-rf node-modules
 
-rm -rf dist && mkdir dist
+mkdir -p dist
 
 docker run --rm \
     -e GH_TOKEN \
@@ -30,9 +30,11 @@ docker run --rm \
     -w /work \
     node:10 \
     /bin/sh -c "\
-      npm install -g gulp \
+      rm -rf ./dist/* \
+      && npm install -g gulp \
       && npm install \
       && ./node_modules/.bin/semantic-release \
+      && chmod +777 -R ./dist/* \
     "
 
 # read pkgVersion from version.txt (see package.json => $.release.prepare[?(@.path=="@semantic-release/exec")])

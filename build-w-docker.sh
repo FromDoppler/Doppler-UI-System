@@ -13,7 +13,7 @@ cd $(dirname $0)
 export MSYS_NO_PATHCONV=1
 export MSYS2_ARG_CONV_EXCL="*"
 
-rm -rf dist
+mkdir -p dist
 
 docker build --pull -t doppler-ui-system-source .
 docker run --rm \
@@ -21,6 +21,8 @@ docker run --rm \
     -p 3500:3500 \
     doppler-ui-system-source \
     /bin/sh -c "\
-      ./node_modules/.bin/eclint check \"**/*\" \
+      rm -rf ./dist/* \
+      && ./node_modules/.bin/eclint check \"**/*\" \
       && gulp dist \
+      && chmod +777 -R ./dist/* \
     "
