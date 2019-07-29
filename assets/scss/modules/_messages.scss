@@ -1,0 +1,34 @@
+/// Messages Component
+/// @example markup - HTML structure
+/// <div class="dp-msj-error bounceIn">
+///  <p></p>
+/// </div>
+/// We have four message styles for our users: .dp-msj-error, .dp-msj-succes, .dp-msj-warning, .dp-msj-user
+/// @author gbaamonde@makingsense.com
+
+@mixin dp-messages($color:"", $border-color:"", $background:"") {
+  font-size: $dp-sizing--lvl2;
+  display: inline-block;
+  width: 100%;
+  padding: 0px $dp-spaces--lv2;
+  margin: $dp-spaces--lv1 0;
+  color: $color;
+  border-color: $border-color;
+  border-style: solid;
+  border-width: 1px;
+  background: $background;
+}
+
+.dp-msj-error{
+  @include dp-messages($color:$dp-color-red, $border-color:$dp-color-red, $background:$dp-color-white)
+}
+.dp-msj-succes{
+  @include dp-messages($color:$dp-color-green, $border-color:$dp-color-green, $background:$dp-color-white)
+}
+.dp-msj-warning{
+  @include dp-messages($color:$dp-color-yellow, $border-color:$dp-color-yellow, $background:$dp-color-white)
+}
+.dp-msj-user{
+  @include dp-messages($color:$dp-color-lightgrey, $border-color:$dp-color-lightgrey, $background:$dp-color-white)
+}
+
