@@ -242,7 +242,6 @@
   margin: $dp-spaces--lv4 auto;
   font-family: $dp-font-family;
   position: relative;
-  min-height: 200px;
 
   .reports-box {
     @include dp-box($dp-color-silver, 100%, 100%, 100%);
