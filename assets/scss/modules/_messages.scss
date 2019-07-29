@@ -19,16 +19,16 @@
   background: $background;
 }
 
-.dp-msj-error{
+.dp-msj-error {
   @include dp-messages($color:$dp-color-red, $border-color:$dp-color-red, $background:$dp-color-white)
 }
-.dp-msj-succes{
+.dp-msj-succes {
   @include dp-messages($color:$dp-color-green, $border-color:$dp-color-green, $background:$dp-color-white)
 }
-.dp-msj-warning{
+.dp-msj-warning {
   @include dp-messages($color:$dp-color-yellow, $border-color:$dp-color-yellow, $background:$dp-color-white)
 }
-.dp-msj-user{
+.dp-msj-user {
   @include dp-messages($color:$dp-color-lightgrey, $border-color:$dp-color-lightgrey, $background:$dp-color-white)
 }
 
