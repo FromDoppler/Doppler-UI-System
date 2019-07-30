@@ -1,17 +1,22 @@
+/// Breadcrumb Component
+/// @example markup - HTML structure
+/// <nav class="dp-breadcrumb">
+///   <ul>
+///     <li><a href="#">Page link</a></li>
+///     <li><a href="#">Page link</a></li>
+///   </ul>
+/// </nav>
+///
+/// @author gbaamonde@makingsense.com
 
 .dp-breadcrumb {
   font-size: $dp-sizing--lvl2;
 
   a {
     align-items: center;
-    color: $dp-color-green;
     display: flex;
     justify-content: center;
-    padding: 0 0.5em;
-  }
 
-  a:hover {
-    color: $dp-color-darkgreen;
   }
 
   ul {
@@ -24,24 +29,15 @@
   li {
     align-items: center;
     display: flex;
+    padding: 0 0.5em;
   }
 
-  li:first-child a {
+  li:first-child {
     padding-left: 0;
   }
 
-  li.active {
+  li:last-child {
     color: $dp-color-lightgrey;
-
-    &:before {
-      margin-right: 5px;
-    }
-
-    a {
-      padding-left: 5px;
-      color: $dp-color-lightgrey;
-    }
-
   }
 
   li + li:before {
@@ -49,9 +45,8 @@
     height: 10px;
     color: $dp-color-lightgrey;
     top: -2px;
+    left: -5px;
     position: relative;
   }
-
-
 
 }
