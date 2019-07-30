@@ -32,8 +32,15 @@
 
   li.active {
     color: $dp-color-lightgrey;
-    cursor: default;
-    pointer-events: none;
+
+    :before {
+      margin-right: 5px;
+    }
+
+    a {
+      padding-left: 5px;
+    }
+
   }
 
   li + li:before {
@@ -44,8 +51,6 @@
     position: relative;
   }
 
-  li.active:before {
-    margin-right: 5px;
-  }
+
 
 }
