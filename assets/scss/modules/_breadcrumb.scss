@@ -33,7 +33,7 @@
   li.active {
     color: $dp-color-lightgrey;
 
-    :before {
+    &:before {
       margin-right: 5px;
     }
 
@@ -50,7 +50,5 @@
     top: -2px;
     position: relative;
   }
-
-
 
 }
