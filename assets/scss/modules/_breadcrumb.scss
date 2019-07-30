@@ -30,18 +30,22 @@
     padding-left: 0;
   }
 
-  li.active span {
+  li.active {
     color: $dp-color-lightgrey;
     cursor: default;
-    padding: 0 .5em;
     pointer-events: none;
   }
 
-  li + li::before {
+  li + li:before {
     content: ">";
     height: 10px;
     color: $dp-color-lightgrey;
     top: -2px;
     position: relative;
   }
+
+  li.active:before {
+    margin-right: 5px;
+  }
+
 }
