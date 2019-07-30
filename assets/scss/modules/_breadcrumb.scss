@@ -1,5 +1,5 @@
 
-.breadcrumb {
+.dp-breadcrumb {
   font-size: $dp-sizing--lvl2;
 
   a {
@@ -30,9 +30,10 @@
     padding-left: 0;
   }
 
-  li.active a {
+  li.active span {
     color: $dp-color-lightgrey;
     cursor: default;
+    padding: 0 .5em;
     pointer-events: none;
   }
 
