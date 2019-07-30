@@ -34,7 +34,7 @@ docker run --rm \
       && npm install -g gulp \
       && npm install \
       && ./node_modules/.bin/semantic-release \
-      && chmod +777 -R ./dist/* \
+      && chmod +777 -R --quiet ./dist/* \
     "
 
 # read pkgVersion from version.txt (see package.json => $.release.prepare[?(@.path=="@semantic-release/exec")])

@@ -24,5 +24,5 @@ docker run --rm \
       rm -rf ./dist/* \
       && ./node_modules/.bin/eclint check \"**/*\" \
       && gulp dist \
-      && chmod +777 -R ./dist/* \
+      && chmod +777 -R --quiet ./dist/* \
     "
