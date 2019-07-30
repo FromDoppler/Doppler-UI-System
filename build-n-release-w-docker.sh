@@ -39,7 +39,7 @@ docker run --rm \
 
 versionFile=./dist/version.txt
 
-if test -f "versionFile"; then
+if test -f "$versionFile"; then
   # read pkgVersion from version.txt (see package.json => $.release.prepare[?(@.path=="@semantic-release/exec")])
   pkgVersion=v$(cat "$versionFile")
 
