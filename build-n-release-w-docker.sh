@@ -34,33 +34,37 @@ docker run --rm \
       && npm install -g gulp \
       && npm install \
       && ./node_modules/.bin/semantic-release \
-      && chmod +777 -R ./dist/* \
+      && chmod +777 -R --quiet ./dist/* \
     "
 
-# read pkgVersion from version.txt (see package.json => $.release.prepare[?(@.path=="@semantic-release/exec")])
-pkgVersion=v$(cat dist/version.txt)
+versionFile=./dist/version.txt
 
-echo Publishing to Akamai...
-echo pkgName: $pkgName
-echo pkgVersion: $pkgVersion
-echo cdnBaseUrl: $cdnBaseUrl
+if test -f "versionFile"; then
+  # read pkgVersion from version.txt (see package.json => $.release.prepare[?(@.path=="@semantic-release/exec")])
+  pkgVersion=v$(cat "$versionFile")
 
-docker run --rm \
-    -e AKAMAI_CDN_HOSTNAME \
-    -e AKAMAI_CDN_USERNAME \
-    -e AKAMAI_CDN_PASSWORD \
-    -e AKAMAI_CDN_CPCODE \
-    -e "PROJECT_NAME=$pkgName" \
-    -e "VERSION_NAME=$pkgVersion" \
-    -v `pwd`/dist:/source \
-    dopplerrelay/doppler-relay-akamai-publish
+  echo Publishing to Akamai...
+  echo pkgName: $pkgName
+  echo pkgVersion: $pkgVersion
+  echo cdnBaseUrl: $cdnBaseUrl
 
-docker run --rm \
-    -e AKAMAI_CDN_HOSTNAME \
-    -e AKAMAI_CDN_USERNAME \
-    -e AKAMAI_CDN_PASSWORD \
-    -e AKAMAI_CDN_CPCODE \
-    -e "PROJECT_NAME=$pkgName" \
-    -e "VERSION_NAME=latest" \
-    -v `pwd`/dist:/source \
-dopplerrelay/doppler-relay-akamai-publish
+  docker run --rm \
+      -e AKAMAI_CDN_HOSTNAME \
+      -e AKAMAI_CDN_USERNAME \
+      -e AKAMAI_CDN_PASSWORD \
+      -e AKAMAI_CDN_CPCODE \
+      -e "PROJECT_NAME=$pkgName" \
+      -e "VERSION_NAME=$pkgVersion" \
+      -v `pwd`/dist:/source \
+      dopplerrelay/doppler-relay-akamai-publish
+
+  docker run --rm \
+      -e AKAMAI_CDN_HOSTNAME \
+      -e AKAMAI_CDN_USERNAME \
+      -e AKAMAI_CDN_PASSWORD \
+      -e AKAMAI_CDN_CPCODE \
+      -e "PROJECT_NAME=$pkgName" \
+      -e "VERSION_NAME=latest" \
+      -v `pwd`/dist:/source \
+  dopplerrelay/doppler-relay-akamai-publish
+fi
