@@ -37,6 +37,10 @@ docker run --rm \
       && chmod +777 -R --quiet ./dist/* \
     "
 
+# It seems that due a change in semantic release, when no version is generated
+# there is an error status code, so the following code is never executed.
+# I keeped it in case if, in the future, we configure semantic release in a
+# different way.
 versionFile=./dist/version.txt
 
 if test ! -f "$versionFile"; then
