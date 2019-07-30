@@ -39,32 +39,35 @@ docker run --rm \
 
 versionFile=./dist/version.txt
 
-if test -f "$versionFile"; then
-  # read pkgVersion from version.txt (see package.json => $.release.prepare[?(@.path=="@semantic-release/exec")])
-  pkgVersion=v$(cat "$versionFile")
-
-  echo Publishing to Akamai...
-  echo pkgName: $pkgName
-  echo pkgVersion: $pkgVersion
-  echo cdnBaseUrl: $cdnBaseUrl
-
-  docker run --rm \
-      -e AKAMAI_CDN_HOSTNAME \
-      -e AKAMAI_CDN_USERNAME \
-      -e AKAMAI_CDN_PASSWORD \
-      -e AKAMAI_CDN_CPCODE \
-      -e "PROJECT_NAME=$pkgName" \
-      -e "VERSION_NAME=$pkgVersion" \
-      -v `pwd`/dist:/source \
-      dopplerrelay/doppler-relay-akamai-publish
-
-  docker run --rm \
-      -e AKAMAI_CDN_HOSTNAME \
-      -e AKAMAI_CDN_USERNAME \
-      -e AKAMAI_CDN_PASSWORD \
-      -e AKAMAI_CDN_CPCODE \
-      -e "PROJECT_NAME=$pkgName" \
-      -e "VERSION_NAME=latest" \
-      -v `pwd`/dist:/source \
-  dopplerrelay/doppler-relay-akamai-publish
+if test ! -f "$versionFile"; then
+  echo $versionFile does not exists, finishing without error...
+  exit 0
 fi
+
+# read pkgVersion from version.txt (see package.json => $.release.prepare[?(@.path=="@semantic-release/exec")])
+pkgVersion=v$(cat "$versionFile")
+
+echo Publishing to Akamai...
+echo pkgName: $pkgName
+echo pkgVersion: $pkgVersion
+echo cdnBaseUrl: $cdnBaseUrl
+
+docker run --rm \
+    -e AKAMAI_CDN_HOSTNAME \
+    -e AKAMAI_CDN_USERNAME \
+    -e AKAMAI_CDN_PASSWORD \
+    -e AKAMAI_CDN_CPCODE \
+    -e "PROJECT_NAME=$pkgName" \
+    -e "VERSION_NAME=$pkgVersion" \
+    -v `pwd`/dist:/source \
+    dopplerrelay/doppler-relay-akamai-publish
+
+docker run --rm \
+    -e AKAMAI_CDN_HOSTNAME \
+    -e AKAMAI_CDN_USERNAME \
+    -e AKAMAI_CDN_PASSWORD \
+    -e AKAMAI_CDN_CPCODE \
+    -e "PROJECT_NAME=$pkgName" \
+    -e "VERSION_NAME=latest" \
+    -v `pwd`/dist:/source \
+dopplerrelay/doppler-relay-akamai-publish
