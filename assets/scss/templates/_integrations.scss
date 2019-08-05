@@ -1,4 +1,7 @@
 .dp-integration {
+
+  margin-top: 20px;
+
   @at-root {
     &__block {
       @include dp-box($dp-color-silver, 100%, initial, initial);
