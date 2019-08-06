@@ -129,6 +129,7 @@
 .container-reports {
   width: 100%;
   padding: $dp-spaces--lv10 $dp-spaces--lv5;
+  flex: 1;
 
   .wrapper-kpi {
     display: flex;
