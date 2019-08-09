@@ -238,16 +238,15 @@ body {
 /*-----------------------------------------------------------------------------------------------*/
 /// New Layout 2019
 
-/* New Layout */
-
-.dp-wrapper-main {
+.dpsg-main-wrap {
   display: flex;
   flex-direction: column;
   font-family: $dp-font-family-proximanova;
 }
 
-/* Intro Animatio Layers */
-.dp-intro-open {
+/* Intro Animation Layers */
+
+.dpsg-intro-open {
   position: fixed;
   top: 0;
   left: 0;
@@ -256,7 +255,7 @@ body {
   pointer-events: none;
   z-index: 1000;
 
-  .dp-layer {
+  .dpsg-layer {
     position: absolute;
     top: 0;
     left: 0;
@@ -266,12 +265,12 @@ body {
     animation: introOpen .5s ease-in-out forwards;
   }
 
-  .dp-layer:nth-child(1) {
+  .dpsg-layer:nth-child(1) {
     background: $dp-color-darkgrey;
     z-index: 2;
   }
 
-  .dp-layer:nth-child(2) {
+  .dpsg-layer:nth-child(2) {
     background: $dp-color-darkyellow;
     z-index: 1;
     animation-delay: .8s;
@@ -279,9 +278,9 @@ body {
 
 }
 
-/* wrapper header*/
+/* Header Wrapper */
 
-.dp-wrapper-header {
+.dpsg-header-wrap {
   height: 170px;
   display: flex;
   position: relative;
@@ -302,7 +301,7 @@ body {
     animation-delay: 2s;
   }
 
-  .dp-logo {
+  .dpsg-logo {
     width: 70px;
     height: 70px;
     margin: $dp-spaces--lv7 $dp-spaces--lv0 $dp-spaces--lv5 $dp-spaces--lv5;
@@ -320,9 +319,9 @@ body {
 
 }
 
-/* header text*/
+/* Animation Header Text */
 
-.dp-banner-text {
+.dpsg-animation-text {
   display: block;
   padding: $dp-spaces--lv7 $dp-spaces--lv0 $dp-spaces--lv5 $dp-spaces--lv3;
 
@@ -331,7 +330,6 @@ body {
     position: relative;
     margin: $dp-spaces--lv0;
     padding: $dp-spaces--lv0;
-    /*color: $dp-color-yellow;*/
     color: $dp-color-darkyellow;
     line-height: 1.2em;
     display: inline-block;
@@ -373,14 +371,14 @@ body {
 
 }
 
-.dp-wrapper-container {
+.dpsg-wrapper {
   display: flex;
   height: 100vh;
   flex: 1;
 
-  /* Aside */
+  /* Aside Wrapper Navigation */
 
-.dp-wrapper-aside {
+.dpsg-navigation-wrap {
   background: $dp-color-white;
   width: 300px;
   padding: $dp-spaces--lv5 $dp-spaces--lv5;
@@ -432,7 +430,7 @@ body {
 
 }
 
-.dp-nav-aside {
+.dpsg-navigation {
 
   ul {
     list-style: none;
@@ -545,28 +543,32 @@ body {
   }
 }
 
-/* Wrapper Content */
+/* Content Wrapper */
 
-.dp-wrapper-content {
+.dpsg-content-wrap {
   flex: 1;
   padding: $dp-spaces--lv7 $dp-spaces--lv5;
   opacity: 0;
   animation: fadeInLeft 0.5s linear forwards;
   animation-delay: 4.5s;
 
-  h3 {
-    font-size: $dp-sizing--lvl6;
-    font-weight: 300;
-    display: inline-block;
-    color: $dp-color-darkyellow;
-    position: relative;
+  .dpsg-content-module {
+
+    h3 {
+      font-size: $dp-sizing--lvl6;
+      font-weight: 300;
+      display: inline-block;
+      color: $dp-color-darkyellow;
+      position: relative;
+    }
+
   }
 
 }
 
-/* Wrapper Footer */
+/* Footer Wrapper */
 
-.dp-wrapper-footer {
+.dpsg-footer-wrap {
   padding: $dp-spaces--lv8 $dp-spaces--lv5;
   margin: $dp-spaces--lv5 $dp-spaces--lv0 $dp-spaces--lv0;
   background: $dp-color-white;
@@ -684,7 +686,7 @@ body {
 
 }
 
-/* Animation Aside */
+/* Animation for Aside */
 
 @keyframes fadeInBottom {
 
