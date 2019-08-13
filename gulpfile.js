@@ -91,9 +91,12 @@ var config = {
       display: {
         watermark: false
       },
-    // theme: './node_modules/sassdoc-theme-flippant', // para agregar un theme en particular
     groups: {
-      'undefined': 'General'
+      'undefined': 'general'
+    },
+    package: {
+      title: "Doppler UI Library",
+      homepage: "/",
     }
   },
   sassdocOptionsDist: {
@@ -102,7 +105,11 @@ var config = {
         watermark: false
       },
     groups: {
-      'undefined': 'General'
+      'undefined': 'general'
+    },
+    package: {
+      title: "Doppler UI Library",
+      homepage: "/",
     }
   }
 };

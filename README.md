@@ -16,6 +16,10 @@ Simply including the css and js file in your html. Just check the correct versio
 **JS** (optional, you can include your own js instead)
 `<script type="text/javascript" src="https://cdn.fromdoppler.com/doppler-ui-library/vx.x.x/js/app.js"></script>`
 
+# How to apply components and use mixins?
+
+Check our [Documentation](http://cdn.fromdoppler.com/doppler-ui-library/latest/documentation/index.html)
+
 # Contributing to this project
 
 If you want to contribute to this project you should follow the rules:
