@@ -5,7 +5,7 @@
 ////
 
 ///
-@import "../helpers/colors";
+@import '../helpers/colors';
 
 /// Fonts
 $dp-font-color: #101010 !default;
@@ -23,23 +23,20 @@ $dp-font-weight-regular: $dp-font-weight !default;
 $dp-font-size: 15px !default;
 ///
 $dp-font-family: Arial, sans-serif !default;
-$dp-font-family-proximanova: "proxima-nova", Helvetica, Arial, sans-serif !default;
-$dp-font-family-handofsean: "hand-of-sean";
+$dp-font-family-proximanova: 'proxima-nova', Helvetica, Arial, sans-serif !default;
+$dp-font-family-handofsean: 'hand-of-sean';
 ///
 $dp-font: $dp-font-weight $dp-font-size $dp-font-family !default;
-
 
 /// Background ///
 ///
 $dp-background: $dp-color-ghostwhite !default;
 ///
 
-
 /// Wrapper ///
 ///
 $dp-wrapper-min-width: 1200px !default;
 $dp-wrapper-max-width: 1260px !default;
-
 
 /// Breakpoints ///
 ///
@@ -48,10 +45,8 @@ $dp-breakpoints: (
   mobile: 'max-width: 480px',
   ipad: 'max-width: 768px',
   desktop: 'max-width: 1024px',
-  hddesktop: 'max-width: 1440px'
-)
-!default;
-
+  hddesktop: 'max-width: 1440px',
+) !default;
 
 /// Transitions/Animation ///
 ///

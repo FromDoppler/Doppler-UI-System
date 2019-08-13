@@ -21,7 +21,7 @@
     min-height: 105px;
     overflow: visible;
 
-    &.dp-header--cm{
+    &.dp-header--cm {
       min-height: 179px;
       overflow: visible;
     }
@@ -64,8 +64,6 @@
   align-items: center;
   display: flex;
 }
-
-
 
 .logo {
   display: flex;
@@ -210,7 +208,7 @@
     display: block;
   }
 
-  .dp-hidden:after{
+  .dp-hidden:after {
     display: none;
   }
 
@@ -264,41 +262,39 @@
   opacity: 0;
   transition: all 0.3s ease;
 
-&.helper--right {
-  right: -12px;
-}
+  &.helper--right {
+    right: -12px;
+  }
 
-&.dp-notifications {
+  &.dp-notifications {
     padding: $dp-spaces--lv4;
     font-size: $dp-sizing--lvl2;
 
-  .dp-msj-notif + .dp-msj-notif {
-    border-top: 1px solid $dp-border-grey;
-    padding-top: 20px;
+    .dp-msj-notif + .dp-msj-notif {
+      border-top: 1px solid $dp-border-grey;
+      padding-top: 20px;
+    }
   }
-}
 
-
-
-h5 {
-  color: $dp-color-darkgrey;
-  margin: $dp-spaces--lv0;
-  font-weight: bold;
-}
-
-p {
-  margin: $dp-spaces--lv1 $dp-spaces--lv0 $dp-spaces--lv2;
-  font-size: $dp-sizing--lvl2;
-}
-
-a {
-  font-size: $dp-sizing--lvl2;
-  color: $dp-color-green;
-
-  &:hover {
-    color: $dp-color-darkgreen;
+  h5 {
+    color: $dp-color-darkgrey;
+    margin: $dp-spaces--lv0;
+    font-weight: bold;
   }
-}
+
+  p {
+    margin: $dp-spaces--lv1 $dp-spaces--lv0 $dp-spaces--lv2;
+    font-size: $dp-sizing--lvl2;
+  }
+
+  a {
+    font-size: $dp-sizing--lvl2;
+    color: $dp-color-green;
+
+    &:hover {
+      color: $dp-color-darkgreen;
+    }
+  }
 
   &::before {
     content: '';
@@ -346,7 +342,6 @@ a {
   }
 
   .options-user {
-
     li {
       border-top: 1px solid $dp-border-grey;
       padding: 12px 0;
@@ -398,7 +393,6 @@ a {
 }
 
 @include media-breakpoint('desktop') {
-
   .header-main.header-open.dp-header--cm {
     min-height: 70px;
 
@@ -407,7 +401,7 @@ a {
     }
   }
 
-  .dp-header--cm .dp-logo--cm{
+  .dp-header--cm .dp-logo--cm {
     position: absolute;
     margin: $dp-spaces--lv2 $dp-spaces--lv0 $dp-spaces--lv2 $dp-spaces--lv8;
   }

@@ -1,4 +1,4 @@
-@import "modules/_preload";
+@import 'modules/_preload';
 @mixin dp-button() {
   .dp-button {
     display: inline-block;
@@ -86,7 +86,6 @@
           color: $dp-color-white;
         }
       }
-
     }
 
     &.secondary- {
@@ -109,7 +108,6 @@
           background: $dp-color-brown-brightness;
         }
       }
-
     }
 
     &.link- {
@@ -136,7 +134,7 @@
       background-color: transparent;
 
       &.is-spinning {
-        [class*="-icon"] {
+        [class*='-icon'] {
           display: inherit;
           animation: spin 1s linear infinite;
         }

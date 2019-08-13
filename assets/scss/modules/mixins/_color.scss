@@ -33,7 +33,7 @@ $colours: (
   red: $dp-color-red,
   darkred: $dp-color-darkred,
   brown: $dp-color-brown,
-  brownbrightness: $dp-color-brown--hover
+  brownbrightness: $dp-color-brown--hover,
 );
 
 @each $i in $colours {

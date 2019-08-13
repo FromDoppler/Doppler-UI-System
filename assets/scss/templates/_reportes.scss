@@ -1,4 +1,3 @@
-
 .dp-wrapper-messages {
   max-width: 960px; /* TODO: check to modularize the messages */
   margin: $dp-spaces--lv0 auto;
@@ -41,7 +40,7 @@
   }
 }
 /* TODO: Atomic class - check to modularize the messages */
-.bg-message--grey{
+.bg-message--grey {
   background: $dp-color-ghostwhite;
 }
 
@@ -75,7 +74,7 @@
     border-right: 20px solid transparent;
     border-bottom: 20px solid transparent;
     border-left: 20px solid transparent;
-    box-shadow: inset 10px 10px rgba(0,0,0, .8);
+    box-shadow: inset 10px 10px rgba(0, 0, 0, 0.8);
   }
 }
 
@@ -136,25 +135,25 @@
     max-width: $dp-wrapper-max-width;
     margin: 0 auto;
 
-      .reports-box {
-        @include dp-box($dp-color-silver, 30%, 408px, 250px);
-        position: relative;
-        margin-right: 4em;
+    .reports-box {
+      @include dp-box($dp-color-silver, 30%, 408px, 250px);
+      position: relative;
+      margin-right: 4em;
 
-          &:last-child{
-            margin-right: 0;
-          }
+      &:last-child {
+        margin-right: 0;
       }
     }
+  }
   .box-border--bottom {
     position: relative;
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       border-bottom: 3px solid #33ad73;
       width: 125px;
       padding-top: 30px;
-      left:0;
+      left: 0;
       display: block;
     }
   }
@@ -197,7 +196,7 @@
   font-size: $dp-sizing--lvl2;
   margin: 5em 0 3em;
   position: relative;
-  color:$dp-color-grey;
+  color: $dp-color-grey;
 }
 .group-options {
   display: flex;
@@ -208,7 +207,7 @@
     margin-right: 12px;
 
     a {
-      color:$dp-color-green;
+      color: $dp-color-green;
       font-weight: bold;
       text-transform: uppercase;
       font-size: $dp-sizing--lvl1;
@@ -216,7 +215,7 @@
       @include transition-all;
     }
     a:hover {
-      color:$dp-color-darkgreen;
+      color: $dp-color-darkgreen;
     }
     .icon-kpi {
       font-size: 14px;
@@ -228,7 +227,7 @@
 }
 .warning--kpi {
   .number-kpi {
-    color:$dp-color-red;
+    color: $dp-color-red;
   }
   .box-border--bottom {
     &::after {
@@ -257,7 +256,7 @@
     margin-bottom: $dp-spaces--lv1;
 
     .text-ranking {
-      margin:$dp-spaces--lv0;
+      margin: $dp-spaces--lv0;
       font-size: $dp-sizing--lvl2;
       color: $dp-color-darkgrey;
       @include transition-all;
@@ -267,7 +266,7 @@
       font-size: $dp-sizing--lvl2;
 
       &:hover {
-        color:$dp-color-darkgreen;
+        color: $dp-color-darkgreen;
       }
     }
   }

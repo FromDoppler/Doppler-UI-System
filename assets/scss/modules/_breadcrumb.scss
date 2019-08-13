@@ -16,7 +16,6 @@
     align-items: center;
     display: flex;
     justify-content: center;
-
   }
 
   ul {
@@ -41,12 +40,11 @@
   }
 
   li + li:before {
-    content: ">";
+    content: '>';
     height: 10px;
     color: $dp-color-lightgrey;
     top: -2px;
     left: -5px;
     position: relative;
   }
-
 }

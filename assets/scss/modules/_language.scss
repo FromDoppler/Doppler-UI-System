@@ -30,9 +30,9 @@ Language selector
     }
   }
 
-  a[role="menuitem"] {
+  a[role='menuitem'] {
     outline: 0;
-    box-shadow: 0 0 0 1px $dp-color-darkyellow, 0 0 0 2px rgba(0,0,0,.1);
+    box-shadow: 0 0 0 1px $dp-color-darkyellow, 0 0 0 2px rgba(0, 0, 0, 0.1);
 
     &:hover,
     &:focus {
@@ -57,9 +57,7 @@ Language selector
 }
 
 @include media-breakpoint('mobilexs') {
-
   .language-selector {
-      top: $dp-spaces--lv1;
+    top: $dp-spaces--lv1;
   }
-
 }

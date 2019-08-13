@@ -6,7 +6,7 @@
 /// We have four message styles for our users: .dp-msj-error, .dp-msj-succes, .dp-msj-warning, .dp-msj-user
 /// @author gbaamonde@makingsense.com
 
-@mixin dp-messages($color:"", $border-color:"", $background:"") {
+@mixin dp-messages($color: '', $border-color: '', $background: '') {
   font-size: $dp-sizing--lvl2;
   display: inline-block;
   width: 100%;
@@ -21,7 +21,11 @@
 }
 
 .dp-msj-error {
-  @include dp-messages($color:$dp-color-red, $border-color:$dp-color-red, $background:$dp-color-white);
+  @include dp-messages(
+    $color: $dp-color-red,
+    $border-color: $dp-color-red,
+    $background: $dp-color-white
+  );
 
   a {
     color: $dp-color-red;
@@ -30,20 +34,25 @@
     &:hover {
       color: $dp-color-darkred;
     }
-
   }
-
 }
 .dp-msj-succes {
-  @include dp-messages($color:$dp-color-green, $border-color:$dp-color-green, $background:$dp-color-white);
+  @include dp-messages(
+    $color: $dp-color-green,
+    $border-color: $dp-color-green,
+    $background: $dp-color-white
+  );
 
   a {
     text-decoration: underline;
   }
-
 }
 .dp-msj-warning {
-  @include dp-messages($color:$dp-color-yellow, $border-color:$dp-color-yellow, $background:$dp-color-white);
+  @include dp-messages(
+    $color: $dp-color-yellow,
+    $border-color: $dp-color-yellow,
+    $background: $dp-color-white
+  );
 
   a {
     color: $dp-color-yellow;
@@ -52,16 +61,16 @@
     &:hover {
       color: $dp-color-darkyellow;
     }
-
   }
-
 }
 .dp-msj-user {
-  @include dp-messages($color:$dp-color-lightgrey, $border-color:$dp-color-lightgrey, $background:$dp-color-white);
+  @include dp-messages(
+    $color: $dp-color-lightgrey,
+    $border-color: $dp-color-lightgrey,
+    $background: $dp-color-white
+  );
 
   a {
     text-decoration: underline;
   }
-
 }
-

@@ -75,18 +75,17 @@
         font-family: $dp-font-family-proximanova;
       }
     }
-
   }
 
   .feature-panel {
     flex: 4;
 
-    .content-img{
+    .content-img {
       margin: $dp-spaces--lv0;
 
-        img{
-          width: 100%;
-        }
+      img {
+        width: 100%;
+      }
     }
     .feature-panel--bg {
       background-size: cover;
@@ -96,7 +95,9 @@
       min-height: 968px;
       max-height: 1200px;
 
-      h1, h6, p {
+      h1,
+      h6,
+      p {
         color: inherit;
       }
     }
@@ -145,18 +146,17 @@
 }
 
 @include media-breakpoint('mobilexs') {
-
-  .panel-wrapper{
+  .panel-wrapper {
     .main-panel {
-        padding: $dp-spaces--lv5 $dp-spaces--lv4;
+      padding: $dp-spaces--lv5 $dp-spaces--lv4;
 
       h5 {
-          margin: $dp-spaces--lv8 $dp-spaces--lv0 $dp-spaces--lv1;
-          font-size: $dp-sizing--lvl2;
+        margin: $dp-spaces--lv8 $dp-spaces--lv0 $dp-spaces--lv1;
+        font-size: $dp-sizing--lvl2;
       }
       .content-subtitle {
-          font-size: $dp-sizing--lvl2;
-          line-height: $dp-spaces--lv3;
+        font-size: $dp-sizing--lvl2;
+        line-height: $dp-spaces--lv3;
       }
     }
   }
