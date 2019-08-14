@@ -31,7 +31,7 @@
     "autoprefixer": "^9.6.1",
     "browser-sync": "^2.26.7",
     "css-mqpacker": "~7.0.0",
-    "del": "^4.1.1",
+    "del": "^5.0.0",
     "eclint": "^2.8.1",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^4.2.0",
