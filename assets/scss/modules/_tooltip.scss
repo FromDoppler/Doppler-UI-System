@@ -3,6 +3,7 @@
 /// <p class="dp-tooltip-right">dooplertip <span class="tooltiptext">Tooltip text</span></p>
 /// In order to specify the orientation of the tooltip you can use the: dp-tooltip-top | dp-tooltip-right | dp-tooltip-bottom | dp-tooltip-left classes if you need it.
 /// @author gbaamonde@makingsense.com
+/// Classes for the tooltip component
 
 @mixin dp-tooltip($bg-tooltip, $font-size-tooltip, $font-color-tooltip) {
   position: relative;

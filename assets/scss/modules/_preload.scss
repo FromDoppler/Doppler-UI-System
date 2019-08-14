@@ -1,3 +1,10 @@
+////
+/// Preloader component
+/// @access private
+/// @author Gustavo Baamonde
+/// Classes and Mixin for the Preloader component
+////
+
 @mixin dp-preloader($color, $size, $background: '') {
   @if $background != '' {
     position: absolute;

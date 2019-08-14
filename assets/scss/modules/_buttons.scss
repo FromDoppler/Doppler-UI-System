@@ -1,3 +1,11 @@
+////
+/// Button component
+/// Mixin creator of classes for buttons. Primary and secondary buttons.
+/// @access private
+/// @author Gustavo Baamonde
+/// Classes for the button component
+////
+
 @import 'modules/_preload';
 @mixin dp-button() {
   .dp-button {

@@ -1,5 +1,13 @@
-/* Mixin for the circle in the validation of messages in the password */
-/* Mixin circle simple */
+////
+/// It will apply annotations to all items from file.
+/// @access private
+/// @author Gustavo Baamonde
+/// Classes for the Form component
+////
+
+/// Mixin for the circle in the validation of messages in the password
+/// Mixin circle simple
+
 @mixin circle($background-color) {
   &::before {
     content: '';
@@ -12,7 +20,7 @@
   }
 }
 
-/* Mixin circle with a check */
+/// Mixin circle with a check
 @mixin circleCheck($background-color, $check-color) {
   position: relative;
 
@@ -40,7 +48,7 @@
   }
 }
 
-/* form-request - user-menu */
+/// form-request - user-menu
 legend {
   display: none;
 }
@@ -55,7 +63,7 @@ label {
   font-size: $dp-sizing--lvl2;
   font-family: $dp-font-family;
 }
-/* span with class .dropdown-arrow to draw arrow dropdown */
+/// span with class .dropdown-arrow to draw arrow dropdown
 .dropdown-arrow {
   border-style: solid;
   height: 0;
@@ -134,7 +142,7 @@ textarea {
     transform: rotate(45deg);
   }
 }
-/* validate form*/
+/// validate form
 .field-group {
   .field-item {
     position: relative;
@@ -158,7 +166,7 @@ textarea {
         margin-bottom: $dp-spaces--lv3;
       }
     }
-    /* Field checkbox */
+    /// Field checkbox
     &--50 {
       width: 50%;
       /* Left Column */
@@ -166,7 +174,7 @@ textarea {
         padding-right: $dp-spaces--lv3;
       }
     }
-    /* Field to 50% percent */
+    /// Field to 50% percent
     .show-hide {
       float: right;
       font-size: $dp-sizing--lvl2;
@@ -266,7 +274,7 @@ input[type='tel'] {
   }
 }
 
-/* Mixin for dp-message */
+/// Mixin for dp-message
 /// @access private
 @mixin dp-message($dp-font-color, $dp-font-size) {
   a,
