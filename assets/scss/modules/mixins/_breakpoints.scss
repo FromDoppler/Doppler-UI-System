@@ -13,9 +13,17 @@
 //    md
 //    >> breakpoint-next(sm, $breakpoint-names: (xs sm md lg xl))
 //    md
-@function breakpoint-next($name, $breakpoints: $grid-breakpoints, $breakpoint-names: map-keys($breakpoints)) {
+@function breakpoint-next(
+  $name,
+  $breakpoints: $grid-breakpoints,
+  $breakpoint-names: map-keys($breakpoints)
+) {
   $n: index($breakpoint-names, $name);
-  @return if($n != null and $n < length($breakpoint-names), nth($breakpoint-names, $n + 1), null);
+  @return if(
+    $n != null and $n < length($breakpoint-names),
+    nth($breakpoint-names, $n + 1),
+    null
+  );
 }
 // Minimum breakpoint width. Null for the smallest (first) breakpoint.
 //
@@ -46,7 +54,7 @@
 //    >> breakpoint-infix(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))
 //    "-sm"
 @function breakpoint-infix($name, $breakpoints: $grid-breakpoints) {
-  @return if(breakpoint-min($name, $breakpoints) == null, "", "-#{$name}");
+  @return if(breakpoint-min($name, $breakpoints) == null, '', '-#{$name}');
 }
 // Media of at least the minimum breakpoint width. No query for the smallest breakpoint.
 // Makes the @content apply to the given breakpoint and wider.
@@ -74,20 +82,22 @@
 }
 // Media that spans multiple breakpoint widths.
 // Makes the @content apply between the min and max breakpoints
-@mixin media-breakpoint-between($lower, $upper, $breakpoints: $grid-breakpoints) {
+@mixin media-breakpoint-between(
+  $lower,
+  $upper,
+  $breakpoints: $grid-breakpoints
+) {
   $min: breakpoint-min($lower, $breakpoints);
   $max: breakpoint-max($upper, $breakpoints);
   @if $min != null and $max != null {
     @media (min-width: $min) and (max-width: $max) {
       @content;
     }
-  } @else
-  if $max == null {
+  } @else if $max == null {
     @include media-breakpoint-up($lower, $breakpoints) {
       @content;
     }
-  } @else
-  if $min == null {
+  } @else if $min == null {
     @include media-breakpoint-down($upper, $breakpoints) {
       @content;
     }
@@ -103,13 +113,11 @@
     @media (min-width: $min) and (max-width: $max) {
       @content;
     }
-  } @else
-  if $max == null {
+  } @else if $max == null {
     @include media-breakpoint-up($name, $breakpoints) {
       @content;
     }
-  } @else
-  if $min == null {
+  } @else if $min == null {
     @include media-breakpoint-down($name, $breakpoints) {
       @content;
     }

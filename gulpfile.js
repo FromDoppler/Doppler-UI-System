@@ -37,9 +37,10 @@ var gulp = require('gulp'),
   // Concat plugin
   concat = require('gulp-concat'),
   // Console utility
-  util = require("gulp-util");
+  util = require("gulp-util"),
   // Image optimization plugin
   imagemin = require('gulp-imagemin');
+
 
 // Project settings
 var config = {
@@ -227,9 +228,9 @@ gulp.task('copy:js', function() {
     .pipe(concat('main.js', {
       newLine: "\r\n;"
     }))
-    .pipe(uglify())
     .pipe(gulp.dest(config.folderDev.js));
 });
+
 
 // Optimize Images
 gulp.task('images:dist', function() {

@@ -1,5 +1,12 @@
-@mixin dp-preloader($color, $size, $background:"") {
-@if $background !="" {
+////
+/// Preloader component
+/// @access private
+/// @author Gustavo Baamonde
+/// Classes and Mixin for the Preloader component
+////
+
+@mixin dp-preloader($color, $size, $background: '') {
+  @if $background != '' {
     position: absolute;
     top: 0;
     left: 0;
@@ -9,26 +16,25 @@
     align-items: center;
     justify-content: center;
     z-index: 10;
-    opacity:.9;
+    opacity: 0.9;
     background-color: $background;
 
-  &:before {
-    content: '';
-    left: 0;
-    opacity: 0.9;
-    position: absolute;
-
+    &:before {
+      content: '';
+      left: 0;
+      opacity: 0.9;
+      position: absolute;
+    }
   }
-}
 
-&:after {
+  &:after {
     content: '';
     width: $size;
     height: $size;
     position: absolute;
     border-radius: 50%;
     border: 5px solid;
-    border-color: rgba($color, .3);
+    border-color: rgba($color, 0.3);
     border-top-color: $color;
     animation: dp-preloader-spin 0.7s infinite linear;
   }
@@ -54,7 +60,6 @@
     align-items: center;
     justify-content: center;
     @include dp-preloader($dp-color-lightgrey, 3.3em);
-
   }
   @keyframes flash {
     from,

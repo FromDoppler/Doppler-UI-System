@@ -1,5 +1,13 @@
-/* Mixin for the circle in the validation of messages in the password */
-/* Mixin circle simple */
+////
+/// It will apply annotations to all items from file.
+/// @access private
+/// @author Gustavo Baamonde
+/// Classes for the Form component
+////
+
+/// Mixin for the circle in the validation of messages in the password
+/// Mixin circle simple
+
 @mixin circle($background-color) {
   &::before {
     content: '';
@@ -12,7 +20,7 @@
   }
 }
 
-/* Mixin circle with a check */
+/// Mixin circle with a check
 @mixin circleCheck($background-color, $check-color) {
   position: relative;
 
@@ -40,7 +48,7 @@
   }
 }
 
-/* form-request - user-menu */
+/// form-request - user-menu
 legend {
   display: none;
 }
@@ -55,7 +63,7 @@ label {
   font-size: $dp-sizing--lvl2;
   font-family: $dp-font-family;
 }
-/* span with class .dropdown-arrow to draw arrow dropdown */
+/// span with class .dropdown-arrow to draw arrow dropdown
 .dropdown-arrow {
   border-style: solid;
   height: 0;
@@ -82,7 +90,7 @@ select {
   line-height: 40px;
   cursor: pointer;
   -webkit-appearance: button;
-  box-shadow: 0 0 2px rgba(0, 0, 0, .1);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
   outline: none;
 }
 
@@ -134,7 +142,7 @@ textarea {
     transform: rotate(45deg);
   }
 }
-/* validate form*/
+/// validate form
 .field-group {
   .field-item {
     position: relative;
@@ -158,7 +166,7 @@ textarea {
         margin-bottom: $dp-spaces--lv3;
       }
     }
-    /* Field checkbox */
+    /// Field checkbox
     &--50 {
       width: 50%;
       /* Left Column */
@@ -166,7 +174,7 @@ textarea {
         padding-right: $dp-spaces--lv3;
       }
     }
-    /* Field to 50% percent */
+    /// Field to 50% percent
     .show-hide {
       float: right;
       font-size: $dp-sizing--lvl2;
@@ -256,7 +264,7 @@ input:not([type='checkbox']) {
   }
 }
 
-input[type="tel"] {
+input[type='tel'] {
   -moz-appearance: textfield;
 
   &::-webkit-inner-spin-button,
@@ -266,16 +274,19 @@ input[type="tel"] {
   }
 }
 
-/* Mixin for dp-message */
+/// Mixin for dp-message
 /// @access private
 @mixin dp-message($dp-font-color, $dp-font-size) {
-    a, p, button, span{
-        font-size: $dp-font-size;
-        color: $dp-font-color;
-        text-align: left;
-        margin: $dp-spaces--lv0;
-        font-family: $dp-font-family-proximanova;
-    }
+  a,
+  p,
+  button,
+  span {
+    font-size: $dp-font-size;
+    color: $dp-font-color;
+    text-align: left;
+    margin: $dp-spaces--lv0;
+    font-family: $dp-font-family-proximanova;
+  }
 }
 
 /// Form messages and validations
@@ -283,16 +294,17 @@ input[type="tel"] {
 /// @deprecated .error and .wrapper-errors will be removed in a next version of the library
 /// @author gbaamonde@makingsense.com
 
-
 /* Message modules */
 
-.dp-message, .error {
+.dp-message,
+.error {
   display: none;
 }
 
 /* Class for validation */
 
-.dp-validate, .error {
+.dp-validate,
+.error {
   .checkmark,
   input,
   select,
@@ -300,7 +312,7 @@ input[type="tel"] {
     border: 1px solid $dp-color-red;
   }
 
-/* common properties */
+  /* common properties */
   .dp-message-box {
     padding-left: $dp-sizing--lvl10;
     min-height: 45px;
@@ -309,8 +321,9 @@ input[type="tel"] {
     flex-direction: column;
     justify-content: center;
   }
-/* Messages and confirmations the forms */
-  .dp-message, .wrapper-errors {
+  /* Messages and confirmations the forms */
+  .dp-message,
+  .wrapper-errors {
     display: inline-block;
     margin: $dp-spaces--lv0;
     font-family: $dp-font-family-proximanova;
@@ -322,7 +335,6 @@ input[type="tel"] {
     }
   }
 }
-
 
 /* Unexpected message box */
 .form-message {
@@ -337,38 +349,38 @@ input[type="tel"] {
   background-repeat: no-repeat;
   font-family: $dp-font-family-proximanova;
 
-  button, a{
+  button,
+  a {
     text-decoration: underline;
   }
 
-/* Validations Unexpected message */
-&.dp-error {
-  @extend .dp-message-box;
-  @include dp-message($dp-color-red, $dp-sizing--lvl3);
-  background-image: url("../img/error-message.svg");
+  /* Validations Unexpected message */
+  &.dp-error {
+    @extend .dp-message-box;
+    @include dp-message($dp-color-red, $dp-sizing--lvl3);
+    background-image: url('../img/error-message.svg');
 
-  a, button {
-    text-decoration: underline;
+    a,
+    button {
+      text-decoration: underline;
+    }
   }
+  /* Validations message OK forgot password */
+  &.dp-ok-message {
+    @extend .dp-message-box;
+    @include dp-message($dp-color-green, $dp-sizing--lvl3);
+    background-image: url('../img/ok-message.svg');
 
-}
-/* Validations message OK forgot password */
-&.dp-ok-message {
-  @extend .dp-message-box;
-  @include dp-message($dp-color-green, $dp-sizing--lvl3);
-  background-image: url("../img/ok-message.svg");
-
-  .forgot-link {
-    margin: $dp-spaces--lv4 $dp-spaces--lv0;
-    font-size: $dp-sizing--lvl2;
+    .forgot-link {
+      margin: $dp-spaces--lv4 $dp-spaces--lv0;
+      font-size: $dp-sizing--lvl2;
+    }
   }
-
-}
-&.dp-warning-message {
-  @extend .dp-message-box;
-  @include dp-message($dp-color-darkgrey, $dp-sizing--lvl3);
-  background-image: url("../img/warning-icon.svg");
-}
+  &.dp-warning-message {
+    @extend .dp-message-box;
+    @include dp-message($dp-color-darkgrey, $dp-sizing--lvl3);
+    background-image: url('../img/warning-icon.svg');
+  }
 
   .error {
     padding-left: 0;
@@ -378,12 +390,10 @@ input[type="tel"] {
       margin: 0;
       color: $dp-color-red;
       font-size: $dp-sizing--lvl2;
-      font-family: proxima-nova,Helvetica;
+      font-family: proxima-nova, Helvetica;
     }
   }
-
 }
-
 
 /* Validations and password messages */
 .wrapper-password {
@@ -486,12 +496,12 @@ input[type="tel"] {
 }
 
 .triangle-right {
-    width: 0;
-    height: 0;
-    padding-left: $dp-spaces--lv3;
+  width: 0;
+  height: 0;
+  padding-left: $dp-spaces--lv3;
 
   &:before {
-    content: "";
+    content: '';
     position: absolute;
     top: 4px;
     left: 7px;
@@ -499,12 +509,10 @@ input[type="tel"] {
     border-right: 6px solid $dp-color-green;
     border-bottom: 3px solid transparent;
   }
-
 }
 @include media-breakpoint('mobilexs') {
-
-.login-form, .signup-form {
+  .login-form,
+  .signup-form {
     margin-top: $dp-spaces--lv5;
-}
-
+  }
 }

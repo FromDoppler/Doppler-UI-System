@@ -37,11 +37,7 @@
 ///     </tbody>
 ///   </table>
 
-
-
-
-@mixin dp-c-table ($bg-color-zebra, $font-size-table, $bg-color-hover){
-
+@mixin dp-c-table($bg-color-zebra, $font-size-table, $bg-color-hover) {
   .dp-c-table {
     width: 100%;
     font-size: $font-size-table;
@@ -77,14 +73,14 @@
           color: $dp-color-lightgrey;
 
           span {
-            opacity: .6;
+            opacity: 0.6;
           }
         }
       }
     }
 
     th + th:before {
-      content: "";
+      content: '';
       height: 10px;
       border-right: 1px solid $dp-color-lightgrey;
       position: absolute;
@@ -108,7 +104,6 @@
         }
       }
 
-
       td {
         color: $dp-color-grey;
         border: $dp-spaces--lv0;
@@ -119,7 +114,6 @@
 
       .sync {
         color: $dp-color-green;
-
 
         td {
           color: $dp-color-green;
@@ -137,21 +131,20 @@
           }
         }
 
-          /// Animation text
-          @keyframes flash {
-            from,
-            50%,
-            to {
-              opacity: 1;
-            }
+        /// Animation text
+        @keyframes flash {
+          from,
+          50%,
+          to {
+            opacity: 1;
+          }
 
-            25%,
-            75% {
-              opacity: 0;
-            }
+          25%,
+          75% {
+            opacity: 0;
           }
         }
-
+      }
     }
 
     caption,
@@ -163,4 +156,8 @@
   }
 }
 
-@include dp-c-table($dp-color-ghostwhite, $dp-sizing--lvl2, $dp-color-hover-table);
+@include dp-c-table(
+  $dp-color-ghostwhite,
+  $dp-sizing--lvl2,
+  $dp-color-hover-table
+);

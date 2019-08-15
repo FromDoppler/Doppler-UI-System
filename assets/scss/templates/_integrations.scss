@@ -1,5 +1,4 @@
 .dp-integration {
-
   margin-top: 20px;
 
   @at-root {
@@ -15,7 +14,6 @@
       .block {
         padding: $dp-spaces--lv4;
       }
-
     }
 
     &__status {
@@ -26,7 +24,7 @@
         flex: 1;
 
         img {
-          margin-right: $dp-spaces--lv2
+          margin-right: $dp-spaces--lv2;
         }
 
         > div {
@@ -65,7 +63,7 @@
         color: $dp-color-lightgrey;
 
         &.is-spinning {
-          [class*="-icon"] {
+          [class*='-icon'] {
             animation-name: counterspin;
           }
         }

@@ -1,4 +1,10 @@
-/* modal */
+////
+/// We standardize three modal sizes, small (400px), medium (600px) and large (800px).
+/// @access private
+/// @author Gustavo Baamonde
+/// Classes for the Modal component
+////
+
 .modal {
   position: fixed;
   z-index: 9999;
@@ -10,7 +16,7 @@
   background: $dp-bg-overlay;
 }
 
-[class*="modal-content--"] {
+[class*='modal-content--'] {
   background: $dp-bg-modal;
   margin: auto;
   width: 75%;

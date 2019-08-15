@@ -1,3 +1,8 @@
+////
+///
+/// @access private
+/// Classes for the dropdown component
+////
 
 .dp-c-dropdown {
   position: relative;
@@ -8,7 +13,7 @@
     text-decoration: none;
   }
 
-  ul[role="menu"] {
+  ul[role='menu'] {
     margin: 0;
     padding: 0;
     position: absolute;
@@ -20,16 +25,15 @@
       padding: 0;
     }
 
-    a[role="menuitem"],
-    a[role="menuitem"]:visited {
+    a[role='menuitem'],
+    a[role='menuitem']:visited {
       display: block;
       text-decoration: none;
     }
 
-    a[role="menuitem"]:focus,
-    a[role="menuitem"]:hover {
+    a[role='menuitem']:focus,
+    a[role='menuitem']:hover {
       //color: white;
     }
   }
 }
-
