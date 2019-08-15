@@ -23,7 +23,7 @@ docker run --rm \
     /bin/sh -c "\
       rm -rf ./dist/* \
       && ./node_modules/.bin/eclint check \"**/*\" \
-      && prettier-check \
+      && npm run prettier-check \
       && gulp dist \
       && chmod +777 -R --quiet ./dist/* \
     "
