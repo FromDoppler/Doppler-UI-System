@@ -84,6 +84,11 @@
       <!-- header -->
       <div class="dpsg-wrapper">
         <aside class="dpsg-navigation-wrap">
+          <nav class="dpsg-navigation">
+            <ul>
+              <li><a href="#" class="active">Inicio</a></li>
+            </ul>
+          </nav>
           <h3>Componentes UI</h3>
           <nav class="dpsg-navigation">
             <ul>
@@ -112,23 +117,202 @@
           </nav>
         </aside>
         <div class="dpsg-content-wrap">
-          <section class="dpsg-content-module">
-            <h3>Colores</h3>
+          <section class="dpsg-content-intro">
+            <div class="dpsg-blockgrey">
+              <h3>Bienvenido a Doppler Styles Guides</h3>
+              <p>
+                UI Styles Guides en vivo. Esta biblioteca está destinada a ser
+                un lenguaje visual de Doppler, para centralizar todas las marcas
+                en un solo lugar para todos nuestros productos, reutilización de
+                código y esfuerzo.
+              </p>
+              <p>
+                También permite desacoplar la interfaz de usuario de la lógica
+                de Front End y trabajar de una manera más ordenada.
+              </p>
+              <div class="dpsg-techs">
+                <div class="dpsg-icontech">
+                  <img src="img/css3.svg" alt="" />
+                </div>
+                <div class="dpsg-icontech">
+                  <img src="img/html5.svg" alt="" />
+                </div>
+                <div class="dpsg-icontech">
+                  <img src="img/jquery.svg" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="dpsg-intropic"></div>
+          </section>
+          <section class="dpsg-howtouse-content">
+            <h3>¿Cómo puedo usar esta biblioteca en mi proyecto?</h3>
+            <div class="dpsg-wrapper-text">
+              <div class="dpsg-boxtext">
+                <p>
+                  Simplemente incluye el archivo <strong>css</strong> y
+                  <strong>js</strong> en tu <strong>html</strong>.
+                </p>
+                <p>
+                  Verifique la versión correcta en la pestaña de versiones de
+                  <a
+                    href="https://github.com/FromDoppler/Doppler-UI-System"
+                    target="_blank"
+                    >github</a
+                  >
+                  primero y reemplace la <strong>vx.x.x</strong> siguiente.
+                </p>
+              </div>
+              <div class="dpsg-code-content">
+                <figure class="dpsg-highlight">
+                  <pre>
+                      <code>
+                        <span class="dpsg-comment">/// Version CSS</span>
+                        <span class="dpsg-tag-code">&lt;link rel="stylesheet" type="text/css" href="https://cdn.fromdoppler.com/doppler-ui-library/vx.x.x/css/styles.css"&gt;</span>
+                      </code>
+                    </pre>
+                </figure>
+                <figure class="dpsg-highlight">
+                  <pre>
+                        <code>
+                          <span class="dpsg-comment">/// Version JS (opcional, puede incluir su propio js en su lugar)</span>
+                          <span class="dpsg-tag-code">&lt;script type="text/javascript" src="https://cdn.fromdoppler.com/doppler-ui-library/vx.x.x/js/app.js"&gt;&lt;/script&gt;</span>
+                        </code>
+                      </pre>
+                </figure>
+              </div>
+            </div>
+          </section>
+          <section class="dpsg-documentation-content">
+            <h3>¿Cómo aplicar componentes y usar mixins?</h3>
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor
-              est, sequi expedita nulla omnis provident. Non eos ea nam
-              repellendus laborum suscipit repellat fuga nemo sint, commodi
-              inventore molestiae quibusdam.
+              En nuestra biblioteca utilzamos <strong>Sass Doc</strong> para
+              crear nuestra documentación. Consulte su uso en
+              <a href="http://sassdoc.com/" target="_blank">Sass Doc</a>
             </p>
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor
-              est, sequi expedita nulla omnis provident. Non eos ea nam
-              repellendus laborum suscipit repellat fuga nemo sint, commodi
-              inventore molestiae quibusdam. Lorem ipsum dolor, sit amet
-              consectetur adipisicing elit. Dolor est, sequi expedita nulla
-              omnis provident. Non eos ea nam repellendus laborum suscipit
-              repellat fuga nemo sint, commodi inventore molestiae quibusdam.
+              Consulte nuestra
+              <a
+                href="http://cdn.fromdoppler.com/doppler-ui-library/latest/documentation/"
+                target="_blank"
+                >documentación</a
+              >
+              (en desarrollo)
             </p>
+            <div class="dpsg-image-transition">
+              <figure class="dpsg-sassdoc"></figure>
+            </div>
+          </section>
+          <!-- dpsg-documentation-content -->
+          <section class="dpsg-contribution-wrapper">
+            <div class="dpsg-contribution-content">
+              <div class="dpsg-rocket-wrapper">
+                <div class="dpsg-kite"></div>
+
+                <div class="dpsg-spaceship-content">
+                  <div class="dpsg-spaceship"></div>
+                  <div class="dpsg-front-spaceship"></div>
+                  <div class="dpsg-window"></div>
+                  <div class="dpsg-wings"></div>
+                  <div class="dpsg-engine"></div>
+                  <div class="dpsg-flames"></div>
+                </div>
+              </div>
+              <div class="dpsg-contribution-text">
+                <h3>Contribuyendo a este proyecto</h3>
+
+                <p>
+                  Si desea contribuir a este proyecto, debe
+                  <strong>seguir las reglas</strong>:
+                </p>
+
+                <ul class="dpsg-list">
+                  <li>
+                    Utilizamos <strong>Conventional Commits</strong> por favor,
+                    compruebe su uso aquí:
+                    <a
+                      href="https://www.conventionalcommits.org/"
+                      target="_blank"
+                      >Conventional Commits</a
+                    >
+                  </li>
+                  <li>
+                    Los <strong>Commits</strong> son cortos, por lo que pueden
+                    ser fáciles de seguir y leer.
+                  </li>
+                  <li>
+                    Los colores, el espaciado y los tamaños de fuente se
+                    almacenan en variables para su reutilización.
+                  </li>
+                  <li>
+                    Al hacer un PR (pull request),
+                    <strong
+                      >verifique el código de compilación del cdn generado
+                      automáticamente</strong
+                    >, mire a través del número de compilación en el enlace de
+                    verificación del generador de solicitudes de extracción de
+                    jenkins, debería ser algo como
+                    <strong
+                      >http://docker.fromdoppler.com:8080/job/doppler-ui-system/job/pull-requests/391/</strong
+                    >
+                    en este ejemplo 391 si construye, su enlace será
+                    <strong
+                      >http://cdn.fromdoppler.com/doppler-ui-library/build391/index.html</strong
+                    >
+                    usted puede usar este enlace para también incluya y pruebe
+                    en su página web, apuntando a css y js, como se explicó
+                    anteriormente.
+                  </li>
+                  <li>
+                    Considere obtener la aprobación de al menos uno de nuestros
+                    colaboradores habituales.
+                  </li>
+                  <li>
+                    Tenga en cuenta que esta biblioteca puede tener muchos
+                    clientes, pensamos en la retrocompatibilidad antes de
+                    realizar cambios.
+                  </li>
+                  <li>
+                    Haga un <strong>Fork</strong> de este proyecto para comenzar
+                    a contribuir.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <!-- dpsg-contribution-content -->
+          <section class="dpsg-worktocode-content">
+            <div class="dpsg-blockgrey">
+              <h3>¿Cómo trabajar con el código?</h3>
+              <p>Una vez que haya descargado:</p>
+              <ul class="dpsg-list">
+                <li>
+                  <span class="dpsg-code">npm install</span> instalar
+                  dependencias
+                </li>
+                <li>
+                  <span class="dpsg-code">gulp run</span> para ejecutar el
+                  servidor de desarrollo y la vista previa
+                </li>
+                <li>
+                  <span class="dpsg-code">gulp dist</span> para la tarea de
+                  generación (Implementar)
+                </li>
+                <li>
+                  <span class="dpsg-code">gulp build</span> para definir tarea
+                  de construcción
+                </li>
+                <li>
+                  <span class="dpsg-code">gulp doc</span> para crear
+                  documentación
+                </li>
+              </ul>
+              <p>
+                Este proyecto utiliza <strong>Sass</strong>,
+                <strong>SassDocs</strong>, <strong>javascript</strong> y
+                <strong>JQuery</strong>. En este momento estamos basando todos
+                nuestros diseños en Flexbox.
+              </p>
+            </div>
           </section>
         </div>
       </div>
