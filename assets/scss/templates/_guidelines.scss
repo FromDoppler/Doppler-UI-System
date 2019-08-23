@@ -23,13 +23,13 @@ body {
 }
 
 .nav {
-  margin: 10px 0 30px;
+  margin: 10px $dp-spaces--lv0 $dp-spaces--lv5;
   list-style: none;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   flex-wrap: wrap;
-  padding-bottom: 30px;
+  padding-bottom: $dp-spaces--lv5;
   border-bottom: 1px solid $dp-color-silver;
 }
 
@@ -118,7 +118,7 @@ body {
   border-radius: $dp-border-radius;
   box-shadow: 0 0.5em 1em -0.5em $dp-color-silver;
   overflow: hidden;
-  margin-bottom: 30px;
+  margin-bottom: $dp-spaces--lv5;
   width: 215px;
 }
 
@@ -181,7 +181,7 @@ body {
 
 .buttons-card {
   border-radius: 5px;
-  margin-bottom: 30px;
+  margin-bottom: $dp-spaces--lv5;
   width: 25%;
   flex-direction: column;
   display: flex;
@@ -249,17 +249,17 @@ body {
 
 .dpsg-intro-open {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  top: $dp-spaces--lv0;
+  left: $dp-spaces--lv0;
+  right: $dp-spaces--lv0;
+  bottom: $dp-spaces--lv0;
   pointer-events: none;
   z-index: 1000;
 
   .dpsg-layer {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: $dp-spaces--lv0;
+    left: $dp-spaces--lv0;
     width: 20%;
     height: 100%;
     transform-origin: top;
@@ -609,14 +609,14 @@ body {
     font-size: $dp-sizing--lvl7;
     font-weight: 300;
     display: inline-block;
-    color: #000;
+    color: $dp-color-black;
     position: relative;
     font-family: 'Raleway';
     line-height: 1.2em;
   }
 
   p {
-    font-size: 1em;
+    font-size: $dpsg-paragraph;
     max-width: 80%;
     margin: 0 0 16px;
     line-height: 1.5em;
@@ -630,20 +630,20 @@ body {
   /* introduction hero */
 
   .dpsg-content-intro {
-    padding: 0;
+    padding: $dp-spaces--lv0;
     width: 100%;
     position: relative;
-    background: #f1ede1 url(../img/pattern_01.png);
+    background: $dpsg-brown-light url(../img/pattern_01.png);
     display: flex;
 
     &:before {
       content: '';
       position: absolute;
-      bottom: 0;
-      left: 0;
+      bottom: $dp-spaces--lv0;
+      left: $dp-spaces--lv0;
       width: 100%;
       height: 200px;
-      background: #fff;
+      background: $dp-color-white;
       clip-path: polygon(100% 0, 0 100%, 100% 100%);
     }
 
@@ -658,9 +658,9 @@ body {
       }
 
       .dpsg-pictop {
-        padding: 0;
+        padding: $dp-spaces--lv0;
         position: absolute;
-        margin: 0;
+        margin: $dp-spaces--lv0;
         width: 100%;
         height: 100%;
       }
@@ -680,10 +680,10 @@ body {
           width: 120px;
           height: 120px;
           overflow: hidden;
-          border: 2px solid #fff;
+          border: 2px solid $dp-color-white;
           padding: 25px;
           border-radius: 50%;
-          box-shadow: 0px 0px 0px 30px rgba(255, 255, 255, 0);
+          box-shadow: 0px 0px 0px $dp-spaces--lv5 rgba(255, 255, 255, 0);
           transition: box-shadow 0.4s;
 
           img {
@@ -693,7 +693,7 @@ body {
 
           &:hover {
             box-shadow: 0px 0px 0px 0px rgba(195, 195, 195, 0.6);
-            background: #fff;
+            background: $dp-color-white;
           }
         }
       }
@@ -729,13 +729,13 @@ body {
 
   .dpsg-howtouse-content {
     width: 100%;
-    background: #fff;
+    background: $dp-color-white;
     min-height: 500px;
     position: relative;
     display: flex;
     overflow: hidden;
     margin-top: 100px;
-    padding: 100px 0;
+    padding: 100px $dp-spaces--lv0;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -745,16 +745,16 @@ body {
       width: 100%;
       height: 100%;
       position: absolute;
-      left: 0;
-      top: 0;
+      left: $dp-spaces--lv0;
+      top: $dp-spaces--lv0;
       clip-path: inset(0 0 0 50%);
-      background: #f1ede1;
+      background: $dpsg-brown-light;
     }
 
     h3 {
       text-align: center;
       max-width: 500px;
-      margin: 30px auto 50px;
+      margin: $dp-spaces--lv5 auto 50px;
       display: block;
     }
 
@@ -784,7 +784,7 @@ body {
       }
 
       .dpsg-boxtext {
-        background: #fff;
+        background: $dp-color-white;
         position: relative;
         padding: 90px 50px;
         top: 36px;
@@ -803,13 +803,13 @@ body {
           top: 217px;
           right: -120px;
           border-radius: 50%;
-          box-shadow: 0px 0px 0px 30px rgba(255, 255, 255, 0);
+          box-shadow: 0px 0px 0px $dp-spaces--lv5 rgba(255, 255, 255, 0);
           transition: box-shadow 0.4s;
         }
 
         &:hover:after {
           box-shadow: 0px 0px 0px 0px rgba(195, 195, 195, 0.6);
-          background: #fff url(../img/git.svg) no-repeat 0 0;
+          background: $dp-color-white url(../img/git.svg) no-repeat 0 0;
         }
       }
     }
@@ -836,13 +836,13 @@ body {
       .dpsg-highlight {
         font-family: 'Courier New', monospace;
         overflow: hidden;
-        margin-left: 0;
-        color: #fff;
+        margin-left: $dp-spaces--lv0;
+        color: $dp-color-white;
         width: 100%;
 
         pre {
           padding: 1em;
-          margin: 0;
+          margin: $dp-spaces--lv0;
         }
 
         code,
@@ -850,22 +850,22 @@ body {
         pre,
         samp {
           font-family: monospace, monospace;
-          font-size: 0.9em;
+          font-size: $dp-sizing--lvl2;
           white-space: pre-line;
         }
       }
 
       .dpsg-comment {
-        padding-left: 30px;
+        padding-left: $dp-spaces--lv5;
         margin-bottom: 10px;
         display: inline-block;
         color: #bbb;
       }
 
       .dpsg-tag-code {
-        padding-left: 30px;
-        color: #fff;
-        text-shadow: 1px 1px 3px #000000;
+        padding-left: $dp-spaces--lv5;
+        color: $dp-color-white;
+        text-shadow: 1px 1px 3px $dp-color-black;
       }
     }
   }
@@ -873,7 +873,7 @@ body {
   /* documentation */
 
   .dpsg-documentation-content {
-    background: #f1ede1;
+    background: $dpsg-brown-light;
     width: 100%;
     min-height: 500px;
     position: relative;
@@ -888,18 +888,18 @@ body {
       content: '';
       position: absolute;
       bottom: -1px;
-      left: 0;
+      left: $dp-spaces--lv0;
       width: 100%;
       height: 350px;
-      background: #fff;
+      background: $dp-color-white;
       clip-path: polygon(100% 0, 0 100%, 100% 100%);
-      box-shadow: inset 0px 0px 0px 30px rgba(255, 255, 255, 0);
+      box-shadow: inset 0px 0px 0px $dp-spaces--lv5 rgba(255, 255, 255, 0);
     }
 
     .dpsg-image-transition {
       width: 500px;
       height: 400px;
-      background: #000;
+      background: $dp-color-black;
       background-position: top;
       transition: ease-in-out 8s;
     }
@@ -908,8 +908,8 @@ body {
       box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24),
         0 1.5px 6px rgba(0, 0, 0, 0.12);
       position: relative;
-      padding: 0px;
-      margin: 0;
+      padding: $dp-spaces--lv0;
+      margin: $dp-spaces--lv0;
       width: 100%;
       height: 100%;
       display: flex;
@@ -934,7 +934,7 @@ body {
         bottom: -170px;
         background: #f8efba url(../img/sass-doc.svg) no-repeat 50% 50%;
         background-size: 50%;
-        box-shadow: 0px 0px 0px 30px rgba(255, 255, 255, 0);
+        box-shadow: 0px 0px 0px $dp-spaces--lv5 rgba(255, 255, 255, 0);
         transition: box-shadow 0.4s;
       }
 
@@ -947,7 +947,7 @@ body {
   /* contribution */
 
   .dpsg-contribution-wrapper {
-    background: #fff;
+    background: $dp-color-white;
     width: 100%;
     min-height: 500px;
     position: relative;
@@ -961,11 +961,11 @@ body {
     &:before {
       content: '';
       position: absolute;
-      bottom: 0px;
-      left: 0;
+      bottom: $dp-spaces--lv0;
+      left: $dp-spaces--lv0;
       width: 100%;
       height: 100%;
-      background: #f1ede1 url(../img/pattern_01.png);
+      background: $dpsg-brown-light url(../img/pattern_01.png);
       clip-path: circle(35% at 58% 48%);
     }
 
@@ -1004,16 +1004,22 @@ body {
       height: 400px;
       border-radius: 50%;
       overflow: hidden;
-      left: 0;
-      right: 0;
+      left: $dp-spaces--lv0;
+      right: $dp-spaces--lv0;
       border: 20px solid $dp-color-white;
       position: relative;
       transform: rotate(-65deg);
-      background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+      background: linear-gradient(
+        -45deg,
+        $dpsg-orange,
+        #e73c7e,
+        #23a6d5,
+        #23d5ab
+      );
       background-size: 400% 400%;
       animation: gradient 15s ease infinite;
       transition: ease-in-out 5s;
-      box-shadow: 0px 0px 0px 30px rgba(255, 255, 255, 0);
+      box-shadow: 0px 0px 0px $dp-spaces--lv5 rgba(255, 255, 255, 0);
 
       @keyframes gradient {
         0% {
@@ -1139,10 +1145,10 @@ body {
           width: 70px;
           top: 23%;
           left: 32%;
-          background: #00bcf2;
+          background: $dpsg-light-blue;
           border-top-left-radius: 20%;
           border-top-right-radius: 80%;
-          border-top: 10px solid lighten(#00bcf2, 20%);
+          border-top: 10px solid lighten($dpsg-light-blue, 20%);
 
           &::after {
             content: '';
@@ -1150,7 +1156,7 @@ body {
             height: 60px;
             width: 70px;
             margin-top: 115px;
-            background: #00bcf2;
+            background: $dpsg-light-blue;
             border-bottom-left-radius: 20%;
             border-bottom-right-radius: 80%;
           }
@@ -1224,13 +1230,13 @@ body {
   /* work the code */
 
   .dpsg-worktocode-content {
-    background: #f1ede1;
+    background: $dpsg-brown-light;
     min-height: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 100px 0 150px;
-    margin: 0;
+    margin: $dp-spaces--lv0;
     width: 100%;
     position: relative;
 
@@ -1240,7 +1246,7 @@ body {
       width: 600px;
       top: -80px;
       height: 345px;
-      right: 0px;
+      right: $dp-spaces--lv0;
       background: url(../img/bg-keyboard.png);
     }
 
@@ -1270,7 +1276,7 @@ body {
         border-radius: 4px;
         width: 10px;
         height: 4px;
-        background: #ee7752;
+        background: $dpsg-orange;
         transform: rotate(45deg);
         left: -15px;
         top: 5px;
@@ -1283,7 +1289,7 @@ body {
         border-radius: 4px;
         width: 10px;
         height: 4px;
-        background: #ee7752;
+        background: $dpsg-orange;
         transform: rotate(145deg);
         left: -15px;
         top: 9px;
@@ -1295,7 +1301,7 @@ body {
 /* contenedores genericos */
 
 .dpsg-content-module {
-  padding: 50px 30px;
+  padding: 50px $dp-spaces--lv5;
   margin: 0 auto;
   border-bottom: 1px solid $dp-color-snow;
   width: 100%;
