@@ -78,3 +78,23 @@ $(".show-hide").click(function() {
     $(this).removeClass("ms-icon icon-hide").addClass("ms-icon icon-view");
   }
 });
+
+// navigation partials
+
+$('.dpsg-link').on('click', function() {
+  var partial = $(this).attr('data-partial'),
+    elementClicked = this;
+  $.ajax({
+    url: './partials/_' + partial + '.html',
+    type: 'GET',
+    dataType: 'html',
+    success: function(response) {
+      $('.dpsg-link').removeClass('active');
+      $(elementClicked).addClass('active');
+      $('.dpsg-content-wrap').html(response);
+    },
+    error: function() {
+      console.log('partial document named ' + partial + ' not found');
+    },
+  });
+});

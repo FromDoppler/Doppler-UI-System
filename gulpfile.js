@@ -170,7 +170,7 @@ gulp.task('doc:dist', function() {
 
 // Process HTML task definition for distribution purposes
 gulp.task('processHtml:dist', function() {
-  return gulp.src(config.folderAssets.base + '/templates/*.html')
+  return gulp.src(config.folderAssets.base + '/templates/**/*.html')
     .pipe(processHtml({
       recursive: true,
       environment: 'dist'
@@ -266,7 +266,7 @@ gulp.task('serve', ['build'], function() {
 
 // Process HTML task definition
 gulp.task('processHtml', function() {
-  return gulp.src(config.folderAssets.base + '/templates/*.html')
+  return gulp.src(config.folderAssets.base + '/templates/**/*.html')
     .pipe(processHtml({
       recursive: true,
       environment: 'dev'

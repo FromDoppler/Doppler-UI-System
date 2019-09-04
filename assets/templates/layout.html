@@ -86,7 +86,7 @@
         <aside class="dpsg-navigation-wrap">
           <nav class="dpsg-navigation">
             <ul>
-              <li><a href="#" class="active">Inicio</a></li>
+              <li><a href="#" class="dpsg-link active">Inicio</a></li>
             </ul>
           </nav>
           <h3>Componentes UI</h3>
@@ -94,10 +94,26 @@
             <ul>
               <li><a href="#">Colores</a></li>
               <li><a href="#">Botones</a></li>
-              <li><a href="#">Tablas</a></li>
-              <li><a href="#">Tooltip</a></li>
-              <li><a href="#">Breadcrumb</a></li>
-              <li><a href="#">Mensajes para el usuario</a></li>
+              <li>
+                <a href="#" class="dpsg-link" data-partial="table-component"
+                  >Tablas</a
+                >
+              </li>
+              <li>
+                <a href="#" class="dpsg-link" data-partial="tooltip-component"
+                  >Tooltip</a
+                >
+              </li>
+              <li>
+                <a href="#" class="dpsg-link" data-partial="breadcrumb"
+                  >Breadcrumb</a
+                >
+              </li>
+              <li>
+                <a href="#" class="dpsg-link" data-partial="msj-component"
+                  >Mensajes para el usuario</a
+                >
+              </li>
               <li><a href="#">Modales</a></li>
               <li><a href="#">Preload</a></li>
               <li><a href="#">Mensajes header</a></li>
@@ -333,5 +349,8 @@
         <p>© 2019 Doppler LLC. Todos los derechos reservados.</p>
       </footer>
     </main>
+    <!-- build:js:dist js/app.js -->
+    <script src="./js/main.js"></script>
+    <!-- /build -->
   </body>
 </html>
