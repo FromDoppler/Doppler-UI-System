@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Doppler UI Team</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="canonical" href="" />
+    <!-- Open Graph metatags -->
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="" />
+    <!-- Stylesheets and polyfills -->
+    <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+    <!-- Favicons -->
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="144x144"
+      href="https://www.fromdoppler.com/apple-touch-icon-144x144-precomposed.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="114x114"
+      href="https://www.fromdoppler.com/apple-touch-icon-114x114-precomposed.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="72x72"
+      href="https://www.fromdoppler.com/apple-touch-icon-72x72-precomposed.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="57x57"
+      href="https://www.fromdoppler.com/apple-touch-icon-57x57-precomposed.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      href="https://www.fromdoppler.com/apple-touch-icon-precomposed.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="https://www.fromdoppler.com/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://www.fromdoppler.com/favicon.ico"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="https://www.fromdoppler.com/favicon.ico"
+    />
+  </head>
+  <body data-active-menu="2">
+    <!-- Layers -->
+    <main role="main" class="dpsg-main-wrap">
+      <!-- build:include partials/_header.html -->
+      This will be replaced by the content of header.html
+      <!-- /build -->
+      <!-- header -->
+      <div class="dpsg-wrapper">
+        <!-- build:include partials/_navigation.html -->
+        This will be replaced by the content of navigation.html
+        <!-- /build -->
+        <div class="dpsg-content-wrap">
+          <h3>Modal</h3>
+          <p>
+            Estandarizamos tres tipos de modales para su utilización. Small,
+            Medium y Large.
+          </p>
+          <ul class="list-modal">
+            <li>
+              <button
+                id="btn-modal-large"
+                type="button"
+                class="dp-button button-medium primary-green"
+              >
+                Large modal
+              </button>
+            </li>
+            <li>
+              <button
+                id="btn-modal-medium"
+                type="button"
+                class="dp-button button-medium primary-green"
+              >
+                Medium modal
+              </button>
+            </li>
+            <li>
+              <button
+                id="btn-modal-small"
+                type="button"
+                class="dp-button button-medium primary-green"
+              >
+                Small modal
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- wrapper-container -->
+      <!-- build:include partials/_footer.html -->
+      This will be replaced by the content of footer.html
+      <!-- /build -->
+      <div class="modal" id="modal-large">
+        <div class="modal-content--large">
+          <span class="close"></span>
+          <h2 class="modal-title">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit
+          </h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+            eleifend est vitae sem mollis, in pretium enim bibendum. In
+            eleifend, augue vitae pellentesque pulvinar, neque nisi suscipit
+            lorem, sed facilisis sem leo vel diam. Fusce vitae quam libero.
+            Vestibulum ut faucibus quam. Ut ante quam, aliquet nec dictum
+            euismod, tristique ut lorem. Aenean in tellus ligula. Pellentesque
+            malesuada, purus at egestas rutrum, metus erat varius tellus, a
+            vulputate est massa vel velit.
+          </p>
+          <p>
+            Ut ante quam, aliquet nec dictum euismod, tristique ut lorem. Aenean
+            in tellus ligula. Pellentesque malesuada, purus at egestas rutrum,
+            metus erat varius tellus, a vulputate est massa vel velit.
+          </p>
+        </div>
+      </div>
+      <!-- Large -->
+      <div class="modal" id="modal-medium">
+        <div class="modal-content--medium">
+          <span class="close"></span>
+          <h2 class="modal-title">Solicita una actualización de tu plan</h2>
+          <form action="#" class="form-request">
+            <fieldset>
+              <legend>Solicita una actualización de tu plan</legend>
+              <ul class="field-group">
+                <li class="field-item">
+                  <label for="plan">Selecciona el Plan</label>
+                  <span class="dropdown-arrow"></span>
+                  <select id="plan" name="plan">
+                    <option value=""></option>
+                    <option value="">501-1500</option>
+                    <option value="">1501-2500</option>
+                    <option value="">2501-5000</option>
+                    <option value="">5001-10000</option>
+                    <option value="">10001-15000</option>
+                    <option value="">15001-25000</option>
+                    <option value="">25001-50000</option>
+                    <option value="">50001-75000</option>
+                    <option value="">75001-100000</option>
+                  </select>
+                </li>
+                <li class="field-item">
+                  <label for="message">Mensaje </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Tu mensage"
+                  ></textarea>
+                </li>
+              </ul>
+            </fieldset>
+            <div class="container-buttons">
+              <button
+                type="button"
+                name="cancel"
+                class="dp-button button-medium primary-grey"
+              >
+                Cancelar
+              </button>
+              <button
+                type="button"
+                name="submit"
+                class="dp-button button-medium primary-green"
+              >
+                Enviar
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- Medium -->
+      <div class="modal" id="modal-small">
+        <div class="modal-content--small">
+          <span class="close"></span>
+          <h2 class="modal-title">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit
+          </h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+            eleifend est vitae sem mollis, in pretium enim bibendum. In
+            eleifend, augue vitae pellentesque pulvinar, neque nisi suscipit
+            lorem, sed facilisis sem leo vel diam. Fusce vitae quam libero.
+            Vestibulum ut faucibus quam. Ut ante quam, aliquet nec dictum
+            euismod, tristique ut lorem. Aenean in tellus ligula. Pellentesque
+            malesuada, purus at egestas rutrum, metus erat varius tellus, a
+            vulputate est massa vel velit.
+          </p>
+          <p>
+            Ut ante quam, aliquet nec dictum euismod, tristique ut lorem. Aenean
+            in tellus ligula. Pellentesque malesuada, purus at egestas rutrum,
+            metus erat varius tellus, a vulputate est massa vel velit.
+          </p>
+        </div>
+      </div>
+      <!-- small -->
+    </main>
+    <!-- build:js:dist js/app.js -->
+    <script src="./js/main.js"></script>
+    <!-- /build -->
+  </body>
+</html>
