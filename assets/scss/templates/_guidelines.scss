@@ -1,20 +1,21 @@
+/* navigation */
 body {
-  @for $active from 2 to 20 {
+  @for $active from 1 to 20 {
     &[data-active-menu='#{$active}'] {
-      .nav .nav-item {
-        &:nth-of-type(#{$active}) {
-          .nav-link {
-            color: $dp-color-darkyellow;
+      .dpsg-navigation .dpsg-nav-item[data-number='#{$active}'] {
+        .dpsg-nav-link {
+          color: $dp-color-white;
 
-            &:before {
-              content: '';
-              width: 60px;
-              position: absolute;
-              border-bottom: 3px solid $dp-color-darkyellow;
-              bottom: 0;
-              right: 0;
-              @include transition-all;
-            }
+          &:before {
+            transform-origin: left;
+            transform: scaleX(1);
+            transition: transform 0.5s;
+          }
+
+          &:after {
+            transform-origin: right;
+            transform: scaleX(1);
+            transition: transform 0.5s;
           }
         }
       }
@@ -485,7 +486,7 @@ body {
       margin: $dp-spaces--lv0 $dp-spaces--lv0 $dp-spaces--lv9;
     }
 
-    li {
+    .dpsg-nav-item {
       opacity: 0;
       animation: fadeInRight 0.5s linear forwards;
       animation-delay: 3s;
@@ -525,7 +526,7 @@ body {
       }
     }
 
-    a {
+    .dpsg-nav-link {
       text-decoration: none;
       display: block;
       padding: $dp-spaces--lv4;
