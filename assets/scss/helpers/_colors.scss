@@ -1,16 +1,18 @@
 /// Colors
 /// All colors that use in Doppler Branding
 
+$dp-color-white: #ffffff;
 $dp-color-ghostwhite: #f2f2f2;
+$dp-color-snow: #eaeaea;
+$dp-color-silver: #cccccc;
 $dp-color-lightgrey: #999999;
 $dp-color-grey: #666666;
 $dp-color-darkgrey: #333333;
+$dp-color-black: #000000;
 $dp-color-lightgreen: #65c192;
 $dp-color-green: #33ad73;
 $dp-color-darkgreen: #008046;
 $dp-color-green-brightness: rgba(51, 173, 115, 0.2);
-$dp-color-silver: #cccccc;
-$dp-color-snow: #eaeaea;
 $dp-color-lightyellow: #fde577;
 $dp-color-lemonyellow: #c6b159;
 $dp-color-yellow: #fbb224;
@@ -19,16 +21,17 @@ $dp-color-yellow-brightness: rgba(252, 229, 121, 0.2);
 $dp-color-lightred: #ec8a83;
 $dp-color-red: #e34f45;
 $dp-color-darkred: #a63a33;
-$dp-color-white: #ffffff;
-$dp-color-black: #000000;
-$dp-border-grey: #e8e8e8;
-$dp-color-default: #c9c7bd;
 $dp-color-lightbrown: #838370;
 $dp-color-brown: #302100;
 $dp-color-brown--hover: #594103;
+$dp-color-brown-brightness: rgba(48, 33, 0, 0.2);
+
+/// Internal use color variables
+
+$dp-color-default: #c9c7bd;
 $dp-bg-modal: #f7f7f7;
 $dp-bg-overlay: rgba(34, 34, 34, 0.95);
-$dp-color-brown-brightness: rgba(48, 33, 0, 0.2);
+$dp-border-grey: #e8e8e8;
 $dp-color-wild-sand: #f6f6f6;
 $dp-color-hover-table: #fff7e8;
 
@@ -37,3 +40,103 @@ $dp-color-hover-table: #fff7e8;
 $dpsg-brown-light: #f1ede1;
 $dpsg-light-blue: #00bcf2;
 $dpsg-orange: #ee7752;
+
+///
+/// Class Colors Style Guides
+///
+
+.dp-white {
+  background: $dp-color-white;
+}
+
+.dp-ghostwhite {
+  background: $dp-color-ghostwhite;
+}
+
+.dp-snow {
+  background: $dp-color-snow;
+}
+
+.dp-silver {
+  background: $dp-color-silver;
+}
+
+.dp-lightgrey {
+  background: $dp-color-lightgrey;
+}
+
+.dp-grey {
+  background: $dp-color-grey;
+}
+
+.dp-darkgrey {
+  background: $dp-color-darkgrey;
+}
+
+.dp-black {
+  background: $dp-color-black;
+}
+
+.dp-lightgreen {
+  background: $dp-color-lightgreen;
+}
+
+.dp-green {
+  background: $dp-color-green;
+}
+
+.dp-darkgreen {
+  background: $dp-color-darkgreen;
+}
+
+.dp-green-brightness {
+  background: $dp-color-green-brightness;
+}
+
+.dp-lightyellow {
+  background: $dp-color-lightyellow;
+}
+
+.dp-lemonyellow {
+  background: $dp-color-lemonyellow;
+}
+
+.dp-yellow {
+  background: $dp-color-yellow;
+}
+
+.dp-darkyellow {
+  background: $dp-color-darkyellow;
+}
+
+.dp-yellow-brightness {
+  background: $dp-color-yellow-brightness;
+}
+
+.dp-lightred {
+  background: $dp-color-lightred;
+}
+
+.dp-red {
+  background: $dp-color-red;
+}
+
+.dp-darkred {
+  background: $dp-color-darkred;
+}
+
+.dp-lightbrown {
+  background: $dp-color-lightbrown;
+}
+
+.dp-brown {
+  background: $dp-color-brown;
+}
+
+.dp-brown--hover {
+  background: $dp-color-brown--hover;
+}
+
+.dp-brown-brightness {
+  background: $dp-color-brown-brightness;
+}
