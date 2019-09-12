@@ -165,14 +165,6 @@ body {
 }
 /* modals */
 
-.list-modal {
-  display: flex;
-  justify-content: space-around;
-  min-height: 200px;
-  align-items: center;
-  max-width: $dp-wrapper-min-width;
-  margin: 0 auto;
-}
 /* buttons */
 .main-buttons {
   display: flex;
@@ -1842,4 +1834,33 @@ body {
   .dpsg-color-card.dpsg-brown-brightness:hover .dpsg-icon-color {
     box-shadow: 0 0 0 400px $dp-color-brown-brightness;
   }
+}
+
+.dpsg-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  padding: $dp-spaces--lv4 $dp-spaces--lv8;
+
+  h3 {
+    max-width: 90%;
+    text-align: left;
+  }
+
+  p {
+    max-width: 90%;
+    text-align: left;
+  }
+}
+
+/* Layout Modals */
+
+.list-modal {
+  display: flex;
+  justify-content: space-between;
+  min-height: 150px;
+  align-items: center;
+  max-width: $dp-wrapper-min-width;
+  width: 45%;
 }
