@@ -1448,3 +1448,398 @@ body {
     opacity: 1;
   }
 }
+
+/* Layout Color Card */
+
+.dpsg-wrap-colors {
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  padding: $dp-spaces--lv4;
+
+  h3 {
+    max-width: 90%;
+    text-align: left;
+    padding-left: $dp-spaces--lv8;
+  }
+  p {
+    max-width: 90%;
+    text-align: left;
+    padding-left: $dp-spaces--lv8;
+  }
+
+  .dpsg-content-colors {
+    display: flex;
+    padding: $dp-spaces--lv5;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    transition: 1s;
+
+    h3 {
+      max-width: 90%;
+      text-align: center;
+      padding: $dp-spaces--lv0;
+      font-size: $dp-sizing--lvl6;
+      transition: 0.1s;
+    }
+    p {
+      max-width: 90%;
+      text-align: center;
+      padding: $dp-spaces--lv0;
+    }
+
+    .dpsg-code {
+      background: $dp-color-white;
+      border-radius: 3px;
+      padding: 2px 5px;
+      font-size: $dp-sizing--lvl3;
+      box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.1), 0 1.5px 6px rgba(0, 0, 0, 0.1);
+      margin: $dp-spaces--lv2 auto;
+    }
+  }
+
+  .dpsg-color-card {
+    position: relative;
+    width: 280px;
+    padding: $dp-spaces--lv5 $dp-spaces--lv4;
+    background: $dp-color-white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    margin: $dp-spaces--lv5 $dp-spaces--lv2;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-align: center;
+    transition: 0.5s;
+
+    .dpsg-content-color {
+      position: relative;
+      z-index: 1;
+      transition: 0.5s;
+    }
+  }
+
+  .dpsg-color-card:hover .dpsg-content-color {
+    h3 {
+      color: $dp-color-white;
+    }
+  }
+
+  .dpsg-icon-color {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    color: $dp-color-white;
+    background: $dp-color-darkgrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin: $dp-spaces--lv0 auto;
+    font-size: $dp-sizing--lvl5;
+    font-weight: 700;
+    transition: 1s;
+  }
+
+  /* color 1*/
+
+  .dpsg-color-card.dpsg-white .dpsg-icon-color {
+    box-shadow: 0 0 0 0 $dp-color-white;
+    background: $dp-color-white;
+    color: $dp-color-silver;
+    border: 1px solid $dp-color-silver;
+  }
+
+  .dpsg-color-card.dpsg-white:hover .dpsg-icon-color {
+    box-shadow: 0 0 0 400px $dp-color-white;
+  }
+
+  .dpsg-color-card.dpsg-white:hover .dpsg-content-color h3 {
+    color: $dp-color-darkgrey;
+  }
+
+  /* color 2*/
+
+  .dpsg-color-card.dpsg-ghost .dpsg-icon-color {
+    box-shadow: 0 0 0 0 $dp-color-ghostwhite;
+    background: $dp-color-ghostwhite;
+    color: $dp-color-darkgrey;
+  }
+
+  .dpsg-color-card.dpsg-ghost:hover .dpsg-icon-color {
+    box-shadow: 0 0 0 400px $dp-color-ghostwhite;
+  }
+
+  .dpsg-color-card.dpsg-ghost:hover .dpsg-content-color h3 {
+    color: $dp-color-darkgrey;
+  }
+
+  /* color 3*/
+
+  .dpsg-color-card.dpsg-snow .dpsg-icon-color {
+    box-shadow: 0 0 0 0 $dp-color-snow;
+    background: $dp-color-snow;
+    color: $dp-color-darkgrey;
+  }
+
+  .dpsg-color-card.dpsg-snow:hover .dpsg-icon-color {
+    box-shadow: 0 0 0 400px $dp-color-snow;
+  }
+
+  .dpsg-color-card.dpsg-snow:hover .dpsg-content-color h3 {
+    color: $dp-color-darkgrey;
+  }
+
+  /* color 4*/
+
+  .dpsg-color-card.dpsg-silver .dpsg-icon-color {
+    box-shadow: 0 0 0 0 $dp-color-silver;
+    background: $dp-color-silver;
+    color: $dp-color-darkgrey;
+  }
+
+  .dpsg-color-card.dpsg-silver:hover .dpsg-icon-color {
+    box-shadow: 0 0 0 400px $dp-color-silver;
+  }
+
+  .dpsg-color-card.dpsg-silver:hover .dpsg-content-color h3 {
+    color: $dp-color-darkgrey;
+  }
+
+  /* color 5*/
+
+  .dpsg-color-card.dpsg-lightgrey .dpsg-icon-color {
+    box-shadow: 0 0 0 0 $dp-color-lightgrey;
+    background: $dp-color-lightgrey;
+  }
+
+  .dpsg-color-card.dpsg-lightgrey:hover .dpsg-icon-color {
+    box-shadow: 0 0 0 400px $dp-color-lightgrey;
+  }
+
+  /* color 6*/
+
+  .dpsg-color-card.dpsg-grey .dpsg-icon-color {
+    box-shadow: 0 0 0 0 $dp-color-grey;
+    background: $dp-color-grey;
+  }
+
+  .dpsg-color-card.dpsg-grey:hover .dpsg-icon-color {
+    box-shadow: 0 0 0 400px $dp-color-grey;
+  }
+
+  /* color 7*/
+
+  .dpsg-color-card.dpsg-darkgrey .dpsg-icon-color {
+    box-shadow: 0 0 0 0 $dp-color-darkgrey;
+    background: $dp-color-darkgrey;
+  }
+
+  .dpsg-color-card.dpsg-darkgrey:hover .dpsg-icon-color {
+    box-shadow: 0 0 0 400px $dp-color-darkgrey;
+  }
+
+  /* color 8*/
+
+  .dpsg-color-card.dpsg-black .dpsg-icon-color {
+    box-shadow: 0 0 0 0 $dp-color-black;
+    background: $dp-color-black;
+  }
+
+  .dpsg-color-card.dpsg-black:hover .dpsg-icon-color {
+    box-shadow: 0 0 0 400px $dp-color-black;
+  }
+
+  /* color 9*/
+
+  .dpsg-color-card.dpsg-lightgreen .dpsg-icon-color {
+    box-shadow: 0 0 0 0 $dp-color-lightgreen;
+    background: $dp-color-lightgreen;
+  }
+
+  .dpsg-color-card.dpsg-lightgreen:hover .dpsg-icon-color {
+    box-shadow: 0 0 0 400px $dp-color-lightgreen;
+  }
+
+  /* color 10*/
+
+  .dpsg-color-card.dpsg-green .dpsg-icon-color {
+    box-shadow: 0 0 0 0 $dp-color-green;
+    background: $dp-color-green;
+  }
+
+  .dpsg-color-card.dpsg-green:hover .dpsg-icon-color {
+    box-shadow: 0 0 0 400px $dp-color-green;
+  }
+
+  /* color 11*/
+
+  .dpsg-color-card.dpsg-darkgreen .dpsg-icon-color {
+    box-shadow: 0 0 0 0 $dp-color-darkgreen;
+    background: $dp-color-darkgreen;
+  }
+
+  .dpsg-color-card.dpsg-darkgreen:hover .dpsg-icon-color {
+    box-shadow: 0 0 0 400px $dp-color-darkgreen;
+  }
+
+  /* color 12*/
+
+  .dpsg-color-card.dpsg-green-brightness .dpsg-icon-color {
+    box-shadow: 0 0 0 0 $dp-color-green-brightness;
+    background: $dp-color-green-brightness;
+    color: $dp-color-darkgrey;
+  }
+
+  .dpsg-color-card.dpsg-green-brightness:hover .dpsg-icon-color {
+    box-shadow: 0 0 0 400px $dp-color-green-brightness;
+  }
+
+  .dpsg-color-card.dpsg-green-brightness:hover .dpsg-content-color h3 {
+    color: $dp-color-darkgrey;
+  }
+
+  /* color 13*/
+
+  .dpsg-color-card.dpsg-lightyellow .dpsg-icon-color {
+    box-shadow: 0 0 0 0 $dp-color-lightyellow;
+    background: $dp-color-lightyellow;
+    color: $dp-color-darkgrey;
+  }
+
+  .dpsg-color-card.dpsg-lightyellow:hover .dpsg-icon-color {
+    box-shadow: 0 0 0 400px $dp-color-lightyellow;
+  }
+
+  .dpsg-color-card.dpsg-lightyellow:hover .dpsg-content-color h3 {
+    color: $dp-color-darkgrey;
+  }
+
+  /* color 14*/
+
+  .dpsg-color-card.dpsg-lemonyellow .dpsg-icon-color {
+    box-shadow: 0 0 0 0 $dp-color-lemonyellow;
+    background: $dp-color-lemonyellow;
+  }
+
+  .dpsg-color-card.dpsg-lemonyellow:hover .dpsg-icon-color {
+    box-shadow: 0 0 0 400px $dp-color-lemonyellow;
+  }
+
+  /* color 15*/
+
+  .dpsg-color-card.dpsg-yellow .dpsg-icon-color {
+    box-shadow: 0 0 0 0 $dp-color-yellow;
+    background: $dp-color-yellow;
+  }
+
+  .dpsg-color-card.dpsg-yellow:hover .dpsg-icon-color {
+    box-shadow: 0 0 0 400px $dp-color-yellow;
+  }
+
+  /* color 16*/
+
+  .dpsg-color-card.dpsg-darkyellow .dpsg-icon-color {
+    box-shadow: 0 0 0 0 $dp-color-darkyellow;
+    background: $dp-color-darkyellow;
+  }
+
+  .dpsg-color-card.dpsg-darkyellow:hover .dpsg-icon-color {
+    box-shadow: 0 0 0 400px $dp-color-darkyellow;
+  }
+
+  /* color 17*/
+
+  .dpsg-color-card.dpsg-yellow-brightness .dpsg-icon-color {
+    box-shadow: 0 0 0 0 $dp-color-yellow-brightness;
+    background: $dp-color-yellow-brightness;
+    color: $dp-color-darkgrey;
+  }
+
+  .dpsg-color-card.dpsg-yellow-brightness:hover .dpsg-icon-color {
+    box-shadow: 0 0 0 400px $dp-color-yellow-brightness;
+  }
+
+  .dpsg-color-card.dpsg-yellow-brightness:hover .dpsg-content-color h3 {
+    color: $dp-color-darkgrey;
+  }
+
+  /* color 18*/
+
+  .dpsg-color-card.dpsg-lightred .dpsg-icon-color {
+    box-shadow: 0 0 0 0 $dp-color-lightred;
+    background: $dp-color-lightred;
+  }
+
+  .dpsg-color-card.dpsg-lightred:hover .dpsg-icon-color {
+    box-shadow: 0 0 0 400px $dp-color-lightred;
+  }
+
+  /* color 19*/
+
+  .dpsg-color-card.dpsg-red .dpsg-icon-color {
+    box-shadow: 0 0 0 0 $dp-color-red;
+    background: $dp-color-red;
+  }
+
+  .dpsg-color-card.dpsg-red:hover .dpsg-icon-color {
+    box-shadow: 0 0 0 400px $dp-color-red;
+  }
+
+  /* color 20*/
+
+  .dpsg-color-card.dpsg-darkred .dpsg-icon-color {
+    box-shadow: 0 0 0 0 $dp-color-darkred;
+    background: $dp-color-darkred;
+  }
+
+  .dpsg-color-card.dpsg-darkred:hover .dpsg-icon-color {
+    box-shadow: 0 0 0 400px $dp-color-darkred;
+  }
+
+  /* color 21*/
+
+  .dpsg-color-card.dpsg-lightbrown .dpsg-icon-color {
+    box-shadow: 0 0 0 0 $dp-color-lightbrown;
+    background: $dp-color-lightbrown;
+  }
+
+  .dpsg-color-card.dpsg-lightbrown:hover .dpsg-icon-color {
+    box-shadow: 0 0 0 400px $dp-color-lightbrown;
+  }
+
+  /* color 22*/
+
+  .dpsg-color-card.dpsg-brown .dpsg-icon-color {
+    box-shadow: 0 0 0 0 $dp-color-brown;
+    background: $dp-color-brown;
+  }
+
+  .dpsg-color-card.dpsg-brown:hover .dpsg-icon-color {
+    box-shadow: 0 0 0 400px $dp-color-brown;
+  }
+
+  /* color 23*/
+
+  .dpsg-color-card.dpsg-brown--hover .dpsg-icon-color {
+    box-shadow: 0 0 0 0 $dp-color-brown--hover;
+    background: $dp-color-brown--hover;
+  }
+
+  .dpsg-color-card.dpsg-brown--hover:hover .dpsg-icon-color {
+    box-shadow: 0 0 0 400px $dp-color-brown--hover;
+  }
+
+  /* color 24*/
+
+  .dpsg-color-card.dpsg-brown-brightness .dpsg-icon-color {
+    box-shadow: 0 0 0 0 $dp-color-brown-brightness;
+    background: $dp-color-brown-brightness;
+  }
+
+  .dpsg-color-card.dpsg-brown-brightness:hover .dpsg-icon-color {
+    box-shadow: 0 0 0 400px $dp-color-brown-brightness;
+  }
+}
