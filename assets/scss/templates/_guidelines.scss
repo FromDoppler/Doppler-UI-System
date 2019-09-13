@@ -1441,15 +1441,6 @@ body {
   }
 }
 
-.dpsg-code {
-  background: $dp-color-white;
-  border-radius: 3px;
-  padding: 2px 5px;
-  font-size: $dp-sizing--lvl2-14;
-  box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.1), 0 1.5px 6px rgba(0, 0, 0, 0.1);
-  margin: $dp-spaces--lv2 auto;
-}
-
 /* Layout Color Card */
 
 .dpsg-wrap-colors {
@@ -1490,6 +1481,15 @@ body {
       max-width: 90%;
       text-align: center;
       padding: $dp-spaces--lv0;
+    }
+
+    .dpsg-code {
+      background: $dp-color-white;
+      border-radius: 3px;
+      padding: 2px 5px;
+      font-size: $dp-sizing--lvl3;
+      box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.1), 0 1.5px 6px rgba(0, 0, 0, 0.1);
+      margin: $dp-spaces--lv2 auto;
     }
   }
 
@@ -1835,6 +1835,8 @@ body {
     box-shadow: 0 0 0 400px $dp-color-brown-brightness;
   }
 }
+
+/* Content text General */
 
 .dpsg-content {
   display: flex;
