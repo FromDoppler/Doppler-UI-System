@@ -207,28 +207,6 @@ body {
   }
 }
 
-/* tooltip */
-
-.wrapper-tooltip {
-  flex-wrap: wrap;
-  display: flex;
-  justify-content: space-between;
-  padding: 100px 10px;
-}
-
-.dp-box {
-  @include dp-box(
-    $color: $dp-color-silver,
-    $width: 20%,
-    $max-width: 408px,
-    $min-height: 150px
-  );
-  overflow: visible;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 /*-----------------------------------------------------------------------------------------------*/
 /// New Layout 2019
 
@@ -1887,4 +1865,21 @@ body {
   align-items: center;
   max-width: $dp-wrapper-min-width;
   width: 45%;
+}
+
+/* tooltip */
+
+.wrapper-tooltip {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 10px;
+
+  .dp-box {
+    width: 20%;
+    overflow: visible;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
