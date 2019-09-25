@@ -123,17 +123,18 @@
   .tooltip {
     display: block;
     position: relative;
-    top: -50px;
+    top: -30px;
     left: 50%;
     transform: translate(-50%, -50%) scale(0.75) rotate(15deg);
     transform-origin: bottom center;
-    padding: $dp-spaces--lv3 $dp-spaces--lv4;
+    padding: $dp-spaces--lv3;
     border-radius: 5px;
     background: rgba(0, 0, 0, 0.75);
     text-align: center;
     transition: 0.15s ease-in-out;
     opacity: 0;
     width: 100%;
+    min-width: 160px;
     pointer-events: none;
     z-index: 5;
     text-align: left;
@@ -156,23 +157,6 @@
       left: 50%;
       transform: translate(-50%, 100%);
       border-top: 5px solid rgba($dp-color-white, 0.95);
-    }
-
-    p {
-      display: inline-block;
-      margin: $dp-spaces--lv0;
-      font-size: $dp-sizing--lvl1;
-      line-height: 13px;
-      color: $dp-color-grey;
-    }
-
-    span {
-      display: block;
-      margin: $dp-spaces--lv0;
-      font-size: $dp-sizing--lvl2;
-      line-height: 15px;
-      font-weight: bold;
-      color: $dp-color-darkgrey;
     }
   }
 }
