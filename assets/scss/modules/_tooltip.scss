@@ -129,7 +129,7 @@
 .dp-tooltip-chart {
   opacity: 0;
   color: #333;
-  width: 100%;
+  width: max-content;
   min-width: 150px;
   display: flex;
   flex-direction: column;
