@@ -588,9 +588,7 @@ body {
 
   p {
     font-size: $dpsg-paragraph;
-    max-width: 80%;
-    margin: 0 0 16px;
-    line-height: 1.5em;
+    max-width: 90%;
   }
 
   a {
@@ -1891,4 +1889,8 @@ body {
     justify-content: space-between;
     align-items: center;
   }
+}
+
+.dpsg-slow-animation {
+  animation-delay: 5s;
 }
