@@ -1,0 +1,119 @@
+@function columns($columns, $total-columns) {
+  @return percentage($columns / $total-columns);
+}
+
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    max-width: columns($i, 12);
+    flex: 0 0 columns($i, 12);
+  }
+}
+
+
+@media (min-width: 375px) {
+  @for $i from 1 through 12 {
+    .col-sm-#{$i} {
+      max-width: columns($i, 12);
+      flex: 0 0 columns($i, 12);
+    }
+  }
+  .dp-container {
+    max-width: 375px;
+    background: yellow;
+  }
+}
+
+@media (min-width: 768px) {
+  @for $i from 1 through 12 {
+    .col-md-#{$i} {
+      max-width: columns($i, 12);
+      flex: 0 0 columns($i, 12);
+    }
+  }
+  .dp-container {
+    max-width: 768px;
+    background: red;
+  }
+}
+
+@media (min-width: 1440px) {
+  .dp-container {
+    max-width: 1260px;
+    background: $dp-color-snow;
+  }
+}
+
+
+
+
+
+
+.dp-container-fluid{
+  width: 100%;
+  padding-right: 12px;
+  padding-left: 12px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.dp-container {
+  width: 100%;
+  max-width: 1260px;
+  padding-right: 12px;
+  padding-left: 12px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.dp-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -12px;
+  margin-left: -12px;
+}
+
+[class*='col-'] {
+  position: relative;
+  width: 100%;
+  padding-right: 12px;
+  padding-left: 12px;
+}
+
+.contenido {
+  min-height: 150px;
+  width: 100%;
+  padding: 15px;
+}
+
+.m-b-12 {
+  margin-bottom: 12px;
+}
+
+.dp-box-shadow {
+  border-radius: 3px;
+  width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  border: 1px solid #ccc;
+  -webkit-box-shadow: 0 0 0 4px rgba(204, 204, 204, 0.3);
+  box-shadow: 0 0 0 4px rgba(204, 204, 204, 0.3);
+  position: relative;
+}
+
+
+/*
+@media (min-width: 992px) {
+  .dp-container {
+    max-width: 960px;
+    background: $dp-color-lightred;
+  }
+}
+
+@media (min-width: 768px){
+  .dp-container {
+    max-width: 720px;
+    background: $dp-color-yellow;
+  }
+}
+
+*/

@@ -235,6 +235,7 @@ body {
     height: 100%;
     transform-origin: top;
     animation: introOpen 0.5s ease-in-out forwards;
+    //animation: ease-in-out forwards;
 
     &:nth-child(even) {
       background: $dp-color-darkyellow;
@@ -588,7 +589,6 @@ body {
 
   p {
     font-size: $dpsg-paragraph;
-    max-width: 90%;
   }
 
   a {
@@ -1822,12 +1822,10 @@ body {
   padding: $dp-spaces--lv4 $dp-spaces--lv8;
 
   h3 {
-    max-width: 90%;
     text-align: left;
   }
 
   p {
-    max-width: 90%;
     text-align: left;
   }
 
