@@ -137,6 +137,8 @@
 
     .reports-box {
       @include dp-box($dp-color-silver, 30%, 408px, 250px);
+      width: 100%;
+      max-width: 100%;
       position: relative;
       margin-right: 4em;
 
