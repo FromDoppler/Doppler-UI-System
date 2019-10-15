@@ -235,7 +235,6 @@ body {
     height: 100%;
     transform-origin: top;
     animation: introOpen 0.5s ease-in-out forwards;
-    //animation: ease-in-out forwards;
 
     &:nth-child(even) {
       background: $dp-color-darkyellow;

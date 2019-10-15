@@ -9,8 +9,7 @@
   }
 }
 
-
-@media (min-width: 375px) {
+@media screen and (min-width: 320px) {
   @for $i from 1 through 12 {
     .col-sm-#{$i} {
       max-width: columns($i, 12);
@@ -18,12 +17,12 @@
     }
   }
   .dp-container {
-    max-width: 375px;
-    background: yellow;
+    max-width: 100%;
+    background: $dp-color-lemonyellow;
   }
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   @for $i from 1 through 12 {
     .col-md-#{$i} {
       max-width: columns($i, 12);
@@ -31,24 +30,25 @@
     }
   }
   .dp-container {
-    max-width: 768px;
-    background: red;
+    max-width: 100%;
+    background: $dp-color-lightred;
   }
 }
 
-@media (min-width: 1440px) {
+@media screen and (min-width: 1260px) {
+  @for $i from 1 through 12 {
+    .col-lg-#{$i} {
+      max-width: columns($i, 12);
+      flex: 0 0 columns($i, 12);
+    }
+  }
   .dp-container {
     max-width: 1260px;
     background: $dp-color-snow;
   }
 }
 
-
-
-
-
-
-.dp-container-fluid{
+.dp-container-fluid {
   width: 100%;
   padding-right: 12px;
   padding-left: 12px;
@@ -79,16 +79,6 @@
   padding-left: 12px;
 }
 
-.contenido {
-  min-height: 150px;
-  width: 100%;
-  padding: 15px;
-}
-
-.m-b-12 {
-  margin-bottom: 12px;
-}
-
 .dp-box-shadow {
   border-radius: 3px;
   width: 100%;
@@ -98,22 +88,17 @@
   -webkit-box-shadow: 0 0 0 4px rgba(204, 204, 204, 0.3);
   box-shadow: 0 0 0 4px rgba(204, 204, 204, 0.3);
   position: relative;
+  overflow: hidden;
 }
 
+/// Es necesario crear las clases atomicas de margins y paddings
+/// Solo se creo un margen bottom para mostrar la grilla
 
-/*
-@media (min-width: 992px) {
-  .dp-container {
-    max-width: 960px;
-    background: $dp-color-lightred;
-  }
+.m-b-12 {
+  margin-bottom: 24px;
 }
 
-@media (min-width: 768px){
-  .dp-container {
-    max-width: 720px;
-    background: $dp-color-yellow;
-  }
+.dpsg-content {
+  width: 100%;
+  padding: 15px;
 }
-
-*/
