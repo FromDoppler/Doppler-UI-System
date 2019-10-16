@@ -2,13 +2,6 @@
   @return percentage($columns / $total-columns);
 }
 
-@for $i from 1 through 12 {
-  .col-#{$i} {
-    max-width: columns($i, 12);
-    flex: 0 0 columns($i, 12);
-  }
-}
-
 @media screen and (min-width: 320px) {
   @for $i from 1 through 12 {
     .col-sm-#{$i} {
@@ -50,17 +43,15 @@
 
 .dp-container-fluid {
   width: 100%;
-  padding-right: 12px;
-  padding-left: 12px;
+  padding-right: $dp-spaces--lv2;
+  padding-left: $dp-spaces--lv2;
   margin-right: auto;
   margin-left: auto;
 }
 
 .dp-container {
-  width: 100%;
-  max-width: 1260px;
-  padding-right: 12px;
-  padding-left: 12px;
+  padding-right: $dp-spaces--lv2;
+  padding-left: $dp-spaces--lv2;
   margin-right: auto;
   margin-left: auto;
 }
@@ -68,37 +59,37 @@
 .dp-row {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -12px;
-  margin-left: -12px;
+  margin-right: -$dp-spaces--lv2;
+  margin-left: -$dp-spaces--lv2;
 }
 
 [class*='col-'] {
   position: relative;
   width: 100%;
-  padding-right: 12px;
-  padding-left: 12px;
+  padding-right: $dp-spaces--lv2;
+  padding-left: $dp-spaces--lv2;
 }
 
 .dp-box-shadow {
-  border-radius: 3px;
+  border-radius: $dp-border-radius;
   width: 100%;
   max-width: 100%;
   min-height: 100%;
-  border: 1px solid #ccc;
+  border: 1px solid $dp-color-silver;
   -webkit-box-shadow: 0 0 0 4px rgba(204, 204, 204, 0.3);
   box-shadow: 0 0 0 4px rgba(204, 204, 204, 0.3);
   position: relative;
   overflow: hidden;
 }
 
-/// Es necesario crear las clases atomicas de margins y paddings
-/// Solo se creo un margen bottom para mostrar la grilla
+/// It is necessary to create atomic classes of margins and paddings
+/// Only a lower margin was created to show the grid
 
 .m-b-12 {
-  margin-bottom: 24px;
+  margin-bottom: $dp-spaces--lv4;
 }
 
 .dpsg-content {
   width: 100%;
-  padding: 15px;
+  padding: $dp-spaces--lv3;
 }
