@@ -65,7 +65,7 @@
     "prettier": "^1.18.2",
     "prettier-check": "^2.0.0",
     "sassdoc": "^2.7.1",
-    "semantic-release": "^15.13.24",
+    "semantic-release": "^15.13.27",
     "sort-css-media-queries": "^1.4.3",
     "ttf2woff2": "^2.0.3"
   },
