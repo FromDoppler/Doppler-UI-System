@@ -1,0 +1,92 @@
+@function columns($columns, $total-columns) {
+  @return percentage($columns / $total-columns);
+}
+
+@media screen and (min-width: 320px) {
+  @for $i from 1 through 12 {
+    .col-sm-#{$i} {
+      max-width: columns($i, 12);
+      flex: 0 0 columns($i, 12);
+    }
+  }
+  .dp-container {
+    max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  @for $i from 1 through 12 {
+    .col-md-#{$i} {
+      max-width: columns($i, 12);
+      flex: 0 0 columns($i, 12);
+    }
+  }
+  .dp-container {
+    max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  @for $i from 1 through 12 {
+    .col-lg-#{$i} {
+      max-width: columns($i, 12);
+      flex: 0 0 columns($i, 12);
+    }
+  }
+  .dp-container {
+    max-width: 1260px;
+  }
+}
+
+.dp-container-fluid {
+  width: 100%;
+  padding-right: $dp-spaces--lv2;
+  padding-left: $dp-spaces--lv2;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.dp-container {
+  padding-right: $dp-spaces--lv2;
+  padding-left: $dp-spaces--lv2;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.dp-rowflex {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -$dp-spaces--lv2;
+  margin-left: -$dp-spaces--lv2;
+}
+
+[class*='col-'] {
+  position: relative;
+  width: 100%;
+  padding-right: $dp-spaces--lv2;
+  padding-left: $dp-spaces--lv2;
+}
+
+.dp-box-shadow {
+  border-radius: $dp-border-radius;
+  width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  border: 1px solid $dp-color-silver;
+  -webkit-box-shadow: 0 0 0 4px rgba(204, 204, 204, 0.3);
+  box-shadow: 0 0 0 4px rgba(204, 204, 204, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+/// It is necessary to create atomic classes of margins and paddings
+/// Only a lower margin was created to show the grid
+
+.m-b-12 {
+  margin-bottom: $dp-spaces--lv4;
+}
+
+.dpsg-content-sample {
+  width: 100%;
+  padding: $dp-spaces--lv3;
+}
