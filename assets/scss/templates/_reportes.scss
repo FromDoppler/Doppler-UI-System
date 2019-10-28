@@ -7,7 +7,7 @@
   box-shadow: 0 0 0 4px $dp-color-white;
   padding: $dp-spaces--lv4;
   margin: $dp-spaces--lv0 auto;
-  box-shadow: 0 0 0 4px #fff; /* TODO: check to modularize the messages */
+  box-shadow: 0 0 0 4px $dp-color-white; /* TODO: check to modularize the messages */
 
   h2 {
     color: $dp-color-darkgrey;
@@ -48,7 +48,9 @@
   background: $dp-color-ghostwhite;
   border-bottom: 1px solid $dp-color-silver;
   box-shadow: 0 -4px 0 0 $dp-color-snow inset;
-  padding: $dp-spaces--lv0 $dp-spaces--lv5;
+  padding: $dp-spaces--lv5 $dp-spaces--lv0;
+  position: relative;
+  margin-bottom: $dp-spaces--lv6;
 
   h3 {
     color: $dp-color-darkgrey;
@@ -66,10 +68,10 @@
 
   .arrow {
     position: absolute;
-    bottom: -36px;
-    left: 0;
-    width: 0;
-    height: 0;
+    bottom: -66px;
+    left: $dp-spaces--lv5;
+    width: $dp-spaces--lv0;
+    height: $dp-spaces--lv0;
     border-top: 20px solid $dp-color-ghostwhite;
     border-right: 20px solid transparent;
     border-bottom: 20px solid transparent;
@@ -93,13 +95,14 @@
   width: 100%;
   font-family: $dp-font-family;
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-start;
   justify-content: space-between;
 }
 
 .form-filters .filter {
-  width: 30%;
   position: relative;
+  margin-bottom: $dp-spaces--lv5;
 
   .verified--domain {
     font-size: $dp-sizing--lvl1;
@@ -120,11 +123,13 @@
   }
 
   .dropdown-arrow {
-    top: 43px;
+    top: 40px;
   }
 }
 
 /* Section KPI */
+/* These styles deprecate in the next version (all that is inside container-reports will be removed) */
+
 .container-reports {
   width: 100%;
   padding: $dp-spaces--lv10 $dp-spaces--lv5;
@@ -140,7 +145,6 @@
       width: 100%;
       max-width: 100%;
       position: relative;
-      margin-right: 4em;
 
       &:last-child {
         margin-right: 0;
@@ -152,7 +156,7 @@
     &::after {
       content: '';
       position: absolute;
-      border-bottom: 3px solid #33ad73;
+      border-bottom: 3px solid $dp-color-green;
       width: 125px;
       padding-top: 30px;
       left: 0;
@@ -170,6 +174,34 @@
       display: block;
       text-transform: none;
     }
+  }
+}
+
+.box-border--bottom {
+  position: relative;
+  padding: $dp-spaces--lv5 $dp-spaces--lv4;
+
+  &::after {
+    content: '';
+    position: absolute;
+    border-bottom: 3px solid $dp-color-green;
+    width: 125px;
+    padding-top: 30px;
+    left: $dp-spaces--lv4;
+    display: block;
+  }
+}
+.title-reports-box {
+  padding: $dp-spaces--lv5;
+  display: inline-block;
+  font-size: $dp-sizing--lvl2;
+  color: $dp-color-darkgrey;
+  text-transform: uppercase;
+  line-height: $dp-spaces--lv3;
+
+  small {
+    display: block;
+    text-transform: none;
   }
 }
 
@@ -196,9 +228,10 @@
 
 .text-kpi {
   font-size: $dp-sizing--lvl2;
-  margin: 5em 0 3em;
+  margin: 3em 0 3em;
   position: relative;
   color: $dp-color-grey;
+  padding: $dp-spaces--lv2 $dp-spaces--lv4;
 }
 .group-options {
   display: flex;
@@ -240,8 +273,8 @@
 
 /* Top ranking */
 .wrapper-reports-box {
-  max-width: $dp-wrapper-max-width;
-  margin: $dp-spaces--lv4 auto;
+  /*max-width: $dp-wrapper-max-width;*/
+  /*margin: $dp-spaces--lv4 auto;*/
   font-family: $dp-font-family;
   position: relative;
 
