@@ -76,17 +76,6 @@
   position: relative;
 }
 
-/// It is necessary to create atomic classes of margins and paddings
-/// Only a lower margin was created to show the grid
-
-.m-b-12 {
-  margin-bottom: $dp-spaces--lv4;
-}
-
-.m-t-36 {
-  margin-top: $dp-spaces--lv6;
-}
-
 .dpsg-content-sample {
   width: 100%;
   padding: $dp-spaces--lv3;
