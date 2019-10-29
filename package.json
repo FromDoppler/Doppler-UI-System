@@ -35,7 +35,7 @@
     "arrowParens": "always"
   },
   "devDependencies": {
-    "@semantic-release/exec": "^3.3.7",
+    "@semantic-release/exec": "^3.3.8",
     "autoprefixer": "^9.6.1",
     "browser-sync": "^2.26.7",
     "css-mqpacker": "~7.0.0",
