@@ -48,3 +48,38 @@ $dp-line-height-rpgd: 16px;
 // Variables Font size Styles Guides
 
 $dpsg-paragraph: 16px;
+
+/// Atomic classes for paddings and margins
+
+$spaceamounts: (
+  0,
+  6,
+  12,
+  18,
+  24,
+  30,
+  36,
+  42,
+  48,
+  54,
+  60,
+  66,
+  72,
+  78,
+  84,
+  90,
+  96
+); /// The amount of spaces we use in levels
+$sides: (top, bottom, left, right); /// Directions
+
+@each $space in $spaceamounts {
+  @each $side in $sides {
+    .m-#{str-slice($side, 0, 1)}-#{$space} {
+      margin-#{$side}: #{$space}px;
+    }
+
+    .p-#{str-slice($side, 0, 1)}-#{$space} {
+      padding-#{$side}: #{$space}px;
+    }
+  }
+}
