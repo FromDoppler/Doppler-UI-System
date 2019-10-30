@@ -68,22 +68,12 @@
 }
 
 .dp-box-shadow {
-  border-radius: $dp-border-radius;
+  @include dp-box($dp-color-silver, 30%, 408px, 250px);
   width: 100%;
   max-width: 100%;
   min-height: 100%;
   border: 1px solid $dp-color-silver;
-  -webkit-box-shadow: 0 0 0 4px rgba(204, 204, 204, 0.3);
-  box-shadow: 0 0 0 4px rgba(204, 204, 204, 0.3);
   position: relative;
-  overflow: hidden;
-}
-
-/// It is necessary to create atomic classes of margins and paddings
-/// Only a lower margin was created to show the grid
-
-.m-b-12 {
-  margin-bottom: $dp-spaces--lv4;
 }
 
 .dpsg-content-sample {
