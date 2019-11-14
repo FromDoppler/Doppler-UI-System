@@ -44,7 +44,7 @@
     "gulp": "^3.9.1",
     "gulp-clean-css": "^4.2.0",
     "gulp-concat": "~2.6.1",
-    "gulp-csso": "^3.0.1",
+    "gulp-csso": "^4.0.0",
     "gulp-iconfont": "^10.0.3",
     "gulp-iconfont-css": "~3.0.0",
     "gulp-imagemin": "~6.1.1",
