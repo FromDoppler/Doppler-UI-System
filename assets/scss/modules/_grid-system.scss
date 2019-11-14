@@ -74,6 +74,15 @@
   min-height: 100%;
   border: 1px solid $dp-color-silver;
   position: relative;
+
+  .dp-boxshadow--error {
+    padding: $dp-spaces--lv5;
+    color: $dp-color-red;
+
+    a {
+      text-decoration: underline;
+    }
+  }
 }
 
 .dpsg-content-sample {
