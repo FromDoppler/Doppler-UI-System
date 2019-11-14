@@ -76,8 +76,12 @@
   position: relative;
 
   .dp-boxshadow--error {
-    padding: $dp-spaces--lv5 $dp-spaces--lv6;
+    padding: $dp-spaces--lv5;
     color: $dp-color-red;
+
+    a {
+      text-decoration: underline;
+    }
   }
 }
 
