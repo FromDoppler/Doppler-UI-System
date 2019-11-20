@@ -71,13 +71,27 @@
   @include dp-box($dp-color-silver, 30%, 408px, 250px);
   width: 100%;
   max-width: 100%;
-  min-height: 100%;
+  min-height: 80px;
   border: 1px solid $dp-color-silver;
   position: relative;
 
   .dp-boxshadow--error {
-    padding: $dp-spaces--lv5;
+    padding: $dp-spaces--lv5 $dp-spaces--lv7;
     color: $dp-color-red;
+
+    a {
+      text-decoration: underline;
+      color: $dp-color-red;
+
+      &:hover {
+        color: $dp-color-darkred;
+      }
+    }
+  }
+
+  .dp-boxshadow--usermsg {
+    padding: $dp-spaces--lv5 $dp-spaces--lv7;
+    color: $dp-color-lightgrey;
 
     a {
       text-decoration: underline;
