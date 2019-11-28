@@ -5,3 +5,72 @@
 /// @author Gustavo Baamonde
 /// Classes for the Images component
 ////
+
+@mixin icon-table {
+  background-repeat: no-repeat;
+  width: 17px;
+  height: 17px;
+  margin-right: $dp-spaces--lv1;
+  display: inline-block;
+}
+
+@mixin icon-user-table {
+  content: '';
+  position: absolute;
+  top: $dp-spaces--lv2;
+  height: 20px;
+  width: 20px;
+  background-repeat: no-repeat;
+}
+
+.icon-star {
+  @include icon-table;
+  background-image: url('../../img/star.svg');
+}
+
+.icon-star-filled {
+  @include icon-table;
+  background-image: url('../../img/star-filled.svg');
+}
+
+// User active
+.icon-user--active:before {
+  @include icon-user-table;
+  background-image: url('../../img/user-active.svg');
+}
+
+// User active not associated to lists
+.icon-user--natl:before {
+  @include icon-user-table;
+  background-image: url('../../img/user-active-not-associated-to-lists.svg');
+}
+
+// User removed client
+.icon-user--rc:before {
+  @include icon-user-table;
+  background-image: url('../../img/user-removed-client.svg');
+}
+
+// User removed hard bounces
+.icon-user--rhb:before {
+  @include icon-user-table;
+  background-image: url('../../img/user-removed-hard-bounces.svg');
+}
+
+// User removed no openings
+.icon-user--rno:before {
+  @include icon-user-table;
+  background-image: url('../../img/user-removed-no-openings.svg');
+}
+
+// User removed soft bounces
+.icon-user--rsb:before {
+  @include icon-user-table;
+  background-image: url('../../img/user-removed-soft-bounces.svg');
+}
+
+// User subscriber removed
+.icon-user--sr:before {
+  @include icon-user-table;
+  background-image: url('../../img/user-subscriber-removed.svg');
+}

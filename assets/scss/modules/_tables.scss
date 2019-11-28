@@ -68,6 +68,7 @@
         width: 100%;
         color: $dp-color-grey;
         font-weight: normal;
+        text-decoration: none;
 
         &:hover {
           color: $dp-color-lightgrey;
@@ -107,9 +108,9 @@
       td {
         color: $dp-color-grey;
         border: $dp-spaces--lv0;
-        padding-left: $dp-spaces--lv2;
-        padding-right: $dp-spaces--lv3;
+        padding: $dp-spaces--lv2;
         font-size: $font-size-table;
+        position: relative;
       }
 
       .sync {
