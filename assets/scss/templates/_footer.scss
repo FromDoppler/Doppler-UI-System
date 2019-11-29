@@ -17,3 +17,27 @@
   justify-content: space-between;
   height: 100%;
 }
+
+.dp-footer {
+  min-height: 80px;
+  box-shadow: 0 -4px 0 0 $dp-color-snow;
+  border-top: 1px solid $dp-color-silver;
+  font-size: $dp-sizing--lvl1;
+  font-family: $dp-font-family;
+  padding: $dp-spaces--lv3;
+
+  .dp-text-align {
+    text-align: left;
+  }
+
+  p {
+    font-size: $dp-sizing--lvl1;
+    font-family: $dp-font-family;
+  }
+
+  @media (min-width: 768px) {
+    .dp-text-align {
+      text-align: right;
+    }
+  }
+}
