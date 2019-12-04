@@ -134,12 +134,15 @@
     }
 
     &.button--has-icon {
-      width: 36px;
-      height: 36px;
       border: 1px solid $dp-border-grey;
-      border-radius: 0;
+      border-radius: $dp-border-radius;
       font-size: $dp-sizing--lvl5;
       background-color: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: $dp-spaces--lv2;
+      margin-left: $dp-spaces--lv4;
 
       &.is-spinning {
         [class*='-icon'] {

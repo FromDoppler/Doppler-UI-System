@@ -57,72 +57,143 @@
       href="https://www.fromdoppler.com/favicon.ico"
     />
   </head>
-
   <body data-active-menu="16">
-    <section class="section-module">
-      <!-- build:include partials/_nav.html -->
-      This will be replaced by the content of nav.html
-      <!-- /build -->
-    </section>
-    <section class="page-wrapper">
-      <div class="dp-integration">
-        <header class="dp-integration__block">
-          <div class="block">
-            <h2>Shopify</h2>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Consequuntur facere velit officia quibusdam perspiciatis impedit
-              veritatis et, ducimus dolorem <a href="">corporis</a>.
-            </p>
-          </div>
-          <!-- [is-connected] -->
-          <hr />
-          <div class="block dp-integration__status">
-            <div class="status__info">
-              <div>
-                <img src="img/integration__logo.png" alt="" />
-                <div class="status__data">
-                  <p>Last synchronization date: <time>22/04/2019</time></p>
-                  <p>Account name: <strong>Doppler Test</strong></p>
+    <section class="dp-container">
+      <div class="dp-rowflex">
+        <div class="col-sm-12 m-t-24">
+          <header class="m-b-30">
+            <a
+              href="layout.html"
+              class="dp-button button-medium secondary-green button--round"
+            >
+              Back
+            </a>
+          </header>
+          <nav class="dp-breadcrumb">
+            <ul>
+              <li><a href="#">Panel de Control</a></li>
+              <li>Integraciones y Preferencias Avanazadas</li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col-sm-12">
+          <div class="dp-integration">
+            <div class="dp-box-shadow">
+              <div class="dp-block">
+                <h2>Conecta Doppler con tu tienda Shopify</h2>
+                <p>
+                  <span
+                    >Envía automáticamente los Contactos de tu tienda y toda su
+                    información a una Lista de Doppler. Además, podrás importar
+                    los productos de tu tienda en Plantillas de Email y crear
+                    Automations de Carrito Abandonado y Producto Visitado.
+                    ¿Tienes dudas? Presiona
+                    <a target="_blank" href="#" rel="noopener noreferrer"
+                      >HELP</a
+                    >.</span
+                  >
+                </p>
+              </div>
+              <hr />
+              <div class="dp-block dp-integration__status">
+                <div class="dp-rowflex">
+                  <div class="col-sm-12 col-md-1 col-lg-1 m-b-24">
+                    <img
+                      class="sc-jKJlTe jacIlF"
+                      src="http://localhost:3000//static/media/logo.f3fc7028.svg"
+                      alt="Shopify logo"
+                    />
+                  </div>
+                  <div class="col-sm-12 col-md-8 col-lg-8 m-b-24">
+                    <div class="status__data">
+                      <ul>
+                        <li>
+                          <p>
+                            Fecha de última sincronización:
+                            <strong>16/12/2017</strong>
+                          </p>
+                          <p>
+                            Nombre de la cuenta: <strong> myshop.com </strong>
+                          </p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-3 col-lg-3">
+                    <div class="status__link dp-align-right">
+                      <a
+                        href="https://myshop.com/admin/apps"
+                        class="dp-button button-medium primary-green"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        >Panel de control de Shopify</a
+                      >
+                    </div>
+                  </div>
                 </div>
               </div>
+              <hr />
+              <footer class="dp-integration__actions">
+                <button
+                  type="button"
+                  class="dp-button button-medium primary-grey"
+                >
+                  Atrás
+                </button>
+                <button
+                  type="button"
+                  class="dp-button button-medium primary-green"
+                >
+                  Conectar
+                </button>
+              </footer>
             </div>
-            <button type="button" class="dp-button button-big primary-green">
-              Desconectar
-            </button>
+            <div class="dp-box-shadow m-t-24 dp-integration--info m-b-36">
+              <header class="dp-block">
+                <div>
+                  <h2>Listas creadas</h2>
+                  <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et
+                    praesentium distinctio obcaecati.
+                  </p>
+                </div>
+                <button class="dp-button button--has-icon">
+                  <span class="ms-icon icon-reload"></span>
+                </button>
+              </header>
+              <hr />
+              <header class="dp-block">
+                <div>
+                  <h2>Lista sincronizada</h2>
+                  <p>Puedes sincronizar los datos manualmente cuando gustes.</p>
+                </div>
+              </header>
+              <hr />
+              <div class="dp-block">
+                <ul>
+                  <li>
+                    <table class="dp-c-table">
+                      <thead>
+                        <tr>
+                          <th>Nombre de la Lista</th>
+                          <th>Suscriptores</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>MyList</td>
+                          <td>3</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <!-- [/is-connected] -->
-        </header>
-        <!-- [is-disconnected] -->
-        <footer class="dp-integration__actions">
-          <button type="button" class="dp-button button-big primary-grey">
-            Atrás
-          </button>
-          <button type="button" class="dp-button button-big primary-green">
-            Conectar
-          </button>
-        </footer>
-        <!-- [/is-disconnected] -->
-        <!-- [is-connected] -->
-        <section class="dp-integration__block dp-integration--info">
-          <header class="block">
-            <div>
-              <h2>Listas creadas</h2>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et
-                praesentium distinctio obcaecati.
-              </p>
-            </div>
-            <button class="dp-button button--has-icon">
-              <span class="ms-icon icon-reload"></span>
-            </button>
-          </header>
-          <hr />
-        </section>
-        <!-- [/is-connected] -->
+        </div>
       </div>
     </section>
-
     <!-- build:js:dist js/app.js -->
     <script src="./js/main.js"></script>
     <!-- /build -->
