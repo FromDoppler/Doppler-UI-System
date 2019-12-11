@@ -162,3 +162,9 @@
   $dp-sizing--lvl2,
   $dp-color-hover-table
 );
+
+.dp-table-responsive {
+  overflow-x: auto;
+  width: 100%;
+  padding-bottom: $dp-spaces--lv4;
+}

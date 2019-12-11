@@ -82,7 +82,6 @@ select {
   color: $dp-color-grey;
   width: 100%;
   background-color: $dp-color-white;
-  border: 1px solid $dp-color-silver;
   border-radius: $dp-border-radius;
   font-size: $dp-sizing--lvl2;
   padding: 0 40px 0 10px;
@@ -91,7 +90,6 @@ select {
   cursor: pointer;
   -webkit-appearance: button;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
-  //outline: none;
 }
 
 select:disabled {
@@ -256,11 +254,9 @@ input:not([type='checkbox']) {
 
   &:focus {
     color: $dp-color-lightbrown;
-    border: 1px solid $dp-color-yellow;
     border-radius: $dp-border-radius;
     -webkit-box-shadow: 0 0 0 2px $dp-color-brown-brightness;
     box-shadow: 0 0 0 2px $dp-color-brown-brightness;
-    outline: none;
   }
 }
 
@@ -514,5 +510,31 @@ input[type='tel'] {
   .login-form,
   .signup-form {
     margin-top: $dp-spaces--lv5;
+  }
+}
+
+///
+/// form the filters
+///
+
+.dp-filters {
+  .dp-t-inputsh {
+    padding-top: 22px;
+  }
+
+  .dp-searchemail {
+    top: 22px;
+    padding: $dp-spaces--lv0 $dp-spaces--lv2 $dp-spaces--lv0 $dp-spaces--lv2;
+    text-align: left;
+    line-height: 40px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+
+    &:focus {
+      outline-color: $dp-color-darkyellow;
+    }
+  }
+
+  .dropdown-arrow {
+    right: $dp-spaces--lv4;
   }
 }
