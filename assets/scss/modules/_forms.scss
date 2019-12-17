@@ -88,7 +88,9 @@ select {
   text-align: left;
   line-height: 40px;
   cursor: pointer;
-  -webkit-appearance: button;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
 }
 
