@@ -85,17 +85,23 @@
                   aria-labelledby="searchSubscriberHistory"
                 >
                   <li
-                    class="field-item col-lg-6 col-md-6 col-sm-12 dp-t-inputsh"
+                    class="field-item col-lg-6 col-md-6 col-sm-12 dp-t-inputsh error"
                   >
                     <input
                       type="search"
-                      placeholder="Email"
+                      placeholder="Busca un subscriptor por su email, nombre o apellido..."
                       aria-label="Ingrese un email para buscar historial de desubscriptor"
                       class="dp-searchemail"
                       aria-required="true"
                     />
+                    <button class="dp-button button-medium dp-button--search">
+                      <span class="ms-icon icon-search"></span>
+                    </button>
+                    <div class="dp-message dp-error-form">
+                      <p>¡Ouch! Este campo está vacío</p>
+                    </div>
                   </li>
-                  <li class="field-item col-lg-2 col-md-6 col-sm-12">
+                  <li class="field-item col-lg-2 col-md-6 col-sm-12 error">
                     <label for="filtrarPorEstado">Filtrar por Estado:</label>
                     <span class="dropdown-arrow"></span>
                     <select id="filtrarPorEstado">
@@ -103,6 +109,9 @@
                       <option>Estado</option>
                       <option>Estado</option>
                     </select>
+                    <div class="dp-message dp-error-form">
+                      <p>¡Ouch! Este campo está vacío</p>
+                    </div>
                   </li>
                   <li class="field-item col-lg-2 col-md-6 col-sm-12">
                     <label for="filtrarPorOrigen">Filtrar por Origen:</label>
@@ -112,6 +121,9 @@
                       <option>Estado</option>
                       <option>Estado</option>
                     </select>
+                    <div class="dp-message dp-error-form">
+                      <p>¡Ouch! Este campo está vacío</p>
+                    </div>
                   </li>
                   <li class="field-item col-lg-2 col-md-6 col-sm-12">
                     <label for="filtrarPorCalificacion"
@@ -123,6 +135,9 @@
                       <option>Estado</option>
                       <option>Estado</option>
                     </select>
+                    <div class="dp-message dp-error-form">
+                      <p>¡Ouch! Este campo está vacío</p>
+                    </div>
                   </li>
                 </ul>
               </fieldset>

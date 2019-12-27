@@ -539,4 +539,21 @@ input[type='tel'] {
   .dropdown-arrow {
     right: $dp-spaces--lv4;
   }
+
+  .dp-button--search {
+    position: absolute;
+    top: 22px;
+    font-size: $dp-sizing--lvl3;
+    right: $dp-spaces--lv2;
+    color: $dp-color-grey;
+    padding: $dp-spaces--lv0;
+    width: 40px;
+    height: 40px;
+  }
+
+  .dp-button.button--loading:after {
+    @include dp-preloader($dp-color-grey, 1.5em);
+    border-color: rgba(204, 204, 204, 0.3);
+    border-top-color: $dp-color-silver;
+  }
 }
