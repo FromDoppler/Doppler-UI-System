@@ -224,10 +224,7 @@ input[type='checkbox'] {
   &:focus {
     & ~ .checkmark {
       color: $dp-color-lightbrown;
-      border: 1px solid $dp-color-yellow;
       border-radius: $dp-border-radius;
-      -webkit-box-shadow: 0 0 0 2px $dp-color-brown-brightness;
-      box-shadow: 0 0 0 2px $dp-color-brown-brightness;
       outline: none;
     }
   }
@@ -257,8 +254,6 @@ input:not([type='checkbox']) {
   &:focus {
     color: $dp-color-lightbrown;
     border-radius: $dp-border-radius;
-    -webkit-box-shadow: 0 0 0 2px $dp-color-brown-brightness;
-    box-shadow: 0 0 0 2px $dp-color-brown-brightness;
   }
 }
 
@@ -529,11 +524,6 @@ input[type='tel'] {
     padding: $dp-spaces--lv0 $dp-spaces--lv2 $dp-spaces--lv0 $dp-spaces--lv2;
     text-align: left;
     line-height: 40px;
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
-
-    &:focus {
-      outline-color: $dp-color-darkyellow;
-    }
   }
 
   .dropdown-arrow {
