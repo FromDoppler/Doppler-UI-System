@@ -545,5 +545,6 @@ input[type='tel'] {
     @include dp-preloader($dp-color-grey, 1.5em);
     border-color: rgba(204, 204, 204, 0.3);
     border-top-color: $dp-color-silver;
+    left: 9px;
   }
 }
