@@ -75,7 +75,7 @@
             <form
               class="dp-filters"
               role="search"
-              aria-label="Filtros para Historial de Subscriptores"
+              aria-label="Formulario de filtros para buscar Historial de Suscriptores"
               id="searchSubscriberHistory"
             >
               <fieldset>
@@ -85,44 +85,78 @@
                   aria-labelledby="searchSubscriberHistory"
                 >
                   <li
-                    class="field-item col-lg-6 col-md-6 col-sm-12 dp-t-inputsh"
+                    class="field-item col-lg-6 col-md-6 col-sm-12 dp-t-inputsh error"
                   >
                     <input
                       type="search"
-                      placeholder="Email"
+                      placeholder="Busca un subscriptor por su email, nombre o apellido..."
                       aria-label="Ingrese un email para buscar historial de desubscriptor"
                       class="dp-searchemail"
                       aria-required="true"
                     />
+                    <button
+                      class="dp-button button-medium dp-button--search"
+                      aria-label="buscar historial de desubscriptor"
+                      title="Buscar"
+                    >
+                      <span
+                        class="ms-icon icon-search"
+                        aria-hidden="true"
+                      ></span>
+                    </button>
+                    <div class="dp-message dp-error-form">
+                      <p>¡Ouch! Este campo está vacío</p>
+                    </div>
                   </li>
-                  <li class="field-item col-lg-2 col-md-6 col-sm-12">
+                  <li class="field-item col-lg-2 col-md-6 col-sm-12 error">
                     <label for="filtrarPorEstado">Filtrar por Estado:</label>
                     <span class="dropdown-arrow"></span>
-                    <select id="filtrarPorEstado">
+                    <select
+                      id="filtrarPorEstado"
+                      aria-label="Filtrar por estado"
+                    >
                       <option>Estado</option>
                       <option>Estado</option>
                       <option>Estado</option>
                     </select>
+                    <div class="dp-message dp-error-form">
+                      <p>¡Ouch! Este campo está vacío</p>
+                    </div>
                   </li>
                   <li class="field-item col-lg-2 col-md-6 col-sm-12">
                     <label for="filtrarPorOrigen">Filtrar por Origen:</label>
                     <span class="dropdown-arrow"></span>
-                    <select id="filtrarPorOrigen">
+                    <select
+                      id="filtrarPorOrigen"
+                      aria-label="Filtrar por origen"
+                    >
                       <option>Estado</option>
                       <option>Estado</option>
                       <option>Estado</option>
                     </select>
+                    <div class="dp-message dp-error-form">
+                      <p>¡Ouch! Este campo está vacío</p>
+                    </div>
                   </li>
                   <li class="field-item col-lg-2 col-md-6 col-sm-12">
                     <label for="filtrarPorCalificacion"
                       >Filtrar por Calificacion:</label
                     >
                     <span class="dropdown-arrow"></span>
-                    <select id="filtrarPorCalificacion">
+                    <select
+                      id="filtrarPorCalificacion"
+                      aria-label="filtrar por calificación"
+                    >
                       <option>Estado</option>
                       <option>Estado</option>
                       <option>Estado</option>
                     </select>
+                    <div
+                      class="dp-message dp-error-form"
+                      aria-label="Mensajes de validación"
+                    >
+                      <p>¡Ouch! Este campo está vacío</p>
+                    </div>
                   </li>
                 </ul>
               </fieldset>
@@ -130,140 +164,241 @@
           </div>
           <div class="dp-block-wlp m-b-36">
             <div class="dp-table-responsive">
-              <table class="dp-c-table">
-                <caption></caption>
+              <table
+                class="dp-c-table"
+                aria-label="Resultado de historial de suscriptores"
+                summary="Resultado de historial de suscriptores"
+              >
+                <caption>
+                  Mostrando
+                  <strong>15 de 25.732</strong>
+                  resultados
+                </caption>
                 <thead>
                   <tr>
-                    <th>
-                      <a href="#"
-                        >Email <span class="ms-icon icon-AZ"></span
-                      ></a>
+                    <th aria-label="Email" scope="col">
+                      <a href="#">Email </a>
                     </th>
-                    <th>
-                      <a href="#"
-                        >Nombre <span class="ms-icon icon-AZ"></span
-                      ></a>
+                    <th aria-label="Nombre" scope="col">
+                      <a href="#">Nombre </a>
                     </th>
-                    <th>
-                      <a href="#"
-                        >Apellido <span class="ms-icon icon-AZ"></span
-                      ></a>
+                    <th aria-label="Apellido" scope="col">
+                      <a href="#">Apellido </a>
                     </th>
-                    <th>
-                      <a href="#"
-                        >Estado del suscriptor
-                        <span class="ms-icon icon-AZ"></span
-                      ></a>
+                    <th aria-label="Estado del suscriptor" scope="col">
+                      <a href="#">Estado del suscriptor </a>
                     </th>
-                    <th>
-                      <a href="#"
-                        >Fecha de creacion <span class="ms-icon icon-AZ"></span
-                      ></a>
+                    <th aria-label="Fecha de creación" scope="col">
+                      <a href="#">Fecha de creación </a>
                     </th>
-                    <th>
-                      <a href="#"
-                        >Origen <span class="ms-icon icon-AZ"></span
-                      ></a>
+                    <th aria-label="Origen" scope="col">
+                      <a href="#">Origen </a>
                     </th>
-                    <th>
-                      <a href="#"
-                        >calificación <span class="ms-icon icon-AZ"></span
-                      ></a>
+                    <th aria-label="calificación" scope="col">
+                      <a href="#">calificación </a>
                     </th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>
-                      <a href="#">fcoronel@makingsense.com</a>
+                    <td aria-label="Email">
+                      <a href="#" role="link" target="_blank"
+                        >fcoronel@makingsense.com</a
+                      >
                     </td>
-                    <td>Federico</td>
-                    <td>Coronel</td>
-                    <td><span class="icon-user--active"></span></td>
-                    <td>22/12/2019</td>
+                    <td aria-label="Nombre">Federico</td>
+                    <td aria-label="Apellido">Coronel</td>
+                    <td aria-label="Estado de Usuario">
+                      <span
+                        class="user--active"
+                        aria-label="Estado Activo"
+                      ></span>
+                    </td>
+                    <td aria-label="Fecha">22/12/2019</td>
                     <td>Importado Manual</td>
-                    <td>
-                      <span class="icon-star"></span
-                      ><span class="icon-star"></span
-                      ><span class="icon-star"></span>
+                    <td aria-label="Calificacion">
+                      <div class="dp-calification">
+                        <span
+                          class="ms-icon icon-star"
+                          aria-label="Una estrella"
+                        ></span
+                        ><span
+                          class="ms-icon icon-star-filled"
+                          aria-label="Sin estrella"
+                        ></span>
+                        <span
+                          class="ms-icon icon-star-filled"
+                          aria-label="Sin estrella"
+                        ></span>
+                      </div>
                     </td>
                   </tr>
                   <tr>
-                    <td><a href="#">cbernat@makingsense.com</a></td>
+                    <td>
+                      <a href="#" role="link" target="_blank"
+                        >cbernat@makingsense.com</a
+                      >
+                    </td>
                     <td>Cecilia</td>
                     <td>Bernat</td>
-                    <td><span class="icon-user--natl"></span></td>
+                    <td><span class="user--active-with-no-list"></span></td>
                     <td>22/12/2019</td>
                     <td>Formularios</td>
                     <td>
-                      <span class="icon-star"></span
-                      ><span class="icon-star"></span
-                      ><span class="icon-star-filled"></span>
+                      <div class="dp-calification">
+                        <span
+                          class="ms-icon icon-star"
+                          aria-label="Una estrella"
+                        ></span
+                        ><span
+                          class="ms-icon icon-star-filled"
+                          aria-label="Sin estrella"
+                        ></span>
+                        <span
+                          class="ms-icon icon-star-filled"
+                          aria-label="Sin estrella"
+                        ></span>
+                      </div>
                     </td>
                   </tr>
                   <tr>
-                    <td><a href="#">amoschini@makingsense.com</a></td>
+                    <td>
+                      <a href="#" role="link" target="_blank"
+                        >amoschini@makingsense.com</a
+                      >
+                    </td>
                     <td>Andres</td>
                     <td>Moschini</td>
-                    <td><span class="icon-user--rc"></span></td>
+                    <td><span class="user--removed-client"></span></td>
                     <td>22/12/2019</td>
                     <td>Formularios</td>
                     <td>
-                      <span class="icon-star"></span
-                      ><span class="icon-star-filled"></span
-                      ><span class="icon-star-filled"></span>
+                      <div class="dp-calification">
+                        <span
+                          class="ms-icon icon-star"
+                          aria-label="Una estrella"
+                        ></span
+                        ><span
+                          class="ms-icon icon-star-filled"
+                          aria-label="Sin estrella"
+                        ></span>
+                        <span
+                          class="ms-icon icon-star-filled"
+                          aria-label="Sin estrella"
+                        ></span>
+                      </div>
                     </td>
                   </tr>
                   <tr>
-                    <td><a href="#">ssanchez@makingsense.com</a></td>
+                    <td>
+                      <a href="#" role="link" target="_blank"
+                        >ssanchez@makingsense.com</a
+                      >
+                    </td>
                     <td>Silvia</td>
                     <td>Sanchez</td>
-                    <td><span class="icon-user--sr"></span></td>
+                    <td><span class="user--removed-subscriber"></span></td>
                     <td>22/12/2019</td>
                     <td>Formularios</td>
                     <td>
-                      <span class="icon-star"></span
-                      ><span class="icon-star"></span
-                      ><span class="icon-star"></span>
+                      <div class="dp-calification">
+                        <span
+                          class="ms-icon icon-star"
+                          aria-label="Una estrella"
+                        ></span
+                        ><span
+                          class="ms-icon icon-star-filled"
+                          aria-label="Sin estrella"
+                        ></span>
+                        <span
+                          class="ms-icon icon-star-filled"
+                          aria-label="Sin estrella"
+                        ></span>
+                      </div>
                     </td>
                   </tr>
                   <tr>
-                    <td><a href="#">gbaamonde@makingsense.com</a></td>
+                    <td>
+                      <a href="#" role="link" target="_blank"
+                        >gbaamonde@makingsense.com</a
+                      >
+                    </td>
                     <td>Gustavo</td>
                     <td>Baamonde</td>
-                    <td><span class="icon-user--rhb"></span></td>
+                    <td><span class="user--removed-hard-bounces"></span></td>
                     <td>22/12/2019</td>
                     <td>Prestashop</td>
                     <td>
-                      <span class="icon-star-filled"></span
-                      ><span class="icon-star-filled"></span
-                      ><span class="icon-star-filled"></span>
+                      <div class="dp-calification">
+                        <span
+                          class="ms-icon icon-star"
+                          aria-label="Una estrella"
+                        ></span
+                        ><span
+                          class="ms-icon icon-star"
+                          aria-label="Una estrella"
+                        ></span>
+                        <span
+                          class="ms-icon icon-star"
+                          aria-label="Una estrella"
+                        ></span>
+                      </div>
                     </td>
                   </tr>
                   <tr>
-                    <td><a href="#">jasas@makingsense.com</a></td>
+                    <td>
+                      <a href="#" role="link" target="_blank"
+                        >jasas@makingsense.com</a
+                      >
+                    </td>
                     <td>Juan</td>
                     <td>Asas</td>
-                    <td><span class="icon-user--rno"></span></td>
+                    <td><span class="user--removed-no-openings"></span></td>
                     <td>22/12/2019</td>
                     <td>Formularios</td>
                     <td>
-                      <span class="icon-star"></span
-                      ><span class="icon-star"></span
-                      ><span class="icon-star-filled"></span>
+                      <div class="dp-calification">
+                        <span
+                          class="ms-icon icon-star"
+                          aria-label="Una estrella"
+                        ></span
+                        ><span
+                          class="ms-icon icon-star-filled"
+                          aria-label="Sin estrella"
+                        ></span>
+                        <span
+                          class="ms-icon icon-star-filled"
+                          aria-label="Sin estrella"
+                        ></span>
+                      </div>
                     </td>
                   </tr>
                   <tr>
-                    <td><a href="#">mvillaseco@makingsense.com</a></td>
+                    <td>
+                      <a href="#" role="link" target="_blank"
+                        >mvillaseco@makingsense.com</a
+                      >
+                    </td>
                     <td>Mauro</td>
                     <td>Villaseco</td>
-                    <td><span class="icon-user--rsb"></span></td>
+                    <td><span class="user--removed-soft-bounces"></span></td>
                     <td>22/12/2019</td>
                     <td>Importado Manual</td>
                     <td>
-                      <span class="icon-star"></span
-                      ><span class="icon-star-filled"></span
-                      ><span class="icon-star-filled"></span>
+                      <div class="dp-calification">
+                        <span
+                          class="ms-icon icon-star"
+                          aria-label="Una estrella"
+                        ></span
+                        ><span
+                          class="ms-icon icon-star"
+                          aria-label="Una estrella"
+                        ></span>
+                        <span
+                          class="ms-icon icon-star-filled"
+                          aria-label="Sin estrella"
+                        ></span>
+                      </div>
                     </td>
                   </tr>
                 </tbody>

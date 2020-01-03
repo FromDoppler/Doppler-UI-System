@@ -7,11 +7,10 @@
 ////
 
 @mixin icon-table {
-  background-repeat: no-repeat;
-  width: 17px;
+  width: 20px;
   height: 17px;
-  margin-right: $dp-spaces--lv1;
   display: inline-block;
+  font-size: $dp-sizing--lvl3;
 }
 
 @mixin icon-user-table {
@@ -23,54 +22,63 @@
   background-repeat: no-repeat;
 }
 
-.icon-star {
-  @include icon-table;
-  background-image: url('../../img/star.svg');
+.dp-calification {
+  display: flex;
+  align-items: center;
+
+  .icon-star {
+    @include icon-table;
+    color: $dp-color-yellow;
+  }
+
+  .icon-star-filled {
+    @include icon-table;
+    color: $dp-color-silver;
+  }
 }
 
-.icon-star-filled {
-  @include icon-table;
-  background-image: url('../../img/star-filled.svg');
-}
+///
+/// Icons for Subscriber History
+///
 
 // User active
-.icon-user--active:before {
+.user--active:before {
   @include icon-user-table;
   background-image: url('../../img/user-active.svg');
 }
 
 // User active not associated to lists
-.icon-user--natl:before {
+.user--active-with-no-list:before {
   @include icon-user-table;
-  background-image: url('../../img/user-active-not-associated-to-lists.svg');
+  background-image: url('../../img/user-active-with-no-list.svg');
 }
 
 // User removed client
-.icon-user--rc:before {
+.user--removed-client:before {
   @include icon-user-table;
   background-image: url('../../img/user-removed-client.svg');
 }
 
 // User removed hard bounces
-.icon-user--rhb:before {
+.user--removed-hard-bounces:before {
   @include icon-user-table;
   background-image: url('../../img/user-removed-hard-bounces.svg');
 }
 
 // User removed no openings
-.icon-user--rno:before {
+.user--removed-no-openings:before {
   @include icon-user-table;
   background-image: url('../../img/user-removed-no-openings.svg');
 }
 
 // User removed soft bounces
-.icon-user--rsb:before {
+.user--removed-soft-bounces:before {
   @include icon-user-table;
   background-image: url('../../img/user-removed-soft-bounces.svg');
 }
 
 // User subscriber removed
-.icon-user--sr:before {
+.user--removed-subscriber:before {
   @include icon-user-table;
   background-image: url('../../img/user-subscriber-removed.svg');
 }

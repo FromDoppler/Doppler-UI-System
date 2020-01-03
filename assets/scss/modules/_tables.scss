@@ -45,6 +45,12 @@
     border-spacing: $dp-spaces--lv0;
     background: $dp-color-white;
 
+    caption {
+      padding: 30px 12px;
+      font-style: italic;
+      text-align: left;
+    }
+
     th {
       background: $dp-color-white;
       border-top: 1px solid $dp-color-silver;
@@ -148,7 +154,6 @@
       }
     }
 
-    caption,
     th,
     td {
       padding: $dp-spaces--lv2;
