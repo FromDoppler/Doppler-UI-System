@@ -48,6 +48,7 @@
     caption {
       padding: 30px 12px;
       font-style: italic;
+      text-align: left;
     }
 
     th {
@@ -153,7 +154,6 @@
       }
     }
 
-    caption,
     th,
     td {
       padding: $dp-spaces--lv2;

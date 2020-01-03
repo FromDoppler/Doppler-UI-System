@@ -42,43 +42,43 @@
 ///
 
 // User active
-.user-active:before {
+.user--active:before {
   @include icon-user-table;
   background-image: url('../../img/user-active.svg');
 }
 
 // User active not associated to lists
-.user-active-with-no-list:before {
+.user--active-with-no-list:before {
   @include icon-user-table;
   background-image: url('../../img/user-active-with-no-list.svg');
 }
 
 // User removed client
-.user-removed-client:before {
+.user--removed-client:before {
   @include icon-user-table;
   background-image: url('../../img/user-removed-client.svg');
 }
 
 // User removed hard bounces
-.user-removed-hard-bounces:before {
+.user--removed-hard-bounces:before {
   @include icon-user-table;
   background-image: url('../../img/user-removed-hard-bounces.svg');
 }
 
 // User removed no openings
-.user-removed-no-openings:before {
+.user--removed-no-openings:before {
   @include icon-user-table;
   background-image: url('../../img/user-removed-no-openings.svg');
 }
 
 // User removed soft bounces
-.user-removed-soft-bounces:before {
+.user--removed-soft-bounces:before {
   @include icon-user-table;
   background-image: url('../../img/user-removed-soft-bounces.svg');
 }
 
 // User subscriber removed
-.user-subscriber-removed:before {
+.user--removed-subscriber:before {
   @include icon-user-table;
   background-image: url('../../img/user-subscriber-removed.svg');
 }
