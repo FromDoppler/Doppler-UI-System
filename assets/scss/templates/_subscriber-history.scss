@@ -8,10 +8,12 @@
 ///
 
 .dp-campaign {
-  padding: 6px;
+  padding: $dp-spaces--lv1;
+  max-width: 370px;
 
   li {
-    margin-bottom: 6px;
+    margin-bottom: $dp-spaces--lv1;
+    line-height: $dp-spaces--lv3;
   }
 
   .dp-date {

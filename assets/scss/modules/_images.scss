@@ -36,6 +36,14 @@
   background-color: $background-color;
 }
 
+/// placeholder para los iconos
+
+%states-campaing {
+  padding-left: $dp-spaces--lv3;
+  display: flex;
+  align-items: center;
+}
+
 .dp-calification {
   display: flex;
   align-items: center;
@@ -102,9 +110,7 @@
 ///
 
 .user--open {
-  padding-left: $dp-spaces--lv3;
-  display: flex;
-  align-items: center;
+  @extend %states-campaing;
 
   &:before {
     @include icon-campaing($dp-color-green);
@@ -112,18 +118,14 @@
 }
 
 .user--not-open {
-  padding-left: $dp-spaces--lv3;
-  display: flex;
-  align-items: center;
+  @extend %states-campaing;
 
   &:before {
     @include icon-campaing($dp-color-grey);
   }
 }
 .user--not-sent {
-  padding-left: $dp-spaces--lv3;
-  display: flex;
-  align-items: center;
+  @extend %states-campaing;
 
   &:before {
     @include icon-campaing($dp-color-yellow);
