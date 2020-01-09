@@ -1,0 +1,28 @@
+////
+/// @access private
+/// @author Gustavo Baamonde
+/// Classes for the Form component
+////
+///
+/// historical subscriber behavior
+///
+
+.dp-affair {
+  width: 330px;
+  display: inline-block;
+  line-height: $dp-spaces--lv3;
+}
+
+.dp-campaign {
+  padding: $dp-spaces--lv1;
+  width: 370px;
+
+  li {
+    margin-bottom: $dp-spaces--lv1;
+    line-height: $dp-spaces--lv3;
+  }
+
+  .dp-date {
+    font-style: italic;
+  }
+}

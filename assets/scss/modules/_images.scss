@@ -22,6 +22,29 @@
   background-repeat: no-repeat;
 }
 
+///
+/// Mixin campaign status icons
+///
+
+@mixin icon-campaing($background-color) {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  left: $dp-spaces--lv2;
+  border-radius: 50%;
+  background-color: $background-color;
+}
+
+/// placeholder para los iconos
+
+%states-campaing {
+  padding-left: $dp-spaces--lv3;
+  display: flex;
+  align-items: flex-start;
+  max-width: 200px;
+}
+
 .dp-calification {
   display: flex;
   align-items: center;
@@ -81,4 +104,31 @@
 .user--removed-subscriber:before {
   @include icon-user-table;
   background-image: url('../img/user-subscriber-removed.svg');
+}
+
+///
+/// campaign status icons
+///
+
+.user--open {
+  @extend %states-campaing;
+
+  &:before {
+    @include icon-campaing($dp-color-green);
+  }
+}
+
+.user--not-open {
+  @extend %states-campaing;
+
+  &:before {
+    @include icon-campaing($dp-color-grey);
+  }
+}
+.user--not-sent {
+  @extend %states-campaing;
+
+  &:before {
+    @include icon-campaing($dp-color-yellow);
+  }
 }
