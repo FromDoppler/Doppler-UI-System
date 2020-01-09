@@ -41,7 +41,8 @@
 %states-campaing {
   padding-left: $dp-spaces--lv3;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  max-width: 200px;
 }
 
 .dp-calification {

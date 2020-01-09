@@ -7,9 +7,15 @@
 /// historical subscriber behavior
 ///
 
+.dp-affair {
+  width: 330px;
+  display: inline-block;
+  line-height: $dp-spaces--lv3;
+}
+
 .dp-campaign {
   padding: $dp-spaces--lv1;
-  max-width: 370px;
+  width: 370px;
 
   li {
     margin-bottom: $dp-spaces--lv1;
