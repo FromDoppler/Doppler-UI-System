@@ -35,7 +35,7 @@
     "arrowParens": "always"
   },
   "devDependencies": {
-    "@semantic-release/exec": "^3.3.8",
+    "@semantic-release/exec": "^4.0.0",
     "autoprefixer": "^9.7.3",
     "browser-sync": "^2.26.7",
     "css-mqpacker": "~7.0.0",
@@ -65,7 +65,7 @@
     "prettier": "^1.19.1",
     "prettier-check": "^2.0.0",
     "sassdoc": "^2.7.1",
-    "semantic-release": "^15.14.0",
+    "semantic-release": "^16.0.0",
     "sort-css-media-queries": "^1.5.0",
     "ttf2woff2": "^2.0.3"
   },
