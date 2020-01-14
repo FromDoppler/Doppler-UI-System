@@ -119,7 +119,8 @@
 /// campaign status icons
 ///
 
-.user--open {
+.status--opened {
+  position: relative;
   @extend %states-campaing;
 
   &:before {
@@ -127,14 +128,26 @@
   }
 }
 
-.user--not-open {
+.status--not-opened {
+  position: relative;
   @extend %states-campaing;
 
   &:before {
     @include icon-campaing($dp-color-grey);
   }
 }
-.user--not-sent {
+
+.status--hard-bounced {
+  position: relative;
+  @extend %states-campaing;
+
+  &:before {
+    @include icon-campaing($dp-color-red);
+  }
+}
+
+.status--soft-bounced {
+  position: relative;
   @extend %states-campaing;
 
   &:before {
