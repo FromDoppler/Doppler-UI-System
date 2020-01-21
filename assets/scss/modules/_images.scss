@@ -17,8 +17,8 @@
   position: relative;
   top: -2px;
   left: 0;
-  font-size: 14px;
-  margin-right: 6px;
+  font-size: $dp-sizing--lvl2-14;
+  margin-right: $dp-spaces--lv1;
 }
 
 [class*='user--'] {
@@ -50,6 +50,7 @@
 
 .dp-calification {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 
   .icon-star {
@@ -61,11 +62,39 @@
     @include icon-table;
     color: $dp-color-silver;
   }
+
+  .dp-useremail-campaign {
+    margin-right: $dp-spaces--lv3;
+    line-height: 18px;
+    display: block;
+
+    @media screen and (max-width: 320px) {
+      margin-right: $dp-spaces--lv9;
+    }
+  }
+}
+
+.dp-username-campaing {
+  font-size: $dp-sizing--lvl2;
+  line-height: 18px;
+  display: block;
 }
 
 ///
 /// Icons for Subscriber History
 ///
+
+.dp-subscriber-icon {
+  margin-top: $dp-spaces--lv3;
+  font-size: $dp-sizing--lvl2;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.dp-icon-wrapper {
+  display: block;
+  min-width: 200px;
+}
 
 // User active
 .user--active:before {

@@ -35,6 +35,10 @@ $dp-border-grey: #e8e8e8;
 $dp-color-wild-sand: #f6f6f6;
 $dp-color-hover-table: #fff7e8;
 
+/// Colors reports
+
+$dp-color-violet: #9b7ba6;
+
 /// Variables Colors Style Guides
 
 $dpsg-brown-light: #f1ede1;
@@ -85,6 +89,10 @@ $dpsg-orange: #ee7752;
   background: $dp-color-green;
 }
 
+.dp-color-green {
+  color: $dp-color-green;
+}
+
 .dp-darkgreen {
   background: $dp-color-darkgreen;
 }
@@ -103,6 +111,10 @@ $dpsg-orange: #ee7752;
 
 .dp-yellow {
   background: $dp-color-yellow;
+}
+
+.dp-color-yellow {
+  color: $dp-color-yellow;
 }
 
 .dp-darkyellow {
