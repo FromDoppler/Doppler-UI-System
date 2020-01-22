@@ -25,6 +25,10 @@
   .dp-date {
     font-style: italic;
   }
+
+  a {
+    position: relative;
+  }
 }
 
 ///
@@ -53,11 +57,7 @@
 
 .dp-subscriber-info {
   position: relative;
-  margin: $dp-spaces--lv1 $dp-spaces--lv3 $dp-spaces--lv0 $dp-spaces--lv0;
-
-  @media screen and (max-width: 768px) {
-    margin-bottom: $dp-spaces--lv6;
-  }
+  margin: $dp-spaces--lv1 $dp-spaces--lv4 $dp-spaces--lv6 $dp-spaces--lv0;
 
   .dp-block-info {
     color: $dp-color-lightgrey;
@@ -100,8 +100,9 @@
 
 .dp-circular-chart {
   display: block;
-  margin: $dp-spaces--lv0 auto;
+  margin: $dp-spaces--lv0;
   max-width: 100%;
+  height: 120px;
 }
 
 .dp-circle-bg {
