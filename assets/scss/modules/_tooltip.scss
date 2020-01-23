@@ -156,6 +156,10 @@
   box-shadow: 0 0 0 4px rgba(204, 204, 204, 0.3);
   transform: translate(-50%, -50%) scale(0.75) rotate(15deg);
   z-index: -1;
+
+  @media screen and (max-width: 1439px) {
+    display: none;
+  }
 }
 
 .dp-tooltip-chart:before,
