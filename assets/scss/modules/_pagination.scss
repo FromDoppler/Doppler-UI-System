@@ -5,3 +5,66 @@
 /// @author Gustavo Baamonde
 /// Classes for the pagintaion component
 ////
+
+.dp-pagination {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  margin: $dp-spaces--lv2 $dp-spaces--lv0 $dp-spaces--lv0;
+
+  ul {
+    list-style: none;
+    display: flex;
+    padding: $dp-spaces--lv0;
+    margin: $dp-spaces--lv0;
+
+    li {
+      padding: $dp-spaces--lv2 $dp-spaces--lv1;
+    }
+
+    .dp-active-page {
+      background: $dp-color-yellow;
+      padding: $dp-spaces--lv1 $dp-spaces--lv0;
+      font-size: $dp-sizing--lvl4;
+      line-height: $dp-sizing--lvl4;
+      text-align: center;
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  span {
+    display: flex;
+    position: relative;
+    font-size: $dp-sizing--lvl4;
+  }
+
+  a {
+    color: $dp-color-grey;
+    padding: $dp-spaces--lv1 $dp-spaces--lv0;
+    font-size: $dp-sizing--lvl4;
+    line-height: $dp-sizing--lvl4;
+    text-align: center;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    transition: all 0.5s ease;
+    position: relative;
+
+    &:hover {
+      background: $dp-color-yellow;
+    }
+  }
+
+  .dp-pag-point {
+    position: relative;
+    &:before {
+      content: '...';
+      top: 0px;
+      position: absolute;
+      left: -7px;
+    }
+  }
+}
