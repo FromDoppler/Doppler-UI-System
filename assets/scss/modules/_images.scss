@@ -46,7 +46,6 @@
   display: flex;
   align-items: flex-start;
   max-width: 200px;
-  margin-right: $dp-spaces--lv1;
 }
 
 .dp-calification {
@@ -122,7 +121,7 @@
 }
 
 // User removed hard bounces
-.user--removed-hard-bounces:before {
+.user--removed-hard-bounced:before {
   @include icon-user-table;
   color: $dp-color-red;
 }
@@ -134,7 +133,7 @@
 }
 
 // User removed soft bounces
-.user--removed-soft-bounces:before {
+.user--removed-soft-bounced:before {
   @include icon-user-table;
   color: $dp-color-red;
 }
