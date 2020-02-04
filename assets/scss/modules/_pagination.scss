@@ -25,6 +25,10 @@
   justify-content: flex-end;
   margin: $dp-spaces--lv2 $dp-spaces--lv0 $dp-spaces--lv0;
 
+  @media screen and (max-width: 980px) {
+    justify-content: flex-start;
+  }
+
   ul {
     list-style: none;
     display: flex;
