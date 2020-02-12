@@ -69,7 +69,308 @@
         This will be replaced by the content of navigation.html
         <!-- /build -->
         <div class="dpsg-content-wrap">
-          <h3>Botones</h3>
+          <article class="dpsg-content">
+            <h3>Botones</h3>
+            <p>
+              3 tamaños de botones principales que son verdes, aunque el color
+              varia de acuerdo a lo que se necesite, puede ser verde o gris:
+            </p>
+            <div class="dp-container-fluid m-b-48">
+              <div class="dp-rowflex">
+                <div class="col-sm-12 col-md-8 col-lg-4 m-b-12">
+                  <div class="dp-box-shadow dpsg-content-sample">
+                    <div class="buttons-card">
+                      <button
+                        type="button"
+                        class="dp-button button-big primary-green"
+                      >
+                        Iniciar campaña
+                      </button>
+                      <div class="button-description">
+                        <p><strong>Big button</strong></p>
+                        <ul class="button-list">
+                          <li><strong>class:</strong> .button-big</li>
+                          <li><strong>font-size:</strong> 15px;</li>
+                          <li><strong>font-weight:</strong> 300;</li>
+                          <li><strong>text-align:</strong> center;</li>
+                          <li><strong>border-radius:</strong> 30px;</li>
+                          <li><strong>padding:</strong> 16px 35px;</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-8 col-lg-4 m-b-12">
+                  <div class="dp-box-shadow dpsg-content-sample">
+                    <div class="buttons-card">
+                      <button
+                        type="button"
+                        class="dp-button button-medium primary-green"
+                      >
+                        Iniciar campaña
+                      </button>
+                      <div class="button-description">
+                        <p><strong>Medium button</strong></p>
+                        <ul class="button-list">
+                          <li><strong>class:</strong> .button-medium</li>
+                          <li><strong>font-size:</strong> 13px;</li>
+                          <li><strong>font-weight:</strong> 300;</li>
+                          <li><strong>text-align:</strong> center;</li>
+                          <li><strong>padding:</strong> 13px 25px;</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-8 col-lg-4 m-b-12">
+                  <div class="dp-box-shadow dpsg-content-sample">
+                    <div class="buttons-card">
+                      <button
+                        type="button"
+                        class="dp-button button-small primary-green"
+                      >
+                        Iniciar
+                      </button>
+                      <div class="button-description">
+                        <p><strong>Small button</strong></p>
+                        <ul class="button-list">
+                          <li><strong>class:</strong> .button-small</li>
+                          <li><strong>font-size:</strong> 11px;</li>
+                          <li><strong>font-weight:</strong> 300;</li>
+                          <li><strong>text-align:</strong> center;</li>
+                          <li><strong>padding:</strong> 10px 15px;</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- rowflex -->
+            </div>
+            <h3>Existen tres estados:</h3>
+            <div class="dp-container-fluid m-b-48">
+              <div class="dp-rowflex">
+                <div class="col-sm-12 col-md-8 col-lg-4 m-b-12">
+                  <div class="dp-box-shadow dpsg-content-sample">
+                    <div class="buttons-card">
+                      <button
+                        type="button"
+                        class="dp-button button-medium primary-green button--loading"
+                      >
+                        Spinner
+                      </button>
+                      <div class="button-description">
+                        <p><strong>Spinner</strong></p>
+                        <ul class="button-list">
+                          <li><strong>class:</strong> button-loading</li>
+                          <li>
+                            <strong>@include</strong> dp-preloader(#FFFFFF,
+                            1.5em);
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-8 col-lg-4 m-b-12">
+                  <div class="dp-box-shadow dpsg-content-sample">
+                    <div class="buttons-card">
+                      <button
+                        type="button"
+                        class="dp-button button-medium primary-green"
+                        disabled=""
+                      >
+                        Button Disabled
+                      </button>
+                      <div class="button-description">
+                        <p><strong>Disabled</strong></p>
+                        <ul class="button-list">
+                          <li><strong>pointer-events:</strong> none;</li>
+                          <li><strong>opacity:</strong> 0.4;</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-8 col-lg-4 m-b-12">
+                  <div class="dp-box-shadow dpsg-content-sample">
+                    <div class="buttons-card">
+                      <button
+                        type="button"
+                        class="dp-button button-medium primary-grey"
+                      >
+                        Iniciar campaña
+                      </button>
+                      <div class="button-description">
+                        <p><strong>Complementarios</strong></p>
+                        <ul class="button-list">
+                          <li>
+                            Botones de acción primaria que necesitan despegarse
+                            del verde de uso común
+                          </li>
+                          <li><strong>background-color:</strong> #666666;</li>
+                          <li><strong>border:</strong> 1px solid #333333;</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- rowflex -->
+            </div>
+            <h3>
+              También se pueden utlizar con bordes redondeados, agregando una
+              clase:
+            </h3>
+            <div class="dp-container-fluid m-b-48">
+              <div class="dp-rowflex">
+                <div class="col-sm-12 col-md-8 col-lg-3 m-b-12">
+                  <div class="dp-box-shadow dpsg-content-sample">
+                    <div class="buttons-card">
+                      <button
+                        type="button"
+                        class="dp-button button-medium primary-green button--loading button--round"
+                      >
+                        Spinner
+                      </button>
+                      <div class="button-description">
+                        <ul class="button-list">
+                          <p><strong>Rounded</strong></p>
+                          <li><strong>class:</strong> .button--round</li>
+                          <li><strong>text-transform:</strong> uppercase;</li>
+                          <li><strong>border-radius:</strong> 30px;</li>
+                          <li><strong>font-weight:</strong> 600;</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-8 col-lg-3 m-b-12">
+                  <div class="dp-box-shadow dpsg-content-sample">
+                    <div class="buttons-card">
+                      <button
+                        type="button"
+                        class="dp-button button-medium primary-green button--round"
+                        disabled=""
+                      >
+                        Button Disabled
+                      </button>
+                      <div class="button-description">
+                        <ul class="button-list">
+                          <p><strong>Button rounded disabled</strong></p>
+                          <li><strong>class:</strong> .dp-button</li>
+                          <li><strong>class:</strong> .button-medium</li>
+                          <li><strong>class:</strong> .primary-green</li>
+                          <li><strong>class:</strong> .button--round</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-8 col-lg-3 m-b-12">
+                  <div class="dp-box-shadow dpsg-content-sample">
+                    <div class="buttons-card">
+                      <button
+                        type="button"
+                        class="dp-button button-medium primary-green button--round"
+                      >
+                        Iniciar campaña
+                      </button>
+                      <div class="button-description">
+                        <ul class="button-list">
+                          <p><strong>Button rounded green</strong></p>
+                          <li><strong>class:</strong> .dp-button</li>
+                          <li><strong>class:</strong> .button-medium</li>
+                          <li><strong>class:</strong> .primary-green</li>
+                          <li><strong>class:</strong> .button--round</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-8 col-lg-3 m-b-12">
+                  <div class="dp-box-shadow dpsg-content-sample">
+                    <div class="buttons-card">
+                      <button
+                        type="button"
+                        class="dp-button button-medium secondary-green button--round"
+                      >
+                        Iniciar campaña
+                      </button>
+                      <div class="button-description">
+                        <ul class="button-list">
+                          <p><strong>Button secondary green</strong></p>
+                          <li><strong>class:</strong> .dp-button</li>
+                          <li><strong>class:</strong> .button-medium</li>
+                          <li><strong>class:</strong> .secondary-green</li>
+                          <li><strong>class:</strong> .button--round</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-8 col-lg-3 m-b-12">
+                  <div class="dp-box-shadow dpsg-content-sample">
+                    <div class="buttons-card">
+                      <button
+                        type="button"
+                        class="dp-button button-medium primary-brown button--round"
+                      >
+                        Iniciar campaña
+                      </button>
+                      <div class="button-description">
+                        <ul class="button-list">
+                          <p><strong>Button primary brown</strong></p>
+                          <li><strong>class:</strong> .dp-button</li>
+                          <li><strong>class:</strong> .button-medium</li>
+                          <li><strong>class:</strong> .primary-brown</li>
+                          <li><strong>class:</strong> .button--round</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-8 col-lg-3 m-b-12">
+                  <div class="dp-box-shadow dpsg-content-sample">
+                    <div class="buttons-card">
+                      <button
+                        type="button"
+                        class="dp-button button-medium secondary-brown button--round"
+                      >
+                        Iniciar campaña
+                      </button>
+                      <div class="button-description">
+                        <ul class="button-list">
+                          <p><strong>Button secondary brown</strong></p>
+                          <li><strong>class:</strong> .dp-button</li>
+                          <li><strong>class:</strong> .button-medium</li>
+                          <li><strong>class:</strong> .secondary-brown</li>
+                          <li><strong>class:</strong> .button--round</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-8 col-lg-3 m-b-12">
+                  <div class="dp-box-shadow dpsg-content-sample">
+                    <div class="buttons-card">
+                      <button type="button" class="dp-button link-green">
+                        Ancla
+                      </button>
+                      <div class="button-description">
+                        <p><strong>Button Link</strong></p>
+                        <ul class="button-list">
+                          <li><strong>class:</strong> .link-green</li>
+                          <li><strong>color:</strong> #33ad73;</li>
+                          <li>:hover {<strong>color:</strong> #008046;}</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
       <!-- wrapper-container -->
