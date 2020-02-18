@@ -4,8 +4,11 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Doppler UI Team</title>
-    <meta name="keywords" content="" />
-    <meta name="description" content="" />
+    <meta name="keywords" content="UI library Doppler" />
+    <meta
+      name="description"
+      content="UI live guide style. This library is meant to be Doppler visual language, to centralize all branding in one place for all our products. Also allowing to decouple UI from Front End logic, and work in a more tidy way."
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="canonical" href="" />
     <!-- Open Graph metatags -->
@@ -57,551 +60,232 @@
       href="https://www.fromdoppler.com/favicon.ico"
     />
   </head>
-
-  <body>
-    <main role="main">
-      <section class="section-module">
-        <!-- build:include partials/_nav.html -->
-        This will be replaced by the content of nav.html
+  <body data-active-menu="1">
+    <!-- Layers -->
+    <main role="main" class="dpsg-main-wrap">
+      <!-- build:include partials/_header.html -->
+      This will be replaced by the content of header.html
+      <!-- /build -->
+      <!-- header -->
+      <div class="dpsg-wrapper">
+        <!-- build:include partials/_navigation.html -->
+        This will be replaced by the content of navigation.html
         <!-- /build -->
-
-        <h1>Doppler Styles Guides</h1>
-        <h2>Colores</h2>
-        <main class="main-colors">
-          <div class="color-card">
-            <div class="sample-color white-background"></div>
-            <div class="description-color">
-              <ul class="color-list">
-                <li>class: .white-background</li>
-                <li><code>background-color: #FFFFFF</code></li>
-                <li>class: .white-color</li>
-                <li><code>color: #FFFFFF</code></li>
-              </ul>
+        <div class="dpsg-content-wrap">
+          <section class="dpsg-content-intro">
+            <div class="dpsg-blockgrey">
+              <h3>Bienvenido a Doppler Styles Guides</h3>
+              <p>
+                UI Styles Guides en vivo. Esta biblioteca está destinada a ser
+                un lenguaje visual de Doppler, para centralizar todas las marcas
+                en un solo lugar para todos nuestros productos, reutilización de
+                código y esfuerzo.
+              </p>
+              <p>
+                También permite desacoplar la interfaz de usuario de la lógica
+                de Front End y trabajar de una manera más ordenada.
+              </p>
+              <div class="dpsg-techs">
+                <div class="dpsg-icontech">
+                  <img src="img/css3.svg" alt="Css3 icon" />
+                </div>
+                <div class="dpsg-icontech">
+                  <img src="img/html5.svg" alt="html5 icon" />
+                </div>
+                <div class="dpsg-icontech">
+                  <img src="img/jquery.svg" alt="jquery icon" />
+                </div>
+              </div>
             </div>
-          </div>
-          <!-- color-card -->
-          <div class="color-card">
-            <div class="sample-color ghostwhite-background"></div>
-            <div class="description-color">
-              <ul class="color-list">
-                <li>class: .ghostwhite-background</li>
-                <li><code>background-color: #F2F2F2</code></li>
-                <li>class: .ghostwhite-color</li>
-                <li><code>color: #F2F2F2</code></li>
-              </ul>
+            <div class="dpsg-intropic"></div>
+          </section>
+          <section class="dpsg-howtouse-content">
+            <h3>¿Cómo puedo usar esta biblioteca en mi proyecto?</h3>
+            <div class="dpsg-wrapper-text">
+              <div class="dpsg-boxtext">
+                <p>
+                  Simplemente incluí el archivo <strong>css</strong> y
+                  <strong>js</strong> en tu <strong>html</strong>.
+                </p>
+                <p>
+                  Verificá la versión correcta en la pestaña de versiones de
+                  <a
+                    href="https://github.com/FromDoppler/Doppler-UI-System"
+                    target="_blank"
+                    >github</a
+                  >
+                  primero y reemplazá la <strong>vx.x.x</strong> siguiente.
+                </p>
+              </div>
+              <div class="dpsg-code-content">
+                <figure class="dpsg-highlight">
+                  <pre>
+                      <code>
+                        <span class="dpsg-comment">/// Version CSS</span>
+                        <span class="dpsg-tag-code">&lt;link rel="stylesheet" type="text/css" href="https://cdn.fromdoppler.com/doppler-ui-library/vx.x.x/css/styles.css"&gt;</span>
+                      </code>
+                    </pre>
+                </figure>
+                <figure class="dpsg-highlight">
+                  <pre>
+                        <code>
+                          <span class="dpsg-comment">/// Version JS (opcional, podes incluir tu propio js en su lugar)</span>
+                          <span class="dpsg-tag-code">&lt;script type="text/javascript" src="https://cdn.fromdoppler.com/doppler-ui-library/vx.x.x/js/app.js"&gt;&lt;/script&gt;</span>
+                        </code>
+                      </pre>
+                </figure>
+              </div>
             </div>
-          </div>
-          <!-- color-card -->
-          <div class="color-card">
-            <div class="sample-color snow-background"></div>
-            <div class="description-color">
-              <ul class="color-list">
-                <li>class: .snow-background</li>
-                <li><code>background-color: #EAEAEA</code></li>
-                <li>class: .snow-color</li>
-                <li><code>color: #EAEAEA</code></li>
-              </ul>
+          </section>
+          <section class="dpsg-documentation-content">
+            <h3>¿Cómo aplicar componentes y usar mixins?</h3>
+            <p>
+              En nuestra biblioteca utilizamos <strong>Sass Doc</strong> para
+              crear nuestra documentación. Consultá su uso en
+              <a href="http://sassdoc.com/" target="_blank">Sass Doc</a>
+            </p>
+            <p>
+              Consultá nuestra
+              <a
+                href="http://cdn.fromdoppler.com/doppler-ui-library/latest/documentation/"
+                target="_blank"
+                >documentación</a
+              >
+              (en desarrollo)
+            </p>
+            <div class="dpsg-image-transition">
+              <figure class="dpsg-sassdoc"></figure>
             </div>
-          </div>
-          <!-- color-card -->
-          <div class="color-card">
-            <div class="sample-color silver-background"></div>
-            <div class="description-color">
-              <ul class="color-list">
-                <li>class: .silver-background</li>
-                <li><code>background-color: #CCCCCC</code></li>
-                <li>class: .silver-color</li>
-                <li><code>color: #CCCCCC</code></li>
-              </ul>
+          </section>
+          <!-- dpsg-documentation-content -->
+          <section class="dpsg-contribution-wrapper">
+            <div class="dpsg-contribution-content">
+              <div class="dpsg-rocket-wrapper">
+                <div class="dpsg-kite"></div>
+                <div class="dpsg-spaceship-content">
+                  <div class="dpsg-spaceship"></div>
+                  <div class="dpsg-front-spaceship"></div>
+                  <div class="dpsg-window"></div>
+                  <div class="dpsg-wings"></div>
+                  <div class="dpsg-engine"></div>
+                  <div class="dpsg-flames"></div>
+                </div>
+              </div>
+              <div class="dpsg-contribution-text">
+                <h3>Contribuyendo a este proyecto</h3>
+                <p>
+                  Si queres contribuir a este proyecto, tenes que
+                  <strong>seguir las reglas</strong>:
+                </p>
+                <ul class="dpsg-list">
+                  <li>
+                    Utilizamos <strong>Conventional Commits</strong> por favor,
+                    compruebá su uso aquí:
+                    <a
+                      href="https://www.conventionalcommits.org/"
+                      target="_blank"
+                      >Conventional Commits</a
+                    >
+                  </li>
+                  <li>
+                    Los <strong>Commits</strong> son cortos, por lo que pueden
+                    ser fáciles de seguir y leer.
+                  </li>
+                  <li>
+                    Los colores, el espaciado y los tamaños de fuente se
+                    almacenan en variables para su reutilización.
+                  </li>
+                  <li>
+                    Al hacer un PR (pull request),
+                    <strong
+                      >verificá el código de compilación del cdn generado
+                      automáticamente</strong
+                    >, mirá el número de compilación en el enlace de
+                    verificación del generador de solicitudes de extracción de
+                    jenkins, debería ser algo como
+                    <strong
+                      >http://docker.fromdoppler.com:8080/job/doppler-ui-system/job/pull-requests/391/</strong
+                    >
+                    en este ejemplo 391 si construye, tu enlace será
+                    <strong
+                      >http://cdn.fromdoppler.com/doppler-ui-library/build391/index.html</strong
+                    >
+                    vos podes usar este enlace para incluirlo y probarlo en tu
+                    web, apuntando a css y js, como se explicó anteriormente.
+                  </li>
+                  <li>
+                    Considerá obtener la aprobación de
+                    <strong
+                      >al menos uno de nuestros colaboradores
+                      habituales.</strong
+                    >
+                  </li>
+                  <li>
+                    Tene en cuenta que esta biblioteca puede tener muchos
+                    clientes, pensamos en la
+                    <strong>retrocompatibilidad</strong> antes de realizar
+                    cambios.
+                  </li>
+                  <li>
+                    Hace un <strong>Fork</strong> de este proyecto para comenzar
+                    a contribuir.
+                  </li>
+                </ul>
+              </div>
             </div>
-          </div>
-          <!-- color-card -->
-          <div class="color-card">
-            <div class="sample-color lightgrey-background"></div>
-            <div class="description-color">
-              <ul class="color-list">
-                <li>class: .lightgrey-background</li>
-                <li><code>background-color: #999999</code></li>
-                <li>class: .lightgrey-color</li>
-                <li><code>color: #999999</code></li>
-              </ul>
-            </div>
-          </div>
-          <!-- color-card -->
-          <div class="color-card">
-            <div class="sample-color grey-background"></div>
-            <div class="description-color">
-              <ul class="color-list">
-                <li>class: .grey-background</li>
-                <li><code>background-color: #666666</code></li>
-                <li>class: .grey-color</li>
-                <li><code>color: #666666</code></li>
-              </ul>
-            </div>
-          </div>
-          <!-- color-card -->
-          <div class="color-card">
-            <div class="sample-color darkgrey-background"></div>
-            <div class="description-color">
-              <ul class="color-list">
-                <li>class: .darkgrey-background</li>
-                <li><code>background-color: #333333</code></li>
-                <li>class: .darkgrey-color</li>
-                <li><code>color: #333333</code></li>
-              </ul>
-            </div>
-          </div>
-          <!-- color-card -->
-          <div class="color-card">
-            <div class="sample-color brightnessgreen-background"></div>
-            <div class="description-color">
-              <ul class="color-list">
-                <li>class: .brightnessgreen-background</li>
-                <li><code>background-color: rgba(51,173,115,.2)</code></li>
-                <li>class: .brightness-green-color</li>
-                <li><code>color: rgba(51,173,115,.2)</code></li>
-              </ul>
-            </div>
-          </div>
-          <!-- color-card -->
-          <div class="color-card">
-            <div class="sample-color lightgreen-background"></div>
-            <div class="description-color">
-              <ul class="color-list">
-                <li>class: .lightgreen-background</li>
-                <li><code>background-color: #65C192</code></li>
-                <li>class: .lightgreen-color</li>
-                <li><code>color: #65C192</code></li>
-              </ul>
-            </div>
-          </div>
-          <!-- color-card -->
-          <div class="color-card">
-            <div class="sample-color green-background"></div>
-            <div class="description-color">
-              <ul class="color-list">
-                <li>class: .green-background</li>
-                <li><code>background-color: #33AD73</code></li>
-                <li>class: .green-color</li>
-                <li><code>color: #33AD73</code></li>
-              </ul>
-            </div>
-          </div>
-          <!-- color-card -->
-          <div class="color-card">
-            <div class="sample-color darkgreen-background"></div>
-            <div class="description-color">
-              <ul class="color-list">
-                <li>class: .darkgreen-background</li>
-                <li><code>background-color: #008046</code></li>
-                <li>class: .darkgreen-color</li>
-                <li><code>color: #008046</code></li>
-              </ul>
-            </div>
-          </div>
-          <!-- color-card -->
-          <div class="color-card">
-            <div class="sample-color brightnessyellow-background"></div>
-            <div class="description-color">
-              <ul class="color-list">
-                <li>class: .brightnessyellow-background</li>
-                <li><code>background-color: rgba(252,229,121,.2)</code></li>
-                <li>class: .brightnessyellow-color</li>
-                <li><code>color: rgba(252,229,121,.2)</code></li>
-              </ul>
-            </div>
-          </div>
-          <!-- color-card -->
-          <div class="color-card">
-            <div class="sample-color lightyellow-background"></div>
-            <div class="description-color">
-              <ul class="color-list">
-                <li>class: .lightyellow-background</li>
-                <li><code>background-color: #FDE577</code></li>
-                <li>class: .lightyellow-color</li>
-                <li><code>color: #FDE577</code></li>
-              </ul>
-            </div>
-          </div>
-          <!-- color-card -->
-          <div class="color-card">
-            <div class="sample-color yellow-background"></div>
-            <div class="description-color">
-              <ul class="color-list">
-                <li>class: .yellow-background</li>
-                <li><code>background-color: #FBB224</code></li>
-                <li>class: .yellow-color</li>
-                <li><code>color: #FBB224</code></li>
-              </ul>
-            </div>
-          </div>
-          <!-- color-card -->
-          <div class="color-card">
-            <div class="sample-color darkyellow-background"></div>
-            <div class="description-color">
-              <ul class="color-list">
-                <li>class: .darkyellow-background</li>
-                <li><code>background-color: #E58900</code></li>
-                <li>class: .darkyellow-color</li>
-                <li><code>color: #E58900</code></li>
-              </ul>
-            </div>
-          </div>
-          <!-- color-card -->
-          <div class="color-card">
-            <div class="sample-color lemonyellow-background"></div>
-            <div class="description-color">
-              <ul class="color-list">
-                <li>class: .lemonyellow-background</li>
-                <li><code>background-color: #C6B159</code></li>
-                <li>class: .lemonyellow-color</li>
-                <li><code>color: #C6B159</code></li>
-              </ul>
-            </div>
-          </div>
-          <!-- color-card -->
-          <div class="color-card">
-            <div class="sample-color lightred-background"></div>
-            <div class="description-color">
-              <ul class="color-list">
-                <li>class: .lightred-background</li>
-                <li><code>background-color: #EC8A83</code></li>
-                <li>class: .lightred-color</li>
-                <li><code>color: #EC8A83</code></li>
-              </ul>
-            </div>
-          </div>
-          <!-- color-card -->
-          <div class="color-card">
-            <div class="sample-color red-background"></div>
-            <div class="description-color">
-              <ul class="color-list">
-                <li>class: .red-background</li>
-                <li><code>background-color: #E34F45</code></li>
-                <li>class: .red-color</li>
-                <li><code>color: #E34F45</code></li>
-              </ul>
-            </div>
-          </div>
-          <!-- color-card -->
-          <div class="color-card">
-            <div class="sample-color darkred-background"></div>
-            <div class="description-color">
-              <ul class="color-list">
-                <li>class: .darkred-background</li>
-                <li><code>background-color: #A63A33</code></li>
-                <li>class: .darkred-color</li>
-                <li><code>color: #A63A33</code></li>
-              </ul>
-            </div>
-          </div>
-          <!-- color-card -->
-          <div class="color-card">
-            <div class="sample-color brownbrightness-background"></div>
-            <div class="description-color">
-              <ul class="color-list">
-                <li>class: .brownbrightness-background</li>
-                <li><code>background-color: #594103</code></li>
-                <li>class: .brownbrightness-color</li>
-                <li><code>color: #594103</code></li>
-              </ul>
-            </div>
-          </div>
-          <!-- color-card -->
-          <div class="color-card">
-            <div class="sample-color brown-background"></div>
-            <div class="description-color">
-              <ul class="color-list">
-                <li>class: .brown-background</li>
-                <li><code>background-color: #302100</code></li>
-                <li>class: .brown-color</li>
-                <li><code>color: #302100</code></li>
-              </ul>
-            </div>
-          </div>
-          <!-- color-card -->
-        </main>
-        <!-- main-colors -->
-        <h2>Botones</h2>
-        <p>
-          <strong
-            >3 tamaños de botones principales que son verdes, aunque el color
-            varia de acuerdo a lo que se necesite, puede ser verde o
-            gris:</strong
-          >
-        </p>
-        <main class="main-buttons">
-          <div class="buttons-card">
-            <button type="button" class="dp-button button-big primary-green">
-              Iniciar campaña
-            </button>
-            <div class="button-description">
-              <p><strong>Big button</strong></p>
-              <ul class="button-list">
-                <li><strong>class:</strong> .button-big</li>
-                <li><strong>font-size:</strong> 15px;</li>
-                <li><strong>font-weight:</strong> 300;</li>
-                <li><strong>text-align:</strong> center;</li>
-                <li><strong>border-radius:</strong> 30px;</li>
-                <li><strong>padding:</strong> 16px 35px;</li>
-              </ul>
-            </div>
-          </div>
-          <!-- button-card -->
-          <div class="buttons-card">
-            <button type="button" class="dp-button button-medium primary-green">
-              Iniciar campaña
-            </button>
-            <div class="button-description">
-              <p><strong>Medium button</strong></p>
-              <ul class="button-list">
-                <li><strong>class:</strong> .button-medium</li>
-                <li><strong>font-size:</strong> 13px;</li>
-                <li><strong>font-weight:</strong> 300;</li>
-                <li><strong>text-align:</strong> center;</li>
-                <li><strong>padding:</strong> 13px 25px;</li>
-              </ul>
-            </div>
-          </div>
-          <!-- button-card -->
-          <div class="buttons-card">
-            <button type="button" class="dp-button button-small primary-green">
-              Iniciar
-            </button>
-            <div class="button-description">
-              <p><strong>Small button</strong></p>
-              <ul class="button-list">
-                <li><strong>class:</strong> .button-small</li>
-                <li><strong>font-size:</strong> 11px;</li>
-                <li><strong>font-weight:</strong> 300;</li>
-                <li><strong>text-align:</strong> center;</li>
-                <li><strong>padding:</strong> 10px 15px;</li>
-              </ul>
-            </div>
-          </div>
-          <!-- button-card -->
-        </main>
-        <!-- main-buttons -->
-        <p><strong>Existen tres estados:</strong></p>
-        <main class="main-buttons">
-          <div class="buttons-card">
-            <button
-              type="button"
-              class="dp-button button-medium primary-green button--loading"
-            >
-              Spinner
-            </button>
-            <div class="button-description">
-              <p><strong>Spinner</strong></p>
-              <ul class="button-list">
-                <li><strong>class:</strong> button-loading</li>
-                <li><strong>@include</strong> dp-preloader(#FFFFFF, 1.5em);</li>
-              </ul>
-            </div>
-          </div>
-          <!-- button-card -->
-          <div class="buttons-card">
-            <button
-              type="button"
-              class="dp-button button-medium primary-green"
-              disabled
-            >
-              Button Disabled
-            </button>
-            <div class="button-description">
-              <p><strong>Disabled</strong></p>
-              <ul class="button-list">
-                <li><strong>pointer-events:</strong> none;</li>
-                <li><strong>opacity:</strong> 0.4;</li>
-              </ul>
-            </div>
-          </div>
-          <!-- button-card -->
-          <div class="buttons-card">
-            <button type="button" class="dp-button button-medium primary-grey">
-              Iniciar campaña
-            </button>
-            <div class="button-description">
-              <p><strong>Complementarios</strong></p>
-              <ul class="button-list">
+          </section>
+          <!-- dpsg-contribution-content -->
+          <section class="dpsg-worktocode-content">
+            <div class="dpsg-blockgrey">
+              <h3>¿Cómo trabajar con el código?</h3>
+              <p>Una vez que lo hayas descargado:</p>
+              <ul class="dpsg-list">
                 <li>
-                  Botones de acción primaria que necesitan despegarse del verde
-                  de uso común
+                  <span class="dpsg-code">npm install</span> para instalar
+                  dependencias.
                 </li>
-                <li><strong>background-color:</strong> #666666;</li>
-                <li><strong>border:</strong> 1px solid #333333;</li>
+                <li>
+                  <span class="dpsg-code">gulp run</span> para ejecutar el
+                  servidor de desarrollo y la vista previa.
+                </li>
+                <li>
+                  <span class="dpsg-code">npm run prettier</span> para formatear
+                  nuestro código, nos ahorra tiempo y energía.
+                </li>
+                <li>
+                  <span class="dpsg-code">npm run prettier-check</span> para
+                  asegurarnos de que nuestro código este correcto.
+                </li>
+                <li>
+                  <span class="dpsg-code">gulp dist</span> para la tarea de
+                  generación (Implementar).
+                </li>
+                <li>
+                  <span class="dpsg-code">gulp build</span> para definir tarea
+                  de construcción.
+                </li>
+                <li>
+                  <span class="dpsg-code">gulp doc</span> para crear
+                  documentación
+                </li>
               </ul>
+              <p>
+                Este proyecto utiliza <strong>Sass</strong>,
+                <strong>SassDocs</strong>, <strong>javascript</strong> y
+                <strong>JQuery</strong>. En este momento estamos basando todos
+                nuestros diseños en Flexbox.
+              </p>
             </div>
-          </div>
-          <!-- button-card -->
-        </main>
-        <!-- main-buttons -->
-        <p><strong>También se pueden poner con bordes redondeados:</strong></p>
-        <main class="main-buttons">
-          <div class="buttons-card">
-            <button
-              type="button"
-              class="dp-button button-medium primary-green button--loading button--round"
-            >
-              Spinner
-            </button>
-            <div class="button-description">
-              <ul class="button-list">
-                <p><strong>Rounded</strong></p>
-                <li><strong>class:</strong> .button--round</li>
-                <li><strong>text-transform:</strong> uppercase;</li>
-                <li><strong>border-radius:</strong> 30px;</li>
-                <li><strong>font-weight:</strong> 600;</li>
-              </ul>
-            </div>
-          </div>
-          <!-- button-card -->
-          <div class="buttons-card">
-            <button
-              type="button"
-              class="dp-button button-medium primary-green button--round"
-              disabled
-            >
-              Button Disabled
-            </button>
-            <div class="button-description">
-              <ul class="button-list">
-                <p><strong>Button rounded disabled</strong></p>
-                <li><strong>class:</strong> .dp-button</li>
-                <li><strong>class:</strong> .button-medium</li>
-                <li><strong>class:</strong> .primary-green</li>
-                <li><strong>class:</strong> .button--round</li>
-              </ul>
-            </div>
-          </div>
-          <!-- button-card -->
-          <div class="buttons-card">
-            <button
-              type="button"
-              class="dp-button button-medium primary-green button--round"
-            >
-              Iniciar campaña
-            </button>
-            <div class="button-description">
-              <ul class="button-list">
-                <p><strong>Button rounded green</strong></p>
-                <li><strong>class:</strong> .dp-button</li>
-                <li><strong>class:</strong> .button-medium</li>
-                <li><strong>class:</strong> .primary-green</li>
-                <li><strong>class:</strong> .button--round</li>
-              </ul>
-            </div>
-          </div>
-          <!-- button-card -->
-          <div class="buttons-card">
-            <button
-              type="button"
-              class="dp-button button-medium secondary-green button--round"
-            >
-              Iniciar campaña
-            </button>
-            <div class="button-description">
-              <ul class="button-list">
-                <p><strong>Button secondary green</strong></p>
-                <li><strong>class:</strong> .dp-button</li>
-                <li><strong>class:</strong> .button-medium</li>
-                <li><strong>class:</strong> .secondary-green</li>
-                <li><strong>class:</strong> .button--round</li>
-              </ul>
-            </div>
-          </div>
-          <!-- button-card -->
-          <div class="buttons-card">
-            <button
-              type="button"
-              class="dp-button button-medium primary-brown button--round"
-            >
-              Iniciar campaña
-            </button>
-            <div class="button-description">
-              <ul class="button-list">
-                <p><strong>Button primary brown</strong></p>
-                <li><strong>class:</strong> .dp-button</li>
-                <li><strong>class:</strong> .button-medium</li>
-                <li><strong>class:</strong> .primary-brown</li>
-                <li><strong>class:</strong> .button--round</li>
-              </ul>
-            </div>
-          </div>
-          <!-- button-card -->
-          <div class="buttons-card">
-            <button
-              type="button"
-              class="dp-button button-medium secondary-brown button--round"
-            >
-              Iniciar campaña
-            </button>
-            <div class="button-description">
-              <ul class="button-list">
-                <p><strong>Button secondary brown</strong></p>
-                <li><strong>class:</strong> .dp-button</li>
-                <li><strong>class:</strong> .button-medium</li>
-                <li><strong>class:</strong> .secondary-brown</li>
-                <li><strong>class:</strong> .button--round</li>
-              </ul>
-            </div>
-          </div>
-          <!-- button-card -->
-        </main>
-        <!-- main-buttons -->
-        <p>
-          <strong
-            >También podemos indicar que un boton tenga el estilo de un
-            link:</strong
-          >
-        </p>
-        <main class="main-buttons">
-          <div class="buttons-card">
-            <button type="button" class="dp-button link-green">Ancla</button>
-            <div class="button-description">
-              <p><strong>Button Link</strong></p>
-              <ul class="button-list">
-                <li><strong>class:</strong> .link-green</li>
-                <li><strong>color:</strong> #33ad73;</li>
-                <li>:hover {<strong>color:</strong> #008046;}</li>
-              </ul>
-            </div>
-          </div>
-          <!-- button-card -->
-        </main>
-        <section class="section-module">
-          <h2>Table component</h2>
-          <!-- build:include partials/_table-component.html -->
-          This will be replaced by the content of table-component.html
-          <!-- /build -->
-        </section>
-        <section class="section-module">
-          <!-- build:include partials/_tooltip-component.html -->
-          This will be replaced by the content of tootltip-component.html
-          <!-- /build -->
-        </section>
-        <section class="section-module">
-          <h2>Breadcrumb</h2>
-          <p>Breadcrumb component</p>
-          <!-- build:include partials/_breadcrumb.html -->
-          This will be replaced by the content of breadcrumb.html
-          <!-- /build -->
-        </section>
-        <section class="section-module">
-          <h2>Mensajes para el usuario</h2>
-          <p>
-            A lo largo de toda la aplicación tendremos los siguientes formatos
-            de mensajes para nuestros usuarios, acá presentamos cuatro estilos
-            diferentes.
-          </p>
-          <!-- build:include partials/_msj-component.html -->
-          This will be replaced by the content of msj-component.html
-          <!-- /build -->
-        </section>
-      </section>
-      <!-- build:js:dist js/app.js -->
-      <script src="./js/main.js"></script>
+          </section>
+        </div>
+      </div>
+      <!-- wrapper-container -->
+      <!-- build:include partials/_footer.html -->
+      This will be replaced by the content of footer.html
       <!-- /build -->
     </main>
+    <!-- build:js:dist js/app.js -->
+    <script src="./js/main.js"></script>
+    <!-- /build -->
   </body>
 </html>
