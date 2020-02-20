@@ -1,4 +1,4 @@
-FROM node:10 as source
+FROM node:12.14.1 as source
 WORKDIR /work
 
 RUN npm install -g gulp
