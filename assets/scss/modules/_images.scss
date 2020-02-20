@@ -183,3 +183,31 @@
     @include icon-campaing($dp-color-yellow);
   }
 }
+
+///
+/// icon GDPR
+///
+
+%lock {
+  margin-right: 6px;
+  top: -2px;
+  position: relative;
+}
+
+.dp-lock-red {
+  max-width: 200px;
+  color: $dp-color-red;
+
+  &:before {
+    @extend %lock;
+  }
+}
+
+.dp-lock-green {
+  max-width: 200px;
+  color: $dp-color-green;
+
+  &:before {
+    @extend %lock;
+  }
+}
