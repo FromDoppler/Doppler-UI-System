@@ -34,6 +34,7 @@
   position: absolute;
   width: 10px;
   height: 10px;
+  top: 2px;
   left: $dp-spaces--lv0;
   border-radius: 50%;
   background-color: $background-color;
@@ -87,7 +88,7 @@
 .dp-subscriber-icon {
   margin-top: $dp-spaces--lv3;
   font-size: $dp-sizing--lvl2;
-  font-weight: bold;
+  font-weight: 600;
   display: inline-block;
 }
 
@@ -109,7 +110,7 @@
 }
 
 // User pending
-.user--pending:before {
+.user--stand-by:before {
   @include icon-user-table;
   color: $dp-color-yellow;
 }
@@ -120,7 +121,7 @@
   color: $dp-color-red;
 }
 
-// User removed hard bounces
+// User removed hard bounced
 .user--removed-hard-bounced:before {
   @include icon-user-table;
   color: $dp-color-red;
@@ -132,7 +133,7 @@
   color: $dp-color-grey;
 }
 
-// User removed soft bounces
+// User removed soft bounced
 .user--removed-soft-bounced:before {
   @include icon-user-table;
   color: $dp-color-red;
