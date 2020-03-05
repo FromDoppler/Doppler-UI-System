@@ -212,3 +212,12 @@
     @extend %lock;
   }
 }
+
+.dp-lock-grey {
+  max-width: 200px;
+  color: $dp-color-grey;
+
+  &:before {
+    @extend %lock;
+  }
+}
