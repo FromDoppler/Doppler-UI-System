@@ -238,7 +238,6 @@ gulp.task('copy:workerjs', function() {
     
 });
 
-
 // Optimize Images
 gulp.task('images:dist', function() {
   return gulp.src([config.folderAssets.images + '/**/*'])

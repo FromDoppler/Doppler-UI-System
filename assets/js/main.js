@@ -211,7 +211,7 @@ function updateSubscriptionOnServer(subscription) {
   const subscriptionJson = document.querySelector('.js-subscription-json');
 
   if (subscription) {
-    console.log("json for google page subscription back end: https://web-push-codelab.glitch.me// "+JSON.stringify(subscription)); 
+    console.log("json for google page subscription back end: https://web-push-codelab.glitch.me// "+JSON.stringify(subscription));
   }
 }
 
