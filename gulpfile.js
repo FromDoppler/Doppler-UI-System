@@ -231,6 +231,13 @@ gulp.task('copy:js', function() {
     .pipe(gulp.dest(config.folderDev.js));
 });
 
+gulp.task('copy:workerjs', function() {
+  return gulp.src([config.folderAssets.js + '/sw.js'])
+    .pipe(gulp.dest(config.folderDev.base))
+    .pipe(gulp.dest(config.folderDist.base));
+    
+});
+
 
 // Optimize Images
 gulp.task('images:dist', function() {
@@ -301,7 +308,7 @@ gulp.task('watch', ['build'], function() {
 });
 
 // Define build task
-gulp.task('build', ['sass', 'webfont', 'copy:fonts', 'processHtml', 'copy:js', 'copy:images', 'doc']);
+gulp.task('build', ['sass', 'webfont', 'copy:fonts', 'processHtml', 'copy:js', 'copy:images', 'doc', 'copy:workerjs']);
 
 // Define Dist generation task (Deploy)
-gulp.task('dist', ['sass:dist', 'fonts:dist', 'processHtml:dist', 'js:dist', 'images:dist', 'doc:dist']);
+gulp.task('dist', ['sass:dist', 'fonts:dist', 'processHtml:dist', 'js:dist', 'images:dist', 'doc:dist','copy:workerjs']);
