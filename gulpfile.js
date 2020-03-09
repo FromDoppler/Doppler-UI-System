@@ -235,7 +235,6 @@ gulp.task('copy:workerjs', function() {
   return gulp.src([config.folderAssets.js + '/sw.js'])
     .pipe(gulp.dest(config.folderDev.base))
     .pipe(gulp.dest(config.folderDist.base));
-    
 });
 
 // Optimize Images
