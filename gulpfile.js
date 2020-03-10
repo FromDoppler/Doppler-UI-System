@@ -217,8 +217,6 @@ gulp.task('js:dist', function() {
     .pipe(concat('app.js', {
       newLine: "\r\n;"
     }))
-    .pipe(uglify())
-    .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(config.folderDist.js));
 });
 
