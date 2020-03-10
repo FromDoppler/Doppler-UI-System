@@ -232,7 +232,7 @@ gulp.task('copy:js', function() {
 });
 
 gulp.task('copy:workerjs', function() {
-  return gulp.src([config.folderAssets.js + '/sw.js'])
+  return gulp.src([config.folderAssets.base + '/sw.js'])
     .pipe(gulp.dest(config.folderDev.base))
     .pipe(gulp.dest(config.folderDist.base));
 });
