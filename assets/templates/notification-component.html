@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>UI library Doppler - Breadcrumb component</title>
+    <meta name="keywords" content="UI library Doppler - Breadcrumb component" />
+    <meta
+      name="description"
+      content="Locate the user within the structure, whether physical or conceptual, of the website, so that he knows where he is"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="canonical" href="" />
+    <!-- Open Graph metatags -->
+    <meta property="og:title" content="Breadcrumb component" />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="Breadcrumb component" />
+    <meta property="og:url" content="Breadcrumb component" />
+    <meta property="og:description" content="Breadcrumb component" />
+    <meta property="og:site_name" content="Breadcrumb component" />
+    <!-- Stylesheets and polyfills -->
+    <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+    <!-- Favicons -->
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="144x144"
+      href="https://www.fromdoppler.com/apple-touch-icon-144x144-precomposed.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="114x114"
+      href="https://www.fromdoppler.com/apple-touch-icon-114x114-precomposed.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="72x72"
+      href="https://www.fromdoppler.com/apple-touch-icon-72x72-precomposed.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="57x57"
+      href="https://www.fromdoppler.com/apple-touch-icon-57x57-precomposed.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      href="https://www.fromdoppler.com/apple-touch-icon-precomposed.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="https://www.fromdoppler.com/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://www.fromdoppler.com/favicon.ico"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="https://www.fromdoppler.com/favicon.ico"
+    />
+  </head>
+  <body data-active-menu="22">
+    <!-- Layers -->
+    <main role="main" class="dpsg-main-wrap">
+      <!-- build:include partials/_header.html -->
+      This will be replaced by the content of header.html
+      <!-- /build -->
+      <!-- header -->
+      <div class="dpsg-wrapper">
+        <!-- build:include partials/_navigation.html -->
+        This will be replaced by the content of navigation.html
+        <!-- /build -->
+        <div class="dpsg-content-wrap">
+          <article class="dpsg-content">
+            <h3>POC notificaciones PUSH</h3>
+            <a
+              href="https://developers.google.com/web/fundamentals/codelabs/push-notifications"
+              target="_blank"
+              >Ver tutorial completo aquí</a
+            >
+            <br />
+            <p>Configuración de push para este sitio:</p>
+            <p>
+              Clickear en el botón para habilitar/deshabilitar las push <br />
+              <button
+                type="button"
+                class="dp-button button-big primary-green js-push-btn"
+              >
+                Push
+              </button>
+            </p>
+            <p>
+              En este momento los datos se estan mostrando por consola o por
+              back end de google solamente, para generar un push utilizar la
+              consola de devtools en chrome --> applications --> web workers -->
+              escribir y push.
+            </p>
+            <img src="img/devtools.PNG" style="max-width:800px;" />
+            <p>
+              Para probar notificaciones con un back end de google suscribirse a
+              notificar push para este worker utilizar este codigo en la pagina.
+              Tal vez necesitemos cambiar en <i>webPushMain.js</i>
+              <strong>applicationServerPublicKey</strong> a una nueva clave
+              publica para que funcione el generador de push.
+            </p>
+            <br />
+            <a href="https://web-push-codelab.glitch.me/" target="_blank"
+              >link al generador push de google</a
+            >
+            <div
+              class="js-subscription-json"
+              style="border: 1px #cccc solid;padding: 10px;"
+            ></div>
+          </article>
+        </div>
+      </div>
+      <!-- wrapper-container -->
+      <!-- build:include partials/_footer.html -->
+      This will be replaced by the content of footer.html
+      <!-- /build -->
+    </main>
+    <!-- build:js:dist js/app.js -->
+    <script src="./js/main.js"></script>
+    <!-- /build -->
+  </body>
+</html>
