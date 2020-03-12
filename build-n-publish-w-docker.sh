@@ -29,5 +29,5 @@ docker run --rm \
     -e AKAMAI_CDN_CPCODE \
     -e "PROJECT_NAME=$pkgName" \
     -e "VERSION_NAME=$pkgVersion" \
-    -v `pwd`/dist:/source \
+    -v `pwd`/work/dist:/source \
     dopplerrelay/doppler-relay-akamai-publish
