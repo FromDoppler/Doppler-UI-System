@@ -42,7 +42,7 @@
     "del": "^5.1.0",
     "eclint": "^2.8.1",
     "gulp": "^3.9.1",
-    "gulp-clean-css": "^4.2.0",
+    "gulp-clean-css": "^4.3.0",
     "gulp-concat": "~2.6.1",
     "gulp-csso": "^4.0.1",
     "gulp-iconfont": "^10.0.3",
