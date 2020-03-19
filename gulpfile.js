@@ -154,6 +154,84 @@ gulp.task('sass', function() {
     }));
 });
 
+// Sass theme editors task definition
+gulp.task('sass-editors', function() {
+  return gulp.src(config.folderAssets.styles + '/themes/editors/editors.scss')
+    .pipe(globbing({
+      // Configure it to use SCSS files
+      extensions: ['.scss']
+    }))
+    .pipe(sourcemaps.init())
+    .pipe(sass().on('error', sass.logError))
+    .pipe(postcss(config.postCSS.processors))
+    .pipe(postcss([flexibility]))
+    .pipe(cleanCSS({
+      advanced: true
+    }))
+    .pipe(csso())
+    .pipe(sourcemaps.write('./'))
+    .pipe(gulp.dest(config.folderDev.css))
+    .pipe(browserSync.reload({
+      stream: true
+    }));
+});
+
+// Sass theme editors tasks are divided for performance issues regarding dependencies
+gulp.task('sass-editors:dist', function() {
+  return gulp.src(config.folderAssets.styles + '/themes/editors/editors.scss')
+    .pipe(globbing({
+      // Configure it to use SCSS files
+      extensions: ['.scss']
+    }))
+    .pipe(sass().on('error', sass.logError))
+    .pipe(postcss(config.postCSS.processors))
+    .pipe(postcss([flexibility]))
+    .pipe(cleanCSS({
+      advanced: true
+    }))
+    .pipe(csso())
+    .pipe(gulp.dest(config.folderDist.css));
+});
+
+// Sass theme dark task definition
+gulp.task('sass-theme-dark', function() {
+  return gulp.src(config.folderAssets.styles + '/themes/theme-dark/theme-dark.scss')
+    .pipe(globbing({
+      // Configure it to use SCSS files
+      extensions: ['.scss']
+    }))
+    .pipe(sourcemaps.init())
+    .pipe(sass().on('error', sass.logError))
+    .pipe(postcss(config.postCSS.processors))
+    .pipe(postcss([flexibility]))
+    .pipe(cleanCSS({
+      advanced: true
+    }))
+    .pipe(csso())
+    .pipe(sourcemaps.write('./'))
+    .pipe(gulp.dest(config.folderDev.css))
+    .pipe(browserSync.reload({
+      stream: true
+    }));
+});
+
+// Sass theme dark tasks are divided for performance issues regarding dependencies
+gulp.task('sass-theme-dark:dist', function() {
+  return gulp.src(config.folderAssets.styles + '/themes/theme-dark/theme-dark.scss')
+    .pipe(globbing({
+      // Configure it to use SCSS files
+      extensions: ['.scss']
+    }))
+    .pipe(sass().on('error', sass.logError))
+    .pipe(postcss(config.postCSS.processors))
+    .pipe(postcss([flexibility]))
+    .pipe(cleanCSS({
+      advanced: true
+    }))
+    .pipe(csso())
+    .pipe(gulp.dest(config.folderDist.css));
+});
+
 // Generated Sassdoc to Dev folder
 gulp.task('doc', function() {
   return gulp.src(config.folderAssets.base + '/**/*.scss')
@@ -292,7 +370,9 @@ gulp.task('clean:dev', function() {
 
 // Watch for changes
 gulp.task('run', ['clean', 'serve'], function() {
-  gulp.watch(config.folderAssets.base + '/**/*.scss', ['sass', 'doc']);
+  gulp.watch([config.folderAssets.base + '/**/*.scss', '!' + config.folderAssets.styles + '/themes/**/*.scss'] , ['sass', 'doc']);
+  gulp.watch(config.folderAssets.styles + '/themes/editors/**/*.scss', ['sass-editors', 'doc']);
+  gulp.watch(config.folderAssets.styles + '/themes/theme-dark/**/*.scss', ['sass-theme-dark', 'doc']);
   gulp.watch(config.folderAssets.base + '/icons/*.svg', ['webfont', reload]);
   gulp.watch(config.folderAssets.fonts + '/*.*', ['copy:fonts', reload]);
   gulp.watch(config.folderAssets.images + '/**/*.*', ['copy:images']);
@@ -307,7 +387,7 @@ gulp.task('watch', ['build'], function() {
 });
 
 // Define build task
-gulp.task('build', ['sass', 'webfont', 'copy:fonts', 'processHtml', 'copy:js', 'copy:images', 'doc', 'copy:workerjs']);
+gulp.task('build', ['sass', 'sass-editors', 'sass-theme-dark', 'webfont', 'copy:fonts', 'processHtml', 'copy:js', 'copy:images', 'doc', 'copy:workerjs']);
 
 // Define Dist generation task (Deploy)
-gulp.task('dist', ['sass:dist', 'fonts:dist', 'processHtml:dist', 'js:dist', 'images:dist', 'doc:dist', 'copy:workerjs']);
+gulp.task('dist', ['sass:dist', 'sass-editors:dist', 'sass-theme-dark:dist', 'fonts:dist', 'processHtml:dist', 'js:dist', 'images:dist', 'doc:dist', 'copy:workerjs']);

@@ -1,0 +1,52 @@
+/// Colors
+/// All colors theme darck
+
+$dp-color-white: #ffffff;
+$dp-color-silver: #cccccc;
+$dp-color-lightgrey: #999999;
+$dp-color-grey: #666666;
+$dp-color-darkgrey: #222222;
+$dp-color-black: #000000;
+$dp-color-green-brightness: rgba(51, 173, 115, 0.2);
+$dp-color-yellow: #fbb224;
+$dp-color-darkyellow: #e58900;
+
+body {
+  color: $dp-color-white;
+  background-color: $dp-color-darkgrey;
+}
+
+h1,
+h2,
+h3 {
+  color: $dp-color-white;
+}
+
+.dp-breadcrumb li:last-child {
+  color: $dp-color-white;
+}
+
+.dp-c-table th {
+  background: $dp-color-silver;
+  border-top: 1px solid $dp-color-silver;
+  border-bottom: 1px dashed $dp-color-lightgrey;
+  font-size: 11px;
+  font-weight: 400;
+  color: $dp-color-black;
+  text-transform: uppercase;
+}
+
+a {
+  color: $dp-color-yellow;
+
+  &:hover {
+    color: $dp-color-yellow;
+    text-decoration: underline;
+  }
+}
+
+.dp-button.secondary-yellow {
+  background: 0 0;
+  border: 1px solid $dp-color-yellow;
+  color: $dp-color-yellow;
+}
