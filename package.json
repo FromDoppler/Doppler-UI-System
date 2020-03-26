@@ -25,7 +25,7 @@
   },
   "scripts": {
     "semantic-release": "semantic-release",
-    "prettier": "prettier --write \"assets/**/*.{css,scss,html}\" \"!assets/scss/libs/**/*.{css,scss}\"",
+    "prettier": "prettier \"assets/**/*.{css,scss,html}\" \"!assets/scss/libs/**/*.{css,scss}\" --write",
     "prettier-check": "prettier-check \"assets/**/*.{css,scss,html}\" \"!assets/scss/libs/**/*.{css,scss}\""
   },
   "prettier": {
