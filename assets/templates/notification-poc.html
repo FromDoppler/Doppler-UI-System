@@ -74,11 +74,6 @@
         <div class="dpsg-content-wrap">
           <article class="dpsg-content">
             <h3>POC Web Push Notifications</h3>
-            <a
-              href="https://developers.google.com/web/fundamentals/codelabs/push-notifications"
-              target="_blank"
-              >Ver tutorial completo aquí</a
-            >
             <br />
             <p>Configuración de push para este sitio:</p>
             <p>
@@ -89,29 +84,24 @@
               >
                 Push
               </button>
+              <br /><br />
+              Desde aca se puede crear una notificacion customizada con titulo y
+              mensaje <br />
+              <label>Título: </label
+              ><input type="text" id="notification-title" />
+              <label>Mensaje: </label
+              ><input type="text" id="notification-message" />
+              <br />
+              <br />
+              <button
+                type="button"
+                class="dp-button button-big primary-green js-send-notification"
+              >
+                Enviar notificación
+              </button>
+              (para realizar esta prueba es necesario tener el servidor local
+              corriendo en /assets --> node pushServer.js)
             </p>
-            <p>
-              En este momento los datos se estan mostrando por consola o por
-              back end de google solamente, para generar un push utilizar la
-              consola de devtools en chrome --> applications --> web workers -->
-              escribir y push.
-            </p>
-            <img src="img/devtools.PNG" style="max-width:800px;" />
-            <p>
-              Para probar notificaciones con un back end de google suscribirse a
-              notificar push para este worker utilizar este codigo en la pagina.
-              Tal vez necesitemos cambiar en <i>webPushMain.js</i>
-              <strong>applicationServerPublicKey</strong> a una nueva clave
-              publica para que funcione el generador de push.
-            </p>
-            <br />
-            <a href="https://web-push-codelab.glitch.me/" target="_blank"
-              >link al generador push de google</a
-            >
-            <div
-              class="js-subscription-json"
-              style="border: 1px #cccc solid;padding: 10px;"
-            ></div>
           </article>
         </div>
       </div>
