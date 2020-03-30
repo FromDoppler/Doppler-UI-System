@@ -3,6 +3,7 @@ var applicationServerPublicKey =
 
 var pushButton = document.querySelector('.js-push-btn');
 var notificationButton = document.querySelector('.js-send-notification');
+var publicKeyInput = document.querySelector('#public-key');
 
 var isSubscribed = false;
 var swRegistration = null;
@@ -90,7 +91,9 @@ navigator.serviceWorker.register('sw.js').then(function(swReg) {
 });
 
 function subscribeUser() {
-  var applicationServerKey = urlB64ToUint8Array(applicationServerPublicKey);
+  var providedApplicationPublicKey =
+    publicKeyInput.value || applicationServerPublicKey;
+  var applicationServerKey = urlB64ToUint8Array(providedApplicationPublicKey);
   swRegistration.pushManager
     .subscribe({
       userVisibleOnly: true,
@@ -151,8 +154,10 @@ function sendRequestNotification() {
     document.querySelector('#notification-message').value || 'mensaje push';
   var title =
     document.querySelector('#notification-title').value || 'Doppler Push';
+  var pushServerUrl =
+    document.querySelector('#server-url').value || 'http://localhost:5000';
   if (isSubscribed) {
-    fetch('http://localhost:5000/sendNotification', {
+    fetch(pushServerUrl + '/sendNotification', {
       method: 'post',
       headers: {
         'Content-type': 'application/json',
