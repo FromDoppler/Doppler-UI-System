@@ -28,7 +28,7 @@ docker run --rm \
     -e "NPM_TOKEN=00000000-0000-0000-0000-000000000000" \
     -v `pwd`:/work \
     -w /work \
-    node:10.13.0 \
+    node:10.18.1 \
     /bin/sh -c "\
       rm -rf ./dist/* \
       && npm install -g gulp \
