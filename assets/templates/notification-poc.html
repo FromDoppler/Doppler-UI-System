@@ -78,11 +78,20 @@
             <p>Configuración de push para este sitio:</p>
             <p>
               Clickear en el botón para habilitar/deshabilitar las push <br />
+              <label
+                >Clave publica para suscribirse a notificaciones (hay una por
+                default) </label
+              ><input
+                type="text"
+                id="public-key"
+                placeholder="Clave publica que tiene que conincidir con la privada del server"
+              />
+              <br /><br />
               <button
                 type="button"
                 class="dp-button button-big primary-green js-push-btn"
               >
-                Push
+                Suscribirse
               </button>
               <br /><br />
               Desde aca se puede crear una notificacion customizada con titulo y
@@ -91,6 +100,14 @@
               ><input type="text" id="notification-title" />
               <label>Mensaje: </label
               ><input type="text" id="notification-message" />
+              <label
+                >Push Server URL(http://appint.fromdoppler.net:5001, default:
+                http://localhost:5000): </label
+              ><input
+                type="text"
+                id="server-url"
+                placeholder="http://appint.fromdoppler.net:5001"
+              />
               <br />
               <br />
               <button
@@ -99,8 +116,8 @@
               >
                 Enviar notificación
               </button>
-              (para realizar esta prueba es necesario tener el servidor local
-              corriendo en /assets --> node pushServer.js)
+              (usar server local en /assets --> node pushServer.js o estar
+              seguro de tener un server corriendo)
             </p>
           </article>
         </div>
