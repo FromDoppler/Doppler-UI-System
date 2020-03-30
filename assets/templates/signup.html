@@ -263,7 +263,7 @@
       <section class="feature-panel">
         <div
           class="feature-panel--bg"
-          style="background-image: urL('img/violet-yellow.png'); color:#fff"
+          style="background-image: urL('img/violet-yellow.png'); color: #fff;"
         >
           <article class="feature-content">
             <h6>Email automation</h6>
@@ -318,8 +318,8 @@
         separateDialCode: true,
         initialCountry: 'auto',
         hiddenInput: 'full_phone',
-        geoIpLookup: function(callback) {
-          $.get('https://ipinfo.io', function() {}, 'jsonp').always(function(
+        geoIpLookup: function (callback) {
+          $.get('https://ipinfo.io', function () {}, 'jsonp').always(function (
             resp,
           ) {
             var countryCode = resp && resp.country ? resp.country : 'ar';
@@ -328,18 +328,16 @@
         },
         utilsScript: '../js/main.js',
       });
-      var reset = function() {
+      var reset = function () {
         inputPhone.classList.remove('error');
         errorMsg.innerHTML = '';
         errorMsg.classList.add('hide');
       };
-      inputPhone.addEventListener('blur', function() {
+      inputPhone.addEventListener('blur', function () {
         reset();
         if (inputPhone.value.trim()) {
           if (iti.isValidNumber()) {
-            $(inputPhone)
-              .closest('.field-item')
-              .removeClass('error');
+            $(inputPhone).closest('.field-item').removeClass('error');
           } else {
             inputPhone.classList.add('error');
             var errorCode = iti.getValidationError();
@@ -350,14 +348,10 @@
               .closest('.field-item')
               .find('.error-phone-number')
               .text(errorMap[errorCode]);
-            $(inputPhone)
-              .closest('.field-item')
-              .addClass('error');
+            $(inputPhone).closest('.field-item').addClass('error');
           }
         } else {
-          $(inputPhone)
-            .closest('.field-item')
-            .removeClass('error');
+          $(inputPhone).closest('.field-item').removeClass('error');
         }
       });
       inputPhone.addEventListener('change', reset);
@@ -365,7 +359,7 @@
     </script>
     <!-- /build -->
     <script type="text/javascript">
-      window.onload = function() {
+      window.onload = function () {
         var menubutton = new Menubutton(document.getElementById('menubutton'));
         menubutton.init();
       };
