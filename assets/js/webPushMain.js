@@ -4,6 +4,7 @@ var applicationServerPublicKey =
 var pushButton = document.querySelector('.js-push-btn');
 var notificationButton = document.querySelector('.js-send-notification');
 var publicKeyInput = document.querySelector('#public-key');
+var subscriptionCodeInput = document.querySelector('#user-subscription-code');
 
 var isSubscribed = false;
 var swRegistration = null;
@@ -117,6 +118,11 @@ function subscribeUser() {
 function updateSubscriptionOnServer(subscription) {
   if (subscription) {
     userSubscription = subscription;
+    subscriptionCodeInput.value = JSON.stringify({
+      subscription: userSubscription,
+      title: 'Titulo del push',
+      message: 'Mensaje del push',
+    });
   }
 }
 
