@@ -1,0 +1,19 @@
+# You need to have the service uploaded and working in int and vpn online
+###
+POST http://appint.fromdoppler.net:5001/sendNotification
+Content-Type: application/json
+
+{
+    "subscription":
+    {
+        "endpoint":"https://fcm.googleapis.com/fcm/send/fib2roXpipk:APA91bGgLjADr3g1ROCqWjMXMK8G6g4cu3nGb2VUhiGK3swHyuAcREYxupdMzA2Li4pXD0F5pZSqVD0L0T1R4btYGSc3q2a2ilJ5ofchqi7RLtp1LvvV2IOCgHZpbNnVcGwgRfSupOWi",
+        "expirationTime":null,
+        "keys":
+        {
+            "p256dh":"BIscge6YtL0YsAhrcSyzKIKQD_LTsZey1i7K3kRW36GbhJEXhypKGorL9P3XTRzsVHt_xVDqazQ2_wV77jLtvHY",
+            "auth":"NGpcfDTGT8pRIOox5wG15A"
+        }
+    },
+    "message":"Mensaje push",
+    "title":"Doppler Push"
+}
