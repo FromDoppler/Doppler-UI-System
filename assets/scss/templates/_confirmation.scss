@@ -32,6 +32,14 @@
     text-align: center;
     min-height: 70vh;
     padding: $dp-spaces--lv2;
+
+    button {
+      color: $dp-color-green;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 
   &-article {
