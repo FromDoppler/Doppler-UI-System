@@ -23,16 +23,15 @@ export MSYS2_ARG_CONV_EXCL="*"
 
 mkdir -p dist
 
+docker build --pull -t doppler-ui-system-source --target test .
+
 docker run --rm \
     -e GH_TOKEN \
     -e "NPM_TOKEN=00000000-0000-0000-0000-000000000000" \
-    -v `pwd`:/work \
-    -w /work \
-    node:10.18.1 \
+    -v `pwd`/.git:/work/.git \
+    doppler-ui-system-source \
     /bin/sh -c "\
       rm -rf ./dist/* \
-      && npm install -g gulp \
-      && npm install \
       && ./node_modules/.bin/semantic-release \
       && chmod +777 -R --quiet ./dist/* \
     "
