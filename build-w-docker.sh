@@ -15,7 +15,7 @@ export MSYS2_ARG_CONV_EXCL="*"
 
 mkdir -p dist
 
-docker build --pull -t doppler-ui-system-source .
+docker build --pull -t doppler-ui-system-source --target source .
 docker run --rm \
     -v `pwd`/dist:/work/dist \
     -p 3500:3500 \
