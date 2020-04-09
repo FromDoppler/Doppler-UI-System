@@ -9,9 +9,9 @@ COPY assets/ ./assets/
 COPY gulpfile.js ./
 COPY .editorconfig ./
 
-FROM source as dist
-RUN gulp dist
-
 FROM source as test
 RUN npm run eclint-check
 RUN npm run prettier-check
+
+FROM source as dist
+RUN gulp dist
