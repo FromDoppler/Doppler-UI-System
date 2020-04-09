@@ -15,15 +15,12 @@ export MSYS2_ARG_CONV_EXCL="*"
 
 mkdir -p dist
 
-docker build --pull -t doppler-ui-system-source --target source .
+docker build --pull -t doppler-ui-system-source --target test .
 docker run --rm \
     -v `pwd`/dist:/work/dist \
     -p 3500:3500 \
     doppler-ui-system-source \
     /bin/sh -c "\
       rm -rf ./dist/* \
-      && ./node_modules/.bin/eclint check \"**/*\" \
-      && npm run prettier-check \
-      && gulp dist \
       && chmod +777 -R --quiet ./dist/* \
     "
