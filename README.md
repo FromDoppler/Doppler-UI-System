@@ -1,6 +1,6 @@
 # Doppler-UI-System
 
-UI live guide style. This library is meant to be Doppler visual language, to centralize all branding in one place for all our products. Also allowing to decouple UI from Front End logic, and work in a more tidy way. 
+UI live guide style. This library is meant to be Doppler visual language, to centralize all branding in one place for all our products. Also allowing to decouple UI from Front End logic, and work in a more tidy way.
 
 # What elements do we have right now on this library?
 
@@ -8,9 +8,9 @@ Please check the cdn: [http://cdn.fromdoppler.com/doppler-ui-library/latest/inde
 
 # How can you use this library in you own project?
 
-Simply including the css and js file in your html. Just check the correct version under github releases tab first and replace the `x.x.x` below. 
+Simply including the css and js file in your html. Just check the correct version under github releases tab first and replace the `x.x.x` below.
 
-**CSS** 
+**CSS**
 `<link rel="stylesheet" type="text/css" href="https://cdn.fromdoppler.com/doppler-ui-library/vx.x.x/css/styles.css">`
 
 **JS** (optional, you can include your own js instead)
@@ -44,8 +44,7 @@ Once you downloaded:
 
 - `npm install` to install dependencies
 
-- `gulp run` for running development server and 
-preview
+- `gulp run` for running development server and preview
 
 - `gulp dist` for generation task (Deploy)
 
