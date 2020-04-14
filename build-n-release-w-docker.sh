@@ -23,17 +23,20 @@ export MSYS2_ARG_CONV_EXCL="*"
 
 mkdir -p dist
 
-docker build --pull -t doppler-ui-system-source --target test .
+docker build --pull -t doppler-ui-system-source .
 
 docker run --rm \
     -e GH_TOKEN \
     -e "NPM_TOKEN=00000000-0000-0000-0000-000000000000" \
     -v `pwd`/.git:/work/.git \
+    -v `pwd`/dist:/work/result \
+    -w /work \
     doppler-ui-system-source \
     /bin/sh -c "\
-      rm -rf ./dist/* \
-      && ./node_modules/.bin/semantic-release \
+      mkdir -p dist \
       && chmod +777 -R --quiet ./dist/* \
+      && cp -R ./dist/* ./result/ \
+      && ./node_modules/.bin/semantic-release \
     "
 
 # It seems that due a change in semantic release, when no version is generated
