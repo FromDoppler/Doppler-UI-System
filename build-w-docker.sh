@@ -13,17 +13,15 @@ cd $(dirname $0)
 export MSYS_NO_PATHCONV=1
 export MSYS2_ARG_CONV_EXCL="*"
 
-mkdir -p dist
+rm -rf ./dist/*
+mkdir -p ./dist
 
 docker build --pull -t doppler-ui-system-source .
 docker run --rm \
-    -v `pwd`/dist:/work/dist \
-    -p 3500:3500 \
+    -v `pwd`/dist:/work/result \
+    -w /work \
     doppler-ui-system-source \
     /bin/sh -c "\
-      rm -rf ./dist/* \
-      && ./node_modules/.bin/eclint check \"**/*\" \
-      && npm run prettier-check \
-      && gulp dist \
-      && chmod +777 -R --quiet ./dist/* \
+      chmod +777 -R --quiet ./dist/* \
+      && cp -R ./dist/* ./result/ \
     "
