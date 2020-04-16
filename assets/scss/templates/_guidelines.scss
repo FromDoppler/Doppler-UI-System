@@ -689,9 +689,9 @@ body {
     .dpsg-image-transition {
       width: 500px;
       height: 400px;
-      background: $dp-color-black;
       background-position: top;
       transition: ease-in-out 8s;
+      padding-top: 24px;
     }
 
     .dpsg-sassdoc {
@@ -1052,6 +1052,7 @@ body {
 
   .dpsg-list {
     margin-left: 20px;
+    padding-top: 24px;
 
     li {
       margin-bottom: 25px;
