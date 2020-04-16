@@ -44,39 +44,26 @@
   background: $dp-color-ghostwhite;
 }
 
+/* TO DO: The .report-filter class will deprecate in the next version because it is not a generic class for this component.
+It will be replaced by .hero-banner*/
+.hero-banner,
 .report-filters {
   background: $dp-color-ghostwhite;
   border-bottom: 1px solid $dp-color-silver;
   box-shadow: 0 -4px 0 0 $dp-color-snow inset;
-  padding: $dp-spaces--lv5 $dp-spaces--lv0;
+  padding: $dp-spaces--lv9 $dp-spaces--lv0;
   position: relative;
   margin-bottom: $dp-spaces--lv6;
 
-  h3 {
-    color: $dp-color-darkgrey;
-    font-weight: $dp-font-weight-bold;
-    font-size: $dp-sizing--lvl6;
-    line-height: $dp-spaces--lv5;
-  }
-
-  p {
-    color: $dp-color-grey;
-    font-size: $dp-sizing--lvl3;
-    padding-bottom: $dp-spaces--lv5;
-    line-height: $dp-spaces--lv4;
-  }
-
   .arrow {
     position: absolute;
-    bottom: -66px;
-    left: $dp-spaces--lv5;
-    width: $dp-spaces--lv0;
-    height: $dp-spaces--lv0;
-    border-top: 20px solid $dp-color-ghostwhite;
-    border-right: 20px solid transparent;
-    border-bottom: 20px solid transparent;
-    border-left: 20px solid transparent;
-    box-shadow: inset 10px 10px rgba(0, 0, 0, 0.8);
+    bottom: -68px;
+    left: $dp-spaces--lv2;
+    width: 30px;
+    height: 18px;
+    background-image: url(../../img/hbanner-triangle.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
   }
 }
 
@@ -94,6 +81,7 @@
 .form-filters {
   width: 100%;
   font-family: $dp-font-family;
+  padding-top: $dp-spaces--lv5;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
@@ -211,13 +199,6 @@
   margin: 0;
   position: relative;
   line-height: 60px;
-}
-
-.subtitle-kpi {
-  font-size: $dp-sizing--lvl2;
-  text-transform: uppercase;
-  color: #000;
-  margin: 0;
 }
 
 .date-range {
