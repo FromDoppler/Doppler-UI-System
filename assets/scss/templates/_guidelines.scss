@@ -293,7 +293,7 @@ body {
     h3 {
       color: $dp-color-darkyellow;
       padding-left: $dp-spaces--lv3;
-      margin: 18px 0;
+      margin: $dp-spaces--lv3 $dp-spaces--lv0;
       position: relative;
 
       &:after {
@@ -691,7 +691,7 @@ body {
       height: 400px;
       background-position: top;
       transition: ease-in-out 8s;
-      padding-top: 24px;
+      padding-top: $dp-spaces--lv4;
     }
 
     .dpsg-sassdoc {
@@ -1051,11 +1051,11 @@ body {
   }
 
   .dpsg-list {
-    margin-left: 20px;
-    padding-top: 24px;
+    margin-left: $dp-spaces--lv3;
+    padding-top: $dp-spaces--lv4;
 
     li {
-      margin-bottom: 25px;
+      margin-bottom: $dp-spaces--lv4;
       position: relative;
       max-width: 80%;
       line-height: 1.5em;
