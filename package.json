@@ -66,7 +66,7 @@
     "prettier": "^2.0.2",
     "prettier-check": "^2.0.0",
     "sassdoc": "^2.7.1",
-    "semantic-release": "^17.0.4",
+    "semantic-release": "^17.0.6",
     "sort-css-media-queries": "^1.5.0",
     "ttf2woff2": "^2.0.3",
     "web-push": "^3.2.2",
