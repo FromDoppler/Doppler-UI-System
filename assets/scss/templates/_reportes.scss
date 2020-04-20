@@ -141,6 +141,7 @@ It will be replaced by .hero-banner*/
   }
   .box-border--bottom {
     position: relative;
+
     &::after {
       content: '';
       position: absolute;
@@ -154,10 +155,7 @@ It will be replaced by .hero-banner*/
   .title-reports-box {
     padding: $dp-spaces--lv5;
     display: inline-block;
-    font-size: $dp-sizing--lvl2;
-    color: $dp-color-darkgrey;
-    text-transform: uppercase;
-    line-height: $dp-spaces--lv3;
+
     small {
       display: block;
       text-transform: none;
@@ -182,10 +180,6 @@ It will be replaced by .hero-banner*/
 .title-reports-box {
   padding: $dp-spaces--lv5;
   display: inline-block;
-  font-size: $dp-sizing--lvl2;
-  color: $dp-color-darkgrey;
-  text-transform: uppercase;
-  line-height: $dp-spaces--lv3;
 
   small {
     display: block;
