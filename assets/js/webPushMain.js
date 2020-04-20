@@ -5,7 +5,6 @@ var UI = {
   pushButton: document.querySelector('.js-push-btn'),
   notificationButton: document.querySelector('.js-send-notification'),
   notificationButtonInt: document.querySelector('.js-send-notification-int'),
-  publicKeyInput: document.querySelector('#public-key'),
   addSubscribeBtnOnClickEvent: function () {
     UI.pushButton.addEventListener('click', function () {
       UI.pushButton.disabled = true;
@@ -82,14 +81,12 @@ function getExistentSubscriptionCode(swRegistration) {
 function saveSubscriptionCode(subscription) {
   if (subscription) {
     userSubscription = subscription;
-    console.log(
-      'Web push: ' +
-        JSON.stringify({
-          subscription: userSubscription,
-          title: 'Titulo del push',
-          message: 'Mensaje del push',
-        }),
-    );
+    var templateMessage = {
+      subscription: userSubscription,
+      title: 'Titulo del push',
+      message: 'Mensaje del push',
+    };
+    console.log(JSON.stringify(templateMessage));
   }
 }
 
@@ -107,8 +104,7 @@ function urlB64ToUint8Array(base64String) {
 }
 
 function subscribeUserFirstTime() {
-  var providedApplicationPublicKey =
-    UI.publicKeyInput.value || applicationServerPublicKey;
+  var providedApplicationPublicKey = applicationServerPublicKey;
   var applicationServerKey = urlB64ToUint8Array(providedApplicationPublicKey);
   swRegistration.pushManager
     .subscribe({
