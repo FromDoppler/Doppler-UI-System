@@ -26,17 +26,18 @@ function startFirebase() {
       console.log('FCM blocked or not allowed: ' + JSON.stringify(error));
     });
   messaging.onMessage(function (payload) {
-    console.log('On Message: ' + payload);
+    console.log('FCM On Message: ' + JSON.stringify(payload));
   });
 }
 // inject scripts into body
-var s = document.createElement('script');
-s.type = 'text/javascript';
-s.src = 'https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js';
-document.body.appendChild(s);
+var firebaseSdk = document.createElement('script');
+firebaseSdk.type = 'text/javascript';
+firebaseSdk.src = 'https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js';
+document.body.appendChild(firebaseSdk);
 
-var s2 = document.createElement('script');
-s2.type = 'text/javascript';
-s2.onload = startFirebase;
-s2.src = 'https://www.gstatic.com/firebasejs/7.14.0/firebase-messaging.js';
-document.body.appendChild(s2);
+var firebaseMessaging = document.createElement('script');
+firebaseMessaging.type = 'text/javascript';
+firebaseMessaging.onload = startFirebase;
+firebaseMessaging.src =
+  'https://www.gstatic.com/firebasejs/7.14.0/firebase-messaging.js';
+document.body.appendChild(firebaseMessaging);
