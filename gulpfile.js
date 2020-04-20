@@ -301,7 +301,11 @@ gulp.task('js:dist', function() {
 });
 
 gulp.task('copy:workerjs', function() {
-  return gulp.src([config.folderAssets.base + '/sw.js'])
+  return gulp.src([
+    config.folderAssets.base + '/sw.js',
+    config.folderAssets.base + '/firebase-messaging-sw.js',
+    config.folderAssets.base + '/firebasePush.js',
+    ])
     .pipe(gulp.dest(config.folderDev.base))
     .pipe(gulp.dest(config.folderDist.base));
 });
