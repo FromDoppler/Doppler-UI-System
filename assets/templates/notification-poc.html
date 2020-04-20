@@ -75,18 +75,8 @@
           <article class="dpsg-content">
             <h3>POC Web Push Notifications</h3>
             <br />
-            <p>Configuración de push para este sitio:</p>
             <p>
               Clickear en el botón para habilitar/deshabilitar las push <br />
-              <label
-                >Clave publica para suscribirse a notificaciones (hay una por
-                default) </label
-              ><input
-                type="text"
-                id="public-key"
-                placeholder="Clave publica que tiene que conincidir con la privada del server"
-              />
-              <br /><br />
               <button
                 type="button"
                 class="dp-button button-big primary-green js-push-btn"
@@ -100,35 +90,26 @@
               ><input type="text" id="notification-title" />
               <label>Mensaje: </label
               ><input type="text" id="notification-message" />
-              <label
-                >Push Server URL(http://appint.fromdoppler.net:5001, default:
-                http://localhost:5000): </label
-              ><input
-                type="text"
-                id="server-url"
-                placeholder="http://appint.fromdoppler.net:5001"
-              />
               <br />
               <br />
               <button
                 type="button"
                 class="dp-button button-big primary-green js-send-notification"
               >
-                Enviar notificación ahora
+                Enviar notificación local
               </button>
-              (usar server local en /assets --> node pushServer.js o estar
-              seguro de tener un server corriendo, para usar int conectar vpn y
-              activar contenido no seguro para esta pagina**)
+              <button
+                type="button"
+                class="dp-button button-big primary-green js-send-notification-int"
+              >
+                Enviar notificación a int
+              </button>
+              (usar server local en puerto 500 o en int puerto 5001 en /assets
+              --> node pushServer.js o estar seguro usar uno en int conectar vpn
+              y activar contenido no seguro para esta pagina)
               <br /><br />
-              En caso de querer realizar el post por postman pegar en el cuerpo
-              del post el codigo de la suscripcion (es por browser y depende
-              desde donde nos suscribimos)
-              <textarea id="user-subscription-code"></textarea>
-              **
-              <img
-                src="/img/habilitarContenidoNoSeguro.png"
-                style="max-width: 1000px;"
-              />
+              En caso de querer realizar el post por postman ver codigo por
+              consola
             </p>
           </article>
         </div>
