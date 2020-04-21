@@ -2,8 +2,8 @@
 
 .messages-container {
   display: flex;
-  padding: 0 2%;
-  margin-bottom: 4px;
+  padding: $dp-spaces--lv2;
+  margin-bottom: $dp-spaces--lv1;
   font-family: $dp-font-family;
 }
 
