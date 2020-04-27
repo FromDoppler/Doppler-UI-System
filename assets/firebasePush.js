@@ -10,6 +10,7 @@ function startFirebase() {
   };
   var pushMessage = firebase.initializeApp(firebaseConfig, 'pushMessage');
   const messaging = pushMessage.messaging();
+  firebase.analytics();
   messaging.usePublicVapidKey(
     'BPXWHCYAXj9sseoRK2_39MvJe5LTpjZx2nR0lL0dycH5TZjw6fmTW5u9eKril2IxYuKLm-4Y2cLUlSggUjdlCE0',
   );
