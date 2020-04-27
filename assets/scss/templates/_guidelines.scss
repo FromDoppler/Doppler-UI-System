@@ -23,73 +23,6 @@ body {
   }
 }
 
-.nav {
-  margin: 10px $dp-spaces--lv0 $dp-spaces--lv5;
-  list-style: none;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  padding-bottom: $dp-spaces--lv5;
-  border-bottom: 1px solid $dp-color-silver;
-}
-
-.nav-item {
-  display: inline-block;
-
-  .icon-doppler-logo {
-    margin-right: 20px;
-  }
-}
-
-.nav-link {
-  text-decoration: none;
-  position: relative;
-  color: $dp-color-darkgrey;
-  font-size: $dp-sizing--lvl3;
-  font-weight: $dp-font-weight-bold;
-  font-family: $dp-font-family-proximanova;
-  display: block;
-  overflow: hidden;
-  padding: 15px 0;
-  margin-right: $dp-spaces--lv3;
-  text-transform: uppercase;
-  @include transition-all;
-
-  &:before {
-    content: '';
-    width: 60px;
-    position: absolute;
-    border-bottom: 3px solid $dp-color-darkyellow;
-    bottom: 0;
-    right: 350px;
-    @include transition-all;
-  }
-
-  &:hover:before {
-    right: 0;
-  }
-
-  &:active,
-  &:hover {
-    color: $dp-color-darkyellow;
-  }
-}
-
-.nav-item .active {
-  color: $dp-color-darkyellow;
-}
-
-.nav-item .active:before {
-  content: '';
-  width: 60px;
-  position: absolute;
-  border-bottom: 3px solid $dp-color-darkyellow;
-  bottom: 0;
-  right: 0;
-  @include transition-all;
-}
-
 .main-colors {
   display: flex;
   flex-wrap: wrap;
@@ -263,6 +196,7 @@ body {
     line-height: 1.2em;
     display: inline-block;
     text-transform: uppercase;
+    font-weight: normal;
   }
 
   h2 {

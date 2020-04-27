@@ -1,3 +1,5 @@
+
+if (window.location.pathname === '/notification-poc.html') {
 var applicationServerPublicKey =
   'BFtBVunx6Lg_4ziA6b_Oe-9iqQetudiBzkukb1UOOWItZlbdPXCnMLjTfM6gnbmzrusaGlifwWWaFRWnef_H40Y';
 
@@ -26,21 +28,26 @@ var UI = {
     UI.pushButton.disabled = false;
   },
 };
-UI.notificationButton.addEventListener('click', function () {
-  if (isSubscribed) {
-    sendRequestNotification('http://localhost:5000');
-  } else {
-    console.log('Web push: No esta suscripto a notificaciones');
-  }
-});
 
-UI.notificationButtonInt.addEventListener('click', function () {
-  if (isSubscribed) {
-    sendRequestNotification('http://appint.fromdoppler.net:5001');
-  } else {
-    console.log('Web push: No esta suscripto a notificaciones');
-  }
-});
+if (!!UI.notificationButton) {
+  UI.notificationButton.addEventListener('click', function () {
+    if (isSubscribed) {
+      sendRequestNotification('http://localhost:5000');
+    } else {
+      console.log('Web push: No esta suscripto a notificaciones');
+    }
+  });
+}
+
+if (!!UI.notificationButtonInt) {
+  UI.notificationButtonInt.addEventListener('click', function () {
+    if (isSubscribed) {
+      sendRequestNotification('http://appint.fromdoppler.net:5001');
+    } else {
+      console.log('Web push: No esta suscripto a notificaciones');
+    }
+  });
+}
 
 var isSubscribed = false;
 var swRegistration = null;
@@ -159,4 +166,5 @@ function sendRequestNotification(pushServerUrl) {
   } else {
     console.log('Web push: User is NOT subscribed.');
   }
+}
 }
