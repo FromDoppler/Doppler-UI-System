@@ -59,6 +59,8 @@
       type="image/x-icon"
       href="https://www.fromdoppler.com/favicon.ico"
     />
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-messaging.js"></script>
   </head>
   <body data-active-menu="22">
     <!-- Layers -->
@@ -122,6 +124,20 @@
     <!-- build:js:dist js/app.js -->
     <script src="./js/main.js"></script>
     <!-- /build -->
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: 'AIzaSyBKwB7k2mf_vtn4ygDDUPpevVgn_2MdhTw',
+        authDomain: 'datahub-test-3b639.firebaseapp.com',
+        databaseURL: 'https://datahub-test-3b639.firebaseio.com',
+        projectId: 'datahub-test-3b639',
+        storageBucket: 'datahub-test-3b639.appspot.com',
+        messagingSenderId: '947453659155',
+        appId: '1:947453659155:web:72885de47d1e36f4fb17e6',
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
     <script src="./firebasePush.js"></script>
   </body>
 </html>

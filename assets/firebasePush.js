@@ -8,8 +8,8 @@ function startFirebase() {
     messagingSenderId: '854930863851',
     appId: '1:854930863851:web:34453ce98c9161dfe0f0ae',
   };
-  firebase.initializeApp(firebaseConfig);
-  const messaging = firebase.messaging();
+  var pushMessage = firebase.initializeApp(firebaseConfig, 'pushMessage');
+  const messaging = pushMessage.messaging();
   messaging.usePublicVapidKey(
     'BPXWHCYAXj9sseoRK2_39MvJe5LTpjZx2nR0lL0dycH5TZjw6fmTW5u9eKril2IxYuKLm-4Y2cLUlSggUjdlCE0',
   );
@@ -29,15 +29,27 @@ function startFirebase() {
     console.log('FCM On Message: ' + JSON.stringify(payload));
   });
 }
-// inject scripts into body
-var firebaseSdk = document.createElement('script');
-firebaseSdk.type = 'text/javascript';
-firebaseSdk.src = 'https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js';
-document.body.appendChild(firebaseSdk);
 
-var firebaseMessaging = document.createElement('script');
-firebaseMessaging.type = 'text/javascript';
-firebaseMessaging.onload = startFirebase;
-firebaseMessaging.src =
-  'https://www.gstatic.com/firebasejs/7.14.0/firebase-messaging.js';
-document.body.appendChild(firebaseMessaging);
+function loadMessagingScript(version) {
+  var firebaseMessaging = document.createElement('script');
+  firebaseMessaging.type = 'text/javascript';
+  firebaseMessaging.onload = startFirebase;
+  firebaseMessaging.src =
+    'https://www.gstatic.com/firebasejs/' + version + '/firebase-messaging.js';
+  document.body.appendChild(firebaseMessaging);
+}
+// load sdk only if not in client
+// and load messaging only for correct version else error
+if (window.firebase === undefined) {
+  var firebaseSdk = document.createElement('script');
+  firebaseSdk.type = 'text/javascript';
+  firebaseSdk.src = 'https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js';
+  document.body.appendChild(firebaseSdk);
+  loadMessagingScript();
+} else if (window.firebase.SDK_VERSION === '7.14.0') {
+  loadMessagingScript(window.firebase.SDK_VERSION);
+} else {
+  console.log(
+    'firebase version incompatible for messaging, version required: 7.14.0',
+  );
+}
