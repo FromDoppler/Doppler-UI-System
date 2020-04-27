@@ -7,6 +7,7 @@ function startFirebase() {
     storageBucket: 'webpush-9cb34.appspot.com',
     messagingSenderId: '854930863851',
     appId: '1:854930863851:web:34453ce98c9161dfe0f0ae',
+    measurementId: 'G-L2WFYXBQR9',
   };
   var pushMessage = firebase.initializeApp(firebaseConfig, 'pushMessage');
   const messaging = pushMessage.messaging();
