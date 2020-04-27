@@ -1,0 +1,104 @@
+////
+/// tabs component
+/// Tabs will allow us to create a user interface based
+/// tabs, where, in a very intuitive way, we can offer the
+/// user different views, which are selected by clicking one of the tabs shown below.
+/// @access private
+/// @author Gustavo Baamonde
+/// Classes for the tabs component
+////
+
+.wrapper-tabs {
+  margin: 10px $dp-spaces--lv0 $dp-spaces--lv9;
+  position: relative;
+  width: 100%;
+}
+
+.bg-tabs {
+  position: absolute;
+  border-top: 1px solid #ccc;
+  background-color: #eaeaea;
+  height: 4px;
+  bottom: -1px;
+  width: 100%;
+  z-index: -1;
+}
+
+.nav-tabs {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding: $dp-spaces--lv0;
+}
+
+.tab--item {
+  display: inline-block;
+
+  &:first-child {
+    padding-left: 0;
+  }
+
+  .tab--link {
+    text-decoration: none;
+    position: relative;
+    color: $dp-color-grey;
+    font-size: $dp-sizing--lvl2;
+    font-weight: $dp-font-weight-bold;
+    font-family: Arial, sans-serif;
+    line-height: $dp-spaces--lv3;
+    display: block;
+    overflow: hidden;
+    padding: 15px 0;
+    margin-right: $dp-spaces--lv10;
+    @include transition-all;
+
+    &:before {
+      content: '';
+      width: 100%;
+      position: absolute;
+      border-bottom: 3px solid $dp-color-yellow;
+      bottom: 0;
+      right: 350px;
+      @include transition-all;
+    }
+
+    &:hover:before {
+      right: 0;
+    }
+
+    &.active,
+    &:hover {
+      color: $dp-color-darkgrey;
+      font-weight: bold;
+    }
+  }
+}
+
+.tab--item .active {
+  color: $dp-color-darkgrey;
+  font-weight: bold;
+}
+
+.tab--item .active:before {
+  content: '';
+  position: absolute;
+  border-bottom: 3px solid $dp-color-yellow;
+  bottom: 0;
+  right: 0;
+  @include transition-all;
+}
+
+.tab--container {
+  padding: 0;
+
+  .tab--content {
+    display: none;
+
+    &.active {
+      display: block;
+      padding-top: $dp-spaces--lv5;
+    }
+  }
+}

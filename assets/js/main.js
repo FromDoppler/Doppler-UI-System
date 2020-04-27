@@ -92,3 +92,15 @@ $(".show-hide").click(function() {
     });
   });
 
+
+// module tabs
+$('.tab--item a').each(function(index) {
+  $(this).on('click', function(e) {
+       e.preventDefault();
+       var $index = index + 1;
+       $('.tab--item a, .tab--content').removeClass('active');
+       $(this).closest('.nav-tabs').attr('data-tab-active', $index);
+       $(this).addClass('active');
+       $('.tab--content:nth-child('+$index+')').addClass('active');
+     });
+   });
