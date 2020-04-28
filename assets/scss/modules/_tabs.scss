@@ -8,23 +8,23 @@
 /// Classes for the tabs component
 ////
 
-.wrapper-tabs {
+.tabs-wrapper {
   margin: 10px $dp-spaces--lv0 $dp-spaces--lv9;
   position: relative;
   width: 100%;
 }
 
-.bg-tabs {
+.tabs-bg {
   position: absolute;
-  border-top: 1px solid #ccc;
-  background-color: #eaeaea;
+  border-top: 1px solid $dp-color-silver;
+  background-color: $dp-color-snow;
   height: 4px;
   bottom: -1px;
   width: 100%;
   z-index: -1;
 }
 
-.nav-tabs {
+.tabs-nav {
   list-style: none;
   display: flex;
   align-items: center;
@@ -46,7 +46,7 @@
     color: $dp-color-grey;
     font-size: $dp-sizing--lvl2;
     font-weight: $dp-font-weight-bold;
-    font-family: Arial, sans-serif;
+    font-family: $dp-font-family;
     line-height: $dp-spaces--lv3;
     display: block;
     overflow: hidden;

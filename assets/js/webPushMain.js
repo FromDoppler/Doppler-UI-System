@@ -29,7 +29,6 @@ var UI = {
   },
 };
 
-if (!!UI.notificationButton) {
   UI.notificationButton.addEventListener('click', function () {
     if (isSubscribed) {
       sendRequestNotification('http://localhost:5000');
@@ -37,9 +36,7 @@ if (!!UI.notificationButton) {
       console.log('Web push: No esta suscripto a notificaciones');
     }
   });
-}
 
-if (!!UI.notificationButtonInt) {
   UI.notificationButtonInt.addEventListener('click', function () {
     if (isSubscribed) {
       sendRequestNotification('http://appint.fromdoppler.net:5001');
@@ -47,7 +44,6 @@ if (!!UI.notificationButtonInt) {
       console.log('Web push: No esta suscripto a notificaciones');
     }
   });
-}
 
 var isSubscribed = false;
 var swRegistration = null;
