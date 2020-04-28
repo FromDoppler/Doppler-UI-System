@@ -53,7 +53,7 @@
     "gulp-postcss": "~8.0.0",
     "gulp-prettier": "^3.0.0",
     "gulp-processhtml": "~1.2.0",
-    "gulp-sass": "^4.0.2",
+    "gulp-sass": "^4.1.0",
     "gulp-sass-glob": "^1.1.0",
     "gulp-sftp": "~0.1.5",
     "gulp-sourcemaps": "~2.6.5",
