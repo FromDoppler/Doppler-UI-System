@@ -14,7 +14,7 @@
 }
 
 .dp-campaign {
-  padding: $dp-spaces--lv1;
+  padding: $dp-spaces--lv0;
   width: 370px;
 
   li {
@@ -54,6 +54,10 @@
 ///
 /// header table campaign
 ///
+
+.dp-header-campaing {
+  padding-left: $dp-spaces--lv4;
+}
 
 .dp-subscriber-info {
   position: relative;
@@ -155,7 +159,7 @@
   margin-top: $dp-spaces--lv2;
 
   li {
-    padding-left: $dp-spaces--lv2;
+    padding-left: $dp-spaces--lv0;
   }
 
   .dp-number-campaign {

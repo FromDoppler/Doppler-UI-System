@@ -114,7 +114,6 @@
       td {
         color: $dp-color-grey;
         border: $dp-spaces--lv0;
-        padding: $dp-spaces--lv2;
         font-size: $font-size-table;
         position: relative;
       }
@@ -156,7 +155,7 @@
 
     th,
     td {
-      padding: $dp-spaces--lv2;
+      padding: $dp-spaces--lv2 $dp-spaces--lv4;
       text-align: left;
     }
   }
