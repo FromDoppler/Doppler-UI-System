@@ -9,43 +9,45 @@
 ///
 /// @author gbaamonde@makingsense.com
 
-.dp-breadcrumb {
-  font-size: $dp-sizing--lvl2;
-  padding-bottom: $dp-spaces--lv4;
+.dp-library {
+  .dp-breadcrumb {
+    font-size: $dp-sizing--lvl2;
+    padding-bottom: $dp-spaces--lv4;
 
-  a {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-  }
+    a {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+    }
 
-  ul {
-    align-items: flex-start;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-  }
+    ul {
+      align-items: flex-start;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
 
-  li {
-    align-items: center;
-    display: flex;
-    padding: 0 0.5em;
-  }
+    li {
+      align-items: center;
+      display: flex;
+      padding: 0 0.5em;
+    }
 
-  li:first-child {
-    padding-left: 0;
-  }
+    li:first-child {
+      padding-left: 0;
+    }
 
-  li:last-child {
-    color: $dp-color-lightgrey;
-  }
+    li:last-child {
+      color: $dp-color-lightgrey;
+    }
 
-  li + li:before {
-    content: '>';
-    height: 10px;
-    color: $dp-color-lightgrey;
-    top: -2px;
-    left: -5px;
-    position: relative;
+    li + li:before {
+      content: '>';
+      height: 10px;
+      color: $dp-color-lightgrey;
+      top: -2px;
+      left: -5px;
+      position: relative;
+    }
   }
 }

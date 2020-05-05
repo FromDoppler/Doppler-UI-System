@@ -41,7 +41,6 @@
   align-items: center;
   flex-wrap: wrap;
   margin-bottom: $dp-spaces--lv6;
-  font-family: $dp-font-family;
 
   h3 {
     font-weight: $dp-font-weight-bold;
@@ -58,12 +57,15 @@
 
 .dp-header-campaing {
   padding-left: $dp-spaces--lv4;
-  font-family: $dp-font-family;
 }
 
 .dp-subscriber-info {
   position: relative;
   margin: $dp-spaces--lv1 $dp-spaces--lv4 $dp-spaces--lv6 $dp-spaces--lv0;
+
+  li {
+    margin-left: 12px;
+  }
 
   .dp-block-info {
     color: $dp-color-lightgrey;
@@ -88,7 +90,7 @@
     position: absolute;
     border-left: 1px solid $dp-color-grey;
     top: 0;
-    left: 6px;
+    left: 18px;
     width: 1px;
     height: 100%;
   }

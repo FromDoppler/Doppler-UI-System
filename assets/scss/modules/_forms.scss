@@ -8,543 +8,545 @@
 /// Mixin for the circle in the validation of messages in the password
 /// Mixin circle simple
 
-@mixin circle($background-color) {
-  &::before {
-    content: '';
-    display: inline-block;
-    width: 8px;
-    height: 8px;
-    border-radius: $dp-border-radius--lv1;
-    margin-right: $dp-spaces--lv1;
-    background-color: $background-color;
-  }
-}
-
-/// Mixin circle with a check
-@mixin circleCheck($background-color, $check-color) {
-  position: relative;
-
-  &::before {
-    content: '';
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    border-radius: $dp-border-radius--lv1;
-    background-color: $background-color;
-    margin-right: $dp-spaces--lv1;
-  }
-
-  &::after {
-    content: '';
-    position: absolute;
-    left: 4px;
-    bottom: $dp-spaces--lv1;
-    display: block;
-    width: 4px;
-    height: 7px;
-    border: solid $check-color;
-    border-width: 0 2px 2px 0;
-    transform: rotate(45deg);
-  }
-}
-
-/// form-request - user-menu
-legend {
-  display: none;
-}
-
-label {
-  width: 100%;
-  display: inline-block;
-  margin-bottom: 5px;
-  padding: 0;
-  color: $dp-color-grey;
-  font-weight: $dp-font-weight-bold;
-  font-size: $dp-sizing--lvl2;
-  font-family: $dp-font-family;
-}
-/// span with class .dropdown-arrow to draw arrow dropdown
-.dropdown-arrow {
-  border-style: solid;
-  height: 0;
-  width: 0;
-  border-width: 7px 5.5px 0 5.5px;
-  border-color: $dp-color-lightgrey transparent transparent transparent;
-  position: absolute;
-  right: 15px;
-  top: 2.5em;
-  z-index: 10;
-  pointer-events: none;
-}
-
-select {
-  height: 40px;
-  color: $dp-color-grey;
-  width: 100%;
-  background-color: $dp-color-white;
-  border-radius: $dp-border-radius;
-  font-size: $dp-sizing--lvl2;
-  padding: 0 40px 0 10px;
-  text-align: left;
-  line-height: 40px;
-  cursor: pointer;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
-}
-
-select:disabled {
-  background-color: $dp-color-snow;
-  border: 1px solid $dp-color-silver;
-  color: $dp-color-silver;
-}
-
-textarea {
-  width: 100%;
-  height: 100px;
-  resize: none;
-  padding: 10px;
-  color: $dp-color-grey;
-  border-radius: $dp-border-radius;
-  font-size: $dp-sizing--lvl2;
-  border: 1px solid $dp-color-silver;
-
-  &::placeholder {
-    color: $dp-color-default;
-    font-style: italic;
-  }
-
-  :focus {
-    border: 1px solid $dp-color-yellow;
-  }
-}
-
-.checkmark {
-  position: absolute;
-  left: 0;
-  height: 16px;
-  width: 16px;
-  border: 1px solid $dp-color-lightbrown;
-  border-radius: $dp-border-radius;
-  background-color: $dp-color-white;
-  pointer-events: none;
-
-  &:after {
-    content: '';
-    position: absolute;
-    left: 5px;
-    top: 1px;
-    width: 5px;
-    height: 10px;
-    border: solid $dp-color-white;
-    border-width: 0 3px 3px 0;
-    transform: rotate(45deg);
-  }
-}
-/// validate form
-.field-group {
-  .field-item {
-    position: relative;
-    display: inline-block;
-    text-align: left;
-    float: left;
-    width: 100%;
-    margin-bottom: $dp-spaces--lv5;
-
-    &__checkbox {
-      cursor: pointer;
-      margin-bottom: $dp-spaces--lv2;
-
-      label {
-        font-weight: normal;
-        vertical-align: middle;
-        margin-left: $dp-spaces--lv4;
-      }
-
-      &:nth-last-child(1) {
-        margin-bottom: $dp-spaces--lv3;
-      }
-    }
-    /// Field checkbox
-    &--50 {
-      width: 50%;
-      /* Left Column */
-      &:nth-of-type(odd) {
-        padding-right: $dp-spaces--lv3;
-      }
-    }
-    /// Field to 50% percent
-    .show-hide {
-      float: right;
-      font-size: $dp-sizing--lvl2;
-      font-weight: normal;
-      font-style: normal;
-      color: $dp-color-lightbrown;
-      vertical-align: bottom;
-      cursor: pointer;
-
-      &:hover {
-        opacity: 0.7;
-      }
-    }
-
-    .icon-hide:before,
-    .icon-view:before {
-      position: relative;
-      top: 2px;
-    }
-
-    .content-eye {
-      font-family: $dp-font-family-proximanova;
-      font-size: $dp-sizing--lvl2;
-      font-style: italic;
-    }
-  }
-}
-
-input[type='checkbox'] {
-  opacity: 0;
-  z-index: 0;
-  cursor: pointer;
-  zoom: 2.5;
-  position: absolute;
-
-  &:checked {
-    & ~ .checkmark {
-      border-color: $dp-color-green;
-      background-color: $dp-color-green;
-
-      &:after {
-        display: block;
-      }
-    }
-  }
-
-  &:focus {
-    & ~ .checkmark {
-      color: $dp-color-lightbrown;
-      border-radius: $dp-border-radius;
-      outline: none;
-    }
-  }
-}
-
-input:not([type='checkbox']) {
-  padding: 10px 12px;
-  height: 40px;
-  width: 100%;
-  color: $dp-color-lightbrown;
-  border: 1px solid $dp-color-lightbrown;
-  border-radius: $dp-border-radius;
-  background-color: $dp-color-white;
-  font-size: $dp-sizing--lvl2;
-  font-family: $dp-font-family-proximanova;
-  line-height: 20px;
-
-  &::placeholder {
-    color: $dp-color-lightbrown;
-    font-style: italic;
-  }
-
-  &:required {
-    box-shadow: none;
-  }
-
-  &:focus {
-    color: $dp-color-lightbrown;
-    border-radius: $dp-border-radius;
-  }
-}
-
-input[type='tel'] {
-  -moz-appearance: textfield;
-
-  &::-webkit-inner-spin-button,
-  &::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
-}
-
-/// Mixin for dp-message
-/// @access private
-@mixin dp-message($dp-font-color, $dp-font-size) {
-  a,
-  p,
-  button,
-  span {
-    font-size: $dp-font-size;
-    color: $dp-font-color;
-    text-align: left;
-    margin: $dp-spaces--lv0;
-    font-family: $dp-font-family-proximanova;
-  }
-}
-
-/// Form messages and validations
-/// @access public
-/// @deprecated .error and .wrapper-errors will be removed in a next version of the library
-/// @author gbaamonde@makingsense.com
-
-/* Message modules */
-
-.dp-message,
-.error {
-  display: none;
-}
-
-/* Class for validation */
-
-.dp-validate,
-.error {
-  .checkmark,
-  input,
-  select,
-  textarea {
-    border: 1px solid $dp-color-red;
-  }
-
-  /* common properties */
-  .dp-message-box {
-    padding-left: $dp-sizing--lvl10;
-    min-height: 45px;
-    display: flex;
-    margin: $dp-spaces--lv2 $dp-spaces--lv0;
-    flex-direction: column;
-    justify-content: center;
-  }
-  /* Messages and confirmations the forms */
-  .dp-message,
-  .wrapper-errors {
-    display: inline-block;
-    margin: $dp-spaces--lv0;
-    font-family: $dp-font-family-proximanova;
-    font-size: $dp-sizing--lvl2;
-
-    /* Validations error message */
-    &.dp-error-form {
-      @include dp-message($dp-color-red, $dp-sizing--lvl2);
-    }
-  }
-}
-
-/* Unexpected message box */
-.form-message {
-  margin-bottom: $dp-spaces--lv4;
-  display: flex;
-  min-height: $dp-spaces--lv6;
-  padding-left: $dp-spaces--lv7;
-  padding: $dp-spaces--lv1 $dp-spaces--lv0 $dp-spaces--lv0 $dp-spaces--lv7;
-  flex-direction: column;
-  background-size: 30px;
-  background-position: 0 0;
-  background-repeat: no-repeat;
-  font-family: $dp-font-family-proximanova;
-
-  button,
-  a {
-    text-decoration: underline;
-  }
-
-  /* Validations Unexpected message */
-  &.dp-error {
-    @extend .dp-message-box;
-    @include dp-message($dp-color-red, $dp-sizing--lvl3);
-    background-image: url('../img/error-message.svg');
-
-    a,
-    button {
-      text-decoration: underline;
-    }
-  }
-  /* Validations message OK forgot password */
-  &.dp-ok-message {
-    @extend .dp-message-box;
-    @include dp-message($dp-color-green, $dp-sizing--lvl3);
-    background-image: url('../img/ok-message.svg');
-
-    .forgot-link {
-      margin: $dp-spaces--lv4 $dp-spaces--lv0;
-      font-size: $dp-sizing--lvl2;
-    }
-  }
-  &.dp-warning-message {
-    @extend .dp-message-box;
-    @include dp-message($dp-color-darkgrey, $dp-sizing--lvl3);
-    background-image: url('../img/warning-icon.svg');
-  }
-
-  .error {
-    padding-left: 0;
-
-    .wrapper-errors {
+.dp-library {
+  @mixin circle($background-color) {
+    &::before {
+      content: '';
       display: inline-block;
-      margin: 0;
-      color: $dp-color-red;
-      font-size: $dp-sizing--lvl2;
-      font-family: proxima-nova, Helvetica;
+      width: 8px;
+      height: 8px;
+      border-radius: $dp-border-radius--lv1;
+      margin-right: $dp-spaces--lv1;
+      background-color: $background-color;
     }
   }
-}
 
-/* Validations and password messages */
-.wrapper-password {
-  display: block;
-  margin-top: $dp-spaces--lv1;
-
-  .password-message {
-    margin: $dp-spaces--lv0;
-    font-size: $dp-sizing--lvl2;
-    font-family: $dp-font-family-proximanova;
-  }
-
-  .complete-message {
-    margin-right: $dp-spaces--lv4;
-    color: $dp-color-lightgrey;
-    @include circle($dp-color-lightgrey);
-    display: inline-block;
-  }
-  /* Class to indicate that this validation is complete */
-  .waiting-message {
-    margin-right: $dp-spaces--lv4;
-    color: $dp-color-grey;
-    @include circle($dp-color-yellow);
-    display: inline-block;
-  }
-  /* Class for waiting complete the password */
-  .lack-message {
-    margin-right: $dp-spaces--lv4;
-    color: $dp-color-red;
-    @include circle($dp-color-red);
-    display: inline-block;
-  }
-  /* Class for lack digit in the password */
-  .secure-message {
-    margin-right: $dp-spaces--lv4;
-    color: $dp-color-green;
-    @include circleCheck($dp-color-green, $dp-color-white);
-  }
-  /* Class to indicate that password is secure */
-}
-
-.form-request {
-  font-family: $dp-font-family;
-  padding: 20px 0 0;
-
-  li {
+  /// Mixin circle with a check
+  @mixin circleCheck($background-color, $check-color) {
     position: relative;
-  }
 
-  .container-buttons {
-    margin-top: $dp-spaces--lv3;
-    padding-top: $dp-spaces--lv3;
-    border-top: 1px solid $dp-color-silver;
-    display: flex;
-    justify-content: flex-end;
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      border-radius: $dp-border-radius--lv1;
+      background-color: $background-color;
+      margin-right: $dp-spaces--lv1;
+    }
 
-    .dp-button {
-      margin-left: $dp-spaces--lv2;
+    &::after {
+      content: '';
+      position: absolute;
+      left: 4px;
+      bottom: $dp-spaces--lv1;
+      display: block;
+      width: 4px;
+      height: 7px;
+      border: solid $check-color;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
     }
   }
-}
 
-/* signup form */
+  /// form-request - user-menu
+  legend {
+    display: none;
+  }
 
-.signup-form {
-  margin-top: $dp-spaces--lv6;
-
-  input,
   label {
-    font-family: $dp-font-family-proximanova;
-  }
-}
-/* login form */
-
-.login-form {
-  margin-top: $dp-spaces--lv6;
-
-  .legend {
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 5px;
+    padding: 0;
+    color: $dp-color-grey;
+    font-weight: $dp-font-weight-bold;
     font-size: $dp-sizing--lvl2;
-    float: right;
-    color: $dp-color-silver;
-    font-style: italic;
-    font-weight: $dp-font-weight-light;
+    font-family: $dp-font-family;
   }
-}
-
-.forgot-link {
-  display: block;
-  margin: $dp-spaces--lv4 $dp-spaces--lv0;
-  font-size: $dp-sizing--lvl2;
-  font-style: italic;
-  font-family: $dp-font-family-proximanova;
-  position: relative;
-}
-
-/* forgot password form */
-
-.forgot-pass {
-  margin-top: $dp-spaces--lv6;
-}
-
-.triangle-right {
-  width: 0;
-  height: 0;
-  padding-left: $dp-spaces--lv3;
-
-  &:before {
-    content: '';
+  /// span with class .dropdown-arrow to draw arrow dropdown
+  .dropdown-arrow {
+    border-style: solid;
+    height: 0;
+    width: 0;
+    border-width: 7px 5.5px 0 5.5px;
+    border-color: $dp-color-lightgrey transparent transparent transparent;
     position: absolute;
-    top: 4px;
-    left: 7px;
-    border-top: 3px solid transparent;
-    border-right: 6px solid $dp-color-green;
-    border-bottom: 3px solid transparent;
-  }
-}
-@include media-breakpoint('mobilexs') {
-  .login-form,
-  .signup-form {
-    margin-top: $dp-spaces--lv5;
-  }
-}
-
-///
-/// form the filters
-///
-
-.dp-filters {
-  .dp-t-inputsh {
-    padding-top: 22px;
+    right: 15px;
+    top: 2.5em;
+    z-index: 10;
+    pointer-events: none;
   }
 
-  .dp-searchemail {
-    top: 22px;
-    padding: $dp-spaces--lv0 $dp-spaces--lv2 $dp-spaces--lv0 $dp-spaces--lv2;
+  select {
+    height: 40px;
+    color: $dp-color-grey;
+    width: 100%;
+    background-color: $dp-color-white;
+    border-radius: $dp-border-radius;
+    font-size: $dp-sizing--lvl2;
+    padding: 0 40px 0 10px;
     text-align: left;
     line-height: 40px;
+    cursor: pointer;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
   }
 
-  .dropdown-arrow {
-    right: $dp-spaces--lv4;
+  select:disabled {
+    background-color: $dp-color-snow;
+    border: 1px solid $dp-color-silver;
+    color: $dp-color-silver;
   }
 
-  .dp-button--search {
-    position: absolute;
-    top: 22px;
-    font-size: $dp-sizing--lvl3;
-    right: $dp-spaces--lv2;
+  textarea {
+    width: 100%;
+    height: 100px;
+    resize: none;
+    padding: 10px;
     color: $dp-color-grey;
-    padding: $dp-spaces--lv0;
-    width: 40px;
-    height: 40px;
+    border-radius: $dp-border-radius;
+    font-size: $dp-sizing--lvl2;
+    border: 1px solid $dp-color-silver;
+
+    &::placeholder {
+      color: $dp-color-default;
+      font-style: italic;
+    }
+
+    :focus {
+      border: 1px solid $dp-color-yellow;
+    }
   }
 
-  .dp-button.button--loading:after {
-    @include dp-preloader($dp-color-grey, 1.5em);
-    border-color: rgba(204, 204, 204, 0.3);
-    border-top-color: $dp-color-silver;
-    left: 9px;
+  .checkmark {
+    position: absolute;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    border: 1px solid $dp-color-lightbrown;
+    border-radius: $dp-border-radius;
+    background-color: $dp-color-white;
+    pointer-events: none;
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 5px;
+      top: 1px;
+      width: 5px;
+      height: 10px;
+      border: solid $dp-color-white;
+      border-width: 0 3px 3px 0;
+      transform: rotate(45deg);
+    }
+  }
+  /// validate form
+  .field-group {
+    .field-item {
+      position: relative;
+      display: inline-block;
+      text-align: left;
+      float: left;
+      width: 100%;
+      margin-bottom: $dp-spaces--lv5;
+
+      &__checkbox {
+        cursor: pointer;
+        margin-bottom: $dp-spaces--lv2;
+
+        label {
+          font-weight: normal;
+          vertical-align: middle;
+          margin-left: $dp-spaces--lv4;
+        }
+
+        &:nth-last-child(1) {
+          margin-bottom: $dp-spaces--lv3;
+        }
+      }
+      /// Field checkbox
+      &--50 {
+        width: 50%;
+        /* Left Column */
+        &:nth-of-type(odd) {
+          padding-right: $dp-spaces--lv3;
+        }
+      }
+      /// Field to 50% percent
+      .show-hide {
+        float: right;
+        font-size: $dp-sizing--lvl2;
+        font-weight: normal;
+        font-style: normal;
+        color: $dp-color-lightbrown;
+        vertical-align: bottom;
+        cursor: pointer;
+
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+
+      .icon-hide:before,
+      .icon-view:before {
+        position: relative;
+        top: 2px;
+      }
+
+      .content-eye {
+        font-family: $dp-font-family-proximanova;
+        font-size: $dp-sizing--lvl2;
+        font-style: italic;
+      }
+    }
+  }
+
+  input[type='checkbox'] {
+    opacity: 0;
+    z-index: 0;
+    cursor: pointer;
+    zoom: 2.5;
+    position: absolute;
+
+    &:checked {
+      & ~ .checkmark {
+        border-color: $dp-color-green;
+        background-color: $dp-color-green;
+
+        &:after {
+          display: block;
+        }
+      }
+    }
+
+    &:focus {
+      & ~ .checkmark {
+        color: $dp-color-lightbrown;
+        border-radius: $dp-border-radius;
+        outline: none;
+      }
+    }
+  }
+
+  input:not([type='checkbox']) {
+    padding: 10px 12px;
+    height: 40px;
+    width: 100%;
+    color: $dp-color-lightbrown;
+    border: 1px solid $dp-color-lightbrown;
+    border-radius: $dp-border-radius;
+    background-color: $dp-color-white;
+    font-size: $dp-sizing--lvl2;
+    font-family: $dp-font-family-proximanova;
+    line-height: 20px;
+
+    &::placeholder {
+      color: $dp-color-lightbrown;
+      font-style: italic;
+    }
+
+    &:required {
+      box-shadow: none;
+    }
+
+    &:focus {
+      color: $dp-color-lightbrown;
+      border-radius: $dp-border-radius;
+    }
+  }
+
+  input[type='tel'] {
+    -moz-appearance: textfield;
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+
+  /// Mixin for dp-message
+  /// @access private
+  @mixin dp-message($dp-font-color, $dp-font-size) {
+    a,
+    p,
+    button,
+    span {
+      font-size: $dp-font-size;
+      color: $dp-font-color;
+      text-align: left;
+      margin: $dp-spaces--lv0;
+      font-family: $dp-font-family-proximanova;
+    }
+  }
+
+  /// Form messages and validations
+  /// @access public
+  /// @deprecated .error and .wrapper-errors will be removed in a next version of the library
+  /// @author gbaamonde@makingsense.com
+
+  /* Message modules */
+
+  .dp-message,
+  .error {
+    display: none;
+  }
+
+  /* Class for validation */
+
+  .dp-validate,
+  .error {
+    .checkmark,
+    input,
+    select,
+    textarea {
+      border: 1px solid $dp-color-red;
+    }
+
+    /* common properties */
+    .dp-message-box {
+      padding-left: $dp-sizing--lvl10;
+      min-height: 45px;
+      display: flex;
+      margin: $dp-spaces--lv2 $dp-spaces--lv0;
+      flex-direction: column;
+      justify-content: center;
+    }
+    /* Messages and confirmations the forms */
+    .dp-message,
+    .wrapper-errors {
+      display: inline-block;
+      margin: $dp-spaces--lv0;
+      font-family: $dp-font-family-proximanova;
+      font-size: $dp-sizing--lvl2;
+
+      /* Validations error message */
+      &.dp-error-form {
+        @include dp-message($dp-color-red, $dp-sizing--lvl2);
+      }
+    }
+  }
+
+  /* Unexpected message box */
+  .form-message {
+    margin-bottom: $dp-spaces--lv4;
+    display: flex;
+    min-height: $dp-spaces--lv6;
+    padding-left: $dp-spaces--lv7;
+    padding: $dp-spaces--lv1 $dp-spaces--lv0 $dp-spaces--lv0 $dp-spaces--lv7;
+    flex-direction: column;
+    background-size: 30px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    font-family: $dp-font-family-proximanova;
+
+    button,
+    a {
+      text-decoration: underline;
+    }
+
+    /* Validations Unexpected message */
+    &.dp-error {
+      @extend .dp-message-box;
+      @include dp-message($dp-color-red, $dp-sizing--lvl3);
+      background-image: url('../img/error-message.svg');
+
+      a,
+      button {
+        text-decoration: underline;
+      }
+    }
+    /* Validations message OK forgot password */
+    &.dp-ok-message {
+      @extend .dp-message-box;
+      @include dp-message($dp-color-green, $dp-sizing--lvl3);
+      background-image: url('../img/ok-message.svg');
+
+      .forgot-link {
+        margin: $dp-spaces--lv4 $dp-spaces--lv0;
+        font-size: $dp-sizing--lvl2;
+      }
+    }
+    &.dp-warning-message {
+      @extend .dp-message-box;
+      @include dp-message($dp-color-darkgrey, $dp-sizing--lvl3);
+      background-image: url('../img/warning-icon.svg');
+    }
+
+    .error {
+      padding-left: 0;
+
+      .wrapper-errors {
+        display: inline-block;
+        margin: 0;
+        color: $dp-color-red;
+        font-size: $dp-sizing--lvl2;
+        font-family: proxima-nova, Helvetica;
+      }
+    }
+  }
+
+  /* Validations and password messages */
+  .wrapper-password {
+    display: block;
+    margin-top: $dp-spaces--lv1;
+
+    .password-message {
+      margin: $dp-spaces--lv0;
+      font-size: $dp-sizing--lvl2;
+      font-family: $dp-font-family-proximanova;
+    }
+
+    .complete-message {
+      margin-right: $dp-spaces--lv4;
+      color: $dp-color-lightgrey;
+      @include circle($dp-color-lightgrey);
+      display: inline-block;
+    }
+    /* Class to indicate that this validation is complete */
+    .waiting-message {
+      margin-right: $dp-spaces--lv4;
+      color: $dp-color-grey;
+      @include circle($dp-color-yellow);
+      display: inline-block;
+    }
+    /* Class for waiting complete the password */
+    .lack-message {
+      margin-right: $dp-spaces--lv4;
+      color: $dp-color-red;
+      @include circle($dp-color-red);
+      display: inline-block;
+    }
+    /* Class for lack digit in the password */
+    .secure-message {
+      margin-right: $dp-spaces--lv4;
+      color: $dp-color-green;
+      @include circleCheck($dp-color-green, $dp-color-white);
+    }
+    /* Class to indicate that password is secure */
+  }
+
+  .form-request {
+    font-family: $dp-font-family;
+    padding: 20px 0 0;
+
+    li {
+      position: relative;
+    }
+
+    .container-buttons {
+      margin-top: $dp-spaces--lv3;
+      padding-top: $dp-spaces--lv3;
+      border-top: 1px solid $dp-color-silver;
+      display: flex;
+      justify-content: flex-end;
+
+      .dp-button {
+        margin-left: $dp-spaces--lv2;
+      }
+    }
+  }
+
+  /* signup form */
+
+  .signup-form {
+    margin-top: $dp-spaces--lv6;
+
+    input,
+    label {
+      font-family: $dp-font-family-proximanova;
+    }
+  }
+  /* login form */
+
+  .login-form {
+    margin-top: $dp-spaces--lv6;
+
+    .legend {
+      font-size: $dp-sizing--lvl2;
+      float: right;
+      color: $dp-color-silver;
+      font-style: italic;
+      font-weight: $dp-font-weight-light;
+    }
+  }
+
+  .forgot-link {
+    display: block;
+    margin: $dp-spaces--lv4 $dp-spaces--lv0;
+    font-size: $dp-sizing--lvl2;
+    font-style: italic;
+    font-family: $dp-font-family-proximanova;
+    position: relative;
+  }
+
+  /* forgot password form */
+
+  .forgot-pass {
+    margin-top: $dp-spaces--lv6;
+  }
+
+  .triangle-right {
+    width: 0;
+    height: 0;
+    padding-left: $dp-spaces--lv3;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 4px;
+      left: 7px;
+      border-top: 3px solid transparent;
+      border-right: 6px solid $dp-color-green;
+      border-bottom: 3px solid transparent;
+    }
+  }
+  @include media-breakpoint('mobilexs') {
+    .login-form,
+    .signup-form {
+      margin-top: $dp-spaces--lv5;
+    }
+  }
+
+  ///
+  /// form the filters
+  ///
+
+  .dp-filters {
+    .dp-t-inputsh {
+      padding-top: 22px;
+    }
+
+    .dp-searchemail {
+      top: 22px;
+      padding: $dp-spaces--lv0 $dp-spaces--lv2 $dp-spaces--lv0 $dp-spaces--lv2;
+      text-align: left;
+      line-height: 40px;
+    }
+
+    .dropdown-arrow {
+      right: $dp-spaces--lv4;
+    }
+
+    .dp-button--search {
+      position: absolute;
+      top: 22px;
+      font-size: $dp-sizing--lvl3;
+      right: $dp-spaces--lv2;
+      color: $dp-color-grey;
+      padding: $dp-spaces--lv0;
+      width: 40px;
+      height: 40px;
+    }
+
+    .dp-button.button--loading:after {
+      @include dp-preloader($dp-color-grey, 1.5em);
+      border-color: rgba(204, 204, 204, 0.3);
+      border-top-color: $dp-color-silver;
+      left: 9px;
+    }
   }
 }

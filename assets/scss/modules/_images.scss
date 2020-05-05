@@ -6,218 +6,220 @@
 /// Classes for the Images component
 ////
 
-@mixin icon-table {
-  width: 20px;
-  height: 17px;
-  display: inline-block;
-  font-size: $dp-sizing--lvl3;
-}
+.dp-library {
+  @mixin icon-table {
+    width: 20px;
+    height: 17px;
+    display: inline-block;
+    font-size: $dp-sizing--lvl3;
+  }
 
-@mixin icon-user-table {
-  position: relative;
-  top: -2px;
-  left: 0;
-  font-size: $dp-sizing--lvl2-14;
-  margin-right: $dp-spaces--lv1;
-}
+  @mixin icon-user-table {
+    position: relative;
+    top: -2px;
+    left: 0;
+    font-size: $dp-sizing--lvl2-14;
+    margin-right: $dp-spaces--lv1;
+  }
 
-[class*='user--'] {
-  position: relative;
-}
+  [class*='user--'] {
+    position: relative;
+  }
 
-///
-/// Mixin campaign status icons
-///
+  ///
+  /// Mixin campaign status icons
+  ///
 
-@mixin icon-campaing($background-color) {
-  content: '';
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  top: 2px;
-  left: $dp-spaces--lv0;
-  border-radius: 50%;
-  background-color: $background-color;
-}
+  @mixin icon-campaing($background-color) {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 2px;
+    left: $dp-spaces--lv0;
+    border-radius: 50%;
+    background-color: $background-color;
+  }
 
-/// placeholder para los iconos
+  /// placeholder para los iconos
 
-%states-campaing {
-  padding-left: $dp-spaces--lv3;
-  display: flex;
-  align-items: flex-start;
-  max-width: 200px;
-}
+  %states-campaing {
+    padding-left: $dp-spaces--lv3;
+    display: flex;
+    align-items: flex-start;
+    max-width: 200px;
+  }
 
-.dp-calification {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  .dp-calification {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
 
-  .icon-star {
-    @include icon-table;
+    .icon-star {
+      @include icon-table;
+      color: $dp-color-yellow;
+    }
+
+    .icon-star-filled {
+      @include icon-table;
+      color: $dp-color-silver;
+    }
+
+    .dp-useremail-campaign {
+      margin-right: $dp-spaces--lv3;
+      line-height: 18px;
+      display: block;
+
+      @media screen and (max-width: 320px) {
+        margin-right: $dp-spaces--lv9;
+      }
+    }
+  }
+
+  .dp-username-campaing {
+    font-size: $dp-sizing--lvl2;
+    line-height: 18px;
+    display: block;
+  }
+
+  ///
+  /// Icons for Subscriber History
+  ///
+
+  .dp-subscriber-icon {
+    margin-top: $dp-spaces--lv3;
+    font-size: $dp-sizing--lvl2;
+    font-weight: 600;
+    display: inline-block;
+  }
+
+  .dp-icon-wrapper {
+    display: block;
+    min-width: 200px;
+  }
+
+  // User active
+  .user--active:before {
+    @include icon-user-table;
+    color: $dp-color-green;
+  }
+
+  // User active not associated to lists
+  .user--active-with-no-list:before {
+    @include icon-user-table;
     color: $dp-color-yellow;
   }
 
-  .icon-star-filled {
-    @include icon-table;
-    color: $dp-color-silver;
+  // User pending
+  .user--stand-by:before {
+    @include icon-user-table;
+    color: $dp-color-yellow;
   }
 
-  .dp-useremail-campaign {
-    margin-right: $dp-spaces--lv3;
-    line-height: 18px;
-    display: block;
+  // User removed client
+  .user--removed-client:before {
+    @include icon-user-table;
+    color: $dp-color-red;
+  }
 
-    @media screen and (max-width: 320px) {
-      margin-right: $dp-spaces--lv9;
+  // User removed hard bounced
+  .user--removed-hard-bounced:before {
+    @include icon-user-table;
+    color: $dp-color-red;
+  }
+
+  // User removed no openings
+  .user--removed-no-openings:before {
+    @include icon-user-table;
+    color: $dp-color-grey;
+  }
+
+  // User removed soft bounced
+  .user--removed-soft-bounced:before {
+    @include icon-user-table;
+    color: $dp-color-red;
+  }
+
+  // User subscriber removed
+  .user--removed-subscriber:before {
+    @include icon-user-table;
+    color: $dp-color-grey;
+  }
+
+  ///
+  /// campaign status icons
+  ///
+
+  .status--opened {
+    position: relative;
+    @extend %states-campaing;
+
+    &:before {
+      @include icon-campaing($dp-color-green);
     }
   }
-}
 
-.dp-username-campaing {
-  font-size: $dp-sizing--lvl2;
-  line-height: 18px;
-  display: block;
-}
+  .status--not-opened {
+    position: relative;
+    @extend %states-campaing;
 
-///
-/// Icons for Subscriber History
-///
-
-.dp-subscriber-icon {
-  margin-top: $dp-spaces--lv3;
-  font-size: $dp-sizing--lvl2;
-  font-weight: 600;
-  display: inline-block;
-}
-
-.dp-icon-wrapper {
-  display: block;
-  min-width: 200px;
-}
-
-// User active
-.user--active:before {
-  @include icon-user-table;
-  color: $dp-color-green;
-}
-
-// User active not associated to lists
-.user--active-with-no-list:before {
-  @include icon-user-table;
-  color: $dp-color-yellow;
-}
-
-// User pending
-.user--stand-by:before {
-  @include icon-user-table;
-  color: $dp-color-yellow;
-}
-
-// User removed client
-.user--removed-client:before {
-  @include icon-user-table;
-  color: $dp-color-red;
-}
-
-// User removed hard bounced
-.user--removed-hard-bounced:before {
-  @include icon-user-table;
-  color: $dp-color-red;
-}
-
-// User removed no openings
-.user--removed-no-openings:before {
-  @include icon-user-table;
-  color: $dp-color-grey;
-}
-
-// User removed soft bounced
-.user--removed-soft-bounced:before {
-  @include icon-user-table;
-  color: $dp-color-red;
-}
-
-// User subscriber removed
-.user--removed-subscriber:before {
-  @include icon-user-table;
-  color: $dp-color-grey;
-}
-
-///
-/// campaign status icons
-///
-
-.status--opened {
-  position: relative;
-  @extend %states-campaing;
-
-  &:before {
-    @include icon-campaing($dp-color-green);
+    &:before {
+      @include icon-campaing($dp-color-grey);
+    }
   }
-}
 
-.status--not-opened {
-  position: relative;
-  @extend %states-campaing;
+  .status--hard-bounced {
+    position: relative;
+    @extend %states-campaing;
 
-  &:before {
-    @include icon-campaing($dp-color-grey);
+    &:before {
+      @include icon-campaing($dp-color-red);
+    }
   }
-}
 
-.status--hard-bounced {
-  position: relative;
-  @extend %states-campaing;
+  .status--soft-bounced {
+    position: relative;
+    @extend %states-campaing;
 
-  &:before {
-    @include icon-campaing($dp-color-red);
+    &:before {
+      @include icon-campaing($dp-color-yellow);
+    }
   }
-}
 
-.status--soft-bounced {
-  position: relative;
-  @extend %states-campaing;
+  ///
+  /// icon GDPR
+  ///
 
-  &:before {
-    @include icon-campaing($dp-color-yellow);
+  %lock {
+    margin-right: 6px;
+    top: -2px;
+    position: relative;
   }
-}
 
-///
-/// icon GDPR
-///
+  .dp-lock-red {
+    max-width: 200px;
+    color: $dp-color-red;
 
-%lock {
-  margin-right: 6px;
-  top: -2px;
-  position: relative;
-}
-
-.dp-lock-red {
-  max-width: 200px;
-  color: $dp-color-red;
-
-  &:before {
-    @extend %lock;
+    &:before {
+      @extend %lock;
+    }
   }
-}
 
-.dp-lock-green {
-  max-width: 200px;
-  color: $dp-color-green;
+  .dp-lock-green {
+    max-width: 200px;
+    color: $dp-color-green;
 
-  &:before {
-    @extend %lock;
+    &:before {
+      @extend %lock;
+    }
   }
-}
 
-.dp-lock-grey {
-  max-width: 200px;
-  color: $dp-color-grey;
+  .dp-lock-grey {
+    max-width: 200px;
+    color: $dp-color-grey;
 
-  &:before {
-    @extend %lock;
+    &:before {
+      @extend %lock;
+    }
   }
 }

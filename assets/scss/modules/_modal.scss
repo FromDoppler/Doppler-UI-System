@@ -5,85 +5,87 @@
 /// Classes for the Modal component
 ////
 
-.modal {
-  position: fixed;
-  z-index: 9999;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background: $dp-bg-overlay;
-}
-
-[class*='modal-content--'] {
-  background: $dp-bg-modal;
-  margin: auto;
-  width: 75%;
-  padding: 70px 50px;
-  overflow: hidden;
-  border-radius: 3px;
-  left: 0;
-  position: relative;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-
-  p {
-    font-family: $dp-font-family;
-    margin-bottom: 10px;
+.dp-library {
+  .modal {
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: $dp-bg-overlay;
   }
 
-  .modal-title {
-    font-size: $dp-sizing--lvl6;
-    text-align: left;
-    font-family: $dp-font-family;
-    color: $dp-color-darkgrey;
-    font-weight: $dp-font-weight-bold;
-    margin: 0 0 15px;
-  }
+  [class*='modal-content--'] {
+    background: $dp-bg-modal;
+    margin: auto;
+    width: 75%;
+    padding: 70px 50px;
+    overflow: hidden;
+    border-radius: 3px;
+    left: 0;
+    position: relative;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
 
-  .close {
-    position: absolute;
-    right: 30px;
-    top: 30px;
-    width: 20px;
-    height: 20px;
-    opacity: 0.7;
-    cursor: pointer;
-
-    &:hover {
-      opacity: 1;
+    p {
+      font-family: $dp-font-family;
+      margin-bottom: 10px;
     }
 
-    &:after,
-    &:before {
-      content: ' ';
+    .modal-title {
+      font-size: $dp-sizing--lvl6;
+      text-align: left;
+      font-family: $dp-font-family;
+      color: $dp-color-darkgrey;
+      font-weight: $dp-font-weight-bold;
+      margin: 0 0 15px;
+    }
+
+    .close {
       position: absolute;
-      left: 9px;
+      right: 30px;
+      top: 30px;
+      width: 20px;
       height: 20px;
-      width: 3px;
-      background-color: $dp-color-lightgrey;
-    }
+      opacity: 0.7;
+      cursor: pointer;
 
-    &:before {
-      transform: rotate(45deg);
-    }
+      &:hover {
+        opacity: 1;
+      }
 
-    &:after {
-      transform: rotate(-45deg);
+      &:after,
+      &:before {
+        content: ' ';
+        position: absolute;
+        left: 9px;
+        height: 20px;
+        width: 3px;
+        background-color: $dp-color-lightgrey;
+      }
+
+      &:before {
+        transform: rotate(45deg);
+      }
+
+      &:after {
+        transform: rotate(-45deg);
+      }
     }
   }
-}
 
-.modal-content--small {
-  max-width: 400px;
-}
+  .modal-content--small {
+    max-width: 400px;
+  }
 
-.modal-content--medium {
-  max-width: 600px;
-}
+  .modal-content--medium {
+    max-width: 600px;
+  }
 
-.modal-content--large {
-  max-width: 800px;
+  .modal-content--large {
+    max-width: 800px;
+  }
 }

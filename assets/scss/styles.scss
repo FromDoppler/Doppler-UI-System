@@ -15,19 +15,17 @@
 /// -> Utilities
 /// -
 
-.dp-library {
-  @import 'core/variables';
-  @import 'core/settings';
-  @import 'core/reset';
-  @import 'core/typography';
-  @import 'helpers/mixins';
-  @import 'helpers/animations';
-  @import 'helpers/classes';
-  @import 'helpers/colors';
-  @import 'modules/mixins/*';
-  @import 'modules/*';
-  @import 'core/base';
-  @import 'libs/**/*';
-  @import 'utilities/*';
-  @import 'templates/**/*';
-}
+@import 'core/variables';
+@import 'core/settings';
+@import 'core/reset';
+@import 'core/typography';
+@import 'helpers/mixins';
+@import 'helpers/animations';
+@import 'helpers/classes';
+@import 'helpers/colors';
+@import 'modules/mixins/*';
+@import 'modules/*';
+@import 'core/base';
+@import 'libs/**/*';
+@import 'utilities/*';
+@import 'templates/**/*';

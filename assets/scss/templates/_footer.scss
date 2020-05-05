@@ -1,43 +1,52 @@
-/* footer */
+////
+/// This is a poster comment.
+/// It will apply annotations to all items from file.
+/// @access private
+/// @group Templates
+/// @author Gustavo Baamonde
+/// Classes for Footer
+////
 
-.footer-main {
-  box-shadow: 0 -4px 0 0 $dp-color-snow;
-  border-top: 1px solid $dp-color-silver;
-  height: 80px;
-}
-
-.footer-wrapper {
-  font-size: 11px;
-  font-family: $dp-font-family;
-  padding-left: $dp-spaces--lv5;
-  padding-right: $dp-spaces--lv5;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 100%;
-}
-
-.dp-footer {
-  min-height: 80px;
-  box-shadow: 0 -4px 0 0 $dp-color-snow;
-  border-top: 1px solid $dp-color-silver;
-  font-size: $dp-sizing--lvl1;
-  font-family: $dp-font-family;
-  padding: $dp-spaces--lv3;
-
-  .dp-text-align {
-    text-align: left;
+.dp-library {
+  .footer-main {
+    box-shadow: 0 -4px 0 0 $dp-color-snow;
+    border-top: 1px solid $dp-color-silver;
+    height: 80px;
   }
 
-  p {
+  .footer-wrapper {
+    font-size: 11px;
+    font-family: $dp-font-family;
+    padding-left: $dp-spaces--lv5;
+    padding-right: $dp-spaces--lv5;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .dp-footer {
+    min-height: 80px;
+    box-shadow: 0 -4px 0 0 $dp-color-snow;
+    border-top: 1px solid $dp-color-silver;
     font-size: $dp-sizing--lvl1;
     font-family: $dp-font-family;
-  }
+    padding: $dp-spaces--lv3;
 
-  @media (min-width: 768px) {
     .dp-text-align {
-      text-align: right;
+      text-align: left;
+    }
+
+    p {
+      font-size: $dp-sizing--lvl1;
+      font-family: $dp-font-family;
+    }
+
+    @media (min-width: 768px) {
+      .dp-text-align {
+        text-align: right;
+      }
     }
   }
 }

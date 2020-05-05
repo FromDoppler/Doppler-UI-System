@@ -5,72 +5,73 @@
 /// @author Gustavo Baamonde
 /// Classes for the pagintaion component
 ////
-
-%pagination-link {
-  padding: $dp-spaces--lv1 $dp-spaces--lv0;
-  font-size: $dp-sizing--lvl4;
-  line-height: $dp-sizing--lvl4;
-  text-align: center;
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  transition: background-color 0.5s ease;
-  position: relative;
-}
-
-.dp-pagination {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: flex-end;
-  margin: $dp-spaces--lv2 $dp-spaces--lv0 $dp-spaces--lv0;
-
-  @media screen and (max-width: 980px) {
-    justify-content: flex-start;
-  }
-
-  ul {
-    list-style: none;
-    display: flex;
-    padding: $dp-spaces--lv0;
-    margin: $dp-spaces--lv0;
-
-    li {
-      padding: $dp-spaces--lv2 $dp-spaces--lv1;
-    }
-
-    .dp-active-page {
-      background-color: $dp-color-yellow;
-      @extend %pagination-link;
-    }
-  }
-
-  span {
-    display: flex;
-    position: relative;
+.dp-library {
+  %pagination-link {
+    padding: $dp-spaces--lv1 $dp-spaces--lv0;
     font-size: $dp-sizing--lvl4;
-  }
-
-  a {
-    color: $dp-color-grey;
-    @extend %pagination-link;
-
-    &:hover {
-      width: 30px;
-      height: 30px;
-      display: inline-block;
-      line-height: 15px;
-      border: 2px solid $dp-color-yellow;
-    }
-  }
-
-  .dp-pag-point {
+    line-height: $dp-sizing--lvl4;
+    text-align: center;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    transition: background-color 0.5s ease;
     position: relative;
-    &:before {
-      content: '...';
-      top: 0px;
-      position: absolute;
-      left: -7px;
+  }
+
+  .dp-pagination {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    margin: $dp-spaces--lv2 $dp-spaces--lv0 $dp-spaces--lv0;
+
+    @media screen and (max-width: 980px) {
+      justify-content: flex-start;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      padding: $dp-spaces--lv0;
+      margin: $dp-spaces--lv0;
+
+      li {
+        padding: $dp-spaces--lv2 $dp-spaces--lv1;
+      }
+
+      .dp-active-page {
+        background-color: $dp-color-yellow;
+        @extend %pagination-link;
+      }
+    }
+
+    span {
+      display: flex;
+      position: relative;
+      font-size: $dp-sizing--lvl4;
+    }
+
+    a {
+      color: $dp-color-grey;
+      @extend %pagination-link;
+
+      &:hover {
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        line-height: 15px;
+        border: 2px solid $dp-color-yellow;
+      }
+    }
+
+    .dp-pag-point {
+      position: relative;
+      &:before {
+        content: '...';
+        top: 0px;
+        position: absolute;
+        left: -7px;
+      }
     }
   }
 }
