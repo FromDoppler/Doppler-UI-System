@@ -41,6 +41,7 @@
   align-items: center;
   flex-wrap: wrap;
   margin-bottom: $dp-spaces--lv6;
+  font-family: $dp-font-family;
 
   h3 {
     font-weight: $dp-font-weight-bold;
@@ -57,6 +58,7 @@
 
 .dp-header-campaing {
   padding-left: $dp-spaces--lv4;
+  font-family: $dp-font-family;
 }
 
 .dp-subscriber-info {
