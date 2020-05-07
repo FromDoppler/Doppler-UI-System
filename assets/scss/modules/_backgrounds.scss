@@ -5,22 +5,23 @@
 /// @author Gustavo Baamonde
 /// Classes for the Backgrounds in Sign up component
 ////
+.dp-library {
+  .background {
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -1;
+    position: absolute;
 
-.background {
-  background-repeat: no-repeat;
-  background-size: contain;
-  z-index: -1;
-  position: absolute;
+    &.bg-b {
+      background-image: url('../img/background-pattern-b.svg');
+      height: 225px;
+      width: 230px;
+    }
 
-  &.bg-b {
-    background-image: url('../img/background-pattern-b.svg');
-    height: 225px;
-    width: 230px;
-  }
-
-  &.bg-c {
-    background-image: url('../img/background-pattern-c.svg');
-    height: 227px;
-    width: 289px;
+    &.bg-c {
+      background-image: url('../img/background-pattern-c.svg');
+      height: 227px;
+      width: 289px;
+    }
   }
 }

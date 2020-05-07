@@ -63,6 +63,10 @@
   position: relative;
   margin: $dp-spaces--lv1 $dp-spaces--lv4 $dp-spaces--lv6 $dp-spaces--lv0;
 
+  li {
+    margin-left: 12px;
+  }
+
   .dp-block-info {
     color: $dp-color-lightgrey;
     font-size: $dp-sizing--lvl1;
@@ -86,7 +90,7 @@
     position: absolute;
     border-left: 1px solid $dp-color-grey;
     top: 0;
-    left: 6px;
+    left: 18px;
     width: 1px;
     height: 100%;
   }

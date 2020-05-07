@@ -60,7 +60,7 @@
       href="https://www.fromdoppler.com/favicon.ico"
     />
   </head>
-  <body data-active-menu="22">
+  <body data-active-menu="22" class="dp-library">
     <!-- Layers -->
     <main role="main" class="dpsg-main-wrap">
       <!-- build:include partials/_header.html -->
@@ -74,43 +74,82 @@
         <div class="dpsg-content-wrap">
           <article class="dpsg-content">
             <h3>POC Web Push Notifications</h3>
-            <br />
-            <p>
-              Clickear en el botón para habilitar/deshabilitar las push <br />
-              <button
-                type="button"
-                class="dp-button button-big primary-green js-push-btn"
-              >
-                Suscribirse
-              </button>
-              <br /><br />
-              Desde aca se puede crear una notificacion customizada con titulo y
-              mensaje <br />
-              <label>Título: </label
-              ><input type="text" id="notification-title" />
-              <label>Mensaje: </label
-              ><input type="text" id="notification-message" />
-              <br />
-              <br />
-              <button
-                type="button"
-                class="dp-button button-big primary-green js-send-notification"
-              >
-                Enviar notificación local
-              </button>
-              <button
-                type="button"
-                class="dp-button button-big primary-green js-send-notification-int"
-              >
-                Enviar notificación a int
-              </button>
-              (usar server local en puerto 5000 o en int puerto 5001 en /assets
-              --> node pushServer.js o estar seguro usar uno en int conectar vpn
-              y activar contenido no seguro para esta pagina)
-              <br /><br />
-              En caso de querer realizar el post por postman ver codigo por
-              consola
-            </p>
+            <p>Prueba de concepto de Push Notification</p>
+            <hr class="dpsg-break" />
+            <form class="col-sm-8">
+              <fieldset>
+                <legend>POC Web Push Notifications</legend>
+                <ul class="field-group">
+                  <li class="field-item">
+                    <p>
+                      Clickear en el botón para habilitar/deshabilitar las push
+                    </p>
+                  </li>
+                  <li class="field-item">
+                    <button
+                      type="button"
+                      class="dp-button button-medium primary-green js-push-btn"
+                    >
+                      Suscribirse
+                    </button>
+                  </li>
+                  <li class="field-item">
+                    <p>
+                      Desde aca se puede crear una notificacion customizada con
+                      titulo y mensaje
+                    </p>
+                  </li>
+                  <li class="field-item">
+                    <label>Título: </label
+                    ><input type="text" id="notification-title" />
+                  </li>
+                  <li class="field-item">
+                    <label>Mensaje: </label
+                    ><input type="text" id="notification-message" />
+                  </li>
+                  <li class="field-item">
+                    <ul class="field-group">
+                      <li class="field-item col-sm-6">
+                        <button
+                          type="button"
+                          class="dp-button button-medium primary-green js-send-notification"
+                        >
+                          Enviar notificación local
+                        </button>
+                      </li>
+                      <li class="field-item col-sm-6">
+                        <button
+                          type="button"
+                          class="dp-button button-medium primary-green js-send-notification-int"
+                        >
+                          Enviar notificación a int
+                        </button>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="field-item">
+                    <p>
+                      <strong
+                        >Usar server local en puerto 5000 o en int puerto
+                        5001</strong
+                      >
+                      en <span class="dpsg-code">/assets --> node</span>
+                      <span class="dpsg-code">pushServer.js</span> o estar
+                      seguro usar uno en
+                      <span class="dpsg-code">int</span> conectar
+                      <span class="dpsg-code">vpn</span> y activar contenido no
+                      seguro para esta página.
+                    </p>
+                  </li>
+                  <li class="field-group">
+                    <p>
+                      En caso de querer realizar el post por postman ver código
+                      por consola.
+                    </p>
+                  </li>
+                </ul>
+              </fieldset>
+            </form>
           </article>
         </div>
       </div>

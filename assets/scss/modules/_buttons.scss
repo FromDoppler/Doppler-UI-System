@@ -7,6 +7,7 @@
 ////
 
 @import 'modules/_preload';
+
 @mixin dp-button() {
   .dp-button {
     display: inline-block;
@@ -157,4 +158,6 @@
     }
   }
 }
-@include dp-button();
+.dp-library {
+  @include dp-button();
+}

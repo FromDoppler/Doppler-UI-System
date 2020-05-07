@@ -37,144 +37,146 @@
 ///     </tbody>
 ///   </table>
 
-@mixin dp-c-table($bg-color-zebra, $font-size-table, $bg-color-hover) {
-  .dp-c-table {
-    width: 100%;
-    font-size: $font-size-table;
-    border-collapse: collapse;
-    border-spacing: $dp-spaces--lv0;
-    background: $dp-color-white;
-
-    caption {
-      padding: 30px 12px;
-      font-style: italic;
-      text-align: left;
-    }
-
-    th {
+.dp-library {
+  @mixin dp-c-table($bg-color-zebra, $font-size-table, $bg-color-hover) {
+    .dp-c-table {
+      width: 100%;
+      font-size: $font-size-table;
+      border-collapse: collapse;
+      border-spacing: $dp-spaces--lv0;
       background: $dp-color-white;
-      border-top: 1px solid $dp-color-silver;
-      border-bottom: 1px dashed $dp-color-lightgrey;
-      font-size: $dp-sizing--lvl1;
-      font-weight: normal;
-      color: $dp-color-grey;
-      text-transform: uppercase;
-      text-align: left;
-      padding: $dp-spaces--lv0 $dp-spaces--lv3 $dp-spaces--lv0;
-      position: relative;
 
-      &:first-child {
-        border-left: none;
+      caption {
+        padding: 30px 12px;
+        font-style: italic;
+        text-align: left;
       }
 
-      a {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-        color: $dp-color-grey;
+      th {
+        background: $dp-color-white;
+        border-top: 1px solid $dp-color-silver;
+        border-bottom: 1px dashed $dp-color-lightgrey;
+        font-size: $dp-sizing--lvl1;
         font-weight: normal;
-        text-decoration: none;
+        color: $dp-color-grey;
+        text-transform: uppercase;
+        text-align: left;
+        padding: $dp-spaces--lv0 $dp-spaces--lv3 $dp-spaces--lv0;
+        position: relative;
 
-        &:hover {
-          color: $dp-color-lightgrey;
+        &:first-child {
+          border-left: none;
+        }
 
-          span {
-            opacity: 0.6;
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+          color: $dp-color-grey;
+          font-weight: normal;
+          text-decoration: none;
+
+          &:hover {
+            color: $dp-color-lightgrey;
+
+            span {
+              opacity: 0.6;
+            }
           }
         }
       }
-    }
 
-    th + th:before {
-      content: '';
-      height: 10px;
-      border-right: 1px solid $dp-color-lightgrey;
-      position: absolute;
-      left: 0;
-    }
-
-    tbody {
-      tr {
-        border-bottom: 1px solid $dp-color-silver;
-
-        &:nth-child(odd) {
-          background: $bg-color-zebra;
-        }
-
-        &:nth-child(even) {
-          background: $dp-color-white;
-        }
-
-        &:hover {
-          background: $bg-color-hover;
-        }
+      th + th:before {
+        content: '';
+        height: 10px;
+        border-right: 1px solid $dp-color-lightgrey;
+        position: absolute;
+        left: 0;
       }
 
-      td {
-        color: $dp-color-grey;
-        border: $dp-spaces--lv0;
-        font-size: $font-size-table;
-        position: relative;
-      }
+      tbody {
+        tr {
+          border-bottom: 1px solid $dp-color-silver;
 
-      .sync {
-        color: $dp-color-green;
+          &:nth-child(odd) {
+            background: $bg-color-zebra;
+          }
+
+          &:nth-child(even) {
+            background: $dp-color-white;
+          }
+
+          &:hover {
+            background: $bg-color-hover;
+          }
+        }
 
         td {
+          color: $dp-color-grey;
+          border: $dp-spaces--lv0;
+          font-size: $font-size-table;
+          position: relative;
+        }
+
+        .sync {
           color: $dp-color-green;
-          border-top: 1px solid $dp-color-green;
-          border-bottom: 1px solid $dp-color-green;
-        }
 
-        .text-sync {
-          animation: flash 2s infinite;
-
-          .icon-clock {
-            margin: 0 5px;
-            top: -2px;
-            position: relative;
-          }
-        }
-
-        /// Animation text
-        @keyframes flash {
-          from,
-          50%,
-          to {
-            opacity: 1;
+          td {
+            color: $dp-color-green;
+            border-top: 1px solid $dp-color-green;
+            border-bottom: 1px solid $dp-color-green;
           }
 
-          25%,
-          75% {
-            opacity: 0;
+          .text-sync {
+            animation: flash 2s infinite;
+
+            .icon-clock {
+              margin: 0 5px;
+              top: -2px;
+              position: relative;
+            }
+          }
+
+          /// Animation text
+          @keyframes flash {
+            from,
+            50%,
+            to {
+              opacity: 1;
+            }
+
+            25%,
+            75% {
+              opacity: 0;
+            }
           }
         }
       }
-    }
 
-    th,
-    td {
-      padding: $dp-spaces--lv2 $dp-spaces--lv4;
-      text-align: left;
+      th,
+      td {
+        padding: $dp-spaces--lv2 $dp-spaces--lv4;
+        text-align: left;
+      }
     }
   }
-}
 
-@include dp-c-table(
-  $dp-color-ghostwhite,
-  $dp-sizing--lvl2,
-  $dp-color-hover-table
-);
+  @include dp-c-table(
+    $dp-color-ghostwhite,
+    $dp-sizing--lvl2,
+    $dp-color-hover-table
+  );
 
-.dp-table-responsive {
-  overflow-x: auto;
-  overflow-y: hidden;
-  width: 100%;
-  padding-bottom: $dp-spaces--lv4;
+  .dp-table-responsive {
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 100%;
+    padding-bottom: $dp-spaces--lv4;
 
-  @media screen and (min-width: 1025px) {
-    overflow-x: visible;
-    overflow-y: visible;
+    @media screen and (min-width: 1025px) {
+      overflow-x: visible;
+      overflow-y: visible;
+    }
   }
 }

@@ -6,92 +6,49 @@
 /// @author Gustavo Baamonde
 /// Classes for Atomic Class
 ////
-.margin--lv0 {
-  margin: $dp-spaces--lv0;
-}
-
-.margin--lv1 {
-  margin: $dp-spaces--lv1;
-}
-/* atomic class for margin bottom */
-
-.m-bottom--lv0 {
-  margin-bottom: $dp-spaces--lv0;
-}
-
-.m-bottom--lv1 {
-  margin-bottom: $dp-spaces--lv1;
-}
-
-.m-bottom--lv2 {
-  margin-bottom: $dp-spaces--lv2;
-}
-
-.m-bottom--lv3 {
-  margin-bottom: $dp-spaces--lv3;
-}
-
-.m-bottom--lv4 {
-  margin-bottom: $dp-spaces--lv4;
-}
-
-.m-bottom--lv5 {
-  margin-bottom: $dp-spaces--lv5;
-}
-
-.m-bottom--lv6 {
-  margin-bottom: $dp-spaces--lv6;
-}
-
-.m-bottom--lv7 {
-  margin-bottom: $dp-spaces--lv7;
-}
-
-.m-bottom--lv8 {
-  margin-bottom: $dp-spaces--lv8;
-}
-
-.uppercase {
-  text-transform: uppercase;
-}
-
-.logo-doppler-new {
-  display: inline-block;
-  background-image: url('../img/doppler-logo-new.svg');
-  background-repeat: no-repeat;
-  height: 33px;
-  width: 145px;
-
-  a {
-    display: block;
-    text-indent: -9999em;
+.dp-library {
+  .uppercase {
+    text-transform: uppercase;
   }
-}
 
-.logo-doppler-old {
-  display: inline-block;
-  background-image: url('../img/doppler-logo-old.svg');
-  background-repeat: no-repeat;
-  height: 30px;
-  width: 85px;
-  font-size: $dp-sizing--lvl0;
-}
+  .logo-doppler-new {
+    display: inline-block;
+    background-image: url('../img/doppler-logo-new.svg');
+    background-repeat: no-repeat;
+    height: 33px;
+    width: 145px;
 
-.icon-registration {
-  display: inline-block;
-  background-image: url('../img/icon-registration.png');
-  background-repeat: no-repeat;
-  width: 140px;
-  height: 100px;
-  font-size: $dp-sizing--lvl0;
-}
+    a {
+      display: block;
+      text-indent: -9999em;
+    }
+  }
 
-@include media-breakpoint('mobilexs') {
-  .icon-registration,
-  .logo-doppler-new,
   .logo-doppler-old {
-    background-size: cover;
-    height: 27px;
-    width: 116px;
+    display: inline-block;
+    background-image: url('../img/doppler-logo-old.svg');
+    background-repeat: no-repeat;
+    height: 30px;
+    width: 85px;
+    font-size: $dp-sizing--lvl0;
+  }
+
+  .icon-registration {
+    display: inline-block;
+    background-image: url('../img/icon-registration.png');
+    background-repeat: no-repeat;
+    width: 140px;
+    height: 100px;
+    font-size: $dp-sizing--lvl0;
+  }
+
+  @include media-breakpoint('mobilexs') {
+    .icon-registration,
+    .logo-doppler-new,
+    .logo-doppler-old {
+      background-size: cover;
+      height: 27px;
+      width: 116px;
+    }
   }
 }

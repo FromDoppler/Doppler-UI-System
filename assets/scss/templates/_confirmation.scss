@@ -1,77 +1,80 @@
-.confirmation {
-  p {
-    font-family: $dp-font-family-proximanova;
-  }
-
-  &-wrapper {
-    max-width: $dp-wrapper-max-width;
-    margin: 0 auto;
-    width: 100%;
-
-    .bg-c {
-      right: 0px;
-      top: 30px;
-    }
-
-    .bg-b {
-      bottom: 0;
-      left: 100px;
-    }
-  }
-
-  &-header {
-    margin: $dp-spaces--lv5 $dp-spaces--lv8;
-  }
-
-  &-main {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    min-height: 70vh;
-    padding: $dp-spaces--lv2;
-
-    button {
-      color: $dp-color-green;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
-
-  &-article {
-    max-width: 550px;
-    margin-bottom: $dp-spaces--lv5;
-
-    h2 {
-      font-family: $dp-font-family-proximanova;
-      font-weight: $dp-font-weight-bold;
-    }
-
-    .text-italic {
-      font-size: $dp-sizing--lvl2;
-    }
-  }
-
-  &-footer {
-    width: 100%;
-    text-align: center;
-    padding-bottom: $dp-spaces--lv5;
-  }
-}
-
-@include media-breakpoint('desktop') {
+.dp-library {
   .confirmation {
+    p {
+      font-family: $dp-font-family-proximanova;
+    }
+
     &-wrapper {
+      max-width: $dp-wrapper-max-width;
+      margin: 0 auto;
+      width: 100%;
+      font-family: $dp-font-family-proximanova;
+
       .bg-c {
-        display: none;
+        right: 0px;
+        top: 30px;
       }
 
       .bg-b {
-        display: none;
+        bottom: 0;
+        left: 100px;
+      }
+    }
+
+    &-header {
+      margin: $dp-spaces--lv5 $dp-spaces--lv8;
+    }
+
+    &-main {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      min-height: 70vh;
+      padding: $dp-spaces--lv2;
+
+      button {
+        color: $dp-color-green;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &-article {
+      max-width: 550px;
+      margin-bottom: $dp-spaces--lv5;
+
+      h2 {
+        font-family: $dp-font-family-proximanova;
+        font-weight: $dp-font-weight-bold;
+      }
+
+      .text-italic {
+        font-size: $dp-sizing--lvl2;
+      }
+    }
+
+    &-footer {
+      width: 100%;
+      text-align: center;
+      padding-bottom: $dp-spaces--lv5;
+    }
+  }
+
+  @include media-breakpoint('desktop') {
+    .confirmation {
+      &-wrapper {
+        .bg-c {
+          display: none;
+        }
+
+        .bg-b {
+          display: none;
+        }
       }
     }
   }

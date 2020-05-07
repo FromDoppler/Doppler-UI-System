@@ -1,146 +1,181 @@
-.dp-wrapper-messages {
-  max-width: 960px; /* TODO: check to modularize the messages */
-  margin: $dp-spaces--lv0 auto;
-  background-color: $dp-color-ghostwhite;
-  border: 1px solid $dp-border-grey;
-  border-radius: $dp-border-radius;
-  box-shadow: 0 0 0 4px $dp-color-white;
-  padding: $dp-spaces--lv4;
-  margin: $dp-spaces--lv0 auto;
-  box-shadow: 0 0 0 4px $dp-color-white; /* TODO: check to modularize the messages */
+////
+/// This is a poster comment.
+/// It will apply annotations to all items from file.
+/// @access private
+/// @group Templates
+/// @author Gustavo Baamonde
+/// Classes for Reports
+////
 
-  h2 {
-    color: $dp-color-darkgrey;
-    font-weight: $dp-font-weight-bold;
-    letter-spacing: -1px;
-    line-height: 1;
-    text-shadow: 0 1px 0 $dp-color-white;
-    margin-bottom: $dp-spaces--lv3;
+.dp-library {
+  .dp-wrapper-messages {
+    max-width: 960px; /* TODO: check to modularize the messages */
+    margin: $dp-spaces--lv0 auto;
+    background-color: $dp-color-ghostwhite;
+    border: 1px solid $dp-border-grey;
+    border-radius: $dp-border-radius;
+    box-shadow: 0 0 0 4px $dp-color-white;
+    padding: $dp-spaces--lv4;
+    margin: $dp-spaces--lv0 auto;
+    box-shadow: 0 0 0 4px $dp-color-white; /* TODO: check to modularize the messages */
+
+    h2 {
+      color: $dp-color-darkgrey;
+      font-weight: $dp-font-weight-bold;
+      letter-spacing: -1px;
+      line-height: 1;
+      text-shadow: 0 1px 0 $dp-color-white;
+      margin-bottom: $dp-spaces--lv3;
+    }
+
+    h4 {
+      margin: $dp-spaces--lv0;
+      font-weight: $dp-font-weight-bold;
+      color: $dp-color-grey;
+    }
+
+    p {
+      margin: $dp-spaces--lv0 $dp-spaces--lv0 $dp-spaces--lv5;
+      line-height: $dp-spaces--lv4;
+    }
+
+    .dp-messages-actions {
+      text-align: right;
+      margin-top: $dp-spaces--lv6;
+      padding-top: $dp-spaces--lv4;
+      border-top: 1px solid $dp-color-snow;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+    }
+  }
+  /* TODO: Atomic class - check to modularize the messages */
+  .bg-message--grey {
+    background: $dp-color-ghostwhite;
   }
 
-  h4 {
-    margin: $dp-spaces--lv0;
-    font-weight: $dp-font-weight-bold;
-    color: $dp-color-grey;
-  }
-
-  p {
-    margin: $dp-spaces--lv0 $dp-spaces--lv0 $dp-spaces--lv5;
-    line-height: $dp-spaces--lv4;
-  }
-
-  .dp-messages-actions {
-    text-align: right;
-    margin-top: $dp-spaces--lv6;
-    padding-top: $dp-spaces--lv4;
-    border-top: 1px solid $dp-color-snow;
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-  }
-}
-/* TODO: Atomic class - check to modularize the messages */
-.bg-message--grey {
-  background: $dp-color-ghostwhite;
-}
-
-/* TO DO: The .report-filter class will deprecate in the next version because it is not a generic class for this component.
+  /* TO DO: The .report-filter class will deprecate in the next version because it is not a generic class for this component.
 It will be replaced by .hero-banner*/
-.hero-banner,
-.report-filters {
-  background: $dp-color-ghostwhite;
-  border-bottom: 1px solid $dp-color-silver;
-  box-shadow: 0 -4px 0 0 $dp-color-snow inset;
-  padding: $dp-spaces--lv9 $dp-spaces--lv0;
-  position: relative;
-  margin-bottom: $dp-spaces--lv6;
+  .hero-banner,
+  .report-filters {
+    background: $dp-color-ghostwhite;
+    border-bottom: 1px solid $dp-color-silver;
+    box-shadow: 0 -4px 0 0 $dp-color-snow inset;
+    padding: $dp-spaces--lv9 $dp-spaces--lv0;
+    position: relative;
+    margin-bottom: $dp-spaces--lv6;
 
-  .arrow {
-    position: absolute;
-    bottom: -68px;
-    left: $dp-spaces--lv2;
-    width: 30px;
-    height: 18px;
-    background-image: url(../img/hbanner-triangle.svg);
-    background-repeat: no-repeat;
-    background-position: 0 0;
-  }
-}
-
-.report-wrapper {
-  max-width: $dp-wrapper-max-width;
-  margin: 0 auto;
-  padding-top: 55px;
-  padding-bottom: 55px;
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.form-filters {
-  width: 100%;
-  font-family: $dp-font-family;
-  padding-top: $dp-spaces--lv5;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: space-between;
-}
-
-.form-filters .filter {
-  position: relative;
-  margin-bottom: $dp-spaces--lv0;
-
-  .verified--domain {
-    font-size: $dp-sizing--lvl1;
-    margin-top: 10px;
-    display: inline-block;
+    .arrow {
+      position: absolute;
+      bottom: -68px;
+      left: $dp-spaces--lv2;
+      width: 30px;
+      height: 18px;
+      background-image: url(../img/hbanner-triangle.svg);
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    }
   }
 
-  .check--again {
-    color: $dp-color-green;
-    font-size: $dp-sizing--lvl1;
-    text-transform: uppercase;
-    font-weight: $dp-font-weight-bold;
-    padding-left: 10px;
-  }
-
-  .check--again:hover {
-    color: $dp-color-darkgreen;
-  }
-
-  .dropdown-arrow {
-    top: 40px;
-  }
-}
-
-/* Section KPI */
-/* These styles deprecate in the next version (all that is inside container-reports will be removed) */
-
-.container-reports {
-  width: 100%;
-  padding: $dp-spaces--lv10 $dp-spaces--lv5;
-  flex: 1;
-
-  .wrapper-kpi {
-    display: flex;
+  .report-wrapper {
     max-width: $dp-wrapper-max-width;
     margin: 0 auto;
+    padding-top: 55px;
+    padding-bottom: 55px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 
-    .reports-box {
-      @include dp-box($dp-color-silver, 30%, 408px, 250px);
-      width: 100%;
-      max-width: 100%;
+  .form-filters {
+    width: 100%;
+    font-family: $dp-font-family;
+    padding-top: $dp-spaces--lv5;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .form-filters .filter {
+    position: relative;
+    margin-bottom: $dp-spaces--lv0;
+
+    .verified--domain {
+      font-size: $dp-sizing--lvl1;
+      margin-top: 10px;
+      display: inline-block;
+    }
+
+    .check--again {
+      color: $dp-color-green;
+      font-size: $dp-sizing--lvl1;
+      text-transform: uppercase;
+      font-weight: $dp-font-weight-bold;
+      padding-left: 10px;
+    }
+
+    .check--again:hover {
+      color: $dp-color-darkgreen;
+    }
+
+    .dropdown-arrow {
+      top: 40px;
+    }
+  }
+
+  /* Section KPI */
+  /* These styles deprecate in the next version (all that is inside container-reports will be removed) */
+
+  .container-reports {
+    width: 100%;
+    padding: $dp-spaces--lv10 $dp-spaces--lv5;
+    flex: 1;
+
+    .wrapper-kpi {
+      display: flex;
+      max-width: $dp-wrapper-max-width;
+      margin: 0 auto;
+
+      .reports-box {
+        @include dp-box($dp-color-silver, 30%, 408px, 250px);
+        width: 100%;
+        max-width: 100%;
+        position: relative;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+    .box-border--bottom {
       position: relative;
 
-      &:last-child {
-        margin-right: 0;
+      &::after {
+        content: '';
+        position: absolute;
+        border-bottom: 3px solid $dp-color-green;
+        width: 125px;
+        padding-top: 30px;
+        left: 0;
+        display: block;
+      }
+    }
+    .title-reports-box {
+      padding: $dp-spaces--lv5;
+      display: inline-block;
+
+      small {
+        display: block;
+        text-transform: none;
       }
     }
   }
+
   .box-border--bottom {
     position: relative;
+    padding: $dp-spaces--lv5 $dp-spaces--lv4;
 
     &::after {
       content: '';
@@ -148,7 +183,7 @@ It will be replaced by .hero-banner*/
       border-bottom: 3px solid $dp-color-green;
       width: 125px;
       padding-top: 30px;
-      left: 0;
+      left: $dp-spaces--lv4;
       display: block;
     }
   }
@@ -161,121 +196,97 @@ It will be replaced by .hero-banner*/
       text-transform: none;
     }
   }
-}
 
-.box-border--bottom {
-  position: relative;
-  padding: $dp-spaces--lv5 $dp-spaces--lv4;
-
-  &::after {
-    content: '';
-    position: absolute;
-    border-bottom: 3px solid $dp-color-green;
-    width: 125px;
-    padding-top: 30px;
-    left: $dp-spaces--lv4;
-    display: block;
-  }
-}
-.title-reports-box {
-  padding: $dp-spaces--lv5;
-  display: inline-block;
-
-  small {
-    display: block;
-    text-transform: none;
-  }
-}
-
-.number-kpi {
-  font-size: $dp-sizing--lvl10;
-  color: $dp-color-darkgrey;
-  margin: 0;
-  position: relative;
-  line-height: 60px;
-  font-weight: 300;
-}
-
-.date-range {
-  text-transform: uppercase;
-  font-size: $dp-sizing--lvl1;
-  color: $dp-color-grey;
-}
-
-.text-kpi {
-  font-size: $dp-sizing--lvl2;
-  margin: 3em 0 3em;
-  position: relative;
-  color: $dp-color-grey;
-  padding: $dp-spaces--lv2 $dp-spaces--lv4;
-}
-.group-options {
-  display: flex;
-  justify-content: flex-start;
-
-  .group-item {
-    display: inline-block;
-    margin-right: 12px;
-
-    a {
-      color: $dp-color-green;
-      font-weight: bold;
-      text-transform: uppercase;
-      font-size: $dp-sizing--lvl1;
-      font-family: Arial;
-      @include transition-all;
-    }
-    a:hover {
-      color: $dp-color-darkgreen;
-    }
-    .icon-kpi {
-      font-size: 14px;
-      bottom: 2px;
-      margin-right: 2px;
-      position: relative;
-    }
-  }
-}
-.warning--kpi {
   .number-kpi {
-    color: $dp-color-red;
-  }
-  .box-border--bottom {
-    &::after {
-      border-color: $dp-color-red;
-    }
-  }
-}
-
-/* Top ranking */
-.wrapper-reports-box {
-  font-family: $dp-font-family;
-  position: relative;
-
-  .reports-box {
-    @include dp-box($dp-color-silver, 100%, 100%, 100%);
+    font-size: $dp-sizing--lvl10;
+    color: $dp-color-darkgrey;
+    margin: 0;
     position: relative;
-    padding: $dp-spaces--lv0;
+    line-height: 60px;
+    font-weight: 300;
   }
-  .page-ranking--item {
-    border-top: 1px solid $dp-color-silver;
-    border-bottom: 1px solid $dp-color-silver;
-    padding: $dp-spaces--lv3 $dp-spaces--lv5;
-    background: $dp-color-ghostwhite;
-    margin-bottom: $dp-spaces--lv1;
 
-    .text-ranking {
-      margin: $dp-spaces--lv0;
-      font-size: $dp-sizing--lvl2;
-      color: $dp-color-darkgrey;
-      @include transition-all;
-    }
-    .link-ranking {
-      color: $dp-color-green;
-      font-size: $dp-sizing--lvl2;
+  .date-range {
+    text-transform: uppercase;
+    font-size: $dp-sizing--lvl1;
+    color: $dp-color-grey;
+  }
 
-      &:hover {
+  .text-kpi {
+    font-size: $dp-sizing--lvl2;
+    margin: 3em 0 3em;
+    position: relative;
+    color: $dp-color-grey;
+    padding: $dp-spaces--lv2 $dp-spaces--lv4;
+  }
+  .group-options {
+    display: flex;
+    justify-content: flex-start;
+
+    .group-item {
+      display: inline-block;
+      margin-right: 12px;
+
+      a {
+        color: $dp-color-green;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: $dp-sizing--lvl1;
+        font-family: Arial;
+        @include transition-all;
+      }
+      a:hover {
         color: $dp-color-darkgreen;
+      }
+      .icon-kpi {
+        font-size: 14px;
+        bottom: 2px;
+        margin-right: 2px;
+        position: relative;
+      }
+    }
+  }
+  .warning--kpi {
+    .number-kpi {
+      color: $dp-color-red;
+    }
+    .box-border--bottom {
+      &::after {
+        border-color: $dp-color-red;
+      }
+    }
+  }
+
+  /* Top ranking */
+  .wrapper-reports-box {
+    font-family: $dp-font-family;
+    position: relative;
+
+    .reports-box {
+      @include dp-box($dp-color-silver, 100%, 100%, 100%);
+      position: relative;
+      padding: $dp-spaces--lv0;
+    }
+    .page-ranking--item {
+      border-top: 1px solid $dp-color-silver;
+      border-bottom: 1px solid $dp-color-silver;
+      padding: $dp-spaces--lv3 $dp-spaces--lv5;
+      background: $dp-color-ghostwhite;
+      margin-bottom: $dp-spaces--lv1;
+
+      .text-ranking {
+        margin: $dp-spaces--lv0;
+        font-size: $dp-sizing--lvl2;
+        color: $dp-color-darkgrey;
+        @include transition-all;
+      }
+      .link-ranking {
+        color: $dp-color-green;
+        font-size: $dp-sizing--lvl2;
+
+        &:hover {
+          color: $dp-color-darkgreen;
+        }
       }
     }
   }

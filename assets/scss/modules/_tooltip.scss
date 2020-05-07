@@ -5,180 +5,182 @@
 /// @author gbaamonde@makingsense.com
 /// Classes for the tooltip component
 
-@mixin dp-tooltip($font-size-tooltip, $font-color-tooltip) {
-  position: relative;
-  display: inline-block;
-  padding: 3px $dp-spaces--lv0;
-  margin: $dp-spaces--lv0;
-  color: $dp-color-darkyellow;
-  cursor: pointer;
-
-  .tooltiptext {
-    visibility: hidden;
-    position: absolute;
-    min-width: 170px;
+.dp-library {
+  @mixin dp-tooltip($font-size-tooltip, $font-color-tooltip) {
+    position: relative;
     display: inline-block;
-    padding: $dp-spaces--lv2 $dp-spaces--lv1;
-    font-size: $dp-sizing--lvl2;
-    background-color: $dp-color-black;
-    color: $dp-color-white;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    border-radius: $dp-border-radius;
-    z-index: 1;
-    opacity: 0;
-    transition: all 0.4s ease-in-out;
+    padding: 3px $dp-spaces--lv0;
+    margin: $dp-spaces--lv0;
+    color: $dp-color-darkyellow;
+    cursor: pointer;
 
-    &:after {
-      content: '';
+    .tooltiptext {
+      visibility: hidden;
       position: absolute;
-      border-width: 5px;
-      border-style: solid;
+      min-width: 170px;
+      display: inline-block;
+      padding: $dp-spaces--lv2 $dp-spaces--lv1;
+      font-size: $dp-sizing--lvl2;
+      background-color: $dp-color-black;
+      color: $dp-color-white;
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      border-radius: $dp-border-radius;
+      z-index: 1;
+      opacity: 0;
+      transition: all 0.4s ease-in-out;
+
+      &:after {
+        content: '';
+        position: absolute;
+        border-width: 5px;
+        border-style: solid;
+      }
+    }
+
+    &:hover .tooltiptext {
+      visibility: visible;
+      opacity: 1;
     }
   }
 
-  &:hover .tooltiptext {
-    visibility: visible;
+  /// tooltip top
+
+  .dp-tooltip-top {
+    @include dp-tooltip($dp-sizing--lvl1, $dp-color-white);
+
+    .tooltiptext {
+      bottom: 140%;
+      left: -165%;
+      right: -50%;
+
+      &:after {
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-color: $dp-color-black transparent transparent transparent;
+      }
+    }
+  }
+
+  /// tooltip right
+
+  .dp-tooltip-right {
+    @include dp-tooltip($dp-sizing--lvl1, $dp-color-white);
+
+    .tooltiptext {
+      top: -70%;
+      left: 120%;
+
+      &:after {
+        top: 50%;
+        right: 100%;
+        margin-top: -5px;
+        border-color: transparent $dp-color-black transparent transparent;
+      }
+    }
+  }
+
+  /// tooltip bottom
+
+  .dp-tooltip-bottom {
+    @include dp-tooltip($dp-sizing--lvl1, $dp-color-white);
+
+    .tooltiptext {
+      top: 140%;
+      left: -165%;
+      right: -50%;
+
+      &:after {
+        bottom: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-color: transparent transparent $dp-color-black transparent;
+      }
+    }
+  }
+
+  /// tooltip left
+
+  .dp-tooltip-left {
+    @include dp-tooltip($dp-sizing--lvl1, $dp-color-white);
+
+    .tooltiptext {
+      top: -70%;
+      right: 120%;
+
+      &:after {
+        top: 50%;
+        left: 100%;
+        margin-top: -5px;
+        border-color: transparent transparent transparent $dp-color-black;
+      }
+    }
+  }
+
+  /* New Tooltip for charts in webapp*/
+
+  .dp-tooltip-container {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    width: 100%;
+  }
+
+  ///
+  /// TODO: delete the dp-tooltip-chart class to use a more generic
+  /// in the next version it is obsolete
+  ///
+
+  .dp-tooltip-chart,
+  .dp-tooltip-block {
+    opacity: 0;
+    color: $dp-color-darkgrey;
+    width: max-content;
+    min-width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: $dp-sizing--lvl2;
+    line-height: 15px;
+    padding: $dp-spaces--lv2 $dp-spaces--lv3;
+    border-radius: $dp-border-radius;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.9);
+    transition: all 0.2s ease-in-out;
+    transform: scale(0);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid $dp-color-silver;
+    box-shadow: 0 0 0 4px rgba(204, 204, 204, 0.3);
+    transform: translate(-50%, -50%) scale(0.75) rotate(15deg);
+    z-index: -1;
+
+    @media screen and (max-width: 1365px) {
+      display: none;
+    }
+  }
+
+  .dp-tooltip-chart:before,
+  .dp-tooltip-block:before,
+  .dp-tooltip-chart:after,
+  .dp-tooltip-block:after {
+    content: '';
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid rgba(255, 255, 255, 0.9);
+    position: absolute;
+    bottom: -5px;
+    left: 47%;
+  }
+
+  .dp-tooltip-container:hover .dp-tooltip-chart,
+  .dp-tooltip-container:hover .dp-tooltip-block {
     opacity: 1;
+    z-index: 1;
+    pointer-events: none;
+    transform: translate(-50%, -100%) scale(1) rotate(0deg);
   }
-}
-
-/// tooltip top
-
-.dp-tooltip-top {
-  @include dp-tooltip($dp-sizing--lvl1, $dp-color-white);
-
-  .tooltiptext {
-    bottom: 140%;
-    left: -165%;
-    right: -50%;
-
-    &:after {
-      top: 100%;
-      left: 50%;
-      margin-left: -5px;
-      border-color: $dp-color-black transparent transparent transparent;
-    }
-  }
-}
-
-/// tooltip right
-
-.dp-tooltip-right {
-  @include dp-tooltip($dp-sizing--lvl1, $dp-color-white);
-
-  .tooltiptext {
-    top: -70%;
-    left: 120%;
-
-    &:after {
-      top: 50%;
-      right: 100%;
-      margin-top: -5px;
-      border-color: transparent $dp-color-black transparent transparent;
-    }
-  }
-}
-
-/// tooltip bottom
-
-.dp-tooltip-bottom {
-  @include dp-tooltip($dp-sizing--lvl1, $dp-color-white);
-
-  .tooltiptext {
-    top: 140%;
-    left: -165%;
-    right: -50%;
-
-    &:after {
-      bottom: 100%;
-      left: 50%;
-      margin-left: -5px;
-      border-color: transparent transparent $dp-color-black transparent;
-    }
-  }
-}
-
-/// tooltip left
-
-.dp-tooltip-left {
-  @include dp-tooltip($dp-sizing--lvl1, $dp-color-white);
-
-  .tooltiptext {
-    top: -70%;
-    right: 120%;
-
-    &:after {
-      top: 50%;
-      left: 100%;
-      margin-top: -5px;
-      border-color: transparent transparent transparent $dp-color-black;
-    }
-  }
-}
-
-/* New Tooltip for charts in webapp*/
-
-.dp-tooltip-container {
-  cursor: pointer;
-  position: relative;
-  display: flex;
-  width: 100%;
-}
-
-///
-/// TODO: delete the dp-tooltip-chart class to use a more generic
-/// in the next version it is obsolete
-///
-
-.dp-tooltip-chart,
-.dp-tooltip-block {
-  opacity: 0;
-  color: $dp-color-darkgrey;
-  width: max-content;
-  min-width: 150px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-size: $dp-sizing--lvl2;
-  line-height: 15px;
-  padding: $dp-spaces--lv2 $dp-spaces--lv3;
-  border-radius: $dp-border-radius;
-  text-align: left;
-  background: rgba(255, 255, 255, 0.9);
-  transition: all 0.2s ease-in-out;
-  transform: scale(0);
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border: 1px solid $dp-color-silver;
-  box-shadow: 0 0 0 4px rgba(204, 204, 204, 0.3);
-  transform: translate(-50%, -50%) scale(0.75) rotate(15deg);
-  z-index: -1;
-
-  @media screen and (max-width: 1365px) {
-    display: none;
-  }
-}
-
-.dp-tooltip-chart:before,
-.dp-tooltip-block:before,
-.dp-tooltip-chart:after,
-.dp-tooltip-block:after {
-  content: '';
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-top: 5px solid rgba(255, 255, 255, 0.9);
-  position: absolute;
-  bottom: -5px;
-  left: 47%;
-}
-
-.dp-tooltip-container:hover .dp-tooltip-chart,
-.dp-tooltip-container:hover .dp-tooltip-block {
-  opacity: 1;
-  z-index: 1;
-  pointer-events: none;
-  transform: translate(-50%, -100%) scale(1) rotate(0deg);
 }

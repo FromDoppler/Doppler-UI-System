@@ -1,110 +1,112 @@
-@function columns($columns, $total-columns) {
-  @return percentage($columns / $total-columns);
-}
+.dp-library {
+  @function columns($columns, $total-columns) {
+    @return percentage($columns / $total-columns);
+  }
 
-@media screen and (min-width: 320px) {
-  @for $i from 1 through 12 {
-    .col-sm-#{$i} {
-      max-width: columns($i, 12);
-      flex: 0 0 columns($i, 12);
+  @media screen and (min-width: 320px) {
+    @for $i from 1 through 12 {
+      .col-sm-#{$i} {
+        max-width: columns($i, 12);
+        flex: 0 0 columns($i, 12);
+      }
+    }
+    .dp-container {
+      max-width: 100%;
     }
   }
+
+  @media screen and (min-width: 768px) {
+    @for $i from 1 through 12 {
+      .col-md-#{$i} {
+        max-width: columns($i, 12);
+        flex: 0 0 columns($i, 12);
+      }
+    }
+    .dp-container {
+      max-width: 100%;
+    }
+  }
+
+  @media screen and (min-width: 1260px) {
+    @for $i from 1 through 12 {
+      .col-lg-#{$i} {
+        max-width: columns($i, 12);
+        flex: 0 0 columns($i, 12);
+      }
+    }
+    .dp-container {
+      max-width: 1260px;
+    }
+  }
+
+  .dp-container-fluid {
+    width: 100%;
+    padding-right: $dp-spaces--lv2;
+    padding-left: $dp-spaces--lv2;
+    margin-right: auto;
+    margin-left: auto;
+    flex: 1;
+  }
+
   .dp-container {
+    padding-right: $dp-spaces--lv2;
+    padding-left: $dp-spaces--lv2;
+    margin-right: auto;
+    margin-left: auto;
+    flex: 1;
+    width: 100%;
+    position: relative;
+  }
+
+  .dp-rowflex {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -$dp-spaces--lv2;
+    margin-left: -$dp-spaces--lv2;
+  }
+
+  [class*='col-'] {
+    position: relative;
+    width: 100%;
+    padding-right: $dp-spaces--lv2;
+    padding-left: $dp-spaces--lv2;
+  }
+
+  .dp-box-shadow {
+    @include dp-box($dp-color-silver, 30%, 408px, 250px);
+    width: 100%;
     max-width: 100%;
-  }
-}
+    min-height: 80px;
+    border: 1px solid $dp-color-silver;
+    position: relative;
 
-@media screen and (min-width: 768px) {
-  @for $i from 1 through 12 {
-    .col-md-#{$i} {
-      max-width: columns($i, 12);
-      flex: 0 0 columns($i, 12);
-    }
-  }
-  .dp-container {
-    max-width: 100%;
-  }
-}
-
-@media screen and (min-width: 1260px) {
-  @for $i from 1 through 12 {
-    .col-lg-#{$i} {
-      max-width: columns($i, 12);
-      flex: 0 0 columns($i, 12);
-    }
-  }
-  .dp-container {
-    max-width: 1260px;
-  }
-}
-
-.dp-container-fluid {
-  width: 100%;
-  padding-right: $dp-spaces--lv2;
-  padding-left: $dp-spaces--lv2;
-  margin-right: auto;
-  margin-left: auto;
-  flex: 1;
-}
-
-.dp-container {
-  padding-right: $dp-spaces--lv2;
-  padding-left: $dp-spaces--lv2;
-  margin-right: auto;
-  margin-left: auto;
-  flex: 1;
-  width: 100%;
-  position: relative;
-}
-
-.dp-rowflex {
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: -$dp-spaces--lv2;
-  margin-left: -$dp-spaces--lv2;
-}
-
-[class*='col-'] {
-  position: relative;
-  width: 100%;
-  padding-right: $dp-spaces--lv2;
-  padding-left: $dp-spaces--lv2;
-}
-
-.dp-box-shadow {
-  @include dp-box($dp-color-silver, 30%, 408px, 250px);
-  width: 100%;
-  max-width: 100%;
-  min-height: 80px;
-  border: 1px solid $dp-color-silver;
-  position: relative;
-
-  .dp-boxshadow--error {
-    padding: $dp-spaces--lv5 $dp-spaces--lv7;
-    color: $dp-color-red;
-
-    a {
-      text-decoration: underline;
+    .dp-boxshadow--error {
+      padding: $dp-spaces--lv5 $dp-spaces--lv7;
       color: $dp-color-red;
 
-      &:hover {
-        color: $dp-color-darkred;
+      a {
+        text-decoration: underline;
+        color: $dp-color-red;
+
+        &:hover {
+          color: $dp-color-darkred;
+        }
+      }
+    }
+
+    .dp-boxshadow--usermsg {
+      padding: $dp-spaces--lv5 $dp-spaces--lv7;
+      color: $dp-color-lightgrey;
+
+      a {
+        text-decoration: underline;
       }
     }
   }
 
-  .dp-boxshadow--usermsg {
-    padding: $dp-spaces--lv5 $dp-spaces--lv7;
-    color: $dp-color-lightgrey;
-
-    a {
-      text-decoration: underline;
-    }
+  .dpsg-content-sample {
+    width: 100%;
+    height: 100%;
+    padding: $dp-spaces--lv3;
   }
-}
-
-.dpsg-content-sample {
-  width: 100%;
-  height: 100%;
-  padding: $dp-spaces--lv3;
 }

@@ -1,72 +1,81 @@
-/* messages headers*/
+////
+/// This is a poster comment.
+/// It will apply annotations to all items from file.
+/// @access private
+/// @group Templates
+/// @author Gustavo Baamonde
+/// Classes for Statement messages
+////
 
-.messages-container {
-  display: flex;
-  padding: $dp-spaces--lv2;
-  margin-bottom: $dp-spaces--lv1;
-  font-family: $dp-font-family;
-}
+.dp-library {
+  .messages-container {
+    display: flex;
+    padding: $dp-spaces--lv2;
+    margin-bottom: $dp-spaces--lv1;
+    font-family: $dp-font-family;
+  }
 
-.messages-container .wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
+  .messages-container .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
 
-.messages-container p {
-  color: $dp-color-white;
-  font-size: $dp-sizing--lvl2;
-}
+  .messages-container p {
+    color: $dp-color-white;
+    font-size: $dp-sizing--lvl2;
+  }
 
-.messages-container.blocker .button {
-  color: $dp-color-red;
-}
+  .messages-container.blocker .button {
+    color: $dp-color-red;
+  }
 
-.messages-container.info .button {
-  color: $dp-color-lightgreen;
-}
+  .messages-container.info .button {
+    color: $dp-color-lightgreen;
+  }
 
-.messages-container .button {
-  margin-left: 20px;
-}
+  .messages-container .button {
+    margin-left: 20px;
+  }
 
-.messages-container.info {
-  background: $dp-color-lightgreen;
-}
+  .messages-container.info {
+    background: $dp-color-lightgreen;
+  }
 
-.messages-container.warning {
-  background: $dp-color-yellow;
-}
+  .messages-container.warning {
+    background: $dp-color-yellow;
+  }
 
-.messages-container.blocker {
-  background: $dp-color-red;
-}
-/* buttons */
-.button {
-  border: 0;
-  border-radius: 3px;
-  color: $dp-color-white;
-  cursor: pointer;
-  font-size: $dp-sizing--lvl2;
-  line-height: 45px;
-  padding-left: 20px;
-  padding-right: 20px;
-  height: 45px;
-  text-align: center;
-  transition: all 0.3s ease;
-}
+  .messages-container.blocker {
+    background: $dp-color-red;
+  }
+  /* buttons */
+  .button {
+    border: 0;
+    border-radius: 3px;
+    color: $dp-color-white;
+    cursor: pointer;
+    font-size: $dp-sizing--lvl2;
+    line-height: 45px;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 45px;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
 
-.button--light {
-  background: $dp-color-white;
-  border: 1px solid $dp-color-white;
-  color: $dp-color-grey;
-}
+  .button--light {
+    background: $dp-color-white;
+    border: 1px solid $dp-color-white;
+    color: $dp-color-grey;
+  }
 
-.button--tiny {
-  font-size: $dp-sizing--lvl2;
-  height: 30px;
-  line-height: 30px;
-  padding-left: 20px;
-  padding-right: 20px;
+  .button--tiny {
+    font-size: $dp-sizing--lvl2;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
