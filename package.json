@@ -74,8 +74,8 @@
   },
   "main": "pdr",
   "engines": {
-    "node": ">=6.9.1",
-    "npm": ">=3.10.9"
+    "node": ">=12.16.3",
+    "npm": ">=6.14.4"
   },
   "dependencies": {},
   "release": {

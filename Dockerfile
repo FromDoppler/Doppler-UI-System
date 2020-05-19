@@ -1,8 +1,8 @@
-FROM node:10.18.1 as source
+FROM node:12.16.3 as source
 WORKDIR /work
 
 RUN npm install -g gulp
-COPY package-lock.json package.json ./
+COPY package-lock.json package.json npm-shrinkwrap.json ./
 RUN npm install
 
 COPY assets/ ./assets/
