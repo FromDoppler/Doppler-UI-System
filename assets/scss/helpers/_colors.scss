@@ -25,6 +25,7 @@ $dp-color-lightbrown: #838370;
 $dp-color-brown: #302100;
 $dp-color-brown--hover: #594103;
 $dp-color-brown-brightness: rgba(48, 33, 0, 0.2);
+$dp-color-orange-focus: #e79433;
 
 /// Internal use color variables
 
@@ -155,4 +156,8 @@ $dpsg-orange: #ee7752;
 
 .dp-brown-brightness {
   background: $dp-color-brown-brightness;
+}
+
+.dp-color-orange-focus {
+  background: $dp-color-orange-focus;
 }
