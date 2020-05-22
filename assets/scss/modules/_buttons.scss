@@ -61,36 +61,30 @@
     &.primary- {
       &green {
         background-color: $dp-color-green;
-        border: 1px solid $dp-color-green;
         color: $dp-color-white;
 
         &:hover {
           background-color: $dp-color-darkgreen;
-          border: 1px solid $dp-color-darkgreen;
           color: $dp-color-white;
         }
       }
 
       &grey {
         background-color: $dp-color-grey;
-        border: 1px solid $dp-color-grey;
         color: $dp-color-white;
 
         &:hover {
           background-color: $dp-color-darkgrey;
-          border: 1px solid $dp-color-darkgrey;
           color: $dp-color-white;
         }
       }
 
       &brown {
         background-color: $dp-color-brown;
-        border: 1px solid $dp-color-brown;
         color: $dp-color-white;
 
         &:hover {
           background-color: $dp-color-brown--hover;
-          border: 1px solid $dp-color-brown--hover;
           color: $dp-color-white;
         }
       }
@@ -99,20 +93,32 @@
     &.secondary- {
       &green {
         background: transparent;
-        border: 1px solid $dp-color-green;
         color: $dp-color-green;
+        box-shadow: inset 0 0 0 1px $dp-color-green;
 
         &:hover {
+          background: $dp-color-green-brightness;
+        }
+
+        &:focus {
+          box-shadow: inset 0 0 0 2px $dp-color-orange-focus,
+            inset 0 0 0 3px $dp-color-white;
           background: $dp-color-green-brightness;
         }
       }
 
       &brown {
         background: transparent;
-        border: 1px solid $dp-color-brown;
         color: $dp-color-brown;
+        box-shadow: inset 0 0 0 1px $dp-color-brown;
 
         &:hover {
+          background: $dp-color-brown-brightness;
+        }
+
+        &:focus {
+          box-shadow: inset 0 0 0 2px $dp-color-orange-focus,
+            inset 0 0 0 3px $dp-color-white;
           background: $dp-color-brown-brightness;
         }
       }
@@ -163,6 +169,7 @@
 
   button:focus {
     outline: none;
-    box-shadow: inset 0 0 0 1px #e79433, inset 0 0 0 2px #ffffff;
+    box-shadow: inset 0 0 0 2px $dp-color-orange-focus,
+      inset 0 0 0 3px $dp-color-white;
   }
 }
