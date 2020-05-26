@@ -1569,6 +1569,17 @@ body {
   .dpsg-color-card.dpsg-brown-brightness:hover .dpsg-icon-color {
     box-shadow: 0 0 0 400px $dp-color-brown-brightness;
   }
+
+  /* color 25 */
+
+  .dpsg-color-card.dpsg-orange-focus .dpsg-icon-color {
+    box-shadow: 0 0 0 0 $dp-color-orange-focus;
+    background: $dp-color-orange-focus;
+  }
+
+  .dpsg-color-card.dpsg-orange-focus:hover .dpsg-icon-color {
+    box-shadow: 0 0 0 400px $dp-color-orange-focus;
+  }
 }
 
 /* Content text General */
