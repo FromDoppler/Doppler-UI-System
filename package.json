@@ -37,7 +37,7 @@
   },
   "devDependencies": {
     "@semantic-release/exec": "^5.0.0",
-    "autoprefixer": "^9.7.6",
+    "autoprefixer": "^9.8.0",
     "browser-sync": "^2.26.7",
     "css-mqpacker": "~7.0.0",
     "del": "^5.1.0",
