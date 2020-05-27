@@ -69,7 +69,7 @@
     "semantic-release": "^17.0.8",
     "sort-css-media-queries": "^1.5.0",
     "ttf2woff2": "^2.0.3",
-    "web-push": "^3.2.2",
+    "web-push": "^3.4.4",
     "express": "^4.17.1"
   },
   "main": "pdr",
