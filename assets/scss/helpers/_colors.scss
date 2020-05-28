@@ -50,114 +50,116 @@ $dpsg-orange: #ee7752;
 /// Class Colors Style Guides
 ///
 
-.dp-white {
-  background: $dp-color-white;
-}
+.dp-library {
+  .dp-white {
+    background: $dp-color-white;
+  }
 
-.dp-ghostwhite {
-  background: $dp-color-ghostwhite;
-}
+  .dp-ghostwhite {
+    background: $dp-color-ghostwhite;
+  }
 
-.dp-snow {
-  background: $dp-color-snow;
-}
+  .dp-snow {
+    background: $dp-color-snow;
+  }
 
-.dp-silver {
-  background: $dp-color-silver;
-}
+  .dp-silver {
+    background: $dp-color-silver;
+  }
 
-.dp-lightgrey {
-  background: $dp-color-lightgrey;
-}
+  .dp-lightgrey {
+    background: $dp-color-lightgrey;
+  }
 
-.dp-grey {
-  background: $dp-color-grey;
-}
+  .dp-grey {
+    background: $dp-color-grey;
+  }
 
-.dp-darkgrey {
-  background: $dp-color-darkgrey;
-}
+  .dp-darkgrey {
+    background: $dp-color-darkgrey;
+  }
 
-.dp-black {
-  background: $dp-color-black;
-}
+  .dp-black {
+    background: $dp-color-black;
+  }
 
-.dp-lightgreen {
-  background: $dp-color-lightgreen;
-}
+  .dp-lightgreen {
+    background: $dp-color-lightgreen;
+  }
 
-.dp-green {
-  background: $dp-color-green;
-}
+  .dp-green {
+    background: $dp-color-green;
+  }
 
-.dp-color-green {
-  color: $dp-color-green;
-}
+  .dp-color-green {
+    color: $dp-color-green;
+  }
 
-.dp-darkgreen {
-  background: $dp-color-darkgreen;
-}
+  .dp-darkgreen {
+    background: $dp-color-darkgreen;
+  }
 
-.dp-green-brightness {
-  background: $dp-color-green-brightness;
-}
+  .dp-green-brightness {
+    background: $dp-color-green-brightness;
+  }
 
-.dp-lightyellow {
-  background: $dp-color-lightyellow;
-}
+  .dp-lightyellow {
+    background: $dp-color-lightyellow;
+  }
 
-.dp-lemonyellow {
-  background: $dp-color-lemonyellow;
-}
+  .dp-lemonyellow {
+    background: $dp-color-lemonyellow;
+  }
 
-.dp-yellow {
-  background: $dp-color-yellow;
-}
+  .dp-yellow {
+    background: $dp-color-yellow;
+  }
 
-.dp-color-yellow {
-  color: $dp-color-yellow;
-}
+  .dp-color-yellow {
+    color: $dp-color-yellow;
+  }
 
-.dp-darkyellow {
-  background: $dp-color-darkyellow;
-}
+  .dp-darkyellow {
+    background: $dp-color-darkyellow;
+  }
 
-.dp-yellow-brightness {
-  background: $dp-color-yellow-brightness;
-}
+  .dp-yellow-brightness {
+    background: $dp-color-yellow-brightness;
+  }
 
-.dp-lightred {
-  background: $dp-color-lightred;
-}
+  .dp-lightred {
+    background: $dp-color-lightred;
+  }
 
-.dp-red {
-  background: $dp-color-red;
-}
+  .dp-red {
+    background: $dp-color-red;
+  }
 
-.dp-color-red {
-  color: $dp-color-red;
-}
+  .dp-color-red {
+    color: $dp-color-red;
+  }
 
-.dp-darkred {
-  background: $dp-color-darkred;
-}
+  .dp-darkred {
+    background: $dp-color-darkred;
+  }
 
-.dp-lightbrown {
-  background: $dp-color-lightbrown;
-}
+  .dp-lightbrown {
+    background: $dp-color-lightbrown;
+  }
 
-.dp-brown {
-  background: $dp-color-brown;
-}
+  .dp-brown {
+    background: $dp-color-brown;
+  }
 
-.dp-brown--hover {
-  background: $dp-color-brown--hover;
-}
+  .dp-brown--hover {
+    background: $dp-color-brown--hover;
+  }
 
-.dp-brown-brightness {
-  background: $dp-color-brown-brightness;
-}
+  .dp-brown-brightness {
+    background: $dp-color-brown-brightness;
+  }
 
-.dp-color-orange-focus {
-  background: $dp-color-orange-focus;
+  .dp-color-orange-focus {
+    background: $dp-color-orange-focus;
+  }
 }
