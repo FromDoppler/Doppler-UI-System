@@ -9,20 +9,23 @@ RESET DOPPLER STYLE GUIDES
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-::-moz-selection {
-  background: #fbb224;
-  color: #fff;
-}
 
-::selection {
-  background: #fbb224;
-  color: #fff;
-}
+.dp-library {
+  ::-moz-selection {
+    background: #fbb224;
+    color: #fff;
+  }
 
-*,
-*:after,
-*:before {
-  box-sizing: border-box;
+  ::selection {
+    background: #fbb224;
+    color: #fff;
+  }
+
+  *,
+  *:after,
+  *:before {
+    box-sizing: border-box;
+  }
 }
 
 html {
@@ -42,9 +45,12 @@ body {
   font-family: $dp-font-family;
 }
 
+/* ======================================================================= */
+
 /**
  * Render the `main` element consistently in IE.
  */
+
 main {
   display: block;
 }

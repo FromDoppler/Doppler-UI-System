@@ -1,126 +1,129 @@
 /// Animation to show messages, etc (optional)
 /// Bounce in
-@keyframes bounceIn {
-  from,
-  20%,
-  40%,
-  60%,
-  80%,
-  to {
-    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+
+.dp-library {
+  @keyframes bounceIn {
+    from,
+    20%,
+    40%,
+    60%,
+    80%,
+    to {
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+
+    0% {
+      opacity: 0;
+      transform: scale3d(0.3, 0.3, 0.3);
+    }
+
+    20% {
+      transform: scale3d(1.1, 1.1, 1.1);
+    }
+
+    40% {
+      transform: scale3d(0.9, 0.9, 0.9);
+    }
+
+    60% {
+      opacity: 1;
+      transform: scale3d(1.03, 1.03, 1.03);
+    }
+
+    80% {
+      transform: scale3d(0.97, 0.97, 0.97);
+    }
+
+    to {
+      opacity: 1;
+      transform: scale3d(1, 1, 1);
+    }
   }
 
-  0% {
-    opacity: 0;
-    transform: scale3d(0.3, 0.3, 0.3);
+  .bounceIn {
+    animation-duration: 1s;
+    animation-name: bounceIn;
   }
 
-  20% {
-    transform: scale3d(1.1, 1.1, 1.1);
+  /// Bounce Out
+
+  @keyframes bounceOut {
+    20% {
+      transform: scale3d(0.9, 0.9, 0.9);
+    }
+
+    50%,
+    55% {
+      opacity: 1;
+      transform: scale3d(1.1, 1.1, 1.1);
+    }
+
+    to {
+      opacity: 0;
+      transform: scale3d(0.3, 0.3, 0.3);
+    }
   }
 
-  40% {
-    transform: scale3d(0.9, 0.9, 0.9);
+  .bounceOut {
+    animation-duration: 1s;
+    animation-name: bounceOut;
   }
 
-  60% {
-    opacity: 1;
-    transform: scale3d(1.03, 1.03, 1.03);
+  /// Fade in Down
+
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translate3d(0, -100%, 0);
+    }
+
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
   }
 
-  80% {
-    transform: scale3d(0.97, 0.97, 0.97);
+  .fadeInDown {
+    animation-duration: 1s;
+    animation-name: fadeInDown;
   }
 
-  to {
-    opacity: 1;
-    transform: scale3d(1, 1, 1);
-  }
-}
+  /// Fade in Up
 
-.bounceIn {
-  animation-duration: 1s;
-  animation-name: bounceIn;
-}
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translate3d(0, 100%, 0);
+    }
 
-/// Bounce Out
-
-@keyframes bounceOut {
-  20% {
-    transform: scale3d(0.9, 0.9, 0.9);
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
   }
 
-  50%,
-  55% {
-    opacity: 1;
-    transform: scale3d(1.1, 1.1, 1.1);
+  .fadeInUp {
+    animation-duration: 1s;
+    animation-name: fadeInUp;
   }
 
-  to {
-    opacity: 0;
-    transform: scale3d(0.3, 0.3, 0.3);
-  }
-}
+  @keyframes spin {
+    from {
+      transform: rotate(0);
+    }
 
-.bounceOut {
-  animation-duration: 1s;
-  animation-name: bounceOut;
-}
-
-/// Fade in Down
-
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translate3d(0, -100%, 0);
+    to {
+      transform: rotate(359deg);
+    }
   }
 
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
+  @keyframes counterspin {
+    from {
+      transform: rotate(0);
+    }
 
-.fadeInDown {
-  animation-duration: 1s;
-  animation-name: fadeInDown;
-}
-
-/// Fade in Up
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translate3d(0, 100%, 0);
-  }
-
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-.fadeInUp {
-  animation-duration: 1s;
-  animation-name: fadeInUp;
-}
-
-@keyframes spin {
-  from {
-    transform: rotate(0);
-  }
-
-  to {
-    transform: rotate(359deg);
-  }
-}
-
-@keyframes counterspin {
-  from {
-    transform: rotate(0);
-  }
-
-  to {
-    transform: rotate(-359deg);
+    to {
+      transform: rotate(-359deg);
+    }
   }
 }

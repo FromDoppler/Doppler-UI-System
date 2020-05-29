@@ -4,36 +4,38 @@
 /// Classes for the dropdown component
 ////
 
-.dp-c-dropdown {
-  position: relative;
+.dp-library {
+  .dp-c-dropdown {
+    position: relative;
 
-  button {
-    display: block;
-    text-align: center;
-    text-decoration: none;
-  }
-
-  ul[role='menu'] {
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    list-style: none;
-    display: none;
-
-    li {
-      margin: 0;
-      padding: 0;
-    }
-
-    a[role='menuitem'],
-    a[role='menuitem']:visited {
+    button {
       display: block;
+      text-align: center;
       text-decoration: none;
     }
 
-    a[role='menuitem']:focus,
-    a[role='menuitem']:hover {
-      //color: white;
+    ul[role='menu'] {
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      list-style: none;
+      display: none;
+
+      li {
+        margin: 0;
+        padding: 0;
+      }
+
+      a[role='menuitem'],
+      a[role='menuitem']:visited {
+        display: block;
+        text-decoration: none;
+      }
+
+      a[role='menuitem']:focus,
+      a[role='menuitem']:hover {
+        //color: white;
+      }
     }
   }
 }
