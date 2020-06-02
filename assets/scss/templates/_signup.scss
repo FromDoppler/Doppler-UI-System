@@ -171,4 +171,9 @@
       }
     }
   }
+  @media (min-width: 375px) {
+    .panel-wrapper .main-panel {
+      padding: $dp-spaces--lv5;
+    }
+  }
 }
