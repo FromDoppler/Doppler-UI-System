@@ -22,7 +22,7 @@
     height: 4px;
     bottom: -1px;
     width: 100%;
-    z-index: -1;
+    z-index: 1;
   }
 
   .tabs-nav {
@@ -50,6 +50,7 @@
       font-family: $dp-font-family;
       line-height: $dp-spaces--lv3;
       display: block;
+      z-index: 2;
       overflow: hidden;
       padding: 15px 0;
       margin-right: $dp-spaces--lv10;
