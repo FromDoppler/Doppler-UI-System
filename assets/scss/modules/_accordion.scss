@@ -1,0 +1,81 @@
+////
+/// This is a poster comment.
+/// It will apply annotations to all items from file.
+/// @access private
+/// @author Gustavo Baamonde
+/// Classes for Accordion
+////
+.dp-library {
+  .dp-accordion {
+    padding: 25px 0;
+    width: 100%;
+    margin: 0;
+
+    li {
+      width: 100%;
+      max-width: 100%;
+      padding: 24px 0 0 12px;
+      position: relative;
+
+      .dp-accordion-thumb {
+        margin: 0;
+        font-weight: bold;
+        cursor: pointer;
+        position: relative;
+        font-size: 16px;
+        color: #666;
+        text-decoration: none;
+        line-height: 24px;
+      }
+
+      &:before {
+        width: 5px;
+        height: 7px;
+        content: '';
+        left: 0;
+        top: 29px;
+        border-left: solid 6px #666;
+        border-bottom: solid 6px transparent;
+        border-top: solid 6px transparent;
+        position: absolute;
+        transition: all 0.35s;
+      }
+
+      &.active:before {
+        border-left: solid 5px #666;
+        transform: rotate(90deg);
+      }
+    }
+
+    .dp-accordion-panel {
+      display: none;
+      margin: 0;
+      padding: 24px 0;
+      position: relative;
+      overflow: hidden;
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+          padding: 0;
+
+          &:before {
+            content: none;
+          }
+
+          a {
+            display: inline-block;
+          }
+        }
+      }
+
+      a,
+      span {
+        display: block;
+      }
+    }
+  }
+}
