@@ -7,23 +7,23 @@
 ////
 .dp-library {
   .dp-accordion {
-    padding: 25px 0;
+    padding: $dp-spaces--lv4 $dp-spaces--lv0;
     width: 100%;
-    margin: 0;
+    margin: $dp-spaces--lv0;
 
     li {
       width: 100%;
       max-width: 100%;
-      padding: 24px 0 0 12px;
+      padding: $dp-spaces--lv4 $dp-spaces--lv0 $dp-spaces--lv0 $dp-spaces--lv2;
       position: relative;
 
       .dp-accordion-thumb {
-        margin: 0;
+        margin: $dp-spaces--lv0;
         font-weight: bold;
         cursor: pointer;
         position: relative;
         font-size: 16px;
-        color: #666;
+        color: $dp-color-grey;
         text-decoration: none;
         line-height: 24px;
       }
@@ -34,7 +34,7 @@
         content: '';
         left: 0;
         top: 29px;
-        border-left: solid 6px #666;
+        border-left: solid 6px $dp-color-grey;
         border-bottom: solid 6px transparent;
         border-top: solid 6px transparent;
         position: absolute;
@@ -42,25 +42,25 @@
       }
 
       &.active:before {
-        border-left: solid 5px #666;
+        border-left: solid 6px $dp-color-grey;
         transform: rotate(90deg);
       }
     }
 
     .dp-accordion-panel {
       display: none;
-      margin: 0;
-      padding: 24px 0;
+      margin: $dp-spaces--lv0;
+      padding: $dp-spaces--lv4 $dp-spaces--lv0;
       position: relative;
       overflow: hidden;
 
       ul {
         list-style: none;
-        padding: 0;
-        margin: 0;
+        padding: $dp-spaces--lv0;
+        margin: $dp-spaces--lv0;
 
         li {
-          padding: 0;
+          padding: $dp-spaces--lv0;
 
           &:before {
             content: none;
