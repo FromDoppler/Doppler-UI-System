@@ -31,3 +31,13 @@ docker run --rm \
     -e "VERSION_NAME=$pkgVersion" \
     -v `pwd`/dist:/source \
     dopplerrelay/doppler-relay-akamai-publish
+
+echo Publishing to our new CDN using SFTP
+echo "Destination: ${CDN_SFTP_USERNAME}@${CDN_SFTP_HOSTNAME}:${CDN_SFTP_PORT}:/${CDN_SFTP_BASE}/${pkgName}/${pkgVersion}"
+# Using specific digest (f7f7607...) to avoid unwanted changes in the non-oficial image
+docker run --rm \
+    -v /var/lib/jenkins/.ssh:/root/.ssh:ro \
+    -v "$(pwd)/dist:/source/${pkgName}/${pkgVersion}" \
+    ttionya/openssh-client@sha256:f7f7607d56f09a7c42e246e9c256ff51cf2f0802e3b2d88da6537bea516fe142 \
+    scp -P "${CDN_SFTP_PORT}" -r /source/${pkgName} "${CDN_SFTP_USERNAME}@${CDN_SFTP_HOSTNAME}:/${CDN_SFTP_BASE}/"
+echo "Files ready in https://cdn.fromdoppler.com/${pkgName}/${pkgVersion}"
