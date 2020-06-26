@@ -41,7 +41,6 @@
       margin: $dp-spaces--lv3 $dp-spaces--lv0 $dp-spaces--lv1 $dp-spaces--lv5;
       width: 280px;
       height: 50px;
-      line-height: 50px;
       display: block;
       color: $dp-color-darkgrey;
       font-size: $dp-sizing--lvl6;
@@ -49,6 +48,10 @@
       img {
         display: block;
         height: 50px;
+      }
+
+      span {
+        line-height: 30px;
       }
     }
     .logo {
