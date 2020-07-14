@@ -19,19 +19,6 @@ export MSYS2_ARG_CONV_EXCL="*"
 
 sh ./build-w-docker.sh $pkgVersion $cdnBaseUrl
 
-# Force pull the latest image version due to the cache not always is pruned immediately after an update is uploaded to docker hub
-docker pull dopplerrelay/doppler-relay-akamai-publish
-
-docker run --rm \
-    -e AKAMAI_CDN_HOSTNAME \
-    -e AKAMAI_CDN_USERNAME \
-    -e AKAMAI_CDN_PASSWORD \
-    -e AKAMAI_CDN_CPCODE \
-    -e "PROJECT_NAME=$pkgName" \
-    -e "VERSION_NAME=$pkgVersion" \
-    -v `pwd`/dist:/source \
-    dopplerrelay/doppler-relay-akamai-publish
-
 echo Publishing to our new CDN using SFTP
 echo "Destination: ${CDN_SFTP_USERNAME}@${CDN_SFTP_HOSTNAME}:${CDN_SFTP_PORT}:/${CDN_SFTP_BASE}/${pkgName}/${pkgVersion}"
 # Using specific digest (f7f7607...) to avoid unwanted changes in the non-oficial image
