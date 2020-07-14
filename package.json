@@ -65,7 +65,7 @@
     "postcss-flexibility": "^2.0.0",
     "prettier": "^2.0.5",
     "prettier-check": "^2.0.0",
-    "sassdoc": "^2.7.1",
+    "sassdoc": "^2.7.2",
     "semantic-release": "^17.0.8",
     "sort-css-media-queries": "^1.5.0",
     "ttf2woff2": "^2.0.3",
