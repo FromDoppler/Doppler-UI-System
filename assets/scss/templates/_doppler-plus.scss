@@ -1,0 +1,39 @@
+////
+/// Layout Doppler plus
+/// It will apply annotations to all items from file.
+/// @access private
+/// @author Gustavo Baamonde
+/// Classes for Doppler plus
+////
+
+.dp-library {
+  .dp-app-container {
+    min-height: 100vh;
+    overflow: hidden;
+  }
+
+  .dp-gray-page {
+    background-color: $dp-color-wild-sand;
+    flex: 1;
+  }
+
+  .dp-align-center {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: 480px) {
+      flex-wrap: nowrap;
+    }
+  }
+
+  @media screen and (max-width: 1025px) {
+    .dp-align-center {
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

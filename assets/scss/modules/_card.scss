@@ -1,7 +1,148 @@
 ////
-/// This is a poster comment.
+/// Cards for doppler plus plans
 /// It will apply annotations to all items from file.
 /// @access private
 /// @author Gustavo Baamonde
-/// Classes for Cards
+/// Classes for Cards Doppler plus
 ////
+
+%card {
+  position: relative;
+  width: 296px;
+  min-height: 394px;
+  padding: 30px 24px;
+  background: $dp-color-white;
+  flex-wrap: nowrap;
+  border-radius: $dp-border-radius;
+  margin: 30px 12px;
+  box-sizing: border-box;
+  overflow: visible;
+  display: inline-block;
+  border: 2px solid $dp-color-snow;
+  text-align: center;
+  transition: 0.3s;
+  margin: 0 24px 24px;
+
+  &:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+}
+
+%img-ribbon {
+  content: '';
+  position: absolute;
+  background: url('../img/ribbon-plan.svg') no-repeat 0 0;
+}
+
+%text-ribbon {
+  content: attr(data-ribbon);
+  color: $dp-color-white;
+  position: absolute;
+  text-transform: uppercase;
+  font-weight: bold;
+  z-index: 2;
+}
+
+.dp-card {
+  @extend %card;
+}
+
+/// ribbon position right-top
+
+.dp-card-ribbon-rt {
+  @extend %card;
+  border: 2px solid $dp-violet-doppler-plus;
+
+  &:after {
+    @extend %img-ribbon;
+    top: -9px;
+    right: -28px;
+    width: 138px;
+    height: 119px;
+  }
+
+  &::before {
+    @extend %text-ribbon;
+    transform: rotate(45deg);
+    right: -6px;
+    font-size: 10px;
+    line-height: 10px;
+    top: 32px;
+  }
+}
+
+/// ribbon position right-bottom
+
+.dp-card-ribbon-rb {
+  @extend %card;
+  border: 2px solid $dp-violet-doppler-plus;
+
+  &:after {
+    @extend %img-ribbon;
+    bottom: -19px;
+    right: -18px;
+    width: 138px;
+    height: 119px;
+    transform: rotate(90deg);
+  }
+
+  &::before {
+    @extend %text-ribbon;
+    transform: rotate(-45deg);
+    right: -6px;
+    font-size: 10px;
+    line-height: 10px;
+    bottom: 32px;
+  }
+}
+
+/// ribbon position left-bottom
+
+.dp-card-ribbon-lb {
+  @extend %card;
+  border: 2px solid $dp-violet-doppler-plus;
+
+  &:after {
+    @extend %img-ribbon;
+    bottom: -9px;
+    left: -29px;
+    width: 138px;
+    height: 119px;
+    transform: rotate(180deg);
+  }
+
+  &::before {
+    @extend %text-ribbon;
+    transform: rotate(45deg);
+    left: -6px;
+    font-size: 10px;
+    line-height: 10px;
+    bottom: 32px;
+  }
+}
+
+/// ribbon position left-top
+
+.dp-card-ribbon-lt {
+  @extend %card;
+  border: 2px solid $dp-violet-doppler-plus;
+
+  &:after {
+    @extend %img-ribbon;
+    transform: rotate(270deg);
+    top: -19px;
+    left: -18px;
+    width: 138px;
+    height: 119px;
+  }
+
+  &::before {
+    @extend %text-ribbon;
+    transform: rotate(-45deg);
+    left: -6px;
+    font-size: 10px;
+    line-height: 10px;
+    top: 32px;
+  }
+}
