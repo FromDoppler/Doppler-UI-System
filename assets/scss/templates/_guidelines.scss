@@ -212,6 +212,7 @@ body {
 .dpsg-wrapper {
   display: flex;
   height: 100vh;
+  height: 100%;
   flex: 1;
 
   /* Aside Wrapper Navigation */
@@ -1647,7 +1648,7 @@ body {
 .wrapper-tooltip {
   flex-wrap: wrap;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   padding: 50px 10px;
 
   .dp-box {
