@@ -27,6 +27,14 @@
     @media screen and (max-width: 480px) {
       flex-wrap: nowrap;
     }
+
+    .dpsg-tit-card {
+      font-size: 14px;
+      width: 285px;
+      height: 65px;
+      line-height: 20px;
+      text-transform: uppercase;
+    }
   }
 
   @media screen and (max-width: 1025px) {

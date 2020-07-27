@@ -6,143 +6,317 @@
 /// Classes for Cards Doppler plus
 ////
 
-%card {
-  position: relative;
-  width: 296px;
-  min-height: 394px;
-  padding: 30px 24px;
-  background: $dp-color-white;
-  flex-wrap: nowrap;
-  border-radius: $dp-border-radius;
-  margin: 30px 12px;
-  box-sizing: border-box;
-  overflow: visible;
-  display: inline-block;
-  border: 2px solid $dp-color-snow;
-  text-align: center;
-  transition: 0.3s;
-  margin: 0 24px 24px;
+.dp-library {
+  %card {
+    position: relative;
+    width: 296px;
+    min-height: 394px;
+    padding: 30px 24px;
+    background: $dp-color-white;
+    flex-wrap: nowrap;
+    border-radius: $dp-border-radius;
+    margin: 30px 12px;
+    box-sizing: border-box;
+    overflow: visible;
+    display: inline-block;
+    border: 2px solid $dp-color-snow;
+    text-align: center;
+    transition: 0.3s;
+    margin: 0 24px 24px;
+    font-family: 'proxima-nova';
 
-  &:hover {
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-  }
-}
+    &:hover {
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    }
 
-%img-ribbon {
-  content: '';
-  position: absolute;
-  background: url('../img/ribbon-plan.svg') no-repeat 0 0;
-}
+    h3 {
+      font-size: 30px;
+      line-height: 30px;
+      margin-bottom: 24px;
+      text-transform: uppercase;
+    }
 
-%text-ribbon {
-  content: attr(data-ribbon);
-  color: $dp-color-white;
-  position: absolute;
-  text-transform: uppercase;
-  font-weight: bold;
-  z-index: 2;
-}
+    p {
+      font-size: 16px;
+    }
 
-.dp-card {
-  @extend %card;
-}
+    .dp-what-plan {
+      display: block;
+      text-transform: uppercase;
+      margin: 10px 0 0 0;
+      font-weight: bold;
+      font-size: 14px;
+    }
 
-/// ribbon position right-top
-
-.dp-card-ribbon-rt {
-  @extend %card;
-  border: 2px solid $dp-violet-doppler-plus;
-
-  &:after {
-    @extend %img-ribbon;
-    top: -9px;
-    right: -28px;
-    width: 138px;
-    height: 119px;
+    .dp-calculate-price {
+      display: inline-block;
+      font-weight: bold;
+      margin: 10px 0 0;
+      font-size: 14px;
+    }
   }
 
-  &::before {
-    @extend %text-ribbon;
-    transform: rotate(45deg);
-    right: -6px;
+  %img-ribbon {
+    content: '';
+    position: absolute;
+    background: url('../img/ribbon-plan.svg') no-repeat 0 0;
+  }
+
+  %text-ribbon {
+    content: attr(data-ribbon);
+    color: $dp-color-white;
+    position: absolute;
+    text-transform: uppercase;
+    font-weight: bold;
+    z-index: 2;
+  }
+
+  .dp-card {
+    @extend %card;
+  }
+
+  /// ribbon position right-top
+
+  .dp-card-ribbon-rt {
+    @extend %card;
+    border: 2px solid $dp-violet-doppler-plus;
+
+    &:after {
+      @extend %img-ribbon;
+      top: -9px;
+      right: -28px;
+      width: 138px;
+      height: 119px;
+    }
+
+    &::before {
+      @extend %text-ribbon;
+      transform: rotate(45deg);
+      right: -6px;
+      font-size: 10px;
+      line-height: 10px;
+      top: 32px;
+    }
+  }
+
+  /// ribbon position right-bottom
+
+  .dp-card-ribbon-rb {
+    @extend %card;
+    border: 2px solid $dp-violet-doppler-plus;
+
+    &:after {
+      @extend %img-ribbon;
+      bottom: -19px;
+      right: -18px;
+      width: 138px;
+      height: 119px;
+      transform: rotate(90deg);
+    }
+
+    &::before {
+      @extend %text-ribbon;
+      transform: rotate(-45deg);
+      right: -6px;
+      font-size: 10px;
+      line-height: 10px;
+      bottom: 32px;
+    }
+  }
+
+  /// ribbon position left-bottom
+
+  .dp-card-ribbon-lb {
+    @extend %card;
+    border: 2px solid $dp-violet-doppler-plus;
+
+    &:after {
+      @extend %img-ribbon;
+      bottom: -9px;
+      left: -29px;
+      width: 138px;
+      height: 119px;
+      transform: rotate(180deg);
+    }
+
+    &::before {
+      @extend %text-ribbon;
+      transform: rotate(45deg);
+      left: -6px;
+      font-size: 10px;
+      line-height: 10px;
+      bottom: 32px;
+    }
+  }
+
+  /// ribbon position left-top
+
+  .dp-card-ribbon-lt {
+    @extend %card;
+    border: 2px solid $dp-violet-doppler-plus;
+
+    &:after {
+      @extend %img-ribbon;
+      transform: rotate(270deg);
+      top: -19px;
+      left: -18px;
+      width: 138px;
+      height: 119px;
+    }
+
+    &::before {
+      @extend %text-ribbon;
+      transform: rotate(-45deg);
+      left: -6px;
+      font-size: 10px;
+      line-height: 10px;
+      top: 32px;
+    }
+  }
+
+  .dp-price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 132px;
+    margin: 0 auto;
+    width: 150px;
+    color: $dp-color-darkgrey;
+
+    &:before {
+      content: attr(data-start);
+      position: absolute;
+      top: 15px;
+      left: 35%;
+      font-size: $dp-sizing--lvl3;
+    }
+
+    .dp-amount {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .dp-money-number {
+      font-size: $dp-sizing--lvl9;
+      color: $dp-color-darkgrey;
+      letter-spacing: -2px;
+      line-height: $dp-spaces--lv9;
+      position: relative;
+
+      &::after {
+        content: attr(data-money);
+        position: absolute;
+        top: 5px;
+        left: -36px;
+        font-size: $dp-sizing--lvl3;
+        letter-spacing: 0;
+      }
+    }
+  }
+
+  .dpsg-tit-card {
+    font-size: 12px;
+    width: 285px;
+    text-transform: uppercase;
+  }
+
+  .dp-maximum {
+    border-radius: 3px;
+    background-color: $dp-color-ghostwhite;
+    font-size: 13px;
+    line-height: 13px;
+    font-weight: 300;
+    padding: 13px 25px;
+    display: inline-block;
+  }
+
+  .dp-card-asset {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 132px;
+    margin: 0 auto;
+    width: 150px;
+    color: $dp-color-darkgrey;
+  }
+
+  /// plan detail
+
+  .dp-plan-detail {
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid $dp-color-snow;
+    text-align: left;
+    color: $dp-color-darkgrey;
+
+    h4 {
+      font-size: 15px;
+      padding-bottom: 6px;
+      text-transform: none;
+      font-weight: bold;
+      padding-left: 15px;
+    }
+
+    .dp-list-detail {
+      line-height: 20px;
+      font-size: 15px;
+
+      li {
+        margin-bottom: 10px;
+        padding-left: 25px;
+        display: flex;
+        align-items: flex-start;
+        position: relative;
+      }
+
+      .dp-tooltip-block {
+        left: -12px;
+      }
+    }
+  }
+
+  /// icons card expanded
+
+  .dp-icostar {
+    position: absolute;
+    left: 3px;
+    top: 2px;
+  }
+
+  .dp-icobd {
+    background-color: $dp-color-violet;
+    color: $dp-color-white;
+    text-transform: uppercase;
     font-size: 10px;
-    line-height: 10px;
-    top: 32px;
-  }
-}
-
-/// ribbon position right-bottom
-
-.dp-card-ribbon-rb {
-  @extend %card;
-  border: 2px solid $dp-violet-doppler-plus;
-
-  &:after {
-    @extend %img-ribbon;
-    bottom: -19px;
-    right: -18px;
-    width: 138px;
-    height: 119px;
-    transform: rotate(90deg);
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    margin-right: 5px;
+    position: absolute;
+    left: -24px;
   }
 
-  &::before {
-    @extend %text-ribbon;
-    transform: rotate(-45deg);
-    right: -6px;
+  .dp-icodot {
+    background-color: $dp-color-white;
+    color: $dp-color-darkgrey;
+    border-radius: 100%;
+    padding: 0px 2px;
+    text-align: center;
+    margin-right: 5px;
+    font-size: 35px;
+    line-height: 0;
+    position: absolute;
+    left: 5px;
+  }
+
+  .dp-new {
+    background-color: $dp-color-violet;
+    color: $dp-color-white;
+    padding: 3px 5px;
+    border-radius: 3px;
     font-size: 10px;
-    line-height: 10px;
-    bottom: 32px;
-  }
-}
-
-/// ribbon position left-bottom
-
-.dp-card-ribbon-lb {
-  @extend %card;
-  border: 2px solid $dp-violet-doppler-plus;
-
-  &:after {
-    @extend %img-ribbon;
-    bottom: -9px;
-    left: -29px;
-    width: 138px;
-    height: 119px;
-    transform: rotate(180deg);
-  }
-
-  &::before {
-    @extend %text-ribbon;
-    transform: rotate(45deg);
-    left: -6px;
-    font-size: 10px;
-    line-height: 10px;
-    bottom: 32px;
-  }
-}
-
-/// ribbon position left-top
-
-.dp-card-ribbon-lt {
-  @extend %card;
-  border: 2px solid $dp-violet-doppler-plus;
-
-  &:after {
-    @extend %img-ribbon;
-    transform: rotate(270deg);
-    top: -19px;
-    left: -18px;
-    width: 138px;
-    height: 119px;
-  }
-
-  &::before {
-    @extend %text-ribbon;
-    transform: rotate(-45deg);
-    left: -6px;
-    font-size: 10px;
-    line-height: 10px;
-    top: 32px;
   }
 }
