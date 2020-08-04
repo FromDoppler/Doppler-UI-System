@@ -96,13 +96,13 @@
     padding: 0;
 
     .tab--content {
-      display: none;
-      @include transition-all;
+      opacity: 0;
+      height: 0;
 
       &.active {
-        display: block;
-        padding-top: $dp-spaces--lv5;
-        @include transition-all;
+        opacity: 1;
+        height: auto;
+        transition: opacity 1s ease-in-out;
       }
     }
   }

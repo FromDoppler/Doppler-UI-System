@@ -18,7 +18,9 @@
     margin: 30px 12px;
     box-sizing: border-box;
     overflow: visible;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     border: 2px solid $dp-color-snow;
     text-align: center;
     transition: 0.3s;
@@ -60,11 +62,8 @@
       font-size: 14px;
     }
 
-    .dp-btn-free {
-      justify-content: center;
-      display: flex;
-      align-items: flex-end;
-      height: 170px;
+    .dp-content-plans {
+      min-height: 264px;
     }
 
     .dp-current-plan {
