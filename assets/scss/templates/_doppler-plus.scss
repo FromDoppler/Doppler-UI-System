@@ -24,8 +24,8 @@
       font-family: 'proxima-nova';
       letter-spacing: -1px;
       max-width: 460px;
-      padding: 54px 0;
-      margin: 0 auto;
+      padding: $dp-spaces--lv9 $dp-spaces--lv0;
+      margin: $dp-spaces--lv0 auto;
     }
   }
 
@@ -56,32 +56,32 @@
     .dp-title-faq {
       font-size: $dp-sizing--lvl8;
       line-height: $dp-sizing--lvl9;
-      padding: 54px 0;
+      padding: $dp-spaces--lv9 $dp-spaces--lv0;
     }
   }
 
   @media screen and (max-width: 1025px) {
     .dp-align-center {
-      margin: 0 auto;
+      margin: $dp-spaces--lv0 auto;
       display: flex;
       flex-direction: column;
     }
   }
 
   .dp-show-details-plans {
-    margin: 0;
+    margin: $dp-spaces--lv0;
     font-weight: 700;
     cursor: pointer;
     position: relative;
     font-size: 16px;
-    color: #666;
+    color: $dp-color-grey;
     text-decoration: none;
     line-height: 24px;
-    padding-left: 24px;
+    padding-left: $dp-spaces--lv4;
     @include transition-all;
 
     &:hover {
-      color: #333;
+      color: $dp-color-darkgrey;
     }
 
     &:before {
@@ -90,7 +90,7 @@
       content: '';
       left: 15px;
       top: 4px;
-      border-left: solid 4px #666;
+      border-left: solid 4px $dp-color-grey;
       border-bottom: solid 4px transparent;
       border-top: solid 4px transparent;
       position: absolute;
