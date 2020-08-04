@@ -22,11 +22,16 @@
     border: 2px solid $dp-color-snow;
     text-align: center;
     transition: 0.3s;
-    margin: 0 24px 24px;
+    margin: 0 12px 24px;
     font-family: 'proxima-nova';
 
     &:hover {
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    button {
+      display: block;
+      margin: 0 auto;
     }
 
     h3 {
@@ -53,6 +58,24 @@
       font-weight: bold;
       margin: 10px 0 0;
       font-size: 14px;
+    }
+
+    .dp-btn-free {
+      justify-content: center;
+      display: flex;
+      align-items: flex-end;
+      height: 170px;
+    }
+
+    .dp-current-plan {
+      position: relative;
+      background-color: $dp-color-ghostwhite;
+      border-radius: 3px;
+      font-size: 13px;
+      line-height: 13px;
+      font-weight: 300;
+      padding: 13px 25px;
+      display: inline-block;
     }
   }
 
