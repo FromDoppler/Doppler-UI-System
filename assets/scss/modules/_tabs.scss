@@ -96,11 +96,51 @@
     padding: 0;
 
     .tab--content {
-      display: none;
+      opacity: 0;
+      height: 0;
 
       &.active {
-        display: block;
-        padding-top: $dp-spaces--lv5;
+        opacity: 1;
+        height: auto;
+        transition: opacity 1s ease-in-out;
+      }
+    }
+  }
+
+  /// Classes for plan tabs in Doppler Plus
+
+  .dp-tabs-plans {
+    .tab--item {
+      width: 50%;
+      text-align: center;
+    }
+
+    .tab--link {
+      font-size: 22px;
+      line-height: 24px;
+      font-weight: bold;
+      margin: 0;
+
+      &:before {
+        content: '';
+        width: 100%;
+        position: absolute;
+        border-bottom: 4px solid $dp-violet-tabs;
+        bottom: 0;
+        right: 462px;
+        @include transition-all;
+      }
+
+      &:hover:before {
+        right: 0;
+      }
+
+      &.active:before {
+        right: 0;
+      }
+      &:hover {
+        color: $dp-color-darkgrey;
+        font-weight: bold;
       }
     }
   }

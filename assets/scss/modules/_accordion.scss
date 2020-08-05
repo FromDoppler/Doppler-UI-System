@@ -31,16 +31,16 @@
         height: 7px;
         content: '';
         left: 0;
-        top: 29px;
-        border-left: solid 6px $dp-color-grey;
-        border-bottom: solid 6px transparent;
-        border-top: solid 6px transparent;
+        top: 31px;
+        border-left: solid 4px $dp-color-grey;
+        border-bottom: solid 4px transparent;
+        border-top: solid 4px transparent;
         position: absolute;
         transition: all 0.35s;
       }
 
       &.active:before {
-        border-left: solid 6px $dp-color-grey;
+        border-left: solid 4px $dp-color-grey;
         transform: rotate(90deg);
       }
     }
