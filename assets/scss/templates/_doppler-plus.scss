@@ -98,4 +98,21 @@
       transition: all 0.35s;
     }
   }
+  .dp-banner {
+    padding: $dp-spaces--lv3;
+    width: 100%;
+    background-color: $dp-color-white;
+    border: 2px solid $dp-color-snow;
+    border-radius: $dp-border-radius;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: $dp-spaces--lv5 $dp-spaces--lv0;
+
+    .dp-img-banner {
+      width: 60px;
+    }
+  }
 }
