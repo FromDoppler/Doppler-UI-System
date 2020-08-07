@@ -1,0 +1,137 @@
+////
+/// Ribbons for doppler plus plans
+/// It will apply annotations to all items from file.
+/// @access private
+/// @author Gustavo Baamonde
+/// Classes for Ribbons
+////
+
+.dp-ribbon {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  position: absolute;
+}
+.dp-ribbon::before,
+.dp-ribbon::after {
+  position: absolute;
+  z-index: 0;
+  content: '';
+  display: block;
+  border: 5px solid #b395bf;
+}
+.dp-ribbon span {
+  position: absolute;
+  display: block;
+  width: 262px;
+  padding: 12px 0;
+  background-color: #c9a9d5;
+  color: #fff;
+  font-weight: bold;
+  font-size: 10px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1px;
+  z-index: 1;
+}
+
+/// Ribbon Top right
+
+.dp-ribbon-top-right {
+  top: -10px;
+  right: -10px;
+}
+.dp-ribbon-top-right::before,
+.dp-ribbon-top-right::after {
+  border-top-color: transparent;
+  border-right-color: transparent;
+}
+.dp-ribbon-top-right::before {
+  top: -2px;
+  left: 34px;
+}
+.dp-ribbon-top-right::after {
+  bottom: 34px;
+  right: -2px;
+}
+.dp-ribbon-top-right span {
+  left: -25px;
+  top: 30px;
+  transform: rotate(45deg);
+}
+
+/// Ribbon Top left
+
+.dp-ribbon-top-left {
+  top: -10px;
+  left: -10px;
+}
+.dp-ribbon-top-left::before,
+.dp-ribbon-top-left::after {
+  border-top-color: transparent;
+  border-left-color: transparent;
+}
+.dp-ribbon-top-left::before {
+  top: -2px;
+  right: 34px;
+}
+.dp-ribbon-top-left::after {
+  bottom: 34px;
+  left: -2px;
+}
+.dp-ribbon-top-left span {
+  right: -25px;
+  top: 30px;
+  transform: rotate(-45deg);
+}
+
+/// Ribbon Bottom right
+
+.dp-ribbon-bottom-right {
+  bottom: -10px;
+  right: -10px;
+}
+.dp-ribbon-bottom-right::before,
+.dp-ribbon-bottom-right::after {
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+}
+.dp-ribbon-bottom-right::before {
+  bottom: -2px;
+  left: 41px;
+}
+.dp-ribbon-bottom-right::after {
+  top: 26px;
+  right: -2px;
+}
+.dp-ribbon-bottom-right span {
+  left: -25px;
+  bottom: 30px;
+  transform: rotate(-409deg);
+}
+
+/// Ribbon Bottom left
+
+.dp-ribbon-bottom-left {
+  bottom: -10px;
+  left: -10px;
+}
+.dp-ribbon-bottom-left::before,
+.dp-ribbon-bottom-left::after {
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+.dp-ribbon-bottom-left::before {
+  bottom: -2px;
+  right: 38px;
+}
+.dp-ribbon-bottom-left::after {
+  top: 30px;
+  left: -2px;
+}
+.dp-ribbon-bottom-left span {
+  right: -25px;
+  bottom: 30px;
+  transform: rotate(47deg);
+}
