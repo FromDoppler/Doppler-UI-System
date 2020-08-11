@@ -64,7 +64,8 @@
     }
 
     .dp-content-plans {
-      min-height: 264px;
+      height: 132px;
+      overflow: hidden;
     }
 
     .dp-current-plan {
@@ -76,6 +77,7 @@
       font-weight: 300;
       padding: 13px 25px;
       display: inline-block;
+      margin-top: 132px;
     }
   }
 
