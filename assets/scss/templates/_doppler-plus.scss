@@ -122,7 +122,8 @@
 
     .dp-img-banner {
       width: 70px;
-      padding: 0 6px;
+      height: 70px;
+      padding: $dp-spaces--lv0 $dp-spaces--lv1;
       display: block;
 
       img {
@@ -133,29 +134,30 @@
 
     .dp-tit-banner {
       display: inline-block;
-      padding-left: 12px;
+      padding-left: $dp-spaces--lv2;
     }
 
     .dp-content-banner {
       display: inline-block;
-      padding: 12px;
+      padding: $dp-spaces--lv2;
     }
 
     .dp-banner-cta {
       width: 100%;
-      padding: 18px 0;
+      padding: $dp-spaces--lv3 $dp-spaces--lv0;
     }
   }
 
   .dp-banner-big {
     @extend %banner-agencias;
-    padding: 12px;
+    padding: $dp-spaces--lv2;
     align-items: center;
     justify-content: flex-start;
 
     .dp-img-banner {
       width: 70px;
-      padding: 6px 0;
+      height: 70px;
+      padding: $dp-spaces--lv1 $dp-spaces--lv0;
       overflow: hidden;
       float: left;
       display: inline-block;
@@ -175,7 +177,7 @@
     }
 
     .dp-button {
-      margin: 24px 0;
+      margin: $dp-spaces--lv4 $dp-spaces--lv0;
     }
   }
 }
