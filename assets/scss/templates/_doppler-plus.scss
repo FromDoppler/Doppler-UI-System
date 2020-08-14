@@ -113,6 +113,7 @@
 
   .dp-banner {
     @extend %banner-agencias;
+    text-align: left;
 
     header {
       width: 100%;
@@ -122,9 +123,9 @@
 
     .dp-img-banner {
       width: 70px;
-      height: 70px;
-      padding: $dp-spaces--lv0 $dp-spaces--lv1;
-      display: block;
+      display: flex;
+      padding: $dp-spaces--lv0 $dp-spaces--lv2;
+      overflow: hidden;
 
       img {
         display: block;
@@ -134,7 +135,7 @@
 
     .dp-tit-banner {
       display: inline-block;
-      padding-left: $dp-spaces--lv2;
+      padding: $dp-spaces--lv3 $dp-spaces--lv0;
     }
 
     .dp-content-banner {
@@ -144,7 +145,7 @@
 
     .dp-banner-cta {
       width: 100%;
-      padding: $dp-spaces--lv3 $dp-spaces--lv0;
+      padding: $dp-spaces--lv2 $dp-spaces--lv0;
     }
   }
 
@@ -156,7 +157,6 @@
 
     .dp-img-banner {
       width: 70px;
-      height: 70px;
       padding: $dp-spaces--lv1 $dp-spaces--lv0;
       overflow: hidden;
       float: left;
@@ -173,7 +173,7 @@
       flex-direction: column;
       align-items: flex-start;
       justify-content: center;
-      padding: 15px;
+      padding: $dp-spaces--lv2;
     }
 
     .dp-button {
