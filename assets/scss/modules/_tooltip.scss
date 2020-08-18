@@ -179,7 +179,7 @@
   .dp-tooltip-container:hover .dp-tooltip-chart,
   .dp-tooltip-container:hover .dp-tooltip-block {
     opacity: 1;
-    z-index: 1;
+    z-index: 10;
     pointer-events: none;
     transform: translate(-50%, -100%) scale(1) rotate(0deg);
   }
