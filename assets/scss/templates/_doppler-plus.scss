@@ -15,6 +15,8 @@
   .dp-gray-page {
     background-color: $dp-color-wild-sand;
     flex: 1;
+    display: flex;
+    flex-direction: column;
 
     .dp-tit-plans {
       text-align: center;
@@ -38,6 +40,7 @@
     margin: 0 auto;
     display: flex;
     flex-wrap: nowrap;
+    width: fit-content;
 
     @media screen and (max-width: 480px) {
       flex-wrap: nowrap;

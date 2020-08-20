@@ -41,7 +41,7 @@
     h3 {
       font-size: 30px;
       line-height: 30px;
-      margin-bottom: 24px;
+      margin-bottom: $dp-spaces--lv4;
       text-transform: uppercase;
     }
 
@@ -174,8 +174,8 @@
     text-align: left;
     color: $dp-color-darkgrey;
     border-top: 1px solid $dp-color-snow;
-    margin-top: 24px;
-    padding-top: 24px;
+    margin-top: $dp-spaces--lv4;
+    padding-top: $dp-spaces--lv4;
     display: none;
 
     h4 {
