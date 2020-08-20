@@ -102,6 +102,7 @@ $(".show-hide").click(function() {
         $(this).closest('.nav-tabs').attr('data-tab-active', $index);
         $(this).addClass('active');
         $('.tab--content:nth-child('+$index+')').addClass('active');
+        $('.tab--content .dp-plan-detail').slideUp();
       });
     });
 
@@ -113,4 +114,11 @@ $(".show-hide").click(function() {
         $(this).parent().find('.dp-accordion-panel').slideToggle();
       });
     });
+
+// Doppler plus - Plans details
+    $('.dp-compare-details-plans').on('click', function(e){
+      e.preventDefault();
+      $('.tab--content.active .dp-plan-detail').slideToggle();
+    });
+
 
