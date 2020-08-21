@@ -41,6 +41,7 @@
     display: flex;
     flex-wrap: nowrap;
     width: fit-content;
+    max-width: 1260px;
 
     @media screen and (max-width: 480px) {
       flex-wrap: nowrap;
