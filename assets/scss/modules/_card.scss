@@ -27,6 +27,7 @@
     margin: 0 12px 24px;
     font-family: 'proxima-nova';
     position: relative;
+    flex: 1;
 
     &:hover {
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
@@ -40,7 +41,7 @@
     h3 {
       font-size: 30px;
       line-height: 30px;
-      margin-bottom: 24px;
+      margin-bottom: $dp-spaces--lv4;
       text-transform: uppercase;
     }
 
@@ -68,6 +69,12 @@
       overflow: hidden;
     }
 
+    .dp-content-plans-free {
+      height: 132px;
+      overflow: hidden;
+      min-height: 265px;
+    }
+
     .dp-current-plan {
       position: relative;
       background-color: $dp-color-ghostwhite;
@@ -77,7 +84,6 @@
       font-weight: 300;
       padding: 13px 25px;
       display: inline-block;
-      margin-top: $dp-spaces--lv22;
     }
   }
 
@@ -158,14 +164,19 @@
     color: $dp-color-darkgrey;
   }
 
+  .dp-cta-plan {
+    height: 70px;
+  }
+
   /// plan detail
 
   .dp-plan-detail {
-    margin-top: 24px;
-    padding-top: 24px;
-    border-top: 1px solid $dp-color-snow;
     text-align: left;
     color: $dp-color-darkgrey;
+    border-top: 1px solid $dp-color-snow;
+    margin-top: $dp-spaces--lv4;
+    padding-top: $dp-spaces--lv4;
+    display: none;
 
     h4 {
       font-size: 15px;

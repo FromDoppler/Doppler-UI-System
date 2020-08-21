@@ -15,6 +15,8 @@
   .dp-gray-page {
     background-color: $dp-color-wild-sand;
     flex: 1;
+    display: flex;
+    flex-direction: column;
 
     .dp-tit-plans {
       text-align: center;
@@ -37,9 +39,9 @@
   .dp-align-center {
     margin: 0 auto;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-wrap: nowrap;
+    width: fit-content;
+    max-width: 1260px;
 
     @media screen and (max-width: 480px) {
       flex-wrap: nowrap;
@@ -68,7 +70,7 @@
     }
   }
 
-  .dp-show-details-plans {
+  .dp-compare-details-plans {
     margin: $dp-spaces--lv0;
     font-weight: 700;
     cursor: pointer;
