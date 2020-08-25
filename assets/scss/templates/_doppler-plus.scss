@@ -80,10 +80,6 @@
     text-decoration: none;
     line-height: 24px;
     padding: $dp-spaces--lv0 $dp-spaces--lv4;
-    padding-left: 24px;
-    padding-right: 24px;
-    padding-top: 0;
-    padding-bottom: 0;
     @include transition-all;
 
     &:hover {
