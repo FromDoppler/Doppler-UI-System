@@ -79,7 +79,7 @@
     color: $dp-color-grey;
     text-decoration: none;
     line-height: 24px;
-    padding-left: $dp-spaces--lv4;
+    padding: $dp-spaces--lv0 $dp-spaces--lv4;
     @include transition-all;
 
     &:hover {
@@ -91,12 +91,11 @@
       height: 7px;
       content: '';
       left: 15px;
-      top: 4px;
+      top: 7px;
       border-left: solid 4px $dp-color-grey;
       border-bottom: solid 4px transparent;
       border-top: solid 4px transparent;
       position: absolute;
-      -webkit-transition: all 0.35s;
       transition: all 0.35s;
     }
   }
