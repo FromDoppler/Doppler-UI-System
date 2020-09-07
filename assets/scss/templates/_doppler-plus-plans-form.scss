@@ -7,6 +7,14 @@
 ////
 
 .dp-library {
+  .dp-hide {
+    display: none;
+  }
+
+  .dp-show {
+    display: block;
+  }
+
   .dp-plans-feature {
     border: 1px solid $dp-color-silver;
     padding: $dp-spaces--lv5 $dp-spaces--lv3;
@@ -156,6 +164,13 @@
     }
   }
 
+  .dp-footer-form {
+    display: flex;
+    justify-content: flex-end;
+    padding: $dp-spaces--lv5 $dp-spaces--lv0;
+    width: 100%;
+  }
+
   .dp-action {
     display: flex;
     align-items: center;
@@ -163,7 +178,7 @@
   }
 
   .dp-wrap-confirmation {
-    padding: $dp-spaces--lv5 $dp-spaces--lv0;
+    padding: $dp-spaces--lv1 $dp-spaces--lv3 $dp-spaces--lv1;
     text-align: right;
     color: $dp-color-green;
 

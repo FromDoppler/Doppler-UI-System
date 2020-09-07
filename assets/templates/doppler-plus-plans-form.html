@@ -112,7 +112,8 @@
               <fieldset>
                 <legend>Completa el siguiente formulario de planes</legend>
                 <ul class="field-group">
-                  <li class="field-item dp-validate">
+                  <!-- utilizar la clase dp-validate en el li para mostrar mensajes de validacion -->
+                  <li class="field-item">
                     <label for="email">Email:</label>
                     <input
                       type="email"
@@ -126,7 +127,8 @@
                   </li>
                   <li class="field-item">
                     <ul class="field-group">
-                      <li class="field-item field-item--50 dp-validate">
+                      <!-- utilizar la clase dp-validate en el li para mostrar mensajes de validacion -->
+                      <li class="field-item field-item--50">
                         <label for="name">Nombre:</label>
                         <input
                           type="text"
@@ -138,7 +140,8 @@
                           <p>¡Ouch! Este campo está vacío</p>
                         </div>
                       </li>
-                      <li class="field-item field-item--50 dp-validate">
+                      <!-- utilizar la clase dp-validate en el li para mostrar mensajes de validacion -->
+                      <li class="field-item field-item--50">
                         <label for="lastname">Apellido:</label>
                         <input
                           type="text"
@@ -154,7 +157,8 @@
                   </li>
                   <li class="field-item">
                     <ul class="field-group">
-                      <li class="field-item field-item--50 dp-validate">
+                      <!-- utilizar la clase dp-validate en el li para mostrar mensajes de validacion -->
+                      <li class="field-item field-item--50">
                         <label for="phone">Teléfono:</label>
                         <input
                           type="number"
@@ -226,21 +230,24 @@
                 </div>
                 <div class="dp-container">
                   <div class="dp-rowflex">
-                    <div class="dp-wrap-confirmation col-lg-8">
-                      <div class="dp-msj-confirmation bounceIn">
-                        <img src="img/ok-message.svg" />
-                        <p>
-                          ¡Excelente! Nos pondremos en contacto a la brevedad
-                        </p>
+                    <div class="dp-footer-form">
+                      <!-- Utilizar la clase dp-hide para ocultar algo y dp-show para mostrar algo -->
+                      <div class="dp-wrap-confirmation dp-hide">
+                        <div class="dp-msj-confirmation bounceIn">
+                          <img src="img/ok-message.svg" />
+                          <p>
+                            ¡Excelente! Nos pondremos en contacto a la brevedad
+                          </p>
+                        </div>
                       </div>
-                    </div>
-                    <div class="col-lg-4 dp-action">
-                      <button
-                        type="button"
-                        class="dp-button button-medium primary-green"
-                      >
-                        Solicitar una demo
-                      </button>
+                      <div class="dp-action">
+                        <button
+                          type="button"
+                          class="dp-button button-medium primary-green"
+                        >
+                          Solicitar una demo
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
