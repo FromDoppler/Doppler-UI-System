@@ -197,4 +197,32 @@
       height: 25px;
     }
   }
+
+  /* Form exclusive features */
+
+  .dp-bg-ghostwhite {
+    background: $dp-color-ghostwhite;
+    padding: 18px;
+  }
+  .dp-wrapper-exclusive-features {
+    max-height: 150px;
+    width: 100%;
+    display: inline-block;
+
+    h4 {
+      text-transform: none;
+      padding: 0 0 12px;
+    }
+
+    .dp-exclusive-features-list {
+      li {
+        width: 100%;
+        cursor: initial;
+      }
+
+      label {
+        display: initial;
+      }
+    }
+  }
 }
