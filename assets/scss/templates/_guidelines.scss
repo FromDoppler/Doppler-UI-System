@@ -1663,3 +1663,14 @@ body {
 .dpsg-slow-animation {
   animation-delay: 5s;
 }
+
+/* user nav menu */
+.dgsg-nav-user-menu {
+  position: relative;
+  margin: 0 auto;
+  height: 500px;
+  .user-menu {
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+}
