@@ -50,7 +50,7 @@
   }
 
   .dp-wrapper-form-plans {
-    padding: $dp-spaces--lv0 $dp-spaces--lv0 $dp-spaces--lv10;
+    padding: $dp-spaces--lv0 $dp-spaces--lv0 $dp-spaces--lv1;
 
     .field-item {
       margin: $dp-spaces--lv0 $dp-spaces--lv0 $dp-spaces--lv2 $dp-spaces--lv0;
@@ -205,7 +205,6 @@
     padding: 18px;
   }
   .dp-wrapper-exclusive-features {
-    max-height: 150px;
     width: 100%;
     display: inline-block;
 
@@ -224,5 +223,31 @@
         display: initial;
       }
     }
+  }
+
+  @include media-breakpoint('desktop') {
+    .dp-forms-plans .field-item--50 {
+      width: 100%;
+      // Left Column
+      &:nth-of-type(odd) {
+        padding-right: $dp-spaces--lv0;
+      }
+    }
+  }
+
+  @include media-breakpoint('mobilexs') {
+    .dp-plans-feature {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .dp-wrapper-form-plans .dp-wrapper-volume-options .dp-volume-per-month li {
+    display: block;
+    width: 100%;
+  }
+  .dp-plans-feature {
+    display: none;
   }
 }
