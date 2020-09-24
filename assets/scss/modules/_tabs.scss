@@ -110,37 +110,54 @@
   /// Classes for plan tabs in Doppler Plus
 
   .dp-tabs-plans {
+    margin: 10px auto;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+
+    .tabs-wrapper {
+      margin: 54px 0;
+    }
+
+    .tabs-nav {
+      justify-content: center;
+    }
+
     .tab--item {
-      width: 50%;
       text-align: center;
+      min-width: 300px;
     }
 
     .tab--link {
       font-size: 22px;
       line-height: 24px;
       font-weight: bold;
+      border-bottom: 4px solid $dp-color-snow;
+      color: rgba(51, 51, 51, 0.4);
       margin: 0;
+      @include transition-all;
 
       &:before {
-        content: '';
-        width: 100%;
-        position: absolute;
-        border-bottom: 4px solid $dp-violet-tabs;
-        bottom: 0;
-        right: 462px;
+        border-bottom: none;
         @include transition-all;
       }
 
       &:hover:before {
-        right: 0;
       }
 
-      &.active:before {
-        right: 0;
+      &.active {
+        color: $dp-color-darkgrey;
+        border-bottom: 4px solid $dp-violet-tabs;
+        font-weight: bold;
       }
+
       &:hover {
         color: $dp-color-darkgrey;
-        font-weight: bold;
+        border-bottom: 4px solid $dp-color-snow;
       }
     }
   }
