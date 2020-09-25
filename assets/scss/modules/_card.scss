@@ -206,9 +206,12 @@
   /// icons card expanded
 
   .dp-icostar {
+    background: url('../img/ico-star.svg') 0 0 no-repeat;
     position: absolute;
     left: 3px;
     top: 2px;
+    width: 16px;
+    height: 16px;
   }
 
   .dp-icobd {
