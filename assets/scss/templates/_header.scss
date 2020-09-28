@@ -207,10 +207,10 @@
       width: 14px;
       padding-top: 1px;
       border-radius: 3px;
-      font-size: 11px;
+      font-size: $dp-sizing--lvl1;
       position: absolute;
       text-align: center;
-      top: 6px;
+      top: $dp-spaces--lv1;
       left: 9px;
       display: none;
     }
@@ -263,7 +263,7 @@
     border-right: 1px solid $dp-border-grey;
     border-top: 3px solid $dp-color-default;
     border-radius: 3px;
-    padding: 15px 15px 0;
+    padding: $dp-spaces--lv2 $dp-spaces--lv2 0;
     position: absolute;
     right: 0;
     top: 47px;
@@ -283,7 +283,7 @@
 
       .dp-msj-notif + .dp-msj-notif {
         border-top: 1px solid $dp-border-grey;
-        padding-top: 20px;
+        padding-top: $dp-spaces--lv3;
       }
     }
 
@@ -320,7 +320,7 @@
       border-width: 0 4px 4px 4px;
       border-color: transparent transparent $dp-color-default transparent;
       left: inherit;
-      right: 12px;
+      right: $dp-spaces--lv2;
       top: -7px;
     }
 
@@ -334,7 +334,7 @@
       align-items: center;
 
       p {
-        margin-left: 10px;
+        margin-left: $dp-spaces--lv2;
 
         span {
           @include do-ellipsis(248px, block);
@@ -355,9 +355,9 @@
     .options-user {
       li {
         border-top: 1px solid $dp-border-grey;
-        padding: 12px 0;
+        padding: $dp-spaces--lv2 0;
         display: flex;
-        font-size: 11px;
+        font-size: $dp-sizing--lvl1;
       }
 
       a {
@@ -368,15 +368,20 @@
   }
 
   .user-plan--container {
-    display: flex;
-    align-items: center;
-    border-top: 1px solid $dp-border-grey;
-    padding: 10px 0;
+    padding: $dp-spaces--lv2 $dp-spaces--lv0 $dp-spaces--lv1;
 
     .user-plan {
       color: $dp-color-green;
-      font-size: 11px;
+      font-size: $dp-sizing--lvl1;
       text-transform: uppercase;
+      margin-top: $dp-spaces--lv2;
+    }
+
+    .user-plan-enabled {
+      font-size: $dp-sizing--lvl1;
+      text-transform: uppercase;
+      flex: 50%;
+      text-align: right;
     }
 
     .disabled {
@@ -387,15 +392,20 @@
     .buy-plan:hover {
       color: $dp-color-darkgreen;
     }
-  }
-
-  .user-plan--type {
-    width: 100%;
-
     p {
       margin: 0;
       font-size: $dp-sizing--lvl2;
+      padding-top: $dp-spaces--lv2;
     }
+  }
+
+  .user-plan--type {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: $dp-spaces--lv1;
+    border-top: 1px solid $dp-border-grey;
+    flex-wrap: wrap;
   }
 
   .desktop-hd-hidden {
@@ -437,7 +447,7 @@
     .desktop-hd-hidden {
       display: flex;
       align-items: center;
-      padding: 5px;
+      padding: $dp-spaces--lv1;
     }
 
     .nav-left-main {
@@ -454,7 +464,7 @@
     .nav-right-main {
       .icon-close,
       .icon-menu {
-        font-size: 14px;
+        font-size: $dp-sizing--lvl2-14;
         width: 30px;
         cursor: pointer;
         color: $dp-color-grey;
@@ -481,7 +491,7 @@
       li {
         border-bottom: 1px solid $dp-color-ghostwhite;
         margin-right: 0;
-        padding-left: 10px;
+        padding-left: $dp-spaces--lv2;
       }
     }
 
