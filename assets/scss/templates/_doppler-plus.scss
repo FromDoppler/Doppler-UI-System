@@ -413,25 +413,25 @@
 
   /* pricing */
 
-  .dp-wrap-price {
+  .dp-price--wrapper {
     padding: $dp-spaces--lv7;
     text-align: center;
     overflow: hidden;
 
-    .dp-old-price {
+    .dp-price-old {
       display: flex;
       justify-content: center;
       align-items: center;
 
       color: $dp-color-silver;
 
-      .dp-money {
+      .dp-price-old-money {
         margin-right: $dp-spaces--lv2;
         font-size: 12px;
         line-height: 30px;
       }
 
-      .dp-old-amount {
+      .dp-price-old-amount {
         text-decoration: line-through;
         font-size: 24px;
         line-height: 30px;
@@ -439,16 +439,16 @@
     }
 
     /* small */
-    .dp-amount-small {
+    .dp-price-small {
       display: flex;
       align-items: center;
       justify-content: center;
 
-      .dp-money {
+      .dp-price-small-money {
         margin-right: $dp-spaces--lv2;
       }
 
-      .dp-amount {
+      .dp-price-small-amount {
         font-size: 42px;
         line-height: 42px;
         font-weight: normal;
@@ -456,17 +456,16 @@
     }
 
     /* large */
-
-    .dp-amount-large {
+    .dp-price-large {
       display: flex;
       align-items: center;
       justify-content: center;
 
-      .dp-money {
+      .dp-price-large-money {
         margin-right: $dp-spaces--lv2;
       }
 
-      .dp-amount {
+      .dp-price-large-amount {
         font-size: 70px;
         line-height: 70px;
         font-weight: normal;
