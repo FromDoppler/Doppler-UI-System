@@ -122,3 +122,20 @@ $(".show-hide").click(function() {
     });
 
 
+    // Slider sample one
+
+$('.progress-bar').each(function(index) {
+  $max = $(this).find('.range-slider').attr('max');
+  $(this).find('.range-slider').on('change input', function(){
+
+    var $quote = $(this).val(),
+    $progress = ($quote * 100) / $max,
+    $parent = $(this).parent();
+
+    $parent.find('.progress-anchor').css('width', $progress + '%');
+    $(this).attr('data-value', this.value);
+  }).trigger('change');
+});
+
+
+
