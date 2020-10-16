@@ -175,7 +175,6 @@
       width: 70px;
       padding: $dp-spaces--lv1 $dp-spaces--lv0;
       overflow: hidden;
-      float: left;
       display: inline-block;
 
       img {
@@ -198,6 +197,16 @@
   }
 
   /* Doppler plus calculator */
+
+  .dp-tabs-plans {
+    .tab--link {
+      overflow: visible;
+    }
+  }
+
+  .dp-bgplan {
+    background-color: $dp-color-white;
+  }
 
   .dp-calc-box {
     width: 900px;
