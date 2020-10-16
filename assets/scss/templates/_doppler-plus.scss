@@ -220,6 +220,7 @@
       font-size: 40px;
       line-height: 45px;
       font-weight: normal;
+      transition: all 0.5s ease-in-out;
     }
 
     h4 {
@@ -351,6 +352,7 @@
       text-transform: none;
       color: $dp-color-grey;
       font-weight: normal;
+      text-align: left;
     }
 
     ul {
@@ -385,7 +387,7 @@
       font-size: 11px;
       line-height: 13px;
       font-weight: 300;
-      padding: $dp-spaces--lv2 14px;
+      padding: $dp-spaces--lv2 10px;
       border: 1px solid $dp-color-wild-sand;
       text-transform: uppercase;
 
@@ -409,6 +411,7 @@
     border-radius: 3px;
     border: 1px solid $dp-color-green;
     background: rgba(51, 173, 115, 0.2);
+    transition: all 0.5s ease-in-out;
   }
 
   /* pricing */
@@ -422,6 +425,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      transition: all 0.5s ease-in-out;
 
       color: $dp-color-silver;
 
@@ -469,6 +473,7 @@
         font-size: 70px;
         line-height: 70px;
         font-weight: normal;
+        transition: all 0.5s ease-in-out;
       }
     }
 
