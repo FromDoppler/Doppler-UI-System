@@ -40,7 +40,7 @@
     "autoprefixer": "^9.8.6",
     "browser-sync": "^2.26.13",
     "css-mqpacker": "~7.0.0",
-    "del": "^5.1.0",
+    "del": "^6.0.0",
     "eclint": "^2.8.1",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^4.3.0",
