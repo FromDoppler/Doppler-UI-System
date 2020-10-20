@@ -385,10 +385,6 @@ gulp.task('run', ['clean', 'serve'], function() {
   util.log('Done!');
 });
 
-// Watch for changes
-gulp.task('watch', ['build'], function() {
-  gulp.watch(config.folderAssets.base + '/**/*.scss', ['sass']);
-});
 
 // Define build task
 gulp.task('build', ['sass', 'sass-editors', 'sass-theme-dark', 'webfont', 'copy:fonts', 'processHtml', 'copy:js', 'copy:images', 'doc', 'copy:workerjs']);
