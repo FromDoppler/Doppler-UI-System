@@ -6,17 +6,21 @@
 /// Classes for the tooltip component
 
 .dp-library {
+  .icon-tip-icon {
+    color: $dp-color-darkyellow;
+  }
+
   @mixin dp-tooltip($font-size-tooltip, $font-color-tooltip) {
     position: relative;
     display: inline-block;
-    padding: 3px $dp-spaces--lv0;
+    padding: $dp-spaces--lv0;
     margin: $dp-spaces--lv0;
-    color: $dp-color-darkyellow;
     cursor: pointer;
 
     .tooltiptext {
       visibility: hidden;
       position: absolute;
+      line-height: 1.2em;
       min-width: 170px;
       display: inline-block;
       padding: $dp-spaces--lv2 $dp-spaces--lv1;
@@ -29,6 +33,7 @@
       z-index: 1;
       opacity: 0;
       transition: all 0.4s ease-in-out;
+      transform: translate(-50%, -50%);
 
       &:after {
         content: '';
@@ -44,15 +49,23 @@
     }
   }
 
+  .icon-tip-icon {
+    width: 41px;
+    height: 20px;
+    padding: 0;
+    position: relative;
+    display: inline-block;
+  }
+
   /// tooltip top
 
   .dp-tooltip-top {
     @include dp-tooltip($dp-sizing--lvl1, $dp-color-white);
 
     .tooltiptext {
-      bottom: 140%;
-      left: -165%;
-      right: -50%;
+      transform: translate(-50%, -50%);
+      left: 50%;
+      top: -45px;
 
       &:after {
         top: 100%;
@@ -69,8 +82,9 @@
     @include dp-tooltip($dp-sizing--lvl1, $dp-color-white);
 
     .tooltiptext {
-      top: -70%;
-      left: 120%;
+      transform: translate(-50%, -50%);
+      left: 140px;
+      top: 50%;
 
       &:after {
         top: 50%;
@@ -87,9 +101,9 @@
     @include dp-tooltip($dp-sizing--lvl1, $dp-color-white);
 
     .tooltiptext {
-      top: 140%;
-      left: -165%;
-      right: -50%;
+      transform: translate(-50%, -50%);
+      left: 50%;
+      top: 60px;
 
       &:after {
         bottom: 100%;
@@ -106,8 +120,9 @@
     @include dp-tooltip($dp-sizing--lvl1, $dp-color-white);
 
     .tooltiptext {
-      top: -70%;
-      right: 120%;
+      transform: translate(-50%, -50%);
+      left: -100px;
+      top: 50%;
 
       &:after {
         top: 50%;
