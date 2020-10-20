@@ -46,7 +46,7 @@ Once you downloaded:
 
 - `gulp run` for running development server and preview
 
-- `gulp dist` for generation task (Deploy)
+- `npm run dist` for generation task (Deploy)
 
 - `gulp build` for define build task
 
