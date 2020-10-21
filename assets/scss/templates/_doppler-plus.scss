@@ -202,13 +202,6 @@
     .tab--link {
       overflow: visible;
     }
-
-    .icon-info-icon {
-      width: 22px;
-      .tooltiptext {
-        top: -85px;
-      }
-    }
   }
 
   .dp-bgplan {
@@ -423,7 +416,7 @@
     padding: 12px;
     text-align: center;
     border: 1px solid;
-    margin: 0 36px 42px;
+    margin: 24px 36px 42px;
     border-radius: 3px;
     border: 1px solid $dp-color-green;
     background: rgba(51, 173, 115, 0.2);
