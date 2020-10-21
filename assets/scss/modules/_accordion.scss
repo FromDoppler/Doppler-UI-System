@@ -24,22 +24,22 @@
         color: $dp-color-grey;
         text-decoration: none;
         line-height: 24px;
+
+        &:before {
+          width: 5px;
+          height: 7px;
+          content: '';
+          left: -12px;
+          top: 5px;
+          border-left: solid 4px $dp-color-grey;
+          border-bottom: solid 4px transparent;
+          border-top: solid 4px transparent;
+          position: absolute;
+          transition: all 0.35s;
+        }
       }
 
-      &:before {
-        width: 5px;
-        height: 7px;
-        content: '';
-        left: 0;
-        top: 31px;
-        border-left: solid 4px $dp-color-grey;
-        border-bottom: solid 4px transparent;
-        border-top: solid 4px transparent;
-        position: absolute;
-        transition: all 0.35s;
-      }
-
-      &.active:before {
+      &.active a:before {
         border-left: solid 4px $dp-color-grey;
         transform: rotate(90deg);
       }
