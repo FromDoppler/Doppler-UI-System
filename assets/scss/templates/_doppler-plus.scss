@@ -12,7 +12,6 @@
   $range-track-height: 8px !default;
   $color-green: #33ad73;
   $color-green-clear: #65c192;
-  /*$color-gray: #b4b1a5;*/
   $color-white: #fff;
 
   .dp-app-container {
@@ -206,6 +205,7 @@
 
   .dp-bgplan {
     background-color: $dp-color-white;
+    padding: $dp-spaces--lv7 $dp-spaces--lv7;
   }
 
   .dp-calc-box {
@@ -218,7 +218,6 @@
   }
 
   .dp-calc-quantity {
-    padding: $dp-spaces--lv7 $dp-spaces--lv8 $dp-spaces--lv0;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -257,8 +256,6 @@
   }
 
   .dp-calc-slider {
-    padding: $dp-spaces--lv2 $dp-spaces--lv8 $dp-spaces--lv7;
-
     input {
       padding: $dp-spaces--lv0;
       cursor: pointer;
@@ -355,7 +352,7 @@
   }
 
   .dp-wrap-subscription {
-    padding: 24px 42px;
+    padding: $dp-spaces--lv4 $dp-spaces--lv0 $dp-spaces--lv0;
 
     h4 {
       text-transform: none;
@@ -371,7 +368,7 @@
       display: flex;
       align-items: center;
       justify-content: space-around;
-      margin-bottom: 30px;
+      margin-bottom: 36px;
       border-radius: 3px;
 
       li {
@@ -413,10 +410,10 @@
   }
 
   .dp-calc-message {
-    padding: 12px;
+    padding: 6px;
     text-align: center;
     border: 1px solid;
-    margin: 24px 36px 42px;
+    margin: $dp-spaces--lv4 $dp-spaces--lv0 $dp-spaces--lv0;
     border-radius: 3px;
     border: 1px solid $dp-color-green;
     background: rgba(51, 173, 115, 0.2);
