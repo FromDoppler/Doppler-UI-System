@@ -51,6 +51,12 @@
 
   /// tooltip top
 
+  @media screen and (max-width: 1365px) {
+    .dp-tooltip-container {
+      display: none;
+    }
+  }
+
   .dp-tooltip-top {
     span {
       width: 170px;
