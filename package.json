@@ -1,5 +1,6 @@
 {
   "name": "Doppler-UI",
+  "title": "Doppler UI Library",
   "private": true,
   "version": "0.1.1",
   "description": "UI library for easy inclusion css, components, images and fonts in projects",
@@ -23,11 +24,57 @@
     "type": "git",
     "url": "https://github.com/FromDoppler/Doppler-UI-System"
   },
+  "browserslist": [
+    "last 2 versions",
+    "> 1%",
+    "last 3 iOS versions",
+    "Firefox > 20",
+    "ie 9"
+  ],
+  "webfont": {
+    "files": "./assets/icons/*.svg",
+    "fontName": "icon-font",
+    "templateClassName": "icon",
+    "templateFontPath": "../fonts/",
+    "template": "./assets/scss/libs/webfont/template.css"
+  },
   "scripts": {
-    "semantic-release": "semantic-release",
+    "copyfiles": "./node_modules/.bin/cpy",
+    "css-compile": "npm-run-all css-compile-sass-styles css-prefix-styles css-minify-styles ",
+    "css-compile-all": "npm-run-all css-compile css-compile-editor css-compile-dark",
+    "css-compile-dark": "npm-run-all css-compile-sass-dark css-prefix-dark css-minify-dark",
+    "css-compile-editor": "npm-run-all css-compile-sass-editor css-prefix-editor css-minify-editor",
+    "css-compile-sass": "cross-env-shell node-sass --importer node_modules/node-sass-magic-importer/dist/cli.js --output ./$ENV/css ",
+    "css-compile-sass-dark": "npm run css-compile-sass -- ./assets/scss/themes/theme-dark/theme-dark.scss",
+    "css-compile-sass-editor": "npm run css-compile-sass -- ./assets/scss/themes/editors/editors.scss",
+    "css-compile-sass-styles": "npm run css-compile-sass -- ./assets/scss/styles.scss",
+    "css-minify": "cleancss -o ",
+    "css-minify-dark": "cross-env-shell npm run css-minify -- ./$ENV/css/theme-dark.css ./$ENV/css/theme-dark.css",
+    "css-minify-editor": "cross-env-shell npm run css-minify -- ./$ENV/css/editors.css ./$ENV/css/editors.css",
+    "css-minify-styles": "cross-env-shell npm run css-minify -- ./$ENV/css/styles.css ./$ENV/css/styles.css",
+    "css-prefix": "postcss --use autoprefixer --use postcss-flexibility -r",
+    "css-prefix-dark": "cross-env-shell npm run css-prefix -- ./$ENV/css/theme-dark.css",
+    "css-prefix-editor": "cross-env-shell npm run css-prefix -- ./$ENV/css/editors.css",
+    "css-prefix-styles": "cross-env-shell npm run css-prefix -- ./$ENV/css/styles.css",
+    "del": "cross-env-shell del-cli ./$ENV",
+    "dist": "cross-env-shell ENV=\"dist\" JS=\"app.js\" npm-run-all del font-compile makedir-css css-compile-all imagemin html makedir-js js-minify-dist js-copy-push sassdoc",
+    "eclint-check": "./node_modules/.bin/eclint check \"**/*\"",
+    "font": "npm run makedir-font && webfont ./assets/icons/*.svg -d ./assets/fonts -s ./assets/scss/libs/webfont/compiled --font-height 1001 --normalize true",
+    "font-compile": "npm-run-all font font-copy",
+    "font-copy": "cross-env-shell npm run copyfiles ./assets/fonts/*.* ./$ENV/fonts",
+    "html": "cross-env-shell node ./assets/process-html.js $ENV",
+    "html-processor": "./node_modules/.bin/htmlprocessor",
+    "imagemin": "cross-env-shell ./node_modules/.bin/imagemin ./assets/img/* --out-dir ./$ENV/img",
+    "js-copy-push": "cross-env-shell npm run copyfiles ./assets/firebasePush.js ./assets/firebase-messaging-sw.js ./$ENV",
+    "js-minify-dist": "./node_modules/.bin/uglifyjs ./assets/js/*.js --compress --mangle > ./dist/js/app.js",
+    "makedir-css": "cross-env-shell make-dir ./$ENV/css",
+    "makedir-font": "make-dir ./assets/scss/libs/webfont/compiled",
+    "makedir-js": "cross-env-shell make-dir ./$ENV/js",
     "prettier": "prettier \"assets/**/*.{css,scss,html}\" \"!assets/scss/libs/**/*.{css,scss}\" --write",
     "prettier-check": "prettier-check \"assets/**/*.{css,scss,html}\" \"!assets/scss/libs/**/*.{css,scss}\"",
-    "eclint-check": "./node_modules/.bin/eclint check \"**/*\""
+    "sassdoc": "cross-env-shell sassdoc ./assets/scss/**/*.* -d ./$ENV/documentation",
+    "semantic-release": "semantic-release",
+    "webfont": "node node_modules/webfont/dist/cli.js"
   },
   "prettier": {
     "semi": true,
@@ -38,10 +85,16 @@
   "devDependencies": {
     "@semantic-release/exec": "^5.0.0",
     "autoprefixer": "^9.8.6",
-    "browser-sync": "^2.26.13",
+    "browser-sync": "^2.26.12",
+    "clean-css-cli": "^4.3.0",
+    "cpy": "^8.1.1",
+    "cpy-cli": "^3.1.1",
+    "cross-env": "^7.0.2",
     "css-mqpacker": "~7.0.0",
-    "del": "^6.0.0",
+    "del": "^5.1.0",
+    "del-cli": "^3.0.1",
     "eclint": "^2.8.1",
+    "express": "^4.17.1",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^4.3.0",
     "gulp-concat": "~2.6.1",
@@ -60,17 +113,26 @@
     "gulp-uglify": "^3.0.2",
     "gulp-util": "~3.0.8",
     "gulp-zip": "~5.0.2",
+    "htmlprocessor": "^0.2.6",
+    "imagemin-cli": "^6.0.0",
+    "make-dir-cli": "^2.0.0",
     "node-sass": "^4.14.1",
+    "node-sass-glob-importer": "^5.3.2",
+    "node-sass-magic-importer": "^5.3.2",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.1.1",
     "postcss-clean": "~1.1.0",
+    "postcss-cli": "^8.1.0",
     "postcss-flexibility": "^2.0.0",
     "prettier": "^2.1.2",
     "prettier-check": "^2.0.0",
     "sassdoc": "^2.7.3",
     "semantic-release": "^17.2.1",
-    "sort-css-media-queries": "^1.5.2",
+    "sort-css-media-queries": "^1.5.0",
     "ttf2woff2": "^2.0.3",
+    "uglify-js": "^3.11.2",
     "web-push": "^3.4.4",
-    "express": "^4.17.1"
+    "webfont": "^9.0.0"
   },
   "main": "pdr",
   "engines": {
@@ -101,7 +163,7 @@
       {
         "path": "@semantic-release/exec",
         "__comment": "Running compile-prod here allow us to inject release version if need.",
-        "cmd": "echo ${nextRelease.version} > dist/version.txt && export pkgVersion=v${nextRelease.version} && gulp dist"
+        "cmd": "echo ${nextRelease.version} > dist/version.txt && export pkgVersion=v${nextRelease.version} && npm run dist"
       }
     ],
     "publish": [

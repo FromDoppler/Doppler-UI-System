@@ -99,38 +99,8 @@ var config = {
       title: "Doppler UI Library",
       homepage: "/",
     }
-  },
-  sassdocOptionsDist: {
-    dest: './dist/documentation',
-      display: {
-        watermark: false
-      },
-    groups: {
-      'undefined': 'general'
-    },
-    package: {
-      title: "Doppler UI Library",
-      homepage: "/",
-    }
   }
 };
-
-// Sass tasks are divided for performance issues regarding dependencies
-gulp.task('sass:dist', ['webfont'], function() {
-  return gulp.src(config.folderAssets.styles + '/styles.scss')
-    .pipe(globbing({
-      // Configure it to use SCSS files
-      extensions: ['.scss']
-    }))
-    .pipe(sass().on('error', sass.logError))
-    .pipe(postcss(config.postCSS.processors))
-    .pipe(postcss([flexibility]))
-    .pipe(cleanCSS({
-      advanced: true
-    }))
-    .pipe(csso())
-    .pipe(gulp.dest(config.folderDist.css));
-});
 
 // Sass Watch task definition
 gulp.task('sass', function() {
@@ -176,23 +146,6 @@ gulp.task('sass-editors', function() {
     }));
 });
 
-// Sass theme editors tasks are divided for performance issues regarding dependencies
-gulp.task('sass-editors:dist', function() {
-  return gulp.src(config.folderAssets.styles + '/themes/editors/editors.scss')
-    .pipe(globbing({
-      // Configure it to use SCSS files
-      extensions: ['.scss']
-    }))
-    .pipe(sass().on('error', sass.logError))
-    .pipe(postcss(config.postCSS.processors))
-    .pipe(postcss([flexibility]))
-    .pipe(cleanCSS({
-      advanced: true
-    }))
-    .pipe(csso())
-    .pipe(gulp.dest(config.folderDist.css));
-});
-
 // Sass theme dark task definition
 gulp.task('sass-theme-dark', function() {
   return gulp.src(config.folderAssets.styles + '/themes/theme-dark/theme-dark.scss')
@@ -215,45 +168,11 @@ gulp.task('sass-theme-dark', function() {
     }));
 });
 
-// Sass theme dark tasks are divided for performance issues regarding dependencies
-gulp.task('sass-theme-dark:dist', function() {
-  return gulp.src(config.folderAssets.styles + '/themes/theme-dark/theme-dark.scss')
-    .pipe(globbing({
-      // Configure it to use SCSS files
-      extensions: ['.scss']
-    }))
-    .pipe(sass().on('error', sass.logError))
-    .pipe(postcss(config.postCSS.processors))
-    .pipe(postcss([flexibility]))
-    .pipe(cleanCSS({
-      advanced: true
-    }))
-    .pipe(csso())
-    .pipe(gulp.dest(config.folderDist.css));
-});
-
 // Generated Sassdoc to Dev folder
 gulp.task('doc', function() {
   return gulp.src(config.folderAssets.base + '/**/*.scss')
     .pipe(sassdoc(config.sassdocOptionsDev))
     .resume();
-});
-
-// Generated Sassdoc to Dist folder
-gulp.task('doc:dist', function() {
-  return gulp.src(config.folderAssets.base + '/**/*.scss')
-    .pipe(sassdoc(config.sassdocOptionsDist))
-    .resume();
-});
-
-// Process HTML task definition for distribution purposes
-gulp.task('processHtml:dist', function() {
-  return gulp.src(config.folderAssets.base + '/templates/*.html')
-    .pipe(processHtml({
-      recursive: true,
-      environment: 'dist'
-    }))
-    .pipe(gulp.dest(config.folderDist.base));
 });
 
 // Generate webfonts
@@ -276,28 +195,10 @@ gulp.task('webfont', function() {
     .pipe(gulp.dest(config.folderAssets.fonts));
 });
 
-// Copy webfont to Dist folder
-gulp.task('fonts:dist', ['webfont'], function() {
-  return gulp.src(config.folderAssets.fonts + '/*.*')
-    .pipe(gulp.dest(config.folderDist.fonts));
-});
-
 // Copy webfonts to Dev folder
 gulp.task('copy:fonts', ['webfont'], function() {
   return gulp.src(config.folderAssets.fonts + '/*.*')
     .pipe(gulp.dest(config.folderDev.fonts));
-});
-
-// Optimize JS
-gulp.task('js:dist', function() {
-  return gulp.src([config.folderAssets.js + '/*.js'])
-    .pipe(sourcemaps.init())
-    .pipe(concat('app.js', {
-      newLine: "\r\n;"
-    }))
-    .pipe(uglify())
-    .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest(config.folderDist.js));
 });
 
 gulp.task('copy:workerjs', function() {
@@ -317,20 +218,6 @@ gulp.task('copy:js', function() {
       newLine: "\r\n;"
     }))
     .pipe(gulp.dest(config.folderDev.js));
-});
-
-
-// Optimize Images
-gulp.task('images:dist', function() {
-  return gulp.src([config.folderAssets.images + '/**/*'])
-    .pipe(imagemin({
-      optimizationLevel: 5,
-      progressive: true,
-      svgoPlugins: [{
-        removeViewBox: true
-      }]
-    }))
-    .pipe(gulp.dest(config.folderDist.images));
 });
 
 // Copy Images
@@ -385,13 +272,6 @@ gulp.task('run', ['clean', 'serve'], function() {
   util.log('Done!');
 });
 
-// Watch for changes
-gulp.task('watch', ['build'], function() {
-  gulp.watch(config.folderAssets.base + '/**/*.scss', ['sass']);
-});
 
 // Define build task
 gulp.task('build', ['sass', 'sass-editors', 'sass-theme-dark', 'webfont', 'copy:fonts', 'processHtml', 'copy:js', 'copy:images', 'doc', 'copy:workerjs']);
-
-// Define Dist generation task (Deploy)
-gulp.task('dist', ['sass:dist', 'sass-editors:dist', 'sass-theme-dark:dist', 'fonts:dist', 'processHtml:dist', 'js:dist', 'images:dist', 'doc:dist', 'copy:workerjs']);
