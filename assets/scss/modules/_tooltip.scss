@@ -52,8 +52,10 @@
   /// tooltip top
 
   @media screen and (max-width: 1365px) {
-    .dp-tooltip-container {
-      display: none;
+    .tabs-wrapper {
+      .dp-tooltip-container {
+        display: none;
+      }
     }
   }
 
@@ -172,12 +174,13 @@
 
   /* New Tooltip for charts in webapp*/
 
-  .dp-tooltip-container {
-    cursor: pointer;
-    position: relative;
-    display: inline-block;
+  .tabs-wrapper {
+    .dp-tooltip-container {
+      cursor: pointer;
+      position: relative;
+      display: inline-block;
+    }
   }
-
   ///
   /// TODO: delete the dp-tooltip-chart class to use a more generic
   /// in the next version it is obsolete
