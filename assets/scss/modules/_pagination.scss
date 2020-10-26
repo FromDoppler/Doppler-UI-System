@@ -20,6 +20,7 @@
 
   .dp-pagination {
     display: flex;
+    overflow: hidden;
     flex-wrap: wrap;
     align-items: center;
     justify-content: flex-end;
@@ -51,6 +52,7 @@
       font-size: $dp-sizing--lvl4;
     }
 
+    button,
     a {
       color: $dp-color-grey;
       @extend %pagination-link;
