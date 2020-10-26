@@ -13,3 +13,5 @@ dev/fonts/*
 /assets/fonts/icon-font.*
 /dev/index.html
 /dev/**
+
+/npm-shrinkwrap.json
