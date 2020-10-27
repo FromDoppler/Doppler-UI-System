@@ -61,9 +61,12 @@
 
   .dp-tooltip-top {
     span {
-      width: 170px;
+      max-width: 250px;
+      font-size: $dp-sizing--lvl2;
+      line-height: $dp-spaces--lv3;
       text-align: center;
       display: inline-block;
+      font-weight: normal;
     }
   }
 

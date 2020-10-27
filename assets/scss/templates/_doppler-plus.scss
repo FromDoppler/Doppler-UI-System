@@ -212,6 +212,7 @@
     width: 900px;
     margin: $dp-spaces--lv0 auto;
     display: flex;
+    min-height: 50vh;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
@@ -359,6 +360,8 @@
       color: $dp-color-grey;
       font-weight: normal;
       text-align: left;
+      font-size: $dp-sizing--lvl4;
+      line-height: $dp-spaces--lv4;
     }
 
     ul {
@@ -491,6 +494,13 @@
       p {
         margin-bottom: $dp-spaces--lv3;
         color: $dp-color-darkgrey;
+        font-style: italic;
+      }
+
+      .dp-plan-disclaimer {
+        font-size: $dp-sizing--lvl2;
+        line-height: $dp-spaces--lv3;
+        color: $dp-color-grey;
         font-style: italic;
       }
 
