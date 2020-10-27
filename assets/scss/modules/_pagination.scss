@@ -9,13 +9,14 @@
   %pagination-link {
     padding: $dp-spaces--lv1 $dp-spaces--lv0;
     font-size: $dp-sizing--lvl4;
-    line-height: $dp-sizing--lvl4;
     text-align: center;
     display: inline-block;
-    width: 30px;
-    height: 30px;
+    width: auto;
+    height: 36px;
+    min-width: 36px;
     transition: background-color 0.5s ease;
     position: relative;
+    line-height: 26px;
   }
 
   .dp-pagination {
@@ -37,12 +38,13 @@
       margin: $dp-spaces--lv0;
 
       li {
-        padding: $dp-spaces--lv2 $dp-spaces--lv1;
+        padding: $dp-spaces--lv2 2px;
       }
 
       .dp-active-page {
         background-color: $dp-color-yellow;
         @extend %pagination-link;
+        border-radius: 3px;
       }
     }
 
@@ -56,23 +58,38 @@
     a {
       color: $dp-color-grey;
       @extend %pagination-link;
+      border: 2px solid $dp-color-white;
+      line-height: 15px;
+      width: auto;
+      height: 36px;
+      min-width: 36px;
+      padding: 10px 7px;
 
       &:hover {
-        width: 30px;
-        height: 30px;
         display: inline-block;
-        line-height: 15px;
+        border-radius: 3px;
         border: 2px solid $dp-color-yellow;
       }
+    }
+
+    .icon-arrow-prev:before {
+      position: absolute;
+      top: 9px;
+      left: 10px;
+    }
+    .icon-arrow-next:before {
+      position: absolute;
+      top: 9px;
+      left: 13px;
     }
 
     .dp-pag-point {
       position: relative;
       &:before {
         content: '...';
-        top: 0px;
+        top: 4px;
         position: absolute;
-        left: -7px;
+        left: 8px;
       }
     }
   }
