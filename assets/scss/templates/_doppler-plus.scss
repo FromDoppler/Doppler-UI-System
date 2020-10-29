@@ -85,9 +85,11 @@
   }
 
   .dp-compare-details-plans {
-    margin: $dp-spaces--lv0;
+    margin: $dp-spaces--lv7 auto;
     font-weight: 700;
     cursor: pointer;
+    display: block;
+    width: 300px;
     position: relative;
     font-size: 16px;
     color: $dp-color-grey;
@@ -104,13 +106,19 @@
       width: 5px;
       height: 7px;
       content: '';
-      left: 15px;
-      top: 7px;
-      border-left: solid 4px $dp-color-grey;
-      border-bottom: solid 4px transparent;
-      border-top: solid 4px transparent;
+      left: 30px;
+      top: 9px;
+      border-left: solid 4px transparent;
+      border-right: solid 4px transparent;
+      border-top: solid 4px $dp-color-grey;
       position: absolute;
       transition: all 0.35s;
+    }
+
+    &.dp-open-compare:before {
+      border-top: solid 4px $dp-color-grey;
+      transform: rotateX(180deg);
+      top: 5px;
     }
   }
 

@@ -118,7 +118,8 @@ $(".show-hide").click(function() {
 // Doppler plus - Plans details
     $('.dp-compare-details-plans').on('click', function(e){
       e.preventDefault();
-      $('.tab--content.active .dp-plan-detail').slideToggle();
+      $(this).toggleClass('dp-open-compare');
+      $('.dp-plan-detail').slideToggle();
     });
 
 
