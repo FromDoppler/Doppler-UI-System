@@ -30,7 +30,7 @@
       text-align: center;
       font-family: Arial, Helvetica, sans-serif;
       border-radius: $dp-border-radius;
-      z-index: 1;
+      z-index: 100;
       opacity: 0;
       transition: all 0.4s ease-in-out;
       transform: translate(-50%, -100%);
@@ -47,6 +47,13 @@
       visibility: visible;
       opacity: 1;
     }
+  }
+
+  .dp-tooltip-container {
+    width: auto;
+    position: relative;
+    display: initial;
+    cursor: pointer;
   }
 
   /// tooltip top
@@ -108,13 +115,12 @@
     border-top: 5px solid $dp-color-darkgrey;
     position: absolute;
     bottom: -5px;
-    left: 47%;
+    left: 50%;
   }
 
   .dp-tooltip-container:hover .dp-tooltip-top {
     opacity: 1;
-    z-index: 10;
-    pointer-events: none;
+    z-index: 100;
     transform: translate(-50%, -100%);
   }
 
@@ -237,7 +243,6 @@
   .dp-tooltip-container:hover .dp-tooltip-block {
     opacity: 1;
     z-index: 10;
-    pointer-events: none;
     transform: translate(-50%, -100%) scale(1) rotate(0deg);
   }
 }
