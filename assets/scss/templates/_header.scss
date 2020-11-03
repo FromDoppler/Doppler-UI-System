@@ -409,6 +409,14 @@
     flex-wrap: wrap;
   }
 
+  .user-plan--buyContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+  }
+
   .desktop-hd-hidden {
     display: none;
   }
