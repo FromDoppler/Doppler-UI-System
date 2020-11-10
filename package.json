@@ -39,6 +39,9 @@
     "template": "./assets/scss/libs/webfont/template.css"
   },
   "scripts": {
+    "build": "cross-env-shell ENV=\"dev\" JS=\"main.js\" npm-run-all del makedir-css makedir-js build-p",
+    "build-p": "run-p font-compile  css-compile-all imagemin html  js-minify-dev js-copy-push sassdoc",
+    "build-n-serve": "npm-run-all build serve",
     "copyfiles": "./node_modules/.bin/cpy",
     "css-compile": "npm-run-all css-compile-sass-styles css-prefix-styles css-minify-styles csso-styles",
     "css-compile-all": "npm-run-all css-compile css-compile-editor css-compile-dark csso-dark",
@@ -70,6 +73,7 @@
     "imagemin": "cross-env-shell ./node_modules/.bin/imagemin ./assets/img/* --out-dir ./$ENV/img",
     "js-copy-push": "cross-env-shell npm run copyfiles ./assets/firebasePush.js ./assets/firebase-messaging-sw.js ./$ENV",
     "js-minify-dist": "./node_modules/.bin/uglifyjs ./assets/js/*.js --compress --mangle > ./dist/js/app.js",
+    "js-minify-dev": "./node_modules/.bin/uglifyjs ./assets/js/*.js  --compress --mangle > ./dev/js/main.js",
     "makedir-css": "cross-env-shell make-dir ./$ENV/css",
     "makedir-font": "make-dir ./assets/scss/libs/webfont/compiled",
     "makedir-js": "cross-env-shell make-dir ./$ENV/js",
@@ -77,6 +81,14 @@
     "prettier-check": "prettier-check \"assets/**/*.{css,scss,html}\" \"!assets/scss/libs/**/*.{css,scss}\"",
     "sassdoc": "cross-env-shell sassdoc ./assets/scss/**/*.* -d ./$ENV/documentation",
     "semantic-release": "semantic-release",
+    "serve": "./node_modules/.bin/browser-sync start --server 'dev' -w --files 'dev' --port 3500",
+    "watch": "run-p build-n-serve watch-all",
+    "watch-all": "cross-env-shell ENV=\"dev\" run-p watch-js watch-img watch-font watch-sass watch-html",
+    "watch-font": "onchange -k -v \"assets/icons/*.*\" -- cross-env-shell npm run font-compile",
+    "watch-html": "onchange -k -v \"assets/templates/*.*\" -- cross-env-shell npm run html",
+    "watch-img": "onchange -k -v \"assets/img/*.*\" -- cross-env-shell npm run imagemin",
+    "watch-js": "onchange -k -v \"assets/js/*.js\" \"assets/*.js\" -- npm run js-minify-dev && cross-env-shell npm run js-copy-push",
+    "watch-sass": "onchange -k -v \"assets/scss/*.scss\" -- cross-env-shell npm run css-compile-all",
     "webfont": "node node_modules/webfont/dist/cli.js"
   },
   "prettier": {
@@ -124,6 +136,7 @@
     "node-sass-glob-importer": "^5.3.2",
     "node-sass-magic-importer": "^5.3.2",
     "npm-run-all": "^4.1.5",
+    "onchange": "^7.1.0",
     "postcss": "^8.1.1",
     "postcss-clean": "~1.1.0",
     "postcss-cli": "^8.1.0",
