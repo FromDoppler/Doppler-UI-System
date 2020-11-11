@@ -107,7 +107,7 @@
     "gulp-iconfont-css": "~3.0.0",
     "gulp-imagemin": "~7.1.0",
     "gulp-kraken": "~0.2.0",
-    "gulp-postcss": "~8.0.0",
+    "gulp-postcss": "~9.0.0",
     "gulp-prettier": "^3.0.0",
     "gulp-processhtml": "~1.2.0",
     "gulp-sass": "^4.1.0",
