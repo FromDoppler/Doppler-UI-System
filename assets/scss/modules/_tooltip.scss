@@ -31,6 +31,7 @@
       font-family: Arial, Helvetica, sans-serif;
       border-radius: $dp-border-radius;
       z-index: 100;
+      text-transform: unset;
       opacity: 0;
       transition: all 0.4s ease-in-out;
       transform: translate(-50%, -100%);
@@ -54,17 +55,10 @@
     position: relative;
     display: initial;
     cursor: pointer;
+    text-transform: unset;
   }
 
   /// tooltip top
-
-  @media screen and (max-width: 1365px) {
-    .tabs-wrapper {
-      .dp-tooltip-container {
-        display: none;
-      }
-    }
-  }
 
   .dp-tooltip-top {
     span {
@@ -101,10 +95,6 @@
     transform: translate(-50%, -50%);
     z-index: -1;
     visibility: visible;
-
-    @media screen and (max-width: 1365px) {
-      display: none;
-    }
   }
 
   .dp-tooltip-top:before,
@@ -188,6 +178,7 @@
       cursor: pointer;
       position: relative;
       display: inline-block;
+      text-transform: unset;
     }
   }
   ///
