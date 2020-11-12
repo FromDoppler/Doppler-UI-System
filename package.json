@@ -113,7 +113,7 @@
     "gulp-sass": "^4.1.0",
     "gulp-sass-glob": "^1.1.0",
     "gulp-sftp": "~0.1.5",
-    "gulp-sourcemaps": "~2.6.5",
+    "gulp-sourcemaps": "~3.0.0",
     "gulp-uglify": "^3.0.2",
     "gulp-util": "~3.0.8",
     "gulp-zip": "~5.0.2",
