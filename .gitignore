@@ -15,3 +15,5 @@ dev/fonts/*
 /dev/**
 
 /npm-shrinkwrap.json
+
+/assets/scss/libs/webfont/compiled/template.css

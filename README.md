@@ -44,13 +44,11 @@ Once you downloaded:
 
 - `npm install` to install dependencies
 
-- `gulp run` for running development server and preview
+- `npm run watch` for running development server and preview
 
 - `npm run dist` for generation task (Deploy)
 
-- `gulp build` for define build task
-
-- `gulp doc` to create documentation
+- `npm run build` for define build task
 
 
 This project uses *sass*, *sassdocs*, *javascript* and *JQuery*. Right now we are basing all of our layouts in flex box.
