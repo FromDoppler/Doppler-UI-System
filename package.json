@@ -98,7 +98,7 @@
   },
   "devDependencies": {
     "@semantic-release/exec": "^5.0.0",
-    "autoprefixer": "^10.0.4",
+    "autoprefixer": "^10.1.0",
     "browser-sync": "^2.26.13",
     "clean-css-cli": "^4.3.0",
     "cpy": "^8.1.1",
