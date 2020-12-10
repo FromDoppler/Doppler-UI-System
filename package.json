@@ -87,7 +87,7 @@
     "watch-html": "onchange -k -v \"assets/templates/*.*\" -- cross-env-shell npm run html",
     "watch-img": "onchange -k -v \"assets/img/*.*\" -- cross-env-shell npm run imagemin",
     "watch-js": "onchange -k -v \"assets/js/*.js\" \"assets/*.js\" -- npm run js-minify-dev && cross-env-shell npm run js-copy-push",
-    "watch-sass": "onchange -k -v \"assets/scss/*.scss\" -- cross-env-shell npm run css-compile-all",
+    "watch-sass": "onchange -k -v \"assets/scss/**/*.scss\" -- cross-env-shell npm run css-compile-all",
     "webfont": "node node_modules/webfont/dist/cli.js"
   },
   "prettier": {
