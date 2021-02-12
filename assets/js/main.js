@@ -123,8 +123,7 @@ $(".show-hide").click(function() {
     });
 
 
-    // Slider sample one
-
+// Slider sample one
 $('.progress-bar').each(function(index) {
   $max = $(this).find('.range-slider').attr('max');
   $(this).find('.range-slider').on('change input', function(){
@@ -140,3 +139,22 @@ $('.progress-bar').each(function(index) {
 
 
 
+// Content | Custom field | emojis
+  $('.dp-bd-box .dp-button-bd').on('click', function(){
+    $('.dp-content-bd').hide();
+    $('.dp-button-bd').removeClass('active');
+    $(this).addClass('active');
+    $(this).parent().find('.dp-content-bd').show();
+  });
+
+  $(document).on('click', function (e){
+    var container =  $('.dp-content-bd'),
+    button = $('.dp-button-bd');
+
+      if (!$('.dp-content-bd').is(e.target) && $('.dp-content-bd').has(e.target).length === 0 &&
+      !$('.dp-button-bd').is(e.target) && $('.dp-button-bd').has(e.target).length === 0)
+        {
+            container.hide();
+            $('.dp-button-bd').removeClass('active');
+        }
+  });
