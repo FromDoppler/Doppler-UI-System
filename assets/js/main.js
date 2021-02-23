@@ -158,3 +158,17 @@ $('.progress-bar').each(function(index) {
             $('.dp-button-bd').removeClass('active');
         }
   });
+
+
+  /* RGPD expand results */
+
+  $(".dp-expand-results").on('click', function(e){
+    e.preventDefault();
+    if($(this).hasClass('dp-rgpd-open-results')){
+        $(this).removeClass('dp-rgpd-open-results');
+        $(this).closest('tr').next().removeClass('show');
+      } else{
+        $(this).addClass('dp-rgpd-open-results');
+        $(this).closest('tr').next().addClass('show');
+      }
+  });
