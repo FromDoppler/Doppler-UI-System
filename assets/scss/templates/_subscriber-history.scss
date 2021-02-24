@@ -189,3 +189,21 @@
     }
   }
 }
+
+.dp-cta-links {
+  padding: $dp-spaces--lv5 $dp-spaces--lv0;
+  align-items: center;
+  justify-content: flex-end;
+  display: flex;
+
+  .icon-download {
+    top: -3px;
+    position: relative;
+  }
+
+  a {
+    font-size: $dp-sizing--lvl1;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
