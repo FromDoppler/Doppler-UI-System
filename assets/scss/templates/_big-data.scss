@@ -92,5 +92,38 @@
         }
       }
     }
+
+    .dp-suggestion-bd-wrapper {
+      position: absolute;
+      width: 818px;
+      right: 0;
+      min-height: 360px;
+      margin-top: 12px;
+      border: 1px solid orange;
+      background: #fff;
+      z-index: 2;
+    }
+
+    .bg-suggestion {
+      background: #f6f6f6;
+      margin: 12px 0 0 12px;
+      padding: 12px;
+
+      .tabs-wrapper {
+        margin: 12px 0;
+      }
+
+      p {
+        font-size: $dp-sizing--lvl2;
+      }
+
+      .dp-tips-list {
+ li {
+    margin-bottom: 12px;
+    padding-left: 30px;
+ }
+      }
+
+    }
   }
 }
