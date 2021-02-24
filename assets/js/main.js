@@ -158,3 +158,12 @@ $('.progress-bar').each(function(index) {
             $('.dp-button-bd').removeClass('active');
         }
   });
+
+
+  /* nested table | expand results */
+
+  $(".dp-expand-results").on('click', function(e){
+    e.preventDefault();
+    $(this).toggleClass('dp-open-results')
+    $(this).closest('tr').next().toggleClass('show');
+  });

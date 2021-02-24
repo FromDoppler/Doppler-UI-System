@@ -39,6 +39,23 @@
 
 .dp-library {
   @mixin dp-c-table($bg-color-zebra, $font-size-table, $bg-color-hover) {
+    .dp-expand-results {
+      position: relative;
+      padding: $dp-spaces--lv1 $dp-spaces--lv3 $dp-spaces--lv0 $dp-spaces--lv0;
+
+      .icon-arrow-next {
+        position: absolute;
+        transform: rotate(0deg);
+      }
+
+      &.dp-open-results {
+        .icon-arrow-next {
+          position: absolute;
+          transform: rotate(90deg);
+        }
+      }
+    }
+
     .dp-c-table {
       width: 100%;
       font-size: $font-size-table;
@@ -46,14 +63,31 @@
       border-spacing: $dp-spaces--lv0;
       background: $dp-color-white;
 
+      &.dp-nested-table {
+        tr {
+          border-bottom: 1px solid $dp-color-silver;
+
+          &:nth-child(odd) {
+            background: $dp-color-white;
+          }
+
+          &:nth-child(even) {
+            background: $dp-color-white;
+          }
+
+          &:hover {
+            background: $bg-color-hover;
+          }
+        }
+      }
+
       caption {
-        padding: 30px 12px;
+        padding: $dp-spaces--lv5 $dp-spaces--lv2;
         font-style: italic;
         text-align: left;
       }
 
       th {
-        background: $dp-color-white;
         border-top: 1px solid $dp-color-silver;
         border-bottom: 1px dashed $dp-color-lightgrey;
         font-size: $dp-sizing--lvl1;
@@ -110,6 +144,83 @@
           &:hover {
             background: $bg-color-hover;
           }
+
+          /* nested table */
+
+          &.dp-expanded-table {
+            background: $bg-color-zebra;
+            opacity: 0;
+            visibility: collapse;
+            transition: all 0.3s ease-in-out;
+
+            &.show {
+              opacity: 1;
+              visibility: visible;
+              background: $bg-color-zebra;
+              transition: all 0.3s ease-in-out;
+            }
+
+            .dp-list-results {
+              padding: $dp-spaces--lv2 $dp-spaces--lv0;
+            }
+            .dp-latest-results {
+              position: relative;
+
+              &:before {
+                content: '';
+                position: absolute;
+                right: 0;
+                border-right: 1px solid $dp-color-silver;
+                width: 2px;
+                height: 90%;
+              }
+
+              span {
+                font-style: italic;
+                padding-left: $dp-spaces--lv3;
+              }
+            }
+          }
+
+          .dp-table-results {
+            th {
+              padding: $dp-spaces--lv0 $dp-spaces--lv3 $dp-spaces--lv2;
+              text-align: left;
+              border: none;
+              font-size: $dp-sizing--lvl1;
+              font-style: italic;
+              color: $dp-color-grey;
+              text-transform: none;
+              background: $bg-color-zebra;
+
+              &:before {
+                display: none;
+              }
+            }
+
+            tbody {
+              tr {
+                border-bottom: 1px solid $dp-color-silver;
+
+                &:nth-child(odd) {
+                  background: none;
+                }
+
+                &:nth-child(even) {
+                  background: transparent;
+                }
+
+                &:hover {
+                  background: transparent;
+                }
+              }
+
+              td {
+                vertical-align: top;
+                color: $dp-color-grey;
+              }
+            }
+          }
         }
 
         td {
@@ -117,6 +228,7 @@
           border: $dp-spaces--lv0;
           font-size: $font-size-table;
           position: relative;
+          vertical-align: top;
         }
 
         .sync {
