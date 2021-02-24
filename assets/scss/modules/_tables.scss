@@ -48,7 +48,7 @@
         transform: rotate(0deg);
       }
 
-      &.dp-rgpd-open-results {
+      &.dp-open-results {
         .icon-arrow-next {
           position: absolute;
           transform: rotate(90deg);
@@ -147,7 +147,7 @@
 
           /* RGPD table */
 
-          &.dp-report-rgpd {
+          &.dp-expanded-table {
             background: $bg-color-zebra;
             opacity: 0;
             visibility: collapse;
@@ -160,10 +160,10 @@
               transition: all 0.3s ease-in-out;
             }
 
-            .dp-list-rgpd-results {
+            .dp-list-results {
               padding: $dp-spaces--lv2 $dp-spaces--lv0;
             }
-            .dp-latest-rgpd-results {
+            .dp-latest-results {
               position: relative;
 
               &:before {
@@ -182,16 +182,12 @@
             }
           }
 
-          .dp-table-rgpd {
-            tr {
-              background: none;
-            }
-
+          .dp-table-results {
             th {
               padding: $dp-spaces--lv0 $dp-spaces--lv3 $dp-spaces--lv2;
               text-align: left;
               border: none;
-              font-size: 11px;
+              font-size: $dp-sizing--lvl1;
               font-style: italic;
               color: $dp-color-grey;
               text-transform: none;

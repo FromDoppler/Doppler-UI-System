@@ -164,6 +164,6 @@ $('.progress-bar').each(function(index) {
 
   $(".dp-expand-results").on('click', function(e){
     e.preventDefault();
-    $(this).toggleClass('dp-rgpd-open-results')
+    $(this).toggleClass('dp-open-results')
     $(this).closest('tr').next().toggleClass('show');
   });
