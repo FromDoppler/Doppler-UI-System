@@ -160,7 +160,7 @@ $('.progress-bar').each(function(index) {
   });
 
 
-  /* RGPD expand results */
+  /* nested table | expand results */
 
   $(".dp-expand-results").on('click', function(e){
     e.preventDefault();
