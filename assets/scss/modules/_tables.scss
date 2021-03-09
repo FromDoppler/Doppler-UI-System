@@ -40,18 +40,30 @@
 .dp-library {
   @mixin dp-c-table($bg-color-zebra, $font-size-table, $bg-color-hover) {
     .dp-expand-results {
-      position: relative;
+      position: absolute;
       padding: $dp-spaces--lv1 $dp-spaces--lv3 $dp-spaces--lv0 $dp-spaces--lv0;
+      color: $dp-color-green;
+      left: 0;
+      top: 5px;
+
+      &:focus {
+        outline: 0;
+      }
 
       .icon-arrow-next {
         position: absolute;
         transform: rotate(0deg);
+        width: 20px;
+        top: -5px;
+        left: -4px;
       }
 
       &.dp-open-results {
         .icon-arrow-next {
           position: absolute;
           transform: rotate(90deg);
+          top: -5px;
+          left: -7px;
         }
       }
     }
@@ -62,6 +74,11 @@
       border-collapse: collapse;
       border-spacing: $dp-spaces--lv0;
       background: $dp-color-white;
+
+      .dp-name-text {
+        position: relative;
+        padding-left: 18px;
+      }
 
       &.dp-nested-table {
         tr {
@@ -152,6 +169,22 @@
             opacity: 0;
             visibility: collapse;
             transition: all 0.3s ease-in-out;
+
+            .dp-unexpected-error-table {
+              padding: 30px 66px;
+              font-style: italic;
+
+              .dp-icon-warning {
+                background: url(../img/warning-icon.svg) no-repeat 0 0;
+                background-size: cover;
+                width: 18px;
+                height: 18px;
+                position: absolute;
+                left: 40px;
+                top: 26px;
+                animation: flash 2s infinite;
+              }
+            }
 
             &.show {
               opacity: 1;
