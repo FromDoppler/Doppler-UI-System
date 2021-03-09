@@ -3197,9 +3197,9 @@
       }
     },
     "cpy": {
-      "version": "8.1.1",
-      "resolved": "https://registry.npmjs.org/cpy/-/cpy-8.1.1.tgz",
-      "integrity": "sha512-vqHT+9o67sMwJ5hUd/BAOYeemkU+MuFRsK2c36Xc3eefQpAsp1kAsyDxEDcc5JS1+y9l/XHPrIsVTcyGGmkUUQ==",
+      "version": "8.1.2",
+      "resolved": "https://registry.npmjs.org/cpy/-/cpy-8.1.2.tgz",
+      "integrity": "sha512-dmC4mUesv0OYH2kNFEidtf/skUwv4zePmGeepjyyJ0qTo5+8KhA1o99oIAwVVLzQMAeDJml74d6wPPKb6EZUTg==",
       "dev": true,
       "requires": {
         "arrify": "^2.0.1",
