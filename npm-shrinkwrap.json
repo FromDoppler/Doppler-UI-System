@@ -16547,9 +16547,9 @@
       }
     },
     "sort-css-media-queries": {
-      "version": "1.5.3",
-      "resolved": "https://registry.npmjs.org/sort-css-media-queries/-/sort-css-media-queries-1.5.3.tgz",
-      "integrity": "sha512-2ji2VOHLUKaxsChFCBWHeJz33NJazcqHoKgziA/NWXlc4AyED0409TI+qxxteakPYlRYw7yvDlSBVASaeKckQQ==",
+      "version": "1.5.4",
+      "resolved": "https://registry.npmjs.org/sort-css-media-queries/-/sort-css-media-queries-1.5.4.tgz",
+      "integrity": "sha512-YP5W/h4Sid/YP7Lp87ejJ5jP13/Mtqt2vx33XyhO+IAugKlufRPbOrPlIiEUuxmpNBSBd3EeeQpFhdu3RfI2Ag==",
       "dev": true
     },
     "sort-keys": {
