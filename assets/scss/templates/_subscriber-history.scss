@@ -199,11 +199,18 @@
   .icon-download {
     top: -3px;
     position: relative;
+    color: $dp-color-green;
   }
 
-  a {
+  button {
     font-size: $dp-sizing--lvl1;
     font-weight: bold;
     text-transform: uppercase;
+    color: $dp-color-green;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      color: $dp-color-darkgreen;
+    }
   }
 }
