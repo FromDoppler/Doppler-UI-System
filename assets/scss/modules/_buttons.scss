@@ -321,6 +321,7 @@
   [slider] > div > [inverse-left] {
     position: absolute;
     left: 0;
+    width: 70%;
     height: 5px;
     border-radius: 10px;
     background-color: $dp-color-silver;
@@ -330,6 +331,7 @@
   [slider] > div > [inverse-right] {
     position: absolute;
     right: 0;
+    width: 70%;
     height: 5px;
     border-radius: 10px;
     background-color: $dp-color-silver;
@@ -338,7 +340,8 @@
 
   [slider] > div > [range] {
     position: absolute;
-    left: 0;
+    left: 30%;
+    right: 40%;
     height: 5px;
     border-radius: 14px;
     background-color: $dp-color-green;
@@ -353,8 +356,7 @@
     text-align: left;
     margin-left: -11px;
     cursor: pointer;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
-    background-color: $dp-color-white;
+    background-color: transparent;
     border-radius: 50%;
   }
 
@@ -447,6 +449,14 @@
     align-items: center;
     text-align: center;
     justify-content: center;
+  }
+
+  [slider] > div > [sign-one] {
+    left: 30%;
+  }
+
+  [slider] > div > [sign-two] {
+    left: 60%;
   }
 
   [slider] > div > [sign] > span {
