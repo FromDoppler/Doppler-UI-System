@@ -78,6 +78,7 @@
       .dp-name-text {
         position: relative;
         padding-left: 18px;
+        display: block;
       }
 
       &.dp-nested-table {
@@ -170,6 +171,10 @@
             visibility: collapse;
             transition: all 0.3s ease-in-out;
 
+            span {
+              display: block;
+            }
+
             .dp-unexpected-error-table {
               padding: 30px 66px;
               font-style: italic;
@@ -215,6 +220,11 @@
           }
 
           .dp-table-results {
+            span {
+              display: flex;
+              white-space: nowrap;
+            }
+
             th {
               padding: $dp-spaces--lv0 $dp-spaces--lv3 $dp-spaces--lv2;
               text-align: left;
