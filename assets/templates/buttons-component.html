@@ -479,29 +479,72 @@
                           <span thumb></span>
                           <span thumb></span>
                           <div sign sign-one>
-                            <span>9</span>
+                            <span>7:00</span>
                           </div>
                           <div sign sign-two>
-                            <span>19</span>
+                            <span>15:00</span>
                           </div>
                         </div>
                         <input
-                          id="thumb-1"
+                          id="thumbAnotherHour-1"
                           type="range"
                           tabindex="0"
-                          value="30"
-                          max="100"
+                          value="7"
+                          max="24"
                           min="0"
                           step="1"
+                          class="thumb-1"
+                          data-label=":00"
                         />
                         <input
-                          id="thumb-2"
+                          id="thumbAnotherHour-2"
                           type="range"
                           tabindex="0"
-                          value="60"
-                          max="100"
+                          value="15"
+                          max="24"
                           min="0"
                           step="1"
+                          class="thumb-2"
+                          data-label=":00"
+                        />
+                      </div>
+                      <!-- End Range Slider HTML -->
+                      <!-- Range Slider HTML -->
+                      <div slider id="slider-distance" class="m-b-24">
+                        <div>
+                          <div inverse-left></div>
+                          <div inverse-right></div>
+                          <div range></div>
+                          <span thumb></span>
+                          <span thumb></span>
+                          <div sign sign-one>
+                            <span>7:00</span>
+                          </div>
+                          <div sign sign-two>
+                            <span>15:00</span>
+                          </div>
+                        </div>
+                        <input
+                          id="thumbHour-1"
+                          type="range"
+                          tabindex="0"
+                          value="7"
+                          max="24"
+                          min="0"
+                          step="1"
+                          class="thumb-1"
+                          data-label=":00"
+                        />
+                        <input
+                          id="thumbHour-2"
+                          type="range"
+                          tabindex="0"
+                          value="15"
+                          max="24"
+                          min="0"
+                          step="1"
+                          class="thumb-2"
+                          data-label=":00"
                         />
                       </div>
                       <!-- End Range Slider HTML -->
@@ -521,5 +564,15 @@
     <!-- build:js:dist js/app.js -->
     <script src="./js/main.js"></script>
     <!-- /build -->
+    <script>
+      dopplerUI.createDoubleSlide(
+        document.getElementById('thumbHour-1'),
+        document.getElementById('thumbHour-2'),
+      );
+      dopplerUI.createDoubleSlide(
+        document.getElementById('thumbAnotherHour-1'),
+        document.getElementById('thumbAnotherHour-2'),
+      );
+    </script>
   </body>
 </html>

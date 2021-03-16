@@ -22,6 +22,7 @@
 *       The object that is a wrapper for the PopupMenu DOM element that
 *       contains the menu item DOM element. See PopupMenu.js
 */
+// TODO: add this inside dopplerUI namespace
 var MenuItemLinks = function (domNode, menuObj) {
 
   this.domNode = domNode;

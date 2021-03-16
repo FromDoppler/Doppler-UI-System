@@ -168,27 +168,33 @@ $('.progress-bar').each(function(index) {
     $(this).closest('tr').next().toggleClass('show');
   });
 
+// for all functions use dopplerUI namespace
+var dopplerUI = dopplerUI || {};
+  dopplerUI.createDoubleSlide = function(element1, element2){
 
+    $(element1).on("input",function(){
+      var label = $(this).attr("data-label");
+      var maxThumb = $(this).parent().find(".thumb-2")[0];
+      console.log(this.value + ' '  + (maxThumb.value - 1));
+      this.value= Math.min(this.value, maxThumb.value-1);
+      var totalSteps = parseInt(this.max)-parseInt(this.min);
+      var percent =(100/totalSteps)*parseInt(this.value)-(100/totalSteps)*parseInt(this.min);
+      var $container = $(this).parent();
+      $container.find("div[inverse-left]").css("width",percent+'%');
+      $container.find("div[range]:first,div[sign-one],span[thumb]:first").css("left", percent+'%');
+      $container.find("div[sign-one] span").text(this.value + label);
+    });
 
-  /* Slide double TODO: Refactor this code */
-
-  document.getElementById("thumb-1").addEventListener ( "input", function(){
-    this.value=Math.min(this.value,this.parentNode.childNodes[5].value-1);
-    var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
-    var children = this.parentNode.childNodes[1].childNodes;
-    children[1].style.width=value+'%';
-    children[5].style.left=value+'%';
-    children[7].style.left=value+'%';children[11].style.left=value+'%';
-    children[11].childNodes[1].innerHTML=this.value;
-  });
-
-  document.getElementById("thumb-2").addEventListener ( "input", function(){
-    this.value=Math.max(this.value,this.parentNode.childNodes[3].value-(-1));
-    var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
-    var children = this.parentNode.childNodes[1].childNodes;
-    children[3].style.width=(100-value)+'%';
-    children[5].style.right=(100-value)+'%';
-    children[9].style.left=value+'%';children[13].style.left=value+'%';
-    children[13].childNodes[1].innerHTML=this.value;
-  });
-
+    $(element2).on("input",function(){
+      var label = $(this).attr("data-label");
+      var minThumb = $(this).parent().find(".thumb-1")[0];
+      this.value=Math.max(this.value,minThumb.value-(-1));
+      var totalSteps = parseInt(this.max)-parseInt(this.min);
+      var percent=(100/totalSteps)*parseInt(this.value)-(100/totalSteps)*parseInt(this.min);
+      var $container = $(this).parent();
+      $container.find("div[inverse-right]").css("width",(100 - percent) +'%');
+      $container.find("div[range]:last").css("right",(100-percent)+'%')
+      $container.find("div[sign-two],span[thumb]:last").css("left", percent+'%');
+      $container.find("div[sign-two] span").text(this.value + label);
+    });
+  };
