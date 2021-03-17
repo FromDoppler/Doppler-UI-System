@@ -352,9 +352,8 @@
     top: -12px;
     z-index: 2;
     height: 28px;
-    width: 45px;
+    width: 54px;
     text-align: left;
-    margin-left: -11px;
     cursor: pointer;
     background-color: transparent;
     border-radius: 50%;
@@ -365,8 +364,8 @@
     pointer-events: none;
     -webkit-appearance: none;
     z-index: 3;
-    height: 14px;
-    top: -2px;
+    height: 28px;
+    top: -12px;
     width: 100%;
     -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';
     filter: alpha(opacity=0);
@@ -398,7 +397,7 @@
 
   div[slider] > input[type='range']::-ms-thumb {
     pointer-events: all;
-    width: 28px;
+    width: 54px;
     height: 28px;
     border-radius: 0px;
     border: 0 none;
@@ -406,7 +405,7 @@
 
   div[slider] > input[type='range']::-moz-range-thumb {
     pointer-events: all;
-    width: 28px;
+    width: 54px;
     height: 28px;
     border-radius: 0px;
     border: 0 none;
@@ -414,7 +413,7 @@
 
   div[slider] > input[type='range']::-webkit-slider-thumb {
     pointer-events: all;
-    width: 28px;
+    width: 54px;
     height: 28px;
     border-radius: 0px;
     border: 0 none;

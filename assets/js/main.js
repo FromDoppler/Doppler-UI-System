@@ -175,8 +175,7 @@ var dopplerUI = dopplerUI || {};
     $(element1).on("input",function(){
       var label = $(this).attr("data-label");
       var maxThumb = $(this).parent().find(".thumb-2")[0];
-      console.log(this.value + ' '  + (maxThumb.value - 1));
-      this.value= Math.min(this.value, maxThumb.value-1);
+      this.value= Math.min(this.value, maxThumb.value-2);
       var totalSteps = parseInt(this.max)-parseInt(this.min);
       var percent =(100/totalSteps)*parseInt(this.value)-(100/totalSteps)*parseInt(this.min);
       var $container = $(this).parent();
@@ -188,7 +187,7 @@ var dopplerUI = dopplerUI || {};
     $(element2).on("input",function(){
       var label = $(this).attr("data-label");
       var minThumb = $(this).parent().find(".thumb-1")[0];
-      this.value=Math.max(this.value,minThumb.value-(-1));
+      this.value=Math.max(this.value,minThumb.value-(-2));
       var totalSteps = parseInt(this.max)-parseInt(this.min);
       var percent=(100/totalSteps)*parseInt(this.value)-(100/totalSteps)*parseInt(this.min);
       var $container = $(this).parent();
