@@ -371,6 +371,186 @@
                     </div>
                   </div>
                 </div>
+
+                <div class="col-sm-12 col-md-8 col-lg-6 m-b-12">
+                  <div class="dp-box-shadow dpsg-content-sample">
+                    <div class="buttons-card">
+                      <div class="button-description">
+                        <p class="m-b-18"><strong>Switch</strong></p>
+                      </div>
+
+                      <!-- switch -->
+
+                      <div class="dp-text-switch m-b-12 m-t-24">
+                        <div class="dp-switch">
+                          <input type="checkbox" id="oneCheck" checked />
+                          <label for="oneCheck">
+                            <span></span>
+                          </label>
+                        </div>
+                        <p>
+                          Sólo envíos en franja horaria (tener en cuenta el
+                          horario del país receptor del SMS)
+                        </p>
+                      </div>
+
+                      <div class="dp-text-switch m-b-12">
+                        <div class="dp-switch">
+                          <input type="checkbox" id="twoCheck" checked />
+                          <label for="twoCheck">
+                            <span></span>
+                          </label>
+                        </div>
+                        <p>Sólo envíos de Lunes a Viernes</p>
+                      </div>
+
+                      <div class="dp-text-switch m-b-12">
+                        <div class="dp-switch">
+                          <input type="checkbox" id="threeCheck" />
+                          <label for="threeCheck">
+                            <span></span>
+                          </label>
+                        </div>
+                        <p>
+                          Sólo envíos en franja horaria (tener en cuenta el
+                          horario del país receptor del SMS)
+                        </p>
+                      </div>
+
+                      <div class="dp-text-switch m-b-12">
+                        <div class="dp-switch">
+                          <input type="checkbox" id="fourCheck" checked />
+                          <label for="fourCheck">
+                            <span></span>
+                          </label>
+                        </div>
+                        <p>Sólo envíos de Lunes a Viernes</p>
+                      </div>
+
+                      <div class="dp-text-switch m-b-12">
+                        <div class="dp-switch">
+                          <input type="checkbox" id="fiveCheck" />
+                          <label for="fiveCheck">
+                            <span></span>
+                          </label>
+                        </div>
+                        <p>Sólo envíos de Lunes a Viernes</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-12 col-md-8 col-lg-6 m-b-12">
+                  <div class="dp-box-shadow dpsg-content-sample">
+                    <div class="buttons-card">
+                      <div class="button-description">
+                        <p class="m-b-18"><strong>Slide</strong></p>
+                      </div>
+
+                      <div class="dp-calc-slider progress-bar">
+                        <input
+                          class="range-slider"
+                          type="range"
+                          min="0"
+                          value="0"
+                          max="5"
+                          step="1"
+                          data-value="0"
+                        />
+                        <div class="progress-anchor" style="width: 30%"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-12 col-md-8 col-lg-6 m-b-12">
+                  <div class="dp-box-shadow dpsg-content-sample">
+                    <div class="buttons-card">
+                      <div class="button-description">
+                        <p class="m-b-18"><strong>Slide Double</strong></p>
+                      </div>
+
+                      <!-- Range Slider HTML -->
+                      <div slider id="slider-distance" class="m-b-24">
+                        <div>
+                          <div inverse-left></div>
+                          <div inverse-right></div>
+                          <div range></div>
+                          <span thumb></span>
+                          <span thumb></span>
+                          <div sign sign-one>
+                            <span>7:00</span>
+                          </div>
+                          <div sign sign-two>
+                            <span>15:00</span>
+                          </div>
+                        </div>
+                        <input
+                          id="thumbAnotherHour-1"
+                          type="range"
+                          tabindex="0"
+                          value="7"
+                          max="24"
+                          min="0"
+                          step="1"
+                          class="thumb-1"
+                          data-label=":00"
+                        />
+                        <input
+                          id="thumbAnotherHour-2"
+                          type="range"
+                          tabindex="0"
+                          value="15"
+                          max="24"
+                          min="0"
+                          step="1"
+                          class="thumb-2"
+                          data-label=":00"
+                        />
+                      </div>
+                      <!-- End Range Slider HTML -->
+                      <!-- Range Slider HTML -->
+                      <div slider id="slider-distance" class="m-b-24">
+                        <div>
+                          <div inverse-left></div>
+                          <div inverse-right></div>
+                          <div range></div>
+                          <span thumb></span>
+                          <span thumb></span>
+                          <div sign sign-one>
+                            <span>7:00</span>
+                          </div>
+                          <div sign sign-two>
+                            <span>15:00</span>
+                          </div>
+                        </div>
+                        <input
+                          id="thumbHour-1"
+                          type="range"
+                          tabindex="0"
+                          value="7"
+                          max="24"
+                          min="0"
+                          step="1"
+                          class="thumb-1"
+                          data-label=":00"
+                        />
+                        <input
+                          id="thumbHour-2"
+                          type="range"
+                          tabindex="0"
+                          value="15"
+                          max="24"
+                          min="0"
+                          step="1"
+                          class="thumb-2"
+                          data-label=":00"
+                        />
+                      </div>
+                      <!-- End Range Slider HTML -->
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </article>
@@ -384,5 +564,15 @@
     <!-- build:js:dist js/app.js -->
     <script src="./js/main.js"></script>
     <!-- /build -->
+    <script>
+      dopplerUI.createDoubleSlide(
+        document.getElementById('thumbHour-1'),
+        document.getElementById('thumbHour-2'),
+      );
+      dopplerUI.createDoubleSlide(
+        document.getElementById('thumbAnotherHour-1'),
+        document.getElementById('thumbAnotherHour-2'),
+      );
+    </script>
   </body>
 </html>

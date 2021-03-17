@@ -167,3 +167,33 @@ $('.progress-bar').each(function(index) {
     $(this).toggleClass('dp-open-results')
     $(this).closest('tr').next().toggleClass('show');
   });
+
+// for all functions use dopplerUI namespace
+var dopplerUI = dopplerUI || {};
+  dopplerUI.createDoubleSlide = function(element1, element2){
+
+    $(element1).on("input",function(){
+      var label = $(this).attr("data-label");
+      var maxThumb = $(this).parent().find(".thumb-2")[0];
+      this.value= Math.min(this.value, maxThumb.value-2);
+      var totalSteps = parseInt(this.max)-parseInt(this.min);
+      var percent =(100/totalSteps)*parseInt(this.value)-(100/totalSteps)*parseInt(this.min);
+      var $container = $(this).parent();
+      $container.find("div[inverse-left]").css("width",percent+'%');
+      $container.find("div[range]:first,div[sign-one],span[thumb]:first").css("left", percent+'%');
+      $container.find("div[sign-one] span").text(this.value + label);
+    });
+
+    $(element2).on("input",function(){
+      var label = $(this).attr("data-label");
+      var minThumb = $(this).parent().find(".thumb-1")[0];
+      this.value=Math.max(this.value,minThumb.value-(-2));
+      var totalSteps = parseInt(this.max)-parseInt(this.min);
+      var percent=(100/totalSteps)*parseInt(this.value)-(100/totalSteps)*parseInt(this.min);
+      var $container = $(this).parent();
+      $container.find("div[inverse-right]").css("width",(100 - percent) +'%');
+      $container.find("div[range]:last").css("right",(100-percent)+'%')
+      $container.find("div[sign-two],span[thumb]:last").css("left", percent+'%');
+      $container.find("div[sign-two] span").text(this.value + label);
+    });
+  };
