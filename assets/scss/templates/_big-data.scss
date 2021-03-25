@@ -15,10 +15,34 @@
       color: $dp-color-lightgrey;
       text-transform: uppercase;
       cursor: pointer;
-      z-index: 3;
+      z-index: 2;
+
+      .dp-show-text {
+        min-width: 130px;
+        display: inline-block;
+      }
 
       &:hover {
         color: $dp-color-orange-focus;
+      }
+
+      &:focus {
+        outline: 0;
+      }
+
+      .icon-close {
+        top: -2px;
+        position: relative;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          color: $dp-color-orange-focus;
+        }
+      }
+
+      .rotation {
+        transform: rotate(-45deg);
+        transition: all 0.3s ease-in-out;
       }
     }
 
@@ -46,7 +70,7 @@
       background-color: $dp-color-white;
       box-shadow: inset 0 0 0 3px $dp-color-snow,
         inset 0 0 0 5px $dp-color-orange-focus;
-      z-index: 2;
+      z-index: 3;
     }
 
     .dp-list-cfield {
@@ -259,6 +283,11 @@
           color: $dp-color-darkgrey;
         }
       }
+    }
+  }
+  .field-group {
+    .field-item.dp-advice {
+      display: none;
     }
   }
 }
