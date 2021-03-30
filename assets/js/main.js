@@ -197,3 +197,18 @@ var dopplerUI = dopplerUI || {};
       $container.find("div[sign-two] span").text(this.value + label);
     });
   };
+
+  $('.dp-show-tips').on('click', function(){
+    $(this).closest('.field-item').next('.dp-advice').slideToggle();
+
+    var $showPanelLink = $(this).find('.dp-show-text');
+    if ($(this).find('.icon-close').hasClass('rotation')) {
+      $showPanelLink.html($(this).attr('data-text-hide'));
+      } else {
+        $showPanelLink.html($(this).attr('data-text-show'));
+    }
+    $(this).find('.icon-close').toggleClass('rotation');
+
+  });
+
+

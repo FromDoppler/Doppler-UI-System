@@ -7,6 +7,45 @@
       position: relative;
     }
 
+    .dp-show-tips {
+      position: absolute;
+      font-size: $dp-sizing--lvl1;
+      bottom: -24px;
+      right: 4px;
+      color: $dp-color-lightgrey;
+      text-transform: uppercase;
+      cursor: pointer;
+      z-index: 2;
+
+      .dp-show-text {
+        min-width: 130px;
+        display: inline-block;
+      }
+
+      &:hover {
+        color: $dp-color-orange-focus;
+      }
+
+      &:focus {
+        outline: 0;
+      }
+
+      .icon-close {
+        top: -2px;
+        position: relative;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          color: $dp-color-orange-focus;
+        }
+      }
+
+      .rotation {
+        transform: rotate(-45deg);
+        transition: all 0.3s ease-in-out;
+      }
+    }
+
     .dp-button-group {
       position: absolute;
       right: 0;
@@ -31,7 +70,7 @@
       background-color: $dp-color-white;
       box-shadow: inset 0 0 0 3px $dp-color-snow,
         inset 0 0 0 5px $dp-color-orange-focus;
-      z-index: 2;
+      z-index: 3;
     }
 
     .dp-list-cfield {
@@ -91,6 +130,164 @@
           display: block;
         }
       }
+    }
+  }
+
+  .dp-suggestion-bd-wrapper {
+    position: relative;
+    padding: $dp-spaces--lv5 $dp-spaces--lv2 $dp-spaces--lv2;
+    min-height: 300px;
+    margin-top: $dp-spaces--lv4;
+    border-radius: 3px;
+    border: 1px solid $dp-color-yellow;
+    background: $dp-color-white;
+    z-index: 1;
+
+    &:before {
+      content: '';
+      border: 1px solid $dp-color-yellow;
+      border-bottom-color: $dp-color-white;
+      border-right-color: $dp-color-white;
+      background: $dp-color-white;
+      position: absolute;
+      width: 22px;
+      height: 22px;
+      top: -11px;
+      right: 190px;
+      transform: rotate(45deg);
+    }
+
+    .dp-footer-panel {
+      position: relative;
+      display: flex;
+
+      span {
+        font-size: $dp-sizing--lvl2;
+      }
+    }
+  }
+
+  .bg-suggestion {
+    h4 {
+      text-transform: none;
+      border-bottom: 1px solid $dp-color-yellow;
+      margin-bottom: $dp-spaces--lv2;
+
+      span {
+        font-style: italic;
+        font-weight: normal;
+      }
+    }
+    span {
+      font-size: $dp-sizing--lvl2;
+    }
+
+    p {
+      font-size: $dp-sizing--lvl2;
+    }
+
+    .dp-tips-list {
+      li {
+        margin-bottom: $dp-spaces--lv1;
+        padding-left: $dp-spaces--lv5;
+        position: relative;
+        border-bottom: 1px solid $dp-color-snow;
+        padding-bottom: $dp-spaces--lv1;
+        line-height: 24px;
+
+        &:last-child {
+          border: none;
+        }
+      }
+
+      .advice-enabled {
+        &:before {
+          content: '';
+          position: absolute;
+          left: 0px;
+          top: 4px;
+          width: 20px;
+          height: 20px;
+          background: url('../img/advice-enabled.svg') no-repeat 0 0;
+          color: $dp-color-green;
+        }
+      }
+
+      .advice-disabled {
+        &:before {
+          content: '';
+          position: absolute;
+          left: 0px;
+          top: 4px;
+          width: 20px;
+          height: 20px;
+          background: url('../img/advice-disabled.svg') no-repeat 0 0;
+          color: $dp-color-grey;
+        }
+      }
+
+      .advice-warning {
+        &:before {
+          content: '';
+          position: absolute;
+          left: 0px;
+          top: 4px;
+          width: 20px;
+          height: 20px;
+          background: url('../img/advice-warning.svg') no-repeat 0 0;
+          color: $dp-color-yellow;
+        }
+      }
+    }
+  }
+
+  .dp-more-effective {
+    h4 {
+      text-transform: none;
+      border-bottom: 1px solid $dp-color-yellow;
+      margin-bottom: $dp-spaces--lv2;
+
+      span {
+        font-style: italic;
+        font-weight: normal;
+      }
+    }
+    span {
+      font-size: $dp-sizing--lvl2;
+    }
+
+    p {
+      font-size: $dp-sizing--lvl2;
+    }
+
+    ul {
+      li {
+        margin-bottom: $dp-spaces--lv2;
+        position: relative;
+        border-bottom: 1px solid $dp-color-snow;
+        padding-bottom: $dp-spaces--lv2;
+
+        &:last-child {
+          border: none;
+        }
+
+        .dp-tip {
+          font-style: italic;
+          color: $dp-color-lightgrey;
+        }
+
+        .dp-opening {
+          position: absolute;
+          right: 0;
+          font-weight: bold;
+          color: $dp-color-darkgrey;
+        }
+      }
+    }
+  }
+  .field-group {
+    .field-item.dp-advice {
+      display: none;
     }
   }
 }
