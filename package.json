@@ -128,7 +128,7 @@
     "semantic-release": "^17.4.2",
     "sort-css-media-queries": "^1.5.4",
     "ttf2woff2": "^4.0.2",
-    "uglify-js": "^3.13.2",
+    "uglify-js": "^3.13.3",
     "web-push": "^3.4.4",
     "webfont": "^9.0.0"
   },
