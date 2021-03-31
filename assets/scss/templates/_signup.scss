@@ -85,6 +85,12 @@
           font-family: $dp-font-family-proximanova;
         }
       }
+
+      footer {
+        p {
+          font-size: $dp-sizing--lvl2;
+        }
+      }
     }
 
     .feature-panel {
