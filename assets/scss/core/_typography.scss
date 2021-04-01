@@ -6,6 +6,19 @@
 
 ///
 
+@font-face {
+  font-family: 'hand-of-sean';
+  src: url('../fonts/HandOfSeanPro-webfont.eot');
+  src: url('../fonts/HandOfSeanPro-webfont.eot?#iefix')
+      format('embedded-opentype'),
+    url('../fonts/HandOfSeanPro-webfont.woff2') format('woff2'),
+    url('../fonts/HandOfSeanPro-webfont.woff') format('woff'),
+    url('../fonts/HandOfSeanPro-webfont.ttf') format('truetype');
+  font-weight: $dp-font-weight;
+  font-style: normal;
+  font-display: swap;
+}
+
 .dp-library {
   body {
     font-family: $dp-font-family;
