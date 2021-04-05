@@ -82,11 +82,11 @@
     "semantic-release": "semantic-release",
     "serve": "./node_modules/.bin/browser-sync start --server 'dev' -w --files 'dev' --port 3500",
     "watch": "run-p build-n-serve watch-all",
-    "watch-all": "cross-env-shell ENV=\"dev\" run-p watch-js watch-img watch-font watch-sass watch-html",
+    "watch-all": "cross-env-shell ENV=\"dev\" JS=\"main.js --source-map url='main.js.map',includeSources\" run-p watch-js watch-img watch-font watch-sass watch-html",
     "watch-font": "onchange -k -v \"assets/icons/*.*\" -- cross-env-shell npm run font-compile",
     "watch-html": "onchange -k -v \"assets/templates/*.*\" -- cross-env-shell npm run html",
     "watch-img": "onchange -k -v \"assets/img/*.*\" -- cross-env-shell npm run imagemin",
-    "watch-js": "onchange -k -v \"assets/js/*.js\" \"assets/*.js\" -- npm run js-minify-dev && cross-env-shell npm run js-copy-push",
+    "watch-js": "onchange -k -v \"assets/js/*.js\" \"assets/*.js\" -- npm run js-minify && cross-env-shell npm run js-copy-push",
     "watch-sass": "onchange -k -v \"assets/scss/**/*.scss\" -- cross-env-shell npm run css-compile-all",
     "webfont": "node node_modules/webfont/dist/cli.js"
   },
