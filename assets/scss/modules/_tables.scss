@@ -333,4 +333,24 @@
       overflow-y: visible;
     }
   }
+
+  .dp-blocked-list {
+    display: flex;
+    align-items: center;
+
+    .dp-blocked-comment {
+      margin-left: $dp-spaces--lv2;
+    }
+  }
+
+  .dp-icons-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    a {
+      color: $dp-color-darkgrey;
+      margin: $dp-spaces--lv0 3px;
+    }
+  }
 }
