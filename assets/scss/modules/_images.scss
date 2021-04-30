@@ -94,7 +94,9 @@
   }
 
   .dp-icon-wrapper {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     min-width: 200px;
   }
 

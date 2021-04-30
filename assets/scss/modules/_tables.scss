@@ -310,7 +310,7 @@
 
       th,
       td {
-        padding: $dp-spaces--lv2 $dp-spaces--lv4;
+        padding: $dp-spaces--lv2 $dp-spaces--lv3;
         text-align: left;
       }
     }
@@ -352,5 +352,22 @@
       color: $dp-color-darkgrey;
       margin: $dp-spaces--lv0 3px;
     }
+  }
+
+  .dp-icon-blocked {
+    background-image: url(../img/blocked-list.svg);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-color: #fec4bf;
+    color: #e15147;
+    min-width: 93px;
+    font-size: 9px;
+    height: 18px;
+    padding: 5px 24px 0 6px;
+    max-width: 150px;
+    text-transform: uppercase;
+    border-radius: 3px;
+    overflow: hidden;
+    font-weight: 700;
   }
 }
