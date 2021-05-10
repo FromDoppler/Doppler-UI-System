@@ -1,0 +1,20 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "11:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: gulp
+    versions:
+    - ">= 4.a"
+    - "< 5"
+  - dependency-name: ttf2woff2
+    versions:
+    - ">= 3.a"
+    - "< 4"
+  commit-message:
+    prefix: fix
+    include: scope
