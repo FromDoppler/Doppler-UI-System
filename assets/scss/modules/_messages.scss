@@ -75,4 +75,122 @@
       text-decoration: underline;
     }
   }
+
+  /* Message new */
+
+  .dp-wrap-message {
+    display: flex;
+    border-radius: 3px;
+    align-items: center;
+    justify-content: flex-start;
+    padding: $dp-spaces--lv3;
+    position: relative;
+    overflow: hidden;
+
+    &:before {
+      content: '';
+      position: absolute;
+      height: 100%;
+      left: 0;
+    }
+
+    .dp-message-icon {
+      width: 22px;
+      height: 20px;
+      position: relative;
+      display: table;
+    }
+
+    .dp-content-message {
+      padding-left: $dp-spaces--lv2;
+      width: 100%;
+
+      p {
+        font-size: $dp-sizing--lvl2;
+        line-height: 18px;
+      }
+    }
+
+    .dp-content-partial {
+      display: block;
+    }
+
+    .dp-content-full {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      p {
+        padding-right: $dp-spaces--lv4;
+        margin-bottom: $dp-spaces--lv0;
+      }
+
+      .dp-message-link {
+        margin-top: $dp-spaces--lv0;
+        min-width: 154px;
+      }
+    }
+
+    .dp-message-link {
+      text-transform: uppercase;
+      color: $dp-color-darkgrey;
+      text-decoration: underline;
+      font-size: $dp-sizing--lvl2;
+      text-align: right;
+      margin-top: $dp-spaces--lv2;
+      display: inline-block;
+    }
+  }
+
+  .dp-wrap-success {
+    background-color: $dp-color-green-brightness;
+
+    &:before {
+      border: 3px solid $dp-color-green;
+    }
+
+    .dp-message-icon {
+      background-image: url(../img/message-check-icon.svg);
+      background-repeat: no-repeat;
+    }
+  }
+
+  .dp-wrap-warning {
+    background-color: $dp-color-yellow-brightness;
+
+    &:before {
+      border: 3px solid $dp-color-yellow;
+    }
+
+    .dp-message-icon {
+      background-image: url(../img/message-warning-icon.svg);
+      background-repeat: no-repeat;
+    }
+  }
+
+  .dp-wrap-cancel {
+    background-color: $dp-color-red-brightness;
+
+    &:before {
+      border: 3px solid $dp-color-red;
+    }
+
+    .dp-message-icon {
+      background-image: url(../img/message-cancel-icon.svg);
+      background-repeat: no-repeat;
+    }
+  }
+
+  .dp-wrap-info {
+    background-color: $dp-color-blue-brightness;
+
+    &:before {
+      border: 3px solid $dp-color-blue;
+    }
+
+    .dp-message-icon {
+      background-image: url(../img/message-advice.svg);
+      background-repeat: no-repeat;
+    }
+  }
 }
