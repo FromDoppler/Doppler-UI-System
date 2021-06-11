@@ -560,4 +560,55 @@
     border: 1px solid $dp-color-orange-focus;
     box-shadow: inset 0 0 0 2px $dp-color-orange-focus;
   }
+
+  /* Contact Policy Form */
+
+  .dp-contact-policy-form {
+    .field-item {
+      margin-bottom: $dp-spaces--lv4;
+    }
+    .dp-item-block {
+      display: flex;
+      flex-wrap: wrap;
+
+      div {
+        margin-bottom: $dp-spaces--lv5;
+      }
+    }
+
+    .dp-switch {
+      display: inline-block;
+      position: relative;
+      top: $dp-spaces--lv1;
+      left: $dp-spaces--lv0;
+      margin-bottom: $dp-spaces--lv4;
+    }
+
+    .dp-switch input[type='checkbox']:focus {
+      left: -11px;
+    }
+
+    label {
+      width: auto;
+    }
+
+    input {
+      display: inline-block;
+      width: 40px;
+      padding: $dp-spaces--lv1;
+      margin-left: $dp-spaces--lv1;
+      margin-right: $dp-spaces--lv1;
+      text-align: center;
+    }
+
+    [type='number']::-webkit-inner-spin-button,
+    [type='number']::-webkit-outer-spin-button {
+      height: auto;
+      display: none;
+    }
+
+    .align-button {
+      display: inline-block;
+    }
+  }
 }
