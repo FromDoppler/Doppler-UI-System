@@ -585,7 +585,7 @@
     }
 
     .dp-switch input[type='checkbox']:focus {
-      left: -11px;
+      left: -5px;
     }
 
     label {
@@ -599,6 +599,19 @@
       margin-left: $dp-spaces--lv1;
       margin-right: $dp-spaces--lv1;
       text-align: center;
+      color: $dp-color-grey;
+
+      &::placeholder {
+        color: $dp-color-lightgrey;
+      }
+    }
+
+    input:disabled {
+      background-color: $dp-color-snow;
+    }
+
+    .dp-error-input {
+      border: 1px solid $dp-color-red;
     }
 
     [type='number']::-webkit-inner-spin-button,

@@ -130,12 +130,13 @@
                 <li class="field-item">
                   <div class="dp-item-block">
                     <div>
-                      <span>No enviar mas de 20</span>
+                      <span>No enviar mas de </span>
                       <input
                         type="number"
                         name="number"
                         id="correos electrónicos"
-                        placeholder=""
+                        placeholder="999"
+                        disabled
                       />
                       <span class="m-r-6">emails</span>
                     </div>
@@ -146,12 +147,46 @@
                         type="number"
                         name="number"
                         id="dias"
-                        placeholder=""
+                        placeholder="30"
+                        class="dp-error-input"
                       />
                       <span>días</span>
                     </div>
                   </div>
                 </li>
+                <!-- mensaje de error -->
+                <li class="field-item">
+                  <div class="dp-wrap-message dp-wrap-cancel bounceIn">
+                    <span class="dp-message-icon"></span>
+                    <div class="dp-content-message">
+                      <p>
+                        Puedes configurar hasta
+                        <strong>999 Emails y 30 días</strong> como máximo.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <!-- fin del mensaje -->
+                <!-- mensaje de warning -->
+                <li class="field-item">
+                  <div class="dp-wrap-message dp-wrap-warning bounceIn">
+                    <span class="dp-message-icon"></span>
+                    <div class="dp-content-message">
+                      <p>Ten cuidado.</p>
+                    </div>
+                  </div>
+                </li>
+                <!-- fin del mensaje -->
+                <!-- mensaje de info -->
+                <li class="field-item">
+                  <div class="dp-wrap-message dp-wrap-info bounceIn">
+                    <span class="dp-message-icon"></span>
+                    <div class="dp-content-message">
+                      <p>Mensaje informativo</p>
+                    </div>
+                  </div>
+                </li>
+                <!-- fin del mensaje -->
                 <!-- mensaje de confirmacion -->
                 <li class="field-item">
                   <div class="dp-wrap-message dp-wrap-success bounceIn">
@@ -179,6 +214,7 @@
                         primary-green
                         button--loading
                       "
+                      disabled
                     >
                       Guardar
                     </button>
