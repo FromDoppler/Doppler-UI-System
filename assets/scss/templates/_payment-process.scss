@@ -1,0 +1,83 @@
+.dp-library {
+  .dp-wrapper-payment-process {
+    .dp-accordion {
+      padding-top: 0;
+
+      li {
+        border: 1px solid #ccc;
+        padding: 18px;
+        border-radius: 3px;
+        margin-bottom: 18px;
+        position: relative;
+        width: 95%;
+        margin-left: 25px;
+        min-height: auto;
+        padding-left: 36px;
+
+        &::before {
+          content: '';
+          position: absolute;
+          border-left: 2px solid #ccc;
+          height: 100%;
+          top: 31px;
+          left: -24px;
+        }
+      }
+
+      li:last-child {
+        &::before {
+          content: '';
+          position: absolute;
+          border-left: 0;
+        }
+      }
+
+      .dp-number-item {
+        position: absolute;
+        left: -36px;
+        border-radius: 100%;
+        border: 2px solid #ccc;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ccc;
+        background-color: #fff;
+      }
+
+      .dp-accordion-thumb {
+        font-weight: normal;
+        text-transform: uppercase;
+
+        &:before {
+          border: none;
+        }
+      }
+
+      .dp-form-payment-process {
+
+        padding-left: 6px;
+
+        .field-item {
+          border: 0;
+          padding: 6px;
+          position: relative;
+          display: inline-block;
+          width: 100%;
+          margin-left: 0;
+          margin-bottom: 6px;
+        }
+
+        .field-item--50 {
+          width: 50%;
+        }
+
+        .dropdown-arrow {
+          right: 18px;
+          top: 2.8em;
+        }
+      }
+    }
+  }
+}
