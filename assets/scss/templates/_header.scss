@@ -396,7 +396,6 @@
       margin: 0;
       font-size: $dp-sizing--lvl2;
       padding-top: $dp-spaces--lv2;
-      flex: 50%;
     }
   }
 
@@ -407,6 +406,29 @@
     padding-bottom: $dp-spaces--lv1;
     border-top: 1px solid $dp-border-grey;
     flex-wrap: wrap;
+
+    .dp-request-sent {
+      display: flex;
+      align-items: center;
+      width: 100px;
+
+      a,
+      button {
+        color: $dp-color-darkyellow;
+        text-align: right;
+        margin-right: $dp-spaces--lv1;
+      }
+
+      .icon-info-icon {
+        position: relative;
+        top: 3px;
+      }
+
+      .dp-tooltip-top {
+        top: -7px;
+        left: 20%;
+      }
+    }
   }
 
   .user-plan--buyContainer {
