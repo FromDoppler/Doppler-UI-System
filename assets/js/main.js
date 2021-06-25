@@ -107,13 +107,12 @@ $(".show-hide").click(function() {
     });
 
 // module accordion
-  $('.dp-accordion .dp-accordion-thumb').each(function(index) {
-    $(this).on('click', function(e) {
-        e.preventDefault();
-        $(this).parent().toggleClass('active');
-        $(this).parent().find('.dp-accordion-panel').slideToggle();
-      });
+    $("body").on('click', ".dp-accordion .dp-accordion-thumb", function(e) {
+      e.preventDefault();
+      $(this).parent().toggleClass('active');
+      $(this).parent().find('.dp-accordion-panel').slideToggle();
     });
+
 
 // Doppler plus - Plans details
     $('.dp-compare-details-plans').on('click', function(e){
