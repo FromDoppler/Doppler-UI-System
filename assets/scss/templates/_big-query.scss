@@ -13,30 +13,26 @@
   }
 
   .dp-h-divider {
-    border-top: 1px solid #ccc;
+    border-top: 1px solid $dp-color-silver;
   }
 
   .p-heading {
-    color: #333;
+    color: $dp-color-darkgrey;
   }
 
   .dp-content-left {
     @extend %dp-content;
-    padding-right: 100px;
+    padding-right: $dp-spaces--lv17;
     width: 95%;
     @media screen and (max-width: 769px) {
-      padding-right: 0px;
-    }
-
-    p {
-      color: #333;
+      padding-right: $dp-spaces--lv0;
     }
 
     &:after {
       content: '';
       position: absolute;
-      right: 0;
-      border-right: 1px solid #ccc;
+      right: $dp-spaces--lv0;
+      border-right: 1px solid $dp-color-silver;
       height: 80%;
       top: 18px;
       @media screen and (max-width: 1024px) {
@@ -47,16 +43,16 @@
 
   .dp-content-right {
     @extend %dp-content;
-    padding-left: 100px;
+    padding-left: $dp-spaces--lv17;
     width: 80%;
 
     @media screen and (max-width: 1024px) {
-      padding-left: 0px;
+      padding-left: $dp-spaces--lv0;
       width: 100%;
     }
 
     .dp-screen {
-      margin: 54px 0 0;
+      margin: $dp-spaces--lv9 $dp-spaces--lv0 $dp-spaces--lv0;
 
       img {
         width: 100%;
@@ -70,24 +66,24 @@
     li {
       display: inline-block;
       width: auto;
-      padding: 6px;
+      padding: $dp-spaces--lv1;
     }
 
     .dp-tag {
       background-color: $dp-color-snow;
-      padding: 6px 6px 6px 12px;
+      padding: $dp-spaces--lv1 $dp-spaces--lv1 $dp-spaces--lv1 $dp-spaces--lv2;
       display: flex;
       align-items: center;
       justify-content: space-between;
       width: auto;
       border-radius: 3px;
-      border: 1px solid #fff;
+      border: 1px solid $dp-color-white;
       transition: all 0.3s ease-in-out;
 
       .dp-remove-tag {
-        margin-left: 12px;
+        margin-left: $dp-spaces--lv2;
         color: $dp-color-lightgrey;
-        font-size: 13px;
+        font-size: 12px;
         width: 25px;
         height: 25px;
         cursor: pointer;
@@ -103,7 +99,7 @@
       }
 
       &.dp-recently-add {
-        box-shadow: 0px 0px 4px 1px #33ad73;
+        box-shadow: 0px 0px 4px 1px $dp-color-green;
       }
     }
   }
