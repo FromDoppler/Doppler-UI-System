@@ -624,4 +624,29 @@
       display: inline-block;
     }
   }
+
+  /* BigQuery Cloud Tags */
+
+  .dp-add-tags {
+    margin-top: 30px;
+    width: 100%;
+
+    input {
+      border-style: dashed;
+    }
+
+    .dp-more-tag {
+      color: $dp-color-green;
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      right: 0px;
+      font-size: 24px;
+      font-weight: bold;
+
+      &:hover {
+        color: $dp-color-darkgreen;
+      }
+    }
+  }
 }
