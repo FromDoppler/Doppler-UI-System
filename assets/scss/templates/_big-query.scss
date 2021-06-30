@@ -69,6 +69,42 @@
       padding: $dp-spaces--lv1;
     }
 
+    .dp-add-list {
+      background-color: $dp-color-white;
+      padding: 8px $dp-spaces--lv3 8px $dp-spaces--lv2;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: auto;
+      border-radius: 3px;
+      border: 1px solid $dp-color-silver;
+      color: $dp-color-grey;
+      transition: all 0.3s ease-in-out;
+
+      span {
+        background-color: $dp-color-grey;
+        color: $dp-color-white;
+        border-radius: 100%;
+        width: 18px;
+        height: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 12px;
+        transition: all 0.3s ease-in-out;
+      }
+
+      &:hover {
+        background-color: $dp-color-snow;
+        border: 1px solid $dp-color-silver;
+
+        span {
+          background-color: $dp-color-grey;
+          color: $dp-color-white;
+        }
+      }
+    }
+
     .dp-tag {
       background-color: $dp-color-snow;
       padding: $dp-spaces--lv1 $dp-spaces--lv1 $dp-spaces--lv1 $dp-spaces--lv2;
@@ -100,6 +136,28 @@
 
       &.dp-recently-add {
         box-shadow: 0px 0px 4px 1px $dp-color-green;
+      }
+    }
+
+    &.dp-overlay {
+      opacity: 0.6;
+
+      .dp-tag:hover {
+        border: 1px solid transparent;
+        cursor: default;
+      }
+
+      .dp-remove-tag:hover {
+        border: none;
+        background-color: transparent;
+        cursor: default;
+      }
+
+      .dp-add-list:disabled {
+        background-color: transparent;
+        border: 1px solid $dp-color-grey;
+        color: $dp-color-darkgrey;
+        cursor: default;
       }
     }
   }
