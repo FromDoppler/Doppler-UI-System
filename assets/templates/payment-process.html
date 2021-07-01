@@ -61,7 +61,7 @@
     />
   </head>
 
-  <body data-active-menu="36" class="dp-library">
+  <body data-active-menu="36" class="dp-library dp-bg-snow">
     <div class="dp-container">
       <div class="dp-rowflex">
         <div class="col-sm-12 m-t-24">
@@ -95,10 +95,10 @@
         <div class="col-lg-8 col-md-12 m-b-24">
           <div class="dp-wrapper-payment-process">
             <ul class="dp-accordion">
-              <li class="dp-box-shadow">
-                <span class="dp-number-item">1</span>
+              <li class="dp-box-shadow dp-form-successful">
+                <span class="dp-number-item dp-successful">1</span>
                 <a class="dp-accordion-thumb">INFORMACIÓN DE CONTACTO</a>
-                <div class="dp-accordion-panel" style="display: none">
+                <div class="dp-accordion-panel">
                   <div class="dp-accordion-content">
                     <form class="dp-form-payment-process">
                       <fieldset>
@@ -189,8 +189,19 @@
                               <!-- utilizar la clase dp-validate en el li para mostrar mensajes de validacion -->
                               <li class="field-item field-item--50">
                                 <label for="phone">Estado/Provincia:</label>
-                                <input type="text" name="phone" id="phone-input" placeholder="" class="">
-                                <div class="wrapper-errors dp-message dp-error-form">
+                                <input
+                                  type="text"
+                                  name="phone"
+                                  id="phone-input"
+                                  placeholder=""
+                                  class=""
+                                />
+                                <div
+                                  class="
+                                    wrapper-errors
+                                    dp-message dp-error-form
+                                  "
+                                >
                                   <p class="error-phone-number">
                                     ¡Ouch! Este campo está vacío
                                   </p>
@@ -205,7 +216,12 @@
                                   <option value="">Argentina</option>
                                   <option value="">Argentina</option>
                                 </select>
-                                <div class="wrapper-errors dp-message dp-error-form">
+                                <div
+                                  class="
+                                    wrapper-errors
+                                    dp-message dp-error-form
+                                  "
+                                >
                                   <p>¡Ouch! Este campo está vacío</p>
                                 </div>
                               </li>
@@ -216,22 +232,36 @@
                               <!-- utilizar la clase dp-validate en el li para mostrar mensajes de validacion -->
                               <li class="field-item field-item--50">
                                 <label for="name">Código Postal:</label>
-                                <input type="text" name="name" id="name" placeholder="Tu nombre">
-                                <div class="
+                                <input
+                                  type="text"
+                                  name="name"
+                                  id="name"
+                                  placeholder="Tu nombre"
+                                />
+                                <div
+                                  class="
                                     wrapper-errors
                                     dp-message dp-error-form
-                                  ">
+                                  "
+                                >
                                   <p>¡Ouch! Este campo está vacío</p>
                                 </div>
                               </li>
                               <!-- utilizar la clase dp-validate en el li para mostrar mensajes de validacion -->
                               <li class="field-item field-item--50">
                                 <label for="lastname">Teléfono:</label>
-                                <input type="text" name="lastname" id="lastname" placeholder="Tu apellido">
-                                <div class="
+                                <input
+                                  type="text"
+                                  name="lastname"
+                                  id="lastname"
+                                  placeholder="Tu apellido"
+                                />
+                                <div
+                                  class="
                                     wrapper-errors
                                     dp-message dp-error-form
-                                  ">
+                                  "
+                                >
                                   <p>¡Ouch! Este campo está vacío</p>
                                 </div>
                               </li>
@@ -242,11 +272,20 @@
                               <!-- utilizar la clase dp-validate en el li para mostrar mensajes de validacion -->
                               <li class="field-item field-item--50">
                                 <label for="empresa">Empresa:</label>
-                                <input type="text" name="empresa" id="empresa-input" placeholder="" class="">
-                                <div class="wrapper-errors dp-message dp-error-form">
-                                  <p>
-                                    ¡Ouch! Este campo está vacío
-                                  </p>
+                                <input
+                                  type="text"
+                                  name="empresa"
+                                  id="empresa-input"
+                                  placeholder=""
+                                  class=""
+                                />
+                                <div
+                                  class="
+                                    wrapper-errors
+                                    dp-message dp-error-form
+                                  "
+                                >
+                                  <p>¡Ouch! Este campo está vacío</p>
                                 </div>
                               </li>
                               <li class="field-item field-item--50">
@@ -258,7 +297,12 @@
                                   <option value="">Industria</option>
                                   <option value="">Industria</option>
                                 </select>
-                                <div class="wrapper-errors dp-message dp-error-form">
+                                <div
+                                  class="
+                                    wrapper-errors
+                                    dp-message dp-error-form
+                                  "
+                                >
                                   <p>¡Ouch! Este campo está vacío</p>
                                 </div>
                               </li>
@@ -266,9 +310,12 @@
                           </li>
                           <li class="field-item">
                             <div class="dp-buttons-actions">
-                              <button type="button" class="dp-button button-medium primary-green">
+                              <button
+                                type="button"
+                                class="dp-button button-medium primary-green"
+                              >
                                 Guardar y continuar
-                                </button>
+                              </button>
                             </div>
                           </li>
                         </ul>
@@ -309,7 +356,7 @@
             </ul>
           </div>
         </div>
-        <div class="col-lg-4 col-sm-12">
+        <!-- <div class="col-lg-4 col-sm-12">
           <div class="dp-plans-feature">
             <h4>¿Qué contempla el plan para agencias?:</h4>
             <ul class="dp-feature-list">
@@ -343,8 +390,9 @@
                 >
               </li>
             </ul>
+            <div class="dp-zigzag"></div>
           </div>
-        </div>
+        </div> -->
       </div>
     </section>
 
