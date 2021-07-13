@@ -160,9 +160,8 @@
     .tooltiptext {
       transform: translate(-140%, -50%);
       padding: 12px;
-      min-height: 86px;
       font-size: 13px;
-      height: 100%;
+      height: auto;
       text-transform: initial;
 
       &.transform-left {
