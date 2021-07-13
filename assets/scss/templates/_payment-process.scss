@@ -5,17 +5,17 @@
 
   .dp-wrapper-payment-process {
     .dp-accordion {
-      padding-top: 0;
+      padding-top: $dp-spaces--lv0;
 
       li {
         border: 1px solid $dp-color-silver;
         background-color: $dp-color-white;
-        padding: 18px;
+        padding: $dp-spaces--lv3;
         border-radius: 3px;
-        margin-bottom: 18px;
+        margin-bottom: $dp-spaces--lv3;
         position: relative;
         width: 95%;
-        margin-left: 25px;
+        margin-left: $dp-spaces--lv4;
         min-height: auto;
 
         &::before {
@@ -73,16 +73,16 @@
 
       .dp-form-payment-process,
       .dp-form-billing-information {
-        padding-left: 6px;
+        padding-left: $dp-spaces--lv1;
 
         .field-item {
           border: 0;
-          padding: 6px;
+          padding: $dp-spaces--lv1;
           position: relative;
           display: inline-block;
           width: 100%;
-          margin-left: 0;
-          margin-bottom: 6px;
+          margin-left: $dp-spaces--lv0;
+          margin-bottom: $dp-spaces--lv1;
         }
 
         .field-item--50 {
@@ -116,7 +116,7 @@
         }
 
         .field-item__checkbox label {
-          margin-left: 30px;
+          margin-left: $dp-spaces--lv5;
           width: auto;
         }
       }
