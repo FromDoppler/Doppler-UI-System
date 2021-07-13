@@ -411,22 +411,24 @@
     .dp-request-sent {
       display: flex;
       align-items: center;
-      width: 100px;
 
       a,
       button {
         color: $dp-color-darkyellow;
         text-align: right;
         margin-right: $dp-spaces--lv1;
+        width: 70px;
       }
 
       .icon-info-icon {
         position: relative;
         top: 3px;
+        font-size: 13px;
       }
 
       .tooltiptext {
         top: 6px;
+        font-weight: normal;
       }
     }
   }
