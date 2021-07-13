@@ -1,11 +1,15 @@
 .dp-library {
   &.dp-bg-softgrey {
     background-color: $dp-bg-softgrey;
+  }
+
   .dp-wrapper-payment-process {
     .dp-accordion {
       padding-top: 0;
 
       li {
+        border: 1px solid $dp-color-silver;
+        background-color: $dp-color-white;
         padding: 18px;
         border-radius: 3px;
         margin-bottom: 18px;
@@ -17,9 +21,14 @@
         &::before {
           content: '';
           position: absolute;
+          border-left: 2px solid $dp-color-silver;
           height: 100%;
           top: 31px;
           left: -24px;
+        }
+
+        &.dp-form-successful:before {
+          border-left: 2px solid $dp-color-green;
         }
       }
 
@@ -35,11 +44,22 @@
         position: absolute;
         left: -36px;
         border-radius: 100%;
+        border: 2px solid $dp-color-silver;
         width: 24px;
         height: 24px;
         display: flex;
         align-items: center;
         justify-content: center;
+        color: $dp-color-silver;
+        background-color: $dp-color-white;
+        letter-spacing: 1px;
+
+        &.dp-successful {
+          color: $dp-color-green;
+          background-color: $dp-color-white;
+          border: 2px solid $dp-color-green;
+          transition: all 0.3s ease-in-out;
+        }
       }
 
       .dp-accordion-thumb {
@@ -51,7 +71,8 @@
         }
       }
 
-      .dp-form-payment-process {
+      .dp-form-payment-process,
+      .dp-form-billing-information {
         padding-left: 6px;
 
         .field-item {
@@ -72,7 +93,35 @@
           right: 18px;
           top: 2.8em;
         }
+
+        [type='number']::-webkit-inner-spin-button,
+        [type='number']::-webkit-outer-spin-button {
+          height: 0;
+          display: none;
+        }
+      }
+
+      .dp-form-billing-information {
+        .checkmark {
+          top: 5px;
+          left: 12px;
+        }
+
+        input[type='checkbox'] {
+          left: 12px;
+          &:focus {
+            top: 6px;
+            left: 13px;
+          }
+        }
+
+        .field-item__checkbox label {
+          margin-left: 30px;
+          width: auto;
+        }
       }
     }
   }
+
+  /* zigzag */
 }

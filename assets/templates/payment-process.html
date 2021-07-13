@@ -61,6 +61,7 @@
     />
   </head>
 
+  <body data-active-menu="36" class="dp-library dp-bg-softgrey">
     <div class="dp-container">
       <div class="dp-rowflex">
         <div class="col-sm-12 m-t-24">
@@ -89,11 +90,15 @@
     <section class="dp-container">
       <div class="dp-rowflex">
         <div class="col-sm-12">
+          <h3 class="m-b-24">Proceso de pago</h3>
         </div>
         <div class="col-lg-8 col-md-12 m-b-24">
           <div class="dp-wrapper-payment-process">
             <ul class="dp-accordion">
+              <li class="dp-box-shadow dp-form-successful">
+                <span class="dp-number-item dp-successful">1</span>
                 <a class="dp-accordion-thumb">INFORMACIÓN DE CONTACTO</a>
+                <div class="dp-accordion-panel">
                   <div class="dp-accordion-content">
                     <form class="dp-form-payment-process">
                       <fieldset>
@@ -102,7 +107,8 @@
                           <li class="field-item">
                             <ul class="field-group">
                               <!-- utilizar la clase dp-validate en el li para mostrar mensajes de validacion -->
-                                <label for="name">Nombre:</label>
+                              <li class="field-item field-item--50">
+                                <label for="name">*Nombre:</label>
                                 <input
                                   type="text"
                                   name="name"
@@ -120,7 +126,7 @@
                               </li>
                               <!-- utilizar la clase dp-validate en el li para mostrar mensajes de validacion -->
                               <li class="field-item field-item--50">
-                                <label for="lastname">Apellido:</label>
+                                <label for="lastname">*Apellido:</label>
                                 <input
                                   type="text"
                                   name="lastname"
@@ -142,12 +148,12 @@
                             <ul class="field-group">
                               <!-- utilizar la clase dp-validate en el li para mostrar mensajes de validacion -->
                               <li class="field-item field-item--50">
-                                <label for="name">Dirección:</label>
+                                <label for="address">*Dirección:</label>
                                 <input
                                   type="text"
-                                  name="name"
-                                  id="name"
-                                  placeholder="Tu nombre"
+                                  name="address"
+                                  id="address"
+                                  placeholder="Dirección"
                                 />
                                 <div
                                   class="
@@ -160,12 +166,12 @@
                               </li>
                               <!-- utilizar la clase dp-validate en el li para mostrar mensajes de validacion -->
                               <li class="field-item field-item--50">
-                                <label for="lastname">Ciudad:</label>
+                                <label for="city">*Ciudad:</label>
                                 <input
                                   type="text"
-                                  name="lastname"
-                                  id="lastname"
-                                  placeholder="Tu apellido"
+                                  name="city"
+                                  id="city"
+                                  placeholder="Ciudad"
                                 />
                                 <div
                                   class="
@@ -182,13 +188,14 @@
                             <ul class="field-group">
                               <!-- utilizar la clase dp-validate en el li para mostrar mensajes de validacion -->
                               <li class="field-item field-item--50">
-                                <label for="phone">Estado/Provincia:</label>
+                                <label for="state-province"
+                                  >*Estado/Provincia:</label
+                                >
                                 <input
                                   type="text"
-                                  name="phone"
-                                  id="phone-input"
-                                  placeholder=""
-                                  class=""
+                                  name="state-province"
+                                  id="state-province"
+                                  placeholder="Estado / Provincia"
                                 />
                                 <div
                                   class="
@@ -196,15 +203,13 @@
                                     dp-message dp-error-form
                                   "
                                 >
-                                  <p class="error-phone-number">
-                                    ¡Ouch! Este campo está vacío
-                                  </p>
+                                  <p>¡Ouch! Este campo está vacío</p>
                                 </div>
                               </li>
-                              <li class="field-item field-item--50 error">
-                                <label for="pais">País:</label>
+                              <li class="field-item field-item--50">
+                                <label for="country">*País:</label>
                                 <span class="dropdown-arrow"></span>
-                                <select id="" class="" name="pais">
+                                <select id="" class="" name="country">
                                   <option value="">Argentina</option>
                                   <option value="">Argentina</option>
                                   <option value="">Argentina</option>
@@ -225,12 +230,12 @@
                             <ul class="field-group">
                               <!-- utilizar la clase dp-validate en el li para mostrar mensajes de validacion -->
                               <li class="field-item field-item--50">
-                                <label for="name">Código Postal:</label>
+                                <label for="postal-code">Código Postal:</label>
                                 <input
                                   type="text"
-                                  name="name"
-                                  id="name"
-                                  placeholder="Tu nombre"
+                                  name="postal-code"
+                                  id="postal-code"
+                                  placeholder="Código Postal"
                                 />
                                 <div
                                   class="
@@ -243,12 +248,12 @@
                               </li>
                               <!-- utilizar la clase dp-validate en el li para mostrar mensajes de validacion -->
                               <li class="field-item field-item--50">
-                                <label for="lastname">Teléfono:</label>
+                                <label for="telephone">*Teléfono:</label>
                                 <input
-                                  type="text"
-                                  name="lastname"
-                                  id="lastname"
-                                  placeholder="Tu apellido"
+                                  type="number"
+                                  name="telephone"
+                                  id="telephone"
+                                  placeholder="03516847598"
                                 />
                                 <div
                                   class="
@@ -283,7 +288,7 @@
                                 </div>
                               </li>
                               <li class="field-item field-item--50">
-                                <label for="pais">Industria:</label>
+                                <label for="pais">*Industria:</label>
                                 <span class="dropdown-arrow"></span>
                                 <select id="" class="" name="pais">
                                   <option value="">Industria</option>
@@ -303,11 +308,10 @@
                             </ul>
                           </li>
                           <li class="field-item">
-                            <div class="dp-buttons-actions">
+                            <div class="dp-buttons-actions m-t-12">
                               <button
                                 type="button"
                                 class="dp-button button-medium primary-green"
-                                disabled
                               >
                                 Guardar y continuar
                               </button>
@@ -319,8 +323,8 @@
                   </div>
                 </div>
               </li>
-              <li class="dp-box-shadow">
-                <span class="dp-number-item">2</span>
+              <li class="dp-box-shadow dp-form-successful">
+                <span class="dp-number-item dp-successful">2</span>
                 <a class="dp-accordion-thumb">INFORMACIÓN DE FACTURACIÓN</a>
                 <div class="dp-accordion-panel" style="display: none">
                   <div class="dp-accordion-content">
@@ -329,8 +333,18 @@
                         <legend>INFORMACIÓN DE FACTURACIÓN</legend>
                         <ul class="field-group">
                           <li class="field-item field-item__checkbox">
-                            <input name="Acompañamiento Estratégico" type="checkbox" id="Acompanamiento_estrategico" value="true"><span class="checkmark"></span><label for="Acompanamiento_estrategico">
-                              La información de facturación es la misma que la de contacto.
+                            <input
+                              name="billing-information-same-contact-information"
+                              type="checkbox"
+                              id="billing-information-same-contact-information"
+                              value="true"
+                            />
+                            <span class="checkmark"></span
+                            ><label
+                              for="billing-information-same-contact-information"
+                            >
+                              La información de facturación es la misma que la
+                              de contacto.
                             </label>
                             <div class="dp-message dp-error-form">
                               <p>¡Ouch! Este campo está vacío</p>
@@ -339,12 +353,12 @@
                           <li class="field-item">
                             <ul class="field-group">
                               <!-- utilizar la clase dp-validate en el li para mostrar mensajes de validacion -->
-                              <li class="field-item field-item--50 error">
-                                <label for="name">Nombre:</label>
+                              <li class="field-item field-item--50">
+                                <label for="name-2">*Nombre:</label>
                                 <input
                                   type="text"
-                                  name="name"
-                                  id="name"
+                                  name="name-2"
+                                  id="name-2"
                                   placeholder="Tu nombre"
                                 />
                                 <div
@@ -358,11 +372,11 @@
                               </li>
                               <!-- utilizar la clase dp-validate en el li para mostrar mensajes de validacion -->
                               <li class="field-item field-item--50">
-                                <label for="lastname">Apellido:</label>
+                                <label for="lastname-2">*Apellido:</label>
                                 <input
                                   type="text"
-                                  name="lastname"
-                                  id="lastname"
+                                  name="lastname-2"
+                                  id="lastname-2"
                                   placeholder="Tu apellido"
                                 />
                                 <div
@@ -380,12 +394,12 @@
                             <ul class="field-group">
                               <!-- utilizar la clase dp-validate en el li para mostrar mensajes de validacion -->
                               <li class="field-item field-item--50">
-                                <label for="name">Dirección:</label>
+                                <label for="address-2">*Dirección:</label>
                                 <input
                                   type="text"
-                                  name="name"
-                                  id="name"
-                                  placeholder="Tu nombre"
+                                  name="address-2"
+                                  id="address-2"
+                                  placeholder="Dirección"
                                 />
                                 <div
                                   class="
@@ -398,12 +412,12 @@
                               </li>
                               <!-- utilizar la clase dp-validate en el li para mostrar mensajes de validacion -->
                               <li class="field-item field-item--50">
-                                <label for="lastname">Ciudad:</label>
+                                <label for="city-2">*Ciudad:</label>
                                 <input
                                   type="text"
-                                  name="lastname"
-                                  id="lastname"
-                                  placeholder="Tu apellido"
+                                  name="city-2"
+                                  id="city-2"
+                                  placeholder="Ciudad"
                                 />
                                 <div
                                   class="
@@ -420,13 +434,14 @@
                             <ul class="field-group">
                               <!-- utilizar la clase dp-validate en el li para mostrar mensajes de validacion -->
                               <li class="field-item field-item--50">
-                                <label for="phone">Estado/Provincia:</label>
+                                <label for="state-province-2"
+                                  >*Estado/Provincia:</label
+                                >
                                 <input
                                   type="text"
-                                  name="phone"
-                                  id="phone-input"
-                                  placeholder=""
-                                  class=""
+                                  name="state-province-2"
+                                  id="state-province-2"
+                                  placeholder="Estado / Provincia"
                                 />
                                 <div
                                   class="
@@ -434,15 +449,13 @@
                                     dp-message dp-error-form
                                   "
                                 >
-                                  <p class="error-phone-number">
-                                    ¡Ouch! Este campo está vacío
-                                  </p>
+                                  <p>¡Ouch! Este campo está vacío</p>
                                 </div>
                               </li>
-                              <li class="field-item field-item--50 error">
-                                <label for="pais">País:</label>
+                              <li class="field-item field-item--50">
+                                <label for="country-2">*País:</label>
                                 <span class="dropdown-arrow"></span>
-                                <select id="" class="" name="pais">
+                                <select id="" class="" name="country-2">
                                   <option value="">Argentina</option>
                                   <option value="">Argentina</option>
                                   <option value="">Argentina</option>
@@ -463,12 +476,14 @@
                             <ul class="field-group">
                               <!-- utilizar la clase dp-validate en el li para mostrar mensajes de validacion -->
                               <li class="field-item field-item--50">
-                                <label for="name">Código Postal:</label>
+                                <label for="postal-code-2"
+                                  >Código Postal:</label
+                                >
                                 <input
                                   type="text"
-                                  name="name"
-                                  id="name"
-                                  placeholder="Tu nombre"
+                                  name="postal-code-2"
+                                  id="postal-code-2"
+                                  placeholder="Código Postal"
                                 />
                                 <div
                                   class="
@@ -481,12 +496,12 @@
                               </li>
                               <!-- utilizar la clase dp-validate en el li para mostrar mensajes de validacion -->
                               <li class="field-item field-item--50">
-                                <label for="lastname">Teléfono:</label>
+                                <label for="telephone-2">*Teléfono:</label>
                                 <input
-                                  type="text"
-                                  name="lastname"
-                                  id="lastname"
-                                  placeholder="Tu apellido"
+                                  type="number"
+                                  name="telephone-2"
+                                  id="telephone-2"
+                                  placeholder="03516847598"
                                 />
                                 <div
                                   class="
@@ -500,48 +515,41 @@
                             </ul>
                           </li>
                           <li class="field-item">
-                            <ul class="field-group">
-                              <!-- utilizar la clase dp-validate en el li para mostrar mensajes de validacion -->
-                              <li class="field-item field-item--50">
-                                <label for="empresa">Empresa:</label>
-                                <input
-                                  type="text"
-                                  name="empresa"
-                                  id="empresa-input"
-                                  placeholder=""
-                                  class=""
-                                />
-                                <div
-                                  class="
-                                    wrapper-errors
-                                    dp-message dp-error-form
-                                  "
-                                >
-                                  <p>¡Ouch! Este campo está vacío</p>
-                                </div>
-                              </li>
-                              <li class="field-item field-item--50">
-                                <label for="pais">Industria:</label>
-                                <span class="dropdown-arrow"></span>
-                                <select id="" class="" name="pais">
-                                  <option value="">Industria</option>
-                                  <option value="">Industria</option>
-                                  <option value="">Industria</option>
-                                  <option value="">Industria</option>
-                                </select>
-                                <div
-                                  class="
-                                    wrapper-errors
-                                    dp-message dp-error-form
-                                  "
-                                >
-                                  <p>¡Ouch! Este campo está vacío</p>
-                                </div>
-                              </li>
-                            </ul>
+                            <label for="choose-question"
+                              >*Elige la pregunta que prefieras:</label
+                            >
+                            <span class="dropdown-arrow"></span>
+                            <select id="" class="" name="choose-question">
+                              <option value="">Selecciona una opción</option>
+                              <option value="">Selecciona una opción</option>
+                              <option value="">Selecciona una opción</option>
+                              <option value="">Selecciona una opción</option>
+                            </select>
+                            <div
+                              class="wrapper-errors dp-message dp-error-form"
+                            >
+                              <p>¡Ouch! Este campo está vacío</p>
+                            </div>
                           </li>
                           <li class="field-item">
-                            <div class="dp-buttons-actions">
+                            <label for="answer-chosen-question"
+                              >*Ingresa la respuesta a la pregunta
+                              elegida:</label
+                            >
+                            <input
+                              type="text"
+                              name="answer-chosen-question"
+                              id="answer-chosen-question"
+                              placeholder="Respuesta"
+                            />
+                            <div
+                              class="wrapper-errors dp-message dp-error-form"
+                            >
+                              <p>¡Ouch! Este campo está vacío</p>
+                            </div>
+                          </li>
+                          <li class="field-item">
+                            <div class="dp-buttons-actions m-t-12">
                               <button
                                 type="button"
                                 class="dp-button button-medium primary-green"
