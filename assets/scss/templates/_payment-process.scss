@@ -53,6 +53,9 @@
         color: $dp-color-silver;
         background-color: $dp-color-white;
         letter-spacing: 1px;
+        font-size: 15px;
+        font-weight: bold;
+        line-height: 18px;
 
         &.dp-successful {
           color: $dp-color-green;
