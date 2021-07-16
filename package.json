@@ -107,7 +107,7 @@
     "css-mqpacker": "~7.0.0",
     "csso-cli": "^3.0.0",
     "del": "^6.0.0",
-    "del-cli": "^4.0.0",
+    "del-cli": "^4.0.1",
     "eclint": "^2.8.1",
     "express": "^4.17.1",
     "htmlprocessor": "^0.3.1",
