@@ -88,4 +88,12 @@
   .modal-content--large {
     max-width: 800px;
   }
+
+  .dp-iconmodal-center {
+    display: flex;
+    margin: 24px auto;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
 }
