@@ -14,7 +14,6 @@
         border-radius: 3px;
         margin-bottom: $dp-spaces--lv3;
         position: relative;
-        width: 95%;
         margin-left: $dp-spaces--lv4;
         min-height: auto;
 
@@ -68,6 +67,7 @@
       .dp-accordion-thumb {
         font-weight: normal;
         text-transform: uppercase;
+        padding-left: 12px;
 
         &:before {
           border: none;
@@ -75,21 +75,26 @@
       }
 
       .dp-form-payment-process,
-      .dp-form-billing-information {
-        padding-left: $dp-spaces--lv1;
+      .dp-form-billing-information,
+      .dp-form-payment-method {
+        padding-left: $dp-spaces--lv0;
 
         .field-item {
           border: 0;
-          padding: $dp-spaces--lv1;
+          padding: $dp-spaces--lv0;
+          padding-right: 6px;
+          padding-top: 6px;
+          padding-top: 6px;
           position: relative;
           display: inline-block;
-          width: 100%;
           margin-left: $dp-spaces--lv0;
           margin-bottom: $dp-spaces--lv1;
-        }
 
-        .field-item--50 {
-          width: 50%;
+          .field-group > li:nth-of-type() {
+            padding: 18px;
+            border: 1px solid red;
+          }
+
         }
 
         .dropdown-arrow {
@@ -123,7 +128,174 @@
           width: auto;
         }
       }
+
+
+  /* radio */
+
+  .dp-radio-input {
+    background: $dp-color-ghostwhite;
+    padding: $dp-spaces--lv0;
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+    margin-bottom: 18px;
+
+    li {
+      display: inline-block;
+      border: none;
+      margin: $dp-spaces--lv0;
     }
+
+    .dp-volume-option {
+      margin: $dp-spaces--lv1;
+      display: inline-block;
+      max-width: 170px;
+      height: 30px;
+      position: relative;
+
+      .dp-wrapper-volume-options {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      label {
+        display: flex;
+        cursor: pointer;
+        font-weight: 500;
+        position: relative;
+        overflow: hidden;
+        outline: 0;
+        border: 1px solid transparent;
+        box-shadow: inset 0 0 0 2px transparent;
+
+        &:focus-within {
+          outline: 0;
+          border: 1px solid $dp-color-orange-focus;
+          box-shadow: inset 0 0 0 2px $dp-color-orange-focus;
+        }
+
+        input {
+          position: absolute;
+          left: -9999px;
+
+          &:checked + span {
+            &:before {
+              box-shadow: inset 0 0 0 7px $dp-color-green;
+            }
+          }
+
+          &:disabled + span {
+            &:before {
+              outline: 0;
+              border: 1px solid $dp-color-snow;
+              box-shadow: inset 0 0 0 4px $dp-color-snow;
+            }
+          }
+        }
+
+        span {
+          display: flex;
+          align-items: center;
+          padding: $dp-spaces--lv1;
+          border-radius: 100%;
+          transition: 0.25s ease-in-out;
+
+          &:before {
+            display: flex;
+            flex-shrink: 0;
+            content: '';
+            background-color: $dp-color-white;
+            width: 1.5em;
+            height: 1.5em;
+            border-radius: 100%;
+            margin-right: $dp-spaces--lv1;
+            transition: 0.25s ease;
+            box-shadow: inset 0 0 0 2px $dp-color-lightgrey;
+          }
+        }
+      }
+    }
+  }
+
+  .dp-wrap-subscription {
+    padding: 12px 0 0;
+    width: 60%;
+    margin-bottom: 24px;
+
+    ul {
+      padding: 6px;
+
+      li {
+        border: none;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center
+
+        
+
+      }
+
+      button {
+        min-width: 100px;
+      }
+
+    }
+
+  }
+
+.dp-credit-card-details {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+  .dp-w--55 {
+    width: 55%;
+    padding-left: 6px;
+  }
+
+  .dp-w--40 {
+    width: 40%;
+  }
+
+  .dp-credit-card {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+
+
+
+
+    }
+  }
+
+  /* CTA align in form */
+
+  .dp-buttons-actions {
+    padding-left: 6px;
+  }
+
+  .dp-cta-left {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .dp-cta-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .dp-cta-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
   }
 
   /* zigzag */
