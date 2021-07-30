@@ -101,7 +101,7 @@
         <div class="col-sm-12">
           <h3 class="m-b-24">Proceso de pago</h3>
         </div>
-        <div class="col-md-7 m-b-24">
+        <div class="col-md-12 col-lg-7 m-b-24">
           <div class="dp-wrapper-payment-process">
             <ul class="dp-accordion">
               <li class="dp-box-shadow dp-form-successful">
@@ -109,6 +109,9 @@
                 <a class="dp-accordion-thumb" href="#"
                   >INFORMACIÓN DE CONTACTO</a
                 >
+                <a href="#" class="dp-edit-form" title="Editar formulario"
+                  ><span class="ms-icon icon-edit"></span
+                ></a>
                 <div class="dp-accordion-panel">
                   <div class="dp-accordion-content">
                     <form class="dp-form-payment-process">
@@ -339,6 +342,9 @@
                 <a class="dp-accordion-thumb" href="#"
                   >INFORMACIÓN DE FACTURACIÓN</a
                 >
+                <a href="#" class="dp-edit-form" title="Editar formulario"
+                  ><span class="ms-icon icon-edit"></span
+                ></a>
                 <div class="dp-accordion-panel" style="display: none">
                   <div class="dp-accordion-content">
                     <form class="dp-form-billing-information">
@@ -580,6 +586,9 @@
               <li class="dp-box-shadow">
                 <span class="dp-number-item">3</span>
                 <a class="dp-accordion-thumb" href="#">MÉTODO DE PAGO</a>
+                <a href="#" class="dp-edit-form" title="Editar formulario"
+                  ><span class="ms-icon icon-edit"></span
+                ></a>
                 <div class="dp-accordion-panel" style="display: none">
                   <div class="dp-accordion-content">
                     <form class="dp-form-payment-method">
@@ -591,7 +600,7 @@
                               <li>
                                 <div class="dp-volume-option">
                                   <label>
-                                    <input type="radio" name="radio">
+                                    <input type="radio" name="radio" />
                                     <span>Tarjeta de Crédito</span>
                                   </label>
                                 </div>
@@ -599,7 +608,7 @@
                               <li>
                                 <div class="dp-volume-option">
                                   <label>
-                                    <input type="radio" name="radio">
+                                    <input type="radio" name="radio" />
                                     <span>Transferencia</span>
                                   </label>
                                 </div>
@@ -607,254 +616,191 @@
                               <li>
                                 <div class="dp-volume-option" checked="">
                                   <label>
-                                    <input type="radio" name="radio" checked="">
-                                    <span><img src="img/mercado-pago.svg" alt="Mercado pago"></span>
+                                    <input
+                                      type="radio"
+                                      name="radio"
+                                      checked=""
+                                    />
+                                    <span
+                                      ><img
+                                        src="img/mercado-pago.svg"
+                                        alt="Mercado pago"
+                                    /></span>
                                   </label>
                                 </div>
                               </li>
                             </ul>
                           </li>
-                         
 
-                          <!-- Credit card -->
-                            <li class="field-item">
-                                <ul class="field-group">
-
-                                  <li class="field-item">
-                                    <div class="dp-credit-card-details">
-                                      <div class="dp-w--55">
-                                        <ul class="field-group">
-                                          <li
-                                            class="field-item field-item--70"
-                                          >
-                                            <label for="credit card number"
-                                              >*Tarjeta de credito</label
-                                            ><input
-                                              type="number"
-                                              name="credit card number"
-                                              placeholder="Numero de tarjeta"
-                                              value=""
-                                            />
-                                          </li>
-                                          <li
-                                            class="field-item field-item--30"
-                                          >
-                                            <label for="expiry"
-                                              >*Expiracion</label
-                                            ><input
-                                              name="expiry"
-                                              type="number"
-                                              placeholder="MM/YY"
-                                              value="12/25"
-                                            />
-                                          </li>
-                                          <li
-                                              class="field-item field-item--70"
-                                            >
-                                              <label for="name surname titular"
-                                                >*Nombre y Apellido del titular</label
-                                              ><input
-                                                type="text"
-                                                name="name surname titular"
-                                                id="cardholder"
-                                                placeholder="Titular de la cuenta"
-                                                value="GUS BAAMONDE"
-                                              />
-                                            </li>
-                                            <li
-                                              class="field-item field-item--30"
-                                            >
-                                              <label for="number cvv"
-                                                >*CVV</label
-                                              ><input
-                                                type="number"
-                                                name="number cvv"
-                                                id="cvv"
-                                                placeholder="948"
-                                                value=""
-                                              />
-                                            </li>
-                                        </ul>
-
-                                      </div><!-- 60 -->
-                                      <div class="dp-credit-card">
-                                        <div class="rccs">
-                                          <div
-                                            class="
-                                              rccs__card rccs__card--unknown
-                                            "
-                                          >
-                                            <div class="rccs__card--front">
-                                              <div
-                                                class="rccs__card__background"
-                                              ></div>
-                                              <div class="rccs__issuer"></div>
-                                              <div class="rccs__cvc__front">
-                                                1234
-                                              </div>
-                                              <div class="rccs__number">
-                                                •••• •••• •••• ••••
-                                              </div>
-                                              <div
-                                                class="
-                                                  rccs__name rccs--filled
-                                                "
-                                              >
-                                                GUS BAAMONDE
-                                              </div>
-                                              <div
-                                                class="
-                                                  rccs__expiry rccs--filled
-                                                "
-                                              >
-                                                <div
-                                                  class="rccs__expiry__valid"
-                                                >
-                                                  valid thru
-                                                </div>
-                                                <div
-                                                  class="rccs__expiry__value"
-                                                >
-                                                  12/25
-                                                </div>
-                                              </div>
-                                              <div class="rccs__chip"></div>
-                                            </div>
-                                            <div class="rccs__card--back">
-                                              <div
-                                                class="rccs__card__background"
-                                              ></div>
-                                              <div class="rccs__stripe"></div>
-                                              <div
-                                                class="rccs__signature"
-                                              ></div>
-                                              <div class="rccs__cvc">
-                                                1234
-                                              </div>
-                                              <div class="rccs__issuer"></div>
-                                            </div>
-                                          </div>
+                          <li class="field-item field-credit-card">
+                            <div class="campos">
+                              <div class="dp-field-inputs">
+                                <div class="campo-izq" style="flex: 1">
+                                  <label for="credit card number"
+                                    >*Tarjeta de credito</label
+                                  ><input
+                                    type="number"
+                                    name="credit card number"
+                                    placeholder="Numero de tarjeta"
+                                    value=""
+                                  />
+                                </div>
+                                <div class="dp--expiry">
+                                  <label for="expiry">*Expiracion</label
+                                  ><input
+                                    name="expiry"
+                                    type="number"
+                                    placeholder="MM/YY"
+                                    value="12/25"
+                                  />
+                                </div>
+                              </div>
+                              <div class="dp-field-inputs">
+                                <div class="campo-izq" style="flex: 1">
+                                  <label for="name surname titular"
+                                    >*Nombre y Apellido del titular</label
+                                  ><input
+                                    type="text"
+                                    name="name surname titular"
+                                    id="cardholder"
+                                    placeholder="Titular de la cuenta"
+                                    value="GUS BAAMONDE"
+                                  />
+                                </div>
+                                <div class="dp--cvv">
+                                  <label for="number cvv">*CVV</label
+                                  ><input
+                                    type="number"
+                                    name="number cvv"
+                                    id="cvv"
+                                    placeholder="948"
+                                    value=""
+                                    class="dp-cvv"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                            <div class="tarjeta">
+                              <div class="dp-credit-card">
+                                <div class="rccs">
+                                  <div class="rccs__card rccs__card--unknown">
+                                    <div class="rccs__card--front">
+                                      <div class="rccs__card__background"></div>
+                                      <div class="rccs__issuer"></div>
+                                      <div class="rccs__cvc__front">1234</div>
+                                      <div class="rccs__number">
+                                        •••• •••• •••• ••••
+                                      </div>
+                                      <div class="rccs__name rccs--filled">
+                                        GUS BAAMONDE
+                                      </div>
+                                      <div class="rccs__expiry rccs--filled">
+                                        <div class="rccs__expiry__valid">
+                                          valid thru
                                         </div>
-                                      </div><!-- 40 -->
+                                        <div class="rccs__expiry__value">
+                                          12/25
+                                        </div>
+                                      </div>
+                                      <div class="rccs__chip"></div>
                                     </div>
-                                  </li>
-
-                                    <li class="field-item" style="display: none;">
-                                      <div class="rccs">
-                                        <div
-                                          class="rccs__card rccs__card--visa"
-                                        >
-                                          <div class="rccs__card--front">
-                                            <div
-                                              class="rccs__card__background"
-                                            ></div>
-                                            <div class="rccs__issuer"></div>
-                                            <div class="rccs__cvc__front">
-                                              ***
-                                            </div>
-                                            <div
-                                              class="rccs__number rccs--filled"
-                                            >
-                                              **** **** **** 1111
-                                            </div>
-                                            <div
-                                              class="rccs__name rccs--filled"
-                                            >
-                                              Juan Perez
-                                            </div>
-                                            <div
-                                              class="rccs__expiry rccs--filled"
-                                            >
-                                              <div class="rccs__expiry__valid">
-                                                valid thru
-                                              </div>
-                                              <div class="rccs__expiry__value">
-                                                12/25
-                                              </div>
-                                            </div>
-                                            <div class="rccs__chip"></div>
-                                          </div>
-                                          <div class="rccs__card--back">
-                                            <div
-                                              class="rccs__card__background"
-                                            ></div>
-                                            <div class="rccs__stripe"></div>
-                                            <div class="rccs__signature"></div>
-                                            <div class="rccs__cvc">***</div>
-                                            <div class="rccs__issuer"></div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </li>
-                                    <li class="field-item">
-                                      <label>Tipo de renovación:</label>
-                                      
-                                          <div class="dp-wrap-subscription">
-                                            <ul>
-                                              <li>
-                                                <button
-                                                  type="button"
-                                                  class="dp-button button-medium"
-                                                >
-                                                  Mensual
-                                                </button>
-                                              </li>
-                                              <li>
-                                                <button
-                                                  type="button"
-                                                  class="dp-button button-medium"
-                                                >
-                                                  Trimestral
-                                                </button>
-                                                <span class="dp-discount">5% off</span>
-                                              </li>
-                                              <li>
-                                                <button
-                                                  type="button"
-                                                  class="dp-button button-medium"
-                                                >
-                                                  Semestral
-                                                </button>
-                                                <span class="dp-discount">15% off</span>
-                                              </li>
-                                              <li>
-                                                <button
-                                                  type="button"
-                                                  class="
-                                                    dp-button
-                                                    button-medium
-                                                    btn-active
-                                                  "
-                                                >
-                                                  Anual
-                                                </button>
-                                                <span class="dp-discount">25% off</span>
-                                              </li>
-                                            </ul>
-                                          </div>
-                                        
-                                    </li>
-                                    <li class="field-item field-item--0">
-                                      <div class="dp-buttons-actions m-t-12">
-                                        <button
-                                          type="button"
-                                          class="dp-button button-medium primary-green"
-                                        >
-                                          Guardar y continuar
-                                        </button>
-                                      </div>
-                                    </li>
-                                  </ul>
-
-
-
-                                  
-
-
+                                    <div class="rccs__card--back">
+                                      <div class="rccs__card__background"></div>
+                                      <div class="rccs__stripe"></div>
+                                      <div class="rccs__signature"></div>
+                                      <div class="rccs__cvc">1234</div>
+                                      <div class="rccs__issuer"></div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- 40 -->
+                            </div>
                           </li>
-                          
+                          <li class="field-item" style="display: block">
+                            <div class="rccs">
+                              <div class="rccs__card rccs__card--visa">
+                                <div class="rccs__card--front">
+                                  <div class="rccs__card__background"></div>
+                                  <div class="rccs__issuer"></div>
+                                  <div class="rccs__cvc__front">***</div>
+                                  <div class="rccs__number rccs--filled">
+                                    **** **** **** 1111
+                                  </div>
+                                  <div class="rccs__name rccs--filled">
+                                    Juan Perez
+                                  </div>
+                                  <div class="rccs__expiry rccs--filled">
+                                    <div class="rccs__expiry__valid">
+                                      valid thru
+                                    </div>
+                                    <div class="rccs__expiry__value">12/25</div>
+                                  </div>
+                                  <div class="rccs__chip"></div>
+                                </div>
+                                <div class="rccs__card--back">
+                                  <div class="rccs__card__background"></div>
+                                  <div class="rccs__stripe"></div>
+                                  <div class="rccs__signature"></div>
+                                  <div class="rccs__cvc">***</div>
+                                  <div class="rccs__issuer"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="field-item">
+                            <label>Tipo de renovación:</label>
 
-                          
+                            <div class="dp-wrap-subscription">
+                              <ul>
+                                <li>
+                                  <button
+                                    type="button"
+                                    class="dp-button button-medium"
+                                  >
+                                    Mensual
+                                  </button>
+                                </li>
+                                <li>
+                                  <button
+                                    type="button"
+                                    class="dp-button button-medium"
+                                  >
+                                    Trimestral
+                                  </button>
+                                  <span class="dp-discount">5% off</span>
+                                </li>
+                                <li>
+                                  <button
+                                    type="button"
+                                    class="dp-button button-medium"
+                                  >
+                                    Semestral
+                                  </button>
+                                  <span class="dp-discount">15% off</span>
+                                </li>
+                                <li>
+                                  <button
+                                    type="button"
+                                    class="dp-button button-medium btn-active"
+                                  >
+                                    Anual
+                                  </button>
+                                  <span class="dp-discount">25% off</span>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li class="field-item">
+                            <div class="dp-buttons-actions m-t-12">
+                              <button
+                                type="button"
+                                class="dp-button button-medium primary-green"
+                              >
+                                Guardar y continuar
+                              </button>
+                            </div>
+                          </li>
                         </ul>
                       </fieldset>
                     </form>
@@ -864,10 +810,15 @@
             </ul>
           </div>
         </div>
-         <div class="col-lg-4 col-sm-12 m-l-24">
-          <div class="dp-plans-feature">
-            <h4>¿Qué contempla el plan para agencias?:</h4>
-            <ul class="dp-feature-list">
+        <div class="dp-space-l24"></div>
+        <div class="col-lg-4 col-sm-12">
+          <div class="dp-hiring-summary">
+            <header class="dp-header-summary">
+              <h6>RESUMEN DE CONTRATACIÓN</h6>
+              <a href="#">Editar</a>
+            </header>
+            <h3>Plan STANDARD - por Contactos</h3>
+            <ul class="dp-summary-list">
               <li>
                 <span class="dp-icostar"></span>
                 <span><strong>Acompañamiento Estratégico.</strong></span>
@@ -898,9 +849,16 @@
                 >
               </li>
             </ul>
-            <div class="dp-zigzag"></div>
+            <div class="dp-zigzag-top"></div>
+            <div class="dp-zigzag-bottom"></div>
           </div>
-        </div> 
+
+          <div class="dp-zigzag"></div>
+
+          <button type="button" class="dp-button button-big primary-green">
+            Guardar y continuar
+          </button>
+        </div>
       </div>
     </section>
 
