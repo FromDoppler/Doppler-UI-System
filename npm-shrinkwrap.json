@@ -15170,21 +15170,10 @@
       }
     },
     "sort-css-media-queries": {
-      "version": "2.0.3",
-      "resolved": "https://registry.npmjs.org/sort-css-media-queries/-/sort-css-media-queries-2.0.3.tgz",
-      "integrity": "sha512-2F28GjxS2V/VWhSJ3RpR36wnW/wbA1RukWuOL8uJRsLjI8Y3qW9TQSY6rCEdqaMwZe2wpm+3DAZYvktkbER3Cw==",
-      "dev": true,
-      "requires": {
-        "mkdirp": "^1.0.4"
-      },
-      "dependencies": {
-        "mkdirp": {
-          "version": "1.0.4",
-          "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.4.tgz",
-          "integrity": "sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==",
-          "dev": true
-        }
-      }
+      "version": "2.0.4",
+      "resolved": "https://registry.npmjs.org/sort-css-media-queries/-/sort-css-media-queries-2.0.4.tgz",
+      "integrity": "sha512-PAIsEK/XupCQwitjv7XxoMvYhT7EAfyzI3hsy/MyDgTvc+Ft55ctdkctJLOy6cQejaIC+zjpUL4djFVm2ivOOw==",
+      "dev": true
     },
     "sort-keys": {
       "version": "1.1.2",
