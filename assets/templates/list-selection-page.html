@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>UI library Doppler - List selection page</title>
+    <meta name="keywords" content="UI library Doppler - List selection page" />
+    <meta name="description" content="List selection page" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="canonical" href="" />
+    <!-- Open Graph metatags -->
+    <meta property="og:title" content="List selection page" />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="List selection page" />
+    <meta property="og:url" content="List selection page" />
+    <meta property="og:description" content="List selection page" />
+    <meta property="og:site_name" content="List selection page" />
+    <!-- Stylesheets and polyfills -->
+    <!-- Font Proxima Nova -->
+    <link rel="stylesheet" href="https://use.typekit.net/fbq8dbp.css" />
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+    <!-- Favicons -->
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="144x144"
+      href="https://www.fromdoppler.com/apple-touch-icon-144x144-precomposed.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="114x114"
+      href="https://www.fromdoppler.com/apple-touch-icon-114x114-precomposed.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="72x72"
+      href="https://www.fromdoppler.com/apple-touch-icon-72x72-precomposed.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="57x57"
+      href="https://www.fromdoppler.com/apple-touch-icon-57x57-precomposed.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      href="https://www.fromdoppler.com/apple-touch-icon-precomposed.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="https://www.fromdoppler.com/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://www.fromdoppler.com/favicon.ico"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="https://www.fromdoppler.com/favicon.ico"
+    />
+  </head>
+
+  <body data-active-menu="37" class="dp-library">
+    <div class="dp-container">
+      <div class="dp-rowflex">
+        <div class="col-sm-12 m-t-24">
+          <header class="m-b-30">
+            <a
+              href="index.html"
+              class="dp-button button-medium secondary-green button--round"
+            >
+              Back
+            </a>
+          </header>
+        </div>
+      </div>
+    </div>
+
+    <header class="hero-banner">
+      <div class="dp-container">
+        <div class="dp-rowflex">
+          <div class="col-sm-12 col-md-12 col-lg-12">
+            <nav class="dp-breadcrumb">
+              <ul>
+                <li>
+                  <a href="#">Panel de Cotrol</a>
+                </li>
+                <li>
+                  <a href="#">Politica de contacto</a>
+                </li>
+                <li>Selección de listas a excluir de la regla</li>
+              </ul>
+            </nav>
+            <h2>Selección de listas a excluir de la regla</h2>
+          </div>
+          <div class="col-sm-10">
+            <p>
+              Todos los Suscriptores presentes en las Listas que agregues a
+              continuación quedarán fuera de la política de contacto que has
+              configurado previamente, es decir, que siempre recibirán las
+              Campañas que les envíes.
+              <strong>Recuerda que solo puedes excluir hasta 10 Listas.</strong>
+            </p>
+          </div>
+        </div>
+        <span class="arrow"></span>
+      </div>
+    </header>
+    <section class="dp-container">
+      <div class="dp-rowflex">
+        <div class="col-sm-12">
+          <div class="dp-wrap-message dp-wrap-info">
+            <span class="dp-message-icon"></span>
+            <div class="dp-content-message dp-content-full">
+              <p>
+                Ya has seleccionado el máximo de
+                <strong>10 listas.</strong> Desmarca alguna de las seleccionadas
+                para poder excluir otra.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 m-t-24">
+          <div class="dp-block-wlp">
+            <form
+              class="dp-search-list"
+              role="search"
+              aria-label="Búsqueda de listas a excluir de la regla"
+              id="buscarLista"
+            >
+              <fieldset>
+                <legend>Selección de listas a excluir de la regla</legend>
+                <ul
+                  class="field-group dp-rowflex"
+                  aria-labelledby="buscarLista"
+                >
+                  <li class="field-item col-lg-8 col-md-8 col-sm-12 error">
+                    <div class="dp-wrapper-input">
+                      <input
+                        type="search"
+                        placeholder="Buscar..."
+                        aria-label="Selección de listas a excluir de la regla"
+                        class="dp-searchemail"
+                        aria-required="true"
+                      />
+                      <button
+                        class="dp-button button-medium dp-btnsearch--list"
+                        aria-label="Selección de listas a excluir de la regla"
+                        title="Buscar"
+                      >
+                        <span
+                          class="ms-icon icon-search"
+                          aria-hidden="true"
+                        ></span>
+                      </button>
+                    </div>
+
+                    <div class="dp-message dp-error-form">
+                      <p>¡Ouch! Este campo está vacío</p>
+                    </div>
+                  </li>
+                  <li class="field-item col-lg-4 col-md-4 col-sm-12">
+                    <div class="dp-dropdown-wrapper">
+                      <span class="dropdown-arrow"></span>
+                      <select
+                        id="filtrarPorEstado"
+                        aria-label="Filtrar por estado"
+                      >
+                        <option>Estado</option>
+                        <option>Estado</option>
+                        <option>Estado</option>
+                      </select>
+                    </div>
+                    <div class="dp-message dp-error-form">
+                      <p>¡Ouch! Este campo está vacío</p>
+                    </div>
+                  </li>
+                </ul>
+              </fieldset>
+            </form>
+          </div>
+
+          <div class="dp-table-responsive dp-table-selection-list">
+            <table
+              class="dp-c-table"
+              aria-label="Selección de listas a excluir de la regla"
+              summary="Selección de listas a excluir de la regla"
+            >
+              <thead>
+                <tr>
+                  <th>
+                    <a href="#"
+                      ><img src="img/check-grey.svg" alt="check list"
+                    /></a>
+                  </th>
+                  <th>
+                    <a href="#"
+                      >Etiqueta <span class="ms-icon icon-AZ"></span
+                    ></a>
+                  </th>
+                  <th>
+                    <a href="#"
+                      >Nombre de la lista o segmento
+                      <span class="ms-icon icon-AZ"></span
+                    ></a>
+                  </th>
+                  <th>
+                    <a href="#"
+                      >Último envío <span class="ms-icon icon-AZ"></span
+                    ></a>
+                  </th>
+                  <th>
+                    <a href="#"
+                      >suscriptores <span class="ms-icon icon-AZ"></span
+                    ></a>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td aria-label="">
+                    <label class="dp-list-check dp-inputcheck-disabled">
+                      <input type="checkbox" name="" disabled />
+                      <span class="checkmark"></span>
+                    </label>
+                  </td>
+                  <td aria-label=""></td>
+                  <td aria-label=""><span>MercadoShops (Segmento)</span></td>
+                  <td aria-label="">
+                    <span>22/12/2016</span>
+                  </td>
+                  <td aria-label="Fecha"><span>66</span></td>
+                </tr>
+                <tr>
+                  <td aria-label="Email">
+                    <label class="dp-list-check">
+                      <input type="checkbox" name=" " />
+                      <span class="checkmark"></span>
+                    </label>
+                  </td>
+                  <td aria-label="Nombre">
+                    <span class="dp-event-label">Eventos</span>
+                  </td>
+                  <td aria-label="Apellido">
+                    <span>MercadoShops (Segmento)</span>
+                  </td>
+                  <td aria-label="Estado de Segmentos">
+                    <span>22/12/2016</span>
+                  </td>
+                  <td aria-label="Fecha"><span>66</span></td>
+                </tr>
+                <tr>
+                  <td aria-label="Email">
+                    <label class="dp-list-check dp-inputcheck-disabled">
+                      <input type="checkbox" name="" disabled />
+                      <span class="checkmark"></span>
+                    </label>
+                  </td>
+                  <td aria-label="Nombre"></td>
+                  <td aria-label="Apellido">
+                    <span>MercadoShops (Segmento)</span>
+                  </td>
+                  <td aria-label="Estado de Segmentos">
+                    <span>22/12/2016</span>
+                  </td>
+                  <td aria-label="Fecha"><span>66</span></td>
+                </tr>
+                <tr>
+                  <td aria-label="Email">
+                    <label class="dp-list-check dp-inputcheck-disabled">
+                      <input type="checkbox" name="" disabled />
+                      <span class="checkmark"></span>
+                    </label>
+                  </td>
+                  <td aria-label="Nombre"></td>
+                  <td aria-label="Apellido">
+                    <span>MercadoShops (Segmento)</span>
+                  </td>
+                  <td aria-label="Estado de Segmentos">
+                    <span>22/12/2016</span>
+                  </td>
+                  <td aria-label="Fecha"><span>66</span></td>
+                </tr>
+                <tr>
+                  <td aria-label="Email">
+                    <label class="dp-list-check dp-inputcheck-disabled">
+                      <input type="checkbox" name="" disabled />
+                      <span class="checkmark"></span>
+                    </label>
+                  </td>
+                  <td aria-label="Nombre"></td>
+                  <td aria-label="Apellido">
+                    <span>MercadoShops (Segmento)</span>
+                  </td>
+                  <td aria-label="Estado de Segmentos">
+                    <span>22/12/2016</span>
+                  </td>
+                  <td aria-label="Fecha"><span>66</span></td>
+                </tr>
+                <tr>
+                  <td aria-label="Email">
+                    <label class="dp-list-check">
+                      <input type="checkbox" name=" " />
+                      <span class="checkmark"></span>
+                    </label>
+                  </td>
+                  <td aria-label="Nombre"></td>
+                  <td aria-label="Apellido">
+                    <span>MercadoShops (Segmento)</span>
+                  </td>
+                  <td aria-label="Estado de Segmentos">
+                    <span>22/12/2016</span>
+                  </td>
+                  <td aria-label="Fecha"><span>66</span></td>
+                </tr>
+                <tr>
+                  <td aria-label="Email">
+                    <label class="dp-list-check">
+                      <input type="checkbox" name=" " />
+                      <span class="checkmark"></span>
+                    </label>
+                  </td>
+                  <td aria-label="Nombre">
+                    <span class="dp-event-label">Eventos</span>
+                  </td>
+                  <td aria-label="Apellido">
+                    <span>MercadoShops (Segmento)</span>
+                  </td>
+                  <td aria-label="Estado de Segmentos">
+                    <span>22/12/2016</span>
+                  </td>
+                  <td aria-label="Fecha"><span>66</span></td>
+                </tr>
+                <tr>
+                  <td aria-label="Email">
+                    <label class="dp-list-check">
+                      <input type="checkbox" name=" " />
+                      <span class="checkmark"></span>
+                    </label>
+                  </td>
+                  <td aria-label="Nombre"></td>
+                  <td aria-label="Apellido">
+                    <span>MercadoShops (Segmento)</span>
+                  </td>
+                  <td aria-label="Estado de Segmentos">
+                    <span>22/12/2016</span>
+                  </td>
+                  <td aria-label="Fecha"><span>66</span></td>
+                </tr>
+                <tr>
+                  <td aria-label="Email">
+                    <label class="dp-list-check">
+                      <input type="checkbox" name=" " />
+                      <span class="checkmark"></span>
+                    </label>
+                  </td>
+                  <td aria-label="Nombre"></td>
+                  <td aria-label="Apellido">
+                    <span>MercadoShops (Segmento)</span>
+                  </td>
+                  <td aria-label="Estado de Segmentos">
+                    <span>22/12/2016</span>
+                  </td>
+                  <td aria-label="Fecha"><span>66</span></td>
+                </tr>
+                <tr>
+                  <td aria-label="Email">
+                    <label class="dp-list-check">
+                      <input type="checkbox" name=" " />
+                      <span class="checkmark"></span>
+                    </label>
+                  </td>
+                  <td aria-label="Nombre"></td>
+                  <td aria-label="Apellido">
+                    <span>MercadoShops (Segmento)</span>
+                  </td>
+                  <td aria-label="Estado de Segmentos">
+                    <span>22/12/2016</span>
+                  </td>
+                  <td aria-label="Fecha"><span>66</span></td>
+                </tr>
+
+                <tr>
+                  <td aria-label="Email">
+                    <label class="dp-list-check">
+                      <input type="checkbox" name=" " />
+                      <span class="checkmark"></span>
+                    </label>
+                  </td>
+                  <td aria-label="Nombre">
+                    <span class="dp-event-label">Eventos</span>
+                  </td>
+                  <td aria-label="Apellido">
+                    <span>MercadoShops (Segmento)</span>
+                  </td>
+                  <td aria-label="Estado de Segmentos">
+                    <span>22/12/2016</span>
+                  </td>
+                  <td aria-label="Fecha"><span>66</span></td>
+                </tr>
+
+                <tr>
+                  <td aria-label="Email">
+                    <label class="dp-list-check">
+                      <input type="checkbox" name=" " />
+                      <span class="checkmark"></span>
+                    </label>
+                  </td>
+                  <td aria-label="Nombre"></td>
+                  <td aria-label="Apellido">
+                    <span>MercadoShops (Segmento)</span>
+                  </td>
+                  <td aria-label="Estado de Segmentos">
+                    <span>22/12/2016</span>
+                  </td>
+                  <td aria-label="Fecha"><span>66</span></td>
+                </tr>
+                <tr>
+                  <td aria-label="Email">
+                    <label class="dp-list-check">
+                      <input type="checkbox" name=" " />
+                      <span class="checkmark"></span>
+                    </label>
+                  </td>
+                  <td aria-label="Nombre"></td>
+                  <td aria-label="Apellido">
+                    <span>MercadoShops (Segmento)</span>
+                  </td>
+                  <td aria-label="Estado de Segmentos">
+                    <span>22/12/2016</span>
+                  </td>
+                  <td aria-label="Fecha"><span>66</span></td>
+                </tr>
+                <tr>
+                  <td aria-label="Email">
+                    <label class="dp-list-check">
+                      <input type="checkbox" name=" " />
+                      <span class="checkmark"></span>
+                    </label>
+                  </td>
+                  <td aria-label="Nombre"></td>
+                  <td aria-label="Apellido">
+                    <span>MercadoShops (Segmento)</span>
+                  </td>
+                  <td aria-label="Estado de Segmentos">
+                    <span>22/12/2016</span>
+                  </td>
+                  <td aria-label="Fecha"><span>66</span></td>
+                </tr>
+                <tr>
+                  <td aria-label="Email">
+                    <label class="dp-list-check">
+                      <input type="checkbox" name=" " />
+                      <span class="checkmark"></span>
+                    </label>
+                  </td>
+                  <td aria-label="Nombre"></td>
+                  <td aria-label="Apellido">
+                    <span>MercadoShops (Segmento)</span>
+                  </td>
+                  <td aria-label="Estado de Segmentos">
+                    <span>22/12/2016</span>
+                  </td>
+                  <td aria-label="Fecha"><span>66</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <article class="dp-sticky-footer">
+      <button type="button" class="dp-button button-medium secondary-green">
+        Cancelar
+      </button>
+      <div class="dp-graphic-legend">
+        <span
+          >Selecciona hasa 10 listas y continua con la edición de tu
+          automation</span
+        >
+        <button type="button" class="dp-button button-medium primary-green">
+          Guardar y continuar
+        </button>
+      </div>
+    </article>
+
+    <footer class="dp-footer">
+      <div class="dp-container-fluid">
+        <div class="dp-rowflex">
+          <div class="col-sm-12 col-md-6 col-lg-6 m-b-12">
+            <span>Certificación de Calidad ISO 9001:2008</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- container-kpi -->
+    <!-- build:js:dist js/app.js -->
+    <script src="./js/main.js"></script>
+    <!--<script type="text/javascript">
+    window.addEventListener("scroll", function(){
+      var article = document.querySelector(".dp-sticky-footer");
+      article.classList.toggle("dp-sticky", window.scrollY > 150)
+    })
+    </script>-->
+    <!-- /build -->
+  </body>
+</html>
