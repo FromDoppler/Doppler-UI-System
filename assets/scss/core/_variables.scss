@@ -30,6 +30,7 @@ $dp-spaces--lv21: 126px;
 $dp-spaces--lv22: 132px;
 $dp-spaces--lv23: 138px;
 $dp-spaces--lv24: 144px;
+$dp-spaces--lv25: 150px;
 
 // Font Size settings
 $dp-sizing--lvl0: 0;
@@ -80,7 +81,16 @@ $dpsg-paragraph: 16px;
     78,
     84,
     90,
-    96
+    96,
+    102,
+    108,
+    114,
+    120,
+    126,
+    132,
+    138,
+    144,
+    150
   ); /// The amount of spaces we use in levels
   $sides: (top, bottom, left, right); /// Directions
 
