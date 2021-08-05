@@ -217,7 +217,11 @@
                       ></span>
                     </li>
                     <li>
-                      <button type="button" class="dp-button dp-add-list">
+                      <button
+                        type="button"
+                        class="dp-button dp-add-list"
+                        id="btn-exclude-list"
+                      >
                         <span>+</span> Agregar Lista
                       </button>
                     </li>
@@ -358,6 +362,326 @@
         </div>
       </div>
     </section>
+    <!-- /build -->
+    <div class="modal" id="modal-exclude-list">
+      <div class="modal-content--large dp-modal-exclude-list">
+        <span class="close"></span>
+        <h2 class="modal-title">Excluir Listas de la Política de Contacto</h2>
+        <p>
+          Los Contactos de las Listas que excluyas recibirán todas tus Campañas.
+          <strong>Recuerda que puedes seleccionar hasta 10 Listas.</strong>
+        </p>
+
+        <div class="dp-wrap-message dp-wrap-info">
+          <span class="dp-message-icon"></span>
+          <div class="dp-content-message dp-content-full">
+            <p>
+              Ya has seleccionado el máximo de
+              <strong>10 listas.</strong> Desmarca alguna de las seleccionadas
+              para poder excluir otra.
+            </p>
+          </div>
+        </div>
+        <article class="dp-content-list">
+          <div class="dp-table-scroll-container">
+            <div class="dp-table-scroll">
+              <table
+                class="dp-c-table"
+                aria-label="Selección de listas a excluir de la regla"
+                summary="Selección de listas a excluir de la regla"
+              >
+                <thead>
+                  <tr>
+                    <th>
+                      <a href="#"
+                        ><img src="img/check-grey.svg" alt="check list"
+                      /></a>
+                    </th>
+                    <th>
+                      <a href="#"
+                        >Etiqueta <span class="ms-icon icon-AZ"></span
+                      ></a>
+                    </th>
+                    <th>
+                      <a href="#"
+                        >Nombre de la lista o segmento
+                        <span class="ms-icon icon-AZ"></span
+                      ></a>
+                    </th>
+                    <th>
+                      <a href="#"
+                        >Último envío <span class="ms-icon icon-AZ"></span
+                      ></a>
+                    </th>
+                    <th>
+                      <a href="#"
+                        >suscriptores <span class="ms-icon icon-AZ"></span
+                      ></a>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td aria-label="">
+                      <label class="dp-list-check dp-inputcheck-disabled">
+                        <input type="checkbox" name="" disabled />
+                        <span class="checkmark"></span>
+                      </label>
+                    </td>
+                    <td aria-label=""></td>
+                    <td aria-label=""><span>MercadoShops (Segmento)</span></td>
+                    <td aria-label="">
+                      <span>22/12/2016</span>
+                    </td>
+                    <td aria-label="Fecha"><span>66</span></td>
+                  </tr>
+                  <tr>
+                    <td aria-label="Email">
+                      <label class="dp-list-check">
+                        <input type="checkbox" name=" " />
+                        <span class="checkmark"></span>
+                      </label>
+                    </td>
+                    <td aria-label="Nombre">
+                      <span class="dp-event-label">Eventos</span>
+                    </td>
+                    <td aria-label="Apellido">
+                      <span>MercadoShops (Segmento)</span>
+                    </td>
+                    <td aria-label="Estado de Segmentos">
+                      <span>22/12/2016</span>
+                    </td>
+                    <td aria-label="Fecha"><span>66</span></td>
+                  </tr>
+                  <tr>
+                    <td aria-label="Email">
+                      <label class="dp-list-check dp-inputcheck-disabled">
+                        <input type="checkbox" name="" disabled />
+                        <span class="checkmark"></span>
+                      </label>
+                    </td>
+                    <td aria-label="Nombre"></td>
+                    <td aria-label="Apellido">
+                      <span>MercadoShops (Segmento)</span>
+                    </td>
+                    <td aria-label="Estado de Segmentos">
+                      <span>22/12/2016</span>
+                    </td>
+                    <td aria-label="Fecha"><span>66</span></td>
+                  </tr>
+                  <tr>
+                    <td aria-label="Email">
+                      <label class="dp-list-check dp-inputcheck-disabled">
+                        <input type="checkbox" name="" disabled />
+                        <span class="checkmark"></span>
+                      </label>
+                    </td>
+                    <td aria-label="Nombre"></td>
+                    <td aria-label="Apellido">
+                      <span>MercadoShops (Segmento)</span>
+                    </td>
+                    <td aria-label="Estado de Segmentos">
+                      <span>22/12/2016</span>
+                    </td>
+                    <td aria-label="Fecha"><span>66</span></td>
+                  </tr>
+                  <tr>
+                    <td aria-label="Email">
+                      <label class="dp-list-check dp-inputcheck-disabled">
+                        <input type="checkbox" name="" disabled />
+                        <span class="checkmark"></span>
+                      </label>
+                    </td>
+                    <td aria-label="Nombre"></td>
+                    <td aria-label="Apellido">
+                      <span>MercadoShops (Segmento)</span>
+                    </td>
+                    <td aria-label="Estado de Segmentos">
+                      <span>22/12/2016</span>
+                    </td>
+                    <td aria-label="Fecha"><span>66</span></td>
+                  </tr>
+                  <tr>
+                    <td aria-label="Email">
+                      <label class="dp-list-check">
+                        <input type="checkbox" name=" " />
+                        <span class="checkmark"></span>
+                      </label>
+                    </td>
+                    <td aria-label="Nombre"></td>
+                    <td aria-label="Apellido">
+                      <span>MercadoShops (Segmento)</span>
+                    </td>
+                    <td aria-label="Estado de Segmentos">
+                      <span>22/12/2016</span>
+                    </td>
+                    <td aria-label="Fecha"><span>66</span></td>
+                  </tr>
+                  <tr>
+                    <td aria-label="Email">
+                      <label class="dp-list-check">
+                        <input type="checkbox" name=" " />
+                        <span class="checkmark"></span>
+                      </label>
+                    </td>
+                    <td aria-label="Nombre">
+                      <span class="dp-event-label">Eventos</span>
+                    </td>
+                    <td aria-label="Apellido">
+                      <span>MercadoShops (Segmento)</span>
+                    </td>
+                    <td aria-label="Estado de Segmentos">
+                      <span>22/12/2016</span>
+                    </td>
+                    <td aria-label="Fecha"><span>66</span></td>
+                  </tr>
+                  <tr>
+                    <td aria-label="Email">
+                      <label class="dp-list-check">
+                        <input type="checkbox" name=" " />
+                        <span class="checkmark"></span>
+                      </label>
+                    </td>
+                    <td aria-label="Nombre"></td>
+                    <td aria-label="Apellido">
+                      <span>MercadoShops (Segmento)</span>
+                    </td>
+                    <td aria-label="Estado de Segmentos">
+                      <span>22/12/2016</span>
+                    </td>
+                    <td aria-label="Fecha"><span>66</span></td>
+                  </tr>
+                  <tr>
+                    <td aria-label="Email">
+                      <label class="dp-list-check">
+                        <input type="checkbox" name=" " />
+                        <span class="checkmark"></span>
+                      </label>
+                    </td>
+                    <td aria-label="Nombre"></td>
+                    <td aria-label="Apellido">
+                      <span>MercadoShops (Segmento)</span>
+                    </td>
+                    <td aria-label="Estado de Segmentos">
+                      <span>22/12/2016</span>
+                    </td>
+                    <td aria-label="Fecha"><span>66</span></td>
+                  </tr>
+                  <tr>
+                    <td aria-label="Email">
+                      <label class="dp-list-check">
+                        <input type="checkbox" name=" " />
+                        <span class="checkmark"></span>
+                      </label>
+                    </td>
+                    <td aria-label="Nombre"></td>
+                    <td aria-label="Apellido">
+                      <span>MercadoShops (Segmento)</span>
+                    </td>
+                    <td aria-label="Estado de Segmentos">
+                      <span>22/12/2016</span>
+                    </td>
+                    <td aria-label="Fecha"><span>66</span></td>
+                  </tr>
+
+                  <tr>
+                    <td aria-label="Email">
+                      <label class="dp-list-check">
+                        <input type="checkbox" name=" " />
+                        <span class="checkmark"></span>
+                      </label>
+                    </td>
+                    <td aria-label="Nombre">
+                      <span class="dp-event-label">Eventos</span>
+                    </td>
+                    <td aria-label="Apellido">
+                      <span>MercadoShops (Segmento)</span>
+                    </td>
+                    <td aria-label="Estado de Segmentos">
+                      <span>22/12/2016</span>
+                    </td>
+                    <td aria-label="Fecha"><span>66</span></td>
+                  </tr>
+
+                  <tr>
+                    <td aria-label="Email">
+                      <label class="dp-list-check">
+                        <input type="checkbox" name=" " />
+                        <span class="checkmark"></span>
+                      </label>
+                    </td>
+                    <td aria-label="Nombre"></td>
+                    <td aria-label="Apellido">
+                      <span>MercadoShops (Segmento)</span>
+                    </td>
+                    <td aria-label="Estado de Segmentos">
+                      <span>22/12/2016</span>
+                    </td>
+                    <td aria-label="Fecha"><span>66</span></td>
+                  </tr>
+                  <tr>
+                    <td aria-label="Email">
+                      <label class="dp-list-check">
+                        <input type="checkbox" name=" " />
+                        <span class="checkmark"></span>
+                      </label>
+                    </td>
+                    <td aria-label="Nombre"></td>
+                    <td aria-label="Apellido">
+                      <span>MercadoShops (Segmento)</span>
+                    </td>
+                    <td aria-label="Estado de Segmentos">
+                      <span>22/12/2016</span>
+                    </td>
+                    <td aria-label="Fecha"><span>66</span></td>
+                  </tr>
+                  <tr>
+                    <td aria-label="Email">
+                      <label class="dp-list-check">
+                        <input type="checkbox" name=" " />
+                        <span class="checkmark"></span>
+                      </label>
+                    </td>
+                    <td aria-label="Nombre"></td>
+                    <td aria-label="Apellido">
+                      <span>MercadoShops (Segmento)</span>
+                    </td>
+                    <td aria-label="Estado de Segmentos">
+                      <span>22/12/2016</span>
+                    </td>
+                    <td aria-label="Fecha"><span>66</span></td>
+                  </tr>
+                  <tr>
+                    <td aria-label="Email">
+                      <label class="dp-list-check">
+                        <input type="checkbox" name=" " />
+                        <span class="checkmark"></span>
+                      </label>
+                    </td>
+                    <td aria-label="Nombre"></td>
+                    <td aria-label="Apellido">
+                      <span>MercadoShops (Segmento)</span>
+                    </td>
+                    <td aria-label="Estado de Segmentos">
+                      <span>22/12/2016</span>
+                    </td>
+                    <td aria-label="Fecha"><span>66</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </article>
+        <div class="dp-cta-modal">
+          <button type="button" class="dp-button button-medium primary-grey">
+            Cancelar
+          </button>
+          <button type="button" class="dp-button button-medium primary-green">
+            Confirmar la Selección
+          </button>
+        </div>
+      </div>
+    </div>
     <!-- container-kpi -->
     <!-- build:js:dist js/app.js -->
     <script src="./js/main.js"></script>

@@ -48,8 +48,11 @@ $(document).on('mouseup', function(e) {
 // modals
 var $delayFade = 500;
 //Initialize all modals hidden
-$("#modal-large, #modal-medium, #modal-small").hide();
+$(".modal").hide();
 
+$("#btn-exclude-list").click(function() {
+  $("#modal-exclude-list").fadeIn($delayFade);
+});
 $("#btn-modal-large").click(function() {
   $("#modal-large").fadeIn($delayFade);
 });
