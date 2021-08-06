@@ -147,4 +147,55 @@
       display: block;
     }
   }
+
+  /* Modal exclude list  table scroll */
+
+  .dp-modal-exclude-list {
+    background: $dp-color-white;
+    padding: $dp-spaces--lv7 $dp-spaces--lv5;
+    color: #333;
+  }
+
+  .dp-content-list {
+    width: 100%;
+    border: 1px solid $dp-color-silver;
+    border-radius: 3px;
+    margin: $dp-spaces--lv5 $dp-spaces--lv0;
+
+    .dp-table-scroll-container {
+      position: relative;
+      padding-top: $dp-spaces--lv7;
+    }
+
+    .dp-table-scroll {
+      overflow-y: scroll;
+      height: 400px;
+
+      thead {
+        position: absolute;
+        display: table;
+        top: 0;
+        line-height: normal;
+        background-color: $dp-color-white;
+        width: 100%;
+      }
+
+      th {
+        text-overflow: ellipsis;
+        border-top: 0;
+
+        a {
+          white-space: nowrap;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+
+  .dp-cta-modal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0 6px;
+  }
 }
