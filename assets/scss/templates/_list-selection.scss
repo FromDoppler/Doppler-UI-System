@@ -192,10 +192,30 @@
     }
   }
 
+  /* No list modal */
+
+  .dp-modal-nolist {
+    padding: $dp-spaces--lv7;
+
+    .dp-icon-modal {
+      margin: $dp-spaces--lv5 auto;
+      width: 80px;
+      height: 100px;
+
+      img {
+        width: 100%;
+        display: block;
+      }
+    }
+
+    .dp-nolist-content {
+      padding: $dp-spaces--lv2;
+    }
+  }
   .dp-cta-modal {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 30px 0 6px;
+    padding: $dp-spaces--lv5 $dp-spaces--lv0 $dp-spaces--lv1;
   }
 }

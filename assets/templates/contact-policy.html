@@ -225,6 +225,24 @@
                         <span>+</span> Agregar Lista
                       </button>
                     </li>
+                    <li>
+                      <button
+                        type="button"
+                        class="dp-button dp-add-list"
+                        id="btn-exclude-nolist"
+                      >
+                        <span>+</span> No list
+                      </button>
+                    </li>
+                    <li>
+                      <button
+                        type="button"
+                        class="dp-button dp-add-list"
+                        id="btn-error-list"
+                      >
+                        <span>+</span> Error list
+                      </button>
+                    </li>
                   </ul>
                 </li>
                 <li class="field-item">
@@ -679,6 +697,92 @@
           <button type="button" class="dp-button button-medium primary-green">
             Confirmar la Selección
           </button>
+        </div>
+      </div>
+    </div>
+    <!-- modal -->
+    <div class="modal" id="modal-exclude-nolist">
+      <div class="modal-content--large dp-modal-nolist">
+        <span class="close"></span>
+        <div class="dp-container">
+          <div class="dp-rowflex">
+            <div class="col-sm-12">
+              <div class="dp-icon-modal"><img src="img/lists.svg" /></div>
+            </div>
+            <div class="col-sm-12">
+              <div class="dp-nolist-content">
+                <h1>¡Parece que no tienes listas creadas!</h1>
+                <p>
+                  Una Base de Datos es el pilar fundamental de toda estrategia
+                  de Email Marketing, comienza creando una lista, elige un
+                  nombre y selecciona la forma que prefieras para agregar
+                  Suscriptores.
+                </p>
+                <span class="dp-cta-paragraph"
+                  >¡Comienza a nutrir tu base contactos!</span
+                >
+                <hr />
+                <div class="dp-cta-modal">
+                  <button
+                    type="button"
+                    class="dp-button button-medium primary-grey"
+                  >
+                    Cancelar
+                  </button>
+                  <button
+                    type="button"
+                    class="dp-button button-medium primary-green"
+                  >
+                    Confirmar la Selección
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal -->
+    <div class="modal" id="modal-error-list">
+      <div class="modal-content--large dp-error-list">
+        <span class="close"></span>
+        <div class="dp-container">
+          <div class="dp-rowflex">
+            <div class="col-sm-12">
+              <div class="dp-nolist-content">
+                <h1>Excluir Listas de la Política de Contacto</h1>
+                <p>
+                  Los Contactos de las Listas que excluyas recibirán todas tus
+                  Campañas.<strong>
+                    Recuerda que puedes seleccionar hasta 10 Listas.</strong
+                  >
+                </p>
+                <div class="dp-wrap-message dp-wrap-cancel">
+                  <span class="dp-message-icon"></span>
+                  <div class="dp-content-message dp-content-full">
+                    <p>
+                      Error al mostrar las Listas. Cierra esta ventana y vuelve
+                      a abrirla desde el botón “Seleccionar Listas”.
+                    </p>
+                  </div>
+                </div>
+                <div class="dp-cta-modal">
+                  <button
+                    type="button"
+                    class="dp-button button-medium primary-grey"
+                  >
+                    Cancelar
+                  </button>
+                  <button
+                    type="button"
+                    class="dp-button button-medium primary-green"
+                  >
+                    Confirmar la Selección
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
