@@ -70,7 +70,7 @@
     />
   </head>
 
-  <body data-active-menu="36" class="dp-library dp-bg-softgrey">
+  <body data-active-menu="36" class="dp-library">
     <div class="dp-container">
       <div class="dp-rowflex">
         <div class="col-sm-12 m-t-24">
@@ -820,44 +820,92 @@
             <h3>Plan STANDARD - por Contactos</h3>
             <ul class="dp-summary-list">
               <li>
-                <span class="dp-icostar"></span>
-                <span><strong>Acompañamiento Estratégico.</strong></span>
+                <span>Contactos: <strong>1500</strong></span>
+                <span>US$ 15,00</span>
               </li>
               <li>
-                <span class="dp-icostar"></span>
-                <span
-                  ><strong>Asesoría y Consultoría.</strong>
-                  <span class="dp-new">Nueva</span></span
-                >
+                <span>Meses a abonar: <strong>3 Meses</strong></span>
+                <span>US$ 45,00</span>
               </li>
               <li>
-                <span class="dp-icodot">.</span>
-                <span>Lorem ipsum dolor sit amet</span>
-              </li>
-              <li>
-                <span class="dp-icodot">.</span>
-                <span>Campañas Test A/B</span>
-              </li>
-              <li>
-                <span class="dp-icodot">.</span>
-                <span>Lorem ipsum dolor sit amet</span>
-              </li>
-              <li>
-                <span class="dp-icodot">.</span>
-                <span
-                  >Lorem ipsum dolor sit <span class="dp-new">Nueva</span></span
-                >
+                <span>Descuento pago trimestral: <strong>- 5%</strong></span>
+                <span>- US$ 02,25</span>
               </li>
             </ul>
-            <div class="dp-zigzag-top"></div>
-            <div class="dp-zigzag-bottom"></div>
-          </div>
+            <hr class="dp-hr-grey" />
+            <form class="dp-promocode">
+              <fieldset>
+                <legend>Ingresar un cupón de promoción</legend>
+                <label class="Promocode">Promocode:</label>
 
+                <div class="dp-tooltip-container">
+                  <input
+                    type="text"
+                    name="Promocode"
+                    id="Promocode"
+                    placeholder="Ingresa tu promocode"
+                    class=""
+                  />
+                  <div class="dp-tooltip-top">
+                    <span
+                      >Las promociones no son acumulables con otros descuentos.
+                      <a href="#">texto link</a></span
+                    >
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+            <hr class="dp-hr-grey" />
+            <div class="dp-total-purchase">
+              <ul>
+                <li>
+                  <span>TOTAL:</span>
+                  <span> <span class="dp-money">US$</span>42,75</span>
+                </li>
+                <li>
+                  <span class="dp-renewal"
+                    >*La renovación es automática y puedes cancelarla cuando
+                    quieras. Estos valores no incluyen impuestos.</span
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
           <div class="dp-zigzag"></div>
 
-          <button type="button" class="dp-button button-big primary-green">
-            Guardar y continuar
-          </button>
+          <div class="dp-cta-pay">
+            <button
+              type="button"
+              class="dp-button button-big primary-green"
+              disabled
+            >
+              Contratar
+            </button>
+            <button type="button" class="dp-button button-big">
+              <span class="ms-icon icon-lock dp-color-green"></span> Pago seguro
+            </button>
+          </div>
+
+          <div class="dp-wrap-message dp-wrap-success">
+            <span class="dp-message-icon"></span>
+            <div class="dp-content-message">
+              <p>Pago procesado con éxito</p>
+            </div>
+          </div>
+          <hr class="m-t-24 m-b-24" />
+          <div class="dp-wrap-message dp-wrap-cancel">
+            <span class="dp-message-icon"></span>
+            <div class="dp-content-message">
+              <p>
+                ¡Ouch! Tu método de pago ha sido rechazado. Modíficalo e intenta
+                nuevamente.
+              </p>
+            </div>
+          </div>
+          <hr class="m-t-24 m-b-24" />
+          <p>Tu factura será enviada a:</p>
+          <p><strong>mdirago@makingsense.com</strong></p>
+          <a href="#" class="dp-link-recipients">Editar destinatarios</a>
         </div>
       </div>
     </section>
