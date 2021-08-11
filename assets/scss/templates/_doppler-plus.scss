@@ -178,6 +178,14 @@
     align-items: center;
     justify-content: flex-start;
 
+    .dp-banner-content {
+      display: flex;
+
+      .dp-list-banner {
+        margin: 12px 0;
+      }
+    }
+
     .dp-img-banner {
       width: 70px;
       padding: $dp-spaces--lv1 $dp-spaces--lv0;
