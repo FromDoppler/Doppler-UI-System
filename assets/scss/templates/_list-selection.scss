@@ -118,6 +118,15 @@
 
   .dp-content-promotion {
     padding: $dp-spaces--lv5;
+
+    .dp-list-promo {
+      padding: $dp-spaces--lv2 $dp-spaces--lv0;
+
+      li {
+        padding-left: $dp-spaces--lv3;
+        background: url('../img/check-green.svg') no-repeat 0 8px;
+      }
+    }
   }
 
   .dp-cta-paragraph {
@@ -125,7 +134,7 @@
     line-height: 22px;
     color: $dp-color-grey;
     display: block;
-    margin: $dp-spaces--lv5 $dp-spaces--lv0;
+    margin: $dp-spaces--lv4 $dp-spaces--lv0;
     font-weight: bold;
   }
 
@@ -140,11 +149,87 @@
   }
 
   .dp-img-promotion {
-    overflow: hidden;
+    figcaption {
+      font-size: $dp-sizing--lvl2;
+      padding: $dp-spaces--lv2 $dp-spaces--lv0;
+      line-height: 18px;
+    }
 
     img {
       width: 100%;
       display: block;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     }
+  }
+
+  /* Modal exclude list  table scroll */
+
+  .dp-modal-exclude-list {
+    background: $dp-color-white;
+    padding: $dp-spaces--lv7 $dp-spaces--lv5;
+    color: $dp-color-darkgrey;
+  }
+
+  .dp-content-list {
+    width: 100%;
+    border: 1px solid $dp-color-silver;
+    border-radius: 3px;
+    margin: $dp-spaces--lv5 $dp-spaces--lv0;
+
+    .dp-table-scroll-container {
+      position: relative;
+      padding-top: $dp-spaces--lv7;
+    }
+
+    .dp-table-scroll {
+      overflow-y: scroll;
+      height: 400px;
+
+      thead {
+        position: absolute;
+        display: table;
+        top: 0;
+        line-height: normal;
+        background-color: $dp-color-white;
+        width: 100%;
+      }
+
+      th {
+        text-overflow: ellipsis;
+        border-top: 0;
+
+        a {
+          white-space: nowrap;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+
+  /* No list modal */
+
+  .dp-modal-nolist {
+    padding: $dp-spaces--lv7;
+
+    .dp-icon-modal {
+      margin: $dp-spaces--lv5 auto;
+      width: 80px;
+      height: 100px;
+
+      img {
+        width: 100%;
+        display: block;
+      }
+    }
+
+    .dp-nolist-content {
+      padding: $dp-spaces--lv2;
+    }
+  }
+  .dp-cta-modal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: $dp-spaces--lv5 $dp-spaces--lv0 $dp-spaces--lv1;
   }
 }

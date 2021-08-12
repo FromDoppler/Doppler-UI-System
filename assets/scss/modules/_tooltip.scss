@@ -91,6 +91,7 @@
     position: absolute;
     top: -12px;
     left: 50%;
+    right: 50%;
     border: 1px solid $dp-color-silver;
     transform: translate(-50%, -50%);
     z-index: -1;
@@ -106,6 +107,7 @@
     position: absolute;
     bottom: -5px;
     left: 50%;
+    right: 50%;
   }
 
   .dp-tooltip-container:hover .dp-tooltip-top {
