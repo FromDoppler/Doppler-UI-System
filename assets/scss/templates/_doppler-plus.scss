@@ -103,22 +103,20 @@
     }
 
     &:before {
-      width: 5px;
-      height: 7px;
+      width: 15px;
+      height: 10px;
       content: '';
       left: 30px;
-      top: 5px;
-      border-left: solid 4px transparent;
-      border-right: solid 4px transparent;
-      border-bottom: solid 4px $dp-color-black;
+      top: 6px;
+      background: url('../img/arrow-grey-down.svg') no-repeat 0 0;
       position: absolute;
+      transform: rotateX(180deg);
       transition: all 0.35s;
     }
 
     &.dp-open-compare:before {
-      border-bottom: solid 4px $dp-color-black;
-      transform: rotateX(-180deg);
-      top: 9px;
+      transform: rotateX(0deg);
+      top: 7px;
     }
   }
 
