@@ -433,7 +433,7 @@
   }
 
   .dp-calc-message {
-    padding: 6px;
+    padding: $dp-spaces--lv2;
     text-align: center;
     border: 1px solid;
     margin: $dp-spaces--lv0 $dp-spaces--lv0 $dp-spaces--lv3;
@@ -441,6 +441,10 @@
     border: 1px solid $dp-color-green;
     background: rgba(51, 173, 115, 0.2);
     transition: all 0.5s ease-in-out;
+
+    p {
+      line-height: 20px;
+    }
   }
 
   /* pricing */
