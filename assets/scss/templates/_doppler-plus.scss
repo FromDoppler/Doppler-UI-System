@@ -182,7 +182,7 @@
       display: flex;
 
       .dp-list-banner {
-        margin: 12px 0;
+        margin: $dp-spaces--lv2 $dp-spaces--lv0;
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
@@ -190,18 +190,18 @@
 
         li {
           width: calc(50% - (0.5em / 2));
-          padding-left: 18px;
+          padding-left: $dp-spaces--lv3;
           background: url(../img/check-grey.svg) no-repeat 0 2px;
         }
       }
 
       @media screen and (max-width: 1025px) {
         .dp-list-banner {
-          margin: 12px 0;
+          margin: $dp-spaces--lv2 $dp-spaces--lv0;
           display: block;
 
           li {
-            padding-left: 18px;
+            padding-left: $dp-spaces--lv3;
             background: url(../img/check-grey.svg) no-repeat 0 2px;
             width: 100%;
           }
