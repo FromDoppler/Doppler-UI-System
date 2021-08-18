@@ -144,6 +144,7 @@
 
     .dp-img-banner {
       width: 70px;
+      min-width: 70px;
       display: flex;
       padding: $dp-spaces--lv0 $dp-spaces--lv2;
       overflow: hidden;
@@ -162,6 +163,7 @@
     .dp-content-banner {
       display: inline-block;
       padding: $dp-spaces--lv2;
+      text-align: left;
     }
 
     .dp-banner-cta {
@@ -181,14 +183,38 @@
 
       .dp-list-banner {
         margin: 12px 0;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        width: 95%;
+
+        li {
+          width: calc(50% - (0.5em / 2));
+          padding-left: 18px;
+          background: url(../img/check-grey.svg) no-repeat 0 2px;
+        }
+      }
+
+      @media screen and (max-width: 1025px) {
+        .dp-list-banner {
+          margin: 12px 0;
+          display: block;
+
+          li {
+            padding-left: 18px;
+            background: url(../img/check-grey.svg) no-repeat 0 2px;
+            width: 100%;
+          }
+        }
       }
     }
 
     .dp-img-banner {
       width: 70px;
+      min-width: 70px;
       padding: $dp-spaces--lv1 $dp-spaces--lv0;
       overflow: hidden;
-      display: inline-block;
+      display: flex;
 
       img {
         display: block;
@@ -202,6 +228,7 @@
       align-items: flex-start;
       justify-content: center;
       padding: $dp-spaces--lv2;
+      text-align: left;
     }
 
     .dp-button {
