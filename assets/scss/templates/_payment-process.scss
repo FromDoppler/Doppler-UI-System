@@ -66,7 +66,6 @@
       .dp-accordion-thumb {
         font-weight: normal;
         text-transform: uppercase;
-        /*padding-left: 6px;*/
 
         &:before {
           border: none;
@@ -75,13 +74,13 @@
 
       .dp-edit-form {
         position: absolute;
-        font-size: 24px;
+        font-size: $dp-sizing--lvl6;
         right: 27px;
         top: 20px;
-        color: #666;
+        color: $dp-color-grey;
 
         &:hover {
-          color: #333;
+          color: $dp-color-darkgrey;
         }
       }
 
@@ -93,16 +92,16 @@
         .field-item {
           border: 1px transparent;
           padding: $dp-spaces--lv0;
-          padding-right: 0px;
-          padding-top: 6px;
-          padding-top: 6px;
+          padding-right: $dp-spaces--lv0;
+          padding-top: $dp-spaces--lv1;
+          padding-top: $dp-spaces--lv1;
           position: relative;
           display: inline-block;
           margin-left: $dp-spaces--lv0;
           margin-bottom: $dp-spaces--lv1;
 
           .field-item--50 {
-            padding-right: 6px;
+            padding-right: $dp-spaces--lv1;
           }
         }
 
@@ -111,10 +110,10 @@
 
           .dp-field-inputs {
             display: flex;
-            margin-bottom: 12px;
+            margin-bottom: $dp-spaces--lv2;
 
             & > div {
-              padding-right: 12px;
+              padding-right: $dp-spaces--lv2;
             }
 
             .dp--cvv,
@@ -164,7 +163,7 @@
         display: flex;
         justify-content: space-around;
         width: 70%;
-        margin-bottom: 18px;
+        margin-bottom: $dp-spaces--lv3;
 
         li {
           display: inline-block;
@@ -244,16 +243,16 @@
       }
 
       .dp-wrap-subscription {
-        padding: 12px 0 0;
+        padding: $dp-spaces--lv2 $dp-spaces--lv0 $dp-spaces--lv0;
         width: 65%;
-        margin-bottom: 24px;
+        margin-bottom: $dp-spaces--lv4;
 
         ul {
-          padding: 6px;
+          padding: $dp-spaces--lv1;
 
           li {
             border: none;
-            margin: 0;
+            margin: $dp-spaces--lv0;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -273,7 +272,7 @@
 
       .dp-w--55 {
         width: 55%;
-        padding-left: 6px;
+        padding-left: $dp-spaces--lv1;
       }
 
       .dp-w--40 {
@@ -281,7 +280,6 @@
       }
 
       .dp-credit-card {
-        /*width: 40%;*/
         display: flex;
         align-items: center;
         justify-content: center;
@@ -292,7 +290,7 @@
   /* CTA align in form */
 
   .dp-buttons-actions {
-    padding: 0px;
+    padding: $dp-spaces--lv0;
   }
 
   .dp-cta-left {
@@ -320,7 +318,7 @@
   /* Hiring Summary */
 
   .dp-space-24 {
-    margin-left: 24px;
+    margin-left: $dp-spaces--lv4;
   }
 
   .dp-hiring-summary {
@@ -329,18 +327,18 @@
     margin: $dp-spaces--lv0;
     border-bottom: none;
     position: relative;
-    background-color: #fff;
+    background-color: $dp-color-white;
 
     .dp-header-summary {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0 0 24px;
-      font-size: 13px;
+      padding: $dp-spaces--lv0 $dp-spaces--lv0 $dp-spaces--lv4;
+      font-size: $dp-sizing--lvl2;
     }
 
     h4 {
-      font-size: 15px;
+      font-size: $dp-sizing--lvl3;
       padding-bottom: $dp-spaces--lv1;
       text-transform: none;
       font-weight: 700;
@@ -351,8 +349,8 @@
 
     .dp-summary-list {
       line-height: 20px;
-      font-size: 15px;
-      padding: 24px 0;
+      font-size: $dp-sizing--lvl3;
+      padding: $dp-spaces--lv4 $dp-spaces--lv0;
 
       li {
         margin-bottom: $dp-spaces--lv2;
@@ -363,7 +361,7 @@
     }
 
     .dp-promocode {
-      padding: 24px 0;
+      padding: $dp-spaces--lv4 $dp-spaces--lv0;
 
       fieldset {
         display: flex;
@@ -371,9 +369,9 @@
       }
 
       label {
-        color: #333;
+        color: $dp-color-darkgrey;
         display: inline-block;
-        margin: 0;
+        margin: $dp-spaces--lv0;
       }
 
       input {
@@ -384,29 +382,29 @@
     }
 
     .dp-total-purchase {
-      padding: 24px 0;
+      padding: $dp-spaces--lv4 $dp-spaces--lv0;
 
       li {
         display: flex;
         justify-content: space-between;
         font-size: 38px;
-        color: #333;
+        color: $dp-color-darkgrey;
         font-weight: 800;
         line-height: 36px;
       }
 
       .dp-money {
-        font-size: 18px;
+        font-size: $dp-sizing--lvl4;
         line-height: 24px;
         font-weight: 800;
       }
 
       .dp-renewal {
-        font-size: 11px;
+        font-size: $dp-sizing--lvl1;
         font-weight: normal;
         line-height: 15px;
-        margin-top: 24px;
-        color: #666;
+        margin-top: $dp-spaces--lv4;
+        color: $dp-color-grey;
       }
     }
   }
@@ -418,9 +416,9 @@
     height: 20px;
     position: relative;
     background-color: transparent;
-    border-left: 1px solid #ccc;
-    border-right: 1px solid #cccc;
-    margin-bottom: 30px;
+    border-left: 1px solid $dp-color-silver;
+    border-right: 1px solid $dp-color-silver;
+    margin-bottom: $dp-spaces--lv5;
 
     &::after {
       content: '';
@@ -432,15 +430,15 @@
       background: linear-gradient(
           -45deg,
           transparent 33.33%,
-          #fff 33.33%,
-          #fff 66.66%,
+          $dp-color-white 33.33%,
+          $dp-color-white 66.66%,
           transparent 66.66%
         ),
         linear-gradient(
           45deg,
           transparent 33.33%,
-          #fff 33.33%,
-          #fff 66.66%,
+          $dp-color-white 33.33%,
+          $dp-color-white 66.66%,
           transparent 66.66%
         );
       background-size: 20px 60px;
@@ -458,15 +456,15 @@
       background: linear-gradient(
           -45deg,
           transparent 33.33%,
-          #ccc 33.33%,
-          #ccc 66.66%,
+          $dp-color-silver 33.33%,
+          $dp-color-silver 66.66%,
           transparent 66.66%
         ),
         linear-gradient(
           45deg,
           transparent 33.33%,
-          #ccc 33.33%,
-          #ccc 66.66%,
+          $dp-color-silver 33.33%,
+          $dp-color-silver 66.66%,
           transparent 66.66%
         );
       background-size: 20px 54px;
@@ -477,7 +475,7 @@
 
   @media (max-width: 768px) {
     .dp-space-l24 {
-      margin: 0;
+      margin: $dp-spaces--lv0;
     }
   }
 
@@ -485,8 +483,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-bottom: 18px;
-    margin-bottom: 18px;
+    padding-bottom: $dp-spaces--lv3;
+    margin-bottom: $dp-spaces--lv0;
 
     button {
       display: flex;
@@ -497,7 +495,7 @@
       }
 
       span {
-        margin-right: 12px;
+        margin-right: $dp-spaces--lv2;
       }
     }
   }
@@ -508,8 +506,8 @@
   }
 
   .dp-link-recipients {
-    font-size: 13px;
+    font-size: $dp-sizing--lvl2;
     display: block;
-    margin-top: 24px;
+    margin-top: $dp-spaces--lv4;
   }
 }
