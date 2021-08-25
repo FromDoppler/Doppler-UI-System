@@ -1325,7 +1325,6 @@ body {
   .dpsg-color-card.dpsg-silver .dpsg-icon-color {
     box-shadow: 0 0 0 0 $dp-color-silver;
     background: $dp-color-silver;
-    color: $dp-color-darkgrey;
   }
 
   .dpsg-color-card.dpsg-silver:hover .dpsg-icon-color {
@@ -1580,6 +1579,77 @@ body {
 
   .dpsg-color-card.dpsg-orange-focus:hover .dpsg-icon-color {
     box-shadow: 0 0 0 400px $dp-color-orange-focus;
+  }
+
+  /* color 26 */
+
+  .dpsg-color-card.dpsg-green-border-flashcards .dpsg-icon-color {
+    box-shadow: 0 0 0 0 $dp-greenBorder-forFlashcards;
+    background: $dp-greenBorder-forFlashcards;
+  }
+
+  .dpsg-color-card.dpsg-green-border-flashcards:hover .dpsg-icon-color {
+    box-shadow: 0 0 0 400px $dp-greenBorder-forFlashcards;
+  }
+
+  /* color 27 */
+
+  .dpsg-color-card.dpsg-yellow-border-flashcards .dpsg-icon-color {
+    box-shadow: 0 0 0 0 $dp-yellowBorder-forFlashcards;
+    background: $dp-yellowBorder-forFlashcards;
+  }
+
+  .dpsg-color-card.dpsg-yellow-border-flashcards:hover .dpsg-icon-color {
+    box-shadow: 0 0 0 400px $dp-yellowBorder-forFlashcards;
+  }
+
+  /* color 28 */
+
+  .dpsg-color-card.dpsg-red-border-flashcards .dpsg-icon-color {
+    box-shadow: 0 0 0 0 $dp-redBorder-forFlashcards;
+    background: $dp-redBorder-forFlashcards;
+  }
+
+  .dpsg-color-card.dpsg-red-border-flashcards:hover .dpsg-icon-color {
+    box-shadow: 0 0 0 400px $dp-redBorder-forFlashcards;
+  }
+
+  /* color 29 */
+
+  .dpsg-color-card.dpsg-blue-border-flashcards .dpsg-icon-color {
+    box-shadow: 0 0 0 0 $dp-blueBorder-forFlashcards;
+    background: $dp-blueBorder-forFlashcards;
+  }
+
+  .dpsg-color-card.dpsg-blue-border-flashcards:hover .dpsg-icon-color {
+    box-shadow: 0 0 0 400px $dp-blueBorder-forFlashcards;
+  }
+
+  /* color 30 */
+
+  .dpsg-color-card.dpsg-red-highlighted-word .dpsg-icon-color {
+    box-shadow: 0 0 0 0 $dp-redBackground-fowWords;
+    background: $dp-redBackground-fowWords;
+  }
+
+  .dpsg-color-card.dpsg-red-highlighted-word:hover .dpsg-icon-color {
+    box-shadow: 0 0 0 400px $dp-redBackground-fowWords;
+  }
+
+  /* color 31 */
+
+  .dpsg-color-card.dpsg-green-highlighted-word .dpsg-icon-color {
+    box-shadow: 0 0 0 0 $dp-greenBackground-forWords;
+    background: $dp-greenBackground-forWords;
+    color: $dp-color-darkgrey;
+  }
+
+  .dpsg-color-card.dpsg-green-highlighted-word:hover .dpsg-icon-color {
+    box-shadow: 0 0 0 400px $dp-greenBackground-forWords;
+  }
+
+  .dpsg-color-card.dpsg-green-highlighted-word .dpsg-content-color h3 {
+    color: $dp-color-darkgrey;
   }
 }
 
