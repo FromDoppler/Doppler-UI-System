@@ -15,7 +15,7 @@ $dp-color-darkgreen: #008046;
 $dp-color-green-brightness: #ebf7f1;
 $dp-color-lightyellow: #fde577;
 $dp-color-lemonyellow: #c6b159;
-$dp-color-yellow: #fbb224;
+$dp-color-yellow: #fab221;
 $dp-color-darkyellow: #e58900;
 $dp-color-yellow-brightness: #fff7e9;
 $dp-color-lightred: #ec8a83;
@@ -26,9 +26,21 @@ $dp-color-lightbrown: #838370;
 $dp-color-brown: #302100;
 $dp-color-brown--hover: #594103;
 $dp-color-brown-brightness: rgba(48, 33, 0, 0.2);
-$dp-color-orange-focus: #e79433;
+$dp-color-orange-focus: #e58900;
 $dp-color-blue: #669df3;
 $dp-color-blue-brightness: #eaf5f9;
+
+/// Flashcards and borders
+
+$dp-greenBorder-forFlashcards: #99d6b9;
+$dp-yellowBorder-forFlashcards: #ffdc95;
+$dp-redBorder-forFlashcards: #f8b3b2;
+$dp-blueBorder-forFlashcards: #abc9f9;
+
+/// Highlighted words background
+
+$dp-greenBackground-forWords: #e0f3ea;
+$dp-redBackground-fowWords: #ffd7d7;
 
 /// Internal use color variables
 
@@ -173,5 +185,29 @@ $dp-violet-tabs: #c9a9d5;
 
   .dp-color-orange-focus {
     background: $dp-color-orange-focus;
+  }
+
+  .dp-green-border-flashcards {
+    background: $dp-greenBorder-forFlashcards;
+  }
+
+  .dp-yellow-border-flashcards {
+    background: $dp-yellowBorder-forFlashcards;
+  }
+
+  .dp-red-border-flashcards {
+    background: $dp-redBorder-forFlashcards;
+  }
+
+  .dp-blue-border-flashcards {
+    background: $dp-blueBorder-forFlashcards;
+  }
+
+  .dp-red-highlighted-word {
+    background: $dp-redBackground-fowWords;
+  }
+
+  .dp-green-highlighted-word {
+    background: $dp-greenBackground-forWords;
   }
 }

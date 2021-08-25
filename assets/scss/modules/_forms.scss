@@ -173,6 +173,24 @@
         }
       }
       /// Field to 50% percent
+
+      ///
+      &--70 {
+        width: 70%;
+        /* Left Column */
+        &:nth-of-type(odd) {
+          padding-right: $dp-spaces--lv3;
+        }
+      }
+
+      &--30 {
+        width: 30%;
+        /* Left Column */
+        &:nth-of-type(odd) {
+          padding-right: $dp-spaces--lv3;
+        }
+      }
+
       .show-hide {
         float: right;
         font-size: $dp-sizing--lvl2;
