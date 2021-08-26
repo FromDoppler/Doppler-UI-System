@@ -284,6 +284,17 @@
         align-items: center;
         justify-content: center;
       }
+
+      /* fix in phone library */
+
+      ul.iti__country-list {
+        li.iti__country {
+          display: flex;
+          border: 0;
+          padding: 6px;
+          align-items: center;
+        }
+      }
     }
   }
 
