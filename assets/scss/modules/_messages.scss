@@ -145,11 +145,11 @@
   /* TODO: agregar los colores de los bordes de las flashcards a la paleta de colores de doppler */
   .dp-wrap-success {
     background-color: $dp-color-green-brightness;
-    border: 1px solid #99d6b9;
-
-    &:before {
-      border: 3px solid $dp-color-green;
-    }
+    border-top: 1px solid $dp-greenBorder-forFlashcards;
+    border-bottom: 1px solid $dp-greenBorder-forFlashcards;
+    border-right: 1px solid $dp-greenBorder-forFlashcards;
+    border-left: 4px solid $dp-color-green;
+    position: relative;
 
     .dp-message-icon {
       background-image: url(../img/message-check-icon.svg);
@@ -159,11 +159,10 @@
 
   .dp-wrap-warning {
     background-color: $dp-color-yellow-brightness;
-    border: 1px solid #ffdc95;
-
-    &:before {
-      border: 3px solid $dp-color-yellow;
-    }
+    border-top: 1px solid $dp-yellowBorder-forFlashcards;
+    border-bottom: 1px solid $dp-yellowBorder-forFlashcards;
+    border-right: 1px solid $dp-yellowBorder-forFlashcards;
+    border-left: 4px solid $dp-color-yellow;
 
     .dp-message-icon {
       background-image: url(../img/message-warning-icon.svg);
@@ -173,11 +172,10 @@
 
   .dp-wrap-cancel {
     background-color: $dp-color-red-brightness;
-    border: 1px solid #f8b3b2;
-
-    &:before {
-      border: 3px solid $dp-color-red;
-    }
+    border-top: 1px solid $dp-redBorder-forFlashcards;
+    border-bottom: 1px solid $dp-redBorder-forFlashcards;
+    border-right: 1px solid $dp-redBorder-forFlashcards;
+    border-left: 4px solid $dp-color-red;
 
     .dp-message-icon {
       background-image: url(../img/message-cancel-icon.svg);
@@ -187,11 +185,10 @@
 
   .dp-wrap-info {
     background-color: $dp-color-blue-brightness;
-    border: 1px solid #abc9f9;
-
-    &:before {
-      border: 3px solid $dp-color-blue;
-    }
+    border-top: 1px solid $dp-blueBorder-forFlashcards;
+    border-bottom: 1px solid $dp-blueBorder-forFlashcards;
+    border-right: 1px solid $dp-blueBorder-forFlashcards;
+    border-left: 4px solid $dp-color-blue;
 
     .dp-message-icon {
       background-image: url(../img/message-advice.svg);
