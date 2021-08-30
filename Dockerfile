@@ -1,4 +1,4 @@
-FROM node:12.16.3 as source
+FROM node:12.20.0 as source
 WORKDIR /work
 
 COPY package-lock.json package.json npm-shrinkwrap.json ./
