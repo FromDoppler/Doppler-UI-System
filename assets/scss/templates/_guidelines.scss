@@ -1,6 +1,6 @@
 /* navigation */
 body {
-  @for $active from 1 to 40 {
+  @for $active from 1 to 50 {
     &[data-active-menu='#{$active}'] {
       .dpsg-navigation .dpsg-nav-item[data-number='#{$active}'] {
         .dpsg-nav-link {

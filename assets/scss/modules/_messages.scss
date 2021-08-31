@@ -142,14 +142,13 @@
     }
   }
 
-  /* TODO: agregar los colores de los bordes de las flashcards a la paleta de colores de doppler */
+  /* Flashcards */
   .dp-wrap-success {
     background-color: $dp-color-green-brightness;
     border-top: 1px solid $dp-greenBorder-forFlashcards;
     border-bottom: 1px solid $dp-greenBorder-forFlashcards;
     border-right: 1px solid $dp-greenBorder-forFlashcards;
     border-left: 4px solid $dp-color-green;
-    position: relative;
 
     .dp-message-icon {
       background-image: url(../img/message-check-icon.svg);
