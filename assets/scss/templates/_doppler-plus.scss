@@ -32,7 +32,7 @@
       font-weight: bold;
       font-family: 'proxima-nova';
       letter-spacing: -1px;
-      max-width: 460px;
+      max-width: 700px;
       padding: $dp-spaces--lv9 $dp-spaces--lv0;
       margin: $dp-spaces--lv0 auto;
     }
@@ -89,14 +89,14 @@
     font-weight: 700;
     cursor: pointer;
     display: block;
-    width: 300px;
     position: relative;
     font-size: 16px;
     color: $dp-color-grey;
     text-decoration: none;
     line-height: 24px;
-    padding: $dp-spaces--lv0 $dp-spaces--lv4;
+    padding: $dp-spaces--lv0 $dp-spaces--lv5;
     @include transition-all;
+    text-align: left;
 
     &:hover {
       color: $dp-color-black;
@@ -106,7 +106,7 @@
       width: 15px;
       height: 10px;
       content: '';
-      left: 30px;
+      left: 6px;
       top: 6px;
       background: url('../img/arrow-grey-down.svg') no-repeat 0 0;
       position: absolute;
