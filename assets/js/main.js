@@ -1,8 +1,8 @@
 $('body').on({
-  mouseenter: function() {
+  mouseenter: function () {
     var submenu = $(this).find(".sub-menu");
 
-    if(!$(this).hasClass('submenu-item')) {
+    if (!$(this).hasClass('submenu-item')) {
       $('.header-main').removeClass('header-open');
     }
 
@@ -12,8 +12,8 @@ $('body').on({
       $('.sub-menu.open').removeClass('open');
     }
   },
-  mouseleave: function() {
-    if ($('.header-main .submenu-item > a.active').length > 0){
+  mouseleave: function () {
+    if ($('.header-main .submenu-item > a.active').length > 0) {
       $('.header-main').addClass('header-open');
       $('.header-main .submenu-item > a.active + .sub-menu').addClass('open');
     } else {
@@ -22,23 +22,23 @@ $('body').on({
   }
 }, '.menu-main>li');
 
-$("body").on('click', '.user-menu--open', function() {
+$("body").on('click', '.user-menu--open', function () {
   $(this).parent().find('.user-menu').toggleClass('open');
 });
 
-$("body").on('click', '#open-menu', function() {
+$("body").on('click', '#open-menu', function () {
   $('.header-main').addClass('open');
 });
 
-$("body").on('click', '#close-menu', function() {
+$("body").on('click', '#close-menu', function () {
   $('.header-main').removeClass('open');
 });
 
-$("body").on('click', '.close-user--menu', function() {
+$("body").on('click', '.close-user--menu', function () {
   $('.user-menu').removeClass('open');
 });
 
-$(document).on('mouseup', function(e) {
+$(document).on('mouseup', function (e) {
   var menu = $(".user-menu");
   if (!menu.is(e.target) && menu.has(e.target).length === 0) {
     menu.removeClass('open');
@@ -49,30 +49,30 @@ $(document).on('mouseup', function(e) {
 var $delayFade = 500;
 //Initialize all modals hidden
 $(".modal").hide();
-$("#btn-exclude-list").click(function() {
+$("#btn-exclude-list").click(function () {
   $("#modal-exclude-list").fadeIn($delayFade);
 });
-$("#btn-exclude-nolist").click(function() {
+$("#btn-exclude-nolist").click(function () {
   $("#modal-exclude-nolist").fadeIn($delayFade);
 });
-$("#btn-error-list").click(function() {
+$("#btn-error-list").click(function () {
   $("#modal-error-list").fadeIn($delayFade);
 });
-$("#btn-modal-large").click(function() {
+$("#btn-modal-large").click(function () {
   $("#modal-large").fadeIn($delayFade);
 });
-$("#btn-modal-medium").click(function() {
+$("#btn-modal-medium").click(function () {
   $("#modal-medium").fadeIn($delayFade);
 });
-$("#btn-modal-small").click(function() {
+$("#btn-modal-small").click(function () {
   $("#modal-small").fadeIn($delayFade);
 });
-$(".modal .close").click(function() {
+$(".modal .close").click(function () {
   $(".modal").fadeOut();
 });
 
 // This script is ONLY to DEMONSTRATE how to show and hide password, not use in production
-$(".show-hide").click(function() {
+$(".show-hide").click(function () {
   $(this).toggleClass("ms-icon icon-hide");
   var input = $($(this).attr("toggle"));
 
@@ -88,56 +88,56 @@ $(".show-hide").click(function() {
 });
 
 
-  $('.dp-number-campaign').each(function(){
-    $(this).prop('Counter',0).animate({
-      Counter: $(this).text()
-    },{
-      duration: 3500,
-      easing: 'swing',
-      step: function (now){
-        $(this).text(Math.ceil(now).toFixed(1));
-      }
-    });
+$('.dp-number-campaign').each(function () {
+  $(this).prop('Counter', 0).animate({
+    Counter: $(this).text()
+  }, {
+    duration: 3500,
+    easing: 'swing',
+    step: function (now) {
+      $(this).text(Math.ceil(now).toFixed(1));
+    }
   });
+});
 
 
 // module tabs
-  $('.tab--item a').each(function(index) {
-    $(this).on('click', function(e) {
-        e.preventDefault();
-        var $index = index + 1;
-        $('.tab--item a, .tab--content').removeClass('active');
-        $(this).closest('.nav-tabs').attr('data-tab-active', $index);
-        $(this).addClass('active');
-        $('.tab--content:nth-child('+$index+')').addClass('active');
-        $('.tab--content .dp-plan-detail').slideUp();
-      });
-    });
+$('.tab--item a').each(function (index) {
+  $(this).on('click', function (e) {
+    e.preventDefault();
+    var $index = index + 1;
+    $('.tab--item a, .tab--content').removeClass('active');
+    $(this).closest('.nav-tabs').attr('data-tab-active', $index);
+    $(this).addClass('active');
+    $('.tab--content:nth-child(' + $index + ')').addClass('active');
+    $('.tab--content .dp-plan-detail').slideUp();
+  });
+});
 
 // module accordion
-    $("body").on('click', ".dp-accordion .dp-accordion-thumb", function(e) {
-      e.preventDefault();
-      $(this).parent().toggleClass('active');
-      $(this).parent().find('.dp-accordion-panel').slideToggle();
-    });
+$("body").on('click', ".dp-accordion .dp-accordion-thumb", function (e) {
+  e.preventDefault();
+  $(this).parent().toggleClass('active');
+  $(this).parent().find('.dp-accordion-panel').slideToggle();
+});
 
 
 // Doppler plus - Plans details
-    $('.dp-compare-details-plans').on('click', function(e){
-      e.preventDefault();
-      $(this).toggleClass('dp-open-compare');
-      $('.dp-plan-detail').slideToggle();
-    });
+$('.dp-compare-details-plans').on('click', function (e) {
+  e.preventDefault();
+  $(this).toggleClass('dp-open-compare');
+  $('.dp-plan-detail').slideToggle();
+});
 
 
 // Slider sample one
-$('.progress-bar').each(function(index) {
+$('.progress-bar').each(function (index) {
   $max = $(this).find('.range-slider').attr('max');
-  $(this).find('.range-slider').on('change input', function(){
+  $(this).find('.range-slider').on('change input', function () {
 
     var $quote = $(this).val(),
-    $progress = ($quote * 100) / $max,
-    $parent = $(this).parent();
+      $progress = ($quote * 100) / $max,
+      $parent = $(this).parent();
 
     $parent.find('.progress-anchor').css('width', $progress + '%');
     $(this).attr('data-value', this.value);
@@ -147,75 +147,120 @@ $('.progress-bar').each(function(index) {
 
 
 // Content | Custom field | emojis
-  $('.dp-bd-box .dp-button-bd').on('click', function(){
-    $('.dp-content-bd').hide();
-    $('.dp-button-bd').removeClass('active');
-    $(this).addClass('active');
-    $(this).parent().find('.dp-content-bd').show();
-  });
+$('.dp-bd-box .dp-button-bd').on('click', function () {
+  $('.dp-content-bd').hide();
+  $('.dp-button-bd').removeClass('active');
+  $(this).addClass('active');
+  $(this).parent().find('.dp-content-bd').show();
+});
 
-  $(document).on('click', function (e){
-    var container =  $('.dp-content-bd'),
+$(document).on('click', function (e) {
+  var container = $('.dp-content-bd'),
     button = $('.dp-button-bd');
 
-      if (!$('.dp-content-bd').is(e.target) && $('.dp-content-bd').has(e.target).length === 0 &&
-      !$('.dp-button-bd').is(e.target) && $('.dp-button-bd').has(e.target).length === 0)
-        {
-            container.hide();
-            $('.dp-button-bd').removeClass('active');
-        }
-  });
+  if (!$('.dp-content-bd').is(e.target) && $('.dp-content-bd').has(e.target).length === 0 &&
+    !$('.dp-button-bd').is(e.target) && $('.dp-button-bd').has(e.target).length === 0) {
+    container.hide();
+    $('.dp-button-bd').removeClass('active');
+  }
+});
 
 
-  /* nested table | expand results */
+/* nested table | expand results */
 
-  $(".dp-expand-results").on('click', function(e){
-    e.preventDefault();
-    $(this).toggleClass('dp-open-results')
-    $(this).closest('tr').next().toggleClass('show');
-  });
+$(".dp-expand-results").on('click', function (e) {
+  e.preventDefault();
+  $(this).toggleClass('dp-open-results')
+  $(this).closest('tr').next().toggleClass('show');
+});
 
 // for all functions use dopplerUI namespace
 var dopplerUI = dopplerUI || {};
-  dopplerUI.createDoubleSlide = function(element1, element2){
+dopplerUI.createDoubleSlide = function (element1, element2) {
 
-    $(element1).on("input",function(){
-      var label = $(this).attr("data-label");
-      var maxThumb = $(this).parent().find(".thumb-2")[0];
-      this.value= Math.min(this.value, maxThumb.value-2);
-      var totalSteps = parseInt(this.max)-parseInt(this.min);
-      var percent =(100/totalSteps)*parseInt(this.value)-(100/totalSteps)*parseInt(this.min);
-      var $container = $(this).parent();
-      $container.find("div[inverse-left]").css("width",percent+'%');
-      $container.find("div[range]:first,div[sign-one],span[thumb]:first").css("left", percent+'%');
-      $container.find("div[sign-one] span").text(this.value + label);
-    });
-
-    $(element2).on("input",function(){
-      var label = $(this).attr("data-label");
-      var minThumb = $(this).parent().find(".thumb-1")[0];
-      this.value=Math.max(this.value,minThumb.value-(-2));
-      var totalSteps = parseInt(this.max)-parseInt(this.min);
-      var percent=(100/totalSteps)*parseInt(this.value)-(100/totalSteps)*parseInt(this.min);
-      var $container = $(this).parent();
-      $container.find("div[inverse-right]").css("width",(100 - percent) +'%');
-      $container.find("div[range]:last").css("right",(100-percent)+'%')
-      $container.find("div[sign-two],span[thumb]:last").css("left", percent+'%');
-      $container.find("div[sign-two] span").text(this.value + label);
-    });
-  };
-
-  $('.dp-show-tips').on('click', function(){
-    $(this).closest('.field-item').next('.dp-advice').slideToggle();
-
-    var $showPanelLink = $(this).find('.dp-show-text');
-    if ($(this).find('.icon-close').hasClass('rotation')) {
-      $showPanelLink.html($(this).attr('data-text-hide'));
-      } else {
-        $showPanelLink.html($(this).attr('data-text-show'));
-    }
-    $(this).find('.icon-close').toggleClass('rotation');
-
+  $(element1).on("input", function () {
+    var label = $(this).attr("data-label");
+    var maxThumb = $(this).parent().find(".thumb-2")[0];
+    this.value = Math.min(this.value, maxThumb.value - 2);
+    var totalSteps = parseInt(this.max) - parseInt(this.min);
+    var percent = (100 / totalSteps) * parseInt(this.value) - (100 / totalSteps) * parseInt(this.min);
+    var $container = $(this).parent();
+    $container.find("div[inverse-left]").css("width", percent + '%');
+    $container.find("div[range]:first,div[sign-one],span[thumb]:first").css("left", percent + '%');
+    $container.find("div[sign-one] span").text(this.value + label);
   });
 
+  $(element2).on("input", function () {
+    var label = $(this).attr("data-label");
+    var minThumb = $(this).parent().find(".thumb-1")[0];
+    this.value = Math.max(this.value, minThumb.value - (-2));
+    var totalSteps = parseInt(this.max) - parseInt(this.min);
+    var percent = (100 / totalSteps) * parseInt(this.value) - (100 / totalSteps) * parseInt(this.min);
+    var $container = $(this).parent();
+    $container.find("div[inverse-right]").css("width", (100 - percent) + '%');
+    $container.find("div[range]:last").css("right", (100 - percent) + '%')
+    $container.find("div[sign-two],span[thumb]:last").css("left", percent + '%');
+    $container.find("div[sign-two] span").text(this.value + label);
+  });
+};
 
+$('.dp-show-tips').on('click', function () {
+  $(this).closest('.field-item').next('.dp-advice').slideToggle();
+
+  var $showPanelLink = $(this).find('.dp-show-text');
+  if ($(this).find('.icon-close').hasClass('rotation')) {
+    $showPanelLink.html($(this).attr('data-text-hide'));
+  } else {
+    $showPanelLink.html($(this).attr('data-text-show'));
+  }
+  $(this).find('.icon-close').toggleClass('rotation');
+
+});
+
+
+// Carousel
+
+var carousel = document.querySelector('.dp-carousel');
+var container = carousel.querySelector('.dp-carousel-container');
+var pagination = carousel.querySelector('.dp-carousel-dots');
+var bullets = [].slice.call(carousel.querySelectorAll('.dp-carousel-dot'));
+var totalItems = container.querySelectorAll('.dp-carousel-slide').length;
+var percent = (100 / totalItems);
+var currentIndex = 0;
+
+
+container.style.width = (100 * totalItems) + '%';
+
+
+function next() {
+  slideTo(currentIndex + 1);
+}
+
+function prev() {
+  slideTo(currentIndex - 1);
+}
+
+function slideTo(index) {
+  index = index < 0 ? totalItems - 1 : index >= totalItems ? 0 : index;
+  container.style.WebkitTransform = container.style.transform = 'translate(-' + (index * percent) + '%, 0)';
+  bullets[currentIndex].classList.remove('active-bullet');
+  bullets[index].classList.add('active-bullet');
+  currentIndex = index;
+}
+
+bullets[currentIndex].classList.add('active-bullet');
+
+pagination.addEventListener('click', function (e) {
+  var index = bullets.indexOf(e.target);
+  if (index !== -1 && index !== currentIndex) {
+    slideTo(index);
+  }
+}, false);
+
+const delay = 6000; //ms
+
+let autoChange = setInterval(next, delay);
+const restart = function () {
+  clearInterval(autoChange);
+  autoChange = setInterval(next, delay);
+};

@@ -2,9 +2,66 @@
 /// This is a poster comment.
 /// It will apply annotations to all items from file.
 /// @access private
-/// @author
+/// @author Ornella Cicalello
 /// Classes for the Carousel component
 ////
 
 .dp-library {
+  .dp-carousel {
+    width: 70%;
+    margin: 0 auto;
+    border: 2px solid #bbb;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+
+    &-container {
+      list-style: none;
+      overflow: hidden;
+      padding: 0;
+      margin: 0;
+      width: 500%;
+      transition: transform 0.3s cubic-bezier(0.694, 0.0482, 0.335, 1);
+      display: flex;
+      flex-wrap: nowrap;
+    }
+
+    &-slide {
+      position: relative;
+      width: 100%;
+    }
+
+    &-dots {
+      list-style: none;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 50%;
+      padding: 0;
+      margin: 0 auto;
+      text-align: center;
+      z-index: 10;
+    }
+
+    &-dot {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      background-color: rgb(100, 100, 100);
+      cursor: pointer;
+      margin: 0 7px;
+      border-radius: 50%;
+      opacity: 0.5;
+      transition-property: transform, opacity, background-color;
+      transition-duration: 0.3s;
+
+      &.active-bullet,
+      &.active-bullet:hover {
+        opacity: 1;
+        background-color: #000;
+        cursor: default;
+      }
+    }
+  }
 }
