@@ -116,9 +116,21 @@
               padding-right: $dp-spaces--lv2;
             }
 
+            .dp-left-field {
+              flex: 1;
+
+              &.dp-error input {
+                border: 1px solid $dp-color-red;
+              }
+            }
+
             .dp--cvv,
             .dp--expiry {
               width: 100px;
+
+              &.dp-error input {
+                border: 1px solid $dp-color-red;
+              }
             }
           }
         }
@@ -163,7 +175,6 @@
         display: flex;
         justify-content: space-around;
         width: 70%;
-        margin-bottom: $dp-spaces--lv3;
 
         li {
           display: inline-block;

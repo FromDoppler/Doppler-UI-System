@@ -589,18 +589,18 @@
                 <a href="#" class="dp-edit-form" title="Editar formulario"
                   ><span class="ms-icon icon-edit"></span
                 ></a>
-                <div class="dp-accordion-panel" style="display: none">
+                <div class="dp-accordion-panel" style="display: block">
                   <div class="dp-accordion-content">
                     <form class="dp-form-payment-method">
                       <fieldset>
                         <legend>INFORMACIÓN DE FACTURACIÓN</legend>
                         <ul class="field-group">
-                          <li class="field-item m-b-24">
+                          <li class="field-item">
                             <ul class="dp-radio-input">
                               <li>
                                 <div class="dp-volume-option">
                                   <label>
-                                    <input type="radio" name="radio" />
+                                    <input type="radio" checked="" />
                                     <span>Tarjeta de Crédito</span>
                                   </label>
                                 </div>
@@ -614,13 +614,9 @@
                                 </div>
                               </li>
                               <li>
-                                <div class="dp-volume-option" checked="">
+                                <div class="dp-volume-option" name="radio">
                                   <label>
-                                    <input
-                                      type="radio"
-                                      name="radio"
-                                      checked=""
-                                    />
+                                    <input type="radio" name="radio" />
                                     <span
                                       ><img
                                         src="img/mercado-pago.svg"
@@ -631,11 +627,23 @@
                               </li>
                             </ul>
                           </li>
+                          <li class="field-item">
+                            <div class="dp-wrap-message dp-wrap-cancel">
+                              <span class="dp-message-icon"></span>
+                              <div class="dp-content-message">
+                                <p>No pudimos procesar el pago.</p>
+                                <p>
+                                  Contáctate con tu banco para mas información y
+                                  vuelve a intentar luego.
+                                </p>
+                              </div>
+                            </div>
+                          </li>
 
                           <li class="field-item field-credit-card">
-                            <div class="campos">
+                            <div class="dp-credit-fields">
                               <div class="dp-field-inputs">
-                                <div class="campo-izq" style="flex: 1">
+                                <div class="dp-left-field dp-error">
                                   <label for="credit card number"
                                     >*Tarjeta de credito</label
                                   ><input
@@ -645,7 +653,7 @@
                                     value=""
                                   />
                                 </div>
-                                <div class="dp--expiry">
+                                <div class="dp--expiry dp-error">
                                   <label for="expiry">*Expiracion</label
                                   ><input
                                     name="expiry"
@@ -656,7 +664,7 @@
                                 </div>
                               </div>
                               <div class="dp-field-inputs">
-                                <div class="campo-izq" style="flex: 1">
+                                <div class="dp-left-field">
                                   <label for="name surname titular"
                                     >*Nombre y Apellido del titular</label
                                   ><input
@@ -667,7 +675,7 @@
                                     value="GUS BAAMONDE"
                                   />
                                 </div>
-                                <div class="dp--cvv">
+                                <div class="dp--cvv dp-error">
                                   <label for="number cvv">*CVV</label
                                   ><input
                                     type="number"
