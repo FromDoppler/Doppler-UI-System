@@ -8,59 +8,154 @@
 
 .dp-library {
   .dp-carousel {
-    width: 70%;
-    margin: 0 auto;
-    border: 2px solid #bbb;
     position: relative;
-    overflow: hidden;
-    width: 100%;
+    padding-bottom: 28px;
 
-    &-container {
-      list-style: none;
+    &-wrapper {
+      width: 100%;
+      height: auto;
+      border: 2px solid $dp-color-silver;
+      background: $dp-color-ghostwhite;
+      border-radius: 3px;
       overflow: hidden;
-      padding: 0;
-      margin: 0;
-      width: 500%;
-      transition: transform 0.3s cubic-bezier(0.694, 0.0482, 0.335, 1);
-      display: flex;
-      flex-wrap: nowrap;
+    }
+
+    &-content {
+      -webkit-display: inline-flex;
+      -moz-display: inline-flex;
+      -ms-display: inline-flex;
+      -o-display: inline-flex;
+      display: inline-flex;
+
+      &.animating {
+        animation: slide-fade 1s;
+
+        @keyframes slide-fade {
+          0% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 1;
+          }
+        }
+      }
     }
 
     &-slide {
       position: relative;
-      width: 100%;
+      height: 205px;
+      padding: 19px;
+
+      span {
+        font-size: 15px;
+        font-weight: 700;
+        color: $dp-color-lightgrey;
+        margin-bottom: 20px;
+        display: block;
+      }
+
+      h3 {
+        font-size: 23px;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+        color: $dp-color-darkgrey;
+      }
+
+      a {
+        position: absolute;
+        bottom: 12px;
+        right: 20px;
+        padding-right: 25px;
+        display: inherit;
+        font-size: 15px;
+        font-weight: 700;
+        text-decoration: none;
+        color: $dp-color-lightgrey;
+        cursor: pointer;
+
+        span {
+          content: '';
+          display: block;
+          margin: 0;
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          width: 18px;
+          height: 18px;
+          border-radius: 100%;
+          background: $dp-color-lightgrey;
+          text-align: center;
+          font-size: 8px;
+          line-height: 18px;
+          color: $dp-color-white;
+        }
+      }
     }
 
-    &-dots {
-      list-style: none;
+    .dp-carousel-dots {
       position: absolute;
       bottom: 0;
       left: 0;
-      right: 0;
-      width: 50%;
-      padding: 0;
-      margin: 0 auto;
-      text-align: center;
-      z-index: 10;
+      width: 100%;
+      display: inline-flex;
+      justify-content: left;
+
+      & .item {
+        width: 16px;
+        height: 16px;
+        border-radius: 100%;
+        margin-right: 8px;
+        background: $dp-color-cement;
+        opacity: 0.4;
+        cursor: pointer;
+        transition-duration: 0.2s;
+        &:hover {
+          background: $dp-color-cement;
+          opacity: 1;
+          transition-duration: 0.2s;
+        }
+      }
     }
+    &-orange {
+      .dp-carousel-wrapper {
+        border: 2px solid $dp-color-orange-carousel-border;
+        background: $dp-color-orange-carousel-back;
+      }
 
-    &-dot {
-      display: inline-block;
-      width: 12px;
-      height: 12px;
-      background-color: rgb(100, 100, 100);
-      cursor: pointer;
-      margin: 0 7px;
-      border-radius: 50%;
-      opacity: 0.5;
-      transition-property: transform, opacity, background-color;
-      transition-duration: 0.3s;
+      .dp-carousel-content {
+        & > .dp-carousel-slide {
+          span {
+            color: $dp-color-orange-carousel;
+          }
+          a {
+            color: $dp-color-orange-carousel;
+            span {
+              background: $dp-color-orange-carousel;
+              color: $dp-color-white;
+            }
+          }
+        }
+      }
+    }
+    &-purple {
+      .dp-carousel-wrapper {
+        border: 2px solid $dp-color-purple-carousel-border;
+        background: $dp-color-purple-carousel-back;
+      }
 
-      &.active-bullet,
-      &.active-bullet:hover {
-        opacity: 1;
-        background-color: #000;
-        cursor: default;
+      .dp-carousel-content {
+        & > .dp-carousel-slide {
+          span {
+            color: $dp-color-purple-carousel;
+          }
+          a {
+            color: $dp-color-purple-carousel;
+            span {
+              background: $dp-color-purple-carousel;
+              color: $dp-color-white;
+            }
+          }
+        }
       }
     }
   }
