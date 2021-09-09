@@ -122,7 +122,7 @@
     "postcss-clean": "~1.2.2",
     "postcss-cli": "^8.3.1",
     "postcss-flexibility": "^2.0.0",
-    "prettier": "^2.3.2",
+    "prettier": "^2.4.0",
     "prettier-check": "^2.0.0",
     "sassdoc": "^2.7.3",
     "semantic-release": "^17.4.7",
