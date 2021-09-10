@@ -9,7 +9,7 @@
 .dp-library {
   .dp-carousel {
     position: relative;
-    padding-bottom: 28px;
+    padding-bottom: $dp-spaces--lv5;
 
     &-wrapper {
       width: 100%;
@@ -29,28 +29,46 @@
 
       &.animating {
         animation: slide-fade 1s;
-
-        @keyframes slide-fade {
-          0% {
-            opacity: 0;
-          }
-          100% {
-            opacity: 1;
-          }
+      }
+      @keyframes slide-fade {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
         }
       }
     }
 
     &-slide {
       position: relative;
-      height: 205px;
-      padding: 19px;
+      display: none;
+      min-height: 205px;
+      padding: $dp-spaces--lv3;
+      animation: fade-slide 1s;
+
+      @keyframes fade-slide {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      @include media-breakpoint('mobile') {
+        min-height: 300px;
+      }
+
+      &:first-child {
+        display: block;
+      }
 
       span {
         font-size: 15px;
         font-weight: 700;
         color: $dp-color-lightgrey;
-        margin-bottom: 20px;
+        margin-bottom: $dp-spaces--lv3;
         display: block;
       }
 
@@ -59,13 +77,14 @@
         font-weight: 400;
         letter-spacing: 0.5px;
         color: $dp-color-darkgrey;
+        padding-bottom: $dp-spaces--lv5;
       }
 
       a {
         position: absolute;
         bottom: 12px;
         right: 20px;
-        padding-right: 25px;
+        padding-right: $dp-spaces--lv4;
         display: inherit;
         font-size: 15px;
         font-weight: 700;
@@ -100,63 +119,80 @@
       display: inline-flex;
       justify-content: left;
 
-      & .item {
+      .dp-carousel-dot {
+        position: relative;
+        width: 14px;
+        height: 14px;
+        box-shadow: none;
+        margin-right: $dp-spaces--lv2;
+        cursor: pointer;
+      }
+
+      .dp-carousel-dot::after {
+        content: '';
+        position: absolute;
+        top: -1px;
+        left: -1px;
         width: 16px;
         height: 16px;
         border-radius: 100%;
-        margin-right: 8px;
-        background: $dp-color-cement;
-        opacity: 0.4;
-        cursor: pointer;
+        background: $dp-color-snow;
+        opacity: 1;
         transition-duration: 0.2s;
-        &:hover {
-          background: $dp-color-cement;
-          opacity: 1;
-          transition-duration: 0.2s;
-        }
-      }
-    }
-    &-orange {
-      .dp-carousel-wrapper {
-        border: 2px solid $dp-color-orange-carousel-border;
-        background: $dp-color-orange-carousel-back;
       }
 
-      .dp-carousel-content {
-        & > .dp-carousel-slide {
-          span {
-            color: $dp-color-orange-carousel;
-          }
-          a {
-            color: $dp-color-orange-carousel;
-            span {
-              background: $dp-color-orange-carousel;
-              color: $dp-color-white;
-            }
-          }
-        }
-      }
-    }
-    &-purple {
-      .dp-carousel-wrapper {
-        border: 2px solid $dp-color-purple-carousel-border;
-        background: $dp-color-purple-carousel-back;
+      .dp-carousel-dot:hover:after {
+        background: $dp-color-cement;
+        transition-duration: 0.2s;
       }
 
-      .dp-carousel-content {
-        & > .dp-carousel-slide {
-          span {
-            color: $dp-color-purple-carousel;
-          }
-          a {
-            color: $dp-color-purple-carousel;
-            span {
-              background: $dp-color-purple-carousel;
-              color: $dp-color-white;
-            }
-          }
-        }
+      .dp-carousel-dot:checked:after {
+        background: $dp-color-cement;
       }
+
+      .dp-carousel-dot:focus:after {
+        box-shadow: inset 0 0 0 2px $dp-color-orange-focus;
+      }
+    }
+  }
+
+  .dp-carousel-orange {
+    .dp-carousel-wrapper {
+      border: 2px solid $dp-color-orange-carousel-border;
+      background: $dp-color-orange-carousel-back;
+    }
+
+    .dp-carousel-content .dp-carousel-slide span {
+      color: $dp-color-orange-carousel;
+    }
+
+    .dp-carousel-content .dp-carousel-slide a {
+      color: $dp-color-orange-carousel;
+    }
+
+    .dp-carousel-content .dp-carousel-slide a span {
+      background: $dp-color-orange-carousel;
+      color: $dp-color-white;
+    }
+  }
+
+  .dp-carousel-purple {
+    .dp-carousel-wrapper {
+      border: 2px solid $dp-color-purple-carousel-border;
+      background: $dp-color-purple-carousel-back;
+    }
+
+    .dp-carousel-content .dp-carousel-slide span {
+      color: $dp-color-purple-carousel;
+    }
+
+    .dp-carousel-content .dp-carousel-slide a {
+      color: $dp-color-purple-carousel;
+    }
+
+    .dp-carousel-content .dp-carousel-slide a span {
+      background: $dp-color-purple-carousel;
+      color: $dp-color-white;
     }
   }
 }

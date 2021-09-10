@@ -75,26 +75,38 @@
         <div class="dpsg-content-wrap">
           <article class="dpsg-content">
             <h3>Carousel Component</h3>
-            <p>Nuevo componente de Carousel</p>
+            <p>
+              Al copiar el html del carousel cambiar <b>id</b> de cada
+              <b>slide</b>, siempre dejando la terminación <b>_dpslide</b>.
+              <br />
+              Ejemplo: <b>id="primero_dpslide"</b>,
+              <b>id="segundo_dpslide"</b> , etc. <br /><br />
+              Poner misma cantidad de inputs que de slides. A cada input
+              pornerle un <b>id</b> y <b>value</b> distinto, y un mismo
+              <b>name</b> para todos los inputs del mismo carousel. <br />
+              Ejemplo: para el primer input de un carousel
+              <b>id="primero" value="primero" name="carousel1"</b> . Para el
+              segundo input <b>id="segundo" value="segundo" name="carousel1"</b>
+            </p>
             <hr class="dpsg-break" />
             <div class="dp-container">
               <div class="dp-rowflex">
                 <div class="col-sm-12 col-md-6">
                   <div class="dp-carousel dp-carousel-orange">
                     <div class="dp-carousel-wrapper">
-                      <div class="dp-carousel-content" data-pagination="true">
-                        <div class="dp-carousel-slide">
+                      <div class="dp-carousel-content">
+                        <div class="dp-carousel-slide" id="primero_dpslide">
                           <span>Último BlogPost</span>
                           <h3>
                             ¿Cuáles son las diferencias entre servicio al
                             cliente y atención al cliente?
                           </h3>
                           <a
-                            ><span class="ms-icon icon-arrow-next"></span> Ver
+                            ><span class="ms-icon icon-arrow-next"></span>Ver
                             más</a
                           >
                         </div>
-                        <div class="dp-carousel-slide">
+                        <div class="dp-carousel-slide" id="segundo_dpslide">
                           <span>Servicios Adicionales</span>
                           <h3>
                             Asesorías, acompañamiento exclusivo, IPs dedicadas o
@@ -107,14 +119,31 @@
                         </div>
                       </div>
                     </div>
-                    <div class="dp-carousel-dots"></div>
+                    <div class="dp-carousel-dots">
+                      <input
+                        checked=""
+                        class="dp-carousel-dot"
+                        type="radio"
+                        id="primero"
+                        value="primero"
+                        name="carousel1"
+                      />
+                      <input
+                        class="dp-carousel-dot"
+                        type="radio"
+                        id="segundo"
+                        value="segundo"
+                        name="carousel1"
+                      />
+                    </div>
                   </div>
                 </div>
+
                 <div class="col-sm-12 col-md-6">
                   <div class="dp-carousel dp-carousel-purple">
                     <div class="dp-carousel-wrapper">
-                      <div class="dp-carousel-content" data-pagination="true">
-                        <div class="dp-carousel-slide">
+                      <div class="dp-carousel-content">
+                        <div class="dp-carousel-slide" id="cuarto_dpslide">
                           <span>Último BlogPost</span>
                           <h3>
                             ¿Cuáles son las diferencias entre servicio al
@@ -125,7 +154,7 @@
                             más</a
                           >
                         </div>
-                        <div class="dp-carousel-slide">
+                        <div class="dp-carousel-slide" id="quinto_dpslide">
                           <span>Servicios Adicionales</span>
                           <h3>
                             Asesorías, acompañamiento exclusivo, IPs dedicadas o
@@ -136,11 +165,11 @@
                             más</a
                           >
                         </div>
-                        <div class="dp-carousel-slide">
-                          <span>Servicios Adicionales</span>
+                        <div class="dp-carousel-slide" id="sexto_dpslide">
+                          <span>Último BlogPost</span>
                           <h3>
-                            Asesorías, acompañamiento exclusivo, IPs dedicadas o
-                            funcionalidades extra.
+                            ¿Cuáles son las diferencias entre servicio al
+                            cliente y atención al cliente?
                           </h3>
                           <a
                             ><span class="ms-icon icon-arrow-next"></span>Ver
@@ -149,7 +178,30 @@
                         </div>
                       </div>
                     </div>
-                    <div class="dp-carousel-dots"></div>
+                    <div class="dp-carousel-dots">
+                      <input
+                        checked=""
+                        class="dp-carousel-dot"
+                        type="radio"
+                        id="cuarto"
+                        value="cuarto"
+                        name="carousel2"
+                      />
+                      <input
+                        class="dp-carousel-dot"
+                        type="radio"
+                        id="quinto"
+                        value="quinto"
+                        name="carousel2"
+                      />
+                      <input
+                        class="dp-carousel-dot"
+                        type="radio"
+                        id="sexto"
+                        value="sexto"
+                        name="carousel2"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>

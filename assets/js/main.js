@@ -219,72 +219,25 @@ $('.dp-show-tips').on('click', function () {
 
 // Carousel
 
-var carousel = (el, parameter) => {
-  el = el !== undefined ? el : "";
-  parameter = parameter !== undefined ? parameter : {};
-  var method = {
-    autoplay: parameter.autoplay !== undefined ? parameter.autoplay : null,
-    playTimer: parameter.autoplay !== undefined && parameter.autoplay.playTimer !== undefined
-      ? parameter.autoplay.playTimer : 3000,
-  }, trigger = document.querySelectorAll(".dp-carousel" + el);
-
-  Array.prototype.forEach.call(trigger, function (el) {
-
-    var content = el.querySelector(".dp-carousel-content"),
-      count = content.childElementCount,
-      widths, d_widths = el.offsetWidth, c_widths = d_widths * count,
-      is_pagination = method.pagination || content.getAttribute("data-pagination"),
-      pagination_content = el.querySelector(".dp-carousel-dots");
-    this.autoplayEffect = true;
-
-    var index_settings = () => {
-      var slides = content.querySelectorAll(".dp-carousel-slide");
-      for (i in slides) { slides[i].tabIndex = i; }
-    },
-      size = (widths) => {
-        var item_resize = el.querySelectorAll(".dp-carousel-slide");
-        Array.prototype.forEach.call(item_resize, (item_size) => {
-          item_size.style.width = widths + "px";
-        });
-      },
-      responsive_grid = () => {
-        widths = d_widths; size(widths);
-        c_widths = widths * content.lastElementChild.tabIndex;
-        return widths;
-      },
-      pagination = () => {
-        if (is_pagination) {
-          var pagination_item = el.querySelector(".dp-carousel-dots");
-          for (var i = 0; i < count; i++) {
-            var p_item = document.createElement("buttom");
-            p_item.classList.add("item");
-            p_item.tabIndex = i;
-            pagination_item.appendChild(p_item);
-          }
+(function () {
+  $(document).ready(function () {
+    return $("input[type='radio']").change(function () {
+      var $current_radiobutton, current_panel_id, current_radiobutton_name;
+      $current_radiobutton = $(this);
+      current_radiobutton_name = $current_radiobutton.attr('name');
+      current_panel_id = `#${$current_radiobutton.attr('value')}_dpslide`;
+      return $(`[name='${current_radiobutton_name}']`).each((i, element) => {
+        var $panel, $radiobutton, panel_id;
+        $radiobutton = $(element);
+        panel_id = `#${$radiobutton.attr('id')}_dpslide`;
+        $panel = $(panel_id);
+        if (panel_id === current_panel_id) {
+          return $panel.show();
+        } else {
+          return $panel.hide();
         }
-      },
-      slider_direction = (el) => {
-        if (el.contains(pagination_content)) {
-          pagination();
-          var paginate = pagination_content.querySelectorAll(".item");
-          Array.prototype.forEach.call(paginate, (el) => {
-            el.addEventListener("click", () => {
-              window.clearInterval(this.autoplayEffect);
-              i = el.tabIndex;
-              var ml_ = widths * i;
-              content.style.transform = "translate3d(-" + ml_ + "px,0px,0px)";
-              content.classList.add("animating");
-              content.addEventListener('animationend', function () {
-                content.classList.remove("animating");
-                content.removeEventListener('animationend');
-              });
-            }, false);
-          });
-        }
-      };
-    window.addEventListener("resize", () => { d_widths = el.offsetWidth; responsive_grid(); }, true);
-    responsive_grid(); slider_direction(el); index_settings();
+      });
+    });
   });
-  return this;
-};
-carousel();
+}).call(this);
+
