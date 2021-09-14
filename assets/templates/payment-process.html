@@ -627,20 +627,8 @@
                               </li>
                             </ul>
                           </li>
-                          <li class="field-item">
-                            <div class="dp-wrap-message dp-wrap-cancel">
-                              <span class="dp-message-icon"></span>
-                              <div class="dp-content-message">
-                                <p>No pudimos procesar el pago.</p>
-                                <p>
-                                  Contáctate con tu banco para mas información y
-                                  vuelve a intentar luego.
-                                </p>
-                              </div>
-                            </div>
-                          </li>
 
-                          <li class="field-item field-credit-card">
+                          <li class="field-item field-credit-card error">
                             <div class="dp-credit-fields">
                               <div class="dp-field-inputs">
                                 <div class="dp-left-field dp-error">
@@ -652,6 +640,14 @@
                                     placeholder="Numero de tarjeta"
                                     value=""
                                   />
+                                  <div
+                                    class="
+                                      wrapper-errors
+                                      dp-message dp-error-form
+                                    "
+                                  >
+                                    <p>¡Ouch! Este campo está vacío</p>
+                                  </div>
                                 </div>
                                 <div class="dp--expiry dp-error">
                                   <label for="expiry">*Expiracion</label
@@ -685,6 +681,14 @@
                                     value=""
                                     class="dp-cvv"
                                   />
+                                  <div
+                                    class="
+                                      wrapper-errors
+                                      dp-message dp-error-form
+                                    "
+                                  >
+                                    <p>¡Ouch! Este campo está vacío</p>
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -773,6 +777,7 @@
                                   <button
                                     type="button"
                                     class="dp-button button-medium"
+                                    disabled
                                   >
                                     Trimestral
                                   </button>
@@ -782,6 +787,7 @@
                                   <button
                                     type="button"
                                     class="dp-button button-medium"
+                                    disabled
                                   >
                                     Semestral
                                   </button>
@@ -797,6 +803,45 @@
                                   <span class="dp-discount">25% off</span>
                                 </li>
                               </ul>
+                            </div>
+                          </li>
+                          <li class="field-item">
+                            <div class="dp-considerations">
+                              <h4>Consideraciones</h4>
+                              <ul>
+                                <li>
+                                  <p>
+                                    Emitiremos la factura en pesos argentinos a
+                                    Consumidor Final, según el tipo de cambio
+                                    vendedor del Banco de la Nación Argentina en
+                                    el día de emisión de la misma.
+                                  </p>
+                                </li>
+                                <li>
+                                  <p>
+                                    Procesaremos el pago mensualmente a través
+                                    de la plataforma Mercado Pago.
+                                  </p>
+                                </li>
+                                <li>
+                                  <p>
+                                    El cargo aparecerá en el resumen de tu
+                                    Tarjeta de Crédito como MERPAGO*DOPPLER
+                                  </p>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li class="field-item">
+                            <div class="dp-wrap-message dp-wrap-cancel">
+                              <span class="dp-message-icon"></span>
+                              <div class="dp-content-message">
+                                <p>No pudimos procesar el pago.</p>
+                                <p>
+                                  Contáctate con tu banco para mas información y
+                                  vuelve a intentar luego.
+                                </p>
+                              </div>
                             </div>
                           </li>
                           <li class="field-item">
@@ -837,7 +882,7 @@
               </li>
               <li>
                 <span>Descuento pago trimestral: <strong>- 5%</strong></span>
-                <span>- US$ 02,25</span>
+                <span class="dp-discount">- US$ 02,25</span>
               </li>
             </ul>
             <hr class="dp-hr-grey" />

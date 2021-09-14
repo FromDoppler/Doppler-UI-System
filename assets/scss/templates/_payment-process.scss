@@ -126,7 +126,7 @@
 
             .dp--cvv,
             .dp--expiry {
-              width: 100px;
+              width: 50%;
 
               &.dp-error input {
                 border: 1px solid $dp-color-red;
@@ -144,6 +144,28 @@
         [type='number']::-webkit-outer-spin-button {
           height: 0;
           display: none;
+        }
+      }
+
+      .dp-considerations {
+        margin-bottom: $dp-spaces--lv4;
+
+        h4 {
+          text-transform: none;
+          font-size: $dp-sizing--lvl2;
+          color: dp-color-grey;
+        }
+
+        p {
+          font-size: $dp-sizing--lvl2;
+          color: dp-color-grey;
+        }
+
+        ul {
+          li {
+            border: 0;
+            margin-bottom: $dp-spaces--lv1;
+          }
         }
       }
 
@@ -255,15 +277,19 @@
 
       .dp-wrap-subscription {
         padding: $dp-spaces--lv2 $dp-spaces--lv0 $dp-spaces--lv0;
-        width: 65%;
+        width: 446px;
         margin-bottom: $dp-spaces--lv4;
+        margin: $dp-spaces--lv0 $dp-spaces--lv0 $dp-spaces--lv4 $dp-spaces--lv0;
 
         ul {
-          padding: $dp-spaces--lv1;
+          padding: $dp-spaces--lv0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
 
           li {
             border: none;
-            margin: $dp-spaces--lv0;
+            margin: $dp-spaces--lv1;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -271,6 +297,13 @@
 
           button {
             min-width: 100px;
+            &:disabled {
+              color: $dp-color-silver;
+            }
+          }
+
+          button:disabled ~ .dp-discount {
+            color: $dp-color-silver;
           }
         }
       }
@@ -373,12 +406,17 @@
       line-height: 20px;
       font-size: $dp-sizing--lvl3;
       padding: $dp-spaces--lv4 $dp-spaces--lv0;
+      color: $dp-color-darkgrey;
 
       li {
         margin-bottom: $dp-spaces--lv2;
         display: flex;
         position: relative;
         justify-content: space-between;
+      }
+
+      .dp-discount {
+        color: $dp-color-grey;
       }
     }
 
@@ -411,14 +449,15 @@
         justify-content: space-between;
         font-size: 38px;
         color: $dp-color-darkgrey;
-        font-weight: 800;
+        font-weight: 700;
         line-height: 36px;
       }
 
       .dp-money {
         font-size: $dp-sizing--lvl4;
         line-height: 24px;
-        font-weight: 800;
+        font-weight: 700;
+        margin-right: $dp-spaces--lv1;
       }
 
       .dp-renewal {
