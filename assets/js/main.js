@@ -219,25 +219,13 @@ $('.dp-show-tips').on('click', function () {
 
 // Carousel
 
-(function () {
-  $(document).ready(function () {
-    return $("input[type='radio']").change(function () {
-      var $current_radiobutton, current_panel_id, current_radiobutton_name;
-      $current_radiobutton = $(this);
-      current_radiobutton_name = $current_radiobutton.attr('name');
-      current_panel_id = `#${$current_radiobutton.attr('value')}_dpslide`;
-      return $(`[name='${current_radiobutton_name}']`).each((i, element) => {
-        var $panel, $radiobutton, panel_id;
-        $radiobutton = $(element);
-        panel_id = `#${$radiobutton.attr('id')}_dpslide`;
-        $panel = $(panel_id);
-        if (panel_id === current_panel_id) {
-          return $panel.show();
-        } else {
-          return $panel.hide();
-        }
-      });
-    });
+$(document).ready(function () {
+  $(".dp-carousel-dot").change(function () {
+    var slideId = $(this).prop("id");
+    var slidesName = $(this).prop("name");
+    // hide all slides
+    $('div[name="' + slidesName + '"]').hide();
+    // show the one with the correct id
+    $('#' + slideId + '_dpslide').show();
   });
-}).call(this);
-
+});

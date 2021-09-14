@@ -111,7 +111,7 @@
       }
     }
 
-    .dp-carousel-dots {
+    &-dots {
       position: absolute;
       bottom: 0;
       left: 0;
@@ -154,45 +154,41 @@
         box-shadow: inset 0 0 0 2px $dp-color-orange-focus;
       }
     }
-  }
 
-  .dp-carousel-orange {
-    .dp-carousel-wrapper {
+    &-orange {
       border: 2px solid $dp-color-orange-carousel-border;
       background: $dp-color-orange-carousel-back;
+
+      .dp-carousel-content .dp-carousel-slide span {
+        color: $dp-color-orange-carousel;
+      }
+
+      .dp-carousel-content .dp-carousel-slide a {
+        color: $dp-color-orange-carousel;
+      }
+
+      .dp-carousel-content .dp-carousel-slide a span {
+        background: $dp-color-orange-carousel;
+        color: $dp-color-white;
+      }
     }
 
-    .dp-carousel-content .dp-carousel-slide span {
-      color: $dp-color-orange-carousel;
-    }
-
-    .dp-carousel-content .dp-carousel-slide a {
-      color: $dp-color-orange-carousel;
-    }
-
-    .dp-carousel-content .dp-carousel-slide a span {
-      background: $dp-color-orange-carousel;
-      color: $dp-color-white;
-    }
-  }
-
-  .dp-carousel-purple {
-    .dp-carousel-wrapper {
+    &-purple {
       border: 2px solid $dp-color-purple-carousel-border;
       background: $dp-color-purple-carousel-back;
-    }
 
-    .dp-carousel-content .dp-carousel-slide span {
-      color: $dp-color-purple-carousel;
-    }
+      .dp-carousel-content .dp-carousel-slide span {
+        color: $dp-color-purple-carousel;
+      }
 
-    .dp-carousel-content .dp-carousel-slide a {
-      color: $dp-color-purple-carousel;
-    }
+      .dp-carousel-content .dp-carousel-slide a {
+        color: $dp-color-purple-carousel;
+      }
 
-    .dp-carousel-content .dp-carousel-slide a span {
-      background: $dp-color-purple-carousel;
-      color: $dp-color-white;
+      .dp-carousel-content .dp-carousel-slide a span {
+        background: $dp-color-purple-carousel;
+        color: $dp-color-white;
+      }
     }
   }
 }
