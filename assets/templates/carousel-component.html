@@ -75,36 +75,19 @@
         <div class="dpsg-content-wrap">
           <article class="dpsg-content">
             <h3>Carousel Component</h3>
-            <p>
-              Al copiar el html del carousel cambiar <b>id</b> de cada
-              <b>slide</b>, siempre dejando la terminación <b>_dpslide</b>, y
-              poner un mismo <b>name</b> para todos los <b>slides</b> del
-              carousel.
-              <br />
-              Ejemplo: para el primer slide de un carousel
-              <b>id="primero_dpslide" name="carousel1"</b>. Para el segundo
-              slide <b>id="segundo_dpslide" name="carousel1"</b>, etc.
-              <br /><br />
-              Poner misma cantidad de inputs que de slides. A cada input ponerle
-              un <b>id</b> y <b>value</b> distinto, y el mismo <b>name</b> que a
-              los slides. <br />
-              Ejemplo: para el primer input de un carousel
-              <b>id="primero" value="primero" name="carousel1"</b> . Para el
-              segundo input <b>id="segundo" value="segundo" name="carousel1"</b>
-            </p>
+            <p>Acá se muestran carouseles con sus variantes de colores.</p>
             <hr class="dpsg-break" />
             <div class="dp-container">
               <div class="dp-rowflex">
                 <div class="col-sm-12 col-md-6">
-                  <div class="dp-carousel">
+                  <div class="dp-carousel" id="carousel1">
                     <div class="dp-carousel-wrapper dp-carousel-orange">
                       <div class="dp-carousel-content">
                         <div
-                          class="dp-carousel-slide"
-                          id="primero_dpslide"
-                          name="carousel1"
+                          class="dp-carousel-slide active"
+                          data-order="first"
                         >
-                          <span>Último BlogPost</span>
+                          <p>Último BlogPost</p>
                           <h3>
                             ¿Cuáles son las diferencias entre servicio al
                             cliente y atención al cliente?
@@ -114,12 +97,8 @@
                             más</a
                           >
                         </div>
-                        <div
-                          class="dp-carousel-slide"
-                          id="segundo_dpslide"
-                          name="carousel1"
-                        >
-                          <span>Servicios Adicionales</span>
+                        <div class="dp-carousel-slide" data-order="second">
+                          <p>Servicios Adicionales</p>
                           <h3>
                             Asesorías, acompañamiento exclusivo, IPs dedicadas o
                             funcionalidades extra.
@@ -133,34 +112,28 @@
                     </div>
                     <div class="dp-carousel-dots">
                       <input
-                        checked=""
-                        class="dp-carousel-dot"
+                        class="dp-carousel-dot select"
                         type="radio"
-                        id="primero"
-                        value="primero"
-                        name="carousel1"
+                        data-select="first"
                       />
                       <input
                         class="dp-carousel-dot"
                         type="radio"
-                        id="segundo"
-                        value="segundo"
-                        name="carousel1"
+                        data-select="second"
                       />
                     </div>
                   </div>
                 </div>
 
                 <div class="col-sm-12 col-md-6">
-                  <div class="dp-carousel">
+                  <div class="dp-carousel" id="carousel2">
                     <div class="dp-carousel-wrapper dp-carousel-purple">
                       <div class="dp-carousel-content">
                         <div
-                          class="dp-carousel-slide"
-                          id="cuarto_dpslide"
-                          name="carousel2"
+                          class="dp-carousel-slide active"
+                          data-order="first"
                         >
-                          <span>Último BlogPost</span>
+                          <p>Último BlogPost</p>
                           <h3>
                             ¿Cuáles son las diferencias entre servicio al
                             cliente y atención al cliente?
@@ -170,12 +143,8 @@
                             más</a
                           >
                         </div>
-                        <div
-                          class="dp-carousel-slide"
-                          id="quinto_dpslide"
-                          name="carousel2"
-                        >
-                          <span>Servicios Adicionales</span>
+                        <div class="dp-carousel-slide" data-order="second">
+                          <p>Servicios Adicionales</p>
                           <h3>
                             Asesorías, acompañamiento exclusivo, IPs dedicadas o
                             funcionalidades extra.
@@ -185,12 +154,8 @@
                             más</a
                           >
                         </div>
-                        <div
-                          class="dp-carousel-slide"
-                          id="sexto_dpslide"
-                          name="carousel2"
-                        >
-                          <span>Último BlogPost</span>
+                        <div class="dp-carousel-slide" data-order="third">
+                          <p>Último BlogPost</p>
                           <h3>
                             ¿Cuáles son las diferencias entre servicio al
                             cliente y atención al cliente?
@@ -204,26 +169,19 @@
                     </div>
                     <div class="dp-carousel-dots">
                       <input
-                        checked=""
-                        class="dp-carousel-dot"
+                        class="dp-carousel-dot select"
                         type="radio"
-                        id="cuarto"
-                        value="cuarto"
-                        name="carousel2"
+                        data-select="first"
                       />
                       <input
                         class="dp-carousel-dot"
                         type="radio"
-                        id="quinto"
-                        value="quinto"
-                        name="carousel2"
+                        data-select="second"
                       />
                       <input
                         class="dp-carousel-dot"
                         type="radio"
-                        id="sexto"
-                        value="sexto"
-                        name="carousel2"
+                        data-select="third"
                       />
                     </div>
                   </div>

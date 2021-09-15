@@ -220,12 +220,12 @@ $('.dp-show-tips').on('click', function () {
 // Carousel
 
 $(document).ready(function () {
-  $(".dp-carousel-dot").change(function () {
-    var slideId = $(this).prop("id");
-    var slidesName = $(this).prop("name");
-    // hide all slides
-    $('div[name="' + slidesName + '"]').hide();
-    // show the one with the correct id
-    $('#' + slideId + '_dpslide').show();
+  $(".dp-carousel-dot").on('click', function () {
+    var slideId = $(this).attr('data-select');
+    var carrousel = $(this).closest('.dp-carousel').attr('id');
+    $('#' + carrousel + ' .dp-carousel-slide').removeClass('active');
+    $('#' + carrousel + ' .dp-carousel-dot').removeClass('select');
+    $('#' + carrousel + ' .dp-carousel-slide[data-order=' + slideId + ']').addClass('active');
+    $('#' + carrousel + ' .dp-carousel-dot[data-select=' + slideId + ']').addClass('select');
   });
 });
