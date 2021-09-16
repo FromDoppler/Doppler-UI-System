@@ -218,4 +218,12 @@ var dopplerUI = dopplerUI || {};
 
   });
 
-
+// Carousel
+$(document).ready(function () {
+  $(".dp-carousel-dot").change(function () {
+    var slideId = $(this).val();
+    var carrousel = $(this).closest('.dp-carousel').prop('id');
+    $('#' + carrousel + ' .dp-carousel-slide').removeClass('active');
+    $('#' + carrousel + ' .dp-carousel-slide[data-order=' + slideId + ']').addClass('active');
+  });
+});

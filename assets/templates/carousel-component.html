@@ -60,6 +60,7 @@
       href="https://www.fromdoppler.com/favicon.ico"
     />
   </head>
+
   <body data-active-menu="40" class="dp-library">
     <!-- Layers -->
     <main role="main" class="dpsg-main-wrap">
@@ -74,18 +75,127 @@
         <div class="dpsg-content-wrap">
           <article class="dpsg-content">
             <h3>Carousel Component</h3>
-            <p>Nuevo componente de Carousel</p>
+            <p>Acá se muestran carouseles con sus variantes de colores.</p>
             <hr class="dpsg-break" />
             <div class="dp-container">
               <div class="dp-rowflex">
-                <div class="col-sm-6 m-b-12">
-                  <div class="dp-box-shadow dpsg-content-sample">
-                    <p class="dp-boxshadow">Carousel 1</p>
+                <div class="col-sm-12 col-md-6">
+                  <div class="dp-carousel" id="carousel1">
+                    <div class="dp-carousel-wrapper dp-carousel-orange">
+                      <div class="dp-carousel-content">
+                        <div
+                          class="dp-carousel-slide active"
+                          data-order="first"
+                        >
+                          <h3>Último BlogPost</h3>
+                          <p>
+                            ¿Cuáles son las diferencias entre servicio al
+                            cliente y atención al cliente?
+                          </p>
+                          <a
+                            ><span class="ms-icon icon-arrow-next"></span>Ver
+                            más</a
+                          >
+                        </div>
+                        <div class="dp-carousel-slide" data-order="second">
+                          <h3>Servicios Adicionales</h3>
+                          <p>
+                            Asesorías, acompañamiento exclusivo, IPs dedicadas o
+                            funcionalidades extra.
+                          </p>
+                          <a
+                            ><span class="ms-icon icon-arrow-next"></span>Ver
+                            más</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="dp-carousel-dots">
+                      <input
+                        class="dp-carousel-dot"
+                        checked
+                        type="radio"
+                        value="first"
+                        id="first"
+                        name="carousel1"
+                      />
+                      <input
+                        class="dp-carousel-dot"
+                        type="radio"
+                        value="second"
+                        id="second"
+                        name="carousel1"
+                      />
+                    </div>
                   </div>
                 </div>
-                <div class="col-sm-6 m-b-12">
-                  <div class="dp-box-shadow dpsg-content-sample">
-                    <p class="dp-boxshadow">Carousel 2</p>
+
+                <div class="col-sm-12 col-md-6">
+                  <div class="dp-carousel" id="carousel2">
+                    <div class="dp-carousel-wrapper dp-carousel-purple">
+                      <div class="dp-carousel-content">
+                        <div
+                          class="dp-carousel-slide active"
+                          data-order="first"
+                        >
+                          <h3>Último BlogPost</h3>
+                          <p>
+                            ¿Cuáles son las diferencias entre servicio al
+                            cliente y atención al cliente?
+                          </p>
+                          <a
+                            ><span class="ms-icon icon-arrow-next"></span>Ver
+                            más</a
+                          >
+                        </div>
+                        <div class="dp-carousel-slide" data-order="second">
+                          <h3>Servicios Adicionales</h3>
+                          <p>
+                            Asesorías, acompañamiento exclusivo, IPs dedicadas o
+                            funcionalidades extra.
+                          </p>
+                          <a
+                            ><span class="ms-icon icon-arrow-next"></span>Ver
+                            más</a
+                          >
+                        </div>
+                        <div class="dp-carousel-slide" data-order="third">
+                          <h3>Último BlogPost</h3>
+                          <p>
+                            ¿Cuáles son las diferencias entre servicio al
+                            cliente y atención al cliente?
+                          </p>
+                          <a
+                            ><span class="ms-icon icon-arrow-next"></span>Ver
+                            más</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="dp-carousel-dots">
+                      <input
+                        class="dp-carousel-dot"
+                        checked
+                        type="radio"
+                        value="first"
+                        id="first"
+                        name="carousel2"
+                      />
+                      <input
+                        class="dp-carousel-dot"
+                        type="radio"
+                        value="second"
+                        id="second"
+                        name="carousel2"
+                      />
+                      <input
+                        class="dp-carousel-dot"
+                        type="radio"
+                        value="third"
+                        id="third"
+                        name="carousel2"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
