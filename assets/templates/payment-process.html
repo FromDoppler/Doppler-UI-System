@@ -121,7 +121,7 @@
                           <li class="field-item">
                             <ul class="field-group">
                               <!-- utilizar la clase dp-validate en el li para mostrar mensajes de validacion -->
-                              <li class="field-item field-item--50">
+                              <li class="field-item field-item--50 dp-p-r">
                                 <label for="name">*Nombre:</label>
                                 <input
                                   type="text"
@@ -161,7 +161,7 @@
                           <li class="field-item">
                             <ul class="field-group">
                               <!-- utilizar la clase dp-validate en el li para mostrar mensajes de validacion -->
-                              <li class="field-item field-item--50">
+                              <li class="field-item field-item--50 dp-p-r">
                                 <label for="address">*Dirección:</label>
                                 <input
                                   type="text"
@@ -201,7 +201,7 @@
                           <li class="field-item">
                             <ul class="field-group">
                               <!-- utilizar la clase dp-validate en el li para mostrar mensajes de validacion -->
-                              <li class="field-item field-item--50">
+                              <li class="field-item field-item--50 dp-p-r">
                                 <label for="state-province"
                                   >*Estado/Provincia:</label
                                 >
@@ -243,7 +243,7 @@
                           <li class="field-item">
                             <ul class="field-group">
                               <!-- utilizar la clase dp-validate en el li para mostrar mensajes de validacion -->
-                              <li class="field-item field-item--50">
+                              <li class="field-item field-item--50 dp-p-r">
                                 <label for="postal-code">Código Postal:</label>
                                 <input
                                   type="text"
@@ -283,7 +283,7 @@
                           <li class="field-item">
                             <ul class="field-group">
                               <!-- utilizar la clase dp-validate en el li para mostrar mensajes de validacion -->
-                              <li class="field-item field-item--50">
+                              <li class="field-item field-item--50 dp-p-r">
                                 <label for="empresa">Empresa:</label>
                                 <input
                                   type="text"
@@ -372,7 +372,7 @@
                           <li class="field-item">
                             <ul class="field-group">
                               <!-- utilizar la clase dp-validate en el li para mostrar mensajes de validacion -->
-                              <li class="field-item field-item--50">
+                              <li class="field-item field-item--50 dp-p-r">
                                 <label for="name-2">*Nombre:</label>
                                 <input
                                   type="text"
@@ -412,7 +412,7 @@
                           <li class="field-item">
                             <ul class="field-group">
                               <!-- utilizar la clase dp-validate en el li para mostrar mensajes de validacion -->
-                              <li class="field-item field-item--50">
+                              <li class="field-item field-item--50 dp-p-r">
                                 <label for="address-2">*Dirección:</label>
                                 <input
                                   type="text"
@@ -452,7 +452,7 @@
                           <li class="field-item">
                             <ul class="field-group">
                               <!-- utilizar la clase dp-validate en el li para mostrar mensajes de validacion -->
-                              <li class="field-item field-item--50">
+                              <li class="field-item field-item--50 dp-p-r">
                                 <label for="state-province-2"
                                   >*Estado/Provincia:</label
                                 >
@@ -494,7 +494,7 @@
                           <li class="field-item">
                             <ul class="field-group">
                               <!-- utilizar la clase dp-validate en el li para mostrar mensajes de validacion -->
-                              <li class="field-item field-item--50">
+                              <li class="field-item field-item--50 dp-p-r">
                                 <label for="postal-code-2"
                                   >Código Postal:</label
                                 >
@@ -593,14 +593,13 @@
                   <div class="dp-accordion-content">
                     <form class="dp-form-payment-method">
                       <fieldset>
-                        <legend>INFORMACIÓN DE FACTURACIÓN</legend>
                         <ul class="field-group">
                           <li class="field-item">
                             <ul class="dp-radio-input">
                               <li>
                                 <div class="dp-volume-option">
                                   <label>
-                                    <input type="radio" checked="" />
+                                    <input type="radio" checked />
                                     <span>Tarjeta de Crédito</span>
                                   </label>
                                 </div>
@@ -608,7 +607,7 @@
                               <li>
                                 <div class="dp-volume-option">
                                   <label>
-                                    <input type="radio" name="radio" />
+                                    <input type="radio" name="radio" checked />
                                     <span>Transferencia</span>
                                   </label>
                                 </div>
@@ -627,7 +626,12 @@
                               </li>
                             </ul>
                           </li>
+                        </ul>
+                      </fieldset>
 
+                      <fieldset style="display: none">
+                        <legend>INFORMACIÓN DE FACTURACIÓN</legend>
+                        <ul class="field-group">
                           <li class="field-item field-credit-card error">
                             <div class="dp-credit-fields">
                               <div class="dp-field-inputs">
@@ -844,6 +848,331 @@
                               </div>
                             </div>
                           </li>
+                        </ul>
+                      </fieldset>
+
+                      <fieldset style="display: none">
+                        <ul class="field-group">
+                          <li class="field-item">
+                            <ul class="field-group">
+                              <li class="field-item field-item--70 dp-p-r">
+                                <label for="type-consumer"
+                                  >*Tipo de Consumidor:</label
+                                >
+                                <span class="dropdown-arrow"></span>
+                                <select id="" class="" name="type-consumer">
+                                  <option value="">
+                                    Responsable Inscripto
+                                  </option>
+                                  <option value="">
+                                    Responsable Inscripto
+                                  </option>
+                                  <option value="">
+                                    Responsable Inscripto
+                                  </option>
+                                  <option value="">
+                                    Responsable Inscripto
+                                  </option>
+                                </select>
+                                <div
+                                  class="
+                                    wrapper-errors
+                                    dp-message dp-error-form
+                                  "
+                                >
+                                  <p>¡Ouch! Este campo está vacío</p>
+                                </div>
+                              </li>
+                              <li class="field-item field-item--30 error">
+                                <label for="cuit-number">*CUIT:</label>
+                                <input
+                                  type="text"
+                                  name="cuit-number"
+                                  id="cuit-number"
+                                  placeholder="Ingresa tu Cuit"
+                                />
+                                <div
+                                  class="
+                                    wrapper-errors
+                                    dp-message dp-error-form
+                                  "
+                                >
+                                  <p>¡Ouch! Este campo está vacío</p>
+                                </div>
+                              </li>
+                              <li class="field-item field-item--70 dp-p-r">
+                                <label for="business-name"
+                                  >*Razón Social:</label
+                                >
+                                <input
+                                  type="text"
+                                  name="business-name"
+                                  id="business-name"
+                                  placeholder="Responsable Inscripto"
+                                />
+                                <div
+                                  class="
+                                    wrapper-errors
+                                    dp-message dp-error-form
+                                  "
+                                >
+                                  <p>¡Ouch! Este campo está vacío</p>
+                                </div>
+                              </li>
+                              <li class="field-item field-item--70 dp-p-r">
+                                <label
+                                  >Responsable Inscripto, CUIT: 30-33213412-1,
+                                  BISIDE CS SA</label
+                                >
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="field-item">
+                            <label>Tipo de renovación:</label>
+
+                            <div class="dp-wrap-subscription">
+                              <ul>
+                                <li>
+                                  <button
+                                    type="button"
+                                    class="dp-button button-medium"
+                                    disabled
+                                  >
+                                    Mensual
+                                  </button>
+                                </li>
+                                <li>
+                                  <button
+                                    type="button"
+                                    class="dp-button button-medium btn-active"
+                                  >
+                                    Trimestral
+                                  </button>
+                                  <span class="dp-discount">5% off</span>
+                                </li>
+                                <li>
+                                  <button
+                                    type="button"
+                                    class="dp-button button-medium"
+                                  >
+                                    Semestral
+                                  </button>
+                                  <span class="dp-discount">15% off</span>
+                                </li>
+                                <li>
+                                  <button
+                                    type="button"
+                                    class="dp-button button-medium"
+                                  >
+                                    Anual
+                                  </button>
+                                  <span class="dp-discount">25% off</span>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
+                        </ul>
+                      </fieldset>
+
+                      <fieldset style="display: none">
+                        <legend>INFORMACIÓN DE FACTURACIÓN</legend>
+                        <ul class="field-group">
+                          <li class="field-item field-credit-card error">
+                            <div class="dp-credit-fields">
+                              <div class="dp-field-inputs">
+                                <div class="dp-left-field dp-error">
+                                  <label for="credit card number"
+                                    >*Tarjeta de credito</label
+                                  ><input
+                                    type="number"
+                                    name="credit card number"
+                                    placeholder="Numero de tarjeta"
+                                    value=""
+                                  />
+                                  <div
+                                    class="
+                                      wrapper-errors
+                                      dp-message dp-error-form
+                                    "
+                                  >
+                                    <p>¡Ouch! Este campo está vacío</p>
+                                  </div>
+                                </div>
+                                <div class="dp--expiry dp-error">
+                                  <label for="expiry">*Expiracion</label
+                                  ><input
+                                    name="expiry"
+                                    type="number"
+                                    placeholder="MM/YY"
+                                    value="12/25"
+                                  />
+                                </div>
+                              </div>
+                              <div class="dp-field-inputs">
+                                <div class="dp-left-field">
+                                  <label for="name surname titular"
+                                    >*Nombre y Apellido del titular</label
+                                  ><input
+                                    type="text"
+                                    name="name surname titular"
+                                    id="cardholder"
+                                    placeholder="Titular de la cuenta"
+                                    value="GUS BAAMONDE"
+                                  />
+                                </div>
+                                <div class="dp--cvv dp-error">
+                                  <label for="number cvv">*CVV</label
+                                  ><input
+                                    type="number"
+                                    name="number cvv"
+                                    id="cvv"
+                                    placeholder="948"
+                                    value=""
+                                    class="dp-cvv"
+                                  />
+                                  <div
+                                    class="
+                                      wrapper-errors
+                                      dp-message dp-error-form
+                                    "
+                                  >
+                                    <p>¡Ouch! Este campo está vacío</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="tarjeta">
+                              <div class="dp-credit-card">
+                                <div class="rccs">
+                                  <div class="rccs__card rccs__card--unknown">
+                                    <div class="rccs__card--front">
+                                      <div class="rccs__card__background"></div>
+                                      <div class="rccs__issuer"></div>
+                                      <div class="rccs__cvc__front">1234</div>
+                                      <div class="rccs__number">
+                                        •••• •••• •••• ••••
+                                      </div>
+                                      <div class="rccs__name rccs--filled">
+                                        GUS BAAMONDE
+                                      </div>
+                                      <div class="rccs__expiry rccs--filled">
+                                        <div class="rccs__expiry__valid">
+                                          valid thru
+                                        </div>
+                                        <div class="rccs__expiry__value">
+                                          12/25
+                                        </div>
+                                      </div>
+                                      <div class="rccs__chip"></div>
+                                    </div>
+                                    <div class="rccs__card--back">
+                                      <div class="rccs__card__background"></div>
+                                      <div class="rccs__stripe"></div>
+                                      <div class="rccs__signature"></div>
+                                      <div class="rccs__cvc">1234</div>
+                                      <div class="rccs__issuer"></div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- 40 -->
+                            </div>
+                          </li>
+                          <li class="field-item field-item--50 dp-p-r">
+                            <label for="document-type"
+                              >*Tipo de documento:</label
+                            >
+                            <span class="dropdown-arrow"></span>
+                            <select id="" class="" name="document-type">
+                              <option value="">Selecciona una opción</option>
+                              <option value="">Selecciona una opción</option>
+                              <option value="">Selecciona una opción</option>
+                              <option value="">Selecciona una opción</option>
+                            </select>
+                            <div
+                              class="wrapper-errors dp-message dp-error-form"
+                            >
+                              <p>¡Ouch! Este campo está vacío</p>
+                            </div>
+                          </li>
+                          <li class="field-item field-item--50">
+                            <label for="document-number"
+                              >*Número de documento:</label
+                            >
+                            <input
+                              type="number"
+                              name="document-number"
+                              id="document-number"
+                              placeholder="33333333"
+                            />
+                            <div
+                              class="wrapper-errors dp-message dp-error-form"
+                            >
+                              <p>¡Ouch! Este campo está vacío</p>
+                            </div>
+                          </li>
+                          <li class="field-item">
+                            <label>Tipo de renovación:</label>
+
+                            <div class="dp-wrap-subscription">
+                              <ul>
+                                <li>
+                                  <button
+                                    type="button"
+                                    class="dp-button button-medium"
+                                  >
+                                    Mensual
+                                  </button>
+                                </li>
+                                <li>
+                                  <button
+                                    type="button"
+                                    class="dp-button button-medium"
+                                    disabled
+                                  >
+                                    Trimestral
+                                  </button>
+                                  <span class="dp-discount">5% off</span>
+                                </li>
+                                <li>
+                                  <button
+                                    type="button"
+                                    class="dp-button button-medium"
+                                    disabled
+                                  >
+                                    Semestral
+                                  </button>
+                                  <span class="dp-discount">15% off</span>
+                                </li>
+                                <li>
+                                  <button
+                                    type="button"
+                                    class="dp-button button-medium btn-active"
+                                  >
+                                    Anual
+                                  </button>
+                                  <span class="dp-discount">25% off</span>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
+
+                          <li class="field-item">
+                            <div class="dp-wrap-message dp-wrap-cancel">
+                              <span class="dp-message-icon"></span>
+                              <div class="dp-content-message">
+                                <p>No pudimos procesar el pago.</p>
+                                <p>
+                                  Contáctate con tu banco para mas información y
+                                  vuelve a intentar luego.
+                                </p>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </fieldset>
+                      <fieldset>
+                        <ul class="field-group">
                           <li class="field-item">
                             <div class="dp-buttons-actions m-t-12">
                               <button
