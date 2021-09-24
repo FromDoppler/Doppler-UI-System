@@ -475,6 +475,12 @@
     }
   }
 
+  .dp-hr-summary {
+    background-color: $dp-color-silver;
+    height: 2px;
+    margin: 24px 0;
+  }
+
   /* zigzag */
 
   .dp-zigzag {
@@ -575,5 +581,54 @@
     font-size: $dp-sizing--lvl2;
     display: block;
     margin-top: $dp-spaces--lv4;
+  }
+
+  /* Success */
+
+  .dp-wrap-checkout {
+    margin-top: $dp-spaces--lv2;
+    padding-bottom: $dp-spaces--lv7;
+
+    h4 {
+      margin-top: $dp-spaces--lv4;
+    }
+  }
+
+  .dp-kpi-success {
+    width: 100%;
+    padding: $dp-spaces--lv4 $dp-spaces--lv2;
+    border-bottom: 1px solid $dp-color-separator;
+
+    li {
+      margin-right: $dp-spaces--lv6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      line-height: 36px;
+    }
+    span {
+      font-size: $dp-sizing--lvl2;
+      color: $dp-color-darkgrey;
+    }
+    h3 {
+      font-size: 35px;
+    }
+  }
+
+  .dp-checkout-content {
+    padding-top: $dp-spaces--lv0;
+
+    .dp-plan-detail {
+      border: none;
+      margin: $dp-spaces--lv0;
+    }
+  }
+
+  .dp-separator {
+    border-bottom: 1px solid $dp-color-separator;
+    width: 100%;
+    padding: $dp-spaces--lv2;
+    margin: $dp-spaces--lv0 auto;
   }
 }
