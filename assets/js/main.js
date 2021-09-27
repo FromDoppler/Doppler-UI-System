@@ -226,4 +226,10 @@ $(document).ready(function () {
     $('#' + carrousel + ' .dp-carousel-slide').removeClass('active');
     $('#' + carrousel + ' .dp-carousel-slide[data-order=' + slideId + ']').addClass('active');
   });
+  //When we remove '.disabled' class we have to unbind these events ( mouseenter and mouseleave), if not they are going to be binded regardless of the existence of this class.
+  $(".dp-dashboard-panel.disabled").on('mouseenter',function(){
+    $(this).find(".dp-overlay").addClass('show');
+  }).on('mouseleave',function(){
+    $(this).find(".dp-overlay").removeClass('show');
+  });
 });
