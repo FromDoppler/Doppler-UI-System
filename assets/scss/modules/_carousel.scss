@@ -10,6 +10,7 @@
   .dp-carousel {
     position: relative;
     padding-bottom: $dp-spaces--lv5;
+    margin-bottom: $dp-spaces--lv4;
 
     &-wrapper {
       width: 100%;
@@ -22,6 +23,7 @@
 
     &-content {
       display: inline-flex;
+      width: 100%;
 
       &.animating {
         animation: slide-fade 1s;
@@ -42,6 +44,7 @@
       min-height: 205px;
       padding: $dp-spaces--lv3;
       display: none;
+      width: 100%;
       animation: fade-slide 1s;
 
       @keyframes fade-slide {
