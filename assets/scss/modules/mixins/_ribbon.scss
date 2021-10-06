@@ -18,14 +18,12 @@
   z-index: 0;
   content: '';
   display: block;
-  border: 5px solid #b395bf;
 }
 .dp-ribbon span {
   position: absolute;
   display: block;
   width: 262px;
   padding: 12px 0;
-  background-color: #c9a9d5;
   color: #fff;
   font-weight: bold;
   font-size: 10px;
@@ -34,6 +32,27 @@
   text-align: center;
   letter-spacing: 1px;
   z-index: 1;
+}
+
+/// Colors ribbons
+/// Violet
+
+.dp-ribbon-violet::after,
+.dp-ribbon-violet::before {
+  border: 5px solid #b395bf;
+}
+
+.dp-ribbon-violet span {
+  background-color: #c9a9d5;
+}
+///Orange
+.dp-ribbon-orange::after,
+.dp-ribbon-orange::before {
+  border: 5px solid $dp-color-darkyellow;
+}
+
+.dp-ribbon-orange span {
+  background-color: $dp-color-yellow;
 }
 
 /// Ribbon Top right
