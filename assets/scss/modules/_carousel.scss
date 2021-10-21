@@ -21,7 +21,7 @@
     }
 
     &-content {
-      display: inline-flex;
+      display: flex;
 
       &.animating {
         animation: slide-fade 1s;
@@ -55,6 +55,7 @@
 
       &.active {
         display: block;
+        width: 100%;
       }
 
       @include media-breakpoint('mobile') {
