@@ -15,26 +15,25 @@
     appearance: none;
     font-family: $dp-font-family-proximanova;
     border-radius: $dp-border-radius;
+    font-weight: $dp-font-weight-bold;
+    letter-spacing: 0.6px;
     @include transition-all;
 
     &.button-big {
       font-size: $dp-sizing--lvl3;
       line-height: 15px;
-      font-weight: $dp-font-weight-light;
       padding: 16px 35px;
     }
 
     &.button-medium {
       font-size: $dp-sizing--lvl2;
       line-height: 13px;
-      font-weight: $dp-font-weight-light;
       padding: 13px 25px;
     }
 
     &.button-small {
       font-size: $dp-sizing--lvl1;
       line-height: 11px;
-      font-weight: $dp-font-weight-light;
       padding: 10px 15px;
     }
 
@@ -53,7 +52,6 @@
     &.button--round {
       text-transform: uppercase;
       border-radius: $dp-border-radius--lv1;
-      font-weight: $dp-font-weight-semibold;
     }
 
     &.primary- {
@@ -125,6 +123,7 @@
     &.link- {
       &green {
         color: $dp-color-green;
+        font-weight: normal;
 
         &:hover {
           color: $dp-color-darkgreen;
