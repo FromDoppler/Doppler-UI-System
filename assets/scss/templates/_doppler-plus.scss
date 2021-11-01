@@ -32,7 +32,7 @@
       font-weight: bold;
       font-family: 'proxima-nova';
       letter-spacing: -1px;
-      max-width: 700px;
+      max-width: 430px;
       padding: $dp-spaces--lv9 $dp-spaces--lv0;
       margin: $dp-spaces--lv0 auto;
     }
@@ -82,6 +82,20 @@
     display: flex;
     flex-direction: column;
     margin-bottom: $dp-spaces--lv5;
+  }
+
+  .dp-tit--functionalities {
+    margin: $dp-spaces--lv7 auto;
+    color: $dp-color-grey;
+    padding: $dp-spaces--lv0 $dp-spaces--lv5;
+    max-width: 300px;
+  }
+
+  .dp-list-functionalities {
+    display: flex;
+    width: 960px;
+    margin: 0 auto;
+    flex: inherit;
   }
 
   .dp-compare-details-plans {
