@@ -78,6 +78,10 @@ $dpsg-orange: #ee7752;
 $dp-violet-doppler-plus: #8c6398;
 $dp-violet-tabs: #c9a9d5;
 
+/// Color background icon Client Manager
+
+$dp-color-iconcm: #ef9c70;
+
 ///
 /// Class Colors Style Guides
 ///
@@ -103,8 +107,15 @@ $dp-violet-tabs: #c9a9d5;
     background: $dp-color-lightgrey;
   }
 
+  .dp-color-lightgrey {
+    color: $dp-color-lightgrey;
+  }
   .dp-grey {
     background: $dp-color-grey;
+  }
+
+  .dp-color-grey {
+    color: $dp-color-grey;
   }
 
   .dp-darkgrey {
