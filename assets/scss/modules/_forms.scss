@@ -725,15 +725,13 @@
             box-shadow: inset 0 0 0 4px $dp-color-snow;
           }
         }
-      }
 
-      .dp-disabled-checked {
-        &:disabled + span {
+        &:disabled:checked + span {
           &:before {
             outline: 0;
             border: 1px solid $dp-color-snow;
-            box-shadow: inset 0 0 0 3px $dp-color-silver;
-            background: $dp-color-snow;
+            box-shadow: inset 0 0 0 3px $dp-color-snow;
+            background: $dp-color-silver;
           }
         }
       }
