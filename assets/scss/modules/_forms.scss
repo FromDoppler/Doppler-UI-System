@@ -121,6 +121,7 @@
   .checkmark {
     position: absolute;
     left: 0;
+    top: 1px;
     height: 16px;
     width: 16px;
     border: 1px solid $dp-color-silver;
@@ -223,12 +224,14 @@
     cursor: pointer;
     position: absolute;
     width: 14px;
+    left: 0;
     height: 14px;
+    top: 1px;
 
     &:focus {
       outline: 3px solid $dp-color-orange-focus;
       outline-offset: 0px;
-      top: 1px;
+      top: 2px;
       left: 1px;
     }
 
@@ -239,6 +242,18 @@
 
         &:after {
           display: block;
+        }
+      }
+    }
+
+    &:disabled {
+      cursor: text;
+      & ~ .checkmark {
+        border-color: $dp-color-snow;
+        background-color: $dp-color-snow;
+
+        &:after {
+          display: none;
         }
       }
     }
@@ -664,6 +679,82 @@
 
       &:hover {
         color: $dp-color-darkgreen;
+      }
+    }
+  }
+
+  /* input radio */
+
+  .dp-input--radio {
+    margin: $dp-spaces--lv1;
+    display: inline-block;
+    max-width: 170px;
+    height: 30px;
+    position: relative;
+
+    label {
+      display: flex;
+      cursor: pointer;
+      font-weight: 500;
+      position: relative;
+      overflow: hidden;
+      outline: 0;
+      border: 1px solid transparent;
+      box-shadow: inset 0 0 0 2px transparent;
+
+      &:focus-within {
+        outline: 0;
+        border: 1px solid $dp-color-orange-focus;
+        box-shadow: inset 0 0 0 2px $dp-color-orange-focus;
+      }
+
+      input {
+        position: absolute;
+        left: -9999px;
+
+        &:checked + span {
+          &:before {
+            box-shadow: inset 0 0 0 7px $dp-color-green;
+          }
+        }
+
+        &:disabled + span {
+          &:before {
+            outline: 0;
+            border: 1px solid $dp-color-snow;
+            box-shadow: inset 0 0 0 4px $dp-color-snow;
+          }
+        }
+
+        &:disabled:checked + span {
+          &:before {
+            outline: 0;
+            border: 1px solid $dp-color-snow;
+            box-shadow: inset 0 0 0 3px $dp-color-snow;
+            background: $dp-color-silver;
+          }
+        }
+      }
+
+      span {
+        display: flex;
+        align-items: center;
+        padding: $dp-spaces--lv1;
+        border-radius: 100%;
+        transition: 0.25s ease-in-out;
+
+        &:before {
+          display: flex;
+          flex-shrink: 0;
+          content: '';
+          background-color: $dp-color-white;
+          width: 1.5em;
+          height: 1.5em;
+          border-radius: 100%;
+          margin-right: $dp-spaces--lv1;
+          transition: 0.25s ease;
+          box-shadow: inset 0 0 0 2px $dp-color-lightgrey;
+        }
       }
     }
   }
