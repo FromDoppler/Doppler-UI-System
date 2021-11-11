@@ -33,6 +33,11 @@
       min-height: 105px;
       overflow: visible;
 
+      &.sticky {
+        min-height: 155px;
+        transition: all 0.15s ease-in-out;
+      }
+
       &.dp-header--cm {
         min-height: 179px;
         overflow: visible;
