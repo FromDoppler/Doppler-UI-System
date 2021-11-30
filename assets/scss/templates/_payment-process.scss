@@ -437,7 +437,8 @@
     }
 
     .dp-promocode {
-      padding: $dp-spaces--lv4 $dp-spaces--lv0;
+      padding: $dp-spaces--lv4 $dp-spaces--lv0 $dp-spaces--lv0;
+      position: relative;
 
       fieldset {
         display: flex;
@@ -452,8 +453,23 @@
 
       input {
         display: inline-block;
-        background: $dp-color-snow;
         min-width: 190px;
+        position: relative;
+
+        &:disabled {
+          background: $dp-color-snow;
+        }
+      }
+
+      .field-item--30 {
+        display: flex;
+        flex-direction: column;
+        align-items: initial;
+        justify-content: flex-end;
+      }
+
+      .dp-button {
+        margin-top: 18px;
       }
     }
 
