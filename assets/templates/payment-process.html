@@ -1209,26 +1209,91 @@
             <form class="dp-promocode">
               <fieldset>
                 <legend>Ingresar un cupón de promoción</legend>
-                <label class="Promocode">Promocode:</label>
-
-                <div class="dp-tooltip-container">
-                  <input
-                    type="text"
-                    name="Promocode"
-                    id="Promocode"
-                    placeholder="Ingresa tu promocode"
-                    class=""
-                  />
-                  <div class="dp-tooltip-top">
-                    <span
-                      >Las promociones no son acumulables con otros descuentos.
-                      <a href="#">texto link</a></span
-                    >
-                  </div>
-                </div>
+                <ul class="field-group">
+                  <li class="field-item field-item--70 error">
+                    <label class="Promocode">Promocode (Error):</label>
+                    <input
+                      type="text"
+                      name="Promocode"
+                      id="Promocode"
+                      placeholder="Ingresa tu promocode"
+                    />
+                    <div class="wrapper-errors dp-message dp-error-form">
+                      <p>¡Ouch! Este campo está vacío</p>
+                    </div>
+                  </li>
+                  <li class="field-item field-item--30">
+                    <button class="dp-button button-medium primary-green">
+                      Validar
+                    </button>
+                  </li>
+                </ul>
               </fieldset>
             </form>
             <hr class="dp-hr-grey" />
+            <form class="dp-promocode">
+              <fieldset>
+                <legend>Ingresar un cupón de promoción</legend>
+                <ul class="field-group">
+                  <li class="field-item field-item--70">
+                    <label class="Promocode">Promocode (Disabled):</label>
+                    <input
+                      type="text"
+                      name="Promocode"
+                      id="Promocode"
+                      placeholder="Ingresa tu promocode"
+                      disabled
+                    />
+                    <div class="wrapper-errors dp-message dp-error-form">
+                      <p>¡Ouch! Este campo está vacío</p>
+                    </div>
+                  </li>
+                  <li class="field-item field-item--30">
+                    <button class="dp-button button-medium primary-green">
+                      Validar
+                    </button>
+                  </li>
+                </ul>
+              </fieldset>
+            </form>
+            <hr class="dp-hr-grey" />
+            <form class="dp-promocode">
+              <fieldset>
+                <legend>Ingresar un cupón de promoción</legend>
+                <ul class="field-group">
+                  <li class="field-item field-item--70">
+                    <label class="Promocode">Promocode (Mensaje):</label>
+                    <input
+                      type="text"
+                      name="Promocode"
+                      id="Promocode"
+                      placeholder="Ingresa tu promocode"
+                    />
+                    <div class="wrapper-errors dp-message dp-error-form">
+                      <p>¡Ouch! Este campo está vacío</p>
+                    </div>
+                  </li>
+                  <li class="field-item field-item--30">
+                    <button class="dp-button button-medium primary-green">
+                      Validar
+                    </button>
+                  </li>
+                  <li class="field-item">
+                    <div class="dp-wrap-message dp-wrap-info">
+                      <span class="dp-message-icon"></span>
+                      <div class="dp-content-message">
+                        <p>
+                          Las promociones no son acumulables con otros
+                          descuentos.
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </fieldset>
+            </form>
+            <hr class="dp-hr-grey" />
+
             <div class="dp-total-purchase">
               <ul>
                 <li>
