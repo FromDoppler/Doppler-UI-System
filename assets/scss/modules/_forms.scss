@@ -121,7 +121,7 @@
   .checkmark {
     position: absolute;
     left: 0;
-    top: 1px;
+    /*top: 1px;*/
     height: 16px;
     width: 16px;
     border: 1px solid $dp-color-silver;
@@ -133,7 +133,7 @@
       content: '';
       position: absolute;
       left: 5px;
-      top: 1px;
+      /*top: 1px;*/
       width: 5px;
       height: 10px;
       border: solid $dp-color-white;
@@ -226,7 +226,7 @@
     width: 14px;
     left: 0;
     height: 14px;
-    top: 1px;
+    /*top: 1px;*/
 
     &:focus {
       outline: 3px solid $dp-color-orange-focus;
@@ -688,7 +688,6 @@
   .dp-input--radio {
     margin: $dp-spaces--lv1;
     display: inline-block;
-    max-width: 170px;
     height: 30px;
     position: relative;
 

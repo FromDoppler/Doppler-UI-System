@@ -61,6 +61,15 @@
           border: 2px solid $dp-color-green;
           transition: all 0.3s ease-in-out;
         }
+
+        &.dp-checked {
+          background-color: $dp-color-green;
+          border: 2px solid $dp-color-green;
+          transition: all 0.3s ease-in-out;
+          background-image: url(../img/check-icon.svg);
+          background-position: 0 2px;
+          background-repeat: no-repeat;
+        }
       }
 
       .dp-accordion-thumb {
@@ -182,6 +191,7 @@
 
         input[type='checkbox'] {
           left: 3px;
+          top: 5px;
           &:focus {
             top: 6px;
             left: 4px;
@@ -259,6 +269,7 @@
             span {
               display: flex;
               align-items: center;
+              height: 30px;
               padding: $dp-spaces--lv0;
               border-radius: 100%;
               transition: 0.25s ease-in-out;
@@ -426,7 +437,8 @@
     }
 
     .dp-promocode {
-      padding: $dp-spaces--lv4 $dp-spaces--lv0;
+      padding: $dp-spaces--lv4 $dp-spaces--lv0 $dp-spaces--lv0;
+      position: relative;
 
       fieldset {
         display: flex;
@@ -441,8 +453,23 @@
 
       input {
         display: inline-block;
-        background: $dp-color-snow;
         min-width: 190px;
+        position: relative;
+
+        &:disabled {
+          background: $dp-color-snow;
+        }
+      }
+
+      .field-item--30 {
+        display: flex;
+        flex-direction: column;
+        align-items: initial;
+        justify-content: flex-end;
+      }
+
+      .dp-button {
+        margin-top: 18px;
       }
     }
 

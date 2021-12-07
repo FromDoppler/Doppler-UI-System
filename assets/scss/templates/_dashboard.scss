@@ -159,69 +159,96 @@
     background-image: url('../img/icon-pennant.svg');
   }
 
-  .dp-title-section-steps {
+  .dp-title-col-postcard {
     display: flex;
     align-items: center;
     margin-top: $dp-spaces--lv6;
     padding-bottom: $dp-spaces--lv4;
   }
-  .dp-step {
+  .dp-postcard {
     padding: $dp-spaces--lv4 $dp-spaces--lv3;
     border: 2px solid $dp-color-snow;
     border-radius: 3px;
     margin-bottom: $dp-spaces--lv4;
 
-    .dp-iconstep {
+    header {
+      display: flex;
+      padding-bottom: $dp-spaces--lv3;
+      align-items: center;
+      flex-shrink: 0;
+
+      h4 {
+        width: 100%;
+
+        a {
+          color: $dp-color-darkgrey;
+
+          &:hover {
+            color: $dp-color-grey;
+          }
+        }
+      }
+    }
+
+    p {
+      font-size: 13px;
+      line-height: 18px;
+    }
+
+    .dp-iconpostcard {
       background-repeat: no-repeat;
-      width: 21px;
-      height: 21px;
+      text-indent: -9999px;
+      width: 24px;
+      height: 24px;
       margin-right: $dp-spaces--lv2;
+      display: block;
     }
 
-    &.dp-welcom {
-      .dp-iconstep {
+    &.dp-postcard--welcom {
+      .dp-iconpostcard {
         background-image: url(../img/ok-icon.svg);
+        /*width: 22px;*/
       }
     }
 
-    &.dp-step--success {
-      .dp-iconstep {
+    &.dp-postcard--success {
+      .dp-iconpostcard {
         background-image: url(../img/step-ok.svg);
+        /*width: 21px;*/
       }
     }
 
-    &.dp-step--one {
-      border: 2px solid $dp-greenBorder-forFlashcards;
-      .dp-iconstep {
-        background-image: url(../img/number-1.svg);
-      }
-    }
-
-    &.dp-step--two {
-      border: 2px solid $dp-greenBorder-forFlashcards;
-      .dp-iconstep {
-        background-image: url(../img/number-2.svg);
-      }
-    }
-
-    &.dp-step--three {
-      border: 2px solid $dp-greenBorder-forFlashcards;
-      .dp-iconstep {
-        background-image: url(../img/number-3.svg);
-      }
-    }
-
-    &.dp-step--warning {
+    &.dp-postcard--warning {
       border: 2px solid $dp-yellowBorder-forFlashcards;
-      .dp-iconstep {
+      .dp-iconpostcard {
         background-image: url(../img/step-warning.svg);
+        /*width: 22px;*/
+      }
+    }
+
+    &.dp-postcard--number {
+      border: 2px solid $dp-greenBorder-forFlashcards;
+
+      .dp-iconpostcard {
+        text-indent: initial;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid $dp-color-green;
+        border-radius: 50%;
+        color: $dp-color-green;
+        font-size: 12px;
+        line-height: 13px;
+        width: 27px;
+        height: 24px;
       }
     }
 
     h4 {
+      display: flex;
+      align-items: center;
       text-transform: none;
       display: flex;
-      padding-bottom: $dp-spaces--lv3;
     }
   }
 

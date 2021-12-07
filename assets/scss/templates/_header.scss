@@ -25,9 +25,18 @@
     flex-direction: column;
     transition: all 0.15s ease;
 
+    &.sticky {
+      padding-top: 50px;
+    }
+
     &.header-open {
       min-height: 105px;
       overflow: visible;
+
+      &.sticky {
+        min-height: 155px;
+        transition: all 0.15s ease-in-out;
+      }
 
       &.dp-header--cm {
         min-height: 179px;
@@ -538,6 +547,14 @@
         width: 100%;
         border: none;
       }
+    }
+  }
+
+  .messages-container {
+    &.sticky {
+      position: fixed;
+      width: 100%;
+      z-index: 999;
     }
   }
 }
