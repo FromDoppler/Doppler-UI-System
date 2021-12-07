@@ -179,6 +179,14 @@
 
       h4 {
         width: 100%;
+
+        a {
+          color: $dp-color-darkgrey;
+
+          &:hover {
+            color: $dp-color-grey;
+          }
+        }
       }
     }
 
