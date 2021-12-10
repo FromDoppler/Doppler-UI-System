@@ -100,7 +100,7 @@
     "@semantic-release/exec": "^5.0.0",
     "autoprefixer": "^10.4.0",
     "browser-sync": "^2.27.7",
-    "clean-css-cli": "^5.4.2",
+    "clean-css-cli": "^5.5.0",
     "cpy": "^8.1.2",
     "cpy-cli": "^3.1.1",
     "cross-env": "^7.0.3",
