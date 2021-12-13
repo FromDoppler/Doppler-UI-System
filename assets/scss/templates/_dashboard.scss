@@ -41,16 +41,14 @@
       height: 100%;
       align-items: center;
       justify-content: center;
-      opacity: 0.8;
+      opacity: 0.9;
       border: 2px solid $dp-color-silver;
       border-radius: 3px;
       margin: 0 12px;
       font-size: 16px;
       color: $dp-color-darkgrey;
-      display: none;
-      &.show {
-        display: flex;
-      }
+      display: flex;
+      transition: all 0.3s ease-in-out;
     }
 
     .dp-dashboard-kpi {
@@ -193,6 +191,7 @@
     p {
       font-size: 13px;
       line-height: 18px;
+      margin-bottom: $dp-spaces--lv2;
     }
 
     .dp-iconpostcard {
@@ -207,14 +206,12 @@
     &.dp-postcard--welcom {
       .dp-iconpostcard {
         background-image: url(../img/ok-icon.svg);
-        /*width: 22px;*/
       }
     }
 
     &.dp-postcard--success {
       .dp-iconpostcard {
         background-image: url(../img/step-ok.svg);
-        /*width: 21px;*/
       }
     }
 
@@ -222,7 +219,6 @@
       border: 2px solid $dp-yellowBorder-forFlashcards;
       .dp-iconpostcard {
         background-image: url(../img/step-warning.svg);
-        /*width: 22px;*/
       }
     }
 
