@@ -97,7 +97,7 @@
     "arrowParens": "always"
   },
   "devDependencies": {
-    "@semantic-release/exec": "^5.0.0",
+    "@semantic-release/exec": "^6.0.3",
     "autoprefixer": "^10.4.2",
     "browser-sync": "^2.27.7",
     "clean-css-cli": "^5.5.2",
@@ -125,7 +125,7 @@
     "prettier": "^2.4.1",
     "prettier-check": "^2.0.0",
     "sassdoc": "^2.7.3",
-    "semantic-release": "^17.4.7",
+    "semantic-release": "^19.0.2",
     "sort-css-media-queries": "^2.0.4",
     "ttf2woff2": "^4.0.2",
     "uglify-js": "^3.15.0",
