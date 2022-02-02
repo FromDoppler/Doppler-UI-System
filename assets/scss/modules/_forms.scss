@@ -99,7 +99,8 @@
   select:disabled {
     background-color: $dp-color-snow;
     border: 1px solid $dp-color-silver;
-    color: $dp-color-silver;
+    color: $dp-color-grey;
+    cursor: default;
   }
 
   textarea {
@@ -291,6 +292,13 @@
     &:focus {
       color: $dp-color-lightbrown;
       border-radius: $dp-border-radius;
+    }
+
+    &:disabled {
+      background-color: $dp-color-snow;
+      border: 1px solid $dp-color-silver;
+      color: $dp-color-grey;
+      cursor: default;
     }
   }
 

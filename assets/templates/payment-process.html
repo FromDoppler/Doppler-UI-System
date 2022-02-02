@@ -119,6 +119,7 @@
                                   name="name"
                                   id="name"
                                   placeholder="Tu nombre"
+                                  disabled
                                 />
                                 <div
                                   class="
@@ -137,6 +138,7 @@
                                   name="lastname"
                                   id="lastname"
                                   placeholder="Tu apellido"
+                                  disabled
                                 />
                                 <div
                                   class="
@@ -159,6 +161,7 @@
                                   name="address"
                                   id="address"
                                   placeholder="Dirección"
+                                  disabled
                                 />
                                 <div
                                   class="
@@ -177,6 +180,7 @@
                                   name="city"
                                   id="city"
                                   placeholder="Ciudad"
+                                  disabled
                                 />
                                 <div
                                   class="
@@ -214,7 +218,7 @@
                               <li class="field-item field-item--50">
                                 <label for="country">*País:</label>
                                 <span class="dropdown-arrow"></span>
-                                <select id="" class="" name="country">
+                                <select id="" class="" name="country" disabled>
                                   <option value="">Argentina</option>
                                   <option value="">Argentina</option>
                                   <option value="">Argentina</option>
@@ -295,7 +299,7 @@
                               <li class="field-item field-item--50">
                                 <label for="pais">*Industria:</label>
                                 <span class="dropdown-arrow"></span>
-                                <select id="" class="" name="pais">
+                                <select id="" class="" name="pais" disabled>
                                   <option value="">Industria</option>
                                   <option value="">Industria</option>
                                   <option value="">Industria</option>
@@ -1352,6 +1356,22 @@
       <div class="dp-rowflex">
         <div class="col-lg-12 col-md-6 col-sm-12 m-b-24">
           <!-- wrapper-reports-box -->
+        </div>
+        <div class="col-sm-12 m-b-24">
+          <hr class="dp-h-divider" />
+          <button
+            type="button"
+            class="dp-button button-medium primary-grey m-t-30 m-r-24"
+          >
+            Cancelar
+          </button>
+          <button
+            type="button"
+            class="dp-button button-medium primary-green m-t-30"
+            disabled
+          >
+            Guardar
+          </button>
         </div>
       </div>
     </section>
