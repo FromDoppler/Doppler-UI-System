@@ -1087,13 +1087,13 @@
       "dev": true
     },
     "autoprefixer": {
-      "version": "10.4.1",
-      "resolved": "https://registry.npmjs.org/autoprefixer/-/autoprefixer-10.4.1.tgz",
-      "integrity": "sha512-B3ZEG7wtzXDRCEFsan7HmR2AeNsxdJB0+sEC0Hc5/c2NbhJqPwuZm+tn233GBVw82L+6CtD6IPSfVruwKjfV3A==",
+      "version": "10.4.2",
+      "resolved": "https://registry.npmjs.org/autoprefixer/-/autoprefixer-10.4.2.tgz",
+      "integrity": "sha512-9fOPpHKuDW1w/0EKfRmVnxTDt8166MAnLI3mgZ1JCnhNtYWxcJ6Ud5CO/AVOZi/AvFa8DY9RTy3h3+tFBlrrdQ==",
       "dev": true,
       "requires": {
         "browserslist": "^4.19.1",
-        "caniuse-lite": "^1.0.30001294",
+        "caniuse-lite": "^1.0.30001297",
         "fraction.js": "^4.1.2",
         "normalize-range": "^0.1.2",
         "picocolors": "^1.0.0",
@@ -2442,9 +2442,9 @@
       }
     },
     "caniuse-lite": {
-      "version": "1.0.30001294",
-      "resolved": "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001294.tgz",
-      "integrity": "sha512-LiMlrs1nSKZ8qkNhpUf5KD0Al1KCBE3zaT7OLOwEkagXMEDij98SiOovn9wxVGQpklk9vVC/pUSqgYmkmKOS8g==",
+      "version": "1.0.30001305",
+      "resolved": "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001305.tgz",
+      "integrity": "sha512-p7d9YQMji8haf0f+5rbcv9WlQ+N5jMPfRAnUmZRlNxsNeBO3Yr7RYG6M2uTY1h9tCVdlkJg6YNNc4kiAiBLdWA==",
       "dev": true
     },
     "cardinal": {
@@ -4781,9 +4781,9 @@
       "dev": true
     },
     "electron-to-chromium": {
-      "version": "1.4.30",
-      "resolved": "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.4.30.tgz",
-      "integrity": "sha512-609z9sIMxDHg+TcR/VB3MXwH+uwtrYyeAwWc/orhnr90ixs6WVGSrt85CDLGUdNnLqCA7liv426V20EecjvflQ==",
+      "version": "1.4.61",
+      "resolved": "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.4.61.tgz",
+      "integrity": "sha512-kpzCOOFlx63C9qKRyIDEsKIUgzoe98ump7T4gU+/OLzj8gYkkWf2SIyBjhTSE0keAjMAp3i7C262YtkQOMYrGw==",
       "dev": true
     },
     "emoji-regex": {
