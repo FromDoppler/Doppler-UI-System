@@ -449,6 +449,12 @@
         color: $dp-color-green;
         text-transform: uppercase;
       }
+
+      .dp--disabled {
+        color: $dp-color-grey;
+        pointer-events: none;
+        opacity: 0.4;
+      }
     }
 
     .button-medium {
@@ -458,6 +464,10 @@
       padding: $dp-spaces--lv2 10px;
       border: 1px solid $dp-color-wild-sand;
       text-transform: uppercase;
+
+      &:disabled {
+        color: $dp-color-grey;
+      }
 
       &:hover {
         border: 1px solid $dp-color-green;
