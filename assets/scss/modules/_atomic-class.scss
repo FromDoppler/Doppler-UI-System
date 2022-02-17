@@ -7,6 +7,17 @@
 /// Classes for Atomic Class
 ////
 .dp-library {
+  /* New breakpoints*/
+  @mixin media-breakpoint($breakpoint) {
+    @if map-has-key($dp-breakpoints, $breakpoint) {
+      @media screen and(map-get($dp-breakpoints, $breakpoint)) {
+        @content;
+      }
+    } @else {
+      @error "Breakpoint does not exist";
+    }
+  }
+
   .uppercase {
     text-transform: uppercase;
   }
