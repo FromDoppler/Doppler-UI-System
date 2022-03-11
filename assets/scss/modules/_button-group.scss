@@ -5,3 +5,89 @@
 /// @author Gustavo Baamonde
 /// Classes for Button Group
 ////
+
+.dp-button-editor-wrap {
+  position: relative;
+  margin: $dp-spaces--lv0;
+
+  .dp-button-box {
+    position: relative;
+  }
+
+  .dp-content-menu {
+    position: absolute;
+    display: none;
+    top: 40px;
+    text-align: left;
+    line-height: $dp-spaces--lv4;
+    overflow: hidden;
+    left: 0;
+    outline: 0;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: $dp-color-white;
+    box-shadow: inset 0 0 0 3px $dp-color-snow,
+      inset 0 0 0 5px $dp-color-orange-focus;
+    z-index: 3;
+  }
+
+  .dp-list-exit {
+    margin: $dp-spaces--lv0;
+    padding: $dp-spaces--lv0;
+    overflow: auto;
+    width: 200px;
+    height: 150px;
+
+    /* Tamaño del scroll */
+    &::-webkit-scrollbar {
+      width: 4px;
+      scrollbar-width: 4px;
+    }
+
+    /* barra thumb de scroll */
+    &::-webkit-scrollbar-thumb {
+      background: $dp-color-silver;
+      border-radius: 4px;
+      right: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb:active {
+      background-color: $dp-color-lightgrey;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: $dp-color-silver;
+      box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+    }
+
+    /* track de scroll */
+    &::-webkit-scrollbar-track {
+      background: $dp-color-snow;
+      border-radius: 4px;
+    }
+
+    &::-webkit-scrollbar-track:hover,
+    &::-webkit-scrollbar-track:active {
+      background: $dp-color-snow;
+    }
+
+    li {
+      display: block;
+      padding: 6px 18px;
+      font-weight: 300;
+
+      &:hover {
+        background-color: $dp-color-snow;
+      }
+
+      a[role='menuitem'] {
+        cursor: pointer;
+        color: $dp-color-grey;
+        width: 100%;
+        font-size: $dp-sizing--lvl2;
+        display: block;
+        text-decoration: none;
+      }
+    }
+  }
+}

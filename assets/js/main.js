@@ -166,6 +166,28 @@ $('.progress-bar').each(function(index) {
         }
   });
 
+  // Button Exit editor
+  $('.dp-button-box .dp-button-exit').on('click', function(){
+    $(this).toggleClass('active');
+    if($(this).hasClass('active')){
+      $(this).parent().find('.dp-content-menu').show();
+    }else {
+      $(this).parent().find('.dp-content-menu').hide();
+    }
+  });
+
+  $(document).on('click', function (e){
+    var container =  $('.dp-content-menu'),
+    button = $('.dp-button-exit');
+
+      if (!$('.dp-content-menu').is(e.target) && $('.dp-content-menu').has(e.target).length === 0 &&
+      !$('.dp-button-exit').is(e.target) && $('.dp-button-exit').has(e.target).length === 0)
+        {
+            container.hide();
+            $('.dp-button-exit').removeClass('active');
+        }
+  });
+
 
   /* nested table | expand results */
 
