@@ -75,18 +75,21 @@
       display: block;
       padding: 6px 18px;
       font-weight: 300;
+      margin-right: 0;
 
       &:hover {
         background-color: $dp-color-snow;
       }
 
-      a[role='menuitem'] {
+      button[role='menuitem'] {
         cursor: pointer;
         color: $dp-color-grey;
         width: 100%;
         font-size: $dp-sizing--lvl2;
         display: block;
+        text-align: left;
         text-decoration: none;
+        padding: 5px;
       }
     }
   }
