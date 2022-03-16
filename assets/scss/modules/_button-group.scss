@@ -81,6 +81,7 @@
         background-color: $dp-color-snow;
       }
 
+      a[role='menuitem'],
       button[role='menuitem'] {
         cursor: pointer;
         color: $dp-color-grey;
