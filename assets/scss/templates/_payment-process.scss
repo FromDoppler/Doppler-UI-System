@@ -625,19 +625,34 @@
     width: 100%;
     padding: $dp-spaces--lv4 $dp-spaces--lv2;
     border-bottom: 1px solid $dp-color-separator;
+    margin-bottom: 24px;
 
     li {
       margin-right: $dp-spaces--lv6;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: center;
       flex-direction: column;
       line-height: 36px;
     }
+
+    .dp-icon-kpis {
+      display: flex;
+      width: 60px;
+      position: relative;
+      top: 6px;
+
+      img {
+        width: 100%;
+        display: block;
+      }
+    }
+
     span {
       font-size: $dp-sizing--lvl2;
       color: $dp-color-darkgrey;
     }
+
     h3 {
       font-size: 35px;
     }
@@ -649,6 +664,19 @@
     .dp-plan-detail {
       border: none;
       margin: $dp-spaces--lv0;
+
+      .dp-list-detail {
+        li {
+          margin-bottom: 24px;
+          color: #666;
+        }
+      }
+
+      .dp-wrapp-icon {
+        position: relative;
+        top: 3px;
+        margin-right: 12px;
+      }
     }
   }
 
