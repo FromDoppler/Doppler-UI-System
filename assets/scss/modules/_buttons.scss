@@ -224,6 +224,7 @@
       position: relative;
       right: 3px;
       top: 0px;
+      padding: 14px 30px 13px 22px;
 
       &:hover,
       &:active {
@@ -236,6 +237,18 @@
       }
       &.active {
         background: $dp-color-white;
+      }
+
+      .dp-dropdown-arrow {
+        border-style: solid;
+        height: 0;
+        width: 0;
+        border-width: 6px 5px 0 5px;
+        border-color: #999 transparent transparent transparent;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
       }
     }
   }
