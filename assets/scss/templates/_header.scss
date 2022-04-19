@@ -496,7 +496,8 @@
       position: absolute;
       right: 0;
       width: 0;
-      top: 75px;
+      top: 100%;
+      margin-top: 5px;
       height: calc(100vh - 65px);
       background: $dp-color-white;
       border-left: 1px solid $dp-color-ghostwhite;
@@ -555,6 +556,12 @@
       position: fixed;
       width: 100%;
       z-index: 999;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .header-main.header-open.sticky {
+      min-height: auto;
     }
   }
 }
