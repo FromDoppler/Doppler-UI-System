@@ -108,7 +108,7 @@
     "del": "^6.0.0",
     "del-cli": "^4.0.1",
     "eclint": "^2.8.1",
-    "express": "^4.17.3",
+    "express": "^4.18.1",
     "htmlprocessor": "^0.3.2",
     "imagemin-cli": "^6.0.0",
     "make-dir-cli": "^2.0.0",
