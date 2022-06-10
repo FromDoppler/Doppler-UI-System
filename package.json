@@ -124,7 +124,7 @@
     "prettier": "^2.4.1",
     "prettier-check": "^2.0.0",
     "sassdoc": "^2.7.3",
-    "semantic-release": "^17.4.7",
+    "semantic-release": "^19.0.3",
     "sort-css-media-queries": "^2.0.4",
     "ttf2woff2": "^4.0.2",
     "uglify-js": "^3.15.3",
