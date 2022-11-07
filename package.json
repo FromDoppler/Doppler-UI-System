@@ -100,7 +100,7 @@
     "autoprefixer": "^10.4.4",
     "browser-sync": "^2.27.9",
     "clean-css-cli": "^5.5.2",
-    "cpy": "^8.1.2",
+    "cpy": "^9.0.1",
     "cpy-cli": "^3.1.1",
     "cross-env": "^7.0.3",
     "css-mqpacker": "~7.0.0",
